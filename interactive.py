@@ -258,10 +258,17 @@ class InteractiveMenu:
                 basename = os.path.basename(self.current_dat_file)
                 if len(basename) > 30:
                     basename = basename[:27] + "..."
-                dat_info = f" LOADED: {basename} | {self.parsed_data['game_count']} GAMES "
+                
+                # Split into two parts for better alignment
+                game_count = self.parsed_data['game_count']
+                dat_name = f" LOADED: {basename} "
+                game_count_text = f" {game_count} GAMES "
+                
+                # Calculate exact centering
                 filtered_info = f" FILTERED: {len(self.filtered_games)} GAMES KEPT " if self.filtered_games else " NO FILTERING APPLIED YET "
             else:
-                dat_info = " NO DAT FILE LOADED "
+                dat_name = " NO DAT FILE LOADED "
+                game_count_text = ""
                 filtered_info = " --- "
             
             # Simple box for DAT info - with perfect alignment
@@ -270,8 +277,22 @@ class InteractiveMenu:
             spaces_right = width - 2 - spaces_left - monitor_width - 2
             
             print("|" + " " * spaces_left + "+" + "-" * monitor_width + "+" + " " * spaces_right + "|")
-            print("|" + " " * spaces_left + "|" + self.current_theme['data'] + dat_info.center(monitor_width) + Style.RESET_ALL + "|" + " " * spaces_right + "|")
-            print("|" + " " * spaces_left + "|" + self.current_theme['info'] + filtered_info.center(monitor_width) + Style.RESET_ALL + "|" + " " * spaces_right + "|")
+            
+            if self.current_dat_file:
+                # For loaded DAT, split line into name and count with perfect alignment
+                print("|" + " " * spaces_left + "|" + 
+                      self.current_theme['data'] + dat_name.ljust(monitor_width - len(game_count_text)) + 
+                      self.current_theme['highlight'] + game_count_text + 
+                      Style.RESET_ALL + "|" + " " * spaces_right + "|")
+            else:
+                # For no DAT loaded, center the text perfectly
+                print("|" + " " * spaces_left + "|" + 
+                      self.current_theme['data'] + dat_name.center(monitor_width) + 
+                      Style.RESET_ALL + "|" + " " * spaces_right + "|")
+                
+            print("|" + " " * spaces_left + "|" + 
+                  self.current_theme['info'] + filtered_info.center(monitor_width) + 
+                  Style.RESET_ALL + "|" + " " * spaces_right + "|")
             print("|" + " " * spaces_left + "+" + "-" * monitor_width + "+" + " " * spaces_right + "|")
             
             print("|" + " " * (width - 2) + "|")
