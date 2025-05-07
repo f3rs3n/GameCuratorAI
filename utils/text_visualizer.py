@@ -6,6 +6,8 @@ This module provides terminal-friendly text visualization for filtering results.
 import os
 import sys
 import textwrap
+import random
+import time
 from typing import Dict, List, Any, Tuple
 from colorama import init, Fore, Style, Back
 
@@ -14,6 +16,25 @@ init()
 
 class TextVisualizer:
     """Text-based visualization for DAT Filter AI results."""
+    
+    # Game-themed progress indicators
+    GAME_INDICATORS = [
+        # Classic arcade progress indicators
+        {"frames": ['◓', '◑', '◒', '◐'], "name": "PacMan", "color": "YELLOW"},
+        {"frames": ['▟', '▙', '▛', '▜'], "name": "Tetris", "color": "CYAN"},
+        {"frames": ['◡◡', '⊙⊙', '◠◠'], "name": "SpaceInvader", "color": "GREEN"},
+        {"frames": ['➔', '➘', '➙', '➚'], "name": "Joystick", "color": "MAGENTA"},
+        {"frames": ['[■ ]', '[■■]', '[■■■]', '[■■]'], "name": "ProgressBlock", "color": "RED"},
+        # Console animations
+        {"frames": ['⬙', '⬘', '⬗', '⬖', '⬕'], "name": "Loading", "color": "BLUE"},
+        {"frames": ['🎮 ', ' 🎮'], "name": "Controller", "color": "WHITE"},
+        {"frames": ['🕹️ ', ' 🕹️'], "name": "Joystick", "color": "WHITE"},
+        {"frames": ['⬅️', '➡️', '⬆️', '⬇️'], "name": "DirectionPad", "color": "WHITE"},
+        # Game-themed animations
+        {"frames": ['🚶', '🏃'], "name": "Player", "color": "GREEN"},
+        {"frames": ['🔥', '💥'], "name": "PowerUp", "color": "RED"},
+        {"frames": ['🏆 ', ' 🏆'], "name": "Trophy", "color": "YELLOW"},
+    ]
     
     def __init__(self, use_color: bool = True):
         """
@@ -24,6 +45,9 @@ class TextVisualizer:
         """
         self.use_color = use_color
         self.terminal_width = self._get_terminal_width()
+        self.current_animation = random.choice(self.GAME_INDICATORS)
+        self.animation_frame = 0
+        self.last_animation_update = 0
     
     def _get_terminal_width(self) -> int:
         """
@@ -208,6 +232,78 @@ class TextVisualizer:
                 remaining = len(special_cases["mods_hacks"].get("games", [])) - display_count
                 print(f"... and {remaining} more mods/hacks")
     
+    def display_game_themed_progress(self, current: int, total: int, 
+                               games_per_sec: float, eta_str: str, 
+                               bar_length: int = 30) -> str:
+        """
+        Create a game-themed progress display
+        
+        Args:
+            current: Current progress value
+            total: Total target value
+            games_per_sec: Processing speed in games per second
+            eta_str: Estimated time remaining
+            bar_length: Length of the progress bar
+            
+        Returns:
+            Formatted progress string
+        """
+        # Change animation every ~5 seconds for visual interest
+        current_time = time.time()
+        if current_time - self.last_animation_update > 5:
+            self.current_animation = random.choice(self.GAME_INDICATORS)
+            self.animation_frame = 0
+            self.last_animation_update = current_time
+        
+        # Get the current frame and advance animation
+        frames = self.current_animation["frames"]
+        animation_char = frames[self.animation_frame % len(frames)]
+        self.animation_frame += 1
+        
+        # Calculate progress bar
+        percentage = int(100 * current / total) if total > 0 else 0
+        filled_length = int(bar_length * current // total)
+        
+        # For first 20%, use a "loading" color (blue)
+        # For 20-80%, use the animation's assigned color
+        # For 80-100%, use "almost done" color (green)
+        if percentage < 20:
+            bar_color = "BLUE"  
+        elif percentage > 80:
+            bar_color = "GREEN"
+        else:
+            bar_color = self.current_animation["color"]
+            
+        # Create the bar with animation character at progress point
+        if filled_length < bar_length:
+            bar = '█' * filled_length
+            if self.use_color:
+                colored_animation = getattr(Fore, bar_color) + animation_char + Style.RESET_ALL
+            else:
+                colored_animation = animation_char
+                
+            bar += colored_animation + '░' * (bar_length - filled_length - 1)
+        else:
+            bar = '█' * bar_length
+            
+        # Add "now loading" indicator for first 10% with game theme
+        theme_text = ""
+        if percentage < 10:
+            theme_text = f" Loading {self.current_animation['name']}..."
+        
+        # Format speed based on value
+        if games_per_sec > 100:
+            speed_color = "GREEN"
+        elif games_per_sec > 10:
+            speed_color = "YELLOW"
+        else:
+            speed_color = "WHITE"
+            
+        speed_text = self._format_text(f"{games_per_sec:.1f} games/sec", speed_color)
+            
+        # Assemble the complete progress display
+        return f"[{bar}] {percentage}% ({current}/{total} games) - {speed_text} - {eta_str}{theme_text}"
+            
     def display_game_evaluation(self, game: Dict[str, Any], evaluation: Dict[str, Any]):
         """
         Display detailed evaluation for a single game

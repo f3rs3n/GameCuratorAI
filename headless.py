@@ -95,11 +95,8 @@ def main():
         start_time = time.time()
         
         def progress_callback(current, total):
-            """Progress reporting with visual feedback"""
+            """Progress reporting with game-themed visual feedback"""
             percentage = int(100 * current / total) if total > 0 else 0
-            bar_length = 30
-            filled_length = int(bar_length * current // total)
-            bar = '█' * filled_length + '░' * (bar_length - filled_length)
             
             elapsed = time.time() - start_time
             games_per_sec = current / elapsed if elapsed > 0 else 0
@@ -111,7 +108,12 @@ def main():
             else:
                 eta_str = "ETA: calculating..."
             
-            sys.stdout.write(f"\r[{bar}] {percentage}% ({current}/{total} games) - {games_per_sec:.1f} games/sec - {eta_str}")
+            # Use the game-themed progress display
+            progress_display = visualizer.display_game_themed_progress(
+                current, total, games_per_sec, eta_str
+            )
+            
+            sys.stdout.write(f"\r{progress_display}")
             sys.stdout.flush()
             
             logger.info(f"Processing: {current}/{total} games ({percentage}%)")
