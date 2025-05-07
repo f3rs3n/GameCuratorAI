@@ -247,10 +247,12 @@ class InteractiveMenu:
                 if space < 0: space = 0
                 print("|" + " " * space + self.current_theme['header'] + adjusted_line + Style.RESET_ALL + " " * (width - space - display_width - 2) + "|")
             
-            # Subtitle
+            # Subtitle - precise center alignment
             subtitle = "RETRO GAME COLLECTION CURATOR"
-            space = (width - len(subtitle)) // 2
-            print("|" + " " * space + self.current_theme['highlight'] + subtitle + Style.RESET_ALL + " " * (width - space - len(subtitle) - 1) + "|")
+            space = (width - len(subtitle) - 2) // 2  # Calculate exact left spacing
+            # Calculate right padding exactly
+            right_padding = width - 2 - space - len(subtitle)
+            print("|" + " " * space + self.current_theme['highlight'] + subtitle + Style.RESET_ALL + " " * right_padding + "|")
             print("|" + " " * (width - 2) + "|")
             
             # DAT info display - simplified border
@@ -268,17 +270,23 @@ class InteractiveMenu:
             monitor_width = 40  # Fixed width for consistency
             space_left = (width - monitor_width - 2) // 2
             
-            print("|" + " " * space_left + "+" + "-" * monitor_width + "+" + " " * (width - space_left - monitor_width - 3) + "|")
-            print("|" + " " * space_left + "|" + self.current_theme['data'] + dat_info.center(monitor_width) + Style.RESET_ALL + "|" + " " * (width - space_left - monitor_width - 3) + "|")
-            print("|" + " " * space_left + "|" + self.current_theme['info'] + filtered_info.center(monitor_width) + Style.RESET_ALL + "|" + " " * (width - space_left - monitor_width - 3) + "|")
-            print("|" + " " * space_left + "+" + "-" * monitor_width + "+" + " " * (width - space_left - monitor_width - 3) + "|")
+            # Calculate exact right padding for each line
+            right_padding = width - 2 - space_left - monitor_width - 2
+            if right_padding < 0: right_padding = 0
+            
+            print("|" + " " * space_left + "+" + "-" * monitor_width + "+" + " " * right_padding + "|")
+            print("|" + " " * space_left + "|" + self.current_theme['data'] + dat_info.center(monitor_width) + Style.RESET_ALL + "|" + " " * right_padding + "|")
+            print("|" + " " * space_left + "|" + self.current_theme['info'] + filtered_info.center(monitor_width) + Style.RESET_ALL + "|" + " " * right_padding + "|")
+            print("|" + " " * space_left + "+" + "-" * monitor_width + "+" + " " * right_padding + "|")
             
             print("|" + " " * (width - 2) + "|")
             
-            # Engine status display
+            # Engine status display - precise center alignment
             engine_status = f" ENGINE: {self.settings['provider'].upper()} | THRESHOLD: {self.settings['global_threshold']:.2f} "
-            space_left = (width - len(engine_status)) // 2
-            print("|" + " " * space_left + self.current_theme['success'] + engine_status + Style.RESET_ALL + " " * (width - space_left - len(engine_status) - 1) + "|")
+            space_left = (width - len(engine_status) - 2) // 2
+            # Calculate right padding precisely
+            right_padding = width - 2 - space_left - len(engine_status)
+            print("|" + " " * space_left + self.current_theme['success'] + engine_status + Style.RESET_ALL + " " * right_padding + "|")
             
             print("|" + " " * (width - 2) + "|")
             
