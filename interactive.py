@@ -58,6 +58,7 @@ class InteractiveMenu:
             'output_dir': 'Filtered',
             'theme': 'default',
             'multi_disc_mode': 'all_or_none',
+            'global_threshold': 1.0,  # 1.0 = neutral, < 1.0 = more lenient, > 1.0 = more strict
         }
         
         # Available themes
@@ -101,6 +102,10 @@ class InteractiveMenu:
             self.ai_provider = get_provider(provider_name)
             self.ai_provider.initialize()
             self.filter_engine = FilterEngine(self.ai_provider)
+            
+            # Set the global threshold from settings
+            self.filter_engine.set_global_threshold(self.settings['global_threshold'])
+            
             logger.info(f"Initialized {provider_name} provider")
             return True
         except Exception as e:
@@ -111,6 +116,10 @@ class InteractiveMenu:
                     self.ai_provider = get_provider('random')
                     self.ai_provider.initialize()
                     self.filter_engine = FilterEngine(self.ai_provider)
+                    
+                    # Set the global threshold from settings
+                    self.filter_engine.set_global_threshold(self.settings['global_threshold'])
+                    
                     logger.info("Initialized random provider as fallback")
                     self.settings['provider'] = 'random'
                     return False
@@ -334,6 +343,15 @@ class InteractiveMenu:
         print()
         self._print_info(f"Current AI Provider: {self.settings['provider']}")
         self._print_info(f"Batch Size: {self.settings['batch_size']} games per API call")
+        
+        # Display threshold with description
+        threshold = self.settings['global_threshold']
+        threshold_desc = "Neutral"
+        if threshold < 1.0:
+            threshold_desc = "More Lenient"
+        elif threshold > 1.0:
+            threshold_desc = "More Strict"
+        self._print_info(f"Global Threshold: {threshold:.2f} ({threshold_desc})")
         
         print()
         self._print_option("A", "Apply filters with current settings")
@@ -750,6 +768,15 @@ class InteractiveMenu:
         self._print_data("Theme", self.settings['theme'])
         self._print_data("Multi-disc Mode", self.settings['multi_disc_mode'])
         
+        # Display threshold with description
+        threshold = self.settings['global_threshold']
+        threshold_desc = "Neutral"
+        if threshold < 1.0:
+            threshold_desc = "More Lenient"
+        elif threshold > 1.0:
+            threshold_desc = "More Strict"
+        self._print_data("Global Threshold", f"{threshold:.2f} ({threshold_desc})")
+        
         print()
         self._print_option("1", "Change Provider")
         self._print_option("2", "Change Batch Size")
@@ -758,6 +785,7 @@ class InteractiveMenu:
         self._print_option("5", "Change Theme")
         self._print_option("6", "Change Multi-disc Mode")
         self._print_option("7", "Configure API Keys")
+        self._print_option("8", "Adjust Global Threshold")
         self._print_option("0", "Back to Main Menu")
         
         choice = self._get_user_input("Enter your choice")
@@ -814,6 +842,8 @@ class InteractiveMenu:
             self._change_multi_disc_mode()
         elif choice == "7":
             self._configure_api_keys()
+        elif choice == "8":
+            self._change_global_threshold()
         elif choice == "0":
             return
         else:
@@ -895,6 +925,91 @@ class InteractiveMenu:
                 self._print_error("Please enter a valid number")
                 self._wait_for_key()
                 self._change_multi_disc_mode()
+    
+    def _change_global_threshold(self):
+        """Change the global threshold modifier for filtering"""
+        self._clear_screen()
+        self._print_subheader("Adjust Global Threshold")
+        
+        self._print_info("The global threshold controls how strict or lenient the filtering is:")
+        self._print_info("- Values below 1.0 make filtering more lenient (keep more games)")
+        self._print_info("- Values above 1.0 make filtering more strict (keep fewer games)")
+        self._print_info("- 1.0 is neutral (no adjustment)")
+        self._print_info("Valid range: 0.5 (very lenient) to 1.5 (very strict)")
+        print()
+        
+        current = self.settings['global_threshold']
+        threshold_desc = "Neutral"
+        if current < 1.0:
+            threshold_desc = "More Lenient"
+        elif current > 1.0:
+            threshold_desc = "More Strict"
+            
+        self._print_data("Current Threshold", f"{current:.2f} ({threshold_desc})")
+        print()
+        
+        # Offer preset options
+        self._print_option("1", "Very Lenient (0.5)")
+        self._print_option("2", "Lenient (0.75)")
+        self._print_option("3", "Neutral (1.0)")
+        self._print_option("4", "Strict (1.25)")
+        self._print_option("5", "Very Strict (1.5)")
+        self._print_option("C", "Custom Value")
+        self._print_option("0", "Cancel")
+        
+        choice = self._get_user_input("Enter your choice").upper()
+        
+        if choice == "0":
+            self.settings_menu()
+            return
+        elif choice == "1":
+            self.settings['global_threshold'] = 0.5
+            self._update_filter_engine_threshold()
+            self._print_success("Global threshold set to 0.5 (Very Lenient)")
+        elif choice == "2":
+            self.settings['global_threshold'] = 0.75
+            self._update_filter_engine_threshold()
+            self._print_success("Global threshold set to 0.75 (Lenient)")
+        elif choice == "3":
+            self.settings['global_threshold'] = 1.0
+            self._update_filter_engine_threshold()
+            self._print_success("Global threshold set to 1.0 (Neutral)")
+        elif choice == "4":
+            self.settings['global_threshold'] = 1.25
+            self._update_filter_engine_threshold()
+            self._print_success("Global threshold set to 1.25 (Strict)")
+        elif choice == "5":
+            self.settings['global_threshold'] = 1.5
+            self._update_filter_engine_threshold()
+            self._print_success("Global threshold set to 1.5 (Very Strict)")
+        elif choice == "C":
+            try:
+                value = float(self._get_user_input("Enter custom threshold value (0.5-1.5)", str(current)))
+                if 0.5 <= value <= 1.5:
+                    self.settings['global_threshold'] = value
+                    self._update_filter_engine_threshold()
+                    self._print_success(f"Global threshold set to {value:.2f}")
+                else:
+                    self._print_error("Value must be between 0.5 and 1.5")
+            except ValueError:
+                self._print_error("Please enter a valid number")
+                self._wait_for_key()
+                self._change_global_threshold()
+                return
+        else:
+            self._print_error("Invalid choice")
+            self._wait_for_key()
+            self._change_global_threshold()
+            return
+        
+        self._wait_for_key()
+        self.settings_menu()
+    
+    def _update_filter_engine_threshold(self):
+        """Update the filter engine with the current global threshold"""
+        if self.filter_engine:
+            self.filter_engine.set_global_threshold(self.settings['global_threshold'])
+            logger.debug(f"Updated filter engine global threshold to {self.settings['global_threshold']}")
     
     def _configure_api_keys(self):
         """Configure API keys for providers"""

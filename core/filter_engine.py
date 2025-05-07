@@ -21,6 +21,7 @@ class FilterEngine:
         """
         self.logger = logging.getLogger(__name__)
         self.ai_provider = ai_provider
+        # Base threshold scores for each criterion
         self.threshold_scores = {
             "metacritic": 7.0,
             "historical": 6.0,
@@ -28,6 +29,8 @@ class FilterEngine:
             "console_significance": 7.0,
             "mods_hacks": 6.0
         }
+        # Global threshold modifier applied to all criteria
+        self.global_threshold = 1.0  # 1.0 is neutral, lower is more lenient, higher is stricter
         self.criteria_weights = {
             "metacritic": 0.35,
             "historical": 0.25,
@@ -50,6 +53,20 @@ class FilterEngine:
         else:
             self.logger.warning(f"Unknown criterion: {criterion}")
     
+    def set_global_threshold(self, value: float):
+        """
+        Set the global threshold modifier
+        
+        Args:
+            value: The global threshold modifier (0.5 to 1.5)
+                  Lower values (< 1.0) make filtering more lenient
+                  Higher values (> 1.0) make filtering more strict
+                  1.0 is neutral (no modification)
+        """
+        # Limit range to 0.5 - 1.5 to prevent extreme values
+        self.global_threshold = max(0.5, min(1.5, value))
+        self.logger.debug(f"Set global threshold modifier to {self.global_threshold}")
+        
     def set_weight(self, criterion: str, value: float):
         """
         Set the weight for a criterion
@@ -216,7 +233,8 @@ class FilterEngine:
             "consoles": list(consoles),
             "evaluation_criteria": list(self.threshold_scores.keys()),
             "threshold_scores": self.threshold_scores,
-            "criteria_weights": self.criteria_weights
+            "criteria_weights": self.criteria_weights,
+            "global_threshold": self.global_threshold
         }
     
     def _meets_criteria(self, evaluation: Dict[str, Any], criteria: List[str]) -> bool:
@@ -257,10 +275,20 @@ class FilterEngine:
             # If we have weights, check against thresholds
             if total_weight > 0:
                 normalized_score = weighted_score / total_weight
-                threshold = sum(self.threshold_scores.get(c, 5.0) * self.criteria_weights.get(c, 0.1) 
-                               for c in criteria) / total_weight
                 
-                return normalized_score >= threshold
+                # Calculate base threshold (before applying global modifier)
+                base_threshold = sum(self.threshold_scores.get(c, 5.0) * self.criteria_weights.get(c, 0.1) 
+                                   for c in criteria) / total_weight
+                
+                # Apply global threshold modifier
+                adjusted_threshold = base_threshold * self.global_threshold
+                
+                self.logger.debug(f"Game evaluation: score={normalized_score:.2f}, " +
+                                f"threshold={base_threshold:.2f}, " +
+                                f"adjusted={adjusted_threshold:.2f}, " +
+                                f"modifier={self.global_threshold:.2f}")
+                
+                return normalized_score >= adjusted_threshold
         
         # Default to conservative inclusion
         return True
