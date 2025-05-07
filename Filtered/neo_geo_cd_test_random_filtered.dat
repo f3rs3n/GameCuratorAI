@@ -1,0 +1,221 @@
+<?xml version="1.0" ?>
+<datafile>
+<header>
+<name>SNK - Neo Geo CD (VREC DAT Filter)</name>
+<description>SNK - Neo Geo CD (91) (-ny) [-aABbcdkMmpPv] (2025-03-10 07-50-51) (Retool) (VREC DAT Filter)</description>
+<version>1.3.2</version>
+<date>2025-03-31</date>
+<author>f3rs3n, Gemini</author>
+<homepage>https://github.com/f3rs3n/VREC-dat-filter</homepage>
+<url>http://redump.org/</url>
+<retool>Created by Retool 2.3.9</retool>
+<filter_criteria>['metacritic', 'historical', 'v_list', 'console_significance', 'mods_hacks']</filter_criteria>
+<filtered_date>2025-05-07</filtered_date>
+<filtered_time>19:49:11</filtered_time>
+<filtered_games_count>8</filtered_games_count>
+<original_games_count>8</original_games_count>
+</header>
+<game name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt)">
+  <category>Games</category>
+<description>Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt)</description>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt).cue" size="9083" crc="a8386e09" md5="927715469fb9117b70c5e60b959464ef" sha1="281cbf04ca3d726536c307d2814c5fd9e506385f"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 01).bin" size="97612704" crc="2acdc32c" md5="f770c2f17617d39893b169e34d682219" sha1="a72ddee23849c7895ad5142aa50a43ca6d8cc78b"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 02).bin" size="9563232" crc="92647ff3" md5="ad9ef7800ce40b7ceab0e4796f7fcbe3" sha1="4d644a83aa194289ba54b54c7cefe34901354b9c"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 03).bin" size="3259872" crc="3d4c6fd4" md5="1a0505fc80173d82785a04805dd952fe" sha1="bec28ea941603c35084fe76c35dcf132aba3a223"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 04).bin" size="4257120" crc="e9011e16" md5="40713f99e156219d3b7216b7e03750bc" sha1="72d7e48b2ce45970b617d15076df99999879b8dc"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 05).bin" size="2638944" crc="2d197171" md5="d3e7bf411b906244f3776d9a8741a968" sha1="8531111476cb5b46779d4a25687ab5f269fc9d99"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 06).bin" size="4233600" crc="68d6820f" md5="109d6811b99f88611cb342dfdd5b7ffd" sha1="bcf9b0a36e7aa31a5981b2774a58c0b5b151dc2d"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 07).bin" size="3177552" crc="bc3f77da" md5="51cd01fb061e8ed3359403a53353efe6" sha1="4d892de497231bea306d92ec31012fae2f2ef172"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 08).bin" size="3175200" crc="b6518585" md5="7a49db0acc9bd2b36422fb8280fbcad9" sha1="5ce310528200ea993a2c07966afa4ecaf8adccfc"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 09).bin" size="23287152" crc="0e93adea" md5="2a742368a94658ffe101488e6eb4bfb1" sha1="2a4ad8336365160ffaae9299c8e1de6a47ff7e7c"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 10).bin" size="23289504" crc="9d53972f" md5="565946bf446a5cf93f685d459166911f" sha1="0a7b35f0aaa99e0ad48881e1d16ea8ecc476e831"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 11).bin" size="23284800" crc="aacfa269" md5="0bbfaa213dd9e2276a2e424ecbc234f5" sha1="2f41edf387dac98cbeda2b4459ad499c9aee26b5"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 12).bin" size="23284800" crc="eaea1e19" md5="5cef34e463461a671e033ce5952321dc" sha1="6fd5954c6c67a991476f69ce4eb15b31732f40a8"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 13).bin" size="23287152" crc="c826f11c" md5="8c13d5b0cfa0624ad9e54db983fb9706" sha1="ef2d6811f97c36e27446d78f24d2b0648acffb55"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 14).bin" size="23287152" crc="37216c28" md5="fab6d8070fc5e051e5bcf77c4c2beb33" sha1="5af12abfb0c1976d10cb3b90260c835893d071ec"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 15).bin" size="7411152" crc="23eac2fc" md5="f14548646b99784d2274cc18b82232e1" sha1="3afff6c4a0d117cdc3555252dbe3ce4e670f9ef1"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 16).bin" size="23287152" crc="2a98b1e4" md5="d78b209aa9f922872a0f0599bd7ae680" sha1="6de9d72176a878a106c0bf4b8ef45198153f8f84"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 17).bin" size="23287152" crc="6c093867" md5="ebf0238884c3de0f02369cc06a368534" sha1="1b46964fea7eab6e80e468a938c9abadd4e2a63f"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 18).bin" size="23287152" crc="037fae26" md5="4fb6701bcd1de383c81072813a13c719" sha1="c1e3e8331130707cf95a11cd1ef07a773e6b5700"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 19).bin" size="23287152" crc="9e2577b1" md5="64d0798e6bdde5297a1454d4aa98bde3" sha1="4a019ddfa4bd2829cbd93f97649f282d108e6463"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 20).bin" size="23289504" crc="8228eb4d" md5="08b1357af02c5633642387873423eab8" sha1="da216aa6e3fd571fa9422ca142597a19475d6f12"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 21).bin" size="23287152" crc="d4caf794" md5="f75c43c58eb8713075acc80b6460c118" sha1="c90330e35e46b0525d383f3ce87a5313020f99e2"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 22).bin" size="23287152" crc="05a2ec11" md5="e75334f6202168e3be7efaf16f8f708a" sha1="ec6a6b1de6250bcc4b710529cd1a2d0dff5597ac"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 23).bin" size="25051152" crc="7da2d737" md5="61f9827b63de98d21ba0ec9eb27874a7" sha1="fa188e62a41539fd5028cb516894ee655b7d6be0"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 24).bin" size="25051152" crc="7db00229" md5="ee4041b80ca2aa066abaedb0c418e7da" sha1="cc937619ce19c714ddf12abf3cc3fa0d58039a51"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 25).bin" size="25051152" crc="8ae9657c" md5="6f82b5225349f082f702d11ef088fc0c" sha1="896c0647c884fa999e9fc23e2c05f067dbf9ad59"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 26).bin" size="25051152" crc="7d631a6b" md5="ebf794d994dbb30be9bb420721ea3604" sha1="a8248051aa7e7a2ada81776cb16a42d0de60219e"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 27).bin" size="12244512" crc="548a0520" md5="de84b5cf967d10ebb27eb44e440a6772" sha1="b405586ff59b6ea49a10a2bf1dbc6445689f4175"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 28).bin" size="25051152" crc="d406615e" md5="1e8816fee08cfd38076b89cd0df98bca" sha1="51de73e48731d62792f3a444eb4c65379af48673"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 29).bin" size="8293152" crc="871ff513" md5="f472b4b2cc869f7e8079d8b05d42bf39" sha1="51dd3d266a44b40274eb1be8587ac4b736be0039"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 30).bin" size="25418064" crc="143f57ef" md5="70369b98518f6ea4bacc05ee9d419f35" sha1="cc3bc3c474f770d6a5e83e11e95bc82aeabbfb13"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 31).bin" size="3353952" crc="fddba244" md5="2a8f26194507ff61f9d1cc9cab9f2f2c" sha1="760720a29c75c173fdde41d58b8d9eb5437a03d5"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 32).bin" size="25051152" crc="d8309d1c" md5="773f4a806b4a19eaa611459791929521" sha1="d94940f39902d04b192873e4224780faaaad6edb"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 33).bin" size="5647152" crc="b987b6b3" md5="e77f1960f371ef67803cb69678762f07" sha1="c9e8da8b73af94e9d4383e1edd27fdaa5781cb52"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 34).bin" size="3370416" crc="81ec5b29" md5="18557a8fcbbd148e808749f910cf31d0" sha1="9927a1a3b58c9dee1c8144ff7b6c34537a171147"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 35).bin" size="8281392" crc="13621a50" md5="2560e9058f8e4f75fd24fc153374939e" sha1="c43212fcf902889d3e97c1fada434a2c88d84804"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 36).bin" size="5235552" crc="57db96b2" md5="d9f7149d37180bd8adb2771ed4e6c9df" sha1="e0ffc90b6d5aadaa6f80a7a7425a2d4b5faa7194"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 37).bin" size="7695744" crc="49c7a2eb" md5="d19e51a0bd9f1ccd6c448720abb10708" sha1="7223defd4e0b59516fa5018f8454adc8168b4a12"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 38).bin" size="16315824" crc="e4ef9cea" md5="c74b50bda99e2aec7d83a05e1814d05b" sha1="acbcde9bdf71a3c86079462de0a90afa4735551e"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 39).bin" size="14467152" crc="766284fa" md5="ecc0059abf632e6afd093ba4efd63c29" sha1="4a4ecda52ddfad6289ad81bfde5576a512c8a2e2"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 40).bin" size="31307472" crc="15c63037" md5="e9064746b8680e9f7a62241d961792d0" sha1="764bb4cff7c399053d2569c0bd3ab42e80d1b08f"/>
+<rom name="Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) (Track 41).bin" size="31540320" crc="10185e52" md5="29efdaa269861153bb540e53800af1d4" sha1="a6156bea296518ab4983ca460ca1bf786489f8f8"/>
+</game>
+<game name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt)">
+  <category>Games</category>
+<description>Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt)</description>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt).cue" size="8340" crc="804ec9a8" md5="8b3cd67be016b97d9cf0c2e9448745ae" sha1="d48bc3249f785faaba7c3e7996d1ba159be96c5c"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 01).bin" size="101418240" crc="ece8ed0f" md5="5cb087e0f4d14d8f65e1629d8eb1d548" sha1="eabad89ebf8b6f621d517dedded883b3aaf45d66"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 02).bin" size="13585152" crc="8e4fe77d" md5="43f12df9fd3a2227b901643d0f54ebef" sha1="975e5ccd03e6f89e249a22592e5aaf367bc712b5"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 03).bin" size="3530352" crc="e8bc9a12" md5="db3b35a455d517dec527b2bc98cf8547" sha1="c47e9425b86efef3aa06aa85e61f617547d310af"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 04).bin" size="6881952" crc="556ea889" md5="b82fdc3659d77437c1c7b8ae32ff136e" sha1="39038668032fe2d819443d63623a439952278577"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 05).bin" size="13761552" crc="1629f5e0" md5="0033e9e8f4fc7e281bcd0f84ac830c13" sha1="987e20a7491a4d0824c4f953baf6e1b834294034"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 06).bin" size="25051152" crc="97353060" md5="14a3e95083110d2ad55d56b39d07288b" sha1="3eae58570f258b2f1259b08b021aac7665a2649d"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 07).bin" size="23287152" crc="aca643aa" md5="3a1517ed51371f7b46eb08e9f312e125" sha1="cd7e9c52b0b4b86d03088db979393ffb8b30a16f"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 08).bin" size="23287152" crc="9e61dc85" md5="98d4ac7131ba652b2c17452fb9c1d045" sha1="e2a7e96c8c4e96e0b2024718a6eb5f0050d3487d"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 09).bin" size="25051152" crc="281a1933" md5="816088f6417a1b47b602e6030e6cb3a1" sha1="343be47dae4a7e8a05f797cae2b06538d62f368c"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 10).bin" size="23287152" crc="1f84011e" md5="f3569aa636567054970fdc9e6d336a7f" sha1="a843f5d77ff5e67b30ae5b68be49c56a5beda8d4"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 11).bin" size="23287152" crc="00f1e3f5" md5="a4917ee3002d9ef50012446712585788" sha1="518ee1f20d17d661690dc851b7da20949fd54df1"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 12).bin" size="23287152" crc="fae30e4f" md5="2d2c7af496e0f40abc54339869b7bbdc" sha1="d3108c469efbd2d64dafb68379b9ae187d2f7c3c"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 13).bin" size="23287152" crc="b6a1eec8" md5="a26e5e4d4dacd1762f2bd023425c8cdf" sha1="ff084b0ee897fc12b70708bc14f6c090a7e9227a"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 14).bin" size="25051152" crc="9a6909c3" md5="2ac7d3e4f9ad893dd76abbdae6eff53a" sha1="fdf8d1913375c3a9ba80e2cedec7a5dfde465436"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 15).bin" size="23287152" crc="4528b37c" md5="3d628f46c87967db1d5f27962a8bedc3" sha1="c6723bdbc3be3ece0c5e5525565e63e89d6b40a6"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 16).bin" size="23287152" crc="6f02b4f1" md5="284b2430be9cffd8eea9d4e894c62fbb" sha1="4a68c97edbba458943b9fe2bac7f8849590608bd"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 17).bin" size="23287152" crc="26eb06d6" md5="b6ef34bb32181b480012e95f1fbe449f" sha1="55af896b5125d6c3aa30447dc505e28b30d7f000"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 18).bin" size="23287152" crc="a3aced2e" md5="b3a39fc6b870751cb45aecd3fef4188c" sha1="0e0baa6035d7ee78c29335e935c52440f3f2724f"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 19).bin" size="25051152" crc="611e0c38" md5="ac399201793002f461a356acb8ebf9c7" sha1="dd073c03f4a654fe19a39b865071ed184f635f86"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 20).bin" size="25051152" crc="02121f9b" md5="84fb0d97c18fcf2106d7fcdd426365ec" sha1="907bbbc4eb63f24eb1643051733226c48190c0ac"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 21).bin" size="25051152" crc="8efdec2e" md5="a482428a8e22b3b2ff80f4587ec2a9e1" sha1="a0a46079d24047effaccc0d3c4f9529076f013f2"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 22).bin" size="25051152" crc="8031d4a4" md5="634c9bb697a85a822959866a537ecb57" sha1="1de4e4f5c4d0727994328b8420e50fcab1fd8d10"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 23).bin" size="17642352" crc="fd911474" md5="f411970fb17bde447c8ec0f27d2a462e" sha1="3e09f84e8b1f561bffadd89633a937757afbd58e"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 24).bin" size="4235952" crc="b35e40e8" md5="faa8892977233e10690a011b0adc8f63" sha1="1dacaa2664750dc772f0dd26affbcf788fe654ac"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 25).bin" size="36517152" crc="7320bb80" md5="2b840c51e9eda28be38191bfc76978f5" sha1="eae28ac152b45ad4fcabdd39f804a89eae23701f"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 26).bin" size="36517152" crc="19dd47dc" md5="879df0bd75f5004bdc025a8d584c9134" sha1="f7f4b095df0a4af21118fa53192fca56a516480f"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 27).bin" size="10233552" crc="73eeab4c" md5="2569775113ab64665aa4ce649327a2a6" sha1="4ba8cfef6b69c2cef369b619d0debd896e6e88a6"/>
+<rom name="Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) (Track 28).bin" size="10057152" crc="8122c31b" md5="b3d455ea4c038ed378ee467d5663d217" sha1="0e19c458d7964a35119eadd4eb0ede52c6104b62"/>
+</game>
+<game name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja)">
+  <category>Games</category>
+<description>Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja)</description>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja).cue" size="3142" crc="c10d0bcf" md5="5f16a24ccdc4d59b5714df7cc52f3165" sha1="029c58ad37d2f19d80fcb11bacb56b8c66e46ec7"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 01).bin" size="46891824" crc="b72555cf" md5="f65f886df22598ee940d8948bb010139" sha1="651ccf13b3ddea544fe7a08a2660ed30515925ad"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 02).bin" size="5840016" crc="fd69d2a9" md5="909768b3e0af01683b8d0f27af2ad501" sha1="ebaea529f9fba20e5ae043300be4c3d668ee54d1"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 03).bin" size="5673024" crc="5d716482" md5="2188d6c62920f765cddd77b88856b41b" sha1="9d58d61e86a970401f25e7b015d90bc2f05c8c25"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 04).bin" size="15419712" crc="2ba9fd84" md5="929776c69a108b69ca1ea6ecd14a8bd9" sha1="5f14d96cf89f3dd90ec3c259e2b2d2422d2b30f9"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 05).bin" size="50337504" crc="58dbd8b0" md5="f5864cf661ad84ddc1cccf6daed330fb" sha1="982a562e8c2f29117f1aec9b2de06bb1805357b2"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 06).bin" size="48121920" crc="786d5fc7" md5="24d58e010248820f6edd897376f2955e" sha1="d2ad14ad31dbf3911667e6b7cc460ec73885f48c"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 07).bin" size="56245728" crc="19dcd93f" md5="908469355513287188597d671b885b35" sha1="4498904e004504f2001d57a7fc5cb318cefa382d"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 08).bin" size="58976400" crc="d81aae81" md5="cc6ebe348e495a27b43aa387035a2b02" sha1="4543cc3a06e48a50072ea3812749adccc4ce8198"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 09).bin" size="74264400" crc="914ccb8e" md5="b959d4723e8ad24f11482ec73c68b55e" sha1="381ea266df63748f76f3b734da15ec0d2bf6e79d"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 10).bin" size="59173968" crc="e7d5e1ee" md5="9be8cb79a3a2bded7e87d1d8ca220213" sha1="587d60d2d72a0d7e8c509d9339ed98628b077352"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 11).bin" size="19688592" crc="4e01fcb0" md5="d53cc3cc34db6bd14b2b723a7c8914ce" sha1="ff5c1e436933458de50c4ce532d5d89aae78a276"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 12).bin" size="9349200" crc="39b0e9c8" md5="42c391d036ee2b91a4bc93a3c37d1319" sha1="a79c6e07ac6ee10cf814ebe8638618240f60f37c"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 13).bin" size="76294176" crc="17a1f43d" md5="d72de1abee14c5795a9e62f11bcdf5d3" sha1="92a2956ae09d433540bcb570dbd37202a981a75a"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 14).bin" size="40397952" crc="4d00ec87" md5="449cefd0c27575b59f1b1edded02c61d" sha1="d687bae68660aca14fef823872c02d7810d12110"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 15).bin" size="39617088" crc="4c7092f4" md5="09466170f03970355b90cbaae76419f0" sha1="485e5653ab40cfb05c2c57317fad4610879261e6"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 16).bin" size="53098752" crc="7d539e81" md5="c5795d891f3ac76ec11abba69daee5fc" sha1="f2a157cca526cc27858454a03c87406f68f04f8f"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 17).bin" size="3353952" crc="bed4136a" md5="31d8834d1ee24eea0b4f71b1b41a98dc" sha1="5a909d7591eb7936926d02d14af328ddb43db7a4"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 18).bin" size="6879600" crc="80181b31" md5="b8199072444526d9dbe3645ddf94a255" sha1="94978ddf3f0236c67dafd6605ca936409d77f815"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 19).bin" size="28012320" crc="7f12d539" md5="cf7bd8ef1b27840185455f62426431f5" sha1="1fe1186ebbed50a32278c415439236e81df80157"/>
+<rom name="Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) (Track 20).bin" size="7763952" crc="0d0fa328" md5="ff59b2316f00a4f2eaef551cd5e030a0" sha1="fde5c4995fe8c6a3aa4f8aa255717cba582e3631"/>
+</game>
+<game name="Crossed Swords II (Japan) (En,Ja)">
+  <category>Games</category>
+<description>Crossed Swords II (Japan) (En,Ja)</description>
+<rom name="Crossed Swords II (Japan) (En,Ja).cue" size="2926" crc="a515bda1" md5="1d06c1552c00acb8959979664e14326c" sha1="44ecdedf058d433763fc32b49678cf8dfa19f1cd"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 01).bin" size="10139472" crc="a1b2684c" md5="b00ce436433384cde93123dc0e34b7ab" sha1="2ece2bc117448c29f003132a7ceb311bcef67ce0"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 02).bin" size="6209280" crc="d3a075e0" md5="6fc1a29a41d57ae64e269ee88d47a303" sha1="6382f5604912f170d4223dae00fcbd0a51bbe9e6"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 03).bin" size="34071072" crc="58af9452" md5="1aa18d6140758e4fbaac014eaf7171a4" sha1="429485554f4ee4a1eaa950ec8a829c0869bfe32b"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 04).bin" size="33984048" crc="2998cd12" md5="ac9e74696cdcf95b88b4678737b5c3cc" sha1="744b992b1072706268570e6872f5ba5c6d4dd21b"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 05).bin" size="34056960" crc="28d35c49" md5="daa2321c692bfe17df9cf2ec8177057e" sha1="177606460c681898243a98538a9b5e11cbf3afaf"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 06).bin" size="33986400" crc="4207f10f" md5="6503be7f0c49e26fb5904f119d8ac7f7" sha1="3df0059b78119c53a62146b78a1c3b326327f6dd"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 07).bin" size="34466208" crc="26256210" md5="c6fcfa092bfebbc37c7d408659d311dc" sha1="c6b707e81ad01d36e9e8da9b7fde7ddbf4ae882f"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 08).bin" size="34136928" crc="bf22756e" md5="c5cd2f9551b6256b35c69e237254753e" sha1="59f6c4368dbe7089dc36a6d9b3124186badaa033"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 09).bin" size="33817056" crc="a8bc8aca" md5="cfbc0c6fb26f7e1f7bf0b01193613388" sha1="3e6b7d2569e07bb1dd7d17a187e871db4cd7a719"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 10).bin" size="34089888" crc="be1b938b" md5="1e9fc8908fb87d188175b8ad849ee960" sha1="2df5aae083d43765362d7574c68b6e3c43c67f25"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 11).bin" size="7420560" crc="18ebd3a0" md5="ea08f9f6ca1117ef8eb32ec87e9acd83" sha1="6749837cc595e625de58dc4ca5674167a0e25237"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 12).bin" size="3640896" crc="3bed4ff8" md5="bdbbb3f10f1a7bc464e96c0b5476d0d7" sha1="06ad7d365f14b4c7de9a20c43dd40098a036ec34"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 13).bin" size="7596960" crc="47f21628" md5="b80e09a4620211789438b0b2742dc354" sha1="c4219e549ac1267df9550ba1c4fec10f4b7c2915"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 14).bin" size="4330032" crc="a3cc01f5" md5="dc5f4b8a27c083d9f538a94e4197424f" sha1="33425b8836f71f49ef4956e787367b9f92e7526d"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 15).bin" size="33918192" crc="e756f4c3" md5="591e26efea6c68e1466aa34c62a5afcb" sha1="492674847da8a17189ed0d2871b8fb6d8d3cf9c3"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 16).bin" size="33951120" crc="ca4582b5" md5="40078842894749d82845cb8b967cd79a" sha1="6af2dc862e4ae1f6f72cd4dfd12144014405d3ad"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 17).bin" size="34132224" crc="51e78a61" md5="7475fb8f07854c4d329423500b1dbae9" sha1="b7539c2039eef14d6b1a5eb84414a4561a544047"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 18).bin" size="4776912" crc="e4179452" md5="20f673c5408d0411bc55762a54fdb335" sha1="caca10f16d72422862b9deadb6a7c9fbf4d7cdf5"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 19).bin" size="33986400" crc="ca815274" md5="28922907ab99e75097d529f7912fa577" sha1="340ecaa26022c6dab633875b0e0476e16a35b8f8"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 20).bin" size="25088784" crc="57841c1e" md5="1e991c7ddc7b2747e8a68fbd8b16c097" sha1="16095c82722975963cd9158e99318c9015ad2d64"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 21).bin" size="7354704" crc="7c6a0d33" md5="b9fc3d55b39c5771ed75411f755006e7" sha1="16aa2a0ee542ea88ea8214d373ee7e36a8e474a8"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 22).bin" size="55217904" crc="8c1e22ab" md5="004fbbc5fff21e5c123cdb13cf305dfc" sha1="9522dd0d37989f3295e21d575982e9f770fc88d9"/>
+<rom name="Crossed Swords II (Japan) (En,Ja) (Track 23).bin" size="2951760" crc="80169d2a" md5="0fb7c4d9ca00b456ca338712efebd64b" sha1="657edce9f30a7a54f2d362f0e502ef0ba169bf9f"/>
+</game>
+<game name="Last Hope (Germany) (Unl)">
+  <category>Games</category>
+<description>Last Hope (Germany) (Unl)</description>
+<rom name="Last Hope (Germany) (Unl).cue" size="1182" crc="bcb25e5c" md5="deb6bc6d88eac0f5ad5cab69d9a718ab" sha1="8860c225401c7c6bd970541fe1a9dd769d6b934c"/>
+<rom name="Last Hope (Germany) (Unl) (Track 01).bin" size="15102192" crc="29a98350" md5="159d6e17106f6491e15404c95ed37e66" sha1="53c4f93bef464ab2f17650e91fc4af17818a8174"/>
+<rom name="Last Hope (Germany) (Unl) (Track 02).bin" size="20732880" crc="02f2040b" md5="96b2de3df77a4b89614185b2065e78ed" sha1="42797cf85c5557a018933d458fec187d1e06c8c0"/>
+<rom name="Last Hope (Germany) (Unl) (Track 03).bin" size="33466608" crc="26374459" md5="921dfe744abfe50595d5da37115cef71" sha1="ac7cdf1158fc7cd93321e584680c3d73328070b9"/>
+<rom name="Last Hope (Germany) (Unl) (Track 04).bin" size="28687344" crc="5b0a520d" md5="0893f671742c14df15309080bc0a4400" sha1="ec288bb3169f8c1c8eecd52a970a741034be789c"/>
+<rom name="Last Hope (Germany) (Unl) (Track 05).bin" size="26549376" crc="33e1c5e7" md5="ac53f0574507798b800e11a707b49b8c" sha1="a3101fe15a418b0494f88ca9efbcf9bb41ea7d80"/>
+<rom name="Last Hope (Germany) (Unl) (Track 06).bin" size="34604976" crc="4bc4d79a" md5="9ed9e016d056d1898972ba2cb37dc818" sha1="203d5d59632d4d36d49c6176eecd97dcb9146f01"/>
+<rom name="Last Hope (Germany) (Unl) (Track 07).bin" size="27718320" crc="9235e005" md5="214a5493002608179937422b5c2a9fb9" sha1="0974cb51bede42cca4c06be8812658b788c910c5"/>
+<rom name="Last Hope (Germany) (Unl) (Track 08).bin" size="25968432" crc="77d14bdd" md5="13471ca2ef51766e303d5d1cb7a9c49f" sha1="c7ee99f9dfc4056ffb33c38da446fc799498320c"/>
+<rom name="Last Hope (Germany) (Unl) (Track 09).bin" size="27066816" crc="d871da8f" md5="65da183518bce4879ec754c19c23b93a" sha1="c542b5e65afcb1057af78fbd35254fad38ea6c83"/>
+<rom name="Last Hope (Germany) (Unl) (Track 10).bin" size="13942656" crc="7123c514" md5="c1188edf9c60f4ecbd0f4483d84e1b0d" sha1="4a12213f3c912793cb5f9b10d0fcbc6ee64e3fa4"/>
+</game>
+<game name="Metal Slug (Japan) (En,Ja)">
+  <category>Games</category>
+<description>Metal Slug (Japan) (En,Ja)</description>
+<rom name="Metal Slug (Japan) (En,Ja).cue" size="2402" crc="69c120ec" md5="e50d595a3b0e364a1981c168e015d2ba" sha1="b3afcee67bdbc3bbc8048e393a45aa59e9cf549f"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 01).bin" size="30564240" crc="a41f1e08" md5="2b3ba6cbc5b832e16a9338122f6e7ebc" sha1="5d14c965bbf852e14d3583a56051bb4103fa9c04"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 02).bin" size="2570736" crc="26063bd2" md5="a40792c7e31ff75619623e514d2e48ec" sha1="f24f838446023e8ade1381db59d2577ba0105378"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 03).bin" size="24536064" crc="05de4c2d" md5="65de9f4fc5cd1ffbd542f2efacae2fa1" sha1="1326951a7898ce110f185034c76d8e9d413d2d07"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 04).bin" size="57955632" crc="14880eac" md5="ac4511ecbb5a4ce6fb496f1a3654aa9c" sha1="6f9b2d484b9e6232efc7c18c0ad23a41104dcf9e"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 05).bin" size="59804304" crc="f92191de" md5="0896eee9a1d4bf351ffb4b9eba607585" sha1="4db80f3709a3ad7702dfb73c2b37ed9f09a529ed"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 06).bin" size="4414704" crc="177c470a" md5="b3b46db7bd687d7205711869cf92162c" sha1="7eb9093aa0da5e4d522235001e00196243e9b465"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 07).bin" size="3937248" crc="5c2415d0" md5="05d92980a64cb82cf5198042f37419c9" sha1="43fe26bc8e49c46f0a502428c2409d786b1c5fc0"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 08).bin" size="59797248" crc="aa148b1f" md5="1ff610cca107e3d10cd45cb4639786be" sha1="bbbbb21858317de13288e227d74e5d71581eabc2"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 09).bin" size="59804304" crc="80cface4" md5="e4bdf3bc08f81edef8cd68ad3c5e625c" sha1="8a07a977449a929c964ccabef58ba77a7043e394"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 10).bin" size="59804304" crc="6d4a7c89" md5="33042a48a65f65c3cd77f333077daab0" sha1="a92a71eaeaed7095579d8f5297aec39ffe726f97"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 11).bin" size="4414704" crc="2ae4245f" md5="8838296287d293a6db02cb8f5d39e92e" sha1="efce5c49e8e0d0324a951df424d2a8bd7ac6628a"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 12).bin" size="3937248" crc="5c2415d0" md5="05d92980a64cb82cf5198042f37419c9" sha1="43fe26bc8e49c46f0a502428c2409d786b1c5fc0"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 13).bin" size="59804304" crc="62172004" md5="b890255e76b6aaeeb0391790856de52b" sha1="2f2c482e0e899a426c198538089fafe8afed955e"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 14).bin" size="59799600" crc="bf9d437c" md5="5284015bd272514e0d46a1262350dac7" sha1="21be1391898d62cde58addc13ccc0847ae9e16f4"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 15).bin" size="59804304" crc="f92191de" md5="0896eee9a1d4bf351ffb4b9eba607585" sha1="4db80f3709a3ad7702dfb73c2b37ed9f09a529ed"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 16).bin" size="4414704" crc="412e8c7e" md5="7130a1fa34eb83ba52178f200cae0844" sha1="6c35d7f91ef15b30c580d5c3e757b9880b600f7c"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 17).bin" size="3937248" crc="5c2415d0" md5="05d92980a64cb82cf5198042f37419c9" sha1="43fe26bc8e49c46f0a502428c2409d786b1c5fc0"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 18).bin" size="59801952" crc="da294304" md5="31e058fbf0c7c6a279f2c4e45a9ebc8f" sha1="85c6fc53c4ed7fd9e7a1dd68091afe25eb08bcbd"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 19).bin" size="28228704" crc="0b4c94d5" md5="61c2f4e7f2d2d4758b5a038eaee5ef89" sha1="39f7d7dd374a92068ecc4e4d0fef1104eaf4d813"/>
+<rom name="Metal Slug (Japan) (En,Ja) (Track 20).bin" size="29783376" crc="334a985e" md5="6aefaf88325bf51e77679029fcd13791" sha1="69875673b1b507e2306c9178180d6e2832740a8b"/>
+</game>
+<game name="Metal Slug 2 (World) (En,Ja)">
+  <category>Games</category>
+<description>Metal Slug 2 (World) (En,Ja)</description>
+<rom name="Metal Slug 2 (World) (En,Ja).cue" size="2028" crc="2be8974f" md5="a5d317d04efc0947e0075f51a1536b1d" sha1="71dcffaa3c2960204e6551c4cb11b313676ca6d3"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 01).bin" size="48067824" crc="3806511e" md5="b37467fd27269b3d5b41fff642f2da87" sha1="7545874e448fe49d13f30b8b00b2c4291bc79795"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 02).bin" size="54766320" crc="5215a6f8" md5="d0d8c2b64cceabcce9e7666043a78a24" sha1="f192810fed01558e0cba35eb21e488954e5182cf"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 03).bin" size="22701504" crc="fa36f6cb" md5="4197b19a8c51a95195235e43dd8eb737" sha1="129eb83229c29d954c2b1e178be1fa61413e4783"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 04).bin" size="16400496" crc="2fd7f92d" md5="ac8d24a2eb820598944e2dabfca94572" sha1="b4cd7f0e550e7a1b3b077f8da86536811370df79"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 05).bin" size="57776880" crc="ddc85bdc" md5="4fa404670f8581b073d4835eb34ca4db" sha1="30a832080d7af066ab75196553a237dc5a6ef23f"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 06).bin" size="49481376" crc="d8be01bd" md5="8bc921314181f93f8622e8f77147dca9" sha1="805c9ba6f8518b923351b1fec5b35a380e54bba6"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 07).bin" size="50758512" crc="0e7dafa1" md5="934835f0456e1fb94d7432855169452f" sha1="85da28faae42a755c93414e4baf4167959953c0c"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 08).bin" size="54441744" crc="022c2d53" md5="cbacc01761b9c48f59e4d98c10c8c596" sha1="2c2caf6c1a75d4917091caaf309ed953b892c153"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 09).bin" size="63334656" crc="d7aed2ff" md5="d2104bdb183e67fc3cd5a99af88837e5" sha1="6ef8dd2665664049fb8ed5700ff2d6352dfc5351"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 10).bin" size="52371984" crc="a095a513" md5="8f8b1f96341bc2a1946041b5313ef832" sha1="f4b7212e757424e471c8ce8d9ff23585b1c8ca23"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 11).bin" size="52917648" crc="17fe46b9" md5="e0764109bea167ee9318b2df6135dd93" sha1="379c9980bc08c38f17ef1ad5d97687ebe9f5cdef"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 12).bin" size="46372032" crc="d353c08d" md5="ef9f523443b5d67f60ed3ddd85d93c33" sha1="39cff0d85d000da50622763d58f36ed4d14bee53"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 13).bin" size="51993312" crc="0aa6a674" md5="a034eb990dbc216feb69e882e51de814" sha1="9d1c961b362e6cfb4313ea2dbc9295f4c8933622"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 14).bin" size="34576752" crc="87a730e8" md5="8a28b4a998a66ec179793bb4ac5238b9" sha1="dd04953179a43cd93d1881821393b16f1a39bb0e"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 15).bin" size="38563392" crc="7c852acc" md5="0a72ba0fdbb8b0c9c201315cfad4305f" sha1="1dec7357e8bba7993c6dfac3559a49c2a0a2136d"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 16).bin" size="3121104" crc="3de0e0de" md5="3c5eaccd6aa7d32d89e856d0e794147f" sha1="cfcfea0cb6f95db18db920149b1f4412a100cde2"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 17).bin" size="3344544" crc="2ebfbdd3" md5="3662c08638b4e0324e4f9c87a9ae2960" sha1="cf38e6f86227a39391096039c609dc8f34cbc76b"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 18).bin" size="5969376" crc="d5fa41a4" md5="58e98a1a2a71ee12bc3b9bcb692f6434" sha1="391512894f70a6adad49c8951e8fde411f7f3178"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 19).bin" size="16880304" crc="faabebf3" md5="37a224041aa3f69093eb1e217e0723f5" sha1="5d36343b540c0405f1b26216bc3f335bea9c7015"/>
+<rom name="Metal Slug 2 (World) (En,Ja) (Track 20).bin" size="1764000" crc="e7887563" md5="3078714f29b09408fbf800f7a2ce03d0" sha1="923937048d6b3fe908cbe4115a099a3b7a195d0b"/>
+</game>
+<game name="Puzzle Bobble ~ Bust-A-Move (Japan) (En,Ja)">
+  <category>Games</category>
+<description>Puzzle Bobble ~ Bust-A-Move (Japan) (En,Ja)</description>
+<rom name="Puzzle Bobble ~ Bust-A-Move (Japan) (En,Ja).cue" size="109" crc="d5c3b173" md5="948fcfe2b540b13e6f394b0f9e92108b" sha1="e42b4f915ed0d88376e50afe269c04a089f608df"/>
+<rom name="Puzzle Bobble ~ Bust-A-Move (Japan) (En,Ja).bin" size="2740080" crc="e951c6be" md5="ae9eeff58f32e86375af017ce984af04" sha1="f1764842973d087963a69c80160619002b5366ca"/>
+</game>
+</datafile>

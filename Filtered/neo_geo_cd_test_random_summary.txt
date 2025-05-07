@@ -1,0 +1,25 @@
+DAT Filter AI - Filtering Summary
+==============================
+Date: 2025-05-07 19:49:11
+Original game count: 8
+Filtered game count: 8
+Reduction: 0 games (0.0%)
+
+Filter Criteria:
+---------------
+- metacritic
+- historical
+- v_list
+- console_significance
+- mods_hacks
+
+Filtered Games (first 50):
+-------------------------
+1. Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt)
+2. Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt)
+3. Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja)
+4. Crossed Swords II (Japan) (En,Ja)
+5. Last Hope (Germany) (Unl)
+6. Metal Slug (Japan) (En,Ja)
+7. Metal Slug 2 (World) (En,Ja)
+8. Puzzle Bobble ~ Bust-A-Move (Japan) (En,Ja)
