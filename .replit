@@ -2,7 +2,7 @@ modules = ["python-3.11"]
 
 [nix]
 channel = "stable-24_05"
-packages = ["libGL"]
+packages = ["libGL", "python-launcher"]
 
 [workflows]
 runButton = "Project"
@@ -19,6 +19,7 @@ args = "DAT Filter AI Interactive"
 [[workflows.workflow]]
 name = "DAT Filter AI Interactive"
 author = "agent"
+mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
