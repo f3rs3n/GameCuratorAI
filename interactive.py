@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """
 DAT Filter AI - Interactive CLI Interface
 A text-based menu interface for the DAT Filter AI tool that works
