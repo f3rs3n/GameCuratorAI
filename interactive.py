@@ -296,7 +296,7 @@ class InteractiveMenu:
             print("|  " + self.current_theme['highlight'] + header_line + Style.RESET_ALL + "  |")
             print("|  " + divider + "  |")
             
-            # Menu options with completely uniform spacing
+            # Menu options with fixed perfect positioning for unavailable text
             menu_options = [
                 ("1", "🎮 LOAD DAT FILE", not self.current_dat_file),
                 ("2", "🕹️ APPLY FILTERS", not self.current_dat_file),
@@ -307,30 +307,31 @@ class InteractiveMenu:
                 ("0", "🚪 EXIT", False)
             ]
             
-            # Get max description length (for uniform padding)
-            max_desc_len = max(len(desc) for _, desc, _ in menu_options)
+            # Fixed positioning for perfect alignment
             unavailable_text = "[UNAVAILABLE]"
             
+            # Calculate the fixed position for all menu items
+            unavailable_position = width - len(unavailable_text) - 5  # 5 spaces from right border
+            
             for key, desc, disabled in menu_options:
-                # Standardized prefix and spacing
                 prefix = f" [{key}] "
-                desc_text = desc
                 
                 if disabled:
-                    # Padded description with proper spacing
-                    spaces_after_desc = max_desc_len - len(desc_text) + 2
-                    line = prefix + desc_text + " " * spaces_after_desc + unavailable_text
-                    spaces = width - 6 - len(line)
+                    # Calculate spaces for description with fixed positioning
+                    desc_spaces = unavailable_position - len(prefix) - 2  # -2 for buffer space
                     
-                    # Compose the line with colors
-                    print("|  " + self.current_theme['option'] + prefix + desc_text + 
-                          " " * spaces_after_desc + self.current_theme['error'] + unavailable_text + 
-                          Style.RESET_ALL + " " * spaces + "  |")
+                    # Create the line with exact positioning and right border
+                    print("|  " + self.current_theme['option'] + prefix + desc.ljust(desc_spaces) + 
+                          self.current_theme['error'] + unavailable_text + 
+                          Style.RESET_ALL + "   |")
                 else:
-                    # Padding to match the width of unavailable items
-                    spaces = width - 6 - len(prefix) - len(desc_text)
-                    print("|  " + self.current_theme['option'] + prefix + desc_text + 
-                          Style.RESET_ALL + " " * spaces + "  |")
+                    # Regular menu items also use fixed position for perfect right border
+                    # We add spaces to pad the description to match the position where [UNAVAILABLE] would start
+                    desc_spaces = unavailable_position - len(prefix) - 2  # Same calculation for consistency
+                    spaces_right = width - 4 - len(prefix) - desc_spaces - 2  # -2 for "|" and an extra space
+                    
+                    print("|  " + self.current_theme['option'] + prefix + desc.ljust(desc_spaces) + 
+                          Style.RESET_ALL + " " * spaces_right + "  |")
             
             # Bottom border
             print("|" + " " * (width - 2) + "|")
