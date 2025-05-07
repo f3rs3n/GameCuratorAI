@@ -384,6 +384,7 @@ class MainWindow(QMainWindow):
         # Get filter criteria from panel
         criteria = self.filter_panel.get_criteria()
         rule_config = self.filter_panel.get_rule_config()
+        advanced_settings = self.filter_panel.get_advanced_settings()
         
         # Validate criteria
         if not criteria:
@@ -396,11 +397,49 @@ class MainWindow(QMainWindow):
         
         # Apply filters
         try:
+            # Get settings from advanced panel
+            batch_size = advanced_settings.get('batch_size', 10)
+            provider_name = advanced_settings.get('ai_provider', self.config.get('ai_provider', 'random'))
+            ai_model = advanced_settings.get('ai_model')
+            
+            # Check if we need to switch providers
+            current_provider_name = getattr(self.ai_provider, 'get_provider_name', lambda: 'unknown')().lower() if self.ai_provider else 'none'
+            
+            # If the provider changed or isn't initialized
+            if current_provider_name != provider_name or not self.ai_provider or not self.ai_provider.is_available():
+                self.logger.info(f"Switching AI provider to {provider_name}")
+                
+                # Initialize the new provider
+                try:
+                    self.ai_provider = get_provider(provider_name)
+                    
+                    # If we have an API model, set it
+                    if ai_model and hasattr(self.ai_provider, 'set_model'):
+                        self.ai_provider.set_model(ai_model)
+                    
+                    # Initialize the provider
+                    self.ai_provider.initialize()
+                    
+                    # Update the filter engine with the new provider
+                    self.filter_engine = FilterEngine(self.ai_provider)
+                    
+                except Exception as e:
+                    self.logger.error(f"Failed to initialize {provider_name} provider: {e}")
+                    QMessageBox.critical(self, "Error", f"Failed to initialize {provider_name} provider: {str(e)}")
+                    return
+            
+            # Update the provider status display
+            self._update_provider_status()
+            
+            # Show process info in status bar
+            provider_info = self.ai_provider.get_provider_name()
+            self.status_bar.showMessage(f"Processing with {provider_info}, batch size: {batch_size} games per API call")
+            
             # Filter collection
             self.filtered_games, self.evaluations = self.filter_engine.filter_collection(
                 self.parsed_data['games'],
                 criteria,
-                10,  # batch size
+                batch_size,  # batch size from advanced settings
                 self._update_progress
             )
             
@@ -515,50 +554,107 @@ class MainWindow(QMainWindow):
                 self.status_bar.showMessage("Export failed", 5000)
     
     def _configure_api_key(self):
-        """Configure the OpenAI API key"""
-        from PyQt5.QtWidgets import QInputDialog, QLineEdit
+        """Configure API keys for providers"""
+        from PyQt5.QtWidgets import QInputDialog, QLineEdit, QDialog, QVBoxLayout, QFormLayout, QPushButton, QTabWidget, QWidget
         
-        current_key = os.environ.get("OPENAI_API_KEY", "")
+        # Create dialog for API key configuration
+        dialog = QDialog(self)
+        dialog.setWindowTitle("Configure API Keys")
+        dialog.setMinimumWidth(400)
         
-        api_key, ok = QInputDialog.getText(
-            self,
-            "Configure API Key",
-            "Enter your OpenAI API key:",
-            QLineEdit.Password,
-            current_key
-        )
+        # Create tabs for different providers
+        layout = QVBoxLayout(dialog)
+        tab_widget = QTabWidget()
         
-        if ok and api_key:
-            # Set the environment variable
-            os.environ["OPENAI_API_KEY"] = api_key
+        # OpenAI tab
+        openai_tab = QWidget()
+        openai_layout = QFormLayout(openai_tab)
+        
+        # OpenAI API Key
+        current_openai_key = os.environ.get("OPENAI_API_KEY", "")
+        openai_key_input = QLineEdit()
+        openai_key_input.setEchoMode(QLineEdit.Password)
+        openai_key_input.setText(current_openai_key)
+        openai_layout.addRow("OpenAI API Key:", openai_key_input)
+        
+        # Gemini tab
+        gemini_tab = QWidget()
+        gemini_layout = QFormLayout(gemini_tab)
+        
+        # Gemini API Key
+        current_gemini_key = os.environ.get("GEMINI_API_KEY", "")
+        gemini_key_input = QLineEdit()
+        gemini_key_input.setEchoMode(QLineEdit.Password)
+        gemini_key_input.setText(current_gemini_key)
+        gemini_layout.addRow("Gemini API Key:", gemini_key_input)
+        
+        # Add tabs
+        tab_widget.addTab(openai_tab, "OpenAI")
+        tab_widget.addTab(gemini_tab, "Gemini")
+        
+        layout.addWidget(tab_widget)
+        
+        # Button box
+        button_layout = QHBoxLayout()
+        ok_button = QPushButton("OK")
+        cancel_button = QPushButton("Cancel")
+        button_layout.addStretch()
+        button_layout.addWidget(ok_button)
+        button_layout.addWidget(cancel_button)
+        
+        layout.addLayout(button_layout)
+        
+        # Connect buttons
+        ok_button.clicked.connect(dialog.accept)
+        cancel_button.clicked.connect(dialog.reject)
+        
+        # Show dialog
+        result = dialog.exec_()
+        
+        if result == QDialog.Accepted:
+            # Save OpenAI key
+            openai_key = openai_key_input.text()
+            if openai_key:
+                os.environ["OPENAI_API_KEY"] = openai_key
+                self.logger.info("OpenAI API key configured")
+            
+            # Save Gemini key
+            gemini_key = gemini_key_input.text()
+            if gemini_key:
+                os.environ["GEMINI_API_KEY"] = gemini_key
+                self.logger.info("Gemini API key configured")
             
             # Reinitialize the AI provider
             try:
-                if self.ai_provider:
-                    self.ai_provider.initialize()
-                else:
-                    provider_name = self.config.get('ai_provider', 'openai')
-                    self.ai_provider = get_provider(provider_name)
-                    self.ai_provider.initialize()
-                    self.filter_engine = FilterEngine(self.ai_provider)
+                # Get current provider from settings panel
+                provider_name = self.filter_panel.ai_provider.currentData()
+                
+                # Create or reinitialize the provider
+                self.ai_provider = get_provider(provider_name)
+                self.ai_provider.initialize()
+                self.filter_engine = FilterEngine(self.ai_provider)
                 
                 self._update_provider_status()
                 
                 if self.ai_provider.is_available():
-                    QMessageBox.information(self, "Success", "API key configured successfully.")
+                    QMessageBox.information(self, "Success", "API keys configured successfully.")
                 else:
-                    QMessageBox.warning(self, "Warning", "API key set but provider initialization failed.")
+                    QMessageBox.warning(self, "Warning", 
+                        f"API keys set but {provider_name} provider initialization failed.")
             except Exception as e:
                 self.logger.error(f"Failed to initialize AI provider: {e}")
                 QMessageBox.critical(self, "Error", f"Failed to initialize AI provider: {str(e)}")
     
     def _show_api_key_warning(self):
-        """Show a warning about missing API key"""
+        """Show a warning about missing API keys"""
         result = QMessageBox.warning(
             self, 
-            "API Key Required", 
-            "An OpenAI API key is required for filtering functionality.\n\n" +
-            "Would you like to configure it now?",
+            "API Keys Required", 
+            "API keys are required for AI-powered filtering functionality.\n\n" +
+            "• OpenAI requires an API key for GPT models\n" +
+            "• Google Gemini requires an API key for Gemini models\n" +
+            "• Random provider requires no API key (for testing)\n\n" +
+            "Would you like to configure API keys now?",
             QMessageBox.Yes | QMessageBox.No,
             QMessageBox.Yes
         )
@@ -589,9 +685,14 @@ class MainWindow(QMainWindow):
             self,
             "About DAT Filter AI",
             "<h1>DAT Filter AI</h1>"
-            "<p>Version 1.0.0</p>"
+            "<p>Version 1.5.0</p>"
             "<p>A desktop application that uses AI to filter and curate "
             "video game collections from XML-formatted .dat files based on "
             "various criteria while maintaining original data structure.</p>"
-            "<p>&copy; 2023 DAT Filter AI Team</p>"
+            "<p><b>Supported AI Providers:</b><br>"
+            "• OpenAI (GPT-4o, GPT-3.5 Turbo)<br>"
+            "• Google Gemini (Gemini 1.5 Flash, Gemini 1.5 Pro)<br>"
+            "• Random (Testing mode, no API key needed)</p>"
+            "<p>Optimized with batch processing for improved API efficiency.</p>"
+            "<p>&copy; 2025 DAT Filter AI Team</p>"
         )

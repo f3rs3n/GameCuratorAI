@@ -171,22 +171,56 @@ class FilterPanel(QWidget):
         ai_group = QGroupBox("AI Settings")
         ai_layout = QVBoxLayout(ai_group)
         
-        # AI model selection (for future expansion)
-        ai_layout.addWidget(QLabel("AI Model:"))
+        # AI Provider selection
+        ai_layout.addWidget(QLabel("AI Provider:"))
+        self.ai_provider = QComboBox()
+        self.ai_provider.addItem("OpenAI (Most accurate)", "openai")
+        self.ai_provider.addItem("Google Gemini (Fast, efficient)", "gemini")
+        self.ai_provider.addItem("Random (Testing, no API key needed)", "random")
+        ai_layout.addWidget(self.ai_provider)
+        
+        # OpenAI model selection
+        ai_layout.addWidget(QLabel("OpenAI Model:"))
         self.ai_model = QComboBox()
         self.ai_model.addItem("GPT-4o (Recommended)", "gpt-4o")
         self.ai_model.addItem("GPT-3.5 Turbo (Faster, less accurate)", "gpt-3.5-turbo")
         ai_layout.addWidget(self.ai_model)
         
+        # Gemini model selection
+        ai_layout.addWidget(QLabel("Gemini Model:"))
+        self.gemini_model = QComboBox()
+        self.gemini_model.addItem("Gemini 1.5 Flash (Fast)", "gemini-1.5-flash")
+        self.gemini_model.addItem("Gemini 1.5 Pro (More accurate)", "gemini-1.5-pro")
+        ai_layout.addWidget(self.gemini_model)
+        
+        # Batch processing settings
+        batch_group = QGroupBox("Batch Processing")
+        batch_layout = QVBoxLayout(batch_group)
+        
         # Batch size for processing
-        ai_layout.addWidget(QLabel("Batch Size (games per API call):"))
+        batch_layout.addWidget(QLabel("Games per API call:"))
         self.batch_size = QSpinBox()
         self.batch_size.setRange(1, 50)
         self.batch_size.setValue(10)
         self.batch_size.setSingleStep(5)
-        ai_layout.addWidget(self.batch_size)
+        self.batch_size.setToolTip("Higher values process more games in a single API call, improving efficiency")
+        batch_layout.addWidget(self.batch_size)
+        
+        # Add explanation
+        batch_info = QLabel("Higher batch sizes improve efficiency but require more tokens per API call.")
+        batch_info.setWordWrap(True)
+        batch_layout.addWidget(batch_info)
+        
+        # Recommended batch sizes
+        batch_layout.addWidget(QLabel("Recommended batch sizes:"))
+        batch_recommendations = QLabel("• OpenAI: 5-10 games\n• Gemini: 10-20 games\n• Random: Any size")
+        batch_layout.addWidget(batch_recommendations)
+        
+        # Connect provider selection to update default batch size
+        self.ai_provider.currentIndexChanged.connect(self._update_batch_size_recommendation)
         
         advanced_layout.addWidget(ai_group)
+        advanced_layout.addWidget(batch_group)
         
         # Console filter settings (dynamic based on loaded DAT)
         self.console_group = QGroupBox("Console Filters")
@@ -295,6 +329,23 @@ class FilterPanel(QWidget):
             }
         }
     
+    def _update_batch_size_recommendation(self, index):
+        """
+        Update the batch size based on the selected provider
+        
+        Args:
+            index: Index of the selected provider
+        """
+        provider = self.ai_provider.currentData()
+        
+        # Set recommended batch size based on provider
+        if provider == "openai":
+            self.batch_size.setValue(5)
+        elif provider == "gemini":
+            self.batch_size.setValue(10)
+        elif provider == "random":
+            self.batch_size.setValue(20)
+    
     def get_advanced_settings(self) -> Dict[str, Any]:
         """
         Get advanced settings
@@ -302,8 +353,18 @@ class FilterPanel(QWidget):
         Returns:
             Dictionary with advanced settings
         """
+        provider = self.ai_provider.currentData()
+        
+        # Get appropriate model based on selected provider
+        model = None
+        if provider == "openai":
+            model = self.ai_model.currentData()
+        elif provider == "gemini":
+            model = self.gemini_model.currentData()
+        
         return {
-            "ai_model": self.ai_model.currentData(),
+            "ai_provider": provider,
+            "ai_model": model,
             "batch_size": self.batch_size.value(),
             "console_filter": self.console_filter.currentData()
         }

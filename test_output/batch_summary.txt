@@ -1,14 +1,16 @@
 DAT Filter AI - Batch Processing Summary
 =====================================
-Date: 2025-05-07 16:27:52
-Total files: 1
-Successfully processed: 1
+Date: 2025-05-07 17:40:13
+Total files: 2
+Successfully processed: 2
 Failed: 0
-Total processing time: 2.42 seconds
-Average processing time: 2.42 seconds per file
+Skipped: 0
+Total processing time: 7.54 seconds
+Average processing time: 3.77 seconds per file
 
 File Processing Results:
 ------------------------
 
 Provider: random
-  sample.dat: SUCCESS
+  commodore_c64_test.dat: SUCCESS
+  neo_geo_cd_test.dat: SUCCESS

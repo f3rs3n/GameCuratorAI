@@ -1,0 +1,394 @@
+{
+  "timestamp": "2025-05-07T17:40:13.370859",
+  "filtered_games_count": 8,
+  "evaluations_count": 8,
+  "special_cases": {
+    "multi_disc": {
+      "count": 0,
+      "groups": []
+    },
+    "regional_variants": {
+      "count": 0,
+      "groups": []
+    },
+    "console_naming": {
+      "count": 0,
+      "by_console": {},
+      "groups": []
+    },
+    "mods_hacks": {
+      "count": 0,
+      "games": []
+    }
+  },
+  "filtered_games": [
+    {
+      "name": "Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt)",
+      "id": "Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt)",
+        "scores": {
+          "metacritic": 2.7,
+          "historical": 6.9,
+          "v_list": 3.0,
+          "console_significance": 1.5,
+          "mods_hacks": 8.0
+        },
+        "explanations": {
+          "metacritic": "This title demonstrates questionable standing regarding Critical acclaim and review scores.",
+          "historical": "This title shows reasonable qualities for Historical significance and innovation.",
+          "v_list": "This title demonstrates questionable standing regarding v_list.",
+          "console_significance": "Based on random evaluation, Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) receives limited marks for console_significance.",
+          "mods_hacks": "For mods_hacks, Bakumatsu Roman - Gekka no Kenshi ~ The Last Blade (Japan) (En,Ja,Es,Pt) is remarkable."
+        },
+        "overall_score": 4.4,
+        "confidence": 0.93,
+        "_evaluation_time": 0.006194114685058594,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt)",
+      "id": "Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt)",
+        "scores": {
+          "metacritic": 1.8,
+          "historical": 2.4,
+          "v_list": 10.0,
+          "console_significance": 2.5,
+          "mods_hacks": 3.2
+        },
+        "explanations": {
+          "metacritic": "Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) has minimal significance in terms of Critical acclaim and review scores.",
+          "historical": "This title demonstrates below average standing regarding Historical significance and innovation.",
+          "v_list": "For v_list, Bakumatsu Roman Daini Maku - Gekka no Kenshi - Tsuki ni Saku Hana, Chiri Yuku Hana ~ The Last Blade 2 (Japan) (En,Ja,Es,Pt) is excellent.",
+          "console_significance": "This title demonstrates below average standing regarding console_significance.",
+          "mods_hacks": "This title demonstrates limited standing regarding mods_hacks."
+        },
+        "overall_score": 4.0,
+        "confidence": 0.89,
+        "_evaluation_time": 0.0011358261108398438,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja)",
+      "id": "Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja)",
+        "scores": {
+          "metacritic": 8.9,
+          "historical": 7.2,
+          "v_list": 7.1,
+          "console_significance": 1.9,
+          "mods_hacks": 8.0
+        },
+        "explanations": {
+          "metacritic": "Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) scores highly on Critical acclaim and review scores.",
+          "historical": "Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) has solid standing in terms of Historical significance and innovation.",
+          "v_list": "This title shows decent qualities for v_list.",
+          "console_significance": "For console_significance, Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) shows limited qualities.",
+          "mods_hacks": "Based on random evaluation, Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha (Japan) (En,Ja) receives top marks for mods_hacks."
+        },
+        "overall_score": 6.6,
+        "confidence": 0.76,
+        "_evaluation_time": 0.0009143352508544922,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Crossed Swords II (Japan) (En,Ja)",
+      "id": "Crossed Swords II (Japan) (En,Ja)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Crossed Swords II (Japan) (En,Ja)",
+        "scores": {
+          "metacritic": 4.1,
+          "historical": 7.4,
+          "v_list": 1.3,
+          "console_significance": 8.0,
+          "mods_hacks": 6.0
+        },
+        "explanations": {
+          "metacritic": "Crossed Swords II (Japan) (En,Ja) has limited significance in terms of Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Crossed Swords II (Japan) (En,Ja) performs at a solid level.",
+          "v_list": "Based on random evaluation, Crossed Swords II (Japan) (En,Ja) receives limited marks for v_list.",
+          "console_significance": "This title shows excellent qualities regarding console_significance.",
+          "mods_hacks": "Crossed Swords II (Japan) (En,Ja) has solid standing in terms of mods_hacks."
+        },
+        "overall_score": 5.4,
+        "confidence": 0.7,
+        "_evaluation_time": 0.0004467964172363281,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Last Hope (Germany) (Unl)",
+      "id": "Last Hope (Germany) (Unl)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Last Hope (Germany) (Unl)",
+        "scores": {
+          "metacritic": 3.3,
+          "historical": 2.6,
+          "v_list": 3.8,
+          "console_significance": 1.5,
+          "mods_hacks": 4.2
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, Last Hope (Germany) (Unl) shows below average qualities.",
+          "historical": "Based on random evaluation, Last Hope (Germany) (Unl) receives modest marks for Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Last Hope (Germany) (Unl) receives below average marks for v_list.",
+          "console_significance": "Based on random evaluation, Last Hope (Germany) (Unl) receives below average marks for console_significance.",
+          "mods_hacks": "Last Hope (Germany) (Unl) has below average significance in terms of mods_hacks."
+        },
+        "overall_score": 3.1,
+        "confidence": 0.82,
+        "_evaluation_time": 0.000446319580078125,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Metal Slug (Japan) (En,Ja)",
+      "id": "Metal Slug (Japan) (En,Ja)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Metal Slug (Japan) (En,Ja)",
+        "scores": {
+          "metacritic": 4.5,
+          "historical": 8.9,
+          "v_list": 1.2,
+          "console_significance": 4.8,
+          "mods_hacks": 8.5
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, Metal Slug (Japan) (En,Ja) receives minimal marks for Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Metal Slug (Japan) (En,Ja) receives top marks for Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Metal Slug (Japan) (En,Ja) receives limited marks for v_list.",
+          "console_significance": "For console_significance, Metal Slug (Japan) (En,Ja) shows modest qualities.",
+          "mods_hacks": "Metal Slug (Japan) (En,Ja) scores highly on mods_hacks."
+        },
+        "overall_score": 5.6,
+        "confidence": 0.92,
+        "_evaluation_time": 0.00045013427734375,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Metal Slug 2 (World) (En,Ja)",
+      "id": "Metal Slug 2 (World) (En,Ja)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Metal Slug 2 (World) (En,Ja)",
+        "scores": {
+          "metacritic": 6.9,
+          "historical": 6.6,
+          "v_list": 2.3,
+          "console_significance": 6.4,
+          "mods_hacks": 7.8
+        },
+        "explanations": {
+          "metacritic": "Metal Slug 2 (World) (En,Ja) has reasonable standing in terms of Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Metal Slug 2 (World) (En,Ja) performs at a decent level.",
+          "v_list": "This title demonstrates limited standing regarding v_list.",
+          "console_significance": "For console_significance, Metal Slug 2 (World) (En,Ja) performs at a reasonable level.",
+          "mods_hacks": "Based on random evaluation, Metal Slug 2 (World) (En,Ja) has adequate marks for mods_hacks."
+        },
+        "overall_score": 6.0,
+        "confidence": 0.73,
+        "_evaluation_time": 0.004252195358276367,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Puzzle Bobble ~ Bust-A-Move (Japan) (En,Ja)",
+      "id": "Puzzle Bobble ~ Bust-A-Move (Japan) (En,Ja)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Puzzle Bobble ~ Bust-A-Move (Japan) (En,Ja)",
+        "scores": {
+          "metacritic": 9.8,
+          "historical": 5.8,
+          "v_list": 4.6,
+          "console_significance": 5.1,
+          "mods_hacks": 9.4
+        },
+        "explanations": {
+          "metacritic": "This title shows excellent qualities regarding Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Puzzle Bobble ~ Bust-A-Move (Japan) (En,Ja) has reasonable marks for Historical significance and innovation.",
+          "v_list": "This title demonstrates below average standing regarding v_list.",
+          "console_significance": "Puzzle Bobble ~ Bust-A-Move (Japan) (En,Ja) has decent standing in terms of console_significance.",
+          "mods_hacks": "For mods_hacks, Puzzle Bobble ~ Bust-A-Move (Japan) (En,Ja) is outstanding."
+        },
+        "overall_score": 6.9,
+        "confidence": 0.89,
+        "_evaluation_time": 0.0007596015930175781,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    }
+  ]
+}

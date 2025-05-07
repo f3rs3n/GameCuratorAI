@@ -1,0 +1,306 @@
+<?xml version="1.0" ?>
+<datafile>
+  <header>
+    <name>Commodore - Commodore 64 (Tapes) (VREC DAT Filter)</name>
+    <description>Commodore - Commodore 64 (Tapes) (1,649) (-ny) [-aABbcdkMmpPv] (20230804-123725) (Retool) (VREC DAT Filter)</description>
+    <version>1.3.2</version>
+    <date>2025-03-31</date>
+    <author>f3rs3n, Gemini</author>
+    <homepage>https://github.com/f3rs3n/VREC-dat-filter</homepage>
+    <url>https://www.no-intro.org</url>
+    <retool>Created by Retool 2.3.9</retool>
+    <filter_criteria>['metacritic', 'historical', 'v_list', 'console_significance', 'mods_hacks']</filter_criteria>
+    <filtered_date>2025-05-07</filtered_date>
+    <filtered_time>17:40:09</filtered_time>
+    <filtered_games_count>21</filtered_games_count>
+    <original_games_count>21</original_games_count>
+  </header>
+  <game name="Bruce Lee (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Bruce Lee (Europe)</description>
+    
+		
+    <rom name="Bruce Lee (Europe).tap" size="452902" crc="de7eb7d5" md5="5626cfe84b9332387af1a7e992f187e0" sha1="5b27ca6c953ebc50a8cb8333f6fd52bda5cbf6a1"/>
+    
+	
+  </game>
+  <game name="Commando (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Commando (Europe)</description>
+    
+		
+    <rom name="Commando (Europe).tap" size="606583" crc="a915f942" md5="a65aa1b4b1c9d0effbda40f3f5300c83" sha1="a5640ed9a29d39a4bcaf22446794ac84b3c68cda"/>
+    
+	
+  </game>
+  <game name="Elite (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Elite (Europe)</description>
+    
+		
+    <rom name="Elite (Europe).tap" size="808809" crc="802389b7" md5="9b185180905c69e304be84d0983ad88b" sha1="85850eb06e126b44d72d820b9b98afc473375dd0"/>
+    
+	
+  </game>
+  <game name="Frankie Goes to Hollywood (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Frankie Goes to Hollywood (Europe)</description>
+    
+		
+    <rom name="Frankie Goes to Hollywood (Europe).tap" size="649732" crc="fd39d729" md5="d4fb6351cd844082c1bdd457d3712466" sha1="d22b523a663313960e9eb537a506091b58c89352"/>
+    
+	
+  </game>
+  <game name="Gauntlet (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Gauntlet (Europe)</description>
+    
+		
+    <rom name="Gauntlet (Europe).tap" size="1344110" crc="67795049" md5="362e392cf2ad5be18461ba2178c45a7c" sha1="d1efe780bdcdeda25c5d1fa520202bd89f14761d"/>
+    
+	
+  </game>
+  <game name="Gauntlet II (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Gauntlet II (Europe)</description>
+    
+		
+    <rom name="Gauntlet II (Europe) (Side 1).tap" size="863666" crc="7ed2c0ea" md5="4d900311de7d0975468d2b1cc1858eb0" sha1="a1d96970dac41a9de1c258248979e207408335ce"/>
+    
+		
+    <rom name="Gauntlet II (Europe) (Side 2).tap" size="344984" crc="6e64fd96" md5="09b76d3bdcf134705d3ebb0998b34f15" sha1="dafb4a3f0e787eec08dd348721340d863dd08335"/>
+    
+	
+  </game>
+  <game name="Ghostbusters (Europe) (Hit Squad) (Budget)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Ghostbusters (Europe) (Hit Squad) (Budget)</description>
+    
+		
+    <rom name="Ghostbusters (Europe) (Hit Squad) (Budget).tap" size="467899" crc="d05bbb7f" md5="c0b0b7f9647f76f95c666395b1ed2aff" sha1="c72d3c8c0e5cb73b0399ffb43063ce353c52b324"/>
+    
+	
+  </game>
+  <game name="Ghostbusters (Europe) (Ricochet) (Budget)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Ghostbusters (Europe) (Ricochet) (Budget)</description>
+    
+		
+    <rom name="Ghostbusters (Europe) (Ricochet) (Budget).tap" size="491598" crc="a9ca1d04" md5="7aab5a9d245fcaca8d0d489976e56a72" sha1="86faf363f5ae47df4029da35d75d5701c1e97308"/>
+    
+	
+  </game>
+  <game name="Ghostbusters 2 (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Ghostbusters 2 (Europe)</description>
+    
+		
+    <rom name="Ghostbusters 2 (Europe) (Side 1).tap" size="1098726" crc="dec77e19" md5="a7ca37352b93e9bb7c943a7690ce686c" sha1="dcbf43005e3b00341dd8e7041782cf2757af91d2"/>
+    
+		
+    <rom name="Ghostbusters 2 (Europe) (Side 2).tap" size="1172112" crc="ffe3af68" md5="ff59043fccdf8c47a194688cd018bb9c" sha1="fe2844daa217b1bd80203aee15d762cd89398e54"/>
+    
+	
+  </game>
+  <game name="Great Giana Sisters, The (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Great Giana Sisters, The (Europe)</description>
+    
+		
+    <rom name="Great Giana Sisters, The (Europe).tap" size="772642" crc="9cbbf7d6" md5="7afcd7c50b759c35807f7dbbaa39c09e" sha1="30f3360a91ca7f0d7ebf5b51c77d8c7c1c3d25a9"/>
+    
+	
+  </game>
+  <game name="Last Ninja II - Back with a Vengeance (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Last Ninja II - Back with a Vengeance (Europe)</description>
+    
+		
+    <rom name="Last Ninja II - Back with a Vengeance (Europe).tap" size="3297972" crc="c4139936" md5="0cd83f644749f81bd95b6001cd806991" sha1="58a5e2781ccd1f0a826ce6e2315f5f22cdd0416f"/>
+    
+	
+  </game>
+  <game name="Last Ninja III, The - Real Hatred Is Timeless (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Last Ninja III, The - Real Hatred Is Timeless (Europe)</description>
+    
+		
+    <rom name="Last Ninja III, The - Real Hatred Is Timeless (Europe).tap" size="3426487" crc="c5ab0928" md5="a06fb506ad0124a9b4051f95161eb742" sha1="d2c34f13d30fbe076f3299af0133487229b62d0d"/>
+    
+	
+  </game>
+  <game name="Last Ninja Remix (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Last Ninja Remix (Europe)</description>
+    
+		
+    <rom name="Last Ninja Remix (Europe).tap" size="3567765" crc="978e1004" md5="bb06dd07c60708b13337b3ff33c162ad" sha1="44aef8af15095e99d0ee7f2053a006f872fdaaef"/>
+    
+	
+  </game>
+  <game name="Last Ninja, The (Europe) (Budget)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Last Ninja, The (Europe) (Budget)</description>
+    
+		
+    <rom name="Last Ninja, The (Europe) (Budget) (Side 1).tap" size="1258377" crc="7e0bd743" md5="83dbd0cbf388c2ae26a1e5fbb3f03291" sha1="56b2c4a2053524699d8c6c2c5f7f44336babc3c5"/>
+    
+		
+    <rom name="Last Ninja, The (Europe) (Budget) (Side 2).tap" size="928380" crc="8ad6fb1a" md5="7fd330e8a52078992898f00a84298626" sha1="d4cb5170daec1bbfa7e9db45c586c98e5cb6b384"/>
+    
+	
+  </game>
+  <game name="Mario Bros (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Mario Bros (Europe)</description>
+    
+		
+    <rom name="Mario Bros (Europe).tap" size="710736" crc="7e444d08" md5="2e9a8fdd8f61c7bb86de4bc5cf2acbf8" sha1="f54834ac1aeb0a4a2b9fc418e085c26f2cb2e0a0"/>
+    
+	
+  </game>
+  <game name="Mayhem (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Mayhem (Europe)</description>
+    
+		
+    <rom name="Mayhem (Europe).tap" size="617146" crc="d008363b" md5="511c22d45fffb3871df620bdba1dabdb" sha1="723b6627dc8625a64390ed43cd9062089e0bf188"/>
+    
+	
+  </game>
+  <game name="Ninja (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Ninja (Europe)</description>
+    
+		
+    <rom name="Ninja (Europe).tap" size="599401" crc="963e3d78" md5="1ccf663d865eb09c9d0c8bf00919bb40" sha1="45b09b103dc68d8c4306cfd1078d2acd6469f85d"/>
+    
+	
+  </game>
+  <game name="Real Ghostbusters, The (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Real Ghostbusters, The (Europe)</description>
+    
+		
+    <rom name="Real Ghostbusters, The (Europe) (Side 1).tap" size="478129" crc="2b83eba0" md5="4aefcc4236b09d79ea7c9986d2b64253" sha1="003891c87b59f3485ace8c7c7198b0efa3f467e9"/>
+    
+		
+    <rom name="Real Ghostbusters, The (Europe) (Side 2).tap" size="1668973" crc="33bec043" md5="cd800337ed8a8c7161a1ad70f11ac8c7" sha1="3b4850b68222b19b67dbc858e1f49bf4122b32dd"/>
+    
+	
+  </game>
+  <game name="Shinobi (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Shinobi (Europe)</description>
+    
+		
+    <rom name="Shinobi (Europe) (Side 1).tap" size="674909" crc="8a19494e" md5="417381e1b80114a88ce5a6771e9cd51e" sha1="05668cc8388d9f265862dfa9c2258968c3af9e2c"/>
+    
+		
+    <rom name="Shinobi (Europe) (Side 2).tap" size="747815" crc="69c46e7c" md5="aafdaead0a3b3aaaa5cc5467a148b05b" sha1="7fb46b1908e1904470f28d89f61e142b3dba1240"/>
+    
+	
+  </game>
+  <game name="Star Wars (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Star Wars (Europe)</description>
+    
+		
+    <rom name="Star Wars (Europe).tap" size="626299" crc="018b62b0" md5="47a8874d2e2234109b17c6ce66db00e2" sha1="21afe4dd9453ec32caeb98faf4ead416458f205f"/>
+    
+	
+  </game>
+  <game name="Star Wars - Empire Strikes Back, The (Europe)">
+    
+		
+    <category>Games</category>
+    
+		
+    <description>Star Wars - Empire Strikes Back, The (Europe)</description>
+    
+		
+    <rom name="Star Wars - Empire Strikes Back, The (Europe).tap" size="539026" crc="00965bd4" md5="55f8c373746ae4b1ec3ebb3262c20ac4" sha1="d862df71868e6670687490bfcfc419b80730bb6b"/>
+    
+	
+  </game>
+</datafile>

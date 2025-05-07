@@ -1,0 +1,992 @@
+{
+  "timestamp": "2025-05-07T17:40:09.526798",
+  "filtered_games_count": 21,
+  "evaluations_count": 21,
+  "special_cases": {
+    "multi_disc": {
+      "count": 0,
+      "groups": []
+    },
+    "regional_variants": {
+      "count": 0,
+      "groups": []
+    },
+    "console_naming": {
+      "count": 0,
+      "by_console": {},
+      "groups": []
+    },
+    "mods_hacks": {
+      "count": 0,
+      "games": []
+    }
+  },
+  "filtered_games": [
+    {
+      "name": "Bruce Lee (Europe)",
+      "id": "Bruce Lee (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Bruce Lee (Europe)",
+        "scores": {
+          "metacritic": 6.9,
+          "historical": 6.0,
+          "v_list": 4.4,
+          "console_significance": 1.2,
+          "mods_hacks": 3.0
+        },
+        "explanations": {
+          "metacritic": "This title shows solid qualities for Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Bruce Lee (Europe) has decent marks for Historical significance and innovation.",
+          "v_list": "This title demonstrates questionable standing regarding v_list.",
+          "console_significance": "Based on random evaluation, Bruce Lee (Europe) receives below average marks for console_significance.",
+          "mods_hacks": "For mods_hacks, Bruce Lee (Europe) shows questionable qualities."
+        },
+        "overall_score": 4.3,
+        "confidence": 0.77,
+        "_evaluation_time": 0.0006105899810791016,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Commando (Europe)",
+      "id": "Commando (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Commando (Europe)",
+        "scores": {
+          "metacritic": 7.3,
+          "historical": 7.9,
+          "v_list": 1.7,
+          "console_significance": 3.9,
+          "mods_hacks": 7.5
+        },
+        "explanations": {
+          "metacritic": "Commando (Europe) has adequate standing in terms of Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Commando (Europe) has adequate marks for Historical significance and innovation.",
+          "v_list": "This title demonstrates questionable standing regarding v_list.",
+          "console_significance": "For console_significance, Commando (Europe) shows modest qualities.",
+          "mods_hacks": "Commando (Europe) has solid standing in terms of mods_hacks."
+        },
+        "overall_score": 5.7,
+        "confidence": 0.7,
+        "_evaluation_time": 0.0006122589111328125,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Elite (Europe)",
+      "id": "Elite (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Elite (Europe)",
+        "scores": {
+          "metacritic": 6.6,
+          "historical": 9.9,
+          "v_list": 6.7,
+          "console_significance": 6.8,
+          "mods_hacks": 7.4
+        },
+        "explanations": {
+          "metacritic": "This title shows decent qualities for Critical acclaim and review scores.",
+          "historical": "This title shows outstanding qualities regarding Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Elite (Europe) has adequate marks for v_list.",
+          "console_significance": "This title shows good qualities for console_significance.",
+          "mods_hacks": "For mods_hacks, Elite (Europe) performs at a reasonable level."
+        },
+        "overall_score": 7.5,
+        "confidence": 0.83,
+        "_evaluation_time": 0.0006692409515380859,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Frankie Goes to Hollywood (Europe)",
+      "id": "Frankie Goes to Hollywood (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Frankie Goes to Hollywood (Europe)",
+        "scores": {
+          "metacritic": 5.5,
+          "historical": 7.0,
+          "v_list": 7.4,
+          "console_significance": 7.8,
+          "mods_hacks": 6.0
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, Frankie Goes to Hollywood (Europe) has good marks for Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Frankie Goes to Hollywood (Europe) performs at a adequate level.",
+          "v_list": "For v_list, Frankie Goes to Hollywood (Europe) performs at a adequate level.",
+          "console_significance": "For console_significance, Frankie Goes to Hollywood (Europe) performs at a solid level.",
+          "mods_hacks": "Frankie Goes to Hollywood (Europe) has good standing in terms of mods_hacks."
+        },
+        "overall_score": 6.7,
+        "confidence": 0.78,
+        "_evaluation_time": 0.0005109310150146484,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Gauntlet (Europe)",
+      "id": "Gauntlet (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Gauntlet (Europe)",
+        "scores": {
+          "metacritic": 4.4,
+          "historical": 6.0,
+          "v_list": 8.8,
+          "console_significance": 8.3,
+          "mods_hacks": 9.5
+        },
+        "explanations": {
+          "metacritic": "This title demonstrates minimal standing regarding Critical acclaim and review scores.",
+          "historical": "Gauntlet (Europe) has solid standing in terms of Historical significance and innovation.",
+          "v_list": "Gauntlet (Europe) scores highly on v_list.",
+          "console_significance": "Based on random evaluation, Gauntlet (Europe) receives top marks for console_significance.",
+          "mods_hacks": "This title shows outstanding qualities regarding mods_hacks."
+        },
+        "overall_score": 7.4,
+        "confidence": 0.78,
+        "_evaluation_time": 0.0007729530334472656,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Gauntlet II (Europe)",
+      "id": "Gauntlet II (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Gauntlet II (Europe)",
+        "scores": {
+          "metacritic": 1.2,
+          "historical": 3.6,
+          "v_list": 2.6,
+          "console_significance": 9.5,
+          "mods_hacks": 4.2
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, Gauntlet II (Europe) shows minimal qualities.",
+          "historical": "Gauntlet II (Europe) has modest significance in terms of Historical significance and innovation.",
+          "v_list": "This title demonstrates modest standing regarding v_list.",
+          "console_significance": "For console_significance, Gauntlet II (Europe) is exceptional.",
+          "mods_hacks": "This title demonstrates limited standing regarding mods_hacks."
+        },
+        "overall_score": 4.2,
+        "confidence": 0.79,
+        "_evaluation_time": 0.001356363296508789,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Ghostbusters (Europe) (Hit Squad) (Budget)",
+      "id": "Ghostbusters (Europe) (Hit Squad) (Budget)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Ghostbusters (Europe) (Hit Squad) (Budget)",
+        "scores": {
+          "metacritic": 1.1,
+          "historical": 2.3,
+          "v_list": 6.0,
+          "console_significance": 1.9,
+          "mods_hacks": 5.6
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, Ghostbusters (Europe) (Hit Squad) (Budget) receives modest marks for Critical acclaim and review scores.",
+          "historical": "This title demonstrates below average standing regarding Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Ghostbusters (Europe) (Hit Squad) (Budget) has adequate marks for v_list.",
+          "console_significance": "This title demonstrates questionable standing regarding console_significance.",
+          "mods_hacks": "Ghostbusters (Europe) (Hit Squad) (Budget) has good standing in terms of mods_hacks."
+        },
+        "overall_score": 3.4,
+        "confidence": 0.89,
+        "_evaluation_time": 0.0005893707275390625,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Ghostbusters (Europe) (Ricochet) (Budget)",
+      "id": "Ghostbusters (Europe) (Ricochet) (Budget)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Ghostbusters (Europe) (Ricochet) (Budget)",
+        "scores": {
+          "metacritic": 4.2,
+          "historical": 6.7,
+          "v_list": 1.7,
+          "console_significance": 3.0,
+          "mods_hacks": 7.9
+        },
+        "explanations": {
+          "metacritic": "Ghostbusters (Europe) (Ricochet) (Budget) has modest significance in terms of Critical acclaim and review scores.",
+          "historical": "This title shows good qualities for Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Ghostbusters (Europe) (Ricochet) (Budget) receives questionable marks for v_list.",
+          "console_significance": "Based on random evaluation, Ghostbusters (Europe) (Ricochet) (Budget) receives limited marks for console_significance.",
+          "mods_hacks": "Based on random evaluation, Ghostbusters (Europe) (Ricochet) (Budget) has reasonable marks for mods_hacks."
+        },
+        "overall_score": 4.7,
+        "confidence": 0.87,
+        "_evaluation_time": 0.0004937648773193359,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Ghostbusters 2 (Europe)",
+      "id": "Ghostbusters 2 (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Ghostbusters 2 (Europe)",
+        "scores": {
+          "metacritic": 8.7,
+          "historical": 9.9,
+          "v_list": 8.5,
+          "console_significance": 3.2,
+          "mods_hacks": 1.7
+        },
+        "explanations": {
+          "metacritic": "Ghostbusters 2 (Europe) scores highly on Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Ghostbusters 2 (Europe) is outstanding.",
+          "v_list": "Based on random evaluation, Ghostbusters 2 (Europe) receives top marks for v_list.",
+          "console_significance": "Ghostbusters 2 (Europe) has limited significance in terms of console_significance.",
+          "mods_hacks": "For mods_hacks, Ghostbusters 2 (Europe) shows minimal qualities."
+        },
+        "overall_score": 6.4,
+        "confidence": 0.78,
+        "_evaluation_time": 0.0004801750183105469,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Great Giana Sisters, The (Europe)",
+      "id": "Great Giana Sisters, The (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Great Giana Sisters, The (Europe)",
+        "scores": {
+          "metacritic": 8.7,
+          "historical": 5.3,
+          "v_list": 5.0,
+          "console_significance": 5.3,
+          "mods_hacks": 7.1
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, Great Giana Sisters, The (Europe) receives top marks for Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Great Giana Sisters, The (Europe) has good marks for Historical significance and innovation.",
+          "v_list": "This title shows decent qualities for v_list.",
+          "console_significance": "For console_significance, Great Giana Sisters, The (Europe) performs at a adequate level.",
+          "mods_hacks": "This title shows decent qualities for mods_hacks."
+        },
+        "overall_score": 6.3,
+        "confidence": 0.95,
+        "_evaluation_time": 0.00043010711669921875,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Last Ninja II - Back with a Vengeance (Europe)",
+      "id": "Last Ninja II - Back with a Vengeance (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Last Ninja II - Back with a Vengeance (Europe)",
+        "scores": {
+          "metacritic": 1.4,
+          "historical": 2.0,
+          "v_list": 6.6,
+          "console_significance": 4.3,
+          "mods_hacks": 4.1
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, Last Ninja II - Back with a Vengeance (Europe) receives below average marks for Critical acclaim and review scores.",
+          "historical": "Last Ninja II - Back with a Vengeance (Europe) has modest significance in terms of Historical significance and innovation.",
+          "v_list": "For v_list, Last Ninja II - Back with a Vengeance (Europe) performs at a good level.",
+          "console_significance": "For console_significance, Last Ninja II - Back with a Vengeance (Europe) shows below average qualities.",
+          "mods_hacks": "Based on random evaluation, Last Ninja II - Back with a Vengeance (Europe) receives minimal marks for mods_hacks."
+        },
+        "overall_score": 3.7,
+        "confidence": 0.66,
+        "_evaluation_time": 0.0006239414215087891,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Last Ninja III, The - Real Hatred Is Timeless (Europe)",
+      "id": "Last Ninja III, The - Real Hatred Is Timeless (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Last Ninja III, The - Real Hatred Is Timeless (Europe)",
+        "scores": {
+          "metacritic": 9.9,
+          "historical": 8.9,
+          "v_list": 1.4,
+          "console_significance": 9.6,
+          "mods_hacks": 7.4
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, Last Ninja III, The - Real Hatred Is Timeless (Europe) receives top marks for Critical acclaim and review scores.",
+          "historical": "Last Ninja III, The - Real Hatred Is Timeless (Europe) scores highly on Historical significance and innovation.",
+          "v_list": "This title demonstrates modest standing regarding v_list.",
+          "console_significance": "Based on random evaluation, Last Ninja III, The - Real Hatred Is Timeless (Europe) receives top marks for console_significance.",
+          "mods_hacks": "Last Ninja III, The - Real Hatred Is Timeless (Europe) has solid standing in terms of mods_hacks."
+        },
+        "overall_score": 7.4,
+        "confidence": 0.91,
+        "_evaluation_time": 0.0006389617919921875,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Last Ninja Remix (Europe)",
+      "id": "Last Ninja Remix (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Last Ninja Remix (Europe)",
+        "scores": {
+          "metacritic": 5.8,
+          "historical": 9.4,
+          "v_list": 3.1,
+          "console_significance": 9.9,
+          "mods_hacks": 6.6
+        },
+        "explanations": {
+          "metacritic": "Last Ninja Remix (Europe) has adequate standing in terms of Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Last Ninja Remix (Europe) is remarkable.",
+          "v_list": "This title demonstrates limited standing regarding v_list.",
+          "console_significance": "Based on random evaluation, Last Ninja Remix (Europe) receives top marks for console_significance.",
+          "mods_hacks": "This title shows solid qualities for mods_hacks."
+        },
+        "overall_score": 7.0,
+        "confidence": 0.95,
+        "_evaluation_time": 0.00046443939208984375,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Last Ninja, The (Europe) (Budget)",
+      "id": "Last Ninja, The (Europe) (Budget)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Last Ninja, The (Europe) (Budget)",
+        "scores": {
+          "metacritic": 7.7,
+          "historical": 5.5,
+          "v_list": 6.8,
+          "console_significance": 5.8,
+          "mods_hacks": 3.8
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, Last Ninja, The (Europe) (Budget) has adequate marks for Critical acclaim and review scores.",
+          "historical": "Last Ninja, The (Europe) (Budget) has good standing in terms of Historical significance and innovation.",
+          "v_list": "This title shows good qualities for v_list.",
+          "console_significance": "For console_significance, Last Ninja, The (Europe) (Budget) performs at a reasonable level.",
+          "mods_hacks": "This title demonstrates modest standing regarding mods_hacks."
+        },
+        "overall_score": 5.9,
+        "confidence": 0.69,
+        "_evaluation_time": 0.001074075698852539,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Mario Bros (Europe)",
+      "id": "Mario Bros (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Mario Bros (Europe)",
+        "scores": {
+          "metacritic": 4.2,
+          "historical": 9.6,
+          "v_list": 5.1,
+          "console_significance": 5.7,
+          "mods_hacks": 8.4
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, Mario Bros (Europe) shows limited qualities.",
+          "historical": "This title shows remarkable qualities regarding Historical significance and innovation.",
+          "v_list": "This title shows solid qualities for v_list.",
+          "console_significance": "Based on random evaluation, Mario Bros (Europe) has solid marks for console_significance.",
+          "mods_hacks": "For mods_hacks, Mario Bros (Europe) is outstanding."
+        },
+        "overall_score": 6.6,
+        "confidence": 0.69,
+        "_evaluation_time": 0.0008299350738525391,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Mayhem (Europe)",
+      "id": "Mayhem (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Mayhem (Europe)",
+        "scores": {
+          "metacritic": 7.1,
+          "historical": 4.0,
+          "v_list": 5.4,
+          "console_significance": 5.7,
+          "mods_hacks": 8.3
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, Mayhem (Europe) performs at a good level.",
+          "historical": "Based on random evaluation, Mayhem (Europe) receives modest marks for Historical significance and innovation.",
+          "v_list": "For v_list, Mayhem (Europe) performs at a good level.",
+          "console_significance": "Based on random evaluation, Mayhem (Europe) has good marks for console_significance.",
+          "mods_hacks": "For mods_hacks, Mayhem (Europe) is outstanding."
+        },
+        "overall_score": 6.1,
+        "confidence": 0.68,
+        "_evaluation_time": 0.0015745162963867188,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Ninja (Europe)",
+      "id": "Ninja (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Ninja (Europe)",
+        "scores": {
+          "metacritic": 2.0,
+          "historical": 2.3,
+          "v_list": 4.0,
+          "console_significance": 9.7,
+          "mods_hacks": 7.9
+        },
+        "explanations": {
+          "metacritic": "Ninja (Europe) has modest significance in terms of Critical acclaim and review scores.",
+          "historical": "Ninja (Europe) has limited significance in terms of Historical significance and innovation.",
+          "v_list": "This title demonstrates questionable standing regarding v_list.",
+          "console_significance": "This title shows impressive qualities regarding console_significance.",
+          "mods_hacks": "Based on random evaluation, Ninja (Europe) has adequate marks for mods_hacks."
+        },
+        "overall_score": 5.2,
+        "confidence": 0.9,
+        "_evaluation_time": 0.0008618831634521484,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Real Ghostbusters, The (Europe)",
+      "id": "Real Ghostbusters, The (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Real Ghostbusters, The (Europe)",
+        "scores": {
+          "metacritic": 5.8,
+          "historical": 1.3,
+          "v_list": 1.9,
+          "console_significance": 8.1,
+          "mods_hacks": 2.1
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, Real Ghostbusters, The (Europe) has good marks for Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Real Ghostbusters, The (Europe) shows modest qualities.",
+          "v_list": "For v_list, Real Ghostbusters, The (Europe) shows below average qualities.",
+          "console_significance": "For console_significance, Real Ghostbusters, The (Europe) is impressive.",
+          "mods_hacks": "Real Ghostbusters, The (Europe) has minimal significance in terms of mods_hacks."
+        },
+        "overall_score": 3.8,
+        "confidence": 0.65,
+        "_evaluation_time": 0.0010094642639160156,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Shinobi (Europe)",
+      "id": "Shinobi (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Shinobi (Europe)",
+        "scores": {
+          "metacritic": 8.2,
+          "historical": 3.7,
+          "v_list": 3.7,
+          "console_significance": 5.7,
+          "mods_hacks": 2.2
+        },
+        "explanations": {
+          "metacritic": "Shinobi (Europe) scores highly on Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Shinobi (Europe) shows modest qualities.",
+          "v_list": "Based on random evaluation, Shinobi (Europe) receives minimal marks for v_list.",
+          "console_significance": "Shinobi (Europe) has solid standing in terms of console_significance.",
+          "mods_hacks": "Based on random evaluation, Shinobi (Europe) receives questionable marks for mods_hacks."
+        },
+        "overall_score": 4.7,
+        "confidence": 0.93,
+        "_evaluation_time": 0.0007770061492919922,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Star Wars (Europe)",
+      "id": "Star Wars (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Star Wars (Europe)",
+        "scores": {
+          "metacritic": 5.8,
+          "historical": 9.5,
+          "v_list": 3.4,
+          "console_significance": 2.6,
+          "mods_hacks": 2.9
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, Star Wars (Europe) performs at a solid level.",
+          "historical": "This title shows exceptional qualities regarding Historical significance and innovation.",
+          "v_list": "For v_list, Star Wars (Europe) shows minimal qualities.",
+          "console_significance": "For console_significance, Star Wars (Europe) shows minimal qualities.",
+          "mods_hacks": "For mods_hacks, Star Wars (Europe) shows modest qualities."
+        },
+        "overall_score": 4.8,
+        "confidence": 0.9,
+        "_evaluation_time": 0.0005853176116943359,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Star Wars - Empire Strikes Back, The (Europe)",
+      "id": "Star Wars - Empire Strikes Back, The (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Star Wars - Empire Strikes Back, The (Europe)",
+        "scores": {
+          "metacritic": 8.9,
+          "historical": 8.1,
+          "v_list": 5.2,
+          "console_significance": 2.4,
+          "mods_hacks": 8.7
+        },
+        "explanations": {
+          "metacritic": "Star Wars - Empire Strikes Back, The (Europe) scores highly on Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Star Wars - Empire Strikes Back, The (Europe) is outstanding.",
+          "v_list": "For v_list, Star Wars - Empire Strikes Back, The (Europe) performs at a good level.",
+          "console_significance": "For console_significance, Star Wars - Empire Strikes Back, The (Europe) shows minimal qualities.",
+          "mods_hacks": "This title shows impressive qualities regarding mods_hacks."
+        },
+        "overall_score": 6.7,
+        "confidence": 0.91,
+        "_evaluation_time": 0.0006761550903320312,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    }
+  ]
+}
