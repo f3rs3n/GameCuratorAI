@@ -1,9 +1,9 @@
 DAT Filter AI - Filtering Summary
 ==============================
-Date: 2025-05-07 16:33:25
+Date: 2025-05-07 16:43:32
 Original game count: 11
-Filtered game count: 11
-Reduction: 0 games (0.0%)
+Filtered game count: 10
+Reduction: 1 games (9.1%)
 
 Filter Criteria:
 ---------------
@@ -18,11 +18,10 @@ Filtered Games (first 50):
 1. Super Mario World
 2. Chrono Trigger
 3. Final Fantasy VII
-4. Final Fantasy VII (Disc 2)
-5. Final Fantasy VII (Disc 3)
-6. The Legend of Zelda: Ocarina of Time
-7. Sonic the Hedgehog
-8. Tetris
-9. Metal Gear Solid
-10. Metal Gear Solid (Disc 2)
-11. Super Mario World (Beta)
+4. Final Fantasy VII (Disc 3)
+5. The Legend of Zelda: Ocarina of Time
+6. Sonic the Hedgehog
+7. Tetris
+8. Metal Gear Solid
+9. Metal Gear Solid (Disc 2)
+10. Super Mario World (Beta)

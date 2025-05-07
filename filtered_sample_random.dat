@@ -10,7 +10,7 @@
     <email>info@datfilterai.example.com</email>
     <filter_criteria>['metacritic', 'historical', 'v_list', 'console_significance', 'mods_hacks']</filter_criteria>
     <filtered_date>2025-05-07</filtered_date>
-    <filtered_time>16:33:25</filtered_time>
+    <filtered_time>16:44:18</filtered_time>
     <filtered_games_count>11</filtered_games_count>
     <original_games_count>11</original_games_count>
   </header>

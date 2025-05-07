@@ -7,11 +7,13 @@ from typing import Dict, Any, Optional
 from ai_providers.base import BaseAIProvider
 from ai_providers.openai_provider import OpenAIProvider
 from ai_providers.random_provider import RandomProvider
+from ai_providers.gemini_provider import GeminiProvider
 
 # Dictionary of available providers
 AVAILABLE_PROVIDERS = {
     'openai': OpenAIProvider,
     'random': RandomProvider,
+    'gemini': GeminiProvider,
 }
 
 def get_provider(provider_name: str, config: Optional[Dict[str, Any]] = None) -> BaseAIProvider:

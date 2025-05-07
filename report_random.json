@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-05-07T16:33:25.288148",
+  "timestamp": "2025-05-07T16:44:18.747588",
   "filtered_games_count": 11,
   "evaluations_count": 11,
   "special_cases": {
@@ -43,22 +43,22 @@
               "game_id": "unknown",
               "game_name": "Final Fantasy VII (Disc 2)",
               "scores": {
-                "metacritic": 1.7,
-                "historical": 6.8,
-                "v_list": 8.2,
-                "console_significance": 3.8,
-                "mods_hacks": 3.5
+                "metacritic": 3.1,
+                "historical": 6.4,
+                "v_list": 7.6,
+                "console_significance": 9.2,
+                "mods_hacks": 4.8
               },
               "explanations": {
-                "metacritic": "This title demonstrates minimal standing regarding Critical acclaim and review scores.",
-                "historical": "This title shows reasonable qualities for Historical significance and innovation.",
-                "v_list": "This title shows impressive qualities regarding v_list.",
-                "console_significance": "Based on random evaluation, Final Fantasy VII (Disc 2) receives below average marks for console_significance.",
+                "metacritic": "Based on random evaluation, Final Fantasy VII (Disc 2) receives limited marks for Critical acclaim and review scores.",
+                "historical": "Final Fantasy VII (Disc 2) has solid standing in terms of Historical significance and innovation.",
+                "v_list": "Based on random evaluation, Final Fantasy VII (Disc 2) has decent marks for v_list.",
+                "console_significance": "For console_significance, Final Fantasy VII (Disc 2) is exceptional.",
                 "mods_hacks": "This title demonstrates modest standing regarding mods_hacks."
               },
-              "overall_score": 4.8,
-              "confidence": 0.8,
-              "_evaluation_time": 0.00013327598571777344,
+              "overall_score": 6.2,
+              "confidence": 0.84,
+              "_evaluation_time": 0.0007746219635009766,
               "_criteria_used": [
                 "metacritic",
                 "historical",
@@ -118,22 +118,22 @@
               "game_id": "unknown",
               "game_name": "Final Fantasy VII (Disc 3)",
               "scores": {
-                "metacritic": 6.8,
-                "historical": 7.1,
-                "v_list": 2.9,
-                "console_significance": 6.1,
-                "mods_hacks": 6.6
+                "metacritic": 4.0,
+                "historical": 9.9,
+                "v_list": 9.0,
+                "console_significance": 2.4,
+                "mods_hacks": 5.5
               },
               "explanations": {
-                "metacritic": "This title shows solid qualities for Critical acclaim and review scores.",
-                "historical": "For Historical significance and innovation, Final Fantasy VII (Disc 3) performs at a good level.",
-                "v_list": "Based on random evaluation, Final Fantasy VII (Disc 3) receives modest marks for v_list.",
-                "console_significance": "For console_significance, Final Fantasy VII (Disc 3) performs at a decent level.",
-                "mods_hacks": "Final Fantasy VII (Disc 3) has good standing in terms of mods_hacks."
+                "metacritic": "This title demonstrates modest standing regarding Critical acclaim and review scores.",
+                "historical": "This title shows exceptional qualities regarding Historical significance and innovation.",
+                "v_list": "Based on random evaluation, Final Fantasy VII (Disc 3) receives top marks for v_list.",
+                "console_significance": "Based on random evaluation, Final Fantasy VII (Disc 3) receives modest marks for console_significance.",
+                "mods_hacks": "For mods_hacks, Final Fantasy VII (Disc 3) performs at a decent level."
               },
-              "overall_score": 5.9,
-              "confidence": 0.69,
-              "_evaluation_time": 0.00013017654418945312,
+              "overall_score": 6.2,
+              "confidence": 0.7,
+              "_evaluation_time": 0.001430511474609375,
               "_criteria_used": [
                 "metacritic",
                 "historical",
@@ -182,22 +182,22 @@
         "game_id": "unknown",
         "game_name": "Super Mario World",
         "scores": {
-          "metacritic": 6.6,
-          "historical": 3.5,
-          "v_list": 5.2,
-          "console_significance": 9.3,
-          "mods_hacks": 9.1
+          "metacritic": 2.3,
+          "historical": 9.4,
+          "v_list": 3.3,
+          "console_significance": 2.4,
+          "mods_hacks": 5.5
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Super Mario World has solid marks for Critical acclaim and review scores.",
-          "historical": "This title demonstrates limited standing regarding Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Super Mario World has decent marks for v_list.",
-          "console_significance": "Super Mario World scores highly on console_significance.",
-          "mods_hacks": "Based on random evaluation, Super Mario World receives top marks for mods_hacks."
+          "metacritic": "This title demonstrates questionable standing regarding Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Super Mario World is exceptional.",
+          "v_list": "Based on random evaluation, Super Mario World receives modest marks for v_list.",
+          "console_significance": "Based on random evaluation, Super Mario World receives questionable marks for console_significance.",
+          "mods_hacks": "For mods_hacks, Super Mario World performs at a reasonable level."
         },
-        "overall_score": 6.7,
-        "confidence": 0.93,
-        "_evaluation_time": 0.00018262863159179688,
+        "overall_score": 4.6,
+        "confidence": 0.74,
+        "_evaluation_time": 0.0010960102081298828,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -228,22 +228,22 @@
         "game_id": "unknown",
         "game_name": "Chrono Trigger",
         "scores": {
-          "metacritic": 5.9,
-          "historical": 8.8,
-          "v_list": 6.0,
-          "console_significance": 3.6,
-          "mods_hacks": 1.7
+          "metacritic": 2.6,
+          "historical": 7.5,
+          "v_list": 1.1,
+          "console_significance": 8.7,
+          "mods_hacks": 6.1
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Chrono Trigger has decent marks for Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Chrono Trigger is remarkable.",
-          "v_list": "Chrono Trigger has solid standing in terms of v_list.",
-          "console_significance": "For console_significance, Chrono Trigger shows questionable qualities.",
-          "mods_hacks": "Chrono Trigger has minimal significance in terms of mods_hacks."
+          "metacritic": "Based on random evaluation, Chrono Trigger receives limited marks for Critical acclaim and review scores.",
+          "historical": "This title shows solid qualities for Historical significance and innovation.",
+          "v_list": "Chrono Trigger has modest significance in terms of v_list.",
+          "console_significance": "Chrono Trigger scores highly on console_significance.",
+          "mods_hacks": "Chrono Trigger has adequate standing in terms of mods_hacks."
         },
         "overall_score": 5.2,
-        "confidence": 0.93,
-        "_evaluation_time": 0.00015354156494140625,
+        "confidence": 0.94,
+        "_evaluation_time": 0.0018892288208007812,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -274,22 +274,22 @@
         "game_id": "unknown",
         "game_name": "Final Fantasy VII",
         "scores": {
-          "metacritic": 5.6,
-          "historical": 1.4,
-          "v_list": 5.3,
-          "console_significance": 8.8,
-          "mods_hacks": 4.8
+          "metacritic": 9.1,
+          "historical": 3.5,
+          "v_list": 3.9,
+          "console_significance": 5.2,
+          "mods_hacks": 3.1
         },
         "explanations": {
-          "metacritic": "Final Fantasy VII has solid standing in terms of Critical acclaim and review scores.",
-          "historical": "Based on random evaluation, Final Fantasy VII receives questionable marks for Historical significance and innovation.",
-          "v_list": "Final Fantasy VII has solid standing in terms of v_list.",
-          "console_significance": "For console_significance, Final Fantasy VII is exceptional.",
-          "mods_hacks": "Final Fantasy VII has modest significance in terms of mods_hacks."
+          "metacritic": "This title shows outstanding qualities regarding Critical acclaim and review scores.",
+          "historical": "Final Fantasy VII has minimal significance in terms of Historical significance and innovation.",
+          "v_list": "For v_list, Final Fantasy VII shows below average qualities.",
+          "console_significance": "Based on random evaluation, Final Fantasy VII has adequate marks for console_significance.",
+          "mods_hacks": "Based on random evaluation, Final Fantasy VII receives below average marks for mods_hacks."
         },
-        "overall_score": 5.2,
-        "confidence": 0.89,
-        "_evaluation_time": 0.00014019012451171875,
+        "overall_score": 5.0,
+        "confidence": 0.83,
+        "_evaluation_time": 0.0008361339569091797,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -320,22 +320,22 @@
         "game_id": "unknown",
         "game_name": "Final Fantasy VII (Disc 2)",
         "scores": {
-          "metacritic": 1.7,
-          "historical": 6.8,
-          "v_list": 8.2,
-          "console_significance": 3.8,
-          "mods_hacks": 3.5
+          "metacritic": 3.1,
+          "historical": 6.4,
+          "v_list": 7.6,
+          "console_significance": 9.2,
+          "mods_hacks": 4.8
         },
         "explanations": {
-          "metacritic": "This title demonstrates minimal standing regarding Critical acclaim and review scores.",
-          "historical": "This title shows reasonable qualities for Historical significance and innovation.",
-          "v_list": "This title shows impressive qualities regarding v_list.",
-          "console_significance": "Based on random evaluation, Final Fantasy VII (Disc 2) receives below average marks for console_significance.",
+          "metacritic": "Based on random evaluation, Final Fantasy VII (Disc 2) receives limited marks for Critical acclaim and review scores.",
+          "historical": "Final Fantasy VII (Disc 2) has solid standing in terms of Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Final Fantasy VII (Disc 2) has decent marks for v_list.",
+          "console_significance": "For console_significance, Final Fantasy VII (Disc 2) is exceptional.",
           "mods_hacks": "This title demonstrates modest standing regarding mods_hacks."
         },
-        "overall_score": 4.8,
-        "confidence": 0.8,
-        "_evaluation_time": 0.00013327598571777344,
+        "overall_score": 6.2,
+        "confidence": 0.84,
+        "_evaluation_time": 0.0007746219635009766,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -366,22 +366,22 @@
         "game_id": "unknown",
         "game_name": "Final Fantasy VII (Disc 3)",
         "scores": {
-          "metacritic": 6.8,
-          "historical": 7.1,
-          "v_list": 2.9,
-          "console_significance": 6.1,
-          "mods_hacks": 6.6
+          "metacritic": 4.0,
+          "historical": 9.9,
+          "v_list": 9.0,
+          "console_significance": 2.4,
+          "mods_hacks": 5.5
         },
         "explanations": {
-          "metacritic": "This title shows solid qualities for Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Final Fantasy VII (Disc 3) performs at a good level.",
-          "v_list": "Based on random evaluation, Final Fantasy VII (Disc 3) receives modest marks for v_list.",
-          "console_significance": "For console_significance, Final Fantasy VII (Disc 3) performs at a decent level.",
-          "mods_hacks": "Final Fantasy VII (Disc 3) has good standing in terms of mods_hacks."
+          "metacritic": "This title demonstrates modest standing regarding Critical acclaim and review scores.",
+          "historical": "This title shows exceptional qualities regarding Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Final Fantasy VII (Disc 3) receives top marks for v_list.",
+          "console_significance": "Based on random evaluation, Final Fantasy VII (Disc 3) receives modest marks for console_significance.",
+          "mods_hacks": "For mods_hacks, Final Fantasy VII (Disc 3) performs at a decent level."
         },
-        "overall_score": 5.9,
-        "confidence": 0.69,
-        "_evaluation_time": 0.00013017654418945312,
+        "overall_score": 6.2,
+        "confidence": 0.7,
+        "_evaluation_time": 0.001430511474609375,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -412,22 +412,22 @@
         "game_id": "unknown",
         "game_name": "The Legend of Zelda: Ocarina of Time",
         "scores": {
-          "metacritic": 8.6,
-          "historical": 2.5,
-          "v_list": 3.1,
-          "console_significance": 8.6,
-          "mods_hacks": 9.7
+          "metacritic": 6.3,
+          "historical": 5.4,
+          "v_list": 6.7,
+          "console_significance": 3.4,
+          "mods_hacks": 7.2
         },
         "explanations": {
-          "metacritic": "This title shows exceptional qualities regarding Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, The Legend of Zelda: Ocarina of Time shows modest qualities.",
-          "v_list": "For v_list, The Legend of Zelda: Ocarina of Time shows below average qualities.",
-          "console_significance": "Based on random evaluation, The Legend of Zelda: Ocarina of Time receives top marks for console_significance.",
-          "mods_hacks": "The Legend of Zelda: Ocarina of Time scores highly on mods_hacks."
+          "metacritic": "Based on random evaluation, The Legend of Zelda: Ocarina of Time has good marks for Critical acclaim and review scores.",
+          "historical": "This title shows adequate qualities for Historical significance and innovation.",
+          "v_list": "The Legend of Zelda: Ocarina of Time has good standing in terms of v_list.",
+          "console_significance": "Based on random evaluation, The Legend of Zelda: Ocarina of Time receives questionable marks for console_significance.",
+          "mods_hacks": "Based on random evaluation, The Legend of Zelda: Ocarina of Time has solid marks for mods_hacks."
         },
-        "overall_score": 6.5,
-        "confidence": 0.91,
-        "_evaluation_time": 0.00014591217041015625,
+        "overall_score": 5.8,
+        "confidence": 0.69,
+        "_evaluation_time": 0.0010521411895751953,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -458,22 +458,22 @@
         "game_id": "unknown",
         "game_name": "Sonic the Hedgehog",
         "scores": {
-          "metacritic": 5.3,
-          "historical": 6.4,
-          "v_list": 4.0,
-          "console_significance": 7.8,
-          "mods_hacks": 3.5
+          "metacritic": 2.9,
+          "historical": 6.8,
+          "v_list": 6.5,
+          "console_significance": 6.3,
+          "mods_hacks": 8.3
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Sonic the Hedgehog performs at a reasonable level.",
-          "historical": "Sonic the Hedgehog has good standing in terms of Historical significance and innovation.",
-          "v_list": "For v_list, Sonic the Hedgehog shows questionable qualities.",
-          "console_significance": "This title shows reasonable qualities for console_significance.",
-          "mods_hacks": "For mods_hacks, Sonic the Hedgehog shows below average qualities."
+          "metacritic": "This title demonstrates questionable standing regarding Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Sonic the Hedgehog performs at a adequate level.",
+          "v_list": "This title shows adequate qualities for v_list.",
+          "console_significance": "For console_significance, Sonic the Hedgehog performs at a reasonable level.",
+          "mods_hacks": "Sonic the Hedgehog scores highly on mods_hacks."
         },
-        "overall_score": 5.4,
-        "confidence": 0.66,
-        "_evaluation_time": 0.00016498565673828125,
+        "overall_score": 6.2,
+        "confidence": 0.75,
+        "_evaluation_time": 0.0006628036499023438,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -504,22 +504,22 @@
         "game_id": "unknown",
         "game_name": "Tetris",
         "scores": {
-          "metacritic": 6.6,
-          "historical": 5.2,
-          "v_list": 1.8,
-          "console_significance": 8.5,
-          "mods_hacks": 3.7
+          "metacritic": 3.0,
+          "historical": 7.4,
+          "v_list": 2.8,
+          "console_significance": 3.2,
+          "mods_hacks": 8.9
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Tetris has decent marks for Critical acclaim and review scores.",
-          "historical": "Tetris has solid standing in terms of Historical significance and innovation.",
-          "v_list": "Tetris has minimal significance in terms of v_list.",
-          "console_significance": "Tetris scores highly on console_significance.",
-          "mods_hacks": "Tetris has below average significance in terms of mods_hacks."
+          "metacritic": "Based on random evaluation, Tetris receives modest marks for Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Tetris has good marks for Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Tetris receives modest marks for v_list.",
+          "console_significance": "Based on random evaluation, Tetris receives below average marks for console_significance.",
+          "mods_hacks": "Tetris scores highly on mods_hacks."
         },
-        "overall_score": 5.2,
-        "confidence": 0.91,
-        "_evaluation_time": 0.00012063980102539062,
+        "overall_score": 5.1,
+        "confidence": 0.66,
+        "_evaluation_time": 0.0003714561462402344,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -550,22 +550,22 @@
         "game_id": "unknown",
         "game_name": "Metal Gear Solid",
         "scores": {
-          "metacritic": 9.6,
-          "historical": 3.8,
-          "v_list": 8.1,
-          "console_significance": 10.0,
-          "mods_hacks": 5.2
+          "metacritic": 6.9,
+          "historical": 5.4,
+          "v_list": 4.0,
+          "console_significance": 3.5,
+          "mods_hacks": 1.9
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Metal Gear Solid is remarkable.",
-          "historical": "This title demonstrates limited standing regarding Historical significance and innovation.",
-          "v_list": "This title shows remarkable qualities regarding v_list.",
-          "console_significance": "Metal Gear Solid scores highly on console_significance.",
-          "mods_hacks": "For mods_hacks, Metal Gear Solid performs at a good level."
+          "metacritic": "Metal Gear Solid has adequate standing in terms of Critical acclaim and review scores.",
+          "historical": "This title shows decent qualities for Historical significance and innovation.",
+          "v_list": "For v_list, Metal Gear Solid shows minimal qualities.",
+          "console_significance": "This title demonstrates limited standing regarding console_significance.",
+          "mods_hacks": "For mods_hacks, Metal Gear Solid shows limited qualities."
         },
-        "overall_score": 7.3,
-        "confidence": 0.67,
-        "_evaluation_time": 0.0001232624053955078,
+        "overall_score": 4.3,
+        "confidence": 0.79,
+        "_evaluation_time": 0.0005636215209960938,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -596,22 +596,22 @@
         "game_id": "unknown",
         "game_name": "Metal Gear Solid (Disc 2)",
         "scores": {
-          "metacritic": 3.5,
-          "historical": 3.1,
-          "v_list": 3.1,
-          "console_significance": 6.6,
-          "mods_hacks": 1.8
+          "metacritic": 5.1,
+          "historical": 6.9,
+          "v_list": 9.1,
+          "console_significance": 6.8,
+          "mods_hacks": 8.7
         },
         "explanations": {
-          "metacritic": "This title demonstrates minimal standing regarding Critical acclaim and review scores.",
-          "historical": "This title demonstrates below average standing regarding Historical significance and innovation.",
-          "v_list": "For v_list, Metal Gear Solid (Disc 2) shows questionable qualities.",
-          "console_significance": "Metal Gear Solid (Disc 2) has good standing in terms of console_significance.",
-          "mods_hacks": "This title demonstrates minimal standing regarding mods_hacks."
+          "metacritic": "This title shows solid qualities for Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Metal Gear Solid (Disc 2) performs at a reasonable level.",
+          "v_list": "Metal Gear Solid (Disc 2) scores highly on v_list.",
+          "console_significance": "For console_significance, Metal Gear Solid (Disc 2) performs at a reasonable level.",
+          "mods_hacks": "This title shows exceptional qualities regarding mods_hacks."
         },
-        "overall_score": 3.6,
-        "confidence": 0.8,
-        "_evaluation_time": 0.0001163482666015625,
+        "overall_score": 7.3,
+        "confidence": 0.9,
+        "_evaluation_time": 0.0006308555603027344,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -642,22 +642,22 @@
         "game_id": "unknown",
         "game_name": "Super Mario World (Beta)",
         "scores": {
-          "metacritic": 5.9,
-          "historical": 9.8,
-          "v_list": 9.5,
-          "console_significance": 9.4,
-          "mods_hacks": 4.1
+          "metacritic": 3.6,
+          "historical": 3.1,
+          "v_list": 3.7,
+          "console_significance": 8.3,
+          "mods_hacks": 4.8
         },
         "explanations": {
-          "metacritic": "Super Mario World (Beta) has good standing in terms of Critical acclaim and review scores.",
-          "historical": "Based on random evaluation, Super Mario World (Beta) receives top marks for Historical significance and innovation.",
-          "v_list": "This title shows exceptional qualities regarding v_list.",
-          "console_significance": "Super Mario World (Beta) scores highly on console_significance.",
-          "mods_hacks": "Based on random evaluation, Super Mario World (Beta) receives limited marks for mods_hacks."
+          "metacritic": "This title demonstrates questionable standing regarding Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Super Mario World (Beta) receives questionable marks for Historical significance and innovation.",
+          "v_list": "Super Mario World (Beta) has modest significance in terms of v_list.",
+          "console_significance": "For console_significance, Super Mario World (Beta) is remarkable.",
+          "mods_hacks": "For mods_hacks, Super Mario World (Beta) shows questionable qualities."
         },
-        "overall_score": 7.7,
-        "confidence": 0.8,
-        "_evaluation_time": 0.00012803077697753906,
+        "overall_score": 4.7,
+        "confidence": 0.75,
+        "_evaluation_time": 0.0005409717559814453,
         "_criteria_used": [
           "metacritic",
           "historical",

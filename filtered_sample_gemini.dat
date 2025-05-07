@@ -10,8 +10,8 @@
     <email>info@datfilterai.example.com</email>
     <filter_criteria>['metacritic', 'historical', 'v_list', 'console_significance', 'mods_hacks']</filter_criteria>
     <filtered_date>2025-05-07</filtered_date>
-    <filtered_time>16:33:25</filtered_time>
-    <filtered_games_count>11</filtered_games_count>
+    <filtered_time>16:43:32</filtered_time>
+    <filtered_games_count>10</filtered_games_count>
     <original_games_count>11</original_games_count>
   </header>
   <game name="Super Mario World">
@@ -68,25 +68,6 @@
     
     
     <rom name="Final Fantasy VII (USA) (Disc 1).bin" size="737280000" crc="A19DE0D3" md5="777F42BAF3DBF66C8D35F4CAC0BE7871"/>
-    
-  
-  </game>
-  <game name="Final Fantasy VII (Disc 2)">
-    
-    
-    <description>Final Fantasy VII (USA) (Disc 2)</description>
-    
-    
-    <year>1997</year>
-    
-    
-    <manufacturer>Square</manufacturer>
-    
-    
-    <category>RPG</category>
-    
-    
-    <rom name="Final Fantasy VII (USA) (Disc 2).bin" size="737280000" crc="C6D39EE2" md5="5E6C5CC5D6D2CDAD2F2FB796C69B9B93"/>
     
   
   </game>
