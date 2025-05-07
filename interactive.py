@@ -57,7 +57,7 @@ class InteractiveMenu:
             'input_dir': 'ToFilter',
             'output_dir': 'Filtered',
             'theme': 'default',
-            'multi_disc_mode': 'all_or_none',
+            'multi_disc_mode': 'all_or_none',  # Always all_or_none, no longer configurable
             'global_threshold': 1.0,  # 1.0 = neutral, < 1.0 = more lenient, > 1.0 = more strict
         }
         
@@ -555,18 +555,72 @@ class InteractiveMenu:
         }
         
         try:
-            # Define progress callback
-            def progress_callback(current, total):
+            # Display info about showing intermediate results
+            self._print_info("Showing intermediate results with color coding:")
+            self._print_success("GREEN: Game is kept")
+            self._print_error("RED: Game is removed")
+            print()
+            
+            # Track displayed games for UI management
+            displayed_games = 0
+            last_display_refresh = 0
+            
+            # Define progress callback with intermediate results
+            def progress_callback(current, total, batch_results=None):
+                nonlocal displayed_games, last_display_refresh
+                
+                # Always update progress bar
                 percentage = int(100 * current / total) if total > 0 else 0
                 self._print_progress_bar(current, total, 50, f"{current}/{total} games ({percentage}%)")
+                
+                # Show intermediate results if available
+                if batch_results and isinstance(batch_results, dict):
+                    recent_games = batch_results.get('recent_games', [])
+                    recent_evals = batch_results.get('recent_evaluations', [])
+                    
+                    # Only show batch results if we have some
+                    if recent_games and recent_evals:
+                        # If we've shown too many games or it's been a while, refresh display
+                        if displayed_games > 15 or (current - last_display_refresh) > 20:
+                            self._clear_screen()
+                            self._print_header("Applying Filters")
+                            self._print_info(f"Using {self.settings['provider']} provider with batch size {self.settings['batch_size']}")
+                            self._print_info(f"Criteria: {', '.join(self.settings['criteria'])}")
+                            self._print_info("Showing intermediate results with color coding:")
+                            self._print_success("GREEN: Game is kept")
+                            self._print_error("RED: Game is removed")
+                            print()
+                            self._print_progress_bar(current, total, 50, f"{current}/{total} games ({percentage}%)")
+                            displayed_games = 0
+                            last_display_refresh = current
+                        
+                        # Show each game's evaluation with appropriate color
+                        for game, eval_data in zip(recent_games, recent_evals):
+                            kept = eval_data.get('kept', False)
+                            score = eval_data.get('score', 0)
+                            game_name = game.get('description', game.get('name', 'Unknown Game'))
+                            
+                            if kept:
+                                self._print_success(f"+ {game_name} - Score: {score:.2f}")
+                            else:
+                                self._print_error(f"- {game_name} - Score: {score:.2f}")
+                            
+                            displayed_games += 1
             
             # Apply filters
-            self.filtered_games, self.evaluations = self.filter_engine.filter_collection(
+            result = self.filter_engine.filter_collection(
                 self.parsed_data['games'],
                 self.settings['criteria'],
                 self.settings['batch_size'],
                 progress_callback
             )
+            
+            # Handle different return formats (compatibility for older and newer versions)
+            if isinstance(result, tuple) and len(result) == 2:
+                self.filtered_games, self.evaluations = result
+            elif isinstance(result, dict):
+                self.filtered_games = result.get('kept_games', [])
+                self.evaluations = result.get('evaluations', [])
             
             # Apply special case rules
             self.filtered_games = self.rule_engine.apply_rules_to_filtered_games(
@@ -603,15 +657,89 @@ class InteractiveMenu:
             self._print_data("Filtered game count", str(filtered_count))
             self._print_data("Reduction", f"{reduction} games ({reduction_pct:.1f}%)")
             
-            # Show top games (max 10)
+            # Show top games (max 5)
             print()
-            self._print_info("Top Filtered Games:")
-            for i, game in enumerate(self.filtered_games[:10], 1):
+            self._print_subheader("Top Filtered Games")
+            for i, game in enumerate(self.filtered_games[:5], 1):
                 game_name = game.get('description', game.get('name', f"Game {i}"))
-                self._print_info(f"{i}. {game_name}")
+                self._print_success(f"{i}. {game_name}")
             
-            if len(self.filtered_games) > 10:
-                self._print_info(f"... and {len(self.filtered_games) - 10} more games")
+            if len(self.filtered_games) > 5:
+                self._print_info(f"... and {len(self.filtered_games) - 5} more games")
+                
+            # Show games that nearly made the cut
+            print()
+            self._print_subheader("Nearly Included Games")
+            
+            # Find all removed games with scores
+            all_games = self.parsed_data['games']
+            removed_games = [g for g in all_games if g not in self.filtered_games]
+            
+            # Map games to their evaluations
+            game_evals = {}
+            for game, eval_data in zip(all_games, self.evaluations):
+                game_id = game.get('name', '')
+                if game_id:
+                    game_evals[game_id] = eval_data
+            
+            # Sort removed games by score (highest first)
+            removed_with_scores = []
+            for game in removed_games:
+                game_id = game.get('name', '')
+                if game_id in game_evals:
+                    removed_with_scores.append((game, game_evals[game_id]))
+            
+            sorted_removed = sorted(
+                removed_with_scores,
+                key=lambda x: x[1].get('score', 0),
+                reverse=True
+            )
+            
+            # Show top 5 nearly included games
+            for i, (game, eval_data) in enumerate(sorted_removed[:5], 1):
+                game_name = game.get('description', game.get('name', f"Game {i}"))
+                score = eval_data.get('score', 0)
+                self._print_error(f"{i}. {game_name} - Score: {score:.2f}")
+                if 'explanation' in eval_data:
+                    self._print_info(f"   Reason: {eval_data['explanation']}")
+            
+            # Auto-save the filtered DAT file
+            if self.filtered_games:
+                output_dir = self.settings['output_dir']
+                os.makedirs(output_dir, exist_ok=True)
+                
+                # Generate output filename
+                basename = os.path.basename(self.current_dat_file)
+                filename, ext = os.path.splitext(basename)
+                provider_name = self.settings['provider']
+                output_file = f"filtered_{filename}_{provider_name}{ext}"
+                output_path = os.path.join(output_dir, output_file)
+                
+                # Get metadata for the export
+                metadata = {
+                    "filtered_by": "DAT Filter AI",
+                    "filter_criteria": ", ".join(self.settings['criteria']),
+                    "original_count": str(self.parsed_data['game_count']),
+                    "filtered_count": str(len(self.filtered_games)),
+                    "threshold": str(self.settings['global_threshold'])
+                }
+                
+                try:
+                    success, message = self.export_manager.export_dat_file(
+                        self.filtered_games,
+                        self.parsed_data,
+                        output_path,
+                        metadata
+                    )
+                    
+                    if success:
+                        self._print_success(f"\nFiltered DAT automatically saved to: {output_path}")
+                        self._print_info("Use the Export menu to create reports (JSON/TXT)")
+                    else:
+                        self._print_error(f"Failed to auto-save filtered DAT: {message}")
+                except Exception as e:
+                    logger.error(f"Error auto-saving filtered DAT: {e}")
+                    self._print_error(f"Failed to auto-save filtered DAT: {str(e)}")
             
             self._wait_for_key()
             
@@ -630,19 +758,19 @@ class InteractiveMenu:
             self._wait_for_key()
             return
         
-        self._print_option("1", "Export Filtered DAT")
-        self._print_option("2", "Export JSON Report")
-        self._print_option("3", "Export Text Summary")
+        self._print_option("1", "Export JSON Report")
+        self._print_option("2", "Export Text Summary")
+        self._print_option("3", "Export Filtered DAT (Custom Filename)")
         self._print_option("0", "Back to Main Menu")
         
         choice = self._get_user_input("Enter your choice")
         
         if choice == "1":
-            self._export_filtered_dat()
-        elif choice == "2":
             self._export_json_report()
-        elif choice == "3":
+        elif choice == "2":
             self._export_text_summary()
+        elif choice == "3":
+            self._export_filtered_dat()
         elif choice == "0":
             return
         else:
@@ -703,11 +831,16 @@ class InteractiveMenu:
         file_path = self._get_user_input(f"Output file path", default_path)
         
         try:
+            # Include full game data and all evaluations for complete reporting
+            all_games = self.parsed_data['games']
+            
+            # Include all games and their evaluations in the report
             success, message = self.export_manager.export_json_report(
                 self.filtered_games,
                 self.evaluations,
                 self.special_cases,
-                file_path
+                file_path,
+                all_games=all_games  # Pass all games for complete reporting
             )
             
             if success:
@@ -735,11 +868,40 @@ class InteractiveMenu:
         file_path = self._get_user_input(f"Output file path", default_path)
         
         try:
+            # Include information about removed games for complete reporting
+            all_games = self.parsed_data['games']
+            removed_games = [g for g in all_games if g not in self.filtered_games]
+            
+            # Map games to their evaluations
+            game_evals = {}
+            for game, eval_data in zip(all_games, self.evaluations):
+                game_id = game.get('name', '')
+                if game_id:
+                    game_evals[game_id] = eval_data
+            
+            # Sort removed games by score (highest first)
+            removed_with_scores = []
+            for game in removed_games:
+                game_id = game.get('name', '')
+                if game_id in game_evals:
+                    removed_with_scores.append((game, game_evals[game_id]))
+            
+            sorted_removed = sorted(
+                removed_with_scores,
+                key=lambda x: x[1].get('score', 0),
+                reverse=True
+            )
+            
+            # Get top removed games that nearly made the cut
+            near_misses = sorted_removed[:20] if sorted_removed else []
+            
             success, message = self.export_manager.export_text_summary(
                 self.filtered_games,
                 self.parsed_data['game_count'],
                 self.settings['criteria'],
-                file_path
+                file_path,
+                near_misses=near_misses,
+                global_threshold=self.settings['global_threshold']
             )
             
             if success:
@@ -766,7 +928,6 @@ class InteractiveMenu:
         self._print_data("Input Directory", self.settings['input_dir'])
         self._print_data("Output Directory", self.settings['output_dir'])
         self._print_data("Theme", self.settings['theme'])
-        self._print_data("Multi-disc Mode", self.settings['multi_disc_mode'])
         
         # Display threshold with description
         threshold = self.settings['global_threshold']
@@ -783,9 +944,8 @@ class InteractiveMenu:
         self._print_option("3", "Change Input Directory")
         self._print_option("4", "Change Output Directory")
         self._print_option("5", "Change Theme")
-        self._print_option("6", "Change Multi-disc Mode")
-        self._print_option("7", "Configure API Keys")
-        self._print_option("8", "Adjust Global Threshold")
+        self._print_option("6", "Configure API Keys")
+        self._print_option("7", "Adjust Global Threshold")
         self._print_option("0", "Back to Main Menu")
         
         choice = self._get_user_input("Enter your choice")
@@ -839,10 +999,8 @@ class InteractiveMenu:
         elif choice == "5":
             self._change_theme()
         elif choice == "6":
-            self._change_multi_disc_mode()
-        elif choice == "7":
             self._configure_api_keys()
-        elif choice == "8":
+        elif choice == "7":
             self._change_global_threshold()
         elif choice == "0":
             return
@@ -1077,6 +1235,15 @@ class InteractiveMenu:
         self._print_data("Batch Size", str(self.settings['batch_size']))
         self._print_data("Input Directory", self.settings['input_dir'])
         self._print_data("Output Directory", self.settings['output_dir'])
+        
+        # Display threshold with description
+        threshold = self.settings['global_threshold']
+        threshold_desc = "Neutral"
+        if threshold < 1.0:
+            threshold_desc = "More Lenient"
+        elif threshold > 1.0:
+            threshold_desc = "More Strict"
+        self._print_data("Global Threshold", f"{threshold:.2f} ({threshold_desc})")
         
         print()
         self._print_option("1", "Run Batch Processing with Current Settings")
