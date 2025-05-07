@@ -1,0 +1,68 @@
+DAT Filter AI - Filtering Summary
+==============================
+Date: 2025-05-07 20:13:36
+Original game count: 77
+Filtered game count: 77
+Reduction: 0 games (0.0%)
+
+Filter Criteria:
+---------------
+- metacritic
+- historical
+- v_list
+- console_significance
+- mods_hacks
+
+Filtered Games (first 50):
+-------------------------
+1. Activision Decathlon, The (USA)
+2. Astro Chase (USA)
+3. Atari PAM - Pete's Test (USA)
+4. Atari PAM Diagnostics (USA) (v2.3)
+5. Atari PAM System Test (USA) (v1.02)
+6. Ballblazer (USA)
+7. Beamrider (USA)
+8. BerZerk (USA)
+9. Blue Print (USA)
+10. Bounty Bob Strikes Back! (USA)
+11. Buck Rogers - Planet of Zoom (USA)
+12. Carol Shaw's River Raid (USA)
+13. Castle Blast (USA) (Unl)
+14. Castle Crisis (USA) (Unl)
+15. Centipede (USA)
+16. Choplifter! (USA)
+17. Congo Bongo (USA)
+18. Countermeasure (USA)
+19. David Crane's Pitfall II - Lost Caverns (USA)
+20. Defender (USA)
+21. Dig Dug (USA)
+22. Dreadnaught Factor, The (USA)
+23. Frogger (USA)
+24. Frogger II - Threeedeep! (USA)
+25. Galaxian (USA)
+26. Gorf (USA)
+27. Gremlins (USA)
+28. Gyruss (USA)
+29. H.E.R.O. (USA)
+30. James Bond 007 (USA)
+31. Joust (USA)
+32. Jungle Hunt (USA)
+33. K-Razy Shoot-Out (USA)
+34. Kaboom! (USA)
+35. Kangaroo (USA)
+36. Keystone Kapers (USA)
+37. Koffi - Yellow Kopter (USA) (Unl)
+38. Mario Bros. (USA)
+39. MegaMania (USA)
+40. Meteorites (USA)
+41. Miner 2049er Starring Bounty Bob (USA)
+42. Missile Command (USA)
+43. Montezuma's Revenge - Featuring Panama Joe (USA)
+44. Moon Patrol (USA)
+45. Mountain King (USA)
+46. Mr. Do!'s Castle (USA)
+47. Ms. Pac-Man (USA)
+48. Pac-Man (USA)
+49. Pengo (USA)
+50. Pitfall! (USA)
+... and 27 more
