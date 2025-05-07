@@ -56,7 +56,7 @@ class InteractiveMenu:
             'criteria': ['metacritic', 'historical', 'v_list', 'console_significance', 'mods_hacks'],
             'input_dir': 'ToFilter',
             'output_dir': 'Filtered',
-            'theme': 'default',
+            'theme': 'retro',
             'multi_disc_mode': 'all_or_none',  # Always all_or_none, no longer configurable
             'global_threshold': 1.0,  # 1.0 = neutral, < 1.0 = more lenient, > 1.0 = more strict
         }
@@ -76,16 +76,16 @@ class InteractiveMenu:
                 'progress_empty': '░',
             },
             'retro': {
-                'header': Fore.MAGENTA + Style.BRIGHT,
+                'header': Fore.CYAN + Style.BRIGHT,
                 'option': Fore.YELLOW,
-                'highlight': Fore.CYAN + Style.BRIGHT,
+                'highlight': Fore.MAGENTA + Style.BRIGHT,
                 'error': Fore.RED + Style.BRIGHT,
                 'success': Fore.GREEN + Style.BRIGHT,
                 'info': Fore.BLUE,
-                'data': Fore.WHITE,
+                'data': Fore.WHITE + Style.BRIGHT,
                 'progress_bar': Fore.YELLOW,
-                'progress_fill': '🕹️',
-                'progress_empty': ' ',
+                'progress_fill': '■',
+                'progress_empty': '□',
             },
         }
         
@@ -206,30 +206,102 @@ class InteractiveMenu:
         input(self.current_theme['info'] + "Press Enter to continue...")
     
     def main_menu(self):
-        """Display the main menu"""
+        """Display the main menu with retro gaming style"""
         while self.running:
             self._clear_screen()
-            self._print_header("DAT Filter AI - Interactive CLI")
             
-            # Print current status
+            # Create a retro console inspired interface
+            width = 70
+            padding = 2
+            content_width = width - (padding * 2)
+            
+            # Top border with game console style
+            print("\n" + "=" * width)
+            print("┌" + "─" * (width - 2) + "┐")
+            print("│" + " " * (width - 2) + "│")
+            
+            # Title - ASCII Art style
+            title = [
+                "██████╗  █████╗ ████████╗    ███████╗██╗██╗  ████████╗███████╗██████╗ ",
+                "██╔══██╗██╔══██╗╚══██╔══╝    ██╔════╝██║██║  ╚══██╔══╝██╔════╝██╔══██╗",
+                "██║  ██║███████║   ██║       █████╗  ██║██║     ██║   █████╗  ██████╔╝",
+                "██║  ██║██╔══██║   ██║       ██╔══╝  ██║██║     ██║   ██╔══╝  ██╔══██╗",
+                "██████╔╝██║  ██║   ██║       ██║     ██║███████╗██║   ███████╗██║  ██║",
+                "╚═════╝ ╚═╝  ╚═╝   ╚═╝       ╚═╝     ╚═╝╚══════╝╚═╝   ╚══════╝╚═╝  ╚═╝"
+            ]
+            
+            # Print title with colorful ASCII art
+            for line in title:
+                space = (width - len(line)) // 2
+                print("│" + " " * space + self.current_theme['header'] + line + Style.RESET_ALL + " " * (width - space - len(line) - 2) + "│")
+            
+            # Version and subtitle
+            subtitle = "RETRO GAME COLLECTION CURATOR"
+            space = (width - len(subtitle)) // 2
+            print("│" + " " * space + self.current_theme['highlight'] + subtitle + Style.RESET_ALL + " " * (width - space - len(subtitle) - 2) + "│")
+            print("│" + " " * (width - 2) + "│")
+            
+            # Show system status
             if self.current_dat_file:
-                self._print_info(f"Current DAT file: {os.path.basename(self.current_dat_file)}")
-                self._print_info(f"Game count: {self.parsed_data['game_count']}")
+                basename = os.path.basename(self.current_dat_file)
+                if len(basename) > 30:  # Truncate if too long
+                    basename = basename[:27] + "..."
+                dat_info = f" LOADED: {basename} | {self.parsed_data['game_count']} GAMES "
+                
                 if self.filtered_games:
-                    self._print_info(f"Filtered games: {len(self.filtered_games)}")
+                    filtered_info = f" FILTERED: {len(self.filtered_games)} GAMES KEPT "
+                else:
+                    filtered_info = " NO FILTERING APPLIED YET "
             else:
-                self._print_info("No DAT file loaded")
+                dat_info = " NO DAT FILE LOADED "
+                filtered_info = " --- "
+                
+            # Create a centered "monitor display" for the DAT info
+            monitor_width = min(len(dat_info) + 10, content_width - 4)
             
-            self._print_info(f"AI Provider: {self.settings['provider']}")
+            space_left = (content_width - monitor_width) // 2
+            print("│  " + " " * space_left + "╔" + "═" * monitor_width + "╗" + " " * (content_width - space_left - monitor_width - 2) + "  │")
+            print("│  " + " " * space_left + "║" + self.current_theme['data'] + dat_info.center(monitor_width) + Style.RESET_ALL + "║" + " " * (content_width - space_left - monitor_width - 2) + "  │")
+            print("│  " + " " * space_left + "║" + self.current_theme['info'] + filtered_info.center(monitor_width) + Style.RESET_ALL + "║" + " " * (content_width - space_left - monitor_width - 2) + "  │")
+            print("│  " + " " * space_left + "╚" + "═" * monitor_width + "╝" + " " * (content_width - space_left - monitor_width - 2) + "  │")
             
-            print()
-            self._print_option("1", "Load DAT File")
-            self._print_option("2", "Apply Filters" if self.current_dat_file else "Apply Filters (requires DAT file)")
-            self._print_option("3", "Export Results" if self.filtered_games else "Export Results (requires filtering)")
-            self._print_option("4", "Settings")
-            self._print_option("5", "Batch Processing")
-            self._print_option("6", "Compare Providers")
-            self._print_option("0", "Exit")
+            print("│" + " " * (width - 2) + "│")
+            
+            # Show provider and other important settings
+            engine_status = f" ENGINE: {self.settings['provider'].upper()} " + "│" + f" THRESHOLD: {self.settings['global_threshold']:.2f} "
+            space_left = (content_width - len(engine_status)) // 2
+            print("│  " + " " * space_left + self.current_theme['success'] + engine_status + Style.RESET_ALL + " " * (content_width - space_left - len(engine_status)) + "  │")
+            
+            print("│" + " " * (width - 2) + "│")
+            
+            # Menu options with retro gaming icons
+            print("│  " + "=" * content_width + "  │")
+            print("│  " + self.current_theme['highlight'] + " SYSTEM COMMANDS ".center(content_width, "=") + Style.RESET_ALL + "  │")
+            print("│  " + "=" * content_width + "  │")
+            
+            menu_options = [
+                ("1", "🎮 LOAD DAT FILE", not self.current_dat_file),
+                ("2", "🕹️ APPLY FILTERS", not self.current_dat_file),
+                ("3", "💾 EXPORT RESULTS", not self.filtered_games),
+                ("4", "⚙️ SETTINGS", False),
+                ("5", "📊 BATCH PROCESSING", False),
+                ("6", "📈 COMPARE PROVIDERS", False),
+                ("0", "🚪 EXIT", False)
+            ]
+            
+            for key, desc, disabled in menu_options:
+                if disabled:
+                    option_text = f" [{key}] {desc} " + self.current_theme['error'] + "[UNAVAILABLE]" + Style.RESET_ALL
+                else:
+                    option_text = f" [{key}] {desc}"
+                    
+                print("│  " + self.current_theme['option'] + option_text.ljust(content_width) + Style.RESET_ALL + "  │")
+            
+            # Bottom of the console
+            print("│" + " " * (width - 2) + "│")
+            print("│" + "_" * (width - 2) + "│")
+            print("└" + "─" * (width - 2) + "┘")
+            print("=" * width + "\n")
             
             choice = self._get_user_input("Enter your choice")
             
@@ -571,7 +643,6 @@ class InteractiveMenu:
                 
                 # Always update progress bar
                 percentage = int(100 * current / total) if total > 0 else 0
-                self._print_progress_bar(current, total, 50, f"{current}/{total} games ({percentage}%)")
                 
                 # Show intermediate results if available
                 if batch_results and isinstance(batch_results, dict):
@@ -580,32 +651,70 @@ class InteractiveMenu:
                     
                     # Only show batch results if we have some
                     if recent_games and recent_evals:
-                        # If we've shown too many games or it's been a while, refresh display
-                        if displayed_games > 15 or (current - last_display_refresh) > 20:
-                            self._clear_screen()
-                            self._print_header("Applying Filters")
-                            self._print_info(f"Using {self.settings['provider']} provider with batch size {self.settings['batch_size']}")
-                            self._print_info(f"Criteria: {', '.join(self.settings['criteria'])}")
-                            self._print_info("Showing intermediate results with color coding:")
-                            self._print_success("GREEN: Game is kept")
-                            self._print_error("RED: Game is removed")
-                            print()
-                            self._print_progress_bar(current, total, 50, f"{current}/{total} games ({percentage}%)")
-                            displayed_games = 0
-                            last_display_refresh = current
+                        # Always refresh the display for each batch to ensure visibility
+                        self._clear_screen()
                         
-                        # Show each game's evaluation with appropriate color
+                        # Draw a more retro-inspired header
+                        print("\n" + "=" * 70)
+                        print("█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█")
+                        print("█  ⬤ DAT FILTER AI - EVALUATION IN PROGRESS ⬤                   █")
+                        print("█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█")
+                        print("=" * 70)
+                        
+                        print(f"\n[SYSTEM] Using {self.settings['provider']} provider with batch size {self.settings['batch_size']}")
+                        print(f"[SYSTEM] Criteria: {', '.join(self.settings['criteria'])}")
+                        print(f"[SYSTEM] Global threshold: {self.settings['global_threshold']:.2f}")
+                        
+                        # Draw a more prominent progress bar
+                        progress_width = 50
+                        complete = int(progress_width * current / total) if total > 0 else 0
+                        remaining = progress_width - complete
+                        
+                        print("\n" + "=" * 70)
+                        print(f"PROGRESS: [{('■' * complete) + ('□' * remaining)}] {percentage}%")
+                        print(f"GAMES PROCESSED: {current}/{total}")
+                        print("=" * 70 + "\n")
+                        
+                        # Show batch processing header
+                        print("╔" + "═" * 68 + "╗")
+                        print("║ CURRENT BATCH RESULTS                                            ║")
+                        print("╠" + "═" * 68 + "╣")
+                        
+                        # Show each game's evaluation with appropriate color and more detailed formatting
                         for game, eval_data in zip(recent_games, recent_evals):
                             kept = eval_data.get('kept', False)
                             score = eval_data.get('score', 0)
                             game_name = game.get('description', game.get('name', 'Unknown Game'))
                             
-                            if kept:
-                                self._print_success(f"+ {game_name} - Score: {score:.2f}")
+                            # Truncate long game names
+                            if len(game_name) > 50:
+                                game_name = game_name[:47] + "..."
+                            
+                            # Format score with game rating symbols
+                            score_display = ""
+                            if score >= 0.8:
+                                score_display = "★★★★★"
+                            elif score >= 0.6:
+                                score_display = "★★★★☆"
+                            elif score >= 0.4:
+                                score_display = "★★★☆☆"
+                            elif score >= 0.2:
+                                score_display = "★★☆☆☆"
                             else:
-                                self._print_error(f"- {game_name} - Score: {score:.2f}")
+                                score_display = "★☆☆☆☆"
+                                
+                            if kept:
+                                self._print_success(f"║ ✓ KEPT: {game_name:<50} {score:.2f} {score_display} ║")
+                            else:
+                                self._print_error(f"║ ✗ REMOVED: {game_name:<46} {score:.2f} {score_display} ║")
                             
                             displayed_games += 1
+                        
+                        print("╚" + "═" * 68 + "╝")
+                        print("\nPress Ctrl+C to cancel filtering (current progress will be lost)")
+                        
+                        # Small delay to make the display more visible
+                        time.sleep(0.1)
             
             # Apply filters
             result = self.filter_engine.filter_collection(
