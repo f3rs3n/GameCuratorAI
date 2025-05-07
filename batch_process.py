@@ -23,7 +23,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-def process_dat_file(input_file, output_dir="test_output", provider="random", batch_size=5):
+def process_dat_file(input_file, output_dir="Filtered", provider="random", batch_size=10):
     """
     Process a single DAT file using the headless application
     
@@ -117,8 +117,8 @@ def main():
     # Process arguments
     import argparse
     parser = argparse.ArgumentParser(description="Batch process DAT files")
-    parser.add_argument("--input-dir", "-i", help="Directory containing DAT files", default="test_input")
-    parser.add_argument("--output-dir", "-o", help="Directory for output files", default="test_output")
+    parser.add_argument("--input-dir", "-i", help="Directory containing DAT files", default="ToFilter")
+    parser.add_argument("--output-dir", "-o", help="Directory for output files", default="Filtered")
     parser.add_argument("--limit", type=int, help="Limit number of files to process")
     parser.add_argument("--test", action="store_true", help="Process only small test files")
     parser.add_argument("--provider", "-p", help="AI provider to use (random, openai, gemini, or all)", default="random")

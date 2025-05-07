@@ -41,16 +41,21 @@ def main():
     if py_version.major < 3 or (py_version.major == 3 and py_version.minor < 8):
         print("Warning: Python 3.8 or higher is recommended")
     
+    # Create necessary directories
+    print("\nCreating required directories...")
+    os.makedirs("ToFilter", exist_ok=True)
+    os.makedirs("Filtered", exist_ok=True)
+    print("Created ToFilter and Filtered directories.")
+    
     # Required modules
     modules = [
         ("colorama", "colorama"),
-        ("openai", "openai"),
-        ("google.generativeai", "google-generativeai"),
     ]
     
-    # Optional modules
+    # AI Provider modules
     optional_modules = [
-        ("PyQt5.QtWidgets", "PyQt5"),
+        ("openai", "openai"),
+        ("google.generativeai", "google-generativeai"),
     ]
     
     # Check and install required modules
@@ -94,8 +99,10 @@ def main():
         for module_name, _ in missing_optional:
             print(f"  - {module_name}")
         
-        print("\nOptional modules are required for certain features:")
-        print("  - PyQt5: Required for the graphical user interface")
+        print("\nOptional modules are required for AI-powered filtering:")
+        print("  - openai: Required for OpenAI GPT filtering")
+        print("  - google.generativeai: Required for Google Gemini filtering")
+        print("Note: Without these modules, you can still use the random filter for testing")
         
         install = input("\nDo you want to install them now? (y/n): ").lower()
         
@@ -113,8 +120,10 @@ def main():
     print("\nSetup complete!")
     print("\nTo run DAT Filter AI, you can use:")
     print("  - Interactive text UI: python interactive.py")
-    print("  - GUI (if PyQt5 is installed): python main.py")
     print("  - Headless mode: python headless.py --help")
+    
+    print("\nPlease place your DAT files in the 'ToFilter' directory")
+    print("Filtered results will be saved in the 'Filtered' directory")
     
     print("\nPress Enter to exit...")
     input()

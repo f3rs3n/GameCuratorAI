@@ -78,10 +78,16 @@ def main():
     
     # Process the DAT file
     try:
+        # Use the correct input directory (ToFilter) if not already specified
+        input_path = args.input
+        if not os.path.exists(input_path) and os.path.exists(os.path.join("ToFilter", os.path.basename(input_path))):
+            input_path = os.path.join("ToFilter", os.path.basename(input_path))
+            logger.info(f"Using path from ToFilter directory: {input_path}")
+            
         # Parse the DAT file
-        print(f"Parsing DAT file: {args.input}...")
-        logger.info(f"Parsing DAT file: {args.input}")
-        parsed_data = dat_parser.parse_file(args.input)
+        print(f"Parsing DAT file: {input_path}...")
+        logger.info(f"Parsing DAT file: {input_path}")
+        parsed_data = dat_parser.parse_file(input_path)
         print(f"Successfully parsed with {parsed_data['game_count']} games.")
         
         # Get list of criteria
@@ -187,16 +193,22 @@ def main():
         
         # Export filtered DAT if requested
         if args.output:
-            print(f"Exporting filtered DAT to: {args.output}")
-            logger.info(f"Exporting filtered DAT to: {args.output}")
+            # Use Filtered directory if not already specified
+            output_path = args.output
+            if not "/" in output_path and not "\\" in output_path:
+                output_path = os.path.join("Filtered", output_path)
+                logger.info(f"Using output path in Filtered directory: {output_path}")
+                
+            print(f"Exporting filtered DAT to: {output_path}")
+            logger.info(f"Exporting filtered DAT to: {output_path}")
             success, message = export_manager.export_dat_file(
                 filtered_games,
                 parsed_data,
-                args.output,
+                output_path,
                 {"filter_criteria": criteria}
             )
             if success:
-                print(f"Successfully exported filtered DAT with {len(filtered_games)} games to {args.output}")
+                print(f"Successfully exported filtered DAT with {len(filtered_games)} games to {output_path}")
                 logger.info(f"Successfully exported filtered DAT: {message}")
             else:
                 print(f"Failed to export filtered DAT: {message}")
@@ -204,16 +216,22 @@ def main():
         
         # Export JSON report if requested
         if args.report:
-            print(f"Exporting JSON report to: {args.report}")
-            logger.info(f"Exporting JSON report to: {args.report}")
+            # Use Filtered directory if not already specified
+            report_path = args.report
+            if not "/" in report_path and not "\\" in report_path:
+                report_path = os.path.join("Filtered", report_path)
+                logger.info(f"Using report path in Filtered directory: {report_path}")
+                
+            print(f"Exporting JSON report to: {report_path}")
+            logger.info(f"Exporting JSON report to: {report_path}")
             success, message = export_manager.export_json_report(
                 filtered_games,
                 evaluations,
                 special_cases,
-                args.report
+                report_path
             )
             if success:
-                print(f"Successfully exported JSON report to {args.report}")
+                print(f"Successfully exported JSON report to {report_path}")
                 logger.info(f"Successfully exported JSON report: {message}")
             else:
                 print(f"Failed to export JSON report: {message}")
@@ -221,16 +239,22 @@ def main():
         
         # Export text summary if requested
         if args.summary:
-            print(f"Exporting text summary to: {args.summary}")
-            logger.info(f"Exporting text summary to: {args.summary}")
+            # Use Filtered directory if not already specified
+            summary_path = args.summary
+            if not "/" in summary_path and not "\\" in summary_path:
+                summary_path = os.path.join("Filtered", summary_path)
+                logger.info(f"Using summary path in Filtered directory: {summary_path}")
+                
+            print(f"Exporting text summary to: {summary_path}")
+            logger.info(f"Exporting text summary to: {summary_path}")
             success, message = export_manager.export_text_summary(
                 filtered_games,
                 parsed_data['game_count'],
                 criteria,
-                args.summary
+                summary_path
             )
             if success:
-                print(f"Successfully exported text summary to {args.summary}")
+                print(f"Successfully exported text summary to {summary_path}")
                 logger.info(f"Successfully exported text summary: {message}")
             else:
                 print(f"Failed to export text summary: {message}")

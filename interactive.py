@@ -54,8 +54,8 @@ class InteractiveMenu:
             'provider': 'random',
             'batch_size': 10,
             'criteria': ['metacritic', 'historical', 'v_list', 'console_significance', 'mods_hacks'],
-            'input_dir': 'test_input',
-            'output_dir': 'test_output',
+            'input_dir': 'ToFilter',
+            'output_dir': 'Filtered',
             'theme': 'default',
             'multi_disc_mode': 'all_or_none',
         }

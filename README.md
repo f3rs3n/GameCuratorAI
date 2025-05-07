@@ -6,7 +6,7 @@ An application that uses AI to intelligently filter and curate video game collec
 
 - AI-powered evaluation of video games based on multiple criteria
 - Support for XML .dat file processing
-- Text-based visualization with colored output and progress tracking
+- Interactive text-based interface with colored output and progress tracking
 - Rich multi-provider support (Random, OpenAI, and Google Gemini)
 - Special case detection and rule enforcement for multi-disc games, regional variants, etc.
 - Detailed interactive game evaluation inspection
@@ -18,15 +18,18 @@ An application that uses AI to intelligently filter and curate video game collec
 
 - Python 3.10 or higher
 - Required Python packages (install via `pip`):
-  - PyQt5 (for GUI mode)
-  - openai (for OpenAI integration)
-  - google-generativeai (for Gemini integration)
+  - colorama (for colored text output)
+  - openai (optional, for OpenAI integration)
+  - google-generativeai (optional, for Gemini integration)
   - xml.etree (included in Python standard library)
 
 ### Setup
 
 1. Clone the repository
-2. Install the required Python packages
+2. Run the setup script to create directories and install dependencies:
+   ```
+   python setup_local.py
+   ```
 3. Set up API keys (optional):
    ```
    # For OpenAI provider
@@ -38,25 +41,25 @@ An application that uses AI to intelligently filter and curate video game collec
 
 ## Usage
 
-### Main Mode (Text-based UI)
+### Interactive Mode
 
-The primary way to use DAT Filter AI is through its text-based interface:
+The primary way to use DAT Filter AI is through its interactive text-based interface:
+
+```
+python interactive.py
+```
+
+This provides a full-featured menu system for loading DAT files, applying filters with different AI providers, exporting results, and configuring settings.
+
+### Headless Mode
+
+For scripting or batch processing, you can use the headless mode:
 
 ```
 python headless.py --input path/to/input.dat --output path/to/output.dat [options]
 ```
 
-This provides rich text visualization with progress tracking, colored output, and detailed evaluation information.
-
-### Legacy GUI Mode
-
-A GUI mode is available but may have compatibility issues in some environments:
-
-```
-python main.py
-```
-
-Note: The text-based interface (headless.py) is now the recommended way to use DAT Filter AI.
+This mode runs without an interactive interface but provides rich text visualization with progress tracking, colored output, and detailed evaluation information.
 
 Options:
 - `--provider`: AI provider to use (random, openai, or gemini, default: random)
@@ -234,15 +237,8 @@ Overall Recommendation
 ├── docs/                     # Documentation
 │   └── provider_comparison.md # Provider comparison guide
 ├── logs/                     # Log files
-├── test_input/               # Test input DAT files
-├── test_output/              # Test output files
-├── ui/                       # GUI components
-│   ├── __init__.py
-│   ├── file_selector.py      # File selection dialog
-│   ├── filter_panel.py       # Filtering options panel
-│   ├── main_window.py        # Main application window
-│   ├── results_view.py       # Results display
-│   └── theme.py              # UI theme settings
+├── ToFilter/                 # Directory for input DAT files
+├── Filtered/                 # Directory for output files
 ├── utils/                    # Utility modules
 │   ├── __init__.py
 │   ├── config.py             # Configuration handling
@@ -251,15 +247,15 @@ Overall Recommendation
 ├── batch_process.sh          # Shell script for batch processing
 ├── compare.sh                # Comparison helper script
 ├── compare_providers.py      # Provider comparison tool
-├── headless.py               # Headless application
-├── main.py                   # Main GUI application
+├── headless.py               # Headless application (command-line version)
+├── interactive.py            # Interactive CLI application (main interface)
+├── interactive.bat           # Windows helper script for interactive mode
 ├── multieval.py              # Multi-provider evaluation script
 ├── multieval.sh              # Multi-provider evaluation shell script
 ├── README.md                 # This documentation
 ├── pyproject.toml            # Project configuration
-├── sample.dat                # Sample DAT file
-├── test_gemini.py            # Gemini provider single-game test
-└── test_providers.py         # Test script for all providers
+├── setup_local.py            # Setup script for installing dependencies
+└── setup_local.bat           # Windows helper script for setup
 ```
 
 ## Output Files
