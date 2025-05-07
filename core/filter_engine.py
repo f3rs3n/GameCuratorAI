@@ -1,0 +1,305 @@
+"""
+Filter Engine module for evaluating and filtering games based on AI analysis.
+"""
+
+import logging
+import time
+import json
+from typing import Dict, List, Any, Optional, Tuple
+
+from ai_providers.base import BaseAIProvider
+
+class FilterEngine:
+    """Engine for filtering games based on AI evaluations and rule criteria."""
+    
+    def __init__(self, ai_provider: BaseAIProvider):
+        """
+        Initialize the filter engine with an AI provider
+        
+        Args:
+            ai_provider: Instance of an AI provider
+        """
+        self.logger = logging.getLogger(__name__)
+        self.ai_provider = ai_provider
+        self.threshold_scores = {
+            "metacritic": 7.0,
+            "historical": 6.0,
+            "v_list": 5.0,
+            "console_significance": 7.0,
+            "mods_hacks": 6.0
+        }
+        self.criteria_weights = {
+            "metacritic": 0.35,
+            "historical": 0.25,
+            "v_list": 0.15,
+            "console_significance": 0.15,
+            "mods_hacks": 0.10
+        }
+    
+    def set_threshold(self, criterion: str, value: float):
+        """
+        Set the threshold score for a criterion
+        
+        Args:
+            criterion: The criterion to set the threshold for
+            value: The threshold value (0.0 to 10.0)
+        """
+        if criterion in self.threshold_scores:
+            self.threshold_scores[criterion] = max(0.0, min(10.0, value))
+            self.logger.debug(f"Set threshold for {criterion} to {value}")
+        else:
+            self.logger.warning(f"Unknown criterion: {criterion}")
+    
+    def set_weight(self, criterion: str, value: float):
+        """
+        Set the weight for a criterion
+        
+        Args:
+            criterion: The criterion to set the weight for
+            value: The weight value (0.0 to 1.0)
+        """
+        if criterion in self.criteria_weights:
+            # Normalize weight to ensure sum of weights equals 1.0
+            total_weight = sum(w for c, w in self.criteria_weights.items() if c != criterion)
+            max_allowed = 1.0 - total_weight
+            new_weight = max(0.0, min(max_allowed, value))
+            
+            self.criteria_weights[criterion] = new_weight
+            self.logger.debug(f"Set weight for {criterion} to {new_weight}")
+            
+            # Renormalize other weights if needed
+            self._normalize_weights()
+        else:
+            self.logger.warning(f"Unknown criterion: {criterion}")
+    
+    def _normalize_weights(self):
+        """
+        Normalize weights to ensure they sum to 1.0
+        """
+        total = sum(self.criteria_weights.values())
+        if total == 0:
+            # Equal weights if all are zero
+            for c in self.criteria_weights:
+                self.criteria_weights[c] = 1.0 / len(self.criteria_weights)
+        elif total != 1.0:
+            # Scale proportionally
+            factor = 1.0 / total
+            for c in self.criteria_weights:
+                self.criteria_weights[c] *= factor
+    
+    def evaluate_game(self, 
+                     game_info: Dict[str, Any], 
+                     criteria: List[str],
+                     collection_context: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        """
+        Evaluate a single game using the AI provider
+        
+        Args:
+            game_info: Dictionary containing game information
+            criteria: List of criteria to evaluate
+            collection_context: Optional context about the collection
+            
+        Returns:
+            Dictionary with evaluation results
+        """
+        start_time = time.time()
+        
+        # Validate criteria
+        valid_criteria = [c for c in criteria if c in self.threshold_scores]
+        if len(valid_criteria) < len(criteria):
+            unknown = set(criteria) - set(valid_criteria)
+            self.logger.warning(f"Unknown criteria ignored: {unknown}")
+        
+        # If no valid criteria, use all available criteria
+        if not valid_criteria:
+            valid_criteria = list(self.threshold_scores.keys())
+        
+        # Evaluate using AI provider
+        result = self.ai_provider.evaluate_game(game_info, valid_criteria, collection_context)
+        
+        # Add additional metadata
+        result["_evaluation_time"] = time.time() - start_time
+        result["_criteria_used"] = valid_criteria
+        result["_thresholds_used"] = {c: self.threshold_scores[c] for c in valid_criteria}
+        result["_weights_used"] = {c: self.criteria_weights[c] for c in valid_criteria}
+        
+        return result
+    
+    def filter_collection(self, 
+                         collection: List[Dict[str, Any]], 
+                         criteria: List[str],
+                         batch_size: int = 10,
+                         progress_callback=None) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+        """
+        Filter a collection of games based on the specified criteria
+        
+        Args:
+            collection: List of game dictionaries to filter
+            criteria: List of criteria to use for filtering
+            batch_size: Number of games to process in each batch
+            progress_callback: Optional callback function for progress updates
+            
+        Returns:
+            Tuple of (filtered_games, evaluation_results)
+        """
+        self.logger.info(f"Starting to filter collection of {len(collection)} games")
+        
+        # Extract collection context for better AI evaluation
+        collection_context = self._extract_collection_context(collection)
+        
+        # Process games in batches
+        filtered_games = []
+        all_evaluations = []
+        
+        total_games = len(collection)
+        processed = 0
+        
+        # Process in batches
+        for i in range(0, total_games, batch_size):
+            batch = collection[i:i+batch_size]
+            
+            # Update progress
+            if progress_callback:
+                progress_callback(processed, total_games)
+            
+            self.logger.debug(f"Processing batch {i//batch_size + 1} ({len(batch)} games)")
+            
+            # Evaluate batch
+            for game in batch:
+                evaluation = self.evaluate_game(game, criteria, collection_context)
+                
+                # Add evaluation to game and to results list
+                game["_evaluation"] = evaluation
+                all_evaluations.append(evaluation)
+                
+                # Check if game meets criteria
+                if self._meets_criteria(evaluation, criteria):
+                    filtered_games.append(game)
+                
+                processed += 1
+                
+                # Update progress more frequently
+                if progress_callback and processed % max(1, batch_size // 2) == 0:
+                    progress_callback(processed, total_games)
+        
+        # Final progress update
+        if progress_callback:
+            progress_callback(total_games, total_games)
+        
+        self.logger.info(f"Filtering complete. {len(filtered_games)} of {len(collection)} games passed filters.")
+        return filtered_games, all_evaluations
+    
+    def _extract_collection_context(self, collection: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """
+        Extract context information from the collection to help the AI make better evaluations
+        
+        Args:
+            collection: List of game dictionaries
+            
+        Returns:
+            Dictionary with collection context
+        """
+        # Get a sample of game names for context
+        sample_size = min(50, len(collection))
+        game_names = [game.get("name", "Unknown") for game in collection[:sample_size]]
+        
+        # Extract console information if available
+        consoles = set()
+        for game in collection:
+            for key in ["console", "platform", "system"]:
+                if key in game and isinstance(game[key], dict) and game[key].get("text"):
+                    consoles.add(game[key]["text"])
+        
+        return {
+            "collection_size": len(collection),
+            "sample_games": game_names,
+            "consoles": list(consoles),
+            "evaluation_criteria": list(self.threshold_scores.keys()),
+            "threshold_scores": self.threshold_scores,
+            "criteria_weights": self.criteria_weights
+        }
+    
+    def _meets_criteria(self, evaluation: Dict[str, Any], criteria: List[str]) -> bool:
+        """
+        Check if a game's evaluation meets the threshold criteria
+        
+        Args:
+            evaluation: Game evaluation results
+            criteria: List of criteria to check
+            
+        Returns:
+            True if the game meets the criteria, False otherwise
+        """
+        # If there was an error in evaluation, fail
+        if "error" in evaluation:
+            return False
+        
+        # If the AI explicitly recommends inclusion/exclusion
+        if "overall_recommendation" in evaluation and "include" in evaluation["overall_recommendation"]:
+            return evaluation["overall_recommendation"]["include"]
+        
+        # Check individual criteria
+        if "evaluations" in evaluation:
+            evals = evaluation["evaluations"]
+            
+            # Calculate weighted score
+            weighted_score = 0.0
+            total_weight = 0.0
+            
+            for criterion in criteria:
+                if criterion in evals and "score" in evals[criterion]:
+                    score = float(evals[criterion]["score"])
+                    weight = self.criteria_weights.get(criterion, 0.1)
+                    
+                    weighted_score += score * weight
+                    total_weight += weight
+            
+            # If we have weights, check against thresholds
+            if total_weight > 0:
+                normalized_score = weighted_score / total_weight
+                threshold = sum(self.threshold_scores.get(c, 5.0) * self.criteria_weights.get(c, 0.1) 
+                               for c in criteria) / total_weight
+                
+                return normalized_score >= threshold
+        
+        # Default to conservative inclusion
+        return True
+    
+    def save_evaluations(self, evaluations: List[Dict[str, Any]], file_path: str) -> bool:
+        """
+        Save evaluation results to a JSON file
+        
+        Args:
+            evaluations: List of evaluation results
+            file_path: Path to save the evaluations
+            
+        Returns:
+            True if save was successful, False otherwise
+        """
+        try:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                json.dump(evaluations, f, indent=2)
+            self.logger.info(f"Saved {len(evaluations)} evaluations to {file_path}")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error saving evaluations: {e}")
+            return False
+    
+    def load_evaluations(self, file_path: str) -> List[Dict[str, Any]]:
+        """
+        Load evaluation results from a JSON file
+        
+        Args:
+            file_path: Path to load the evaluations from
+            
+        Returns:
+            List of evaluation results
+        """
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                evaluations = json.load(f)
+            self.logger.info(f"Loaded {len(evaluations)} evaluations from {file_path}")
+            return evaluations
+        except Exception as e:
+            self.logger.error(f"Error loading evaluations: {e}")
+            return []

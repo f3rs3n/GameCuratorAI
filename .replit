@@ -1,0 +1,27 @@
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-24_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "DAT Filter AI Headless"
+
+[[workflows.workflow]]
+name = "DAT Filter AI Headless"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python headless.py --input sample.dat --output filtered_sample.dat --provider random --report report.json --summary summary.txt"
+
+[deployment]
+run = ["sh", "-c", "python main.py"]
