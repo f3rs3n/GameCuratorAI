@@ -104,9 +104,9 @@ def process_dat_file(input_file, output_dir="test_output", provider="random", ba
                 f.write(f"STDOUT:\n{result.stdout}\n\nSTDERR:\n{result.stderr}")
             return False, time_taken
     
-    except subprocess.TimeoutExpired:
-        logger.error(f"Timeout processing {file_name} (exceeded {timeout} seconds)")
-        return False, timeout
+    except subprocess.TimeoutExpired as e:
+        logger.error(f"Timeout processing {file_name} (exceeded {e.timeout} seconds)")
+        return False, e.timeout
     
     except Exception as e:
         logger.error(f"Error processing {file_name}: {e}")
