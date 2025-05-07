@@ -23,14 +23,15 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-def process_dat_file(input_file, output_dir="test_output", provider="random"):
+def process_dat_file(input_file, output_dir="test_output", provider="random", batch_size=5):
     """
     Process a single DAT file using the headless application
     
     Args:
         input_file: Path to input DAT file
         output_dir: Directory for output files
-        provider: AI provider to use ('random' or 'openai')
+        provider: AI provider to use ('random', 'openai', or 'gemini')
+        batch_size: Number of games to process in one batch (for API efficiency)
     
     Returns:
         Tuple of (success, time_taken)
@@ -51,19 +52,26 @@ def process_dat_file(input_file, output_dir="test_output", provider="random"):
         "--output", output_file,
         "--provider", provider,
         "--report", report_file,
-        "--summary", summary_file
+        "--summary", summary_file,
+        "--batch-size", str(batch_size)
     ]
     
+    # Add debugging flag for easier troubleshooting
+    # cmd.append("--debug")
+    
     try:
-        logger.info(f"Processing {file_name}...")
+        logger.info(f"Processing {file_name} with {provider} provider (batch size: {batch_size})...")
         start_time = time.time()
+        
+        # Run command with increased timeout for larger collections
+        timeout = 3600  # 60-minute timeout (increased from 30 minutes)
         
         # Run command
         result = subprocess.run(
             cmd, 
             capture_output=True, 
             text=True,
-            timeout=1800  # 30-minute timeout
+            timeout=timeout
         )
         
         end_time = time.time()
@@ -72,6 +80,21 @@ def process_dat_file(input_file, output_dir="test_output", provider="random"):
         # Check result
         if result.returncode == 0:
             logger.info(f"Successfully processed {file_name} in {time_taken:.2f} seconds")
+            
+            # Calculate processing rate
+            try:
+                # Try to parse the game count from the summary file
+                with open(summary_file, "r") as f:
+                    summary_content = f.read()
+                    import re
+                    match = re.search(r"Original game count: (\d+)", summary_content)
+                    if match:
+                        game_count = int(match.group(1))
+                        rate = game_count / time_taken
+                        logger.info(f"Processing rate: {rate:.2f} games/second")
+            except:
+                pass  # Skip if we can't calculate the rate
+                
             return True, time_taken
         else:
             logger.error(f"Failed to process {file_name}: {result.stderr}")
@@ -82,8 +105,8 @@ def process_dat_file(input_file, output_dir="test_output", provider="random"):
             return False, time_taken
     
     except subprocess.TimeoutExpired:
-        logger.error(f"Timeout processing {file_name} (exceeded 30 minutes)")
-        return False, 1800
+        logger.error(f"Timeout processing {file_name} (exceeded {timeout} seconds)")
+        return False, timeout
     
     except Exception as e:
         logger.error(f"Error processing {file_name}: {e}")
@@ -94,19 +117,28 @@ def main():
     # Process arguments
     import argparse
     parser = argparse.ArgumentParser(description="Batch process DAT files")
+    parser.add_argument("--input-dir", "-i", help="Directory containing DAT files", default="test_input")
+    parser.add_argument("--output-dir", "-o", help="Directory for output files", default="test_output")
     parser.add_argument("--limit", type=int, help="Limit number of files to process")
     parser.add_argument("--test", action="store_true", help="Process only small test files")
-    parser.add_argument("--provider", "-p", help="AI provider to use (random, openai, or both)", default="random")
+    parser.add_argument("--provider", "-p", help="AI provider to use (random, openai, gemini, or all)", default="random")
     parser.add_argument("--sample", "-s", help="Process only the sample.dat file", action="store_true")
+    parser.add_argument("--batch-size", "-b", type=int, help="Batch size for processing games", default=5)
+    parser.add_argument("--continue", "-c", dest="continue_processing", action="store_true", 
+                        help="Continue processing from previous run (skip already processed files)")
+    parser.add_argument("--rate-limit", "-r", type=float, 
+                        help="Delay between files in seconds for API rate limiting", default=0)
+    parser.add_argument("--sort", help="Sort order for processing files (name, size, none)", default="size")
     args = parser.parse_args()
     
-    # Check test_input directory exists
-    if not os.path.exists("test_input"):
-        logger.error("test_input directory not found")
+    # Check input directory exists
+    input_dir = args.input_dir
+    if not os.path.exists(input_dir):
+        logger.error(f"Input directory '{input_dir}' not found")
         return 1
     
     # Create output directory
-    output_dir = "test_output"
+    output_dir = args.output_dir
     os.makedirs(output_dir, exist_ok=True)
     
     # Get list of DAT files
@@ -123,18 +155,27 @@ def main():
         # Just process the test files
         test_files = ["neo_geo_cd_test.dat", "commodore_c64_test.dat"]
         for file in test_files:
-            file_path = os.path.join("test_input", file)
+            file_path = os.path.join(input_dir, file)
             if os.path.exists(file_path):
                 dat_files.append(file_path)
     else:
         # Process all files
-        for file in os.listdir("test_input"):
+        for file in os.listdir(input_dir):
             if file.endswith(".dat"):
-                dat_files.append(os.path.join("test_input", file))
-        
-        # Apply limit if specified
-        if args.limit and args.limit > 0:
-            dat_files = dat_files[:args.limit]
+                dat_files.append(os.path.join(input_dir, file))
+    
+    # Sort the files if specified
+    if args.sort == "name":
+        dat_files.sort()  # Sort by filename
+        logger.info("Sorting files by name")
+    elif args.sort == "size":
+        # Process smaller files first (for quicker feedback)
+        dat_files.sort(key=lambda x: os.path.getsize(x))
+        logger.info("Sorting files by size (smallest first)")
+    
+    # Apply limit if specified
+    if args.limit and args.limit > 0:
+        dat_files = dat_files[:args.limit]
     
     logger.info(f"Found {len(dat_files)} DAT files to process")
     
@@ -149,11 +190,15 @@ def main():
     
     logger.info(f"Using AI providers: {providers}")
     
+    # Create a command line to pass the batch size
+    base_cmd = ["python", "headless.py", "--batch-size", str(args.batch_size)]
+    
     # Process each file with each provider
-    # Use a more explicit approach with individual variables instead of a dictionary to avoid type issues
     success_count = 0
     failure_count = 0
     total_time = 0.0
+    processed_files = []
+    skipped_files = []
     
     for provider in providers:
         logger.info(f"Processing with provider: {provider}")
@@ -161,16 +206,54 @@ def main():
         provider_failures = 0
         provider_time = 0.0
         
+        # Show progress information
+        total_files = len(dat_files)
+        current_file = 0
+        
         for input_file in dat_files:
-            success, time_taken = process_dat_file(input_file, output_dir, provider)
+            current_file += 1
+            file_name = os.path.basename(input_file)
+            base_name = os.path.splitext(file_name)[0]
+            
+            # Check if this file was already processed
+            output_file = os.path.join(output_dir, f"{base_name}_{provider}_filtered.dat")
+            if args.continue_processing and os.path.exists(output_file):
+                logger.info(f"Skipping already processed file: {file_name} ({current_file}/{total_files})")
+                skipped_files.append(input_file)
+                continue
+            
+            # Show progress
+            progress_pct = int(100 * current_file / total_files)
+            logger.info(f"Processing file {current_file}/{total_files} ({progress_pct}%): {file_name}")
+            
+            # Process the file
+            success, time_taken = process_dat_file(input_file, output_dir, provider, args.batch_size)
+            
             if success:
                 success_count += 1
                 provider_success += 1
+                processed_files.append(input_file)
+                logger.info(f"✓ Successfully processed: {file_name} in {time_taken:.2f} seconds")
             else:
                 failure_count += 1
                 provider_failures += 1
+                logger.error(f"✗ Failed to process: {file_name}")
+                
             total_time += time_taken
-            provider_time += time_taken  # This can be a float
+            provider_time += time_taken
+            
+            # Estimate remaining time
+            if current_file < total_files:
+                avg_time_per_file = provider_time / current_file
+                remaining_files = total_files - current_file
+                eta_seconds = avg_time_per_file * remaining_files
+                eta_str = f"{int(eta_seconds // 3600)}h {int((eta_seconds % 3600) // 60)}m {int(eta_seconds % 60)}s"
+                logger.info(f"Estimated time remaining: {eta_str} ({avg_time_per_file:.2f} seconds/file)")
+            
+            # Respect rate limits between files
+            if args.rate_limit > 0 and current_file < total_files:
+                logger.info(f"Rate limiting: waiting {args.rate_limit} seconds before next file")
+                time.sleep(args.rate_limit)
         
         logger.info(f"Provider {provider} completed: {provider_success} successes, {provider_failures} failures, {provider_time:.2f} seconds")
     
@@ -181,9 +264,14 @@ def main():
     logger.info(f"Total files: {len(dat_files)}")
     logger.info(f"Successfully processed: {success_count}")
     logger.info(f"Failed: {failure_count}")
+    logger.info(f"Skipped: {len(skipped_files)}")
     logger.info(f"Total processing time: {total_time:.2f} seconds")
-    avg_time = total_time / len(dat_files) if len(dat_files) > 0 else 0
-    logger.info(f"Average processing time: {avg_time:.2f} seconds per file")
+    
+    processed_count = success_count + failure_count
+    if processed_count > 0:
+        avg_time = total_time / processed_count
+        logger.info(f"Average processing time: {avg_time:.2f} seconds per file")
+    
     logger.info("=" * 50)
     
     # Save summary to file
@@ -195,9 +283,12 @@ def main():
         f.write(f"Total files: {len(dat_files)}\n")
         f.write(f"Successfully processed: {success_count}\n")
         f.write(f"Failed: {failure_count}\n")
+        f.write(f"Skipped: {len(skipped_files)}\n")
         f.write(f"Total processing time: {total_time:.2f} seconds\n")
-        avg_time = total_time / len(dat_files) if len(dat_files) > 0 else 0
-        f.write(f"Average processing time: {avg_time:.2f} seconds per file\n\n")
+        
+        if processed_count > 0:
+            avg_time = total_time / processed_count
+            f.write(f"Average processing time: {avg_time:.2f} seconds per file\n\n")
         
         f.write("File Processing Results:\n")
         f.write("------------------------\n")
@@ -207,8 +298,10 @@ def main():
                 file_name = os.path.basename(input_file)
                 base_name = os.path.splitext(file_name)[0]
                 output_file = os.path.join(output_dir, f"{base_name}_{provider}_filtered.dat")
-                success = os.path.exists(output_file)
-                status = "SUCCESS" if success else "FAILED"
+                if input_file in skipped_files:
+                    status = "SKIPPED"
+                else:
+                    status = "SUCCESS" if os.path.exists(output_file) else "FAILED"
                 f.write(f"  {file_name}: {status}\n")
     
     logger.info(f"Batch summary saved to {summary_path}")
