@@ -253,46 +253,43 @@ class InteractiveMenu:
             print("|" + " " * spaces_left + self.current_theme['highlight'] + subtitle + Style.RESET_ALL + " " * spaces_right + "|")
             print("|" + " " * (width - 2) + "|")
             
-            # DAT info display
+            # DAT info display with simplified approach
             if self.current_dat_file:
                 basename = os.path.basename(self.current_dat_file)
                 if len(basename) > 30:
                     basename = basename[:27] + "..."
                 
-                # Split into two parts for better alignment
-                game_count = self.parsed_data['game_count']
-                dat_name = f" LOADED: {basename} "
-                game_count_text = f" {game_count} GAMES "
-                
-                # Calculate exact centering
+                # Simple format with information on separate lines
+                dat_info = f" LOADED: {basename} "
+                game_count = f" GAMES: {self.parsed_data['game_count']} "
                 filtered_info = f" FILTERED: {len(self.filtered_games)} GAMES KEPT " if self.filtered_games else " NO FILTERING APPLIED YET "
             else:
-                dat_name = " NO DAT FILE LOADED "
-                game_count_text = ""
+                dat_info = " NO DAT FILE LOADED "
+                game_count = ""
                 filtered_info = " --- "
             
-            # Simple box for DAT info - with perfect alignment
+            # Simple box for DAT info - with consistent width
             monitor_width = 40
             spaces_left = (width - 2 - monitor_width - 2) // 2
             spaces_right = width - 2 - spaces_left - monitor_width - 2
             
             print("|" + " " * spaces_left + "+" + "-" * monitor_width + "+" + " " * spaces_right + "|")
             
+            # Center each line individually for better alignment
+            print("|" + " " * spaces_left + "|" + 
+                  self.current_theme['data'] + dat_info.center(monitor_width) + 
+                  Style.RESET_ALL + "|" + " " * spaces_right + "|")
+            
+            # Only show game count if a DAT is loaded
             if self.current_dat_file:
-                # For loaded DAT, split line into name and count with perfect alignment
                 print("|" + " " * spaces_left + "|" + 
-                      self.current_theme['data'] + dat_name.ljust(monitor_width - len(game_count_text)) + 
-                      self.current_theme['highlight'] + game_count_text + 
-                      Style.RESET_ALL + "|" + " " * spaces_right + "|")
-            else:
-                # For no DAT loaded, center the text perfectly
-                print("|" + " " * spaces_left + "|" + 
-                      self.current_theme['data'] + dat_name.center(monitor_width) + 
+                      self.current_theme['highlight'] + game_count.center(monitor_width) + 
                       Style.RESET_ALL + "|" + " " * spaces_right + "|")
                 
             print("|" + " " * spaces_left + "|" + 
                   self.current_theme['info'] + filtered_info.center(monitor_width) + 
                   Style.RESET_ALL + "|" + " " * spaces_right + "|")
+            
             print("|" + " " * spaces_left + "+" + "-" * monitor_width + "+" + " " * spaces_right + "|")
             
             print("|" + " " * (width - 2) + "|")
@@ -331,28 +328,30 @@ class InteractiveMenu:
             # Fixed positioning for perfect alignment
             unavailable_text = "[UNAVAILABLE]"
             
-            # Calculate the fixed position for all menu items
-            unavailable_position = width - len(unavailable_text) - 5  # 5 spaces from right border
+            # Simplified, more reliable menu approach
+            menu_width = width - 6  # -6 accounts for "| " and " |" on each side
             
             for key, desc, disabled in menu_options:
                 prefix = f" [{key}] "
                 
                 if disabled:
-                    # Calculate spaces for description with fixed positioning
-                    desc_spaces = unavailable_position - len(prefix) - 2  # -2 for buffer space
+                    # For unavailable options
+                    line = prefix + desc
+                    padding = menu_width - len(line) - len(unavailable_text) - 1
                     
-                    # Create the line with exact positioning and right border
-                    print("|  " + self.current_theme['option'] + prefix + desc.ljust(desc_spaces) + 
+                    print("|  " + 
+                          self.current_theme['option'] + prefix + desc + 
+                          " " * padding +
                           self.current_theme['error'] + unavailable_text + 
-                          Style.RESET_ALL + "   |")
+                          Style.RESET_ALL + "  |")
                 else:
-                    # Regular menu items also use fixed position for perfect right border
-                    # We add spaces to pad the description to match the position where [UNAVAILABLE] would start
-                    desc_spaces = unavailable_position - len(prefix) - 2  # Same calculation for consistency
-                    spaces_right = width - 4 - len(prefix) - desc_spaces - 2  # -2 for "|" and an extra space
+                    # For available options
+                    line = prefix + desc
+                    padding = menu_width - len(line)
                     
-                    print("|  " + self.current_theme['option'] + prefix + desc.ljust(desc_spaces) + 
-                          Style.RESET_ALL + " " * spaces_right + "  |")
+                    print("|  " + 
+                          self.current_theme['option'] + prefix + desc + 
+                          Style.RESET_ALL + " " * padding + "  |")
             
             # Bottom border
             print("|" + " " * (width - 2) + "|")
