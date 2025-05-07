@@ -95,6 +95,9 @@ class ExportManager:
             reparsed = minidom.parseString(rough_string)
             pretty_xml = reparsed.toprettyxml(indent="  ")
             
+            # Remove empty lines within elements
+            pretty_xml = self._clean_xml_output(pretty_xml)
+            
             # Write to file
             with open(output_path, 'w', encoding='utf-8') as f:
                 f.write(pretty_xml)
@@ -106,6 +109,68 @@ class ExportManager:
             error_msg = f"Error exporting filtered DAT file: {e}"
             self.logger.error(error_msg)
             return False, error_msg
+    
+    def _clean_xml_output(self, xml_string: str) -> str:
+        """
+        Clean XML output to remove empty lines and excessive whitespace within elements
+        
+        Args:
+            xml_string: XML string to clean
+            
+        Returns:
+            Cleaned XML string
+        """
+        import re
+        
+        # First pass: Use a more aggressive regex to remove all empty lines between tags
+        # This pattern matches any amount of whitespace and newlines between tags
+        pattern = r'>\s*\n+\s*<'
+        replacement = '>\n<'
+        xml_string = re.sub(pattern, replacement, xml_string)
+        
+        # Handle specific patterns for game elements
+        xml_string = re.sub(r'<game([^>]*)>\s*\n+\s*', r'<game\1>\n  ', xml_string)
+        xml_string = re.sub(r'</rom>\s*\n+\s*</game>', r'</rom>\n</game>', xml_string)
+        
+        # Second pass: Process line by line for more control
+        lines = xml_string.splitlines()
+        cleaned_lines = []
+        in_game_element = False
+        prev_line_empty = False
+        
+        for i, line in enumerate(lines):
+            stripped = line.strip()
+            
+            # Track when we're inside a game element
+            if '<game ' in stripped:
+                in_game_element = True
+                prev_line_empty = False
+            elif '</game>' in stripped:
+                in_game_element = False
+                prev_line_empty = False
+            
+            # Handle empty lines
+            if not stripped:
+                # Only keep empty lines outside of game elements
+                # or if they're structural (not consecutive)
+                if not in_game_element and not prev_line_empty:
+                    cleaned_lines.append(line)
+                    prev_line_empty = True
+                continue
+            
+            # Reset empty line tracker on non-empty lines
+            prev_line_empty = False
+            
+            # Always add non-empty lines
+            cleaned_lines.append(line)
+        
+        # Final pass: Do another regex cleanup on the joined result
+        # to catch any remaining issues
+        result = '\n'.join(cleaned_lines)
+        result = re.sub(r'(<game[^>]*>)\s*\n+\s*', r'\1\n  ', result)
+        result = re.sub(r'\n\s*\n+\s*(<[^/])', r'\n\1', result)
+        
+        return result
     
     def _reconstruct_game_element(self, game: Dict[str, Any], parent: ET.Element):
         """
