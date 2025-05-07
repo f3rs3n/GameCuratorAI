@@ -766,20 +766,45 @@ class InteractiveMenu:
             self._print_data("Filtered game count", str(filtered_count))
             self._print_data("Reduction", f"{reduction} games ({reduction_pct:.1f}%)")
             
-            # Show top games (max 5)
+            # Calculate number of games to show (10% of collection)
+            display_count = max(3, min(20, int(original_count * 0.1)))
+            
+            # Show top games
             print()
-            self._print_subheader("Top Filtered Games")
-            for i, game in enumerate(self.filtered_games[:5], 1):
+            self._print_subheader(f"Top {display_count} Games (Highest Quality)")
+            for i, game in enumerate(self.filtered_games[:display_count], 1):
                 game_name = game.get('description', game.get('name', f"Game {i}"))
-                self._print_success(f"{i}. {game_name}")
-            
-            if len(self.filtered_games) > 5:
-                self._print_info(f"... and {len(self.filtered_games) - 5} more games")
                 
-            # Show games that nearly made the cut
-            print()
-            self._print_subheader("Nearly Included Games")
+                # Try to get the score for this game by matching in the evaluations
+                game_id = game.get('name', '')
+                score = 0
+                score_display = ""
+                
+                # Get the index of this game in the original games list
+                try:
+                    game_index = self.parsed_data['games'].index(game)
+                    if 0 <= game_index < len(self.evaluations):
+                        score = self.evaluations[game_index].get('score', 0)
+                except (ValueError, IndexError):
+                    pass  # Game not found in original list or evaluation missing
+                
+                # Format score with game rating symbols
+                if score >= 0.8:
+                    score_display = "★★★★★"
+                elif score >= 0.6:
+                    score_display = "★★★★☆"
+                elif score >= 0.4:
+                    score_display = "★★★☆☆"
+                elif score >= 0.2:
+                    score_display = "★★☆☆☆"
+                else:
+                    score_display = "★☆☆☆☆"
+                
+                self._print_success(f"{i}. {game_name} - {score_display} {score:.2f}")
             
+            if len(self.filtered_games) > display_count:
+                self._print_info(f"... and {len(self.filtered_games) - display_count} more games")
+                
             # Find all removed games with scores
             all_games = self.parsed_data['games']
             removed_games = [g for g in all_games if g not in self.filtered_games]
@@ -791,24 +816,71 @@ class InteractiveMenu:
                 if game_id:
                     game_evals[game_id] = eval_data
             
-            # Sort removed games by score (highest first)
+            # Sort removed games by score (highest first for near misses)
             removed_with_scores = []
             for game in removed_games:
                 game_id = game.get('name', '')
                 if game_id in game_evals:
                     removed_with_scores.append((game, game_evals[game_id]))
             
-            sorted_removed = sorted(
+            sorted_by_score = sorted(
                 removed_with_scores,
                 key=lambda x: x[1].get('score', 0),
                 reverse=True
             )
             
-            # Show top 5 nearly included games
-            for i, (game, eval_data) in enumerate(sorted_removed[:5], 1):
+            # Show games that nearly made the cut
+            print()
+            self._print_subheader(f"Near Misses (Almost Included)")
+            
+            # Show top near-misses with their scores
+            for i, (game, eval_data) in enumerate(sorted_by_score[:display_count], 1):
                 game_name = game.get('description', game.get('name', f"Game {i}"))
                 score = eval_data.get('score', 0)
-                self._print_error(f"{i}. {game_name} - Score: {score:.2f}")
+                
+                # Format score with game rating symbols
+                if score >= 0.8:
+                    score_display = "★★★★★"
+                elif score >= 0.6:
+                    score_display = "★★★★☆"
+                elif score >= 0.4:
+                    score_display = "★★★☆☆"
+                elif score >= 0.2:
+                    score_display = "★★☆☆☆"
+                else:
+                    score_display = "★☆☆☆☆"
+                
+                self._print_error(f"{i}. {game_name} - {score_display} {score:.2f}")
+                if 'explanation' in eval_data:
+                    self._print_info(f"   Reason: {eval_data['explanation']}")
+            
+            # Show worst scoring games
+            print()
+            self._print_subheader(f"Lowest Scored Games (Worst Quality)")
+            
+            # Sort by lowest score
+            sorted_worst = sorted(
+                removed_with_scores,
+                key=lambda x: x[1].get('score', 0)
+            )
+            
+            for i, (game, eval_data) in enumerate(sorted_worst[:display_count], 1):
+                game_name = game.get('description', game.get('name', f"Game {i}"))
+                score = eval_data.get('score', 0)
+                
+                # Format score with game rating symbols
+                if score >= 0.8:
+                    score_display = "★★★★★"
+                elif score >= 0.6:
+                    score_display = "★★★★☆"
+                elif score >= 0.4:
+                    score_display = "★★★☆☆"
+                elif score >= 0.2:
+                    score_display = "★★☆☆☆"
+                else:
+                    score_display = "★☆☆☆☆"
+                
+                self._print_error(f"{i}. {game_name} - {score_display} {score:.2f}")
                 if 'explanation' in eval_data:
                     self._print_info(f"   Reason: {eval_data['explanation']}")
             
