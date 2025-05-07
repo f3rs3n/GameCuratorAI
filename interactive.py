@@ -230,18 +230,26 @@ class InteractiveMenu:
                 "╚═════╝ ╚═╝  ╚═╝   ╚═╝       ╚═╝     ╚═╝╚══════╝╚═╝   ╚══════╝╚═╝  ╚═╝"
             ]
             
-            # Calculate title width and adjust for terminal width if needed
+            # Calculate title width and adjust if needed to fit in display
             title_width = len(title[0])
+            display_width = min(title_width, width - 4)
             
-            # Print title with colorful ASCII art
+            # Print title with colorful ASCII art - with careful width calculations
             for line in title:
-                space = (width - title_width) // 2
-                adjusted_line = line.ljust(title_width)  # Ensure consistent width
-                print("│" + " " * space + self.current_theme['header'] + adjusted_line + Style.RESET_ALL + " " * (width - space - title_width - 2) + "│")
+                if title_width > display_width:
+                    # Truncate if too wide
+                    adjusted_line = line[:display_width]
+                else:
+                    # Pad if needed
+                    adjusted_line = line.ljust(display_width)
+                
+                space = (width - display_width - 2) // 2
+                print("│" + " " * space + self.current_theme['header'] + adjusted_line + Style.RESET_ALL + " " * (width - space - display_width - 2) + "│")
             
             # Version and subtitle
             subtitle = "RETRO GAME COLLECTION CURATOR"
-            space = (width - len(subtitle)) // 2
+            space = (width - len(subtitle) - 2) // 2
+            if space < 0: space = 0  # Safety check
             print("│" + " " * space + self.current_theme['highlight'] + subtitle + Style.RESET_ALL + " " * (width - space - len(subtitle) - 2) + "│")
             print("│" + " " * (width - 2) + "│")
             
@@ -261,30 +269,42 @@ class InteractiveMenu:
                 filtered_info = " --- "
                 
             # Create a centered "monitor display" for the DAT info
-            monitor_width = min(len(dat_info) + 10, content_width - 4)
+            # Ensure content fits within the terminal width
+            monitor_width = min(max(len(dat_info), len(filtered_info)) + 6, width - 10)
             # Ensure monitor_width is even to prevent alignment issues
             if monitor_width % 2 != 0:
                 monitor_width += 1
             
-            space_left = (content_width - monitor_width) // 2
-            print("│" + " " * (padding + space_left) + "╔" + "═" * monitor_width + "╗" + " " * (content_width - space_left - monitor_width - padding) + "│")
-            print("│" + " " * (padding + space_left) + "║" + self.current_theme['data'] + dat_info.center(monitor_width) + Style.RESET_ALL + "║" + " " * (content_width - space_left - monitor_width - padding) + "│")
-            print("│" + " " * (padding + space_left) + "║" + self.current_theme['info'] + filtered_info.center(monitor_width) + Style.RESET_ALL + "║" + " " * (content_width - space_left - monitor_width - padding) + "│")
-            print("│" + " " * (padding + space_left) + "╚" + "═" * monitor_width + "╝" + " " * (content_width - space_left - monitor_width - padding) + "│")
+            # Calculate exact space needed for perfect centering
+            space_left = (width - monitor_width - 2) // 2
+            
+            print("│" + " " * space_left + "╔" + "═" * monitor_width + "╗" + " " * (width - space_left - monitor_width - 3) + "│")
+            print("│" + " " * space_left + "║" + self.current_theme['data'] + dat_info.center(monitor_width) + Style.RESET_ALL + "║" + " " * (width - space_left - monitor_width - 3) + "│")
+            print("│" + " " * space_left + "║" + self.current_theme['info'] + filtered_info.center(monitor_width) + Style.RESET_ALL + "║" + " " * (width - space_left - monitor_width - 3) + "│")
+            print("│" + " " * space_left + "╚" + "═" * monitor_width + "╝" + " " * (width - space_left - monitor_width - 3) + "│")
             
             print("│" + " " * (width - 2) + "│")
             
             # Show provider and other important settings
             engine_status = f" ENGINE: {self.settings['provider'].upper()} │ THRESHOLD: {self.settings['global_threshold']:.2f} "
-            space_left = (content_width - len(engine_status)) // 2
-            print("│" + " " * (padding + space_left) + self.current_theme['success'] + engine_status + Style.RESET_ALL + " " * (content_width - space_left - len(engine_status) - padding) + "│")
+            space_left = (width - len(engine_status) - 2) // 2
+            if space_left < 0: space_left = 0  # Safety check
+            print("│" + " " * space_left + self.current_theme['success'] + engine_status + Style.RESET_ALL + " " * (width - space_left - len(engine_status) - 2) + "│")
             
             print("│" + " " * (width - 2) + "│")
             
-            # Menu options with retro gaming icons
-            print("│  " + "=" * content_width + "  │")
-            print("│  " + self.current_theme['highlight'] + " SYSTEM COMMANDS ".center(content_width, "=") + Style.RESET_ALL + "  │")
-            print("│  " + "=" * content_width + "  │")
+            # Menu options with retro gaming icons - ensure consistent width
+            menu_divider = "=" * (width - 4)
+            menu_header = " SYSTEM COMMANDS "
+            menu_header_padding = (width - 4 - len(menu_header)) // 2
+            menu_header_display = "=" * menu_header_padding + menu_header + "=" * menu_header_padding
+            # Adjust if odd length
+            if len(menu_header_display) < width - 4:
+                menu_header_display += "="
+                
+            print("│  " + menu_divider + "  │")
+            print("│  " + self.current_theme['highlight'] + menu_header_display + Style.RESET_ALL + "  │")
+            print("│  " + menu_divider + "  │")
             
             menu_options = [
                 ("1", "🎮 LOAD DAT FILE", not self.current_dat_file),
@@ -301,10 +321,11 @@ class InteractiveMenu:
                     option_text = f" [{key}] {desc} " + self.current_theme['error'] + "[UNAVAILABLE]" + Style.RESET_ALL
                 else:
                     option_text = f" [{key}] {desc}"
-                    
-                print("│  " + self.current_theme['option'] + option_text.ljust(content_width) + Style.RESET_ALL + "  │")
+                
+                # Ensure consistent width of menu options
+                print("│  " + self.current_theme['option'] + option_text.ljust(width - 6) + Style.RESET_ALL + "  │")
             
-            # Bottom of the console
+            # Bottom of the console - with proper alignment
             print("│" + " " * (width - 2) + "│")
             print("│" + "_" * (width - 2) + "│")
             print("└" + "─" * (width - 2) + "┘")
