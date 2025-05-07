@@ -37,7 +37,7 @@ class TextVisualizer:
         except (AttributeError, OSError):
             return 80
     
-    def _format_text(self, text: str, color: str = None, style: str = None, max_width: int = None) -> str:
+    def _format_text(self, text: str, color: str = "", style: str = "", max_width: int = 0) -> str:
         """
         Format text with color and style
         
@@ -65,7 +65,7 @@ class TextVisualizer:
         formatted += text + Style.RESET_ALL
         return formatted
     
-    def print_header(self, text: str, width: int = None):
+    def print_header(self, text: str, width: int = 0):
         """
         Print a header with decoration
         
@@ -73,7 +73,8 @@ class TextVisualizer:
             text: Header text
             width: Width for the header (default: terminal width)
         """
-        width = width or self.terminal_width
+        if width == 0:
+            width = self.terminal_width
         
         print()
         if self.use_color:
@@ -83,7 +84,7 @@ class TextVisualizer:
             print("=" * width)
         print()
     
-    def print_section(self, title: str, width: int = None):
+    def print_section(self, title: str, width: int = 0):
         """
         Print a section title
         
@@ -91,7 +92,8 @@ class TextVisualizer:
             title: Section title
             width: Width for the section (default: terminal width)
         """
-        width = width or self.terminal_width
+        if width == 0:
+            width = self.terminal_width
         
         print()
         if self.use_color:

@@ -1,16 +1,16 @@
 # DAT Filter AI
 
-A desktop application that uses AI to intelligently filter and curate video game collections from XML-formatted .dat files with advanced filtering capabilities and flexible data processing.
+An application that uses AI to intelligently filter and curate video game collections from XML-formatted .dat files with text-based visualization, advanced filtering capabilities, and flexible data processing.
 
 ## Features
 
 - AI-powered evaluation of video games based on multiple criteria
 - Support for XML .dat file processing
-- Headless operation for batch processing
-- GUI mode with modern interface
-- Multiple AI provider support (Random, OpenAI, and Google Gemini)
-- Special case detection for multi-disc games, regional variants, etc.
-- Detailed reports and summaries
+- Text-based visualization with colored output and progress tracking
+- Rich multi-provider support (Random, OpenAI, and Google Gemini)
+- Special case detection and rule enforcement for multi-disc games, regional variants, etc.
+- Detailed interactive game evaluation inspection
+- Comprehensive reports, comparisons, and summaries
 
 ## Installation
 
@@ -38,21 +38,25 @@ A desktop application that uses AI to intelligently filter and curate video game
 
 ## Usage
 
-### GUI Mode
+### Main Mode (Text-based UI)
 
-Run the application in GUI mode:
+The primary way to use DAT Filter AI is through its text-based interface:
+
+```
+python headless.py --input path/to/input.dat --output path/to/output.dat [options]
+```
+
+This provides rich text visualization with progress tracking, colored output, and detailed evaluation information.
+
+### Legacy GUI Mode
+
+A GUI mode is available but may have compatibility issues in some environments:
 
 ```
 python main.py
 ```
 
-### Headless Mode
-
-Process a single DAT file:
-
-```
-python headless.py --input path/to/input.dat --output path/to/output.dat [options]
-```
+Note: The text-based interface (headless.py) is now the recommended way to use DAT Filter AI.
 
 Options:
 - `--provider`: AI provider to use (random, openai, or gemini, default: random)
