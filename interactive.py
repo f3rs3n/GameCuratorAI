@@ -232,30 +232,28 @@ class InteractiveMenu:
             
             # Title width calculation
             title_width = len(title[0])
-            display_width = min(title_width, width - 6)  # Leave more room for borders
+            display_width = min(title_width, width - 6)
             
-            # Print title
+            # Print title with exact spacing calculations
             for line in title:
                 if title_width > display_width:
-                    # Truncate if too wide
                     adjusted_line = line[:display_width]
                 else:
-                    # Pad if needed
                     adjusted_line = line.ljust(display_width)
                 
-                space = (width - display_width - 2) // 2
-                if space < 0: space = 0
-                print("|" + " " * space + self.current_theme['header'] + adjusted_line + Style.RESET_ALL + " " * (width - space - display_width - 2) + "|")
+                # Calculate exact left and right spacing for perfect centering
+                spaces_left = (width - 2 - len(adjusted_line)) // 2
+                spaces_right = width - 2 - spaces_left - len(adjusted_line)
+                print("|" + " " * spaces_left + self.current_theme['header'] + adjusted_line + Style.RESET_ALL + " " * spaces_right + "|")
             
-            # Subtitle - precise center alignment
+            # Subtitle with perfect centering
             subtitle = "RETRO GAME COLLECTION CURATOR"
-            space = (width - len(subtitle) - 2) // 2  # Calculate exact left spacing
-            # Calculate right padding exactly
-            right_padding = width - 2 - space - len(subtitle)
-            print("|" + " " * space + self.current_theme['highlight'] + subtitle + Style.RESET_ALL + " " * right_padding + "|")
+            spaces_left = (width - 2 - len(subtitle)) // 2
+            spaces_right = width - 2 - spaces_left - len(subtitle)
+            print("|" + " " * spaces_left + self.current_theme['highlight'] + subtitle + Style.RESET_ALL + " " * spaces_right + "|")
             print("|" + " " * (width - 2) + "|")
             
-            # DAT info display - simplified border
+            # DAT info display
             if self.current_dat_file:
                 basename = os.path.basename(self.current_dat_file)
                 if len(basename) > 30:
@@ -266,36 +264,39 @@ class InteractiveMenu:
                 dat_info = " NO DAT FILE LOADED "
                 filtered_info = " --- "
             
-            # Simple box for DAT info - using ASCII characters
-            monitor_width = 40  # Fixed width for consistency
-            space_left = (width - monitor_width - 2) // 2
+            # Simple box for DAT info - with perfect alignment
+            monitor_width = 40
+            spaces_left = (width - 2 - monitor_width - 2) // 2
+            spaces_right = width - 2 - spaces_left - monitor_width - 2
             
-            # Calculate exact right padding for each line
-            right_padding = width - 2 - space_left - monitor_width - 2
-            if right_padding < 0: right_padding = 0
-            
-            print("|" + " " * space_left + "+" + "-" * monitor_width + "+" + " " * right_padding + "|")
-            print("|" + " " * space_left + "|" + self.current_theme['data'] + dat_info.center(monitor_width) + Style.RESET_ALL + "|" + " " * right_padding + "|")
-            print("|" + " " * space_left + "|" + self.current_theme['info'] + filtered_info.center(monitor_width) + Style.RESET_ALL + "|" + " " * right_padding + "|")
-            print("|" + " " * space_left + "+" + "-" * monitor_width + "+" + " " * right_padding + "|")
+            print("|" + " " * spaces_left + "+" + "-" * monitor_width + "+" + " " * spaces_right + "|")
+            print("|" + " " * spaces_left + "|" + self.current_theme['data'] + dat_info.center(monitor_width) + Style.RESET_ALL + "|" + " " * spaces_right + "|")
+            print("|" + " " * spaces_left + "|" + self.current_theme['info'] + filtered_info.center(monitor_width) + Style.RESET_ALL + "|" + " " * spaces_right + "|")
+            print("|" + " " * spaces_left + "+" + "-" * monitor_width + "+" + " " * spaces_right + "|")
             
             print("|" + " " * (width - 2) + "|")
             
             # Engine status display - precise center alignment
             engine_status = f" ENGINE: {self.settings['provider'].upper()} | THRESHOLD: {self.settings['global_threshold']:.2f} "
-            space_left = (width - len(engine_status) - 2) // 2
-            # Calculate right padding precisely
-            right_padding = width - 2 - space_left - len(engine_status)
-            print("|" + " " * space_left + self.current_theme['success'] + engine_status + Style.RESET_ALL + " " * right_padding + "|")
+            spaces_left = (width - 2 - len(engine_status)) // 2
+            spaces_right = width - 2 - spaces_left - len(engine_status)
+            print("|" + " " * spaces_left + self.current_theme['success'] + engine_status + Style.RESET_ALL + " " * spaces_right + "|")
             
             print("|" + " " * (width - 2) + "|")
             
-            # Menu separator
-            print("|  " + "=" * (width - 6) + "  |")
-            print("|  " + self.current_theme['highlight'] + "SYSTEM COMMANDS".center(width - 6) + Style.RESET_ALL + "  |")
-            print("|  " + "=" * (width - 6) + "  |")
+            # Menu separator with perfectly centered header
+            header_text = "SYSTEM COMMANDS"
+            divider_char = "="
+            inner_width = width - 6
+            divider = divider_char * inner_width
+            header_spaces = (inner_width - len(header_text)) // 2
             
-            # Menu options with fixed width display
+            header_line = (divider_char * header_spaces) + header_text + (divider_char * (inner_width - header_spaces - len(header_text)))
+            print("|  " + divider + "  |")
+            print("|  " + self.current_theme['highlight'] + header_line + Style.RESET_ALL + "  |")
+            print("|  " + divider + "  |")
+            
+            # Menu options with exact width calculations
             menu_options = [
                 ("1", "🎮 LOAD DAT FILE", not self.current_dat_file),
                 ("2", "🕹️ APPLY FILTERS", not self.current_dat_file),
@@ -307,36 +308,29 @@ class InteractiveMenu:
             ]
             
             for key, desc, disabled in menu_options:
-                # Calculate available width for description
-                available_width = width - 6 - 5  # 5 for "[ ] " prefix
-                
-                # Handle unavailable items differently with better alignment
                 if disabled:
+                    # Special handling for unavailable items
                     prefix = f" [{key}] "
-                    # Create option with proper spacing that accounts for the unavailable suffix
                     unavailable_text = "[UNAVAILABLE]"
-                    max_desc_width = available_width - len(unavailable_text) - 1
                     
-                    # Truncate description if needed
-                    if len(desc) > max_desc_width:
-                        desc_text = desc[:max_desc_width-3] + "..."
+                    # Calculate exact spacing for description
+                    desc_width = width - 6 - len(prefix) - len(unavailable_text) - 1
+                    if len(desc) > desc_width:
+                        desc_text = desc[:desc_width-3] + "..."
                     else:
                         desc_text = desc
                     
-                    # Pad description to fit available width minus unavailable text
-                    padded_desc = desc_text.ljust(max_desc_width)
+                    # Combine with exact padding
+                    pad_spaces = desc_width - len(desc_text)
+                    right_space = width - 6 - len(prefix) - len(desc_text) - pad_spaces - len(unavailable_text)
                     
-                    # Combine everything with colors
-                    formatted_text = self.current_theme['option'] + prefix + padded_desc + " " + self.current_theme['error'] + unavailable_text + Style.RESET_ALL
-                    
-                    print("|  " + formatted_text + " " * (width - 6 - len(prefix) - len(padded_desc) - len(unavailable_text) - 1) + "  |")
+                    print("|  " + self.current_theme['option'] + prefix + desc_text + " " * pad_spaces + 
+                          self.current_theme['error'] + unavailable_text + Style.RESET_ALL + " " * right_space + "  |")
                 else:
-                    # Regular menu option with proper padding
-                    prefix = f" [{key}] "
-                    # Create padded option text
-                    option_text = prefix + desc
-                    padded_text = option_text.ljust(width - 6)
-                    print("|  " + self.current_theme['option'] + padded_text + Style.RESET_ALL + "  |")
+                    # Regular menu option
+                    option_text = f" [{key}] {desc}"
+                    spaces = width - 6 - len(option_text)
+                    print("|  " + self.current_theme['option'] + option_text + Style.RESET_ALL + " " * spaces + "  |")
             
             # Bottom border
             print("|" + " " * (width - 2) + "|")
