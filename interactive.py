@@ -230,10 +230,14 @@ class InteractiveMenu:
                 "╚═════╝ ╚═╝  ╚═╝   ╚═╝       ╚═╝     ╚═╝╚══════╝╚═╝   ╚══════╝╚═╝  ╚═╝"
             ]
             
+            # Calculate title width and adjust for terminal width if needed
+            title_width = len(title[0])
+            
             # Print title with colorful ASCII art
             for line in title:
-                space = (width - len(line)) // 2
-                print("│" + " " * space + self.current_theme['header'] + line + Style.RESET_ALL + " " * (width - space - len(line) - 2) + "│")
+                space = (width - title_width) // 2
+                adjusted_line = line.ljust(title_width)  # Ensure consistent width
+                print("│" + " " * space + self.current_theme['header'] + adjusted_line + Style.RESET_ALL + " " * (width - space - title_width - 2) + "│")
             
             # Version and subtitle
             subtitle = "RETRO GAME COLLECTION CURATOR"
@@ -258,19 +262,22 @@ class InteractiveMenu:
                 
             # Create a centered "monitor display" for the DAT info
             monitor_width = min(len(dat_info) + 10, content_width - 4)
+            # Ensure monitor_width is even to prevent alignment issues
+            if monitor_width % 2 != 0:
+                monitor_width += 1
             
             space_left = (content_width - monitor_width) // 2
-            print("│  " + " " * space_left + "╔" + "═" * monitor_width + "╗" + " " * (content_width - space_left - monitor_width - 2) + "  │")
-            print("│  " + " " * space_left + "║" + self.current_theme['data'] + dat_info.center(monitor_width) + Style.RESET_ALL + "║" + " " * (content_width - space_left - monitor_width - 2) + "  │")
-            print("│  " + " " * space_left + "║" + self.current_theme['info'] + filtered_info.center(monitor_width) + Style.RESET_ALL + "║" + " " * (content_width - space_left - monitor_width - 2) + "  │")
-            print("│  " + " " * space_left + "╚" + "═" * monitor_width + "╝" + " " * (content_width - space_left - monitor_width - 2) + "  │")
+            print("│" + " " * (padding + space_left) + "╔" + "═" * monitor_width + "╗" + " " * (content_width - space_left - monitor_width - padding) + "│")
+            print("│" + " " * (padding + space_left) + "║" + self.current_theme['data'] + dat_info.center(monitor_width) + Style.RESET_ALL + "║" + " " * (content_width - space_left - monitor_width - padding) + "│")
+            print("│" + " " * (padding + space_left) + "║" + self.current_theme['info'] + filtered_info.center(monitor_width) + Style.RESET_ALL + "║" + " " * (content_width - space_left - monitor_width - padding) + "│")
+            print("│" + " " * (padding + space_left) + "╚" + "═" * monitor_width + "╝" + " " * (content_width - space_left - monitor_width - padding) + "│")
             
             print("│" + " " * (width - 2) + "│")
             
             # Show provider and other important settings
-            engine_status = f" ENGINE: {self.settings['provider'].upper()} " + "│" + f" THRESHOLD: {self.settings['global_threshold']:.2f} "
+            engine_status = f" ENGINE: {self.settings['provider'].upper()} │ THRESHOLD: {self.settings['global_threshold']:.2f} "
             space_left = (content_width - len(engine_status)) // 2
-            print("│  " + " " * space_left + self.current_theme['success'] + engine_status + Style.RESET_ALL + " " * (content_width - space_left - len(engine_status)) + "  │")
+            print("│" + " " * (padding + space_left) + self.current_theme['success'] + engine_status + Style.RESET_ALL + " " * (content_width - space_left - len(engine_status) - padding) + "│")
             
             print("│" + " " * (width - 2) + "│")
             
