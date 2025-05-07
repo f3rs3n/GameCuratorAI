@@ -9,7 +9,7 @@ from typing import Dict, Any, Optional
 
 # Default application configuration
 DEFAULT_CONFIG = {
-    "ai_provider": "random",
+    "ai_provider": "gemini",
     "default_thresholds": {
         "metacritic": 7.0,
         "historical": 6.0,
