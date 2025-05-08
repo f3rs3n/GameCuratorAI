@@ -199,6 +199,34 @@ def main():
                     # Display with color
                     sys.stdout.write(f"\n  {color}{status}{visualizer.get_color('reset')} | ")
                     sys.stdout.write(f"{game_name} (Score: {quality:.2f})")
+                    
+                    # Access the game's stored evaluation if available
+                    analysis = {}
+                    
+                    # First try to get game's full evaluation data
+                    if "_evaluation" in result:
+                        analysis = result.get("_evaluation", {}).get("_criteria_analysis", {})
+                    
+                    # If not found, and we're just displaying batch results, we don't have access
+                    # to the _evaluation data yet since it's still being processed
+                    
+                    # Display criteria insights
+                    if analysis:
+                        # Display strengths and weaknesses
+                        strongest = analysis.get("strongest_criteria", [])
+                        weakest = analysis.get("weakest_criteria", [])
+                        
+                        if strongest:
+                            strongest_str = ", ".join([s.replace("_", " ").title() for s in strongest])
+                            sys.stdout.write(f" {visualizer.get_color('success')}Strong:{visualizer.get_color('reset')} {strongest_str}")
+                        
+                        if weakest:
+                            weakest_str = ", ".join([w.replace("_", " ").title() for w in weakest])
+                            sys.stdout.write(f" {visualizer.get_color('warning')}Weak:{visualizer.get_color('reset')} {weakest_str}")
+                        
+                        # Special handling for low score keepers
+                        if keep and analysis.get("is_low_score_keeper", False):
+                            sys.stdout.write(f" {visualizer.get_color('warning')}[LOW SCORE EXCEPTION]{visualizer.get_color('reset')}")
                 
                 sys.stdout.write("\n")  # Add spacing
             

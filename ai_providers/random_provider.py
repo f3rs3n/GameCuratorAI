@@ -61,31 +61,66 @@ class RandomProvider(BaseAIProvider):
         """
         logger.info(f"Generating random evaluation for game: {game_info.get('name', 'Unknown')}")
         
+        # Create a structure that matches what the filter engine expects
         evaluation = {
             "game_id": game_info.get("id", "unknown"),
             "game_name": game_info.get("name", "Unknown Game"),
             "scores": {},
             "explanations": {},
+            "evaluations": {},  # This is the new format expected by filter_engine
             "overall_score": 0.0,
             "confidence": round(random.uniform(0.65, 0.95), 2)
         }
         
         total_score = 0.0
+        criterion_evaluations = {}
+        
         for criterion in criteria:
             # Generate a random score between 1.0 and 10.0
             score = round(random.uniform(1.0, 10.0), 1)
             total_score += score
             
-            # Store the score
+            # Store the score in the old format (for backward compatibility)
             evaluation["scores"][criterion] = score
             
             # Generate a random explanation
             explanation = self._generate_random_explanation(criterion, score, game_info)
             evaluation["explanations"][criterion] = explanation
+            
+            # Add to the new evaluations format
+            criterion_evaluations[criterion] = {
+                "score": score,
+                "explanation": explanation,
+                "confidence": round(random.uniform(0.6, 0.9), 2)
+            }
+        
+        # Add the evaluations in the expected format
+        evaluation["evaluations"] = criterion_evaluations
         
         # Calculate overall score (average of all criteria scores)
         if criteria:
             evaluation["overall_score"] = round(total_score / len(criteria), 1)
+        
+        # Add an overall recommendation
+        if criteria and evaluation["overall_score"] >= 5.0:
+            evaluation["overall_recommendation"] = {
+                "include": True,
+                "reason": "This game scored well across the evaluation criteria."
+            }
+        else:
+            evaluation["overall_recommendation"] = {
+                "include": False,
+                "reason": "This game did not score well enough across the evaluation criteria."
+            }
+        
+        # Add low score exception for about 10% of games
+        if random.random() < 0.1:
+            # Adjust the score to be below 3.0 but still decide to keep it
+            evaluation["overall_score"] = round(random.uniform(1.0, 2.9), 1)
+            evaluation["overall_recommendation"] = {
+                "include": True,
+                "reason": "Despite low overall score, this game has historical importance or collector value."
+            }
         
         return evaluation
 

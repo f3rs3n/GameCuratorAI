@@ -203,6 +203,12 @@ class FilterEngine:
                     }
                     return ([], all_evaluations, {"provider_error": evaluation["error"]}, api_usage_data)
                 
+                # Analyze criteria to identify strengths and weaknesses
+                criteria_analysis = self._analyze_criteria(evaluation, criteria)
+                
+                # Add the analysis to the evaluation
+                evaluation["_criteria_analysis"] = criteria_analysis
+                
                 # Add evaluation to game and to results list
                 game["_evaluation"] = evaluation
                 all_evaluations.append(evaluation)
@@ -227,11 +233,13 @@ class FilterEngine:
                     if score_values:
                         overall_score = sum(score_values) / len(score_values)
                 
+                # Include the criteria analysis in the batch results
                 current_batch_results.append({
                     "game_name": game.get("name", "Unknown Game"),
                     "keep": meets_criteria,
                     "quality_score": overall_score,
-                    "reason": evaluation.get("reason", "")
+                    "reason": evaluation.get("reason", ""),
+                    "_evaluation": evaluation  # Include full evaluation for progress display
                 })
                 
                 processed += 1
@@ -392,10 +400,20 @@ class FilterEngine:
             weighted_score = 0.0
             total_weight = 0.0
             
+            # Track criteria scores for analysis
+            criteria_scores = {}
+            
             for criterion in criteria:
                 if criterion in evals and "score" in evals[criterion]:
                     score = float(evals[criterion]["score"])
                     weight = self.criteria_weights.get(criterion, 0.1)
+                    
+                    criteria_scores[criterion] = {
+                        "score": score,
+                        "weight": weight,
+                        "weighted_score": score * weight,
+                        "threshold": self.threshold_scores.get(criterion, 5.0)
+                    }
                     
                     weighted_score += score * weight
                     total_weight += weight
@@ -411,6 +429,25 @@ class FilterEngine:
                 # Apply global threshold modifier
                 adjusted_threshold = base_threshold * self.global_threshold
                 
+                # Sort criteria by score (high to low) to identify strengths and weaknesses
+                if criteria_scores:
+                    # Find strengths and weaknesses
+                    strengths = sorted(criteria_scores.items(), key=lambda x: x[1]["score"], reverse=True)
+                    weaknesses = sorted(criteria_scores.items(), key=lambda x: x[1]["score"])
+                    
+                    # Store the analysis in the evaluation
+                    evaluation["_criteria_analysis"] = {
+                        "normalized_score": normalized_score,
+                        "base_threshold": base_threshold,
+                        "adjusted_threshold": adjusted_threshold,
+                        "global_modifier": self.global_threshold,
+                        "criteria_scores": criteria_scores,
+                        "strongest_criteria": [s[0] for s in strengths[:2]] if len(strengths) > 1 else [strengths[0][0]] if strengths else [],
+                        "weakest_criteria": [w[0] for w in weaknesses[:2]] if len(weaknesses) > 1 else [weaknesses[0][0]] if weaknesses else [],
+                        "is_low_score_keeper": normalized_score < 3.0 and normalized_score >= adjusted_threshold,
+                        "low_score_reason": "Kept despite low score because it passed the adjusted threshold" if normalized_score < 3.0 and normalized_score >= adjusted_threshold else None
+                    }
+                
                 self.logger.debug(f"Game evaluation: score={normalized_score:.2f}, " +
                                 f"threshold={base_threshold:.2f}, " +
                                 f"adjusted={adjusted_threshold:.2f}, " +
@@ -421,6 +458,67 @@ class FilterEngine:
         # Default to conservative inclusion
         return True
     
+    def _analyze_criteria(self, evaluation: Dict[str, Any], criteria: List[str]) -> Dict[str, Any]:
+        """
+        Analyze an evaluation to identify strengths and weaknesses
+        
+        Args:
+            evaluation: Game evaluation data
+            criteria: List of criteria used for evaluation
+            
+        Returns:
+            Dictionary with analysis data
+        """
+        analysis = {
+            "strongest_criteria": [],
+            "weakest_criteria": [],
+            "is_low_score_keeper": False,
+            "criteria_contribution": {}
+        }
+        
+        # Extract scores
+        scores = {}
+        if "scores" in evaluation:
+            scores = evaluation["scores"]
+        elif "evaluations" in evaluation:
+            # New format with nested evaluations
+            for criterion, data in evaluation["evaluations"].items():
+                if isinstance(data, dict) and "score" in data:
+                    scores[criterion] = data["score"]
+        
+        if not scores:
+            return analysis
+            
+        # Calculate strongest and weakest criteria (top and bottom 2)
+        sorted_scores = sorted([(criterion, score) for criterion, score in scores.items()], 
+                                key=lambda x: x[1], reverse=True)
+        
+        # Get top 2 criteria
+        if len(sorted_scores) >= 2:
+            analysis["strongest_criteria"] = [criterion for criterion, _ in sorted_scores[:2]]
+        elif sorted_scores:
+            analysis["strongest_criteria"] = [sorted_scores[0][0]]
+            
+        # Get bottom 2 criteria
+        if len(sorted_scores) >= 2:
+            analysis["weakest_criteria"] = [criterion for criterion, _ in sorted_scores[-2:]]
+        elif sorted_scores:
+            analysis["weakest_criteria"] = [sorted_scores[-1][0]]
+            
+        # Check if this is a low score keeper
+        overall_score = evaluation.get("overall_score", 0.0)
+        if overall_score < 3.0:
+            if "overall_recommendation" in evaluation and evaluation["overall_recommendation"].get("include", False):
+                analysis["is_low_score_keeper"] = True
+                
+        # Calculate criteria contribution
+        total_score = sum(scores.values()) if scores else 0
+        if total_score > 0:
+            for criterion, score in scores.items():
+                analysis["criteria_contribution"][criterion] = round((score / total_score) * 100, 1)
+                
+        return analysis
+        
     def save_evaluations(self, evaluations: List[Dict[str, Any]], file_path: str) -> bool:
         """
         Save evaluation results to a JSON file

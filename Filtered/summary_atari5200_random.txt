@@ -1,9 +1,9 @@
 DAT Filter AI - Filtering Summary
 ==============================
-Date: 2025-05-08 13:32:07
+Date: 2025-05-08 14:44:48
 Original game count: 77
-Filtered game count: 77
-Reduction: 0 games (0.0% of collection)
+Filtered game count: 65
+Reduction: 12 games (15.6% of collection)
 
 Filter Criteria:
 ---------------
@@ -13,15 +13,22 @@ Filter Criteria:
 - console_significance
 - mods_hacks
 
-Top 7 Games (Highest Quality Scores):
+Top 6 Games (Highest Quality Scores):
 ----------------------------------------
-1. Zaxxon (USA) - Score: 8.70/10
-2. Star Raiders (USA) - Score: 8.30/10
-3. RealSports Baseball (USA) - Score: 8.10/10
-4. RealSports Soccer (USA) - Score: 8.10/10
-5. Buck Rogers - Planet of Zoom (USA) - Score: 7.60/10
-6. RealSports Tennis (USA) - Score: 7.40/10
-7. Astro Chase (USA) - Score: 7.30/10
+1. Kangaroo (USA) - Score: 8.50/10
+2. Tempest (USA) (AtariAge) - Score: 8.50/10
+3. RealSports Basketball (USA) - Score: 8.20/10
+4. Zaxxon (USA) - Score: 8.00/10
+5. Mario Bros. (USA) - Score: 7.40/10
+6. Beamrider (USA) - Score: 7.20/10
+
+Removed Games Preview (Lowest Scores):
+----------------------------------------
+These games didn't make the cut and were removed from the filtered collection:
+Total games removed: 12
+
+Note: To see the complete list of removed games, compare the original DAT
+      file with the filtered output using a comparison tool.
 
 API Usage Information:
 ----------------------

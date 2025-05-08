@@ -325,20 +325,94 @@ class ExportManager:
             # Get games that were excluded
             excluded_count = original_count - len(filtered_games)
             
+            # Analyze criteria strength/weakness for the top games
+            strengths_count = {}
+            weaknesses_count = {}
+            low_score_keepers = 0
+            
+            # Initialize counters using the filter_criteria argument
+            for criterion in filter_criteria:
+                strengths_count[criterion] = 0
+                weaknesses_count[criterion] = 0
+            
+            # Analyze criteria in the filtered games
+            for game in filtered_games:
+                if "_evaluation" in game and "_criteria_analysis" in game["_evaluation"]:
+                    analysis = game["_evaluation"]["_criteria_analysis"]
+                    
+                    # Count strengths
+                    for criterion in analysis.get("strongest_criteria", []):
+                        if criterion in strengths_count:
+                            strengths_count[criterion] += 1
+                    
+                    # Count weaknesses
+                    for criterion in analysis.get("weakest_criteria", []):
+                        if criterion in weaknesses_count:
+                            weaknesses_count[criterion] += 1
+                    
+                    # Count low score keepers
+                    if analysis.get("is_low_score_keeper", False):
+                        low_score_keepers += 1
+            
+            # Add criteria analysis section
+            if any(strengths_count.values()):
+                summary.extend([
+                    "",
+                    "Criteria Analysis:",
+                    "-----------------"
+                ])
+                
+                # Show criteria strengths
+                summary.append("Strongest criteria in the collection:")
+                for criterion in sorted(strengths_count.keys(), key=lambda x: strengths_count[x], reverse=True):
+                    if strengths_count[criterion] > 0:
+                        pct = (strengths_count[criterion] / len(filtered_games)) * 100
+                        summary.append(f"- {criterion.replace('_', ' ').title()}: {strengths_count[criterion]} games ({pct:.1f}%)")
+                
+                # Show criteria weaknesses
+                summary.append("\nWeakest criteria in the collection:")
+                for criterion in sorted(weaknesses_count.keys(), key=lambda x: weaknesses_count[x], reverse=True):
+                    if weaknesses_count[criterion] > 0:
+                        pct = (weaknesses_count[criterion] / len(filtered_games)) * 100
+                        summary.append(f"- {criterion.replace('_', ' ').title()}: {weaknesses_count[criterion]} games ({pct:.1f}%)")
+                
+                # Show low score keepers if any
+                if low_score_keepers > 0:
+                    pct = (low_score_keepers / len(filtered_games)) * 100
+                    summary.append(f"\nLow Score Exceptions: {low_score_keepers} games ({pct:.1f}%)")
+                    summary.append("These are games kept despite low scores due to other important factors.")
+            
+            # Top Games Section
             summary.extend([
                 "",
                 f"Top {len(top_games)} Games (Highest Quality Scores):",
                 "----------------------------------------"
             ])
             
-            # Add top games
+            # Add top games with their strengths and weaknesses
             for i, game in enumerate(top_games):
                 score = 0
                 eval_data = game.get('_evaluation', {})
                 if eval_data and 'overall_score' in eval_data:
                     score = float(eval_data['overall_score'])
                 
-                summary.append(f"{i+1}. {game.get('name', 'Unknown')} - Score: {score:.2f}/10")
+                game_line = f"{i+1}. {game.get('name', 'Unknown')} - Score: {score:.2f}/10"
+                
+                # Add strengths/weaknesses if available
+                if "_criteria_analysis" in eval_data:
+                    analysis = eval_data["_criteria_analysis"]
+                    strengths = analysis.get("strongest_criteria", [])
+                    weaknesses = analysis.get("weakest_criteria", [])
+                    
+                    if strengths:
+                        strengths_str = ", ".join([s.replace("_", " ").title() for s in strengths])
+                        game_line += f" - Strong: {strengths_str}"
+                    
+                    if weaknesses:
+                        weaknesses_str = ", ".join([w.replace("_", " ").title() for w in weaknesses])
+                        game_line += f" - Weak: {weaknesses_str}"
+                
+                summary.append(game_line)
             
             # Only show worst games if we have excluded games
             if excluded_count > 0:

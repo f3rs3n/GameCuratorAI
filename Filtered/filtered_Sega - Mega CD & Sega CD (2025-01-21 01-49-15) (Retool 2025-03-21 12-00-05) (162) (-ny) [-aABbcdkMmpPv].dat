@@ -1,0 +1,1122 @@
+<?xml version="1.0" ?>
+<datafile>
+<header>
+<name>Sega - Mega CD &amp; Sega CD (Retool)</name>
+<description>Sega - Mega CD &amp; Sega CD (162) (-ny) [-aABbcdkMmpPv] (2025-01-21 01-49-15) (Retool)</description>
+<version>2025-01-21 01-49-15</version>
+<date>2025-03-21 12-00-05</date>
+<author>redump.org</author>
+<homepage>http://www.github.com/unexpectedpanda/retool</homepage>
+<url>http://redump.org/</url>
+<retool>Created by Retool 2.3.9</retool>
+<filtered_date>2025-05-08</filtered_date>
+<filtered_time>15:00:42</filtered_time>
+<filtered_games_count>53</filtered_games_count>
+<original_games_count>162</original_games_count>
+</header>
+<game name="Adventures of Willy Beamish, The (USA)">
+  <category>Games</category>
+<description>Adventures of Willy Beamish, The (USA)</description>
+<rom name="Adventures of Willy Beamish, The (USA).cue" size="2000" crc="7e070f1f" md5="1c01a036318fae087eaca07502699c3e" sha1="ad68b3e076259b7f34ae99622472c5dd115857fd"/>
+<rom name="Adventures of Willy Beamish, The (USA) (Track 01).bin" size="233269008" crc="abe534e3" md5="c5caa37328f05e17d9401c48cf08de99" sha1="14639e1596ac00f4b3d9aa141e2f4ea78ebb2575"/>
+<rom name="Adventures of Willy Beamish, The (USA) (Track 02).bin" size="1764000" crc="e7887563" md5="3078714f29b09408fbf800f7a2ce03d0" sha1="923937048d6b3fe908cbe4115a099a3b7a195d0b"/>
+<rom name="Adventures of Willy Beamish, The (USA) (Track 03).bin" size="3525648" crc="89c1b24e" md5="28d09da2d02ffc134877a62d44f12251" sha1="c62d2081c51eab5273bed80beccd5c1897e1accd"/>
+<rom name="Adventures of Willy Beamish, The (USA) (Track 04).bin" size="1178352" crc="8cc669ea" md5="890e81863b292f8fec020071ac16e317" sha1="fec43656ee2f4445b2719d8a6c260b311b06b694"/>
+<rom name="Adventures of Willy Beamish, The (USA) (Track 05).bin" size="25895520" crc="6239414c" md5="57d2a217599378d2f618313476a32d6b" sha1="d063e8eb4b5d4e1172710037bd76eeb7eeb55a80"/>
+<rom name="Adventures of Willy Beamish, The (USA) (Track 06).bin" size="4734576" crc="009c79f9" md5="645a0f6fd73b0210d100288db28b93ad" sha1="3e5adaaa60e85ca959d6ded40df6fe5d52b245ea"/>
+<rom name="Adventures of Willy Beamish, The (USA) (Track 07).bin" size="12637296" crc="e6ba68a6" md5="22b7de0c696d7f5c482e8bc085117d78" sha1="6656b360e1f7dc7f58e2e89c03b96c11efcf51da"/>
+<rom name="Adventures of Willy Beamish, The (USA) (Track 08).bin" size="9151632" crc="815b208a" md5="e4f0c92cde64db81c3d224ccd1388d78" sha1="9cf429b6c06dacb81515582f20765d32d018d6a3"/>
+<rom name="Adventures of Willy Beamish, The (USA) (Track 09).bin" size="13074768" crc="5c1846c7" md5="d90bc45a11d85ea409eb6b7eb5a867a0" sha1="f96cf1dd606847b2fdeae85487023e8daaaa266f"/>
+<rom name="Adventures of Willy Beamish, The (USA) (Track 10).bin" size="4696944" crc="63500d67" md5="14265ea8db00a7d90a2aa64aa69c6591" sha1="95c8b31da28b8efb168b876645df3cec8875345b"/>
+<rom name="Adventures of Willy Beamish, The (USA) (Track 11).bin" size="1065456" crc="70bdaff7" md5="d99ef6eb3900de3a959d9325d4cea0bf" sha1="66fd82a78b4ab15d224a073bdf6c8e51e46777af"/>
+<rom name="Adventures of Willy Beamish, The (USA) (Track 12).bin" size="1274784" crc="d44584d6" md5="9f2418210e8a18d4e384efbb81b8cd1f" sha1="63dec4154a654053f9f21d12adc398107d451698"/>
+<rom name="Adventures of Willy Beamish, The (USA) (Track 13).bin" size="1265376" crc="951b2939" md5="7cac7b933bdb3e4f4cbb4b6a3138e06c" sha1="db43fb123a94a201b56a211e9292564f1713715a"/>
+<rom name="Adventures of Willy Beamish, The (USA) (Track 14).bin" size="11614176" crc="06d871f2" md5="a85444037eda6208a916a930d2cd8680" sha1="c8b0951d68b8c02a219bb305d06673aadd66c559"/>
+<rom name="Adventures of Willy Beamish, The (USA) (Track 15).bin" size="1879248" crc="0cac283b" md5="9ff4338c38f8771002c12c4b83288754" sha1="f93767b77c005d0ddf2c7e3c282f46a1947a18cd"/>
+</game>
+<game name="After Burner III (Europe)">
+  <category>Games</category>
+<description>After Burner III (Europe)</description>
+<rom name="After Burner III (Europe).cue" size="1445" crc="aa2d3b9e" md5="3f510004b825d78d8370b3833ced2e02" sha1="a79b9dc5dffcbc69037b77c28e9e9fa9b251cc3c"/>
+<rom name="After Burner III (Europe) (Track 01).bin" size="5367264" crc="bde5da08" md5="ec71c38cd58d814d47a59bfc117cd1de" sha1="db387c48bed100a6ff029d3bfbd69b9ad5abc35a"/>
+<rom name="After Burner III (Europe) (Track 02).bin" size="12395040" crc="f19b9d69" md5="f725b2ea3a4b91a14f27a6c499bf6d29" sha1="36e1dff6f98a276ccc91096fd1a7c8d2bb37c82b"/>
+<rom name="After Burner III (Europe) (Track 03).bin" size="19603920" crc="384d6ed2" md5="3eb4d36479baf089d150eacdfbb4a41a" sha1="9d7a3359718319c1fca1856a8ee65ade870c6d84"/>
+<rom name="After Burner III (Europe) (Track 04).bin" size="12432672" crc="ad711555" md5="3cd6fa12c89378065155062be78b4251" sha1="930bb2d22b555c177d3d5271d83f16b35aa8f42f"/>
+<rom name="After Burner III (Europe) (Track 05).bin" size="5769456" crc="3f5003b1" md5="0b2a9b2817a84eb269021f565234407c" sha1="8051ee6fd332ecf2e6224c34da0952df19ebb51f"/>
+<rom name="After Burner III (Europe) (Track 06).bin" size="14558880" crc="ab5794c3" md5="046c9f072bf36c7cc12c43acd5b26a39" sha1="6ad36d49eb12eb4321e5ae2cf4f7db56b61d4cf0"/>
+<rom name="After Burner III (Europe) (Track 07).bin" size="56189280" crc="5e9e6657" md5="b29513a6cd59f6a59a3d96236a54aac4" sha1="86f15ab0fb6b72eefe30d4de9daafd0d5dca1d48"/>
+<rom name="After Burner III (Europe) (Track 08).bin" size="15652560" crc="86bce6c1" md5="cee79b6c2de6dd4d146327e5c2aabdf5" sha1="3c80b280c814e20e9a999347559c04b37c419e87"/>
+<rom name="After Burner III (Europe) (Track 09).bin" size="58371936" crc="86a30f77" md5="970dd1248f45a97c366a56efad297e3c" sha1="b7800397c4bc9436e2b2e8a5c249d57f5da3b93c"/>
+<rom name="After Burner III (Europe) (Track 10).bin" size="35621040" crc="45feffd4" md5="910450c9d7eae4a6cd027a993d805049" sha1="bfdfaca43e93e4639648a893604e34e951560e4e"/>
+<rom name="After Burner III (Europe) (Track 11).bin" size="52059168" crc="4ac6ab33" md5="1e2af24d58385e3e779844b3591376e3" sha1="357667c11d32d39302bc291bfb1d97398a163883"/>
+<rom name="After Burner III (Europe) (Track 12).bin" size="34755504" crc="6655ef1a" md5="38735b8f4f0f75aa77ebce2d6087c501" sha1="0d15ccc39fdc73e627c8908d60ce053bbb8f70e9"/>
+</game>
+<game name="Bram Stoker's Dracula (USA) (Version 2.0)">
+  <category>Games</category>
+<description>Bram Stoker's Dracula (USA) (Version 2.0)</description>
+<rom name="Bram Stoker's Dracula (USA) (Version 2.0).cue" size="1017" crc="b61853a9" md5="16f4ed2dc2d72da4bdcca04d5a3d3f7f" sha1="9551b3c7d2c3d23a60f1971c8cce74b7fa27f1dd"/>
+<rom name="Bram Stoker's Dracula (USA) (Version 2.0) (Track 1).bin" size="275525040" crc="60ce4ef0" md5="9bf11502375d74e17f5b835278d99256" sha1="fed388b738f273b56b7f4f2569d5e951079be2bd"/>
+<rom name="Bram Stoker's Dracula (USA) (Version 2.0) (Track 2).bin" size="42627648" crc="0c71c862" md5="a32bd9d6b087384ee90daf7b5ba599f2" sha1="cb718a048eec0d38e092a2b23c5327f7fb64c0bc"/>
+<rom name="Bram Stoker's Dracula (USA) (Version 2.0) (Track 3).bin" size="50897280" crc="730c7fa1" md5="213f400d4726551baaf92807e955e745" sha1="ac9a05b06901c1fd63c9ae4c44149a1a5ff32ab5"/>
+<rom name="Bram Stoker's Dracula (USA) (Version 2.0) (Track 4).bin" size="10701600" crc="c54e3705" md5="d75538c64af314bad38dfb86efeebf5e" sha1="882d4b945d59f17d1495d0d95f4500297ef0c45a"/>
+<rom name="Bram Stoker's Dracula (USA) (Version 2.0) (Track 5).bin" size="16779168" crc="c148b352" md5="be11c53a785424e361ecded65bbb462b" sha1="184b922842990c217c12f9640f0a112bfdfa87fa"/>
+<rom name="Bram Stoker's Dracula (USA) (Version 2.0) (Track 6).bin" size="4019568" crc="8be25c31" md5="8cd2e0d97bb0471dd1f8193438873221" sha1="190ad2fd0ac9e1255dbad8ebc6191aff65ea7a16"/>
+<rom name="Bram Stoker's Dracula (USA) (Version 2.0) (Track 7).bin" size="46778928" crc="d9599d60" md5="cc2083ef2ddf06cf7819af7f800fdeb6" sha1="1f079234d51d1fd01288d9c2f6a5cbaea62e1232"/>
+</game>
+<game name="Chuck Rock (Europe)">
+  <category>Games</category>
+<description>Chuck Rock (Europe)</description>
+<rom name="Chuck Rock (Europe).cue" size="1259" crc="3ba53075" md5="7c8b626b295b80282aea3d019a7d6a1c" sha1="aad5ff7b31bd3357f055666e3b274e58dc8dc486"/>
+<rom name="Chuck Rock (Europe) (Track 01).bin" size="12625536" crc="a971c9ba" md5="76f7b9937a96f717d8dc7ffb721ff3c4" sha1="425c56ceb1e6adda40443f929ba25ba6ea84ac29"/>
+<rom name="Chuck Rock (Europe) (Track 02).bin" size="42399504" crc="ec290ea3" md5="3ddfe5deffd7747adcfa154e780b423a" sha1="8af0df51e36af05ed51df202bff8af0865779c32"/>
+<rom name="Chuck Rock (Europe) (Track 03).bin" size="42578256" crc="513824a5" md5="22ed5ee984604a38e2583d8af3439739" sha1="28f8d5d0955e1f4015fe0293d08b3a42e7112ff4"/>
+<rom name="Chuck Rock (Europe) (Track 04).bin" size="41463408" crc="ecf96e0b" md5="792f005d01d7fe11d0f42d015a137787" sha1="94c14aab72818ef035a79d00d853a3a528dbf344"/>
+<rom name="Chuck Rock (Europe) (Track 05).bin" size="44989056" crc="7c63bbaa" md5="d759f4eee86e2a96a5dcfb42e67c9b69" sha1="e4d8002a42659fcd17356c9a7f8c077159e675a8"/>
+<rom name="Chuck Rock (Europe) (Track 06).bin" size="42197232" crc="a564b2fd" md5="dfb9b560f600299279ffec077fad5e5b" sha1="58bc520e2ab6a6cd146c1c0aa2db935e9e0c6efd"/>
+<rom name="Chuck Rock (Europe) (Track 07).bin" size="19201728" crc="c6b879f0" md5="32db9db2cdcbced11a14943c5e5d1eb8" sha1="50943cf8311eccdecabe23a466ff1b2c284e5ba5"/>
+<rom name="Chuck Rock (Europe) (Track 08).bin" size="40120416" crc="048d84d4" md5="77ac6355c26b23dd462b491583cfa280" sha1="cbc8e484d367630c0e57592cd8e6c05ffc51e3a1"/>
+<rom name="Chuck Rock (Europe) (Track 09).bin" size="18413808" crc="67d10681" md5="78c1ee419abb0872e6049c52f462b270" sha1="440a4e59abb585b911d457f081a45cd706527abe"/>
+<rom name="Chuck Rock (Europe) (Track 10).bin" size="1453536" crc="d233d77e" md5="23ffea485e50036270f46c0a16ff56a4" sha1="c853b416a24e617dbc5c600a27503d915545c720"/>
+<rom name="Chuck Rock (Europe) (Track 11).bin" size="20699952" crc="dd4bacc7" md5="e65a46b6c86ebdf3de33a2aa15e13335" sha1="6d34da6efd999cbe835e724e54ac9b774455caad"/>
+</game>
+<game name="Dragon's Lair (Europe) (En,Fr,De,It)">
+  <category>Games</category>
+<description>Dragon's Lair (Europe) (En,Fr,De,It)</description>
+<rom name="Dragon's Lair (Europe) (En,Fr,De,It).cue" size="265" crc="35e6d75d" md5="3dbbf20ae5298780b638a0861a1bc3a7" sha1="928a493cf344c8fd431ab1f19783a4c83f169892"/>
+<rom name="Dragon's Lair (Europe) (En,Fr,De,It) (Track 1).bin" size="607869696" crc="28c719c4" md5="5e45a960be92b39cab365fd7d883a65f" sha1="83ba5981d3944fd5f9b85854fa80188b74ca6fe5"/>
+<rom name="Dragon's Lair (Europe) (En,Fr,De,It) (Track 2).bin" size="1521744" crc="9f03afbb" md5="73d60d90cc1994adcc2e88049a243236" sha1="be122bcfc85185bb3eb8a44e697b8f0bbb764e29"/>
+</game>
+<game name="Dune (Europe) (En,Fr,De,Es,It)">
+  <category>Games</category>
+<description>Dune (Europe) (En,Fr,De,Es,It)</description>
+<rom name="Dune (Europe) (En,Fr,De,Es,It).cue" size="253" crc="8693392a" md5="3a4c146224b891c625cac484fa0b55b7" sha1="ce728243a54c183903ee285258a36861de1157b2"/>
+<rom name="Dune (Europe) (En,Fr,De,Es,It) (Track 1).bin" size="541369248" crc="3bff9924" md5="b64c971db62a13b8a1e3bc74c07638bb" sha1="63c3c5c8af7cdfc1670f0c1b845e741b33168b00"/>
+<rom name="Dune (Europe) (En,Fr,De,Es,It) (Track 2).bin" size="1735776" crc="7e6caa2b" md5="3fb75f8b1fab1dabb51fad7aa0b9d36d" sha1="37527079b18c4d513ceeb8b5efbe1bbc28225793"/>
+</game>
+<game name="Dungeon Master II - Skullkeep (Europe)">
+  <category>Games</category>
+<description>Dungeon Master II - Skullkeep (Europe)</description>
+<rom name="Dungeon Master II - Skullkeep (Europe).cue" size="814" crc="a1f04cd0" md5="f39c79920b0476fd25bebe7ceebcac1d" sha1="6f655449d56a7e4d9008640bbbf8fc4252fc25e5"/>
+<rom name="Dungeon Master II - Skullkeep (Europe) (Track 1).bin" size="30324336" crc="800ca649" md5="bf3e55fbc6ec95b8e3261c74df8595cd" sha1="d79ca7a9bf6cf40e00b0e337ea966ee07da73fe6"/>
+<rom name="Dungeon Master II - Skullkeep (Europe) (Track 2).bin" size="32939760" crc="cb989a97" md5="f182b1bbbcafc066b5a09b53401f0d17" sha1="8c96909653da9576f897c667a4b0a449991870d1"/>
+<rom name="Dungeon Master II - Skullkeep (Europe) (Track 3).bin" size="43375584" crc="e8ce5564" md5="c0fc274ad82e03a6195e87392eb86673" sha1="7edcfb20cffe2a889d281bec2f262f77405cf8fb"/>
+<rom name="Dungeon Master II - Skullkeep (Europe) (Track 4).bin" size="16170000" crc="5ffdab77" md5="18eb87df5aaa3a4e890ec8897b401533" sha1="af9c3141f46aa3bf5cc1bdc7691713dad48191b3"/>
+<rom name="Dungeon Master II - Skullkeep (Europe) (Track 5).bin" size="21283248" crc="42a4b06a" md5="241b2448c7340c4f240b73d95cc4ed33" sha1="fce460d863bdb018de8495d8b7b92896706a0f0a"/>
+<rom name="Dungeon Master II - Skullkeep (Europe) (Track 6).bin" size="51689904" crc="2e3f9dae" md5="a7c44a830da1cddf4436bb36be8c58fe" sha1="8ca079695e26e176434e090697f2898ed26f0d2d"/>
+<rom name="Dungeon Master II - Skullkeep (Europe) (Track 7).bin" size="2923536" crc="461fad80" md5="84efc5189d15902e585dacf2fff557b4" sha1="27b095eda8eec756bb380599c66e1ac02fefe778"/>
+</game>
+<game name="ESPN NBA Hangtime '95 (USA)">
+  <category>Games</category>
+<description>ESPN NBA Hangtime '95 (USA)</description>
+<rom name="ESPN NBA Hangtime '95 (USA).cue" size="2788" crc="494f3edc" md5="14d4275919f171295c52a5090ee70d13" sha1="e9330665eb694e80013268aa8ec6075049f813cf"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 01).bin" size="145094880" crc="54f7362a" md5="cf87f364b7d05eefdac62a5c1659cbe0" sha1="3e8a2cb4514764017a70f4caa9851bcf00bccbc6"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 02).bin" size="68130384" crc="ded3c22e" md5="fcdd8e65bde15fe0e0ca15c6b396fd98" sha1="cc794dea098d7a7f8c67b9c5bbc2ee9d4aff742b"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 03).bin" size="83667696" crc="4ee5fdde" md5="ff37ae93930367eb8af924a6833e0737" sha1="dbb4639be8c64f0ea29d0e7130f412067225aa41"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 04).bin" size="16626288" crc="3f424220" md5="12ad0d4c479cee28dae52b96cb24850a" sha1="7c774cba072bef4653ac56dcc1efc39d9c30ff77"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 05).bin" size="32109504" crc="34df5400" md5="920b0cda7fa2c20fb7dd16b47595640c" sha1="546614c5ea2e3a558bd057fbdc3fec2e4ba99e65"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 06).bin" size="5647152" crc="adc5a1a4" md5="723515bd0acb6d80b81aaa83fa79a783" sha1="f86ff705017e600eca9337046566b39f1fea2573"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 07).bin" size="5649504" crc="ccf3ce48" md5="587353d5a621a8586d6f798a9eab25c1" sha1="59c2ce6407b4a266fcfbbae8785fc0ef3715ca34"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 08).bin" size="5647152" crc="02fb1b3b" md5="69f0a80a071c691b1a87b898a019548d" sha1="3218e7999471caa8cb3dfab31e995b33f91d03e0"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 09).bin" size="6115200" crc="32ae1068" md5="8af314bd5cdc4f64d1c1519e2d4d89b6" sha1="f634728f541462bf1a58e1ad0763cc75fce7fdce"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 10).bin" size="5647152" crc="0820ca47" md5="0871bc0efb0adaf6607cdbda9c20bdb1" sha1="e37266d8d9e75844a9dd29357a9a4533d1aa1e61"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 11).bin" size="5647152" crc="dad070c5" md5="89e0f88337c3ba6915eab17b055d532c" sha1="3315a19e5352d17c246c2858f82aed4958ce388d"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 12).bin" size="5647152" crc="bbc36665" md5="1793e37958aacc1590c0a91718959aca" sha1="5509025e7511f3816523f816db457a5bba372d3f"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 13).bin" size="5647152" crc="f9b4ec48" md5="ee780a3b1db327b9546a53f7759c7f06" sha1="d169a089af604b2cbc965c52020e7ac6ead0e1ea"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 14).bin" size="5647152" crc="8c0dad50" md5="ed96dd9b0fa4cc8b3f595bb64845044b" sha1="1f12cd3bc137741340263889c56f7d87c55ef476"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 15).bin" size="5647152" crc="b881b3e8" md5="008e4b8884ea7b3544ef497cb9bda8e6" sha1="f30e5a37b5f7409eb901b183c51b174ea0d0b50e"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 16).bin" size="5647152" crc="9bf457a5" md5="7179f588df16862fffd60b22a48b4ec8" sha1="7ab4668cd13335063e22ae385305f832c6a75404"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 17).bin" size="5647152" crc="37e869c2" md5="56ff28b8986e62d7f4642bd3e3f307e6" sha1="89be13917acd928332afbf264a5b1e5d1195f180"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 18).bin" size="22884960" crc="a25e1fa3" md5="eea424eccab3ec82af54927837123227" sha1="bc3d050264afe28899e96ec26fda16b23a0f2bd7"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 19).bin" size="25726176" crc="abd36ca1" md5="e39ec51f09fdb28dc160862b643e575f" sha1="08be6f14fbb7939d74b27ecc0b4b05fdaedc3f8a"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 20).bin" size="32857440" crc="86470d67" md5="92aea5762d198d5376e5148f11c897ef" sha1="e32a8f20467c7b767a40cc71c65979704b3491a3"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 21).bin" size="26697552" crc="f0e8dab4" md5="a8889bc387818b160580f5b457ef3551" sha1="2e5412d510f13407a3983b7580062657d9fcf709"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 22).bin" size="35225904" crc="f5cda551" md5="4a010b1132742fd75a7ab1ca2e2b2953" sha1="3676d3772a7deb234a6fefcdf9a396af94d84c90"/>
+<rom name="ESPN NBA Hangtime '95 (USA) (Track 23).bin" size="1521744" crc="60eade1a" md5="219338306d836e503200995f9b6cdfbf" sha1="3e7034584cf93dbb4fe059d08f3c909cca4891aa"/>
+</game>
+<game name="Earthworm Jim - Special Edition (Europe)">
+  <category>Games</category>
+<description>Earthworm Jim - Special Edition (Europe)</description>
+<rom name="Earthworm Jim - Special Edition (Europe).cue" size="3187" crc="4577aed9" md5="6c78195699033f73658ac6a0bbb06eab" sha1="3769bbadd4b1b881368e24a44b18bba25ccdb330"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 01).bin" size="16087680" crc="e13e222b" md5="f0b35f11d6beaed0881e247228d7a993" sha1="1935be471b5fa81f5a797bf27a58995e702a2131"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 02).bin" size="1582896" crc="94c1c145" md5="77db5abc77d0d3bcc189d1c522cfeb91" sha1="312bb98f53907d9342e992eabd3958875aa694ca"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 03).bin" size="1121904" crc="3b859b44" md5="dee4570855181b112ec5b31b9ce0ed81" sha1="825642a9fe74f669d56565086235e6630cfa3a3c"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 04).bin" size="1086624" crc="4854865a" md5="63967bbc4cf8e5e43a23964b50c4984f" sha1="eba695b12e7486b0744ff07b909375f0b2daeb59"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 05).bin" size="1096032" crc="e5d05a2a" md5="8156bf2035d2f46a592362c372708650" sha1="e8fb7c42abe7e2856ac790676dca20ede897293b"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 06).bin" size="18312672" crc="aea79e83" md5="eb64444f57891168c8ddbf0b0d34f4b4" sha1="2b1fbc9c7ad478bda316c9b1b6a7ba0ddd2db1dc"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 07).bin" size="1982736" crc="8bf959fe" md5="13b2228770aaa6b1f684a0ef76e9caa4" sha1="a2894349c0f3946ef8619941b93c54d1ec5a7364"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 08).bin" size="1218336" crc="12defcac" md5="5c7ad92e0b00b701a7de17a65de05136" sha1="d89a7d1113eca455d636122f28fe0e24b061cae2"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 09).bin" size="39638256" crc="680cd45c" md5="0ddab912eba2edd1c953c4255f3be206" sha1="937c6e12f2be552b4a594a967e7f7e8055862084"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 10).bin" size="19634496" crc="7ad9ec58" md5="dfa8e5d3f4f14fe6900fb408b33b0c0b" sha1="68a8955b9da8e08783fe4a40da8d0c17f0a967c4"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 11).bin" size="19700352" crc="c1517565" md5="4f161a489bec1aa20f6fa62f31c654e2" sha1="e2da5867f383b67e55622078d017ebac72c8cce2"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 12).bin" size="8775312" crc="0fb2164f" md5="1ae9f8effbfddf1567b25ab297ad2dfd" sha1="39e66531aaf7397a07c37298633d6fcba4c665a4"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 13).bin" size="16384032" crc="eb757449" md5="03824d0741b85c11f2a4d2728e31dfb1" sha1="14a0f36fb362b89969a703fcfb80ee8e12f40360"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 14).bin" size="1644048" crc="35084a3d" md5="5d77c82a7b94dc9d258a4fa4f1373e96" sha1="4996ed97b1a247e3648c9b6badf9db56f96741b3"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 15).bin" size="26137776" crc="49e5b600" md5="8f3905ade473e19193cb7f5bc8edab29" sha1="0300140846f654d92f401c0deea0bad37206fab9"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 16).bin" size="20173104" crc="22f7545e" md5="1e8e19be4cd807e48215211817423be9" sha1="cf6b24a982b5f9628bebfe4ddebcd0084ba34ea5"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 17).bin" size="9887808" crc="a308ced2" md5="80c61f3ac39447ea18824e59f0a0c66f" sha1="6ee32cf34b3f05cf31497892e12cf5f33f1bea2d"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 18).bin" size="24166800" crc="cfc582c2" md5="c21fce999fbe5124b744d8e99f38fa0c" sha1="30963e3fab3fc2f5f7199d20de5e2688826fc3c3"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 19).bin" size="16708608" crc="b9387c10" md5="934fc7c9dbe2093989a8b1e8cfff47f7" sha1="d742741836268c1f9f8ede779a2c312ccb79dfee"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 20).bin" size="12056352" crc="3fce9776" md5="2b3c87caf1f2ae2bbfab42854123d8dc" sha1="99abb41ec0004d3289b843a79b575c4d0b3ede41"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 21).bin" size="19439280" crc="fa8b2f70" md5="6628ce124692e0a4cad4f8f082873a4b" sha1="4ef0080e12f9416284db9bf6e0eb388f049f9366"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 22).bin" size="25512144" crc="d7d57341" md5="faa8174f7ce4bf14bdc4ae6b3935246d" sha1="96cc3e947f9442f6a2c95c10e87beab821d19173"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 23).bin" size="57231216" crc="5183075e" md5="48156e2e22dce8cc807fa15f940ef1c4" sha1="7f287b591bc36533f80c11fde05b667cfe2b9e18"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 24).bin" size="1230096" crc="81f261f9" md5="9e1709eb8ec3a7de714fdedb074759ea" sha1="434328a751317121e05a8780cf7478460891385c"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 25).bin" size="1230096" crc="92773654" md5="220360224040546d2b6863c1720bccb1" sha1="dedd0eee000c6176586bb838511816a710c8386c"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 26).bin" size="1230096" crc="38f09753" md5="69ede18b0424101e79cba1484311e513" sha1="4a446138ea1c88bbb7eacf59a25be2e827414633"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 27).bin" size="13789776" crc="2f17583a" md5="b28a1d0a3b59cf6c9c1a96fd9de9d536" sha1="3444c7cee361ff156174c013d2559b428493ddd6"/>
+<rom name="Earthworm Jim - Special Edition (Europe) (Track 28).bin" size="1528800" crc="9265e140" md5="745b11da19fa5137a007a990eec3515e" sha1="e6251cae47325e237b59a849b3513516a5b1f4ea"/>
+</game>
+<game name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es)">
+  <category>Games</category>
+<description>Ecco - The Tides of Time (Europe) (En,Fr,De,Es)</description>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es).cue" size="2074" crc="3a89acb0" md5="8a306fbefc376d6cc78e5f51f83e8df0" sha1="92bea7f15cca95a097539f14ba754c7a8f43fe9c"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 01).bin" size="150542112" crc="e22640de" md5="8ecc231ab5a0e02415f19aa84da30a4e" sha1="b5190ae5b74edd3b93df63f7f6e76bf8c096bc96"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 02).bin" size="50711472" crc="be64d625" md5="1bc844e6931cbd9b94e03a8dbdad73d6" sha1="2f978e4e78ab5c30506eb1bcc249da711d425e38"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 03).bin" size="48622896" crc="4b3188a6" md5="d49ba5576847f5cfc930f2cb92b4e0b2" sha1="d62e1c10ec3ab346e48e2712f737e6d59e1c49b3"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 04).bin" size="40393248" crc="dba8d01c" md5="714da819ac59c337f72bbd4edf80cac1" sha1="7464672478e7380ce8d230f6f46b81ca20235614"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 05).bin" size="39744096" crc="835a0aee" md5="0ffacd78d2f5acfd1ed566d988cbe55c" sha1="fbfcc6a0ea7298a5559298503585d04cdceeb1fc"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 06).bin" size="37415616" crc="64976afc" md5="e23c81dc04098627eae8637479494847" sha1="203314909fd0d398616756aae25cfecda1b68850"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 07).bin" size="37248624" crc="d1d35824" md5="b0b4a4d5012a3a507737fb16caad59bf" sha1="9014735a375e3b2eb6fa2de46fdbace1d914efb3"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 08).bin" size="35755104" crc="f84d8d13" md5="3f5c83ba233a4b90765ce0dc43be5a53" sha1="4e3bd1dbc0a1470ccbf1e4772b55abbb2dd68754"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 09).bin" size="34986000" crc="c04dc38e" md5="feb4f9ebeacd5869468226ab5e5a41fb" sha1="e1510a693b7fe3ede41a61f07b8883c9ebd64469"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 10).bin" size="30253776" crc="d29a80c9" md5="e52acf39ded74815e892409a9f95533c" sha1="7c0e631bd4337c6a40b5f80c7bb22d697f134378"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 11).bin" size="29595216" crc="03fc4bbe" md5="12b3eb18aee010bd5792d1501dc2ba89" sha1="434b4c2d7a3fae51701a97de2b78bcb2727600d1"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 12).bin" size="28913136" crc="03960a33" md5="40871225c3b6ebbfffa1882b0af6b787" sha1="83605381dfb2f4e007b4104912bf99f440eb4342"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 13).bin" size="23910432" crc="5cae7cac" md5="6bbe1cf79cc6e1fdd1969437fb556a34" sha1="71f03dfa2f3ee6b44895f13b51d13c8dab617e8e"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 14).bin" size="15596112" crc="00f96333" md5="6f5ee86d8fe741e1b3dab3cc99a60f40" sha1="a0472c0105dcbc96577f83473989fef1dab40121"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 15).bin" size="4438224" crc="78198ca8" md5="69831ef5e2fd3e332054507a595b9848" sha1="764200c8ad817e9c61912563583fc171284c7313"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 16).bin" size="49128576" crc="31708458" md5="12e970485f47c275cf085f81fae01815" sha1="ed25179e8a0e6bae02b679579469b9ac587037e7"/>
+<rom name="Ecco - The Tides of Time (Europe) (En,Fr,De,Es) (Track 17).bin" size="10816848" crc="ec8b50f3" md5="02a0f6c968e7a3e9c0b18367e97a0434" sha1="85f82533325becd7c8443a748e29653216fb5ecf"/>
+</game>
+<game name="Ecco the Dolphin (Europe)">
+  <category>Games</category>
+<description>Ecco the Dolphin (Europe)</description>
+<rom name="Ecco the Dolphin (Europe).cue" size="1580" crc="45008939" md5="8701f9b6e61b310979d11e76551b2b6a" sha1="7cda6a1b516be739be20a503e0c8c844ab3bc168"/>
+<rom name="Ecco the Dolphin (Europe) (Track 01).bin" size="59616144" crc="e6eaf047" md5="072049cee317e60963b02978ddfcab00" sha1="131ab295b255134bad5b3c1ce0306fbf836d799a"/>
+<rom name="Ecco the Dolphin (Europe) (Track 02).bin" size="48773424" crc="2bfe906c" md5="477701c21fe8fb436d957ec0eb0551e7" sha1="0ecf1746dcb28a4c77024cbf509bee275d117044"/>
+<rom name="Ecco the Dolphin (Europe) (Track 03).bin" size="42973392" crc="9cbebfab" md5="e6ab60fe11008e73e85ce4b4569c32ed" sha1="394d351d0965cc5c1c21d1283aed49c3695f781f"/>
+<rom name="Ecco the Dolphin (Europe) (Track 04).bin" size="37305072" crc="27125c44" md5="949bba8a73b1fc2757d3f9c8f2a02a53" sha1="e0f4306c86c41a1ae0a28dae2c439553cb2d05b9"/>
+<rom name="Ecco the Dolphin (Europe) (Track 05).bin" size="60834480" crc="b7e73dda" md5="35a790dd8ccadcfb52a94f91b56d9ee9" sha1="8794f42f68b073f147fced2ab1396d6264fccd9a"/>
+<rom name="Ecco the Dolphin (Europe) (Track 06).bin" size="39506544" crc="c86d2f6a" md5="246ed70c24f9f615ef41326bc3228556" sha1="18e286f170e6de46805ec677323907522f204994"/>
+<rom name="Ecco the Dolphin (Europe) (Track 07).bin" size="59554992" crc="8c96c4c9" md5="44f682517c0c77c9390239a1cf00a0bc" sha1="7184b936787708b9132ffa52b5f16993d0fa328c"/>
+<rom name="Ecco the Dolphin (Europe) (Track 08).bin" size="36987552" crc="1ac3cf3e" md5="bcf9d942cc450ad6b211b6c998e28c1c" sha1="f98e876edc88f98296711912fd77fa6a27890a0d"/>
+<rom name="Ecco the Dolphin (Europe) (Track 09).bin" size="10468752" crc="5a547490" md5="30ca8ad875242ef7a25c8d79e616412e" sha1="9462b3e33ea745380da8abdd88c1534244c6bf1a"/>
+<rom name="Ecco the Dolphin (Europe) (Track 10).bin" size="20389488" crc="fc3af83d" md5="3aaed774c59991e87c9217760bd8a7bb" sha1="e17a6da8a9fe9a726ed44097d5832375fd9fc797"/>
+<rom name="Ecco the Dolphin (Europe) (Track 11).bin" size="36126720" crc="6e550a42" md5="bdad44b7ed1f2657120396bc9f953d30" sha1="557dbc5ebbcf6b87df6d74f08ba9f34327ef2a8b"/>
+<rom name="Ecco the Dolphin (Europe) (Track 12).bin" size="10461696" crc="357ba37c" md5="0a86d5840e2277eda64a15abf8e8f355" sha1="ca787b3fb15d5402a458d4898e839e412fab9c0e"/>
+<rom name="Ecco the Dolphin (Europe) (Track 13).bin" size="37199232" crc="0a300055" md5="9e9446afcedcc6f71b1314be7885f489" sha1="2335e016a7632e086eab0b2fc0fe97e97e2567b0"/>
+<rom name="Ecco the Dolphin (Europe) (Track 14).bin" size="37126320" crc="d3339080" md5="1a5efcfc4a99ceac9139bca08faf4db1" sha1="2bc21b9fe5b923aedd1c95038732f50dfcc03e97"/>
+<rom name="Ecco the Dolphin (Europe) (Track 15).bin" size="58670640" crc="ebc5c405" md5="80dcdb36594c50b5d9a53e20c6401907" sha1="1fa4bbbb6e15253aaf9a69cfae76aa48be97d251"/>
+<rom name="Ecco the Dolphin (Europe) (Track 16).bin" size="40002816" crc="c1630466" md5="829c5cd5dc76e0e1a83f48d3016840e7" sha1="225e364e74d3a4b68530ecc11e8a63fcfff04dce"/>
+</game>
+<game name="Eternal Champions - Challenge from the Dark Side (Europe)">
+  <category>Games</category>
+<description>Eternal Champions - Challenge from the Dark Side (Europe)</description>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe).cue" size="2502" crc="24c7e3b9" md5="e6449617f8c2532d674748bc951fc7ab" sha1="88bbd2c4214cb22fcebf84135cb38e6059bf449c"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 01).bin" size="155643600" crc="a397d061" md5="84f5d203b2aa642eba4b61afb4e31e21" sha1="d064e3119326cfb61beeb131d4641a4767a6ba25"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 02).bin" size="20149584" crc="21504a70" md5="c1c9f6bd16f779c12d6f3ac5355407ef" sha1="168bfc206713cb0f6faef8b00db4c8315103213d"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 03).bin" size="15796032" crc="5b36fd46" md5="f6a24f5847f2ef4fe8a2edeed34569ff" sha1="c1a2b1f0dacc7ed45cea2c0f3015a4be3e8731c2"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 04).bin" size="18982992" crc="ab4a4de0" md5="34ed8238f2e19a23b8243abfed06f4ca" sha1="c179c07d2d9581771d65cd302727b6a8f2573062"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 05).bin" size="19312272" crc="3cfe0f2c" md5="c80279167aba84c68c570a3fa0b61b16" sha1="80122b21887749b060fd0d864cdb6f81874c38b9"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 06).bin" size="19406352" crc="a800010c" md5="10ce0c13389ea1dbb2634019274a71fb" sha1="5f685ee0f3ee924598b3721efd0205353e8df740"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 07).bin" size="19396944" crc="af0048ed" md5="77b4ac4b3fece2a837145b4f0d1aaf15" sha1="0cbce4f726421f0f88401ddc5c1ae68ed4688b1d"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 08).bin" size="19392240" crc="c0769f0e" md5="155c58419b1a28f366694328d28589d1" sha1="8fbae852f45882e5e493a860537c326c6a1dbf0a"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 09).bin" size="19361664" crc="95e8060b" md5="88bfa57dd86beea6033ffcfaf06d34b6" sha1="6258135025a01da8efde67679ed536cef7650dcd"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 10).bin" size="19180560" crc="f0edd26d" md5="86da4db41b0f05d4ed40c8176ffc0111" sha1="fb62189e0c8e8a124284dd688470c9ff32fddc6d"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 11).bin" size="18752496" crc="b8f82d5e" md5="7c899e0f596aba750d8f3679f044d033" sha1="970c29c70d5e7460b2eb7daa53f9834d0f887420"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 12).bin" size="20166048" crc="6ba51c43" md5="6869147a72e85b5d2caadbd03d917ae0" sha1="b47caa5a361e4b0266098df892874cc034fa54ad"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 13).bin" size="19627440" crc="fe336543" md5="37b9d99dec491c1b4e0292f04d91837a" sha1="bc9d1f1088e8cfa6f30b67ba221cfc4ec2074a3d"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 14).bin" size="18082176" crc="96c21930" md5="384f8926cdeaa833026f099539a54418" sha1="2a882183cc910196220fb85d1c693238e9c9c133"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 15).bin" size="21078624" crc="bbb57ae0" md5="571e67fb9690bc11e3f0bcd416777e3b" sha1="9c7daf38591115d5a065d66e756c8828ccbf6c88"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 16).bin" size="19474560" crc="43876168" md5="aac70b01771f3d01a5b6514cfd7d253a" sha1="db0f87c8a8a49ebb056ec30d2775c3fa9c3e29f5"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 17).bin" size="19086480" crc="728435bc" md5="66c586d771ad4d0cc27b00ecfc253e48" sha1="27aff9e36213bd21277b92295011063ed49ae08b"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 18).bin" size="24159744" crc="f6e63930" md5="eca22696d54b3b694a8752e6c2740cab" sha1="a2bee1545b44f78b6c4f07b08c2569ab4d450e3c"/>
+<rom name="Eternal Champions - Challenge from the Dark Side (Europe) (Track 19).bin" size="19436928" crc="cc78c57c" md5="0da693688312109c014b4d68b0c3f238" sha1="fd117eadf04fe5f6fec16d05851fc9c19c9cf7f3"/>
+</game>
+<game name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es)">
+  <category>Games</category>
+<description>FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es)</description>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es).cue" size="6629" crc="396456ac" md5="c5e391890e5d5c99247b421cccca5810" sha1="66bc845b7f221f1220f03fdc004540d3ff897400"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 01).bin" size="262836000" crc="30822ddc" md5="f5dd6ebf5f7fa5a29ca1b4251ae04841" sha1="14d0bea103c134788bb2e6ea45b5537847cea559"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 02).bin" size="24159744" crc="f43073af" md5="1b448afbe1b3f2888608cb8c7100d80b" sha1="8a10c6554a6baf6f19d4753136d9020a998cdacd"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 03).bin" size="24801840" crc="3d8c6530" md5="7b695101896484cf78ddd7cdc04ecce2" sha1="b6c06a1fca120112f7ecd63b53369fe10a879b69"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 04).bin" size="24481968" crc="bfccc45e" md5="371b5522cd22bf6c29c3adc8933cdff1" sha1="c44fbd29b63e06120024167086b370e91a3301eb"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 05).bin" size="16607472" crc="6b8a81ca" md5="9cdba0a19e848f225ebad8b89a587d3f" sha1="7d90583eb56893681962c2be98e30d4d740b6e6e"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 06).bin" size="10943856" crc="3ad4b586" md5="537f93b9266fc7e8f9ce99a341398614" sha1="9571eb69c919d3707cd56e9d6272dc56a5cca8bd"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 07).bin" size="10941504" crc="2fef07db" md5="fde58c16689897512570a3a2041e9f7e" sha1="f49b53c735c50b79d04ead50a3dfbce63c24f1a8"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 08).bin" size="10941504" crc="93d18003" md5="2dd3fa88643e3c8283737793dcb919e8" sha1="b546a79d37b3be0be6183632f5e02432c248d1b2"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 09).bin" size="10943856" crc="4b9fdb16" md5="cbd6c48e1aebef5b60354170f8e019b6" sha1="7e7e6214ff76a5c5042848d9e5030a868e4d98ca"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 10).bin" size="10941504" crc="af843103" md5="574ef5b25fbc169b5db2165ddd030d7c" sha1="c14843f6dc82e1facd2fa67d73181f4aaca8bfb2"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 11).bin" size="10941504" crc="73d7aa45" md5="e5e05c1140ddfdb596c3660b4723b527" sha1="5e3c6d7fedce11a75b45a0847ef86b6ed9d21b63"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 12).bin" size="4334736" crc="61080086" md5="0c190d8bda46bc04081ac4826893fdba" sha1="9ebf769e59258b72e741722cdde1859ac8b3c8fe"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 13).bin" size="2455488" crc="30599bad" md5="9df31d008fe8747b2beb963c7cbfdac9" sha1="532c1fe4c7f0c4a24997c17e6dfba52633ed1c3e"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 14).bin" size="2022720" crc="b7e132f0" md5="665ee1a04283167772c891c938f42b49" sha1="c2838437eeb00d113c0dc8b3b9023d36b8a65140"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 15).bin" size="4769856" crc="8dc82f5a" md5="766adfbe2c4d3d9c0d7bd0eb275c8ecd" sha1="086760d6cfc75d3b3762804b31c15958ac230988"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 16).bin" size="4769856" crc="dfb1a9c7" md5="b4c918779755fb8ae9b8a1cdbe2b6d3e" sha1="d7204501551c4e7dd25d4ee355529e4951320601"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 17).bin" size="4769856" crc="0078e1f7" md5="bd252d8af6e4d6039c8f6439415ce3b4" sha1="a894b41105c3c8a033a8b2fc86cb5d085eafadee"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 18).bin" size="4769856" crc="148f890d" md5="c777958ce5faae89ac3a484efbb1d800" sha1="5f16f98a05d41c7040022996bc46d2f02e2df3de"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 19).bin" size="4769856" crc="d642c02e" md5="60a9b0b2856f69932f5582c732b6cb4e" sha1="ee05cc724c71087229d87e379242df4d555a38a1"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 20).bin" size="4769856" crc="12ab3efd" md5="a70a7175b718b3236e59ddc57f62817f" sha1="07739f1c216804c83332351721731c1fa5c460ac"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 21).bin" size="4769856" crc="ba403541" md5="d4cf653f2fca921a3eb3e4ab56092add" sha1="9228b1c28316ffa889f9dee46287c76c9cdcf42d"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 22).bin" size="4769856" crc="c1d08370" md5="c5b16cbe90736fc8b6354daa1595c97a" sha1="d842baaf8d3366fb631a97092283233aee9f3c3a"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 23).bin" size="4769856" crc="7248ee88" md5="775338dd677ad6fd46b6fa207d5cb81d" sha1="232a85e64269507b2fd69f058e70b9fc73b42505"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 24).bin" size="4769856" crc="6924ae45" md5="23ffdf684ff5de74327dbe891ef861da" sha1="c18ad5ec63f0e4160e2cffa618a6631d632441fb"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 25).bin" size="4769856" crc="3dcdb190" md5="ccb33eea0cfeb0665a50d8ba0359e5ea" sha1="54fdfba793d866e93d3c3f78e15312a92d9bbe57"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 26).bin" size="4769856" crc="f82ec5fa" md5="b75cf9b7b2564d84ec81cc6d20ea4720" sha1="3828f99d3cc8a43a37a5768388dde8e520a0f7f8"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 27).bin" size="4769856" crc="e153d292" md5="5309457b982bb21ff949a9e1b41d7bf7" sha1="41cbdbbae3bd8f7404fd42fb9cfc49712d37a196"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 28).bin" size="4769856" crc="d4e14998" md5="5b10b9c030ceb950ec666cc2e53025c7" sha1="9fa977f7e9285ea1694a334fc518a710302b60b2"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 29).bin" size="4769856" crc="8859eb77" md5="60a7e44362d230cd7b3c8e278b3c1e8f" sha1="e56ea0bdfa0ecb60ca81289bd483a814581e2f63"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 30).bin" size="4769856" crc="59600499" md5="a629cfb48a8a286259ca08c7d0743456" sha1="7c1ed4e63375645e860e3398b50c2e63db7a95c2"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 31).bin" size="4769856" crc="ed6f6a1b" md5="7b187f6784e627be832d377caccbf213" sha1="0b8aae0a6fb50e5c3cc9019387a0b88a186ee493"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 32).bin" size="4769856" crc="d42840af" md5="c03535dffed80230bcf6ac089c5d6ce2" sha1="896d9ed6693a91291032f9c803c4c34fa5fe2670"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 33).bin" size="4769856" crc="d63265c4" md5="88cac0ae484f38885dcdfbb58d47f31f" sha1="60f0bf8c3b1f0cfd8543bf005fb33346d8504cd4"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 34).bin" size="4769856" crc="8e5156a2" md5="d3bdf039d029969d50520bdf7fd7fca4" sha1="e1d2ff088912420580f065a345808abf9149aabb"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 35).bin" size="4769856" crc="c44c009a" md5="b4317c0965492242aefe6f5cf5170de4" sha1="d686617ee64ab624948ee4bbc9dfe4dc649f984d"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 36).bin" size="4769856" crc="5f1f16c8" md5="a213356799bad726accffab7eee885ab" sha1="268d4d8b9d568f25e9d2fdb4cd404c4a03431211"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 37).bin" size="4769856" crc="bf0d44f9" md5="3a7a7b84ab8559f5ac8a4dd9ef0445fc" sha1="e41c173c58901fdde1717255467118327ed9cc04"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 38).bin" size="4769856" crc="76d4f7e9" md5="d4f0ca4e9bbc19cd1d8e1c24fa9bb2fb" sha1="caad18a46aa26ead5194b72aad6924db9bd49767"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 39).bin" size="4769856" crc="6380be19" md5="f5402b9ef0019f812c979e94405912b9" sha1="73f0139fc63b4efbbcc16dcfe98863528e296e06"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 40).bin" size="4769856" crc="12cee23a" md5="4584d71fe0b13f7a105c38a5fa5ad77c" sha1="3a13d3f5ea820b5ec22f664dc741d1a1a3325713"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 41).bin" size="4769856" crc="fdec09d9" md5="678bea4c9ded9da3363661b4a17759fb" sha1="ce9c76a75afaa7e20c6e5e13f518ad93f788dc4e"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 42).bin" size="4769856" crc="2b4da8e6" md5="8a6a258cba9eb46aa11aac4838148b47" sha1="9e06435643b33616c81f4e64619621808c6a193e"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 43).bin" size="4769856" crc="f85d74d2" md5="94493ba3366ba5f42c7a27470dc17fa7" sha1="71bd418fd6b56e3047cca46fe4956386dd7569ea"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 44).bin" size="4588752" crc="37eab264" md5="34d0c6e8b833ab6af6d4270fc419c873" sha1="8562765cdc50ff68658baeb019281c45b83870c0"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 45).bin" size="4769856" crc="6d239c4c" md5="680966de9e0a2b745168c1c246900278" sha1="76991cf3684ab72502a502f96abbe57f036af80e"/>
+<rom name="FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es) (Track 46).bin" size="2152080" crc="f7aba5f1" md5="cf87ed3da90706d14cf32870b87785b1" sha1="0e7a1f01aa341fde1a92150b9a591d46c54259e5"/>
+</game>
+<game name="Fatal Fury Special (Europe)">
+  <category>Games</category>
+<description>Fatal Fury Special (Europe)</description>
+<rom name="Fatal Fury Special (Europe).cue" size="3813" crc="f8b1145f" md5="226cc25951edb67e8d09521f117026f8" sha1="93aa1798733d98bf1a63772e4da19912b4e83ccc"/>
+<rom name="Fatal Fury Special (Europe) (Track 01).bin" size="15845424" crc="d6dad22d" md5="5ef0f3075f13f0a77ee0785ff3b899db" sha1="66c5a0caf0b1bf856c4423ef75d727bb2d683a2b"/>
+<rom name="Fatal Fury Special (Europe) (Track 02).bin" size="3252816" crc="b9db2051" md5="0746fb91b3381adb9ab67fae73599240" sha1="70cd13e185c1233d2f2edd0ace2d133a4ab68471"/>
+<rom name="Fatal Fury Special (Europe) (Track 03).bin" size="5880000" crc="01ac945d" md5="f510363ea83b530941ef7e4ae27b20df" sha1="c715e446627a14d19eb22290af1db109a2a942ea"/>
+<rom name="Fatal Fury Special (Europe) (Track 04).bin" size="6595008" crc="d24a226a" md5="745f4b11e5ac5ecbd105ccc7f4e759cd" sha1="c6be6f4bc16ce4313a78e0f0cd34733e3751990f"/>
+<rom name="Fatal Fury Special (Europe) (Track 05).bin" size="4214784" crc="c559eb2f" md5="7890119a67734108bae77122adecd60a" sha1="8477031e9147ab962913f6c70f77f139be9b5491"/>
+<rom name="Fatal Fury Special (Europe) (Track 06).bin" size="7674576" crc="1ee2408b" md5="956f86773bd03b31c4bc2529e6947378" sha1="0a5a6ef7411f56d2d2f3be793d6d54663e0a984f"/>
+<rom name="Fatal Fury Special (Europe) (Track 07).bin" size="19935552" crc="5c476de7" md5="f7978a1d717ec6e8685dc3aa2b3df41e" sha1="b4f40b951468cd45b39b2fff08039a3d3702684b"/>
+<rom name="Fatal Fury Special (Europe) (Track 08).bin" size="21699552" crc="3f2f157b" md5="783f1aa025a6739bec1d5052c8fea83b" sha1="7199e90c596ebe33b72eeae54ef9f2ab041b14ac"/>
+<rom name="Fatal Fury Special (Europe) (Track 09).bin" size="20728176" crc="a8ccf7d3" md5="7d53ebe372768bbbdcf9309dfbbac943" sha1="304e75b8e856206569d8964452fb7d230d24bf17"/>
+<rom name="Fatal Fury Special (Europe) (Track 10).bin" size="25580352" crc="532aa091" md5="9d3517b774be54b50f9629609003ba83" sha1="df76f25c79357c365f0e3ad299d0084395c53ca9"/>
+<rom name="Fatal Fury Special (Europe) (Track 11).bin" size="18877152" crc="d0035148" md5="c0d43787b76b33a4f25e5590703606c2" sha1="d5a544ff0fdda944b3e7c794b7a0f6b4b451e1f1"/>
+<rom name="Fatal Fury Special (Europe) (Track 12).bin" size="26462352" crc="1beca764" md5="784595bc485b95dd588e2b78a6862e4d" sha1="43d3422a9a7a8d8a2e27714389f2b5b2b78737e3"/>
+<rom name="Fatal Fury Special (Europe) (Track 13).bin" size="26638752" crc="efd6446c" md5="1c2def646d8ef6d38d0bc37cf640e707" sha1="3db08acc51b4ca95f1bf751c7204a9d2360f5070"/>
+<rom name="Fatal Fury Special (Europe) (Track 14).bin" size="31048752" crc="728fdcbc" md5="b453634ff6efeb460d516c919f724013" sha1="1b27970b57553cafee5130931adda7ca5276d6f5"/>
+<rom name="Fatal Fury Special (Europe) (Track 15).bin" size="20198976" crc="bae511bc" md5="288fc1bfe22f711fa386b091ac615406" sha1="961a85d7ecfc1dfe285e5f4d804770835037b122"/>
+<rom name="Fatal Fury Special (Europe) (Track 16).bin" size="47893776" crc="eeff4809" md5="d1c3427f6d034ba65191cbb6e6f7c8d7" sha1="120829d7e7c911f01a39a09eaad2d77a13ec7782"/>
+<rom name="Fatal Fury Special (Europe) (Track 17).bin" size="27607776" crc="c70f73f9" md5="6414bbad381512521cc46ff863886ecd" sha1="9a4ea404e5bf3e3f5640702e6020c5b5aa0f77f2"/>
+<rom name="Fatal Fury Special (Europe) (Track 18).bin" size="17729376" crc="75acbc6f" md5="21ee78facc37ef90254897694cc2aff8" sha1="6b46597af004f83b928eae1821a04c1b790da1fa"/>
+<rom name="Fatal Fury Special (Europe) (Track 19).bin" size="23992752" crc="e4481bee" md5="71a2cd4b5caf1c78bced8daf0c72cb07" sha1="ba6e6e7e398a02820def8fc4ea1bd9c8d07649e8"/>
+<rom name="Fatal Fury Special (Europe) (Track 20).bin" size="29018976" crc="144e5074" md5="258a74c6a6edc3494de3585e205202b1" sha1="6c0a12d0570ca5c1a734067d43d407725ff8cd74"/>
+<rom name="Fatal Fury Special (Europe) (Track 21).bin" size="21523152" crc="4ad64126" md5="a161c573af570e7101c80fc71c068136" sha1="523e406159b240a7fec7254b6850cb5e65e824f0"/>
+<rom name="Fatal Fury Special (Europe) (Track 22).bin" size="36869952" crc="84e21e46" md5="732c4e9a1d1e3dc97884e8f87dcf4f45" sha1="fc2695534cb6f46a34fe6c5b70cd8ee04a26fbbd"/>
+<rom name="Fatal Fury Special (Europe) (Track 23).bin" size="3720864" crc="d8a8e059" md5="4a34a378ad123ec3c238501c4fdd38bb" sha1="8df4b7277185329f98858a42a401e16dbbc8ad8a"/>
+<rom name="Fatal Fury Special (Europe) (Track 24).bin" size="3720864" crc="9841b465" md5="d755158c9a278c338a1fb9a59cc810c0" sha1="096fa7112d7bd7aaea585d5e82271340e90f6a7d"/>
+<rom name="Fatal Fury Special (Europe) (Track 25).bin" size="3720864" crc="7b426fbb" md5="f38e2c06d150aed5ab35aaacc8d01f3a" sha1="6660fa0aaf71581e20da99c1bccd60c453e48d64"/>
+<rom name="Fatal Fury Special (Europe) (Track 26).bin" size="3720864" crc="89fdaab0" md5="65b2af38345a9c3dac884ef0a6314818" sha1="87df9005d8cf8437ccd014fdaa5f8a5d9914c1f0"/>
+<rom name="Fatal Fury Special (Europe) (Track 27).bin" size="3720864" crc="e139dc4b" md5="2bdcc54b985ac2ad0242f95274ce501f" sha1="abb71067b1f58f69386126b9752ec7a44baaa376"/>
+<rom name="Fatal Fury Special (Europe) (Track 28).bin" size="3720864" crc="c969299f" md5="3c9665443f510aa5936c2acd3af5cbab" sha1="7251ad98bfef7bb5e61c03237bc21412281a21c5"/>
+<rom name="Fatal Fury Special (Europe) (Track 29).bin" size="3720864" crc="43425270" md5="f9cf7d0cefe9708f13f6021983d1b478" sha1="bbdbf6d37f7f398c244fcf81bd9116d620380ad2"/>
+<rom name="Fatal Fury Special (Europe) (Track 30).bin" size="3720864" crc="379adcf1" md5="740bd8d31924804de9a1499b47b649dd" sha1="edf5c7aa10b839fb15ad5f39d65fd1f9db7bcbdd"/>
+<rom name="Fatal Fury Special (Europe) (Track 31).bin" size="3720864" crc="1002bd8e" md5="5d6e05b8af1bca88e7a64ef3776ba8fe" sha1="5d09b58abcb3e41f06734ae1a96d2a335d35c33a"/>
+<rom name="Fatal Fury Special (Europe) (Track 32).bin" size="3720864" crc="7512cc8b" md5="7694985fd3681dc7debf65e6e6557bf4" sha1="b7475a141a6326aa96bec93a3b29e036b25cf793"/>
+<rom name="Fatal Fury Special (Europe) (Track 33).bin" size="3720864" crc="d446bce4" md5="72859f051ec02a482331808bbaa9b411" sha1="d8fba543809b1006d2459f35f7a398696230ea4a"/>
+<rom name="Fatal Fury Special (Europe) (Track 34).bin" size="3720864" crc="c5658e07" md5="a820e11cc292eb75384ce751f641bcfb" sha1="be1b67c5f94e0292bb53d511207881bd4bd6258e"/>
+<rom name="Fatal Fury Special (Europe) (Track 35).bin" size="3720864" crc="88953dc2" md5="ad6d6e9beb4ec3918fb9edbcb0f5dbb3" sha1="818b2f211973e764a8c5bf2d884c6a6d83677fa7"/>
+<rom name="Fatal Fury Special (Europe) (Track 36).bin" size="3720864" crc="07c9c68e" md5="f443f106f9d4e662b54b7e692a446b94" sha1="b6b1e55d0af271c031cd578ea348c945e940aec2"/>
+<rom name="Fatal Fury Special (Europe) (Track 37).bin" size="3720864" crc="645d9277" md5="77d3ca1f615808ed8aa1b1e50eebd186" sha1="390ef2e466e05188143c94ae285c1523e6818759"/>
+<rom name="Fatal Fury Special (Europe) (Track 38).bin" size="2036832" crc="8e904ab3" md5="ef1d874bfd397aed56a2f3b3b81f0d08" sha1="ac9764b7dee14dfd996da2fa99bcda648ce3c953"/>
+</game>
+<game name="Final Fight CD (Europe)">
+  <category>Games</category>
+<description>Final Fight CD (Europe)</description>
+<rom name="Final Fight CD (Europe).cue" size="3073" crc="2d6ce25c" md5="63f0e422c92b9949b5c6394e435aeabc" sha1="a3986b971823b7bd74ccb0641d7547d4c20c8645"/>
+<rom name="Final Fight CD (Europe) (Track 01).bin" size="28209888" crc="e068334d" md5="91beb45785887b3b158feef5a9a7d0a1" sha1="7d09611a3ef6bd1425f1a3e82bb6a9a6371ed249"/>
+<rom name="Final Fight CD (Europe) (Track 02).bin" size="22936704" crc="0a05e927" md5="5deee2f1a6da6102963efb0a489863ff" sha1="7b29d8fc9c77a62271f3e220927ec3c321121ca7"/>
+<rom name="Final Fight CD (Europe) (Track 03).bin" size="23799888" crc="d7531f85" md5="eb96233e8ea98e41374098ff57d1e0a0" sha1="5cc6e178d0919e7b89efae9e333e3104f0517dd1"/>
+<rom name="Final Fight CD (Europe) (Track 04).bin" size="22790880" crc="a68bc30b" md5="b18cb975ffc51b80deac424caab5475c" sha1="e37ebde3db909549aa57264af466c297b2e7cebb"/>
+<rom name="Final Fight CD (Europe) (Track 05).bin" size="22501584" crc="e220f412" md5="51521b718b6fcaf15070a64835a8410b" sha1="95f9aa9ee050a90a8dcf36b9ecf294b34d191ae6"/>
+<rom name="Final Fight CD (Europe) (Track 06).bin" size="34280400" crc="cf65493f" md5="f23a1689cfeec7ba806e7e922ef7e02e" sha1="bc89b84fba7ebcc37080a3f342a7260a32da3db3"/>
+<rom name="Final Fight CD (Europe) (Track 07).bin" size="22181712" crc="051d633a" md5="6d1825749f2eede74971f533bbd7dc6f" sha1="147e7e8625e1497630b5830a05b410d6a13dc614"/>
+<rom name="Final Fight CD (Europe) (Track 08).bin" size="20535312" crc="0118969b" md5="2e10e17729b0515ff509200939c0df47" sha1="0691da2a06b3310fd0c2bd821beb496c22866a76"/>
+<rom name="Final Fight CD (Europe) (Track 09).bin" size="23437680" crc="fddb4185" md5="894f8d664b9a1b3ec35061aa1afab359" sha1="d19ad00f21fc7c3f19742db6fd6142db906bab48"/>
+<rom name="Final Fight CD (Europe) (Track 10).bin" size="22962576" crc="c2fab799" md5="a2a7275bea0787a2468554d5aa8410f7" sha1="384a358ffe7cd59885b0a092e4c904c9737c1da8"/>
+<rom name="Final Fight CD (Europe) (Track 11).bin" size="22852032" crc="9f720e3f" md5="c1c20a62e2d52f50123ae51f851c4049" sha1="14c8fa513b6fc477df3f56282a3f5f73ea2bf570"/>
+<rom name="Final Fight CD (Europe) (Track 12).bin" size="30084432" crc="38da1600" md5="99c981ae35198e33f65b56b99fc17705" sha1="68d052f1090f49ac17ac45245a914f8036447db3"/>
+<rom name="Final Fight CD (Europe) (Track 13).bin" size="1361808" crc="6295a806" md5="26bd58e611936016e7b436b21295aa9f" sha1="f3e99e3c11f7def728101b856ca708313b4169a5"/>
+<rom name="Final Fight CD (Europe) (Track 14).bin" size="1766352" crc="f5dc03cd" md5="7a82e526fbe3d6aedec21e7964209c30" sha1="5e1f6a07aae4fd0ec80457c524d70b2fadc89269"/>
+<rom name="Final Fight CD (Europe) (Track 15).bin" size="2253216" crc="6cf0af23" md5="21a32b1928c3222b95895423658db5c8" sha1="988611cdf9e259fe0fce93f9e5e80e7d8ceaaacb"/>
+<rom name="Final Fight CD (Europe) (Track 16).bin" size="1481760" crc="0741c9ec" md5="7830524fd2b9cbd9262ba2b4e56be307" sha1="a847528f72b3f249166001886c6df140fe35089c"/>
+<rom name="Final Fight CD (Europe) (Track 17).bin" size="21285600" crc="bc95b4cd" md5="1101aec77587f010c8fd92d416821ad8" sha1="f9794a3926f1aa6624ec858f7662110feef6d6c0"/>
+<rom name="Final Fight CD (Europe) (Track 18).bin" size="2474304" crc="34e60016" md5="590194951fe40a91031c2d2eec3ede6f" sha1="685ba08c44a643e58919d8eb3c4badda7469cd8c"/>
+<rom name="Final Fight CD (Europe) (Track 19).bin" size="1940400" crc="2b3737b4" md5="f8d7e408785f712f24edf8def79d2cf0" sha1="a71f77a7413fc3e42f5dfc7cc2efb17176376413"/>
+<rom name="Final Fight CD (Europe) (Track 20).bin" size="21621936" crc="63b1a5fd" md5="3d6a7f7eeca524dbd15debd9cfa641f0" sha1="d3a17dfc3a7bdcfba8af8e5275d8ac5e90615a4e"/>
+<rom name="Final Fight CD (Europe) (Track 21).bin" size="2413152" crc="42dde540" md5="a59cdda3f9910f9ecd70f66b1b615fcb" sha1="c5d918edae460c44395d21819e56fee0df4b2830"/>
+<rom name="Final Fight CD (Europe) (Track 22).bin" size="34228656" crc="315d88df" md5="f56b70ad14fb46e362c7fc71effcb070" sha1="930a814b1143dad7f4dc7e7904cb3baf27b3c46a"/>
+<rom name="Final Fight CD (Europe) (Track 23).bin" size="24293808" crc="eefb7db8" md5="dbf0d98a33305f6f45fa08ac36fb4def" sha1="380b39425cb6be68d2970fb5b807a21e261eb7ef"/>
+<rom name="Final Fight CD (Europe) (Track 24).bin" size="20286000" crc="9a8df070" md5="faad5660cbd616d34e708b6973f86b3c" sha1="6a1fcb3e1f048a28538afc1f635e9a3a9ba82b3b"/>
+<rom name="Final Fight CD (Europe) (Track 25).bin" size="8897616" crc="385633f7" md5="c5a1f91fb016ce73920ae5d6936dda30" sha1="1bb0ebf8f619f76bf440ef9bd862e38cdd070e58"/>
+<rom name="Final Fight CD (Europe) (Track 26).bin" size="7178304" crc="f8cfa374" md5="5e61a3f8662722b3a94211e0ff402a40" sha1="727967fa05745999f8a9e6c3bbf344573a6196c1"/>
+</game>
+<game name="Flashback - The Quest for Identity (USA)">
+  <category>Games</category>
+<description>Flashback - The Quest for Identity (USA)</description>
+<rom name="Flashback - The Quest for Identity (USA).cue" size="1188" crc="1d940871" md5="a60aba9ec5eb1917bc12a16697860c99" sha1="0cdbf4db63c1898f04a9dc350100902ed0d14487"/>
+<rom name="Flashback - The Quest for Identity (USA) (Track 1).bin" size="268678368" crc="515f013c" md5="62b393dded79aee9a862e8025835d5a3" sha1="32599a4e68abad0af9e6ef368d62fe9e960489eb"/>
+<rom name="Flashback - The Quest for Identity (USA) (Track 2).bin" size="36025584" crc="068294a3" md5="7bc31f5e5b8792f72dcc274f3f2388ef" sha1="d030fc85eb074715bce0aca306a6763012f957c0"/>
+<rom name="Flashback - The Quest for Identity (USA) (Track 3).bin" size="44158800" crc="a617b113" md5="cfd196fac5fa56625816a6f71c92f179" sha1="766e3b8fddc7cd3d8ba944ab9f7910f9266ebdf2"/>
+<rom name="Flashback - The Quest for Identity (USA) (Track 4).bin" size="33866448" crc="7673ff20" md5="7a44a622a1c6372a5aef99f0177fec08" sha1="7c5e4066fe936c2e0fd731637fdc3de8eefe7440"/>
+<rom name="Flashback - The Quest for Identity (USA) (Track 5).bin" size="33694752" crc="bbf002fb" md5="d60fd5a3b821f3a8c56c08229c40e118" sha1="4ce9ac514f7cb6119284754b941517e5a8e27ea4"/>
+<rom name="Flashback - The Quest for Identity (USA) (Track 6).bin" size="36154944" crc="7066d3a3" md5="10168980bde4bb8a40e3974c48e1a38a" sha1="d4a1c73200f06e84731fab157b46c3dcfe1cd1c0"/>
+<rom name="Flashback - The Quest for Identity (USA) (Track 7).bin" size="33153792" crc="2acaa2db" md5="aa3a0425ad1e7e2f1d33c6a2ee543a17" sha1="8140886adb9b52b97ab25bebe9aeb8e8eed8bf9f"/>
+<rom name="Flashback - The Quest for Identity (USA) (Track 8).bin" size="20344800" crc="caa79d01" md5="e154da0343d3b0a2d9a88f93d7fe8eb1" sha1="61e5139cabee72e5a62d725fe0e6800bc5171b8c"/>
+<rom name="Flashback - The Quest for Identity (USA) (Track 9).bin" size="59009328" crc="4b49960d" md5="5194b029d595111cd570818bcc9a4ef4" sha1="081d6daa229804bf6289dbbb2b32b902c5ffce16"/>
+</game>
+<game name="Heart of the Alien - Out of This World Parts I and II (USA) (RE)">
+  <category>Games</category>
+<description>Heart of the Alien - Out of This World Parts I and II (USA) (RE)</description>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE).cue" size="6683" crc="6df21d8c" md5="9e96595d417c0ea7e72bb3b0872b0a34" sha1="5fc104d96437f8897d118833040021631a1c819c"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 01).bin" size="12070464" crc="c524515e" md5="b96a4f8b4981a9ffabb2c3d9f381b33b" sha1="065f6c50d6751cd302da3135436a5556a1760cf2"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 02).bin" size="2817696" crc="6dd9c780" md5="85f0f15b1a8e992f98ce211a2f6cd20b" sha1="24f1e53eac9a0d23e3fa36f33dfceec2f9e1e6b5"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 03).bin" size="29665776" crc="c16cfb4c" md5="b69635b73bc58b993c8b6281ff40dd7c" sha1="074583648ba7e76f73e8c4be79ed3d04d971d07b"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 04).bin" size="8429568" crc="bf17a073" md5="0632ddf303f2526213c1092fe0a75d49" sha1="e7de667908cc7bae54964cd1806434c0e4c2cd72"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 05).bin" size="3283392" crc="07fbb6b8" md5="85f38e6305dbb9605b57d0b06140e239" sha1="69cd099781c025081c992857b53ef3a05418046e"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 06).bin" size="16729776" crc="c05a1cfd" md5="c1dab48c18e5f341f311cf08ae1c5197" sha1="551f330f70d652c59113fcdc0a0ecdbf93d148d0"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 07).bin" size="13100640" crc="8c994483" md5="ed5715ea47424b1bf1a02d3079a5c22b" sha1="b64d24fd200d22724d5bb73e95a5fdfff3456be9"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 08).bin" size="17150784" crc="4da896c3" md5="937a25fa4d4d0ecb8b04e4d52de6d641" sha1="81dfdd36e3516a5b95c5dcd59f443b5edb804fed"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 09).bin" size="2507232" crc="c7ceaea7" md5="0f14e36179c46b3099f8b3840d92d2fc" sha1="75149455723ad54d8a0ad82e66ae4ece20b8738d"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 10).bin" size="13984992" crc="62f74b0d" md5="45dfbb3148884d7b23170af9744df315" sha1="a9401de0f83b8dfca6f9aca9915f17888bb5fd1a"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 11).bin" size="12444432" crc="92c86d7a" md5="6606a67957a51ff8eba275ad2a1e00ed" sha1="a6da93ebcff71d987fd54d62ea31eac18a58fbe2"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 12).bin" size="8135568" crc="e5ded765" md5="6a5981d89a925f6902c7adbcb31f555a" sha1="59ec19ef0e22e1a2c90fe7da273e2d8b32396d2a"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 13).bin" size="47785584" crc="e755c6f0" md5="39834d6c72c0de10012d18f8b551a286" sha1="e4cbdbe3d906c0ab5a8dd29bac79d0a8def21241"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 14).bin" size="2413152" crc="fa04da4b" md5="248cca8f00cd38b4570400a3d718be08" sha1="387d75fa0030cbf367943997ab059e505da1b045"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 15).bin" size="27619536" crc="1adcff42" md5="8df958ff3e1f07fd3b62f8c95e85df34" sha1="c5ae050bab05a1f858bd04f54327ccd04db44f23"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 16).bin" size="19488672" crc="ef2ce9e4" md5="d1e9b7a03f7b99614e12f68d425264a4" sha1="f8c3e8b44ada1b00793839423ec75225ffe806cc"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 17).bin" size="12681984" crc="ab14be56" md5="41dcd1ae5e42edd9dbb6ff97a03f6c52" sha1="08f65b999288a21a449aae610589ef8b2a902af9"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 18).bin" size="12785472" crc="8318d0a0" md5="00397526c2f1ae1c8b9e510eba28a05f" sha1="31506ec376fd45276af7e4ab603d530396e26c22"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 19).bin" size="17973984" crc="6453ba52" md5="4b102a3919722460f16e294e75ef1e6a" sha1="75db3522306e1fe63efbd754086ff895c7ab25f5"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 20).bin" size="3351600" crc="cc9b0e22" md5="d784dd3b8caa38c6ed350969fc2afa44" sha1="cc7e02746dd0a5eef02768ed34e994df9456c421"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 21).bin" size="7860384" crc="9e62a395" md5="d9dcb20d39aed93fdf4139c958871b9e" sha1="19cd694ca243a72db4ae8ecdab4a8a12a2122215"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 22).bin" size="13886208" crc="dd35ec57" md5="fb73c5ddfc0c6005d9e4dae3712fca8b" sha1="fd6580249515b47548a6f204650b18672b9b2f48"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 23).bin" size="13542816" crc="68b81ee0" md5="80dbefd063a17b50db3aee7022f33452" sha1="0c7e79c672c8d25d1384b7da9b915ebf0b01ac31"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 24).bin" size="8784720" crc="783b140d" md5="27e66a03df2d80829f9679623c9e62ba" sha1="ae508c655d16a0b213b5f51dd83ffe51f48ae867"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 25).bin" size="27880608" crc="3dc1ca5f" md5="ebd95c6d57d5a0b1e852f288d71c6a4e" sha1="f96feb1f9c28aa7c59d0abff1412b6b3cf112998"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 26).bin" size="1604064" crc="03166eac" md5="66c76a12b7d77869b77eeeb67598443e" sha1="99cf6e5dc2d07d37dfac6e26d223deb9f7139e35"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 27).bin" size="1088976" crc="3da27b8a" md5="51ce6d4b1c96a4deeb90cf9545b8f1d9" sha1="f1df916c9d56b2038145dea7f8b8491861f6b002"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 28).bin" size="1088976" crc="89875d12" md5="45287dfcf60759d85e5e9463c13baed4" sha1="962227d671a061fd6f151793134e34e4a156e557"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 29).bin" size="1088976" crc="2e9a387f" md5="69f390ea8f6600311bbb3154d7c046fa" sha1="555b38351179ff44cb5860fc780abbcb32dc5731"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 30).bin" size="1192464" crc="d7ec3f1a" md5="b08494975c95ecf00024ebae849244c6" sha1="cb5b81f7ef5f25941498c997ca395630bbb39038"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 31).bin" size="1131312" crc="fc661246" md5="de9efdf09ac462c9148437bf50356307" sha1="949694cf263a408cbf2be10a09fb84bc5e14d553"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 32).bin" size="10386432" crc="e801496d" md5="d9e698ba5c2c839c3eb7c7a8823a37c8" sha1="9c4c843d979da44d42c87f4bb85d8366bb70fdcf"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 33).bin" size="7070112" crc="66f1e636" md5="f9b1de41960f04508fddcc0e42c18f59" sha1="f9a19853c68a13ccc1059427e4fd222ae83fbbd1"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 34).bin" size="11517744" crc="18183b42" md5="0a9792e592c431fe50e25a29059363ab" sha1="54239c4bb4f8fae4554fd1d7bd54895bc653e579"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 35).bin" size="12914832" crc="2c966b3d" md5="9ea0fad3e1a8ad620b860c7c731c5ee3" sha1="c03bf8459940f641c2ccc31f39714c430102c506"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 36).bin" size="8133216" crc="8baafaec" md5="7de8bdf5a15e515608c80a90af423b07" sha1="2dc0cc35d7cce2c1a499d650fddfecf7f6f50d2b"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 37).bin" size="6980736" crc="39fdfb4f" md5="0b6954092a4ad15d66407829c024fbe9" sha1="2071eb656c960caafdcb5a99cd324a50dae23bd5"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 38).bin" size="7495824" crc="34b6cb03" md5="8cacbbc36fee06867762ff7322b4c3c5" sha1="3191542dcf1a66a51708c2281634ee469844503e"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 39).bin" size="6503280" crc="bb65679b" md5="f200681319b74a5d473eb419f6af08c1" sha1="1f23ab06bb46e1f21b60d2949ec0732973fec809"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 40).bin" size="6230448" crc="9d75e8d0" md5="6f0a0d51a13a9103d77fe9da5f2caa03" sha1="d58207b7fecc01c3585a35b1985089d6e4900c3a"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 41).bin" size="4438224" crc="0be1dc4e" md5="f9b9e2a06ebfa9d046867b5f3fc27820" sha1="28260c4e5cd265946d310c81f13973f7e74edf9e"/>
+<rom name="Heart of the Alien - Out of This World Parts I and II (USA) (RE) (Track 42).bin" size="1088976" crc="8e5ef7ce" md5="aded7189cf2d7356a593ba9a1711ff0d" sha1="7c1b2fd4ec831be7e3c5e3d1f75b8e736503644a"/>
+</game>
+<game name="Joe Montana's NFL Football (USA)">
+  <category>Games</category>
+<description>Joe Montana's NFL Football (USA)</description>
+<rom name="Joe Montana's NFL Football (USA).cue" size="761" crc="981e4777" md5="2bc3110fe8d93c90d4b1d4b9e40e222e" sha1="d9d0a8b6315ffc543cf59b0449010f66d19b6be0"/>
+<rom name="Joe Montana's NFL Football (USA) (Track 1).bin" size="181819008" crc="989d8600" md5="e363615aa4a7c10c8fae378f15563ee3" sha1="24ecd405cd234a1ded9f9a39230d63fbfb566132"/>
+<rom name="Joe Montana's NFL Football (USA) (Track 2).bin" size="33849984" crc="289c546d" md5="8f8fec8b075fb20f67ade2d498857eb5" sha1="94fbc04542b6973d12617d338e7cb6d6b8e49dd9"/>
+<rom name="Joe Montana's NFL Football (USA) (Track 3).bin" size="31587360" crc="92d35133" md5="b5d06ae9dda7e80b3e85058f6152ba8d" sha1="72df1e8286f196cc76662df674cd6fd83140cddb"/>
+<rom name="Joe Montana's NFL Football (USA) (Track 4).bin" size="13655712" crc="e3d7c258" md5="8b18c6fd41b2e253ba380f1013d5d94a" sha1="7558bd5a2c8a9a75fa320ec0bf2dd92cf9f566ad"/>
+<rom name="Joe Montana's NFL Football (USA) (Track 5).bin" size="8782368" crc="68aac7c3" md5="64035b7188b90c81f49d4c68073bb247" sha1="69788e7af30d064ad7a1894b6db309c85329ce7c"/>
+<rom name="Joe Montana's NFL Football (USA) (Track 6).bin" size="12397392" crc="e3cf05b8" md5="511e560d59472940c5813cf0700c1279" sha1="897413ad5aad2dd0d59bf60d1f8211184550ee60"/>
+</game>
+<game name="Keio Flying Squadron (Europe)">
+  <category>Games</category>
+<description>Keio Flying Squadron (Europe)</description>
+<rom name="Keio Flying Squadron (Europe).cue" size="2700" crc="ca785c0b" md5="f36e10331f4f88f61d2fd20af06b3c06" sha1="dd62268165840db796e4257665e1d330e26f2aee"/>
+<rom name="Keio Flying Squadron (Europe) (Track 01).bin" size="77853552" crc="4f1e9d60" md5="2aaf1ae59d45077d7def2be4dfb6d03f" sha1="942acafa357bd967994a8dacc217be795f73ab7a"/>
+<rom name="Keio Flying Squadron (Europe) (Track 02).bin" size="1467648" crc="4d4e73a4" md5="f3e5988ca9e6296c883359f9e21e1812" sha1="ddb419a56710b8998bcd7ba3cd18a3e8536078f7"/>
+<rom name="Keio Flying Squadron (Europe) (Track 03).bin" size="46249728" crc="710f2c0d" md5="75334965c36244c70040ea45f0a9ee09" sha1="67da68c5d7b11907426e22b5dccc319fbe3310be"/>
+<rom name="Keio Flying Squadron (Europe) (Track 04).bin" size="48053712" crc="22a5012a" md5="9f50cbed463c7311023b3ba603b1ef9b" sha1="446cdf12d5caae80d63dcdf9e2a283d9b2c3af4b"/>
+<rom name="Keio Flying Squadron (Europe) (Track 05).bin" size="49062720" crc="2f72f0c3" md5="c33f13816b4129dfc51d4bc06ed23354" sha1="5536381d9a5319b4c49fcf14364ce078b8ebf111"/>
+<rom name="Keio Flying Squadron (Europe) (Track 06).bin" size="47987856" crc="f5cbd058" md5="71b9acffad694165f044ea6079397c13" sha1="0ccd2527a5acda22bccc3bb47f41bd4f16435ace"/>
+<rom name="Keio Flying Squadron (Europe) (Track 07).bin" size="48056064" crc="14790923" md5="81f0f82f1adda3be5c2b93c029850961" sha1="73581a633bd58ac87e4e71781118b758696321b6"/>
+<rom name="Keio Flying Squadron (Europe) (Track 08).bin" size="42702912" crc="3c295e59" md5="fe89dbeac0dc5883148faa08bd44369e" sha1="778811ad0d75c718ee54c2bac4dee4d902064507"/>
+<rom name="Keio Flying Squadron (Europe) (Track 09).bin" size="37201584" crc="1614eafc" md5="3ae3f0364470be736c284c0fb106f52e" sha1="e705aff55e2b74bde8b0c6de67fb4c2bc13ffaf2"/>
+<rom name="Keio Flying Squadron (Europe) (Track 10).bin" size="25944912" crc="22de740c" md5="4800d70188ff8ed71d820599cf80ad76" sha1="06589808c3d2b4a0bbce6f0af38d50b1a7c12617"/>
+<rom name="Keio Flying Squadron (Europe) (Track 11).bin" size="19977888" crc="a58bd03e" md5="aa1ad7785e9a34b6aadf74cffebb02fe" sha1="2f1e002bacec5b5a1d1e47469b399d41ee44d793"/>
+<rom name="Keio Flying Squadron (Europe) (Track 12).bin" size="1756944" crc="27ba3e82" md5="7a40b58cd96abacc5b34722844c75dd7" sha1="985a04c015df6bfaa3ff03e4d589c39458bfb0b7"/>
+<rom name="Keio Flying Squadron (Europe) (Track 13).bin" size="6851376" crc="c6b3dbda" md5="e812c9ed10c45f1acaa8ad5cc2e34494" sha1="7d07fbbea4eb1981005a57cd3069099d52596252"/>
+<rom name="Keio Flying Squadron (Europe) (Track 14).bin" size="14866992" crc="337f054f" md5="8a0c1b16483bf28b2e347bea1ca020b2" sha1="f60b1dfe364dbbaaa3f6488b5532ea4d466f1879"/>
+<rom name="Keio Flying Squadron (Europe) (Track 15).bin" size="7945056" crc="8e6fc1e9" md5="340491e4a35957c8f0ad4b16c7351837" sha1="2478065ee633906280c81ea2942357577f664138"/>
+<rom name="Keio Flying Squadron (Europe) (Track 16).bin" size="20636448" crc="6afedee6" md5="c7420bd47df99eae9a2f65fa760dd0e0" sha1="9969e3da73546034918b6d85b7b70c487f4d4db3"/>
+<rom name="Keio Flying Squadron (Europe) (Track 17).bin" size="1909824" crc="b2959cc1" md5="0abba4c4672495acd6fa378738c3134b" sha1="3d2d396220d9e74bc27ea349446d059a9dbfa593"/>
+<rom name="Keio Flying Squadron (Europe) (Track 18).bin" size="1994496" crc="e6e243d4" md5="32385057e6f506720d5c29e83efdd82d" sha1="59f3406dbde434edb74c04b420117bf1e5fc2348"/>
+<rom name="Keio Flying Squadron (Europe) (Track 19).bin" size="2105040" crc="de0b7b96" md5="9a2c5b0a158e246fa648df6c54711eef" sha1="db5aaee39fea752ac0e1cc936b3260611815f72c"/>
+<rom name="Keio Flying Squadron (Europe) (Track 20).bin" size="2053296" crc="ab0fadb4" md5="03845c1fc96489c3660ffa6eb40b8e7c" sha1="0c7480361b42abf1e905c1a3d755763f387dfd8b"/>
+<rom name="Keio Flying Squadron (Europe) (Track 21).bin" size="1980384" crc="c76d1a01" md5="197e36c7f21c4214d53fd43a6f865c4f" sha1="9dda26db2f97e7ad6b12b1e7a5e96c7eb8103132"/>
+<rom name="Keio Flying Squadron (Europe) (Track 22).bin" size="2100336" crc="6ab995ef" md5="8106bc577cc6c6b98ff08554aeb90a46" sha1="a3dac92d26ca0ab80249437fa4798e631cd0475c"/>
+<rom name="Keio Flying Squadron (Europe) (Track 23).bin" size="2029776" crc="1ade15b8" md5="47f9c87efc38e0cc33a4a148c646c7b3" sha1="3d2d1a331cc1c3887408bd43464dbcc1a2474a0b"/>
+<rom name="Keio Flying Squadron (Europe) (Track 24).bin" size="10943856" crc="97f9386e" md5="07a4daccf658b12d80b236a9dba0758c" sha1="2f1171780e06d92f7977d397263b40d8d53fcb7f"/>
+<rom name="Keio Flying Squadron (Europe) (Track 25).bin" size="26556432" crc="c25e5a1c" md5="074cd20f9a8bab12e38be8bc8716b752" sha1="0e44ee5ce866a22885a0a668c3adba4c6b8cd37d"/>
+<rom name="Keio Flying Squadron (Europe) (Track 26).bin" size="9974832" crc="124d3469" md5="5f2765b73bbbc90ba94ed2e1d10d27a6" sha1="575060fd23d85f47bb7ac4eec5a339182bccf7f4"/>
+</game>
+<game name="Links - The Challenge of Golf (USA) (RE)">
+  <category>Games</category>
+<description>Links - The Challenge of Golf (USA) (RE)</description>
+<rom name="Links - The Challenge of Golf (USA) (RE).cue" size="296" crc="36b5446d" md5="4a0bb285063738e82db91c539475238a" sha1="44486b68626f3645ee26991ff947252e93c73dbb"/>
+<rom name="Links - The Challenge of Golf (USA) (RE) (Track 1).bin" size="571453680" crc="2403119f" md5="e73613d8da342eab0661732d7b7c6d2a" sha1="8cf3b02634c46ed05b999322105893f714a1e309"/>
+<rom name="Links - The Challenge of Golf (USA) (RE) (Track 2).bin" size="1058400" crc="50313486" md5="c4882821b4b8938673f808a20f19bc87" sha1="a498209ea6cdb36e9bc4b0d46babf80fb5dbdda6"/>
+</game>
+<game name="Lunar - Eternal Blue (USA) (RE)">
+  <category>Games</category>
+<description>Lunar - Eternal Blue (USA) (RE)</description>
+<rom name="Lunar - Eternal Blue (USA) (RE).cue" size="380" crc="f16ca9f3" md5="66b7d2b8739e7a8bff0fd30ef93783c1" sha1="9949286a95910990427ddfd5073cdfef8ab9053f"/>
+<rom name="Lunar - Eternal Blue (USA) (RE) (Track 1).bin" size="469555632" crc="430af523" md5="951e0f07f310276a5151eba189ad53e8" sha1="5db76e9307269827ed64ec06838800a241cd7c79"/>
+<rom name="Lunar - Eternal Blue (USA) (RE) (Track 2).bin" size="51120720" crc="b8825042" md5="62b9fce031f086a610836853ce89b6aa" sha1="3e3f7090254d7645e577e009fda460cb17110c9f"/>
+<rom name="Lunar - Eternal Blue (USA) (RE) (Track 3).bin" size="63812112" crc="0a0f06d3" md5="6ccda3bfadc9d0aafb3d0d3b3d9d261e" sha1="d952940d6f5c7556ddd54e366c63d8c6637d76e9"/>
+</game>
+<game name="Lunar - The Silver Star (USA) (RE)">
+  <category>Games</category>
+<description>Lunar - The Silver Star (USA) (RE)</description>
+<rom name="Lunar - The Silver Star (USA) (RE).cue" size="6713" crc="13944ed8" md5="f19d754d46cc7ab027eca06cec16ebe4" sha1="7c276859aa1415eeb06532bba2784539c80de185"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 01).bin" size="12752544" crc="079e5831" md5="ec85bcde9653b540ac7c24b797058b10" sha1="cc24840fc1009cf513465280dc254ad78bbf23ea"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 02).bin" size="2486064" crc="8a960eec" md5="7d22173eb55f86c86e10e91fa30ea442" sha1="947fbc577458b01eec1392e47ec544be5df2a569"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 03).bin" size="18656064" crc="94d9ee5e" md5="4cfb6a11537d4bbd8df216a9e61e5e0a" sha1="eb1f27b16db22e05f6b027c6c98152e2c16fba1a"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 04).bin" size="12703152" crc="66dcc109" md5="7b3a3dac8fe92ac55790101a3f985d66" sha1="3a4dcb1572d37a0f72ac86b6bc86dce18cb52f9e"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 05).bin" size="15005760" crc="077201a1" md5="02dca047fbb8a88dfcbad8fdfd587261" sha1="d59bf6f9affdcb4fbb05c3fb57cefefb40c59d4d"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 06).bin" size="15504384" crc="80466f36" md5="8ffb180bc87f306f748d044b851f420f" sha1="956dddd79044381fb9e7e19e8587465b9c5a852a"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 07).bin" size="13787424" crc="b3b998b4" md5="a588069ea8b441edef3ba12fb8da8601" sha1="4b7d69828ceb1f5c76a0c0a5a0e90c63b9fdd72b"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 08).bin" size="13963824" crc="7f6f1718" md5="e398ae2f760ff055f7c85ff980fb3f71" sha1="c7b883de2919448968aeebde34c56e3c5d1065f5"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 09).bin" size="12884256" crc="ba72586b" md5="dd9ee0af2626523bad8e992d1b7544ca" sha1="975a2f6d00f65394ed3195ab77f8e92674f9100d"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 10).bin" size="13806240" crc="b4f89f1a" md5="e8244f40a814a959735b1be6e8f61a3d" sha1="6d58cb56fce35b1eb9502017aade95a0e4d81d0e"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 11).bin" size="15694896" crc="cba7889d" md5="4520093f133bad8c4bc03bd34a5d5ae5" sha1="195317df70b5ec3b143221c22d5dc174fe26600f"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 12).bin" size="15553776" crc="60b47af5" md5="0360cbe3c459daa73d7678fc607f5ab7" sha1="c71ffcbbd103993b351a5122f4cbb0956f9c819c"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 13).bin" size="15121008" crc="fbd03c58" md5="f7590c038da9c30a4b35d8e448ae262a" sha1="59288be8644f8e809f46a5d696106c1ce4ad6ead"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 14).bin" size="11750592" crc="0f5fb8ec" md5="09b73783cf3b34c6e3bd63839c7fc249" sha1="5f396737111fc32f1c012cb60c9f7b946b83ccae"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 15).bin" size="11705904" crc="6c969202" md5="4d3188bdc8372cafe18ef882162136f8" sha1="2a963dd6c0f00703aa0753456c84daf3588e1f06"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 16).bin" size="13305264" crc="7ca8e150" md5="129853ee407daf4c701c7e1591992164" sha1="c8ae8acda033c25bf906049c8742840f56f1a987"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 17).bin" size="8749440" crc="16ce832c" md5="bb1af4a0ac9de6ed2e0794168199e92e" sha1="e3b2822889dfbe58eb32f4753a1b74c6c14ef5c9"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 18).bin" size="13857984" crc="be231f58" md5="acad793632fb2475cc63dcc6807aa304" sha1="11eaa7cbd9d1fdf8824be37cd8546bf94617ab21"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 19).bin" size="7385280" crc="774f90dd" md5="60c83469d19bee3c245172a43db08f36" sha1="b55e0358d3f372c0dafaa866f6c0226fe8832bce"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 20).bin" size="7674576" crc="ecc8ffec" md5="c54e4b3d025919f54b3662f9d1bbd6a5" sha1="03a61ea0f4718d8b1abee245ec214c04f12fb86a"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 21).bin" size="14937552" crc="ab1d4882" md5="55e7825fb2a4c224a09f9ce7b48c6dca" sha1="7a4a0152e295bda8d91cc2c98d9f6cf9e4e29e68"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 22).bin" size="12199824" crc="7a8b6621" md5="10a17fc68211da3b77a4348483fcb4bb" sha1="c111a8bae5572a0fe7840c9cc3c3629f045f10ad"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 23).bin" size="7641648" crc="e6cfcd86" md5="7328971a772e894f5cbaa083d3143133" sha1="5b006ad84622016377f63103bae51c574a267c8c"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 24).bin" size="3443328" crc="6e6c1e11" md5="930915c63823bd8c6b2192fa8a74ee27" sha1="bb9a0de0f4e167dc40ed4af9f734077ae17f99df"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 25).bin" size="3753792" crc="c94a5e5e" md5="76d0d796e85b5f90c9169834f1a30f56" sha1="0766d3c94f415f0222932ad13222d21f59bbb90e"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 26).bin" size="4116000" crc="1cbeffb5" md5="768807b08bdfd2e21960a8d9f0c9f3cc" sha1="e2a9632a8c9860de8350818b8cf21a63b09a922c"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 27).bin" size="4118352" crc="af37dd13" md5="840b8205bebacd2ef8da12f6b1716264" sha1="231515d1dd47337f337f8c57c61babdbe54e36b7"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 28).bin" size="15520848" crc="7e78a1a4" md5="31ab5b631576f33020f805e86bdc97fa" sha1="f6b57c0ff80671fdbc2a97c7152634d72e9b820c"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 29).bin" size="10767456" crc="77ab1f3d" md5="7d1ebccc0a0690ae1f8df6b28952bfbc" sha1="4dd6c96c288871c5256420864515ceb0205f562d"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 30).bin" size="12242160" crc="4534ab25" md5="6e46f0a026715da08e2ae05dbbeee041" sha1="92d57bc9572a4a6f16f1c36b2704e612c552577f"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 31).bin" size="3645600" crc="e4ed83dd" md5="c4d614c70fa5b753061045a2a6027eb8" sha1="0d2a79fe50a65bfdf88b9681299c5fb96d333cf5"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 32).bin" size="4297104" crc="9863aace" md5="6dc21b1fea3db6eaab4e6a143e8128ee" sha1="e4829dee6a562db2f3a25f8ae7d75c0ffcef094e"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 33).bin" size="5475456" crc="9379a07b" md5="a80fc6abd54cbca35ffc8917fc8ea053" sha1="e50fd82c4515bd0fe95128f6db2c32e060c10e4d"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 34).bin" size="3165792" crc="bbc59fd9" md5="3107313db5d0cce06a72e81989c15381" sha1="633ebe397b2f96dcb935a1765690c80c343ba648"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 35).bin" size="3690288" crc="ef4a5a61" md5="0d242b74387572194140011e060b02a8" sha1="bcbcbbc3ed122cd7915dcb2d7c45f33e20167a9a"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 36).bin" size="3793776" crc="98c86123" md5="99e2e37791aad53489d2f31e0efab54a" sha1="083dad8d572f0fa75a5ffd0cfed9a5d606c9ddd0"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 37).bin" size="16932048" crc="1c401b51" md5="f75a0ba83e94b73bd7ea798ff9e0633a" sha1="8ff0668951cd7506da6cb2bdd73dc6601a1c16a9"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 38).bin" size="11590656" crc="2106cb82" md5="689027954059fb1493e838ef9c3ed9aa" sha1="35b3525c3a6fda4f7c4c4f0c3472b7240c88b722"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 39).bin" size="3894912" crc="df7364f4" md5="eff8b1002bbb9d4f740bc22da3b91e10" sha1="db88cd1cb369d317ab3275c5678162f14f3dc254"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 40).bin" size="5995248" crc="ba271f9e" md5="7ed4cab7f5d1e9caef829a79b1878710" sha1="3ec2c541e1a927bb538cf34bb791b1460129e2ec"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 41).bin" size="4410000" crc="62eb66cd" md5="3c76e7fb9a4aa2174fdb1f9d2b55c43f" sha1="6776e1ef60e42923fa1b8c505435beec96ba96eb"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 42).bin" size="9175152" crc="e4c853db" md5="717fa03b9f9236d76fa0f0d369f2054a" sha1="589e70efd9cdb958a7c568cee1f56d2672b5fc6e"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 43).bin" size="4351200" crc="001958cf" md5="b7ed8971563764e8ca07340df209f541" sha1="297e9734bbdbdadc4116cea1e334e7ac08c01036"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 44).bin" size="5642448" crc="b1c44451" md5="449f8ca3ae5baee2582590d0a5f66597" sha1="035eb130dcad2c0687f5dce3c6c5b55e5fa6e019"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 45).bin" size="4769856" crc="821d3bed" md5="8255023510b269c5074df0aea9e6bd57" sha1="18ea0b6506c6b72c6fd07e3785ae52bfc3e31b7c"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 46).bin" size="4054848" crc="bd129685" md5="ab2a0b54c5bc266c0eb227bc370038d2" sha1="7b70238108dd84d8a5607174f7878960f3fe0870"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 47).bin" size="11498928" crc="72fed0a5" md5="3f853da953e3e3000cf7219e922d3a66" sha1="327ac7350a3e05a3f70194bd2d42507e9ec48f8c"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 48).bin" size="33866448" crc="2722634e" md5="93682303fd88a76eb1d8a4be58f0618d" sha1="86aedb464038bbd81fb30c2c68cf1fceecae4d2d"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 49).bin" size="3142272" crc="0fe45e95" md5="3edd905bf01445874d86aa44a2a61fb3" sha1="a14cde61ab8ee33e1305dddf18b5e637da20bb22"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 50).bin" size="5014464" crc="3e303bca" md5="39aaab9b9839837b09104f5ad91961f8" sha1="e197dfc8a289c853d35348a2593d6dccb2bf276c"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 51).bin" size="1611120" crc="18661dfb" md5="8c7ac8d79766ae5aa158ecf1d1be2192" sha1="066e08880688b804643b9e8df2b55da8ae04939d"/>
+<rom name="Lunar - The Silver Star (USA) (RE) (Track 52).bin" size="7448784" crc="aa38ff17" md5="4873fc81f90495938411a35ad7044ff4" sha1="8a9fb6c99fd099bb9694193775131c4776f4fa6a"/>
+</game>
+<game name="Mad Dog McCree (USA)">
+  <category>Games</category>
+<description>Mad Dog McCree (USA)</description>
+<rom name="Mad Dog McCree (USA).cue" size="803" crc="4251b074" md5="e51a141b968be4d4cd6e7a4f19142826" sha1="c7c3b770b43b05c28758165a47514bef1daf0da0"/>
+<rom name="Mad Dog McCree (USA) (Track 1).bin" size="242677008" crc="662784f2" md5="5cd92d667e9d71251441950f505c1414" sha1="add89b1c071c9ba60d75f1a864e54b7da542fb81"/>
+<rom name="Mad Dog McCree (USA) (Track 2).bin" size="2227344" crc="2e31f14c" md5="a49444c570f9695bea3164d9c1005298" sha1="edfec8a88ae4dee5dc160cd6dfa3a00918f6800a"/>
+<rom name="Mad Dog McCree (USA) (Track 3).bin" size="2222640" crc="0724c5cf" md5="a7ce5874d9c25046b8c4f56b5c05f87d" sha1="7fc59712a9792872c3dfccba9523936ce0b55007"/>
+<rom name="Mad Dog McCree (USA) (Track 4).bin" size="2227344" crc="070d0d84" md5="961e1f7a2272a917c5a9aeb57060da14" sha1="1277b31e6fae022e382ffa946a4e74179d71ad57"/>
+<rom name="Mad Dog McCree (USA) (Track 5).bin" size="2232048" crc="9e6faf42" md5="0f86049e3cf0267b67b25880bb14f621" sha1="9d5b13db643dd8cedb31b789559779fda0029491"/>
+<rom name="Mad Dog McCree (USA) (Track 6).bin" size="2227344" crc="2e31f14c" md5="a49444c570f9695bea3164d9c1005298" sha1="edfec8a88ae4dee5dc160cd6dfa3a00918f6800a"/>
+<rom name="Mad Dog McCree (USA) (Track 7).bin" size="2229696" crc="f1bb6acc" md5="7503c07c0b874cfd25708623b21f8a15" sha1="f8bb079a3acd4860f2325e5e14525c6be7667fb9"/>
+</game>
+<game name="MegaRace (USA)">
+  <category>Games</category>
+<description>MegaRace (USA)</description>
+<rom name="MegaRace (USA).cue" size="198" crc="b8507e8b" md5="c390d3ebc2871942d5a67078cc68e6dd" sha1="d7b8704a20f321b25812fc2d86d0b5e676ff98a6"/>
+<rom name="MegaRace (USA) (Track 1).bin" size="588409248" crc="26f25539" md5="1bb2eb65134882a07111f9f6005a53c8" sha1="39c197912ab8835c3d725d54a412f3642326e300"/>
+<rom name="MegaRace (USA) (Track 2).bin" size="2227344" crc="a43dada5" md5="ce68aa195b4d6c179a6c505441831252" sha1="598631fc25275d0bba2a37898421e0e67b85b46a"/>
+</game>
+<game name="Mickey Mania (Europe)">
+  <category>Games</category>
+<description>Mickey Mania (Europe)</description>
+<rom name="Mickey Mania (Europe).cue" size="3253" crc="8c6b5101" md5="0ae9fd03425b4f90d7dc0e2c3ede16b9" sha1="b343a4d72c8641e2ca7a073c42fedc4d394b41ea"/>
+<rom name="Mickey Mania (Europe) (Track 01).bin" size="15676080" crc="024d38a9" md5="60d7c286360420498de4d4fc7fccdfe2" sha1="116015aec553967475538c71b4425feef9636983"/>
+<rom name="Mickey Mania (Europe) (Track 02).bin" size="22595664" crc="551213d7" md5="af8ca7603a9a70c2d9e431ff8fff5059" sha1="e710e38a1efc8f6e2a02688166e9723e0121de8f"/>
+<rom name="Mickey Mania (Europe) (Track 03).bin" size="22405152" crc="358954a4" md5="a9c801d5848e8fca86d57e31fdcd05a8" sha1="8b3720cfca16e906e552e8abbc2b93ff7a5fc9ef"/>
+<rom name="Mickey Mania (Europe) (Track 04).bin" size="21741888" crc="3b692a2f" md5="23f67beacc36fb19781dc2a8e317fe58" sha1="3f769c7f116caa19532f39c018895a95be381149"/>
+<rom name="Mickey Mania (Europe) (Track 05).bin" size="22835568" crc="c2339eb3" md5="47ab4f50f33eeadc447f6eb89fffbd75" sha1="dc5147a56565dab521562bd100530232e61ef3a2"/>
+<rom name="Mickey Mania (Europe) (Track 06).bin" size="21558432" crc="16617662" md5="7b8f3ff097d62d5044584ffb749fa9a7" sha1="f1763cd7aa90a130efc275115edbce23ab46b847"/>
+<rom name="Mickey Mania (Europe) (Track 07).bin" size="15473808" crc="2419f084" md5="49bf16aee8bef2628c4bd3159b2b768a" sha1="ec12cf1cb2d87325017c50217bfc4dd5ee7a28a3"/>
+<rom name="Mickey Mania (Europe) (Track 08).bin" size="22943760" crc="241b56f3" md5="68bef85a7d90ef9649cd5fd77143f965" sha1="6fdfdcaed03b634a2ba3649b0d070f239bd8937e"/>
+<rom name="Mickey Mania (Europe) (Track 09).bin" size="22884960" crc="d868d818" md5="e5b97ec5c27fb3ba7fe2b5be7b97176e" sha1="3562a1c5b6819e4bfb7da8907d9662024de952d7"/>
+<rom name="Mickey Mania (Europe) (Track 10).bin" size="22292256" crc="66204ffe" md5="6e39aeb2497dfb4563a1249f6e4b81b8" sha1="19276c3b81b17f7af22828b356343d3453b81402"/>
+<rom name="Mickey Mania (Europe) (Track 11).bin" size="22769712" crc="258a0ac4" md5="10766490e6789197e3b5b489acbc7bdf" sha1="ac9abc5e5707d43b73a22c2b8001ba1856769327"/>
+<rom name="Mickey Mania (Europe) (Track 12).bin" size="22974336" crc="a86b8263" md5="220e5aabc21bef4b50da406c4a6ad52d" sha1="d855c780791b11d536725dc9e974ae8bd651c451"/>
+<rom name="Mickey Mania (Europe) (Track 13).bin" size="22567440" crc="f67dfbc1" md5="4e30dddd5a0b01a38c841ffa2d335cb8" sha1="a606aef222ceb2920d13e146ece9cf679fcb335d"/>
+<rom name="Mickey Mania (Europe) (Track 14).bin" size="26471760" crc="994e05ac" md5="259709d9de9deeb674cdb4f810bf87ca" sha1="4a9ef66a1317bf244d4ca71c40e30a64b63b7bd5"/>
+<rom name="Mickey Mania (Europe) (Track 15).bin" size="32478768" crc="db190862" md5="d6b20d0738f3767afd102f655d715e41" sha1="ce395626d90bd8df05d25fdebe5345bc74d6e955"/>
+<rom name="Mickey Mania (Europe) (Track 16).bin" size="32217696" crc="ec6efe12" md5="f80a165d566b33b3d53586382cf0fc56" sha1="39857a6b413f81f9872146610262b973426c14a2"/>
+<rom name="Mickey Mania (Europe) (Track 17).bin" size="22075872" crc="04b657b8" md5="d254dbcec08a23151370ced5ac8500fc" sha1="360d20a11a7a7ad37c41908177528cc48b799998"/>
+<rom name="Mickey Mania (Europe) (Track 18).bin" size="21892416" crc="4e65e7f9" md5="70aab6bd01818e5b9c8b6651dc431f17" sha1="640d1692f973191cbb5cd1246f03245b621e73c6"/>
+<rom name="Mickey Mania (Europe) (Track 19).bin" size="21894768" crc="5ced4803" md5="2bb2524996c3ef003191c84caad1b6e1" sha1="922b9b573cdd68ff9e7643bdc7d9971034d000cf"/>
+<rom name="Mickey Mania (Europe) (Track 20).bin" size="22442784" crc="614d5df0" md5="d27abcd92e4e877a5dec7cba33b3fba7" sha1="5ee4950bcf031aa64c189dec723b0f0ab802dcbb"/>
+<rom name="Mickey Mania (Europe) (Track 21).bin" size="2657760" crc="ac61d79a" md5="3ac6b914dee92eebc3f615713930791c" sha1="ace4cd847e15ab88a8a22b82e628a67509abb44b"/>
+<rom name="Mickey Mania (Europe) (Track 22).bin" size="5734176" crc="3fcfb9b5" md5="56ff0355bc27a415656ce8eb613b9c04" sha1="5eee40b3b1bad99a1ab85809a4a4db43acf2da21"/>
+<rom name="Mickey Mania (Europe) (Track 23).bin" size="22080576" crc="a05888b8" md5="46578ff27481e2926fed2e2e06099c75" sha1="bd4ccbf8df269159cc938c6df99683c03aad96e3"/>
+<rom name="Mickey Mania (Europe) (Track 24).bin" size="3906672" crc="89cd22ae" md5="5bc4978c4af2a554004dd36a55405842" sha1="5c36f4dccecdad14baff14c3a069f1b5fb4e0b42"/>
+<rom name="Mickey Mania (Europe) (Track 25).bin" size="2210880" crc="0a180657" md5="130f4da891f5de29adf823678a70ac98" sha1="05d757a5be377dfa839a6247b6c22c616f15be17"/>
+<rom name="Mickey Mania (Europe) (Track 26).bin" size="1811040" crc="090523c0" md5="a2fcda3f32758223d9fbb8bb4c301458" sha1="57010a31d96526f2a61963f11fe041f1353a0619"/>
+<rom name="Mickey Mania (Europe) (Track 27).bin" size="2514288" crc="0bf78fcf" md5="710b894d89677d56776649150a99906e" sha1="8a9d94acf2bcd03fa96877e7f9845fa1ad56453a"/>
+<rom name="Mickey Mania (Europe) (Track 28).bin" size="1764000" crc="e7887563" md5="3078714f29b09408fbf800f7a2ce03d0" sha1="923937048d6b3fe908cbe4115a099a3b7a195d0b"/>
+</game>
+<game name="Mortal Kombat (Europe)">
+  <category>Games</category>
+<description>Mortal Kombat (Europe)</description>
+<rom name="Mortal Kombat (Europe).cue" size="2025" crc="2268a5b4" md5="b7e0fa81687965ea8d09cbb66b785205" sha1="6c16a3182ad0479fa87d42c0272ec09fc913ec09"/>
+<rom name="Mortal Kombat (Europe) (Track 01).bin" size="37516752" crc="509c1303" md5="9727c3711393f0919208814332c3fc8a" sha1="ac8f5611db7d765102131e647896d46856ce7be0"/>
+<rom name="Mortal Kombat (Europe) (Track 02).bin" size="7561680" crc="d8aaadbc" md5="0ba73d588ecc7bc1d3b7d1b9a47a8b13" sha1="3e3cc8a2292351cb0b56478475c1349582590f13"/>
+<rom name="Mortal Kombat (Europe) (Track 03).bin" size="13688640" crc="1403eb1f" md5="6bef45ab5e21b5fad38138d5eb7ada9c" sha1="d45793dfadafd1a120b1dd53428590fe8e6841e2"/>
+<rom name="Mortal Kombat (Europe) (Track 04).bin" size="11762352" crc="92eecd81" md5="cdd26f558e2616833c0fced4b8bbd45b" sha1="fc5ba6d0083bb992b15205e36b090673f51cd177"/>
+<rom name="Mortal Kombat (Europe) (Track 05).bin" size="7328832" crc="ec34c051" md5="59091d035fe2b01f1271aa696a8592db" sha1="54f0669318a1b5cf97ee809ce1543bcff0b9c346"/>
+<rom name="Mortal Kombat (Europe) (Track 06).bin" size="22329888" crc="ae443d9a" md5="ba2446f6e8e7fef7e633e16729ed96c2" sha1="c7d63e1f02787a78820d095b2e211e7d6d8a5fda"/>
+<rom name="Mortal Kombat (Europe) (Track 07).bin" size="18870096" crc="d1711b23" md5="8476304b388c94716097fbd79577e03d" sha1="a76d5bea6f63a9429535df87bc9e3aa7d4aaab65"/>
+<rom name="Mortal Kombat (Europe) (Track 08).bin" size="10816848" crc="afe8e254" md5="d7d95ec16c6c7271c8bf74d83b0e2ecf" sha1="0989fdc90095eec0bded32aa9e5e7a82831046f8"/>
+<rom name="Mortal Kombat (Europe) (Track 09).bin" size="1479408" crc="3691ac17" md5="61b6b84d0c78abb81359f7f19dcf4bad" sha1="e7cf611246c36f405078a57b97b0272a709fad52"/>
+<rom name="Mortal Kombat (Europe) (Track 10).bin" size="1978032" crc="9d1144b6" md5="78125917712231bd578aa443a5df9437" sha1="7878f28de3a3040ce90eeca3d82d7d8d0f3b1790"/>
+<rom name="Mortal Kombat (Europe) (Track 11).bin" size="2883552" crc="8ebb1698" md5="707364f1acd60a05876f330dfc285eab" sha1="80d6a896a81fa35d3933378a1b6425959df38033"/>
+<rom name="Mortal Kombat (Europe) (Track 12).bin" size="1561728" crc="88dfb1ed" md5="311e7a29246a7e664b6782597c43705c" sha1="66ed6f71fad2d2158506fe2237d5b614a6170b5f"/>
+<rom name="Mortal Kombat (Europe) (Track 13).bin" size="2434320" crc="127bc9a7" md5="4ebc0bb62d10789aa7c6267d75a80654" sha1="1335624f87d4188860b5c7cd871b7553f2db2794"/>
+<rom name="Mortal Kombat (Europe) (Track 14).bin" size="2671872" crc="7aa5b101" md5="040899d1fb65dd387cdfe30c6acecac6" sha1="f9222acf721db94369ba7e77439080ed94e96c0c"/>
+<rom name="Mortal Kombat (Europe) (Track 15).bin" size="3854928" crc="f4f42da5" md5="f8d44450665024a7ce9158e7e035705f" sha1="e7df7a5f233018cb84debb378fa57ec808cae41f"/>
+<rom name="Mortal Kombat (Europe) (Track 16).bin" size="14798784" crc="2ba30cd6" md5="21f9ee91720e8c5c7b5f7418af1258b9" sha1="14419f1bbfcefe09e6d6ba5246dfd5bacab3cc2b"/>
+<rom name="Mortal Kombat (Europe) (Track 17).bin" size="36778224" crc="f13faea6" md5="eff37a1b7c32f607d3e3e653df881e65" sha1="3eb4019be34c8fe83b253e35b085179b565f003a"/>
+<rom name="Mortal Kombat (Europe) (Track 18).bin" size="42747600" crc="ee7e3dda" md5="9bc72502b57ac8a4ab1e6212a4682d94" sha1="ab32d5e39e372dff00a5cd7516ba6dc89d7a1081"/>
+<rom name="Mortal Kombat (Europe) (Track 19).bin" size="52637760" crc="ae1e8f1e" md5="c9ee0e10a0d766ff9717492e90e4bfa6" sha1="ec1007e89a162307b126d369ff3ff2b4d53422d1"/>
+<rom name="Mortal Kombat (Europe) (Track 20).bin" size="40273296" crc="c6190091" md5="4773a8e4315c21771c0769e12a28fca4" sha1="af5b838ed4d9428ace383dd49cd1da2cf61bfb57"/>
+<rom name="Mortal Kombat (Europe) (Track 21).bin" size="51974496" crc="9600a7e1" md5="0ffc708f36425112aebfaff6f1f85c60" sha1="8a139704f69d87b2fc8209c2e609604045df8a5c"/>
+</game>
+<game name="NBA Jam (Europe)">
+  <category>Games</category>
+<description>NBA Jam (Europe)</description>
+<rom name="NBA Jam (Europe).cue" size="995" crc="0df5164b" md5="e64de5e7a4a5872bd793b9d28052cbab" sha1="71a33a64320625d7b5a09967bac185212775fe16"/>
+<rom name="NBA Jam (Europe) (Track 1).bin" size="51240672" crc="8478b943" md5="62eb3a443e984d2e571d9ad2803ba42a" sha1="bf489eee89b56e42ff732ffe87475fc30b671981"/>
+<rom name="NBA Jam (Europe) (Track 2).bin" size="52350816" crc="cef08a42" md5="2730d74d8be28492fe66e952094b5c51" sha1="6a2bf1a5da936166617b640004bcc11f9c2a0faa"/>
+<rom name="NBA Jam (Europe) (Track 3).bin" size="47197584" crc="a13beb45" md5="38600f517691961331d61d472f91a104" sha1="67f9412f81ae70989f4a369fc8308c65be873d02"/>
+<rom name="NBA Jam (Europe) (Track 4).bin" size="45998064" crc="a6e01436" md5="c2d6a440b46e5860bb4d9d9a48a8e2f5" sha1="e979eb73fdc2f0ea9191c2cc7fda8c5534d4b316"/>
+<rom name="NBA Jam (Europe) (Track 5).bin" size="56036400" crc="bc934dd4" md5="4072e223b941d3b71c10d7725bb9d606" sha1="b174156dbcb730c29f4d16da5971bd393a35a38c"/>
+<rom name="NBA Jam (Europe) (Track 6).bin" size="54811008" crc="231ecc1d" md5="efff0b485c759505aeb23721300c7cef" sha1="2fc55a009e37d1d90d9242a7151c7151702b9841"/>
+<rom name="NBA Jam (Europe) (Track 7).bin" size="60679248" crc="a6a2381b" md5="5b5ad26b01745af6863d3d86a5b3cf1f" sha1="154a3c3c8acaea52a54d93b388c67c56749ed233"/>
+<rom name="NBA Jam (Europe) (Track 8).bin" size="59430336" crc="b5cab536" md5="fa12719a354d9e5db2694550292e4441" sha1="b1952cf4e99002291ab45213ffafd1e90c69c89e"/>
+<rom name="NBA Jam (Europe) (Track 9).bin" size="1905120" crc="dd9d2b17" md5="eafe8f9357c01b48e2a2be767a8fc5e9" sha1="68bced55965ab9283e7703ca061d851f01b1c1d8"/>
+</game>
+<game name="Night Trap (Europe) (Disc 1) (Mega-CD 32X)">
+  <category>Games</category>
+<description>Night Trap (Europe) (Disc 1) (Mega-CD 32X)</description>
+<rom name="Night Trap (Europe) (Disc 1) (Mega-CD 32X).cue" size="277" crc="21f18f2b" md5="b20b72a59c65047bcd52000957ec928d" sha1="d6496fb42e0f49637b8c51c59e6e23e918413bd0"/>
+<rom name="Night Trap (Europe) (Disc 1) (Mega-CD 32X) (Track 1).bin" size="617058960" crc="76f79695" md5="6bb6e84a73883eae42e23a44d3d9d2b5" sha1="67f8a77b9124f0649ece9e2a3a8cbf22872b414d"/>
+<rom name="Night Trap (Europe) (Disc 1) (Mega-CD 32X) (Track 2).bin" size="2554272" crc="03b077b4" md5="4bc6c1b312e16833c038786ca3c9b871" sha1="50c50d4c69ae4fa8fbb4e6c3addbfc20aefd17eb"/>
+</game>
+<game name="Night Trap (Europe) (Disc 2) (Mega-CD 32X)">
+  <category>Games</category>
+<description>Night Trap (Europe) (Disc 2) (Mega-CD 32X)</description>
+<rom name="Night Trap (Europe) (Disc 2) (Mega-CD 32X).cue" size="277" crc="bacd84a0" md5="afa2f3fe5905d72904aeb284138d0f48" sha1="3406ad829d9d94a24ace401ba4f579a381116e6c"/>
+<rom name="Night Trap (Europe) (Disc 2) (Mega-CD 32X) (Track 1).bin" size="515276160" crc="9b9c4e2e" md5="ebf3e1a9feb0ae23a2aad841d6e15db7" sha1="0cfc27a8d1270fba08b27b22ddc82e5fe2902c6d"/>
+<rom name="Night Trap (Europe) (Disc 2) (Mega-CD 32X) (Track 2).bin" size="2554272" crc="fd929336" md5="067e0c8c9c32ba3e4b060bb89bd3c82a" sha1="a72bc10cc2f14993a310d543fdce7ae3b17fd763"/>
+</game>
+<game name="Pier Solar and the Great Architects Enhanced Soundtrack Disc (USA)">
+  <category>Games</category>
+<description>Pier Solar and the Great Architects Enhanced Soundtrack Disc (USA)</description>
+<rom name="Pier Solar and the Great Architects Enhanced Soundtrack Disc (USA).cue" size="622" crc="6d317fa8" md5="f0e03431664704058746f511e21c0958" sha1="ef30161fe9b6737346530bd74644996b3dc58041"/>
+<rom name="Pier Solar and the Great Architects Enhanced Soundtrack Disc (USA) (Track 1).bin" size="511769328" crc="59200094" md5="5861f8067b1a3b8f1f6567e844a58dd3" sha1="649ca22c941afb50613167a942fd82b0c0b93384"/>
+<rom name="Pier Solar and the Great Architects Enhanced Soundtrack Disc (USA) (Track 2).bin" size="14533008" crc="f4efb8ba" md5="504e6fec737c03b6a79192a742ee128b" sha1="33d55d40a6572b03189bc0b3a739ccdfc20db7e5"/>
+<rom name="Pier Solar and the Great Architects Enhanced Soundtrack Disc (USA) (Track 3).bin" size="46536672" crc="a7bac29f" md5="c16859746dfef981abcc7fd45e405e49" sha1="88e601aca24d16909223672ab57fef5a8680e93b"/>
+<rom name="Pier Solar and the Great Architects Enhanced Soundtrack Disc (USA) (Track 4).bin" size="21944160" crc="6b500b49" md5="25f2f79048fd60f72aa516995764a1e3" sha1="18d561ca6e0e890fbd88d415a8b2126efb0273b1"/>
+</game>
+<game name="Popful Mail (USA) (RE)">
+  <category>Games</category>
+<description>Popful Mail (USA) (RE)</description>
+<rom name="Popful Mail (USA) (RE).cue" size="469" crc="60a6e916" md5="e179c37ed7d94e51230decc1245c34b1" sha1="411e5add7b607187b978a1e3f29442ffbb23710d"/>
+<rom name="Popful Mail (USA) (RE) (Track 1).bin" size="421130304" crc="f17b5750" md5="1d583f4bbcdfc73f5686a6824c782494" sha1="00c67d62649bdc936da87e3218f7fd7c081df549"/>
+<rom name="Popful Mail (USA) (RE) (Track 2).bin" size="25119360" crc="6329c847" md5="51b6f6ad0f9437345dca11bbaec9dd47" sha1="ca3c7af222e657016963d1e66a8136cae9c20f56"/>
+<rom name="Popful Mail (USA) (RE) (Track 3).bin" size="25688544" crc="dcec1f28" md5="6af4033d4796461712f4ca26cf050dd8" sha1="2c4988a9463ca0ef918211fca9d0ce3271c5205d"/>
+<rom name="Popful Mail (USA) (RE) (Track 4).bin" size="41973792" crc="85dc3246" md5="910cee4712abbddd9086806587328438" sha1="2a3f51f12d18d4d1336c4db152deedd2db12e63f"/>
+</game>
+<game name="Prince of Persia (Europe)">
+  <category>Games</category>
+<description>Prince of Persia (Europe)</description>
+<rom name="Prince of Persia (Europe).cue" size="3005" crc="c864716a" md5="cc7828a8e9eb5d915eebc8783d69c1a9" sha1="0977cc818a226ba3916867612667cab6c62213ec"/>
+<rom name="Prince of Persia (Europe) (Track 01).bin" size="2641296" crc="ad500b93" md5="0e933e9cb40bb5ba5a3b08862f25c452" sha1="59af7d2fd1c3b219c7c539064c29058715086c58"/>
+<rom name="Prince of Persia (Europe) (Track 02).bin" size="33708864" crc="49811689" md5="fab949b02b32083a0634631f7386229c" sha1="af3f22f7fc73a81edac2786a51b1fc5ae022b89a"/>
+<rom name="Prince of Persia (Europe) (Track 03).bin" size="33765312" crc="4b5b8516" md5="52d00771d32717ab7100e12954a2ba85" sha1="822f5bd42df88a4b660e4f5c077403d3aa1f3935"/>
+<rom name="Prince of Persia (Europe) (Track 04).bin" size="19359312" crc="98ddfbb6" md5="9c51593d3f28b121f078d58eb0a8ef31" sha1="9d6d738e32eaa8cbe6d15bc5691bf47153b29e57"/>
+<rom name="Prince of Persia (Europe) (Track 05).bin" size="12609072" crc="9be52ed5" md5="45ce72a7595e8fcf06075df8b748af60" sha1="babfbb5fc7e26fff647bcc95f1f33cea79a83088"/>
+<rom name="Prince of Persia (Europe) (Track 06).bin" size="1622880" crc="a2030259" md5="c0b93646495aac6b9b071c7fe063ce25" sha1="fb11c2a4143e96ee6d234e785a25ede9bece313c"/>
+<rom name="Prince of Persia (Europe) (Track 07).bin" size="1891008" crc="3379ec4c" md5="bac95d8d1d038f0860b4240fc31a2d5b" sha1="f203eb5fee5c9bfc119dfe51eea75fbedc69a133"/>
+<rom name="Prince of Persia (Europe) (Track 08).bin" size="1505280" crc="fe313f82" md5="8cde3015d2975fc042facdeff91808f7" sha1="2618fbc6514ee27b99e06383149542b6663b1d50"/>
+<rom name="Prince of Persia (Europe) (Track 09).bin" size="2041536" crc="89a40265" md5="8b0885d20281e4b4ab517825021aa5d3" sha1="9799412d6eebe2ab790eb28f070869c9fb805037"/>
+<rom name="Prince of Persia (Europe) (Track 10).bin" size="1818096" crc="7cb12741" md5="98d031fef8da744fe50ba74d465e9d6d" sha1="67a72185a10d97658ac3975771ccaf3fbd282718"/>
+<rom name="Prince of Persia (Europe) (Track 11).bin" size="1916880" crc="32038cb2" md5="ffd0a5f7ab83736341a1a9fa13c80a99" sha1="0c371e3faa764c1a44ebb1984c1f70e6d7a3a0b2"/>
+<rom name="Prince of Persia (Europe) (Track 12).bin" size="28191072" crc="6605a4a4" md5="3ea37af46574e7210b8a1f5cde72c36e" sha1="7fbc896852d8bda12a4b6043174f8877125bef80"/>
+<rom name="Prince of Persia (Europe) (Track 13).bin" size="13512240" crc="25d76664" md5="47609704d34f1545c2a8dba34b3eaf85" sha1="ffbd4416a7e9d96c1de2664ae61907fd9fb2150f"/>
+<rom name="Prince of Persia (Europe) (Track 14).bin" size="25062912" crc="647e40d4" md5="7cef04ce3a728ce71cffac44f7d713b5" sha1="08a8effd190e13988436fdb3c277c777757e3dcb"/>
+<rom name="Prince of Persia (Europe) (Track 15).bin" size="9678480" crc="3df89603" md5="4c12afda18e5e208e9e83faff8bfa916" sha1="1ba3ba3706a2c39e2e92d222ed09a9f79ea8e5b5"/>
+<rom name="Prince of Persia (Europe) (Track 16).bin" size="22228752" crc="ea48bba7" md5="442a92d56451b31abc67233880ab2f94" sha1="4c951bf92ef571b8f8388e54b8f832b5af5c7298"/>
+<rom name="Prince of Persia (Europe) (Track 17).bin" size="35773920" crc="49a82a06" md5="c87aae3d7f369a9b09ccb9f2b6a2036c" sha1="782155789c0371e00303aaf373f93ccd7e8ab3d1"/>
+<rom name="Prince of Persia (Europe) (Track 18).bin" size="12517344" crc="fd1b4f9e" md5="05be1e40e714ef81bccb558028029e48" sha1="0f8afc9728308520db029771da48021022249f15"/>
+<rom name="Prince of Persia (Europe) (Track 19).bin" size="27222048" crc="27c0dce6" md5="d4d2faa854b7517b295ff247529d6839" sha1="86e28916904b829c6b4a48bed5a88206ac963040"/>
+<rom name="Prince of Persia (Europe) (Track 20).bin" size="49363776" crc="e8637c55" md5="1c716c9b1ab63d7c9f3b00d734743479" sha1="10929048b712d29a2658f1503933dea846d60199"/>
+<rom name="Prince of Persia (Europe) (Track 21).bin" size="1982736" crc="8fc1e18b" md5="3e718560a7ea340f76cc4fbd157c3f81" sha1="e5296a785e9fdb732b0498d0c184cd5f1a26468a"/>
+<rom name="Prince of Persia (Europe) (Track 22).bin" size="2053296" crc="a3631fde" md5="2743a412eea57fbaef23b6672a8aa106" sha1="d02722a0fb45cda22bb8acf34d0120364074a7ce"/>
+<rom name="Prince of Persia (Europe) (Track 23).bin" size="2062704" crc="10b1faa4" md5="26dc52370094e5f43187339117c5bfea" sha1="07e2243d4d0d93b2e20ef96af48ffe4ece069401"/>
+<rom name="Prince of Persia (Europe) (Track 24).bin" size="1662864" crc="9f2dc7d7" md5="89000d813531149e76ed40eb89ffdc4b" sha1="7df648fb3fb39885b10f1c971390a26315ef50b2"/>
+<rom name="Prince of Persia (Europe) (Track 25).bin" size="1660512" crc="7088a5d5" md5="bfb7b82a785ed6cd28f32a573e1e6c89" sha1="34c526024879bf4107d974a7b9f8e90908a0ed32"/>
+</game>
+<game name="Road Rash (USA)">
+  <category>Games</category>
+<description>Road Rash (USA)</description>
+<rom name="Road Rash (USA).cue" size="200" crc="5581093a" md5="815f641c86fc1c3d2dd3ed2f0f24531d" sha1="278e44db3c5f346f1aec5a034cec464a36727a9e"/>
+<rom name="Road Rash (USA) (Track 1).bin" size="624799392" crc="2b9a3535" md5="2ded7861e91654e30c23c616e647b6c3" sha1="84e80e20ebf9afc7c381e341faefd3b4f5595089"/>
+<rom name="Road Rash (USA) (Track 2).bin" size="1058400" crc="3c3f68fb" md5="df65e0fedc3f1ed830421f978ff9500d" sha1="5adfe9c4118f1799beeddf237df4149148a676ca"/>
+</game>
+<game name="Robo Aleste (Europe)">
+  <category>Games</category>
+<description>Robo Aleste (Europe)</description>
+<rom name="Robo Aleste (Europe).cue" size="1960" crc="c079e5a1" md5="a9a8f1de5cd3c4f47a99d93a1fcfc0f0" sha1="9d105b82cf85f272cf24f3f33d61ed20c1368209"/>
+<rom name="Robo Aleste (Europe) (Track 01).bin" size="14930496" crc="559cbde2" md5="325596aec3b649157816e225b8b4fcf1" sha1="06659a8b9bfc7fcd7700ca853ebb0663e8e2e4e6"/>
+<rom name="Robo Aleste (Europe) (Track 02).bin" size="54719280" crc="52a04991" md5="a408c243b300970aad7e97261709d30a" sha1="4ad574012d529c87282b8400528dbc21aeb3c2c4"/>
+<rom name="Robo Aleste (Europe) (Track 03).bin" size="38069472" crc="be4b7bdd" md5="abf5860aeaaface1839f19ab4c384cd8" sha1="6a932fb9efd66c799733ed60fdf12b716b7d0e5c"/>
+<rom name="Robo Aleste (Europe) (Track 04).bin" size="29550528" crc="69e163ae" md5="2fc014a67d1c7a5e1130d3f4aaf65a86" sha1="2cc7dc0e2a912452fae688586c47540f0f35128d"/>
+<rom name="Robo Aleste (Europe) (Track 05).bin" size="54978000" crc="4ebce0a4" md5="23c66f091a959061cfe40477dde52e25" sha1="c58170b22adc24910625c950063a482933d499dc"/>
+<rom name="Robo Aleste (Europe) (Track 06).bin" size="2222640" crc="1420d49e" md5="97f6ebdf19a1065795153cea00d4e595" sha1="4ad9c4c6a3b2472f62ae20abd8ee4c70a4ef2875"/>
+<rom name="Robo Aleste (Europe) (Track 07).bin" size="1909824" crc="2a51ac8c" md5="acceb547dbbc196e2b677c177a13a3d9" sha1="2761b440b68f87ceba7db6233a5988863a1ae6ff"/>
+<rom name="Robo Aleste (Europe) (Track 08).bin" size="54159504" crc="197fbb67" md5="1de5968eaa9c54a748ce509f21f0ef3b" sha1="1292f1af5ba32429468f98c0f5379c492e9b5916"/>
+<rom name="Robo Aleste (Europe) (Track 09).bin" size="59794896" crc="d51df015" md5="f74ad8c206fb5ca21559c491c0648b42" sha1="43e5ab4b3b2560cca4164f4851f0fdd57258b6d7"/>
+<rom name="Robo Aleste (Europe) (Track 10).bin" size="34891920" crc="0a10469f" md5="5873c6df85a4044507d6becad86627ae" sha1="31ddba136f3c1a28e7a74b209c583158f6635758"/>
+<rom name="Robo Aleste (Europe) (Track 11).bin" size="32925648" crc="d94aac05" md5="1961ac697e0ea17c7b7cd24921a9a0c7" sha1="f99f4f869ca6c484430432ec8fb1386237f2176f"/>
+<rom name="Robo Aleste (Europe) (Track 12).bin" size="32471712" crc="ed973f3a" md5="29dfdbb7f1ef603e7b83da64021e0c00" sha1="b2aeed7f60d99fe6a36a8654e240d015d63b8259"/>
+<rom name="Robo Aleste (Europe) (Track 13).bin" size="45736992" crc="1b05b1ef" md5="cfe781edead161bd1655eb33e6a7de4d" sha1="430c3bf148130a6c466da749c4b8343ca07b7dd3"/>
+<rom name="Robo Aleste (Europe) (Track 14).bin" size="18065712" crc="facc4971" md5="90ece623b829f013a9b65876f87be1b6" sha1="9ab8fc5d06ee2b671581bb05f913503b18f84f92"/>
+<rom name="Robo Aleste (Europe) (Track 15).bin" size="8709456" crc="add31043" md5="faa12a8afe8193a87e9a876033b12e83" sha1="fa2320e61c00ea5f492960915e06757a8bb0b4d6"/>
+<rom name="Robo Aleste (Europe) (Track 16).bin" size="9636144" crc="300ca9ec" md5="24009064448e9159f4b1e4155f2c4061" sha1="df8974190fe82efc5a5ecf573fda16d986f8cfcf"/>
+<rom name="Robo Aleste (Europe) (Track 17).bin" size="62151600" crc="f947058e" md5="1d5c7cb5968430ba8a41c72f343e6fa7" sha1="1aa9a7f88ae06029bebcbcd8b0b2c8aa4876dee7"/>
+</game>
+<game name="Samurai Shodown (Europe)">
+  <category>Games</category>
+<description>Samurai Shodown (Europe)</description>
+<rom name="Samurai Shodown (Europe).cue" size="2931" crc="c4babdf0" md5="4bf356e054277d4f3ec5cff3ba0f8d61" sha1="c14705a07594b9a96f2111be02c34aae62e2138f"/>
+<rom name="Samurai Shodown (Europe) (Track 01).bin" size="15530256" crc="33bc385a" md5="e00b56cfb76a0b9f675b5d326009bc36" sha1="33f1db122ae05d783af3967e53c5d70f859ef478"/>
+<rom name="Samurai Shodown (Europe) (Track 02).bin" size="7418208" crc="02aa2597" md5="307fbcecd3d346f6320f58cf51684dd0" sha1="edfb5c4d88e23c7a2c2e19bebfddce173e349613"/>
+<rom name="Samurai Shodown (Europe) (Track 03).bin" size="5910576" crc="e9c60cbb" md5="a49abb64accfec47961f6cc95d46cd62" sha1="fe90e1993f5004b35a72fa6fa0a8991dfc42cd25"/>
+<rom name="Samurai Shodown (Europe) (Track 04).bin" size="1604064" crc="cf61f111" md5="e612565a53472f079a9267f9666a4168" sha1="c403252a7475bd114e5e9f231416f4822569775b"/>
+<rom name="Samurai Shodown (Europe) (Track 05).bin" size="1495872" crc="fe48839a" md5="a5b09138b1985a517ffb959bb2f67d19" sha1="99e01a59aa446d430914027e337157521b5ee7d5"/>
+<rom name="Samurai Shodown (Europe) (Track 06).bin" size="2441376" crc="58764aae" md5="8bc7cd49da07e8546ce90c1a53342869" sha1="23a18defca17ddef1b2f4f641544b824bd974077"/>
+<rom name="Samurai Shodown (Europe) (Track 07).bin" size="1900416" crc="14ddcbd3" md5="ea9a3c0e7be3b5129def6ba5b83903fd" sha1="0256c00ed81cb76f29b3929c2ab5ee55e105ec4a"/>
+<rom name="Samurai Shodown (Europe) (Track 08).bin" size="3742032" crc="56246f6b" md5="28d91f4827641406a8559681e569ee4c" sha1="b6bcf4b9b7ca9eb7f6eb0669485d7a721bacdd86"/>
+<rom name="Samurai Shodown (Europe) (Track 09).bin" size="17574144" crc="1f7680bf" md5="2efb29ab34685803666c63c5b22fe831" sha1="8dc2ce6f472201056e2fd5abb477084e54ba5c07"/>
+<rom name="Samurai Shodown (Europe) (Track 10).bin" size="9438576" crc="da24be05" md5="437609b67fd47bcf6ebd00f8cda4db57" sha1="5f6b62af98228323db88e235cc04d4d493e103f0"/>
+<rom name="Samurai Shodown (Europe) (Track 11).bin" size="13681584" crc="b7714dfa" md5="1cb1f802cd1e3ab07d6a16d070cc8665" sha1="de5aba16b4572d51227ad7b8129878ba816ee602"/>
+<rom name="Samurai Shodown (Europe) (Track 12).bin" size="2217936" crc="dc378824" md5="94f9538c178d037077bda4b8c82ec2f6" sha1="8ebd3c649e72e69d78cfabd040bde74e32fd13ce"/>
+<rom name="Samurai Shodown (Europe) (Track 13).bin" size="1272432" crc="5ef854ae" md5="090ebbaced2ef40e948c2c82fc16b293" sha1="19a8d0ffe032f8186cec39589934bd728c4685ca"/>
+<rom name="Samurai Shodown (Europe) (Track 14).bin" size="5830608" crc="0e0509da" md5="5d8e4b27f25d3d6f59140ada023301c4" sha1="9f36a38bc28f39d57c45ebc7756073fba01f6e21"/>
+<rom name="Samurai Shodown (Europe) (Track 15).bin" size="5640096" crc="41e7e90e" md5="cd37f80c7c91df9b1831548636fc62ee" sha1="036227fae93da0b5afd1b35642e873cd8ac8d2c4"/>
+<rom name="Samurai Shodown (Europe) (Track 16).bin" size="12032832" crc="322e0a2a" md5="909c61f887577fe753ed529ca23dea0b" sha1="12921afca0dc6f86b8fe07f5f5c6f848f906c791"/>
+<rom name="Samurai Shodown (Europe) (Track 17).bin" size="28049952" crc="f55ad619" md5="8a7ed091851b17799020730e98a39759" sha1="fdc9584c9ff8728062e3bfa60db4a57ecd5e3251"/>
+<rom name="Samurai Shodown (Europe) (Track 18).bin" size="22645056" crc="8a4e4ffe" md5="99f09377a007232956cd441ba5158f44" sha1="37702ee5bbd215b8ea2420b1f303749559aade39"/>
+<rom name="Samurai Shodown (Europe) (Track 19).bin" size="41366976" crc="7a9938c5" md5="a250e767fd6e4baddb7dad9c3ccef572" sha1="1fdbfc4744a8513efd7e4ae6a4223763c4c92c5f"/>
+<rom name="Samurai Shodown (Europe) (Track 20).bin" size="34223952" crc="7db55404" md5="af4a257666965240533fda65a83c4da0" sha1="1a552c78696912b9bfa51770a190f3e02e8b55fb"/>
+<rom name="Samurai Shodown (Europe) (Track 21).bin" size="17818752" crc="2050b235" md5="458affa74e39c6122d882a4a3cd9e210" sha1="32fa9566bb75c76d84c5d85e415bafeddbd7bc1b"/>
+<rom name="Samurai Shodown (Europe) (Track 22).bin" size="23374176" crc="ccef8baf" md5="3be4547c71b3687d30329a1ad81a3a2c" sha1="93097e611d66f58edc7c4ce29d6a7390ffa0f9e4"/>
+<rom name="Samurai Shodown (Europe) (Track 23).bin" size="24874752" crc="752700f6" md5="2f7e26757ea0e431cffd7b8fc6a5cb4d" sha1="d1fd4408ba175734dfe35ed67b424d4b1649daa2"/>
+<rom name="Samurai Shodown (Europe) (Track 24).bin" size="22405152" crc="404d3d52" md5="36d1eea36a0423d2d42627d5686a2499" sha1="14c7caee9db770a149200d5aa3e60a363670ee52"/>
+<rom name="Samurai Shodown (Europe) (Track 25).bin" size="23463552" crc="89638e7d" md5="84c8693e2948d1a2e89ef629f8ba57cc" sha1="6861f647a2d3b0e62705f06787a0058d536ac399"/>
+<rom name="Samurai Shodown (Europe) (Track 26).bin" size="26196576" crc="d5595c20" md5="695de47d0f6333f4dca6a7ff282f7e9e" sha1="16c1362b1b028a4ce2808037e8f8c2d3d2f46435"/>
+<rom name="Samurai Shodown (Europe) (Track 27).bin" size="24432576" crc="32c515d7" md5="becb5b90938592589f500250a7b5095e" sha1="8a0a09e7549dd224d96c71c9d276c8bc42cb7be0"/>
+<rom name="Samurai Shodown (Europe) (Track 28).bin" size="3426864" crc="12354281" md5="2b826d1ab9e80fd52ea8f280160c6a7e" sha1="138f3a45a3c53048351049ce563c96cbaaca6c11"/>
+<rom name="Samurai Shodown (Europe) (Track 29).bin" size="3015264" crc="4e605138" md5="f9c0b73b1ca6f2615da1b26b532b7ed1" sha1="8e6ad4f124dad6d8dea22433bb26c17992ccd81c"/>
+<rom name="Samurai Shodown (Europe) (Track 30).bin" size="31754352" crc="9e776e8e" md5="2bb1d4cc267df629cc09902894a83b0f" sha1="002f7ae438cf2465e05812cb9c87ce5650d41e5f"/>
+</game>
+<game name="Secret of Monkey Island, The (USA) (RE)">
+  <category>Games</category>
+<description>Secret of Monkey Island, The (USA) (RE)</description>
+<rom name="Secret of Monkey Island, The (USA) (RE).cue" size="3623" crc="ab245a82" md5="64044a593eff2dcc0396aaec1c027843" sha1="5b0fea32268233459a8a1b3f848408657d127d50"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 01).bin" size="13063008" crc="8a9c032d" md5="9efbaf7fa3ebe088db4deb78f93f05e4" sha1="a63fc8aad1001064f16fda2f57c4c59eb7994908"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 02).bin" size="21525504" crc="2482c4ef" md5="c1d50fb26e4b5cf8d2c05a7082f3ba9a" sha1="65546e87bc9af111574aaf822a57e41771871fcc"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 03).bin" size="22191120" crc="da8b6224" md5="d059d6380fa77302a0d0fdeabbe06a10" sha1="bc2abcf39cc6456a55c4830f109b8d58bfa530af"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 04).bin" size="22028832" crc="495e93eb" md5="2c3dea8e3b24b8bd2bcc5b4b4a356196" sha1="a73300d83ea9ec409c75abe2c43291cd66ef4f19"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 05).bin" size="20664672" crc="05270610" md5="75c10fe3bcec589ebd50b91ca4fe2d83" sha1="b091da229f4b02661f29fce6beba66a43b7096da"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 06).bin" size="22640352" crc="d7b6273c" md5="7144f45d4d8582b4254a758b5d59de6b" sha1="a29f3629be7c30ce0e4fd55455038bd7c542c050"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 07).bin" size="2232048" crc="328d0de3" md5="a1fecf996e3757cdfea45e58c2224ef0" sha1="94c1d27f9d10654ef793bac346c57f3302cf003d"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 08).bin" size="12825456" crc="b8e130e5" md5="f4c3dc04f4f089dc2c8229ff24a9f672" sha1="4e03112a6927e5d7f193441d4b1caf35c4a2f522"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 09).bin" size="24660720" crc="f401c2f6" md5="c79f71393f89addf09fd0d1f5777c2cc" sha1="8e9f68caa759aa24d709749cdf1395df1a697182"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 10).bin" size="22108800" crc="a458dbc4" md5="769c81ef036f86f89f85ab3d492967e8" sha1="e27f4fdc0786e0de0bb5274cd5600dd578810488"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 11).bin" size="16689792" crc="06ffb55e" md5="5c2e9bd143d7e86a80b69cbed6217f2f" sha1="1dc75204d1de20d253d0f90a0b2f2b4a5fe33e6b"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 12).bin" size="24681888" crc="d6352466" md5="880a7e12daffb1c246e7fc14b8450386" sha1="ed86ad7b8c48ec3c5a5823d40aa7426e9559d5d8"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 13).bin" size="21864192" crc="d42b7633" md5="4befad6c1bf3b5edbe4e02cfe4e308b1" sha1="9b18004634b54dbb1bf436afe8adbffbfa135d35"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 14).bin" size="3473904" crc="238b259d" md5="0f00ddbf5a05e9725ef021212f426cf9" sha1="b2dc0cb90a7d8c68caf9852301fb8b6d9f1a73ae"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 15).bin" size="27906480" crc="04f0c8fa" md5="ee41f892a62ad037b37a9f20c4cc4f97" sha1="cbe71e2d195b90274498a70cbf4ab46f5b573347"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 16).bin" size="26570544" crc="7a18b50b" md5="645746b8bbbe67a422d3b83a13570ffb" sha1="dca486d85f1989d4da9c02247ed881d87e288881"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 17).bin" size="39290160" crc="6549b6a0" md5="6ba208d8b179b19453ac7c3e587e24a1" sha1="4ecb03aa1ceda93443372050338a68b825f69cf5"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 18).bin" size="28252224" crc="fa730181" md5="bb88a8a9f068f59700c2343ff8d4a3c7" sha1="4076250e427a7ed64ea00c99b3da6aeb0a6a4de9"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 19).bin" size="28129920" crc="dc424e70" md5="fcbc1ebc536f7927418c5c5770273dc8" sha1="03cecdb076be6e8fcf5122a4b764a37b88810c7f"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 20).bin" size="3259872" crc="b2316a26" md5="ff9e29f85d1dfb4c4e8b576e81f54a90" sha1="5e7ca2dff6a50df67e49d9479806161e6c4f7654"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 21).bin" size="3582096" crc="55d45007" md5="1c41ab06d5be1af87d925b33a785acab" sha1="096b4c2c2c8db86cbd53659a612ac2325cad6870"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 22).bin" size="23849280" crc="7a976e2b" md5="9e318fc9e0b65894e749a802c0d819f1" sha1="fa5dc2d515a6cf1e640b85b9b8027d0dc254de4a"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 23).bin" size="18028080" crc="8fabb577" md5="36229c07217a6279cb0c202d6968c96f" sha1="37e3c14140228d8e03cd22897aa15dbeff660d3e"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 24).bin" size="1773408" crc="9631ea37" md5="d1a1e85a65ba10015071e16b720aeffa" sha1="71f184bc537b192311288706dbdc6dbeecf9ab47"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 25).bin" size="2222640" crc="c3a65f1a" md5="114e66fee7874436612dd9f44235f880" sha1="e2757ec7964b2af6c918dd3c54fcd1291f3caa77"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 26).bin" size="11176704" crc="8c96311a" md5="8909aa0e697bdf42d985df2f2797bf90" sha1="eb849d37fd8c13e0c012440721cceeebd6c2f400"/>
+<rom name="Secret of Monkey Island, The (USA) (RE) (Track 27).bin" size="10252368" crc="490d3101" md5="f06a4ae585d3b0ff91b6d877e9115145" sha1="dbf7032596f941ef29980580eaf96c52811ec08b"/>
+</game>
+<game name="Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A)">
+  <category>Games</category>
+<description>Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A)</description>
+<rom name="Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A).cue" size="1937" crc="e33f8df7" md5="e82dcfb2b962e4704df3d83c73d06571" sha1="7b2309500e66fd7eac9229545228c12fa86c09be"/>
+<rom name="Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A) (Track 01).bin" size="25893168" crc="7d8ab493" md5="e7df8f4098c13d4ccfaefff8674097b6" sha1="48466be6fa9f6bb1befcada1735e50e15450a675"/>
+<rom name="Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A) (Track 02).bin" size="16315824" crc="824dfd97" md5="cc6b87c6f58415cb1bf564c93a15c711" sha1="55681637d7e139f9ee4b2bb6a63adbc383bf9db0"/>
+<rom name="Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A) (Track 03).bin" size="3826704" crc="5b7045e4" md5="5cb3100c1dfb1935eb44844b79bd43d0" sha1="5eac69150fb4e6bb7232da7c37bce58c846ca24a"/>
+<rom name="Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A) (Track 04).bin" size="8996400" crc="849614a2" md5="c00c82a4dbdd4bea65ee1a22db188424" sha1="44aeadd4582b21199643d69c365868ba1a0a4a17"/>
+<rom name="Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A) (Track 05).bin" size="27450192" crc="21b4ecfd" md5="1e2b22c89910c661eadbe94379bfec66" sha1="49730072a047d348ff7956d5d30c0aca2eaceeca"/>
+<rom name="Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A) (Track 06).bin" size="23912784" crc="f5c8718d" md5="21fc14d3ee46e10443e544d1c5417045" sha1="94cb42c947f1e29305de24d41409f95625af1f4f"/>
+<rom name="Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A) (Track 07).bin" size="15810144" crc="9f34cd12" md5="ade219a22c342b09f1598521d8bea91a" sha1="b315b6233948242e5f09bfce690040d96d8e365c"/>
+<rom name="Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A) (Track 08).bin" size="21791280" crc="b04b469d" md5="e8798593c749ede3a99c364123ec3e0f" sha1="c39fe6798c2bcefcafc2a41e9f0ee0b225265672"/>
+<rom name="Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A) (Track 09).bin" size="25646208" crc="ddc86ea2" md5="91029d14e2a2bb00ef2ac31b41928ec8" sha1="776602e46751eec2ee750a0c262de482dfa851e7"/>
+<rom name="Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A) (Track 10).bin" size="23696400" crc="b6dfc49b" md5="86fad9d284ca72b8a37048755f350726" sha1="261cce7aba55bd64364658c47c998dc786550bcb"/>
+<rom name="Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A) (Track 11).bin" size="3709104" crc="0f1b8149" md5="4ecc311d7b3b005e19d8327140c0e6e7" sha1="f6bd71608c6ed34f14597ce47b7b4172cea79069"/>
+<rom name="Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A) (Track 12).bin" size="12169248" crc="b0224c0e" md5="1dcdbc1f26acd91caf451dbd3d77385a" sha1="4e8969a5f1fd2fc36961efe4cac2a84f5cbc1787"/>
+</game>
+<game name="Sensible Soccer (Europe) (En,Fr,De,It)">
+  <category>Games</category>
+<description>Sensible Soccer (Europe) (En,Fr,De,It)</description>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It).cue" size="14198" crc="7b088b7e" md5="166c6126b358565a3aec13509d97d255" sha1="d48425cdb6bb23aeccdc2958fd8f4efc72756236"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 01).bin" size="27048000" crc="4887822b" md5="d54c909099832d965a83edd3344788de" sha1="2ba6a5a734c712b4c706906b441a772db99ba2c0"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 02).bin" size="1060752" crc="5ef65a8a" md5="0343a8017f1f0c853eada7d0ad60805e" sha1="ad4d491416b18db39778e6a07bc7c8800fd55b91"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 03).bin" size="1679328" crc="b3d56f35" md5="f7df2ef8094bf634d64534b87435370d" sha1="c5329df0d5dbc6c92dcadb5d3706d0b9b82ba6e2"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 04).bin" size="1806336" crc="57926440" md5="4c9d7f6f66c3b58f3f6346195ca2d9cc" sha1="015f09933c43e40b0ec5fc99c8e64cd0eec2f199"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 05).bin" size="4955664" crc="7702ee92" md5="fa2a752694d7dfd3b4aed15a7af8812f" sha1="da712e75df029dab59464eaee60d5d0587551559"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 06).bin" size="2210880" crc="986fcf13" md5="d7def458b82396e24334a417ab27e7c2" sha1="d1e832f67361874df3d8615a46a60e9f811bf4d0"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 07).bin" size="2213232" crc="c2b0aebf" md5="60c7b287867b872a0b167cfd82fc6494" sha1="2cc0d2d9e0ee182fc0f226ab5e39be5426184f66"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 08).bin" size="1444128" crc="4ac5ac1c" md5="c136577209b18d52ccb2e8d4943cb3b4" sha1="7753123284005f92df730ecfcc0695218a1b88ab"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 09).bin" size="2208528" crc="d09fde59" md5="dab50acab464321e09d497fe3c3214f0" sha1="7efeb61bf150178fbe1d6b9607e68685534e813c"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 10).bin" size="2770656" crc="0ee6c41e" md5="20a518f663c8b8752da7055c4bf5fdee" sha1="606a4e762e036f5d921d13d172faef0fa0ff6b4b"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 11).bin" size="1891008" crc="13cd06a6" md5="e6a39315b0677eadd0f162f634cd4061" sha1="8a3a374e6ce86186ba8b0d1a3320242d55745334"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 12).bin" size="2182656" crc="0e1dcf1c" md5="b20dc8c05ba242b24096154a8f1b208d" sha1="673297132b5b28a0ad81d46a87d48267b296e0d1"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 13).bin" size="2076816" crc="2bd4ce84" md5="1b86442153161e0f3c5d335076f5a944" sha1="30d38125f78e5a7ce31ff319c046ea7017bffd98"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 14).bin" size="2589552" crc="857b6c41" md5="ea440aadc430e8ed0d5606c1b4fcafc6" sha1="f70a58b3b3e6881843222c18f7dc4e271c2ccfd4"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 15).bin" size="1886304" crc="19f1ed72" md5="ec4d54b511f9965b7e99c918abb9bee9" sha1="290ae3790854ea0b8d1d104dead011041ee6b29c"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 16).bin" size="2189712" crc="5a03236c" md5="114afdc415c1d05a8a3bbb3a325a22e3" sha1="08b0e0606e3e86147876c07374767883a4daa13f"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 17).bin" size="1836912" crc="255fd8db" md5="b641f223b795746aebec3618db2d9587" sha1="927515ee6a21f51ca6d3e2109fa2c069848594e9"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 18).bin" size="1893360" crc="dd41149c" md5="f17b5e2ae089de4187a185776e1a3161" sha1="8979ddd83974c5c5c0ede35782ef9ee287a86561"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 19).bin" size="1895712" crc="70132eb8" md5="2a653502006e1f5c296b89046643ad79" sha1="ede69fb7e1c9da16667b23a51c875ea8d62dbce0"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 20).bin" size="2168544" crc="ded6c1c3" md5="eea929037c8a9ceeaf4c959be52cce14" sha1="b8e1eee80e883e9268a3e443ed53ca7edbc13ad1"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 21).bin" size="1646400" crc="ff5c3e65" md5="18c0c948913d53775b58d378feb37d71" sha1="f95fe0190647272f019aed1b11307da838c3b305"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 22).bin" size="1686384" crc="41ac8ea6" md5="be65e81d6b3ac41c8e1564ee8215d34b" sha1="598981551828406cdfd8bdc34c3f55d4c9c86c5f"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 23).bin" size="1467648" crc="a45b9e27" md5="73c826370003edd16214ca186e914468" sha1="833d836e7cae00e50acd1074465f157150a40cd2"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 24).bin" size="2166192" crc="fcc46ef8" md5="ffcc21b992711c9f4e770d3bf3e52036" sha1="73c4a4552cb68e4dc761942040d290dfef7cf100"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 25).bin" size="1841616" crc="f002e08d" md5="2ee533f4d6b2f36a872ecdabdc428bdb" sha1="d242c1101664ff431f535b9cb30fe5bfa6115c79"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 26).bin" size="1498224" crc="fd9bfde5" md5="7cd64badeb9c24574c47a49414b0efcb" sha1="870543036de8424fc3b05b0a4bcabccfd0a1b5f7"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 27).bin" size="1467648" crc="16faeab0" md5="0d798e171d38465bb6be79d327df0822" sha1="4ac9b89b3f6c3364d8664ab090ea2e4cf0ff2956"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 28).bin" size="2166192" crc="6ce0e502" md5="1b4a47321cab62c00d618c93f87b0cbd" sha1="1b881209b4ba831c0310c8d75db0611abc232c92"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 29).bin" size="1644048" crc="c4907845" md5="789588878ffe37e161715cb8d957b1a2" sha1="e49ba485bbcaf49186b66e1aa1fa29c6af865e35"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 30).bin" size="3916080" crc="d7574437" md5="63e513fb0ee80b0335f80f47198465cb" sha1="3f3acc010754072c9362e00519cba48e80f5a0b4"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 31).bin" size="1841616" crc="496af1f5" md5="9b84f9824199a12c658f8f1beb193e21" sha1="b3326160488018d2b34edabfcc4bbfa8512c548a"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 32).bin" size="2182656" crc="c9eb162d" md5="d961a2b7ae020f7a55b76bdfaa9804c9" sha1="9e771e25bb61311a72fd12c67ce52b30fdb110bf"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 33).bin" size="1702848" crc="f5080604" md5="a38d2869b1af59cf6593112546664152" sha1="c4f7423de44fc1d5eb2035a4dd738ede07a2e052"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 34).bin" size="1589952" crc="2e3ffb5d" md5="24601bfcb1c217084604a9a2222e17f3" sha1="3c79e99b2f932585a379f05c669d86e1119bdad8"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 35).bin" size="1041936" crc="72eec757" md5="49dcb82483aa7c0a5c56ad71e94b1d3b" sha1="854fb0bd7707a8c36ee0842be3db8fed73e1116a"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 36).bin" size="2199120" crc="a75815dc" md5="1ce4b24bf167d2a414b5d1089156ed13" sha1="13b7043343861b4834117fbeb1fa7b5163d65606"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 37).bin" size="1686384" crc="fc7c279f" md5="c81aba6653b5bb0658d80f87cea24917" sha1="675789f3d181b5ef04a464e0f08a04a855fd7be4"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 38).bin" size="2046240" crc="c736505a" md5="2e4ef77b897193ae5049fe8f1842c78b" sha1="7bef1d7f5be9db7c22f80a73c85fecd2a3d30dbe"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 39).bin" size="1053696" crc="5d2f10e1" md5="89a80e49a050ff8b88c874de1e0d4c02" sha1="0ff8b0540dead8a4b3cad7c84767d08523ca0c77"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 40).bin" size="2182656" crc="0e0c99fb" md5="a97112228ad44d15805d62fb45b89c06" sha1="ebc0acd4544d342ac25714557c3c2cf4c78ccee4"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 41).bin" size="1653456" crc="bd5cb4a9" md5="fae3ce6c173b2395c3ddde74705176b9" sha1="127edbaa22f84d66118b06c6cac80e6ae14243b9"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 42).bin" size="1037232" crc="db9eb3ad" md5="9a1f0c0b9c7d49949316edf6b9844ad1" sha1="51ec95647a175e550755ce29fe8f56b106bdbc23"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 43).bin" size="1056048" crc="6972522a" md5="130a07049e7ea7ac79212647d84e29c1" sha1="132fa604bad6ecff935125cd1f02b452ee884651"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 44).bin" size="2185008" crc="b38b994f" md5="3368d19d57cfbbd844b3dabee03e92bc" sha1="b4b17e68ebc01693f1a817773c4c14d51c1f0f19"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 45).bin" size="2081520" crc="0d2c712e" md5="4e97bc62c6101a2cd098ee9f7eca9bb2" sha1="5e04742165450f1915e5e1ef8dc353141d28de49"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 46).bin" size="2088576" crc="6bc5dffb" md5="6053d788c78854cde4829b73eb45c780" sha1="95f399eb16d5a846011cb4980e88762de4322574"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 47).bin" size="1058400" crc="46926446" md5="d1020e4be5e292ec679140ac58225b04" sha1="52e455e46e3439b731176ab51b9ab00d57a1f852"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 48).bin" size="2180304" crc="413790e3" md5="9c2067412322a059ed4d11428c173d91" sha1="59855a24eecba4696eccb81dce4b8ec5e5ec8d30"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 49).bin" size="1843968" crc="8389e57e" md5="cbe837cfe48cbf6320cab2d7100c6a37" sha1="b569c477e5581a5be25d18a1143a43256d4c8a5d"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 50).bin" size="1084272" crc="d7b1ab9b" md5="44ecd092592a2fa75dba7b7015937b14" sha1="70ad5484719948f9954bb9a9541adc31b6216a2f"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 51).bin" size="1039584" crc="6ee20716" md5="9bc58e8a26b40075df31c5c72da0d82f" sha1="23d2080987596d26d1a20c79db349b9ca3c03602"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 52).bin" size="2173248" crc="18043eaf" md5="ee4aa58c6b8518fe902b7cffd859ed41" sha1="e1868a7cf7803d3b3f84933fbdf6fc641b2e49c9"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 53).bin" size="1644048" crc="c4907845" md5="789588878ffe37e161715cb8d957b1a2" sha1="e49ba485bbcaf49186b66e1aa1fa29c6af865e35"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 54).bin" size="1074864" crc="237dc1f4" md5="7af8b7f34925c7fb70218a251849459d" sha1="7b500cd9df668149834d1d2fcfa38fe5cfa76843"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 55).bin" size="1615824" crc="336d80f1" md5="5c25e306566c9cf189f460fa71cd994c" sha1="e5d364d86585b8b8ecd82bbf5b6ae8edd85715e7"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 56).bin" size="2182656" crc="3272e128" md5="80e5937c7ecc8b3c561fa6aaeae331ed" sha1="388017bac7123b6fd56d0614262c27a9ab541673"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 57).bin" size="1705200" crc="54311958" md5="4b5efb437426b6441fb452dac11b4906" sha1="34929a6cd2a7f4ce61fc507956184bb0f64c1a32"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 58).bin" size="4854528" crc="d80df8ed" md5="dc627002fc525d8d2cfad94808b604ac" sha1="a9713d7106c2f6d2706cf6ec257a4b8f954290bd"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 59).bin" size="1891008" crc="be9c90f9" md5="6c67064386a815e4f04b40170c528ecc" sha1="4497e913c6ccda1f2740f84daa52e5cd381cbe57"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 60).bin" size="2744784" crc="2a4ca2c9" md5="da7134e1a8c2b924f02a0acea641df20" sha1="7fa7d6b779afda3768fdbe3f1038af9e4c2ec8db"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 61).bin" size="1636992" crc="335b3138" md5="c9d666efcdd1996bdebf32639d126ac1" sha1="40409674d12e636b321188e35c95c711e9dd63f1"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 62).bin" size="1836912" crc="f61325de" md5="0cf40e1c44dfe2ed172c2b9cabee9aab" sha1="c96c515f4e36a6db424fad0b51de41fec6d2b034"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 63).bin" size="1439424" crc="12754395" md5="57a06b185be37328812154309ee7193b" sha1="c7270995f524e2227e51d46779c07a3bc240ce57"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 64).bin" size="2747136" crc="40b5f41a" md5="892db30abf85d0f76ae32bfb958f8c5c" sha1="4984628513330babf9f92c036589cae9d1f992e1"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 65).bin" size="2076816" crc="0d6b8467" md5="af2c2e2006dea96569330c64165482cc" sha1="a5f0791b272d4e661071ff7be03e1fc060caa36f"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 66).bin" size="1439424" crc="5003bed7" md5="db4ded4245bbee881dc32044060887aa" sha1="fb049c1be87f0a17ce27a184d40c8b39d34645ef"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 67).bin" size="1834560" crc="528d8f22" md5="82d94fd631b0dd903432e4214d5f585a" sha1="07021f994e3cbc4326797bdd85163ee2c008f7dc"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 68).bin" size="2758896" crc="57f4d538" md5="7acf3e2758d7fe2a7db9f2707a31536f" sha1="f97a27a7b82c77c28d7a20031c0ee68722a2ad2d"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 69).bin" size="1646400" crc="6ee3e18f" md5="627661634d4bad091f34675a80045920" sha1="47d3c0119825aceb7f51f8efce40408681389a15"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 70).bin" size="1342992" crc="2fec21d7" md5="32d52f2833febc2ca503f01e220037cc" sha1="b50779936a8fbca8faeb9f3e88964486f392cb65"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 71).bin" size="1051344" crc="df4563c5" md5="4b27c53aa79dfbb56d93ea12506584e2" sha1="1e105d94e02e98247e6b8cdf4511a649fe4684ee"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 72).bin" size="2747136" crc="332da988" md5="a71f362c43bebb1bc6ba04f7d6b47d6d" sha1="2ec6ebed81606fa202b5513f76aae305fc149273"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 73).bin" size="1841616" crc="496af1f5" md5="9b84f9824199a12c658f8f1beb193e21" sha1="b3326160488018d2b34edabfcc4bbfa8512c548a"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 74).bin" size="2827104" crc="872e18a9" md5="20a54a61e7b4e068300e51a21793d689" sha1="092d84d9788620f57b51bb89fbc0fd996fc4cf6e"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 75).bin" size="1072512" crc="521cfd99" md5="401fd0ead2596503aabc39fb34a73fd8" sha1="6485379bd35425b71a11875ffa6ded7e4d00d588"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 76).bin" size="2754192" crc="48ed5090" md5="53df4cf80e87b08be990164cc3798970" sha1="a017cd4f426d4381e49db250f502dd3dbaf5b545"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 77).bin" size="1684032" crc="f25382c1" md5="0fef6be4df94af9fe5a699e3b6da2e8b" sha1="a1d51a655195f1aac398a23fefe5fb7a2d7aa9a3"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 78).bin" size="1067808" crc="1f371c40" md5="191314ee460b767f850dfb0722ac173f" sha1="95cd78bdb83cc0e3b30607bcdad7bf013c2b9212"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 79).bin" size="1046640" crc="632ce199" md5="e98c71a827637a48ded24c399fbd9b69" sha1="430e27b7f97410582b12b04a111871d769afc303"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 80).bin" size="2744784" crc="4af9fb19" md5="22ddd7b12a8d87060e9cbf4503a59148" sha1="830c3b3056f3c204621e37f776d225305b10b8d4"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 81).bin" size="1651104" crc="22c41785" md5="0f1b61fedeb943a37808335b9645cb98" sha1="455562fa9b4833093b7e3dd25e0a4268434010a4"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 82).bin" size="1709904" crc="ef757aeb" md5="afb012c89445866ab798309fdc8a6a59" sha1="849cc7ea3c796682ed2ac9a6877d20da6bb1a1d6"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 83).bin" size="1048992" crc="e784bbf2" md5="ab97535cb14c55ffee3b74aba5e4a732" sha1="977617d5d1d3ae448f15c9d466e82ef8855e0498"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 84).bin" size="2744784" crc="2a4ca2c9" md5="da7134e1a8c2b924f02a0acea641df20" sha1="7fa7d6b779afda3768fdbe3f1038af9e4c2ec8db"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 85).bin" size="2079168" crc="6bd864d3" md5="e3c498ebce9041fac9a3d69de1574e6f" sha1="2d1ad46a4b5ee65745dea2772b1b54c59f381024"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 86).bin" size="1465296" crc="bc23fc23" md5="0dc901e3118f646385fd6bfdf3d15691" sha1="189bd884847fbaacc8116f1bfb1df2745fa20b84"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 87).bin" size="1056048" crc="2c90ce65" md5="66f485e7dc67d84fe4c1a1d11cb3f658" sha1="ae9918c29f7074197117d50b57a9fbcd5e9c0abc"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 88).bin" size="2742432" crc="0b77c20d" md5="7db4c49dc335a6d6a494eb4c7e4c8f70" sha1="d8d5be95db8ef01b9e71a32b874678fe391557c5"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 89).bin" size="1843968" crc="6e164efa" md5="3b0242223580db0a7f393903fb96e9fd" sha1="c3907e5b029736346679905a03385318727c35a5"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 90).bin" size="2497824" crc="259991e9" md5="fd3f11242d3b97d8ccbcb37719523154" sha1="f5e7ce14a01c22fe030be33059bb30dea3233f83"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 91).bin" size="1648752" crc="8831c927" md5="24c8141a8f3961cecd7a6002e2e2b702" sha1="b5c1cfba7b192b35d35e66bd1c63644ed493bd3e"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 92).bin" size="2747136" crc="9c6ee502" md5="b386f455807ec4cec0a0a758820e67a8" sha1="d4da08d99f56974d901e215e53e64743a9e6fe1e"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 93).bin" size="1625232" crc="07008d21" md5="56c715ad321baabbc8cd45151be4f80a" sha1="6a206dc1ed163b8473e79ca4b9d7bb31f0e8eeaf"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 94).bin" size="32133024" crc="57f31c1b" md5="0861b66040fe2583cf45f4060bfc1ed9" sha1="d71ba5ca2a5f47c3b23f25f99335064968d0ba1b"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 95).bin" size="39687648" crc="ece6ff61" md5="0e9ff41203c94f22e2ec5e33ae3e6bd7" sha1="2d896dd5ac3c60f5bac58ebe98968ad624b92ac3"/>
+<rom name="Sensible Soccer (Europe) (En,Fr,De,It) (Track 96).bin" size="1385328" crc="1ca3255a" md5="534a0b254c8111ec4dfc15871ba93dc1" sha1="9cae540b6b123aa43dcd62b631d51dbb7d3c8a54"/>
+</game>
+<game name="Sherlock Holmes - Consulting Detective (Europe)">
+  <category>Games</category>
+<description>Sherlock Holmes - Consulting Detective (Europe)</description>
+<rom name="Sherlock Holmes - Consulting Detective (Europe).cue" size="136" crc="f9752e07" md5="db83e4271dd5421e8d3c2bb19d09da86" sha1="d959acddbb6c921a9f762a7e098f61668003dd93"/>
+<rom name="Sherlock Holmes - Consulting Detective (Europe).bin" size="752581200" crc="49805f7a" md5="7061965adab93919e19a435292c388f5" sha1="0c06d95d8ef1f49c39169194634a8e9ef614b208"/>
+</game>
+<game name="Sherlock Holmes - Consulting Detective - Vol. II (Europe) (Disc 1)">
+  <category>Games</category>
+<description>Sherlock Holmes - Consulting Detective - Vol. II (Europe) (Disc 1)</description>
+<rom name="Sherlock Holmes - Consulting Detective - Vol. II (Europe) (Disc 1).cue" size="302" crc="6163bea7" md5="b0480b4d865a5c3b51f4ed828b5e59db" sha1="01f19278a1f2ff3a2f3a1ee10cc60b7f224aae22"/>
+<rom name="Sherlock Holmes - Consulting Detective - Vol. II (Europe) (Disc 1) (Track 1).bin" size="529374048" crc="44dbdbc9" md5="e09237eebee47050de544316da3f1d7c" sha1="f1de79d0421314e07316e4cc18f94b91ec206591"/>
+<rom name="Sherlock Holmes - Consulting Detective - Vol. II (Europe) (Disc 1) (Track 2).bin" size="10936800" crc="2a6176bc" md5="3d0c8a82f19ca0b4f56db73c06ee7115" sha1="68ca207f059549f665e64fc25f06ebe325272f25"/>
+</game>
+<game name="Sherlock Holmes - Consulting Detective - Vol. II (Europe) (Disc 2)">
+  <category>Games</category>
+<description>Sherlock Holmes - Consulting Detective - Vol. II (Europe) (Disc 2)</description>
+<rom name="Sherlock Holmes - Consulting Detective - Vol. II (Europe) (Disc 2).cue" size="302" crc="be0f9400" md5="106facc653a80999ab4fbfeaaee58484" sha1="2e5a6b7b57fc79987cf262c9fc612c7132c1520e"/>
+<rom name="Sherlock Holmes - Consulting Detective - Vol. II (Europe) (Disc 2) (Track 1).bin" size="326208288" crc="72a2af6d" md5="0e073d4a39697496be99f497515f265a" sha1="5269c0b251a29a15ae2d823f7f1621d5c5830083"/>
+<rom name="Sherlock Holmes - Consulting Detective - Vol. II (Europe) (Disc 2) (Track 2).bin" size="10936800" crc="4b2d7c2e" md5="2c491e966a3ac8494f0e6e315e021abf" sha1="dbd6c5c669d481a490d0e2dd0d9d1164d208e08d"/>
+</game>
+<game name="Shining Force CD (Europe)">
+  <category>Games</category>
+<description>Shining Force CD (Europe)</description>
+<rom name="Shining Force CD (Europe).cue" size="3446" crc="fdc66147" md5="3734ea99b5538fc05e5f861f6c133f3e" sha1="df2a8750859a4219c6fb778241fdf4eea58d7e1c"/>
+<rom name="Shining Force CD (Europe) (Track 01).bin" size="68664288" crc="08d7d34a" md5="e09ce498c1c653ca1096869672ab2c8a" sha1="4448fcd8c962f421e5e482d702e3bbb6d2a94a7e"/>
+<rom name="Shining Force CD (Europe) (Track 02).bin" size="2119152" crc="6f7cd86e" md5="f114ac74dd8541d5335811dc1c23e7dd" sha1="b95ddbe0a2dd1881c68c9a08c23c2d4ce786f241"/>
+<rom name="Shining Force CD (Europe) (Track 03).bin" size="3488016" crc="9bbd4755" md5="99384e3d8a155d30b9e0ee12ea076990" sha1="9a4caf5cf62e37a1e942168190e2556f1c766f07"/>
+<rom name="Shining Force CD (Europe) (Track 04).bin" size="9716112" crc="f8a2b523" md5="db4726eb11e18eb9969b34af4f64823c" sha1="149875d541772e3e871d2c5a491c08470ffc5d7f"/>
+<rom name="Shining Force CD (Europe) (Track 05).bin" size="15756048" crc="cc6e656d" md5="88ce173e7b102e139ab7105ffa538c39" sha1="06a6e5211048b6a5d003c2590d7eafdfe82f48cc"/>
+<rom name="Shining Force CD (Europe) (Track 06).bin" size="26697552" crc="51e68459" md5="c517f12b1dec178daf80620ff16c56b2" sha1="b2b5a351b0e937df84855bd9127547f3b5ded6c4"/>
+<rom name="Shining Force CD (Europe) (Track 07).bin" size="16706256" crc="6a4b1fe6" md5="571406b1b39420307b45edae684ee97f" sha1="9bbf4ef26f7f23193f9e43f2d6ab9cbfc868c9af"/>
+<rom name="Shining Force CD (Europe) (Track 08).bin" size="10725120" crc="46186406" md5="af1083d22a634bce7fa6f391db19fbc8" sha1="28e487cdbb8e7ca82513a7d53908e0d25b498f2d"/>
+<rom name="Shining Force CD (Europe) (Track 09).bin" size="1992144" crc="85dc44ac" md5="8bd89db45f1435e2ae17aaebfa128854" sha1="cc8202677ccef5916b168be17caf7e0a5a399d70"/>
+<rom name="Shining Force CD (Europe) (Track 10).bin" size="2105040" crc="c296d85f" md5="e1a9cd9281aad7a9c2fbbdb35906c221" sha1="5ea32b5dc1bfbe0ebc6ae514b79ae2f897aa157e"/>
+<rom name="Shining Force CD (Europe) (Track 11).bin" size="2229696" crc="ea53532a" md5="bde5fe987698fcab433b75d2ba96d3f8" sha1="6cc42ddd596628f812c5278c006bcb4bdbecf499"/>
+<rom name="Shining Force CD (Europe) (Track 12).bin" size="15344448" crc="99f6a0be" md5="1be1a1d3368a17abf4758288e4c935f6" sha1="2045a5b58c4b51d009a78c52e4e0910c576024fa"/>
+<rom name="Shining Force CD (Europe) (Track 13).bin" size="25789680" crc="57cbe321" md5="8ec1d7552f5730cf3b3b3c9e77742fd6" sha1="e565dae1b63488fb59420ab9a591736bd74c70dd"/>
+<rom name="Shining Force CD (Europe) (Track 14).bin" size="25897872" crc="968ea510" md5="2a8d5c503d0d81e9bb8e8dff0162b303" sha1="f5e68c3b0b582534354843e20d57d332fc3bcaa9"/>
+<rom name="Shining Force CD (Europe) (Track 15).bin" size="15177456" crc="a1172977" md5="24e32ba01b3ec145ca3e55d03f903800" sha1="08fe6960ea303dfa34ea9533a5c029aec0ab0403"/>
+<rom name="Shining Force CD (Europe) (Track 16).bin" size="6623232" crc="3f12d9b2" md5="db7ca47edb22235c08f28c15211fa9f8" sha1="dac6c1635e2245f6ea218d14efa8362e3dd1e867"/>
+<rom name="Shining Force CD (Europe) (Track 17).bin" size="8196720" crc="feaa959e" md5="9dce72d5e20720de11931c98db77eec7" sha1="e4f15581c58b09d3bd14a8c39143daaba5332057"/>
+<rom name="Shining Force CD (Europe) (Track 18).bin" size="9391536" crc="6fbe5e3d" md5="f089d0fae383509016d4b723e52795cd" sha1="6dcb06a2faa85ea62aae63e090882108337aacc5"/>
+<rom name="Shining Force CD (Europe) (Track 19).bin" size="5522496" crc="14df2bf0" md5="e1903a1e3c1e5f11d3b496174a542f23" sha1="843c5a15ffdba0b7d9fed1370a5b7cc326583676"/>
+<rom name="Shining Force CD (Europe) (Track 20).bin" size="5089728" crc="ce4d50bd" md5="23e282a3a5ae3a12b5c3d6602805a426" sha1="9f17d5548e6ff5e92dcb75a6e692571e936c08e2"/>
+<rom name="Shining Force CD (Europe) (Track 21).bin" size="4906272" crc="6fbc4616" md5="c4eb078b586997db79e43969fc9c8aae" sha1="f930a91dc6cf73c73fd8070aba2e6ad4c2b0f156"/>
+<rom name="Shining Force CD (Europe) (Track 22).bin" size="20617632" crc="b03af6a8" md5="b4dd64515d6efd0cf2239b172f3f55fe" sha1="de6a3ed37c71dba5deff38de6987973f65ab274b"/>
+<rom name="Shining Force CD (Europe) (Track 23).bin" size="17298960" crc="2d325d10" md5="e2dec2b555621806abfd77b1a0b74347" sha1="44efcc69c044f3e2290dfed5b174e2873d899f58"/>
+<rom name="Shining Force CD (Europe) (Track 24).bin" size="19302864" crc="45ea96fe" md5="d23a9cf826fc942598e7b7616c226a10" sha1="c7269fbb55fcd4076a75dd4dbf2912ca7951b9c8"/>
+<rom name="Shining Force CD (Europe) (Track 25).bin" size="16080624" crc="01eb5da4" md5="757b330324a99cb6f82fd6e7b2e68c0b" sha1="ca07418d1fc2ab2fa191572a5a510f2b43b217d0"/>
+<rom name="Shining Force CD (Europe) (Track 26).bin" size="14601216" crc="7ccf1acf" md5="ec1b446f4e98aff66459fa6e99cf688b" sha1="6b7271a88957809c2f53b3d0c308bffece2583b0"/>
+<rom name="Shining Force CD (Europe) (Track 27).bin" size="16633344" crc="8ce1bc66" md5="506f31eca8bde2732da5aacca46c7ccc" sha1="8153f9bff3f25d423a4b20debd00086d1292fe21"/>
+<rom name="Shining Force CD (Europe) (Track 28).bin" size="11334288" crc="244a1e55" md5="b3bd1902f1ed951d6c0cc0ef9daa173f" sha1="d338ff9e01458dc9f1d6fbc1d3e5c5f248516e90"/>
+<rom name="Shining Force CD (Europe) (Track 29).bin" size="9201024" crc="cfc7ba86" md5="164a07d40e95e2fd3ddae573b02e7529" sha1="082c99ebcf86f0a0419998ff3c51bfc54f689f40"/>
+<rom name="Shining Force CD (Europe) (Track 30).bin" size="33490128" crc="1f6b60e9" md5="e8bee60fc54c9552d38f75b4cedef573" sha1="e62dc9983247af7dd6709b58a9f16ef16c17a2ef"/>
+<rom name="Shining Force CD (Europe) (Track 31).bin" size="40901280" crc="4b309a64" md5="df28e06ecf149a96cc0f8e49e3481694" sha1="44510bd46eeaa8fa189efa8dd53a2d92a2822278"/>
+<rom name="Shining Force CD (Europe) (Track 32).bin" size="2008608" crc="b810d72a" md5="0e585464d4e9539b28a5efc26e462350" sha1="4adfef3f826f18d5ddcd3ac07787e5bff79cae1e"/>
+<rom name="Shining Force CD (Europe) (Track 33).bin" size="1952160" crc="9eef130a" md5="57767eea1dc5fbf94aac301db8b45387" sha1="25225a87f3ba2945376de385f49cb574a32c23c9"/>
+<rom name="Shining Force CD (Europe) (Track 34).bin" size="1822800" crc="44e76230" md5="f71e92f58eae726ef9bff2337ff52a92" sha1="8a0a0b4a37d6a4f8d7894a2b5d48dd1d0bace5eb"/>
+<rom name="Shining Force CD (Europe) (Track 35).bin" size="19314624" crc="b18d3307" md5="a742590f03d762c52dc831b103427ec3" sha1="03ffe3ad2532325df1603b605146cf4f6a24b97e"/>
+</game>
+<game name="Silpheed (Europe)">
+  <category>Games</category>
+<description>Silpheed (Europe)</description>
+<rom name="Silpheed (Europe).cue" size="870" crc="e8000097" md5="7a691842fcddf9cbf40860fd3834db20" sha1="df6fb8fa4fcf0252a5d5a75b6085b5ef8b79ea37"/>
+<rom name="Silpheed (Europe) (Track 1).bin" size="362417328" crc="96866125" md5="cd09512b8c0d4ca8329b511238157c6f" sha1="96393d8d5edccfdc915e20b6797006252eff9fed"/>
+<rom name="Silpheed (Europe) (Track 2).bin" size="16097088" crc="71ebc6c3" md5="60e48a83a4fd2392ec888de99a03d568" sha1="43d7e3466d95d2fb38720b5cfbb0cf86370d367f"/>
+<rom name="Silpheed (Europe) (Track 3).bin" size="36994608" crc="a193442a" md5="1921b52ee5791f547e3f78e4323583b1" sha1="74fb3e5de3f64c1a88eac2f32cd430b9420e89ad"/>
+<rom name="Silpheed (Europe) (Track 4).bin" size="31095792" crc="0d28bc39" md5="78f3f165994c26549a29a9f784717a92" sha1="92074fbf0d4fc25938e1cc52793dd3ea362d57e7"/>
+<rom name="Silpheed (Europe) (Track 5).bin" size="34252176" crc="49b025c6" md5="148a1ed815cee289f8b7e364c4ab8fdf" sha1="82f5e17c9507c276f678c2427f00a72d7b5026ab"/>
+<rom name="Silpheed (Europe) (Track 6).bin" size="27551328" crc="3ced2b8e" md5="b2ce9b61b5814e83e8da304f4baeb550" sha1="f3d01acb7d742fb5d2402f449f9fa0223b2bd382"/>
+<rom name="Silpheed (Europe) (Track 7).bin" size="12888960" crc="562af8f3" md5="9a682432e75f114c2d1005f3fa9fd4ad" sha1="7c6d09451d433f949a782e1b7b77323602102f60"/>
+<rom name="Silpheed (Europe) (Track 8).bin" size="34837824" crc="09ffa41d" md5="4288de369ca3a886357faa342b9b86f2" sha1="eb70273f5069ba49adebdfcb22816c87e3097d5c"/>
+</game>
+<game name="Snatcher (Europe)">
+  <category>Games</category>
+<description>Snatcher (Europe)</description>
+<rom name="Snatcher (Europe).cue" size="2334" crc="a5747dab" md5="8143265554c6a4e1f7d4a1be608b9efc" sha1="6a390c214d94bff4be78bf973a3605f4677de873"/>
+<rom name="Snatcher (Europe) (Track 01).bin" size="131744928" crc="9f041b59" md5="93560fef5cf46b57be3022e6f4f7b096" sha1="cd1c35713c57936e9a268df3fa3a1e93b395db0a"/>
+<rom name="Snatcher (Europe) (Track 02).bin" size="1164240" crc="d00f54c4" md5="cc325c2484ff41e7d4b0e9060894146b" sha1="ac73d5629875586db0a5d776a13beef377d9a854"/>
+<rom name="Snatcher (Europe) (Track 03).bin" size="23802240" crc="40a49fba" md5="786b30a8b252a61fc91bbabcf4685edb" sha1="43f02ad9d970492426732bfede4c76a0cbf202a2"/>
+<rom name="Snatcher (Europe) (Track 04).bin" size="48345360" crc="e6043e39" md5="6230808a2c1f340f8415cdc49326e155" sha1="ce50b9dad31f960905c5c8d105051b65d45bcada"/>
+<rom name="Snatcher (Europe) (Track 05).bin" size="3716160" crc="c32e9ebe" md5="80ef48d3a8cd6d6d8cf7db175656571a" sha1="9e1374fc524759ba8ceccebad4047e136852fcd4"/>
+<rom name="Snatcher (Europe) (Track 06).bin" size="12740784" crc="a7705e57" md5="03be927bbc866c3158a5a7af03634505" sha1="0310fe11504dc05388a5e025ae1ca0af4fe0e0d6"/>
+<rom name="Snatcher (Europe) (Track 07).bin" size="29404704" crc="fccd71c5" md5="e4d03194b32eca0edb65b92f1f5299a7" sha1="8a124916025294432adee4dd75baf9082d5d7f7b"/>
+<rom name="Snatcher (Europe) (Track 08).bin" size="37843680" crc="2b5cf3d5" md5="749bea144eb88ee76cd19fc93a89adbb" sha1="4d7411ec40205baf5c294f7e16813de8eb493f4b"/>
+<rom name="Snatcher (Europe) (Track 09).bin" size="15412656" crc="afe3dcbf" md5="091c2fe24eee2cc5969a5fd0a4775c10" sha1="697295e985cefec143a2981734d3f93066f16dc7"/>
+<rom name="Snatcher (Europe) (Track 10).bin" size="22769712" crc="9832f63e" md5="f275214198e76b425f76b825fb870dc5" sha1="a27713205d8fac230e54c51cfd773762eb4b5d23"/>
+<rom name="Snatcher (Europe) (Track 11).bin" size="19164096" crc="4150d5c5" md5="7cac1aca396c2b7891d4f86652c1b51e" sha1="00e8f43bf89470b7cbd596c93ef57dcb198d6223"/>
+<rom name="Snatcher (Europe) (Track 12).bin" size="47576256" crc="d6bb6cba" md5="533669bf6b1b22bce349e31d1328be18" sha1="17664b3ab873cb71c158f9df4d28b77fc6620138"/>
+<rom name="Snatcher (Europe) (Track 13).bin" size="20278944" crc="477d9244" md5="f30b732535691c71494c4ab54c375cd3" sha1="a8d0eb4929d5560e631500734e0b309dbc2d5bd9"/>
+<rom name="Snatcher (Europe) (Track 14).bin" size="14445984" crc="749b2596" md5="1af1918aa779911eca30a92ca28bdc05" sha1="ee02d2d226d1a668b11f9b73daaf713212e0492b"/>
+<rom name="Snatcher (Europe) (Track 15).bin" size="13778016" crc="a8562533" md5="48c5cfedac8956afde3e5fb4965deeb2" sha1="644ec8b9ed2e35f00fc40bda24f39f442f72a4e2"/>
+<rom name="Snatcher (Europe) (Track 16).bin" size="3027024" crc="71af88c7" md5="774de00f0effe67e1d2079efbdfc13b5" sha1="1bc854049cbd19f5c5c91eff71731c8a5f844f29"/>
+<rom name="Snatcher (Europe) (Track 17).bin" size="17461248" crc="562edc62" md5="44e8f8cf01786be03858961bdb103c73" sha1="49802ef9c3a3e18dd8e9853e45c8b13069f0a538"/>
+<rom name="Snatcher (Europe) (Track 18).bin" size="8314320" crc="f0a265b6" md5="6a83142465025eb01057686d903893ad" sha1="f0c798e93f582e18209d47631f2e84da2bf008cf"/>
+<rom name="Snatcher (Europe) (Track 19).bin" size="74551344" crc="97dca941" md5="4dc8d5aa81c4a76a951cc92d2e845bfd" sha1="768066f720bd2a57a060097b4bc8c9a19c5d2dab"/>
+<rom name="Snatcher (Europe) (Track 20).bin" size="5844720" crc="b5341397" md5="006364d3667b62b2371a85a2dca67ed5" sha1="5d9fa0f6b1f5e3611df29159cb9d7ce132ae6fb1"/>
+<rom name="Snatcher (Europe) (Track 21).bin" size="73805760" crc="cde0a9e4" md5="f22950f393f8d0829a556ff5685a4ce9" sha1="6144d301e257da0709dddaf7df9ad510006a015e"/>
+</game>
+<game name="Sonic CD (Europe)">
+  <category>Games</category>
+<description>Sonic CD (Europe)</description>
+<rom name="Sonic CD (Europe).cue" size="3902" crc="e19b0360" md5="35885a77b7c5c6a4f4b60908b75f06e8" sha1="7efff2fc0a359d94d94cdce8470b14ff42a2ce59"/>
+<rom name="Sonic CD (Europe) (Track 01).bin" size="129590496" crc="0060ac74" md5="1e0e1d19bbc308e9524ff853c2320e88" sha1="1ab058c8228af31a50def1b01f1f33961f2f23d7"/>
+<rom name="Sonic CD (Europe) (Track 02).bin" size="1091328" crc="f6f21067" md5="26e98678a249604af1df6f12101b9e78" sha1="c1492191b6188ca032100353965f92c49cf1f4f3"/>
+<rom name="Sonic CD (Europe) (Track 03).bin" size="19077072" crc="ee76ae52" md5="1421ff713cfccbd3514b8aa5b87521ca" sha1="42a824e5e3e98a61e7b4952b0c045babab98d529"/>
+<rom name="Sonic CD (Europe) (Track 04).bin" size="14231952" crc="3f8db819" md5="6831fc3cd5be070fc2028bffb27a28ee" sha1="00a433f99bc4af187e7f491831cc5a9b0c1d88e0"/>
+<rom name="Sonic CD (Europe) (Track 05).bin" size="14827008" crc="929ea8b2" md5="54380e4577d1fb2653bb4c478f78c0e5" sha1="0785b0f7ae2a9f0ea61192ff02b57be23fdae857"/>
+<rom name="Sonic CD (Europe) (Track 06).bin" size="17567088" crc="e1138571" md5="be4302024edec5db5586612e95e9d324" sha1="60ddc73be6234de79a9bccb1bbc814bb4995b927"/>
+<rom name="Sonic CD (Europe) (Track 07).bin" size="13980288" crc="6473bf67" md5="2567fe2fce7083dfbbbbdf689629b0c4" sha1="1b8eb6c89917b16fafce7ef9325338507d38e414"/>
+<rom name="Sonic CD (Europe) (Track 08).bin" size="14342496" crc="98371d7f" md5="545d822737e553f4daafe4feef683c3a" sha1="62cfd8a2f1c97bf65cc67d6480735e3ef73d2f56"/>
+<rom name="Sonic CD (Europe) (Track 09).bin" size="20278944" crc="2e6f6a51" md5="9761b337993a44a5058a5ad25bd4e490" sha1="6ec50d231e7081601c9bc7041fa1cb1317a2ac71"/>
+<rom name="Sonic CD (Europe) (Track 10).bin" size="14041440" crc="8c32433f" md5="5e446ddafbcfa90c7074a9a800ee5bf1" sha1="5c0bd0835efe6a5cbe3349fcbd32e4f2ab0f4f7d"/>
+<rom name="Sonic CD (Europe) (Track 11).bin" size="13653360" crc="0b7af06f" md5="26501e8a3166e2a71111b1112e0937f6" sha1="97b849aebc2fc2abb2c10412296fa363c9720b53"/>
+<rom name="Sonic CD (Europe) (Track 12).bin" size="18016320" crc="b104892a" md5="b5b2938c85d76a91a53a5fb9fee90714" sha1="6106d7c37b15d071cb8175bbf4498f83051ab506"/>
+<rom name="Sonic CD (Europe) (Track 13).bin" size="13573392" crc="bc55db6a" md5="d97987f8d6104c56be4b5a05bf02afab" sha1="a454b662918925c6d3eb5a0aec69179e6448fbbb"/>
+<rom name="Sonic CD (Europe) (Track 14).bin" size="11411904" crc="64dd0b56" md5="6043dd8c223c9e1e5524eae25b3720d3" sha1="7cfd617f03a1132ff2d08753f194641e5bd985ef"/>
+<rom name="Sonic CD (Europe) (Track 15).bin" size="16231152" crc="4ae80737" md5="2acd2eb316d2604ea360bf50c571c07d" sha1="446a41342795ed22eaa96021a456e632bd66f308"/>
+<rom name="Sonic CD (Europe) (Track 16).bin" size="10932096" crc="4838bfbc" md5="ace0a3bd96872e33f119fcd7c3127247" sha1="761bae2abc3fd3a8476864addba6ca9faa2bf670"/>
+<rom name="Sonic CD (Europe) (Track 17).bin" size="14048496" crc="13ca49f6" md5="beff7e68db35c2f8dacc463513b4337a" sha1="9112179c50472a60dfcb3f94c9da16d0d8e7d016"/>
+<rom name="Sonic CD (Europe) (Track 18).bin" size="20137824" crc="1f4e2c58" md5="33b3d0a59297335588c0ff6d697c0f92" sha1="5fd7a68d81941d4c364941df461d2b3f44b544c5"/>
+<rom name="Sonic CD (Europe) (Track 19).bin" size="12881904" crc="22297d5a" md5="5ca072520bf329b580e3dc16a9992562" sha1="0f9ef0e1060ce68bffc6ee6a9d842723f99a074f"/>
+<rom name="Sonic CD (Europe) (Track 20).bin" size="11783520" crc="d71eea4d" md5="e8f93708e0eb31527243101673c97916" sha1="78858f13de0dddc667fcc51910ca0eed670b9d01"/>
+<rom name="Sonic CD (Europe) (Track 21).bin" size="14942256" crc="b27c476a" md5="6d90557fd20d60b87ca75deb82aacc20" sha1="b59198e8f3b55e36b7f09619234b6ece18b17946"/>
+<rom name="Sonic CD (Europe) (Track 22).bin" size="11607120" crc="c47d1eae" md5="500caa8e797db30e96df15d5beeec513" sha1="c4d1ac6de9a3788be272fea982d00dba3690bf4d"/>
+<rom name="Sonic CD (Europe) (Track 23).bin" size="12816048" crc="63260fdc" md5="22eab88c294fac263a41f012b55c112c" sha1="83d375f516c9a341a2d71be409464d80dd3f2d71"/>
+<rom name="Sonic CD (Europe) (Track 24).bin" size="14088480" crc="87db8eed" md5="2cb2a286db8d28e2aa23bd9202614a9f" sha1="8c1ad0b7a5c2f18eb486edbd6401b86c2cb707a6"/>
+<rom name="Sonic CD (Europe) (Track 25).bin" size="14657664" crc="fe73b7ad" md5="358c455d7f243ceaf8aae6d86d27ef69" sha1="42524c6c5a27f69fbd249b6aba6f99e374523411"/>
+<rom name="Sonic CD (Europe) (Track 26).bin" size="5296704" crc="6f4fea33" md5="b921e2e1d0c3d38eb0e79189c16beded" sha1="fc1c26e2cb29d37e4cb04ac7a3c0e423b7f75ff1"/>
+<rom name="Sonic CD (Europe) (Track 27).bin" size="5296704" crc="f10b63a4" md5="b68505130068acd159f5babfe345aea3" sha1="db8b4ee15d5aaf5d4d2f4345adfc1c38cd5a5a30"/>
+<rom name="Sonic CD (Europe) (Track 28).bin" size="1458240" crc="035cf8f8" md5="6a2ed33d334894e1f07b81ab1f86829a" sha1="e2c32dbdf4d48a87016538a0dd46c8bfffdf2ae8"/>
+<rom name="Sonic CD (Europe) (Track 29).bin" size="3988992" crc="d0d3bff1" md5="be3a41b92c4e52fb09d83cec9927f931" sha1="a9b4021905af6707ac209f75bd96dafbec7a84c3"/>
+<rom name="Sonic CD (Europe) (Track 30).bin" size="3869040" crc="226e6ce3" md5="00a6bb39ff9ddbb857f7f2fd566c4799" sha1="2a6d0d07363e510f95a47e129167744a57ddd7f2"/>
+<rom name="Sonic CD (Europe) (Track 31).bin" size="2008608" crc="6a7ef8b4" md5="934f001bd1b44706844b4e1f8ba1ba15" sha1="89d778b57d415f4b2d2f34422e65e194eb40c84a"/>
+<rom name="Sonic CD (Europe) (Track 32).bin" size="21513744" crc="2a7ccee9" md5="03c99950da5eeed508d9a5b83d23880b" sha1="ca84e431b9fbbb37e2334927825ce670fc9238df"/>
+<rom name="Sonic CD (Europe) (Track 33).bin" size="21873600" crc="814cb5f9" md5="3382b2abf017f7de02eafa2a661dc839" sha1="eed4cf6bd578b5566ad5adced1ff3e75c2efa3e1"/>
+<rom name="Sonic CD (Europe) (Track 34).bin" size="16214688" crc="4cb441bf" md5="dda21a9f3582ed4da7d23de877528afa" sha1="998a2d475b40d1607f1c89a9671da7db34ed0a2a"/>
+<rom name="Sonic CD (Europe) (Track 35).bin" size="32107152" crc="b2b65110" md5="c2e04398690a5e3cccbe2565b4abeeb4" sha1="ec0402c44ca5e15261f7fa8ed075bcebb2bb512d"/>
+</game>
+<game name="Sonic MegaMix (USA) (Unl)">
+  <category>Games</category>
+<description>Sonic MegaMix (USA) (Unl)</description>
+<rom name="Sonic MegaMix (USA) (Unl).cue" size="91" crc="004e2ec2" md5="f1859ec2eb3b05ee5d62e4e058d4e493" sha1="6ef9e97f1feeea0ef2f479acfefc81a94537de67"/>
+<rom name="Sonic MegaMix (USA) (Unl).bin" size="16946160" crc="227348ac" md5="58863ba94a5484f25e73e2d0c6696d56" sha1="b5137e3ca9a4e3fb0d4c052a5d0bd48b76714a80"/>
+</game>
+<game name="Space Ace (USA)">
+  <category>Games</category>
+<description>Space Ace (USA)</description>
+<rom name="Space Ace (USA).cue" size="200" crc="2d1fa0f5" md5="ae880100bad12052e2f241802e522a11" sha1="675ef3486253a90e1c61f593c212f61947b05774"/>
+<rom name="Space Ace (USA) (Track 1).bin" size="306263328" crc="7a029b47" md5="e272da5ae4526d9e88ac08f78109d483" sha1="d5c1dacbeba1f4e28d23690ae889a9540a27df94"/>
+<rom name="Space Ace (USA) (Track 2).bin" size="1521744" crc="60eade1a" md5="219338306d836e503200995f9b6cdfbf" sha1="3e7034584cf93dbb4fe059d08f3c909cca4891aa"/>
+</game>
+<game name="Star Wars - Rebel Assault (Europe)">
+  <category>Games</category>
+<description>Star Wars - Rebel Assault (Europe)</description>
+<rom name="Star Wars - Rebel Assault (Europe).cue" size="261" crc="fb8c31ea" md5="76f4cfd2f4691fb195900854ff7b74c7" sha1="5f1fc1f1c7304ded85568e1fc04d9caa288d8505"/>
+<rom name="Star Wars - Rebel Assault (Europe) (Track 1).bin" size="395255952" crc="2c8b3ea0" md5="4e750307bc2262dde5c2942d125c4f18" sha1="c6eb9b9a9b2ecd57b1f64fcd5d0c757642e9bcee"/>
+<rom name="Star Wars - Rebel Assault (Europe) (Track 2).bin" size="58148496" crc="51a31463" md5="8c20bdda5d000906928974827376b078" sha1="cc23c193d30e11c094adaf1cf124de3047ca7dbf"/>
+</game>
+<game name="Starblade (Europe)">
+  <category>Games</category>
+<description>Starblade (Europe)</description>
+<rom name="Starblade (Europe).cue" size="229" crc="75260546" md5="d19cd9324f5cb0bf2aaad811a394ab59" sha1="002f03d666a32e6e49af8a500f12235e8ef359ea"/>
+<rom name="Starblade (Europe) (Track 1).bin" size="466669728" crc="1ad0ec72" md5="4b46c066dbf6f45160c79032bfc85966" sha1="3fb5c6ab3cf6867e39fc0bbf60d7d5d7844ef35e"/>
+<rom name="Starblade (Europe) (Track 2).bin" size="1881600" crc="530bb91b" md5="36dacdfe3c9a2896727307c282a3c48e" sha1="713a5a9c8c6ac58e384e0c274adf40de86995576"/>
+</game>
+<game name="Syndicate (Europe) (En,Fr,De)">
+  <category>Games</category>
+<description>Syndicate (Europe) (En,Fr,De)</description>
+<rom name="Syndicate (Europe) (En,Fr,De).cue" size="743" crc="ebc4ba50" md5="7dedeef743d066984b0a06bd8ecebd5e" sha1="31748050a07101bf051bd50adeac00d0ec041915"/>
+<rom name="Syndicate (Europe) (En,Fr,De) (Track 1).bin" size="19389888" crc="0bc2973c" md5="a849b82967209b5eee4a792941694f78" sha1="593051fe9cfbde3776e07111f4ded9c61ca001b4"/>
+<rom name="Syndicate (Europe) (En,Fr,De) (Track 2).bin" size="82795104" crc="0ea973a6" md5="c1a289408a2e1ad2a1d87a070c49026e" sha1="46058c7e905d708b81ee8a3e34f325b6718b32fa"/>
+<rom name="Syndicate (Europe) (En,Fr,De) (Track 3).bin" size="61114368" crc="f80535cd" md5="0ba5d2bfd1e0e2c28745616f882ea1e2" sha1="2ef47878789c0641743449d931e2136a3b2cc701"/>
+<rom name="Syndicate (Europe) (En,Fr,De) (Track 4).bin" size="66674496" crc="63ea59e2" md5="454299ab0cfb6500357a3dcae169d41d" sha1="2f7ab97129062f73b38628a4d160fee959831185"/>
+<rom name="Syndicate (Europe) (En,Fr,De) (Track 5).bin" size="69129984" crc="45cc2f28" md5="c4a65486ccbc47a88910a15c59154697" sha1="f4dde3699a70e7062b2858d3425541ea810b4976"/>
+<rom name="Syndicate (Europe) (En,Fr,De) (Track 6).bin" size="53665584" crc="d13b91c4" md5="b9c9b338e49cc49c8cd30c32b6259474" sha1="12a0032ebb409fd80aab9b51e64d1049f5e0ba6f"/>
+</game>
+<game name="Time Gal (Europe)">
+  <category>Games</category>
+<description>Time Gal (Europe)</description>
+<rom name="Time Gal (Europe).cue" size="204" crc="70dba7fd" md5="823a227c8e0f448511f1f3ee39541f65" sha1="7a8400d1c85a524dca665bfa0f46412e761fc1c7"/>
+<rom name="Time Gal (Europe) (Track 1).bin" size="298936848" crc="d59965e8" md5="ac1572aa45209fc6cc40d90851d57de5" sha1="41f58d850d9e5134d51998f4c8045e91af7afaf0"/>
+<rom name="Time Gal (Europe) (Track 2).bin" size="1651104" crc="297595a7" md5="b9f9d8abc7b262fa3d02e3006cc20c1c" sha1="4252bbe282ce29b943c33a18fbc4c352ebc36bfc"/>
+</game>
+<game name="Wing Commander (USA)">
+  <category>Games</category>
+<description>Wing Commander (USA)</description>
+<rom name="Wing Commander (USA).cue" size="804" crc="47b303b2" md5="e284ba5630e5fe637c75a23dcae937ef" sha1="0384cbd28a94e93e4a26561329e7c86e61f45721"/>
+<rom name="Wing Commander (USA) (Track 1).bin" size="385394016" crc="df21b6e3" md5="1677878b98ccd075792c6b2906879010" sha1="89863d46871fd6a0f46c98b2bd5a9a8a8ff041f2"/>
+<rom name="Wing Commander (USA) (Track 2).bin" size="20761104" crc="cd279afb" md5="2b1ff3dafaf1184a6d90ac15e70398a8" sha1="24525be27a75677c20689a35df916a065049e672"/>
+<rom name="Wing Commander (USA) (Track 3).bin" size="6465648" crc="e64b2cfd" md5="4bbec78de59871afbeb0ddcd17006338" sha1="39135a721412e6b37d2c9d7bd424d0e0f93bce54"/>
+<rom name="Wing Commander (USA) (Track 4).bin" size="5103840" crc="10d7fde8" md5="501dea862b26ee9da9eab842e77a60fd" sha1="32f39ccd1842e7276605d1dd3bd73ec1f02376ff"/>
+<rom name="Wing Commander (USA) (Track 5).bin" size="6211632" crc="451e2b4e" md5="a2778b999e4478de827f20d357aae545" sha1="a10c3c5d19e6db35c11ecdeb2f130d8b66a8050a"/>
+<rom name="Wing Commander (USA) (Track 6).bin" size="30406656" crc="e34dca24" md5="9411cd4d1cb7f103e7e1909db2d0622d" sha1="6e4d06f6f4eadac0092c59c77f6262def18ce767"/>
+</game>
+<game name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv)">
+  <category>Games</category>
+<description>World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv)</description>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv).cue" size="2283" crc="634e5a24" md5="6f4d6d23b6dacf8a8e1ec407b8cd9177" sha1="3fd1efabc303f57f99f63303ab709a7494f7eb0d"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 01).bin" size="129268272" crc="9e540b0f" md5="2206f5557cbabeffcca55ef8f5462e9f" sha1="3154b3f142c112129a3aeaa29a5ae92558556e57"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 02).bin" size="24545472" crc="6dd712ae" md5="87af07df91051cef97011e611653a88e" sha1="3f528caf334dc650f2e4f12ad83e861ab306df3c"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 03).bin" size="33770016" crc="b27e3b6d" md5="d72abef59277db0c3077382f79583c39" sha1="9290cc0b347bbed720fb522bf93a10e0d90c77b3"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 04).bin" size="32525808" crc="5e89ab19" md5="d13fd2fe059a331417465826bfa7c1ae" sha1="cbc4a42da29aeb23bfd3905565e14d3e8843a1c7"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 05).bin" size="33586560" crc="9adc023b" md5="60f768003750d4a68aa2410bd9b6e62c" sha1="24e1a774ed66a70e37278c59cdccd6cc6729a3c8"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 06).bin" size="40659024" crc="822ac2a1" md5="c80507b078931c6f7159503f8938833a" sha1="a98fe0df5980a27047e7ca70933cc6b5bf384953"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 07).bin" size="33934656" crc="760b0d5b" md5="463f0412acde32048accb2efc5765f31" sha1="3837f61d9bb62d1f0083331065408a51cf4ac515"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 08).bin" size="32528160" crc="594bd193" md5="fbf738ec019e05e2d22e62ec37656e14" sha1="7dbede1a869fa859c5f036e72ca7bb3f07758532"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 09).bin" size="25749696" crc="819c9db8" md5="f0c6b230775e4ec5c44984ca7efd00a1" sha1="7e869ecd67bfe16df9b8b9654626918899136779"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 10).bin" size="35232960" crc="72167dc1" md5="3de91f68588069ca04da9b3ed2b98c2c" sha1="9f8de936fda8c93a9dfbae1616c334a4cc667c9b"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 11).bin" size="23030784" crc="88d30bf5" md5="9c68d8aa3d6b541403dd8cc47c95227c" sha1="5e8a19cdb0257ee089218a21328388abc8806a1e"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 12).bin" size="19206432" crc="97e0187d" md5="3763e720d37d880e95a504af1dea27a1" sha1="360973b470b25cdaf1a26f35626c8ab4b0239573"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 13).bin" size="33116160" crc="29ff405f" md5="f6741e23fabf2b3b39fb51cfc55cdb5c" sha1="9d4be2fb4bbe6b2e34ec53d7cd7385ff6a684b74"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 14).bin" size="16979088" crc="1fbcb8b5" md5="9831c9fe40757cdf3c527c9fda76d52f" sha1="1c27c2b8bace644e384e5065e89191edac7c9b83"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 15).bin" size="27299664" crc="7199b836" md5="a9e85a72425e3d078ca30b8f08f5f37e" sha1="8f99b8cb65b3ccd5897a2f35002e7b7b4de12fb6"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 16).bin" size="33972288" crc="a992a510" md5="01e2e753ac9d60da4edfd86b803c4d72" sha1="406b400d506f0596a2245837ab0061da2c18697a"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 17).bin" size="36670032" crc="0bdc77bb" md5="566138b1c96fa7c84dc00dca5848edce" sha1="9ca2bcf5cfdab4dc42e43adaa6a6a58b0c58b40f"/>
+<rom name="World Cup USA '94 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv) (Track 18).bin" size="29853936" crc="6d9d51cf" md5="72fde62172fba8a2e907382bd5de131a" sha1="d489c9775ec1656670790dca3ce9d61f1afc7a7a"/>
+</game>
+</datafile>

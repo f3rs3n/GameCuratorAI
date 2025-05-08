@@ -789,6 +789,28 @@ class InteractiveMenu:
                         
                         # Show game with score
                         print(f"  {status} | {name} (Score: {score:.2f})")
+                        
+                        # Get the evaluation object to display strengths and weaknesses
+                        game_eval = game.get("evaluation", {})
+                        analysis = game_eval.get("_criteria_analysis", {})
+                        
+                        # Display criteria insights
+                        if analysis:
+                            # Display strengths and weaknesses
+                            strongest = analysis.get("strongest_criteria", [])
+                            weakest = analysis.get("weakest_criteria", [])
+                            
+                            if strongest:
+                                strongest_str = ", ".join([s.replace("_", " ").title() for s in strongest])
+                                print(f"    {Fore.GREEN}Strong:{Style.RESET_ALL} {strongest_str}")
+                            
+                            if weakest:
+                                weakest_str = ", ".join([w.replace("_", " ").title() for w in weakest])
+                                print(f"    {Fore.YELLOW}Weak:{Style.RESET_ALL} {weakest_str}")
+                            
+                            # Special handling for low score keepers
+                            if kept and analysis.get("is_low_score_keeper", False):
+                                print(f"    {Fore.YELLOW}Note: Kept despite low score because it passed the adjusted threshold{Style.RESET_ALL}")
                     
                     print("")  # Add spacing
             

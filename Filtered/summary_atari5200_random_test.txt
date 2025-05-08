@@ -1,0 +1,31 @@
+DAT Filter AI - Filtering Summary
+==============================
+Date: 2025-05-08 14:40:40
+Original game count: 77
+Filtered game count: 77
+Reduction: 0 games (0.0% of collection)
+
+Filter Criteria:
+---------------
+- metacritic
+- historical
+- v_list
+- console_significance
+- mods_hacks
+
+Top 7 Games (Highest Quality Scores):
+----------------------------------------
+1. Activision Decathlon, The (USA) - Score: 8.80/10
+2. Super Cobra (USA) - Score: 8.10/10
+3. Zone Ranger (USA) - Score: 8.10/10
+4. Frogger II - Threeedeep! (USA) - Score: 8.00/10
+5. Q-bert (USA) - Score: 7.90/10
+6. Star Trek - Strategic Operations Simulator (USA) - Score: 7.90/10
+7. Joust (USA) - Score: 7.50/10
+
+API Usage Information:
+----------------------
+Provider: RANDOM TEST PROVIDER
+Today's usage: 0 tokens
+30-day usage: 0 tokens
+Total requests: 0

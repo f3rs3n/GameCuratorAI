@@ -187,6 +187,60 @@ class TextVisualizer:
             "BRIGHT"
         ))
         
+        # Criteria contribution analysis
+        self.print_section("Criteria Analysis")
+        
+        # Count how many times each criterion appears as a strength or weakness
+        strengths_count = {}
+        weaknesses_count = {}
+        low_score_keepers = 0
+        
+        # Initialize counters
+        for criterion in criteria:
+            strengths_count[criterion] = 0
+            weaknesses_count[criterion] = 0
+        
+        # Analyze criteria in the filtered games
+        for game in filtered_games:
+            if "_evaluation" in game and "_criteria_analysis" in game["_evaluation"]:
+                analysis = game["_evaluation"]["_criteria_analysis"]
+                
+                # Count strengths
+                for criterion in analysis.get("strongest_criteria", []):
+                    if criterion in strengths_count:
+                        strengths_count[criterion] += 1
+                
+                # Count weaknesses
+                for criterion in analysis.get("weakest_criteria", []):
+                    if criterion in weaknesses_count:
+                        weaknesses_count[criterion] += 1
+                
+                # Count low score keepers
+                if analysis.get("is_low_score_keeper", False):
+                    low_score_keepers += 1
+        
+        # Display criteria strengths/weaknesses distribution
+        if any(strengths_count.values()):
+            print(self._format_text("Criteria Strengths:", "GREEN", "BRIGHT"))
+            for criterion in sorted(strengths_count.keys(), key=lambda x: strengths_count[x], reverse=True):
+                if strengths_count[criterion] > 0:
+                    pct = (strengths_count[criterion] / len(filtered_games)) * 100
+                    bar_length = int(pct / 5)  # 20 chars = 100%
+                    bar = "█" * bar_length
+                    print(f"  {criterion.replace('_', ' ').title()}: {bar} ({strengths_count[criterion]} games, {pct:.1f}%)")
+            
+            print(self._format_text("\nCriteria Weaknesses:", "RED", "BRIGHT"))
+            for criterion in sorted(weaknesses_count.keys(), key=lambda x: weaknesses_count[x], reverse=True):
+                if weaknesses_count[criterion] > 0:
+                    pct = (weaknesses_count[criterion] / len(filtered_games)) * 100
+                    bar_length = int(pct / 5)  # 20 chars = 100%
+                    bar = "█" * bar_length
+                    print(f"  {criterion.replace('_', ' ').title()}: {bar} ({weaknesses_count[criterion]} games, {pct:.1f}%)")
+            
+            if low_score_keepers > 0:
+                pct = (low_score_keepers / len(filtered_games)) * 100
+                print(self._format_text(f"\nLow Score Exceptions: {low_score_keepers} games ({pct:.1f}%)", "YELLOW", "BRIGHT"))
+        
         # Criteria used
         self.print_section("Filter Criteria")
         for criterion in criteria:

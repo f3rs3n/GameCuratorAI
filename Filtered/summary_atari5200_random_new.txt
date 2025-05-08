@@ -1,9 +1,9 @@
 DAT Filter AI - Filtering Summary
 ==============================
-Date: 2025-05-08 13:31:48
+Date: 2025-05-08 14:47:54
 Original game count: 77
-Filtered game count: 77
-Reduction: 0 games (0.0% of collection)
+Filtered game count: 53
+Reduction: 24 games (31.2% of collection)
 
 Filter Criteria:
 ---------------
@@ -13,15 +13,40 @@ Filter Criteria:
 - console_significance
 - mods_hacks
 
-Top 7 Games (Highest Quality Scores):
+Criteria Analysis:
+-----------------
+Strongest criteria in the collection:
+- Historical: 25 games (47.2%)
+- Mods Hacks: 25 games (47.2%)
+- Console Significance: 20 games (37.7%)
+- V List: 19 games (35.8%)
+- Metacritic: 17 games (32.1%)
+
+Weakest criteria in the collection:
+- Metacritic: 26 games (49.1%)
+- Historical: 24 games (45.3%)
+- Mods Hacks: 21 games (39.6%)
+- V List: 19 games (35.8%)
+- Console Significance: 16 games (30.2%)
+
+Low Score Exceptions: 8 games (15.1%)
+These are games kept despite low scores due to other important factors.
+
+Top 5 Games (Highest Quality Scores):
 ----------------------------------------
-1. Space Dungeon (USA) - Score: 8.20/10
-2. Gorf (USA) - Score: 8.10/10
-3. Star Wars - Return of the Jedi - Death Star Battle (USA) - Score: 8.00/10
-4. Montezuma's Revenge - Featuring Panama Joe (USA) - Score: 7.70/10
-5. Gyruss (USA) - Score: 7.40/10
-6. Moon Patrol (USA) - Score: 7.40/10
-7. Astro Chase (USA) - Score: 7.30/10
+1. Gyruss (USA) - Score: 8.30/10 - Strong: Console Significance, V List - Weak: Mods Hacks, Historical
+2. Castle Crisis (USA) (Unl) - Score: 7.90/10 - Strong: Historical, Mods Hacks - Weak: V List, Console Significance
+3. Quest for Quintana Roo (USA) - Score: 7.90/10 - Strong: Mods Hacks, Console Significance - Weak: Historical, Metacritic
+4. Zone Ranger (USA) - Score: 7.50/10 - Strong: V List, Console Significance - Weak: Historical, Mods Hacks
+5. Ms. Pac-Man (USA) - Score: 7.30/10 - Strong: Historical, Console Significance - Weak: Metacritic, Mods Hacks
+
+Removed Games Preview (Lowest Scores):
+----------------------------------------
+These games didn't make the cut and were removed from the filtered collection:
+Total games removed: 24
+
+Note: To see the complete list of removed games, compare the original DAT
+      file with the filtered output using a comparison tool.
 
 API Usage Information:
 ----------------------
