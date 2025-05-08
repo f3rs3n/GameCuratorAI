@@ -207,7 +207,7 @@ class FilterEngine:
                 current_batch_results.append({
                     "game_name": game.get("name", "Unknown Game"),
                     "keep": meets_criteria,
-                    "quality_score": evaluation.get("quality_score", 0),
+                    "quality_score": evaluation.get("overall_score", 0),
                     "reason": evaluation.get("reason", "")
                 })
                 

@@ -19,7 +19,7 @@ def main():
     # Initialize components
     dat_parser = DatParser()
     provider = get_provider("random")
-    filter_engine = FilterEngine(provider=provider)
+    filter_engine = FilterEngine(ai_provider=provider)
     
     # Use a small file for testing
     input_file = "ToFilter/Sega - 32X (20250126-142831) (Retool 2025-03-21 11-59-44) (33) (-ny) [-aABbcdkMmpPv].dat"

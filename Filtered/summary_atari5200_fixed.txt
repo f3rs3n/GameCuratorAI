@@ -1,6 +1,6 @@
 DAT Filter AI - Filtering Summary
 ==============================
-Date: 2025-05-08 11:09:15
+Date: 2025-05-08 11:02:23
 Original game count: 77
 Filtered game count: 77
 Reduction: 0 games (0.0% of collection)
@@ -15,10 +15,10 @@ Filter Criteria:
 
 Top 7 Games (Highest Quality Scores):
 ----------------------------------------
-1. Robotron 2084 (USA) - Score: 8.60/10
-2. Buck Rogers - Planet of Zoom (USA) - Score: 8.50/10
-3. Blue Print (USA) - Score: 7.90/10
-4. Super Breakout (USA) - Score: 7.20/10
-5. BerZerk (USA) - Score: 7.10/10
-6. Space Shuttle - A Journey Into Space (USA) - Score: 7.10/10
-7. K-Razy Shoot-Out (USA) - Score: 6.70/10
+1. Pac-Man (USA) - Score: 8.70/10
+2. Pengo (USA) - Score: 8.40/10
+3. Gyruss (USA) - Score: 8.30/10
+4. Gremlins (USA) - Score: 8.20/10
+5. Quest for Quintana Roo (USA) - Score: 7.80/10
+6. Super Breakout (USA) - Score: 7.80/10
+7. Super Cobra (USA) - Score: 7.80/10

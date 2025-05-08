@@ -771,7 +771,7 @@ class InteractiveMenu:
                 # Display detailed batch results if available
                 if batch_results:
                     # Count stats
-                    kept = len([g for g in batch_results if g.get('kept', False)])
+                    kept = len([g for g in batch_results if g.get('keep', False)])
                     removed = len(batch_results) - kept
                     
                     # Show summary and game details with color coding
@@ -1436,7 +1436,13 @@ class InteractiveMenu:
                         
                         # Display batch results if available
                         if batch_results:
+                            # Count stats
+                            kept_count = len([g for g in batch_results if g.get('keep', False)])
+                            removed_count = len(batch_results) - kept_count
+                            
                             print("\nRecent games processed:")
+                            print(f"  Last batch: {Fore.GREEN}{kept_count} kept{Style.RESET_ALL}, {Fore.RED}{removed_count} removed{Style.RESET_ALL}\n")
+                            
                             for game in batch_results:
                                 # Display keep/remove status with color coding
                                 name = game.get('game_name', 'Unknown')

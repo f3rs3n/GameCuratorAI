@@ -1,0 +1,1544 @@
+{
+  "timestamp": "2025-05-08T11:09:42.113380",
+  "filtered_games_count": 33,
+  "evaluations_count": 33,
+  "special_cases": {
+    "multi_disc": {
+      "count": 0,
+      "groups": []
+    },
+    "regional_variants": {
+      "count": 0,
+      "groups": []
+    },
+    "console_naming": {
+      "count": 0,
+      "by_console": {},
+      "groups": []
+    },
+    "mods_hacks": {
+      "count": 0,
+      "games": []
+    }
+  },
+  "filtered_games": [
+    {
+      "name": "After Burner Complete (Europe)",
+      "id": "After Burner Complete (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "After Burner Complete (Europe)",
+        "scores": {
+          "metacritic": 3.1,
+          "historical": 3.5,
+          "v_list": 8.6,
+          "console_significance": 3.0,
+          "mods_hacks": 6.3
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, After Burner Complete (Europe) shows limited qualities.",
+          "historical": "For Historical significance and innovation, After Burner Complete (Europe) shows below average qualities.",
+          "v_list": "This title shows exceptional qualities regarding v_list.",
+          "console_significance": "For console_significance, After Burner Complete (Europe) shows modest qualities.",
+          "mods_hacks": "After Burner Complete (Europe) has reasonable standing in terms of mods_hacks."
+        },
+        "overall_score": 4.9,
+        "confidence": 0.89,
+        "_evaluation_time": 0.0008943080902099609,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Amazing Spider-Man, The - Web of Fire (USA)",
+      "id": "Amazing Spider-Man, The - Web of Fire (USA)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Amazing Spider-Man, The - Web of Fire (USA)",
+        "scores": {
+          "metacritic": 3.5,
+          "historical": 7.2,
+          "v_list": 1.7,
+          "console_significance": 2.8,
+          "mods_hacks": 8.8
+        },
+        "explanations": {
+          "metacritic": "Amazing Spider-Man, The - Web of Fire (USA) has limited significance in terms of Critical acclaim and review scores.",
+          "historical": "This title shows reasonable qualities for Historical significance and innovation.",
+          "v_list": "Amazing Spider-Man, The - Web of Fire (USA) has minimal significance in terms of v_list.",
+          "console_significance": "Amazing Spider-Man, The - Web of Fire (USA) has modest significance in terms of console_significance.",
+          "mods_hacks": "Based on random evaluation, Amazing Spider-Man, The - Web of Fire (USA) receives top marks for mods_hacks."
+        },
+        "overall_score": 4.8,
+        "confidence": 0.72,
+        "_evaluation_time": 0.0005388259887695312,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "BC Racers (USA)",
+      "id": "BC Racers (USA)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "BC Racers (USA)",
+        "scores": {
+          "metacritic": 7.0,
+          "historical": 7.1,
+          "v_list": 1.3,
+          "console_significance": 1.7,
+          "mods_hacks": 9.6
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, BC Racers (USA) has reasonable marks for Critical acclaim and review scores.",
+          "historical": "BC Racers (USA) has decent standing in terms of Historical significance and innovation.",
+          "v_list": "Based on random evaluation, BC Racers (USA) receives modest marks for v_list.",
+          "console_significance": "For console_significance, BC Racers (USA) shows questionable qualities.",
+          "mods_hacks": "Based on random evaluation, BC Racers (USA) receives top marks for mods_hacks."
+        },
+        "overall_score": 5.3,
+        "confidence": 0.69,
+        "_evaluation_time": 0.0009064674377441406,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Blackthorne (USA)",
+      "id": "Blackthorne (USA)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Blackthorne (USA)",
+        "scores": {
+          "metacritic": 8.6,
+          "historical": 7.4,
+          "v_list": 2.6,
+          "console_significance": 4.8,
+          "mods_hacks": 6.3
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, Blackthorne (USA) receives top marks for Critical acclaim and review scores.",
+          "historical": "Blackthorne (USA) has decent standing in terms of Historical significance and innovation.",
+          "v_list": "This title demonstrates minimal standing regarding v_list.",
+          "console_significance": "Blackthorne (USA) has questionable significance in terms of console_significance.",
+          "mods_hacks": "For mods_hacks, Blackthorne (USA) performs at a solid level."
+        },
+        "overall_score": 5.9,
+        "confidence": 0.89,
+        "_evaluation_time": 0.0010247230529785156,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Brutal - Above the Claw (USA)",
+      "id": "Brutal - Above the Claw (USA)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Brutal - Above the Claw (USA)",
+        "scores": {
+          "metacritic": 4.9,
+          "historical": 2.8,
+          "v_list": 3.1,
+          "console_significance": 9.1,
+          "mods_hacks": 5.2
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, Brutal - Above the Claw (USA) shows modest qualities.",
+          "historical": "Based on random evaluation, Brutal - Above the Claw (USA) receives modest marks for Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Brutal - Above the Claw (USA) receives modest marks for v_list.",
+          "console_significance": "Based on random evaluation, Brutal - Above the Claw (USA) receives top marks for console_significance.",
+          "mods_hacks": "Brutal - Above the Claw (USA) has good standing in terms of mods_hacks."
+        },
+        "overall_score": 5.0,
+        "confidence": 0.92,
+        "_evaluation_time": 0.0026361942291259766,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Cosmic Carnage (Europe)",
+      "id": "Cosmic Carnage (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Cosmic Carnage (Europe)",
+        "scores": {
+          "metacritic": 9.4,
+          "historical": 9.9,
+          "v_list": 5.7,
+          "console_significance": 2.8,
+          "mods_hacks": 3.4
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, Cosmic Carnage (Europe) receives top marks for Critical acclaim and review scores.",
+          "historical": "This title shows outstanding qualities regarding Historical significance and innovation.",
+          "v_list": "This title shows reasonable qualities for v_list.",
+          "console_significance": "Based on random evaluation, Cosmic Carnage (Europe) receives below average marks for console_significance.",
+          "mods_hacks": "This title demonstrates below average standing regarding mods_hacks."
+        },
+        "overall_score": 6.2,
+        "confidence": 0.77,
+        "_evaluation_time": 0.0006449222564697266,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Darxide (Europe) (En,Fr,De,Es)",
+      "id": "Darxide (Europe) (En,Fr,De,Es)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Darxide (Europe) (En,Fr,De,Es)",
+        "scores": {
+          "metacritic": 1.4,
+          "historical": 5.6,
+          "v_list": 1.5,
+          "console_significance": 2.8,
+          "mods_hacks": 2.8
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, Darxide (Europe) (En,Fr,De,Es) shows limited qualities.",
+          "historical": "Darxide (Europe) (En,Fr,De,Es) has good standing in terms of Historical significance and innovation.",
+          "v_list": "Darxide (Europe) (En,Fr,De,Es) has modest significance in terms of v_list.",
+          "console_significance": "Darxide (Europe) (En,Fr,De,Es) has below average significance in terms of console_significance.",
+          "mods_hacks": "Based on random evaluation, Darxide (Europe) (En,Fr,De,Es) receives modest marks for mods_hacks."
+        },
+        "overall_score": 2.8,
+        "confidence": 0.67,
+        "_evaluation_time": 0.003094196319580078,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Doom (Europe)",
+      "id": "Doom (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Doom (Europe)",
+        "scores": {
+          "metacritic": 5.8,
+          "historical": 1.1,
+          "v_list": 7.6,
+          "console_significance": 4.1,
+          "mods_hacks": 1.7
+        },
+        "explanations": {
+          "metacritic": "Doom (Europe) has reasonable standing in terms of Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Doom (Europe) receives minimal marks for Historical significance and innovation.",
+          "v_list": "For v_list, Doom (Europe) performs at a good level.",
+          "console_significance": "Doom (Europe) has below average significance in terms of console_significance.",
+          "mods_hacks": "Doom (Europe) has questionable significance in terms of mods_hacks."
+        },
+        "overall_score": 4.1,
+        "confidence": 0.91,
+        "_evaluation_time": 0.00051116943359375,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "FIFA Soccer 96 (Europe) (En,Fr,De,Es,It,Sv)",
+      "id": "FIFA Soccer 96 (Europe) (En,Fr,De,Es,It,Sv)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "FIFA Soccer 96 (Europe) (En,Fr,De,Es,It,Sv)",
+        "scores": {
+          "metacritic": 5.0,
+          "historical": 2.4,
+          "v_list": 7.6,
+          "console_significance": 1.2,
+          "mods_hacks": 3.0
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, FIFA Soccer 96 (Europe) (En,Fr,De,Es,It,Sv) performs at a decent level.",
+          "historical": "This title demonstrates questionable standing regarding Historical significance and innovation.",
+          "v_list": "Based on random evaluation, FIFA Soccer 96 (Europe) (En,Fr,De,Es,It,Sv) has solid marks for v_list.",
+          "console_significance": "FIFA Soccer 96 (Europe) (En,Fr,De,Es,It,Sv) has limited significance in terms of console_significance.",
+          "mods_hacks": "Based on random evaluation, FIFA Soccer 96 (Europe) (En,Fr,De,Es,It,Sv) receives limited marks for mods_hacks."
+        },
+        "overall_score": 3.8,
+        "confidence": 0.74,
+        "_evaluation_time": 0.0011529922485351562,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Golf Magazine Presents - 36 Great Holes Starring Fred Couples (Europe)",
+      "id": "Golf Magazine Presents - 36 Great Holes Starring Fred Couples (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Golf Magazine Presents - 36 Great Holes Starring Fred Couples (Europe)",
+        "scores": {
+          "metacritic": 1.1,
+          "historical": 4.0,
+          "v_list": 1.1,
+          "console_significance": 4.2,
+          "mods_hacks": 1.6
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, Golf Magazine Presents - 36 Great Holes Starring Fred Couples (Europe) shows minimal qualities.",
+          "historical": "Based on random evaluation, Golf Magazine Presents - 36 Great Holes Starring Fred Couples (Europe) receives minimal marks for Historical significance and innovation.",
+          "v_list": "Golf Magazine Presents - 36 Great Holes Starring Fred Couples (Europe) has minimal significance in terms of v_list.",
+          "console_significance": "This title demonstrates limited standing regarding console_significance.",
+          "mods_hacks": "Golf Magazine Presents - 36 Great Holes Starring Fred Couples (Europe) has limited significance in terms of mods_hacks."
+        },
+        "overall_score": 2.4,
+        "confidence": 0.73,
+        "_evaluation_time": 0.0012140274047851562,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Knuckles' Chaotix (Europe)",
+      "id": "Knuckles' Chaotix (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Knuckles' Chaotix (Europe)",
+        "scores": {
+          "metacritic": 3.0,
+          "historical": 4.5,
+          "v_list": 4.6,
+          "console_significance": 7.7,
+          "mods_hacks": 5.5
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, Knuckles' Chaotix (Europe) receives modest marks for Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Knuckles' Chaotix (Europe) shows modest qualities.",
+          "v_list": "This title demonstrates questionable standing regarding v_list.",
+          "console_significance": "Based on random evaluation, Knuckles' Chaotix (Europe) has reasonable marks for console_significance.",
+          "mods_hacks": "For mods_hacks, Knuckles' Chaotix (Europe) performs at a good level."
+        },
+        "overall_score": 5.1,
+        "confidence": 0.92,
+        "_evaluation_time": 0.0007131099700927734,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Kolibri (USA, Europe)",
+      "id": "Kolibri (USA, Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Kolibri (USA, Europe)",
+        "scores": {
+          "metacritic": 7.7,
+          "historical": 5.1,
+          "v_list": 8.1,
+          "console_significance": 6.9,
+          "mods_hacks": 2.2
+        },
+        "explanations": {
+          "metacritic": "Kolibri (USA, Europe) has solid standing in terms of Critical acclaim and review scores.",
+          "historical": "Kolibri (USA, Europe) has adequate standing in terms of Historical significance and innovation.",
+          "v_list": "For v_list, Kolibri (USA, Europe) is excellent.",
+          "console_significance": "This title shows reasonable qualities for console_significance.",
+          "mods_hacks": "Based on random evaluation, Kolibri (USA, Europe) receives below average marks for mods_hacks."
+        },
+        "overall_score": 6.0,
+        "confidence": 0.74,
+        "_evaluation_time": 0.0005853176116943359,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Metal Head (Europe) (En,Ja)",
+      "id": "Metal Head (Europe) (En,Ja)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Metal Head (Europe) (En,Ja)",
+        "scores": {
+          "metacritic": 3.3,
+          "historical": 2.2,
+          "v_list": 8.4,
+          "console_significance": 9.8,
+          "mods_hacks": 1.1
+        },
+        "explanations": {
+          "metacritic": "This title demonstrates minimal standing regarding Critical acclaim and review scores.",
+          "historical": "Metal Head (Europe) (En,Ja) has minimal significance in terms of Historical significance and innovation.",
+          "v_list": "Metal Head (Europe) (En,Ja) scores highly on v_list.",
+          "console_significance": "Based on random evaluation, Metal Head (Europe) (En,Ja) receives top marks for console_significance.",
+          "mods_hacks": "This title demonstrates questionable standing regarding mods_hacks."
+        },
+        "overall_score": 5.0,
+        "confidence": 0.67,
+        "_evaluation_time": 0.0008909702301025391,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Mortal Kombat II (Europe)",
+      "id": "Mortal Kombat II (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Mortal Kombat II (Europe)",
+        "scores": {
+          "metacritic": 4.5,
+          "historical": 5.1,
+          "v_list": 5.9,
+          "console_significance": 3.8,
+          "mods_hacks": 1.7
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, Mortal Kombat II (Europe) shows below average qualities.",
+          "historical": "Mortal Kombat II (Europe) has reasonable standing in terms of Historical significance and innovation.",
+          "v_list": "For v_list, Mortal Kombat II (Europe) performs at a solid level.",
+          "console_significance": "Mortal Kombat II (Europe) has below average significance in terms of console_significance.",
+          "mods_hacks": "Based on random evaluation, Mortal Kombat II (Europe) receives limited marks for mods_hacks."
+        },
+        "overall_score": 4.2,
+        "confidence": 0.85,
+        "_evaluation_time": 0.0006396770477294922,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Motherbase (Europe)",
+      "id": "Motherbase (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Motherbase (Europe)",
+        "scores": {
+          "metacritic": 7.5,
+          "historical": 1.9,
+          "v_list": 8.3,
+          "console_significance": 8.0,
+          "mods_hacks": 2.4
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, Motherbase (Europe) has adequate marks for Critical acclaim and review scores.",
+          "historical": "Motherbase (Europe) has modest significance in terms of Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Motherbase (Europe) receives top marks for v_list.",
+          "console_significance": "This title shows excellent qualities regarding console_significance.",
+          "mods_hacks": "This title demonstrates limited standing regarding mods_hacks."
+        },
+        "overall_score": 5.6,
+        "confidence": 0.77,
+        "_evaluation_time": 0.0009906291961669922,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Motocross Championship (Europe)",
+      "id": "Motocross Championship (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Motocross Championship (Europe)",
+        "scores": {
+          "metacritic": 5.7,
+          "historical": 3.7,
+          "v_list": 3.1,
+          "console_significance": 8.3,
+          "mods_hacks": 7.4
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, Motocross Championship (Europe) has good marks for Critical acclaim and review scores.",
+          "historical": "This title demonstrates questionable standing regarding Historical significance and innovation.",
+          "v_list": "This title demonstrates minimal standing regarding v_list.",
+          "console_significance": "This title shows excellent qualities regarding console_significance.",
+          "mods_hacks": "Based on random evaluation, Motocross Championship (Europe) has good marks for mods_hacks."
+        },
+        "overall_score": 5.6,
+        "confidence": 0.76,
+        "_evaluation_time": 0.00029158592224121094,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "NBA Jam - Tournament Edition (World)",
+      "id": "NBA Jam - Tournament Edition (World)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "NBA Jam - Tournament Edition (World)",
+        "scores": {
+          "metacritic": 6.3,
+          "historical": 1.4,
+          "v_list": 3.7,
+          "console_significance": 6.8,
+          "mods_hacks": 3.8
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, NBA Jam - Tournament Edition (World) performs at a reasonable level.",
+          "historical": "This title demonstrates minimal standing regarding Historical significance and innovation.",
+          "v_list": "This title demonstrates questionable standing regarding v_list.",
+          "console_significance": "For console_significance, NBA Jam - Tournament Edition (World) performs at a reasonable level.",
+          "mods_hacks": "This title demonstrates modest standing regarding mods_hacks."
+        },
+        "overall_score": 4.4,
+        "confidence": 0.79,
+        "_evaluation_time": 0.00029778480529785156,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "NFL Quarterback Club (World)",
+      "id": "NFL Quarterback Club (World)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "NFL Quarterback Club (World)",
+        "scores": {
+          "metacritic": 6.5,
+          "historical": 7.1,
+          "v_list": 4.2,
+          "console_significance": 8.0,
+          "mods_hacks": 8.1
+        },
+        "explanations": {
+          "metacritic": "NFL Quarterback Club (World) has decent standing in terms of Critical acclaim and review scores.",
+          "historical": "NFL Quarterback Club (World) has good standing in terms of Historical significance and innovation.",
+          "v_list": "This title demonstrates questionable standing regarding v_list.",
+          "console_significance": "This title shows excellent qualities regarding console_significance.",
+          "mods_hacks": "For mods_hacks, NFL Quarterback Club (World) is exceptional."
+        },
+        "overall_score": 6.8,
+        "confidence": 0.77,
+        "_evaluation_time": 0.0002701282501220703,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Pitfall - The Mayan Adventure (USA)",
+      "id": "Pitfall - The Mayan Adventure (USA)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Pitfall - The Mayan Adventure (USA)",
+        "scores": {
+          "metacritic": 9.2,
+          "historical": 3.2,
+          "v_list": 2.2,
+          "console_significance": 3.5,
+          "mods_hacks": 1.9
+        },
+        "explanations": {
+          "metacritic": "Pitfall - The Mayan Adventure (USA) scores highly on Critical acclaim and review scores.",
+          "historical": "This title demonstrates questionable standing regarding Historical significance and innovation.",
+          "v_list": "For v_list, Pitfall - The Mayan Adventure (USA) shows minimal qualities.",
+          "console_significance": "Based on random evaluation, Pitfall - The Mayan Adventure (USA) receives modest marks for console_significance.",
+          "mods_hacks": "This title demonstrates minimal standing regarding mods_hacks."
+        },
+        "overall_score": 4.0,
+        "confidence": 0.71,
+        "_evaluation_time": 0.00057220458984375,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Primal Rage (USA, Europe)",
+      "id": "Primal Rage (USA, Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Primal Rage (USA, Europe)",
+        "scores": {
+          "metacritic": 1.5,
+          "historical": 7.8,
+          "v_list": 6.0,
+          "console_significance": 1.7,
+          "mods_hacks": 7.1
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, Primal Rage (USA, Europe) receives minimal marks for Critical acclaim and review scores.",
+          "historical": "Primal Rage (USA, Europe) has solid standing in terms of Historical significance and innovation.",
+          "v_list": "This title shows decent qualities for v_list.",
+          "console_significance": "Primal Rage (USA, Europe) has below average significance in terms of console_significance.",
+          "mods_hacks": "For mods_hacks, Primal Rage (USA, Europe) performs at a solid level."
+        },
+        "overall_score": 4.8,
+        "confidence": 0.72,
+        "_evaluation_time": 0.0007975101470947266,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "RBI Baseball '95 (USA)",
+      "id": "RBI Baseball '95 (USA)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "RBI Baseball '95 (USA)",
+        "scores": {
+          "metacritic": 8.4,
+          "historical": 7.9,
+          "v_list": 2.5,
+          "console_significance": 2.2,
+          "mods_hacks": 7.6
+        },
+        "explanations": {
+          "metacritic": "RBI Baseball '95 (USA) scores highly on Critical acclaim and review scores.",
+          "historical": "RBI Baseball '95 (USA) has good standing in terms of Historical significance and innovation.",
+          "v_list": "This title demonstrates below average standing regarding v_list.",
+          "console_significance": "RBI Baseball '95 (USA) has minimal significance in terms of console_significance.",
+          "mods_hacks": "For mods_hacks, RBI Baseball '95 (USA) performs at a reasonable level."
+        },
+        "overall_score": 5.7,
+        "confidence": 0.81,
+        "_evaluation_time": 0.0007655620574951172,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Space Harrier (Europe)",
+      "id": "Space Harrier (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Space Harrier (Europe)",
+        "scores": {
+          "metacritic": 7.7,
+          "historical": 5.5,
+          "v_list": 1.9,
+          "console_significance": 5.4,
+          "mods_hacks": 1.0
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, Space Harrier (Europe) performs at a solid level.",
+          "historical": "For Historical significance and innovation, Space Harrier (Europe) performs at a solid level.",
+          "v_list": "This title demonstrates modest standing regarding v_list.",
+          "console_significance": "For console_significance, Space Harrier (Europe) performs at a good level.",
+          "mods_hacks": "Based on random evaluation, Space Harrier (Europe) receives limited marks for mods_hacks."
+        },
+        "overall_score": 4.3,
+        "confidence": 0.87,
+        "_evaluation_time": 0.0007169246673583984,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Star Trek - Starfleet Academy - Starship Bridge Simulator (USA)",
+      "id": "Star Trek - Starfleet Academy - Starship Bridge Simulator (USA)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Star Trek - Starfleet Academy - Starship Bridge Simulator (USA)",
+        "scores": {
+          "metacritic": 8.5,
+          "historical": 5.7,
+          "v_list": 4.0,
+          "console_significance": 8.1,
+          "mods_hacks": 8.4
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, Star Trek - Starfleet Academy - Starship Bridge Simulator (USA) is impressive.",
+          "historical": "Star Trek - Starfleet Academy - Starship Bridge Simulator (USA) has good standing in terms of Historical significance and innovation.",
+          "v_list": "For v_list, Star Trek - Starfleet Academy - Starship Bridge Simulator (USA) shows below average qualities.",
+          "console_significance": "This title shows impressive qualities regarding console_significance.",
+          "mods_hacks": "Based on random evaluation, Star Trek - Starfleet Academy - Starship Bridge Simulator (USA) receives top marks for mods_hacks."
+        },
+        "overall_score": 6.9,
+        "confidence": 0.76,
+        "_evaluation_time": 0.0017404556274414062,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Star Wars Arcade (Europe)",
+      "id": "Star Wars Arcade (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Star Wars Arcade (Europe)",
+        "scores": {
+          "metacritic": 3.1,
+          "historical": 5.5,
+          "v_list": 9.0,
+          "console_significance": 6.0,
+          "mods_hacks": 2.5
+        },
+        "explanations": {
+          "metacritic": "This title demonstrates below average standing regarding Critical acclaim and review scores.",
+          "historical": "This title shows decent qualities for Historical significance and innovation.",
+          "v_list": "For v_list, Star Wars Arcade (Europe) is excellent.",
+          "console_significance": "This title shows decent qualities for console_significance.",
+          "mods_hacks": "Star Wars Arcade (Europe) has limited significance in terms of mods_hacks."
+        },
+        "overall_score": 5.2,
+        "confidence": 0.83,
+        "_evaluation_time": 0.00034427642822265625,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Stellar Assault (USA, Europe)",
+      "id": "Stellar Assault (USA, Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Stellar Assault (USA, Europe)",
+        "scores": {
+          "metacritic": 6.1,
+          "historical": 4.1,
+          "v_list": 1.8,
+          "console_significance": 1.1,
+          "mods_hacks": 5.8
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, Stellar Assault (USA, Europe) performs at a adequate level.",
+          "historical": "For Historical significance and innovation, Stellar Assault (USA, Europe) shows limited qualities.",
+          "v_list": "This title demonstrates questionable standing regarding v_list.",
+          "console_significance": "Stellar Assault (USA, Europe) has below average significance in terms of console_significance.",
+          "mods_hacks": "This title shows reasonable qualities for mods_hacks."
+        },
+        "overall_score": 3.8,
+        "confidence": 0.89,
+        "_evaluation_time": 0.00037097930908203125,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "T-MEK (USA, Europe)",
+      "id": "T-MEK (USA, Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "T-MEK (USA, Europe)",
+        "scores": {
+          "metacritic": 8.9,
+          "historical": 2.7,
+          "v_list": 9.1,
+          "console_significance": 9.2,
+          "mods_hacks": 6.6
+        },
+        "explanations": {
+          "metacritic": "This title shows exceptional qualities regarding Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, T-MEK (USA, Europe) receives modest marks for Historical significance and innovation.",
+          "v_list": "This title shows outstanding qualities regarding v_list.",
+          "console_significance": "T-MEK (USA, Europe) scores highly on console_significance.",
+          "mods_hacks": "This title shows solid qualities for mods_hacks."
+        },
+        "overall_score": 7.3,
+        "confidence": 0.89,
+        "_evaluation_time": 0.0004115104675292969,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Tempo (Japan, USA) (En)",
+      "id": "Tempo (Japan, USA) (En)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Tempo (Japan, USA) (En)",
+        "scores": {
+          "metacritic": 4.6,
+          "historical": 2.9,
+          "v_list": 5.4,
+          "console_significance": 6.6,
+          "mods_hacks": 1.4
+        },
+        "explanations": {
+          "metacritic": "Tempo (Japan, USA) (En) has minimal significance in terms of Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Tempo (Japan, USA) (En) receives limited marks for Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Tempo (Japan, USA) (En) has decent marks for v_list.",
+          "console_significance": "Based on random evaluation, Tempo (Japan, USA) (En) has reasonable marks for console_significance.",
+          "mods_hacks": "This title demonstrates minimal standing regarding mods_hacks."
+        },
+        "overall_score": 4.2,
+        "confidence": 0.66,
+        "_evaluation_time": 0.00037741661071777344,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Toughman Contest (USA, Europe)",
+      "id": "Toughman Contest (USA, Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Toughman Contest (USA, Europe)",
+        "scores": {
+          "metacritic": 6.3,
+          "historical": 4.4,
+          "v_list": 2.3,
+          "console_significance": 8.5,
+          "mods_hacks": 8.2
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, Toughman Contest (USA, Europe) performs at a reasonable level.",
+          "historical": "Toughman Contest (USA, Europe) has limited significance in terms of Historical significance and innovation.",
+          "v_list": "For v_list, Toughman Contest (USA, Europe) shows below average qualities.",
+          "console_significance": "Based on random evaluation, Toughman Contest (USA, Europe) receives top marks for console_significance.",
+          "mods_hacks": "For mods_hacks, Toughman Contest (USA, Europe) is outstanding."
+        },
+        "overall_score": 5.9,
+        "confidence": 0.88,
+        "_evaluation_time": 0.00039196014404296875,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Virtua Fighter (Europe)",
+      "id": "Virtua Fighter (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Virtua Fighter (Europe)",
+        "scores": {
+          "metacritic": 7.2,
+          "historical": 10.0,
+          "v_list": 9.6,
+          "console_significance": 8.5,
+          "mods_hacks": 6.1
+        },
+        "explanations": {
+          "metacritic": "For Critical acclaim and review scores, Virtua Fighter (Europe) performs at a reasonable level.",
+          "historical": "Based on random evaluation, Virtua Fighter (Europe) receives top marks for Historical significance and innovation.",
+          "v_list": "For v_list, Virtua Fighter (Europe) is outstanding.",
+          "console_significance": "This title shows impressive qualities regarding console_significance.",
+          "mods_hacks": "Virtua Fighter (Europe) has reasonable standing in terms of mods_hacks."
+        },
+        "overall_score": 8.3,
+        "confidence": 0.79,
+        "_evaluation_time": 0.0004420280456542969,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "Virtua Racing Deluxe (Europe)",
+      "id": "Virtua Racing Deluxe (Europe)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "Virtua Racing Deluxe (Europe)",
+        "scores": {
+          "metacritic": 6.3,
+          "historical": 7.1,
+          "v_list": 6.4,
+          "console_significance": 8.7,
+          "mods_hacks": 2.2
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, Virtua Racing Deluxe (Europe) has decent marks for Critical acclaim and review scores.",
+          "historical": "Virtua Racing Deluxe (Europe) has good standing in terms of Historical significance and innovation.",
+          "v_list": "For v_list, Virtua Racing Deluxe (Europe) performs at a good level.",
+          "console_significance": "For console_significance, Virtua Racing Deluxe (Europe) is remarkable.",
+          "mods_hacks": "Based on random evaluation, Virtua Racing Deluxe (Europe) receives questionable marks for mods_hacks."
+        },
+        "overall_score": 6.1,
+        "confidence": 0.82,
+        "_evaluation_time": 0.0003581047058105469,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "WWF Raw (World)",
+      "id": "WWF Raw (World)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "WWF Raw (World)",
+        "scores": {
+          "metacritic": 7.0,
+          "historical": 8.5,
+          "v_list": 7.4,
+          "console_significance": 3.9,
+          "mods_hacks": 6.6
+        },
+        "explanations": {
+          "metacritic": "Based on random evaluation, WWF Raw (World) has reasonable marks for Critical acclaim and review scores.",
+          "historical": "WWF Raw (World) scores highly on Historical significance and innovation.",
+          "v_list": "For v_list, WWF Raw (World) performs at a adequate level.",
+          "console_significance": "For console_significance, WWF Raw (World) shows modest qualities.",
+          "mods_hacks": "Based on random evaluation, WWF Raw (World) has solid marks for mods_hacks."
+        },
+        "overall_score": 6.7,
+        "confidence": 0.75,
+        "_evaluation_time": 0.0003981590270996094,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "WWF WrestleMania - The Arcade Game (USA)",
+      "id": "WWF WrestleMania - The Arcade Game (USA)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "WWF WrestleMania - The Arcade Game (USA)",
+        "scores": {
+          "metacritic": 5.2,
+          "historical": 6.7,
+          "v_list": 2.4,
+          "console_significance": 1.6,
+          "mods_hacks": 9.3
+        },
+        "explanations": {
+          "metacritic": "This title shows good qualities for Critical acclaim and review scores.",
+          "historical": "This title shows decent qualities for Historical significance and innovation.",
+          "v_list": "Based on random evaluation, WWF WrestleMania - The Arcade Game (USA) receives modest marks for v_list.",
+          "console_significance": "For console_significance, WWF WrestleMania - The Arcade Game (USA) shows questionable qualities.",
+          "mods_hacks": "For mods_hacks, WWF WrestleMania - The Arcade Game (USA) is remarkable."
+        },
+        "overall_score": 5.0,
+        "confidence": 0.92,
+        "_evaluation_time": 0.0003981590270996094,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    },
+    {
+      "name": "World Series Baseball Starring Deion Sanders (USA)",
+      "id": "World Series Baseball Starring Deion Sanders (USA)",
+      "evaluation": {
+        "game_id": "unknown",
+        "game_name": "World Series Baseball Starring Deion Sanders (USA)",
+        "scores": {
+          "metacritic": 8.9,
+          "historical": 4.1,
+          "v_list": 9.1,
+          "console_significance": 7.1,
+          "mods_hacks": 8.9
+        },
+        "explanations": {
+          "metacritic": "This title shows outstanding qualities regarding Critical acclaim and review scores.",
+          "historical": "This title demonstrates questionable standing regarding Historical significance and innovation.",
+          "v_list": "For v_list, World Series Baseball Starring Deion Sanders (USA) is impressive.",
+          "console_significance": "For console_significance, World Series Baseball Starring Deion Sanders (USA) performs at a adequate level.",
+          "mods_hacks": "For mods_hacks, World Series Baseball Starring Deion Sanders (USA) is exceptional."
+        },
+        "overall_score": 7.6,
+        "confidence": 0.71,
+        "_evaluation_time": 0.00042176246643066406,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.0,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 7.0,
+          "mods_hacks": 6.0
+        },
+        "_weights_used": {
+          "metacritic": 0.35,
+          "historical": 0.25,
+          "v_list": 0.15,
+          "console_significance": 0.15,
+          "mods_hacks": 0.1
+        }
+      }
+    }
+  ]
+}

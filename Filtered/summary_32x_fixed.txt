@@ -1,0 +1,22 @@
+DAT Filter AI - Filtering Summary
+==============================
+Date: 2025-05-08 11:09:42
+Original game count: 33
+Filtered game count: 33
+Reduction: 0 games (0.0% of collection)
+
+Filter Criteria:
+---------------
+- metacritic
+- historical
+- v_list
+- console_significance
+- mods_hacks
+
+Top 5 Games (Highest Quality Scores):
+----------------------------------------
+1. Virtua Fighter (Europe) - Score: 8.30/10
+2. World Series Baseball Starring Deion Sanders (USA) - Score: 7.60/10
+3. T-MEK (USA, Europe) - Score: 7.30/10
+4. Star Trek - Starfleet Academy - Starship Bridge Simulator (USA) - Score: 6.90/10
+5. NFL Quarterback Club (World) - Score: 6.80/10

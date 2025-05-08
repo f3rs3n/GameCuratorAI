@@ -177,8 +177,17 @@ def main():
 
             # Show batch results if available
             if last_batch_results and current < total:
+                # Count stats
+                kept_count = len([g for g in last_batch_results if g.get('keep', False)])
+                removed_count = len(last_batch_results) - kept_count
+                
                 # Show recent game evaluations with color coding
                 sys.stdout.write("\n\nRecent games processed:")
+                
+                # Display batch summary
+                sys.stdout.write(f"\n  Last batch: {visualizer.get_color('success')}{kept_count} kept{visualizer.get_color('reset')}, ")
+                sys.stdout.write(f"{visualizer.get_color('error')}{removed_count} removed{visualizer.get_color('reset')}\n")
+                
                 for idx, result in enumerate(last_batch_results[-5:]):  # Show up to 5 recent games
                     game_name = result.get("game_name", "Unknown Game")
                     keep = result.get("keep", False)
