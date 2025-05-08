@@ -142,6 +142,9 @@ class DatParser:
         """
         games = []
         
+        # Extract header first (so we can add it to every game)
+        header = self._extract_header(root)
+        
         # Common game entry tag names in different DAT formats
         game_tags = ['game', 'machine', 'software', 'rom']
         
@@ -151,6 +154,9 @@ class DatParser:
             if entries:
                 for entry in entries:
                     game_data = {'tag': tag, 'attrib': dict(entry.attrib)}
+                    
+                    # Add header information to every game for context
+                    game_data['_header'] = header
                     
                     # Extract the name (handles different formats)
                     if 'name' in entry.attrib:

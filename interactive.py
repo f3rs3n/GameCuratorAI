@@ -224,14 +224,21 @@ class InteractiveMenu:
         # Simple header
         self._print_header("DAT FILTER AI - GAME COLLECTION CURATOR")
         
-        # Show DAT info
+        # Show DAT info with safer data access
         if self.current_dat_file:
             basename = os.path.basename(self.current_dat_file)
             if len(basename) > 40:
                 basename = basename[:37] + "..."
             
             self._print_data("Current DAT", basename)
-            self._print_data("Game Count", str(self.parsed_data['game_count']))
+            
+            # Safe access to game_count with fallback
+            game_count = "Unknown"
+            if self.parsed_data and 'game_count' in self.parsed_data:
+                game_count = str(self.parsed_data['game_count'])
+            
+            self._print_data("Game Count", game_count)
+            
             if self.filtered_games:
                 self._print_data("Filtered", f"{len(self.filtered_games)} games kept")
             else:
@@ -357,10 +364,16 @@ class InteractiveMenu:
             self.evaluations = []
             
             # Process the collection to identify special cases
-            result = self.rule_engine.process_collection(self.parsed_data['games'])
-            self.special_cases = result['special_cases']
+            if 'games' in self.parsed_data:
+                result = self.rule_engine.process_collection(self.parsed_data['games'])
+                self.special_cases = result.get('special_cases', {}) if result else {}
+            else:
+                self._print_warning("No games found in DAT file")
+                self.special_cases = {}
             
-            self._print_success(f"Successfully loaded DAT file with {self.parsed_data['game_count']} games")
+            # Safe access to game count
+            game_count = self.parsed_data.get('game_count', 0)
+            self._print_success(f"Successfully loaded DAT file with {game_count} games")
             self._wait_for_key()
             
         except Exception as e:
@@ -692,9 +705,15 @@ class InteractiveMenu:
         self._clear_screen()
         self._print_header("Applying Filters")
         
-        # Show filtering details
+        # Show filtering details with safe access to data
         self._print_info(f"DAT File: {os.path.basename(self.current_dat_file)}")
-        self._print_info(f"Game Count: {self.parsed_data['game_count']}")
+        
+        # Safe access to game count
+        game_count = "Unknown"
+        if self.parsed_data and 'game_count' in self.parsed_data:
+            game_count = str(self.parsed_data['game_count'])
+            
+        self._print_info(f"Game Count: {game_count}")
         self._print_info(f"Provider: {self.settings['provider'].upper()}")
         self._print_info(f"Batch Size: {self.settings['batch_size']}")
         criteria_str = ", ".join(self.settings['criteria'])
@@ -729,21 +748,39 @@ class InteractiveMenu:
                     removed = len(batch_results) - kept
                     self._print_info(f"Last batch: {kept} kept, {removed} removed")
             
-            # Apply the filters
+            # Apply the filters safely with fallback
+            if not self.parsed_data or 'games' not in self.parsed_data:
+                raise ValueError("No valid game data found. Please reload the DAT file.")
+                
+            if not self.filter_engine:
+                raise ValueError("Filter engine not initialized properly")
+                
+            games_to_filter = self.parsed_data.get('games', [])
             result = self.filter_engine.filter_collection(
-                self.parsed_data['games'],
+                games_to_filter,
                 criteria=self.settings['criteria'],
                 batch_size=self.settings['batch_size'],
                 progress_callback=progress_callback
             )
             
-            # Process result - result is a tuple of (filtered_games, evaluations, provider_error)
-            self.filtered_games, self.evaluations, provider_error = result
+            # Process result - handle both 3-item and 2-item tuples for backward compatibility
+            if result and isinstance(result, tuple):
+                if len(result) == 3:
+                    self.filtered_games, self.evaluations, provider_error = result
+                elif len(result) == 2:
+                    self.filtered_games, self.evaluations = result
+                    provider_error = None
+                else:
+                    raise ValueError(f"Unexpected result format from filter_engine: {result}")
+            else:
+                raise ValueError("Filter engine returned invalid result")
             
             # Check for provider errors
             if provider_error:
                 print("\n")  # Clear the progress bar line
-                error_msg = provider_error.get('provider_error', 'Unknown provider error')
+                error_msg = 'Unknown provider error'
+                if isinstance(provider_error, dict) and 'provider_error' in provider_error:
+                    error_msg = provider_error['provider_error']
                 self._print_error(f"Provider error: {error_msg}")
                 
                 # Provide helpful information about how to fix the issue
@@ -771,19 +808,41 @@ class InteractiveMenu:
                     
                     # Retry with random provider
                     self._print_info("Retrying with Random provider for TESTING ONLY...")
+                    
+                    # Check if filter engine is initialized
+                    if not self.filter_engine:
+                        self._print_error("Filter engine not properly initialized")
+                        return
+                        
+                    # Safely get games with fallback
+                    games_to_filter = self.parsed_data.get('games', []) if self.parsed_data else []
                     result = self.filter_engine.filter_collection(
-                        self.parsed_data['games'],
+                        games_to_filter,
                         criteria=self.settings['criteria'],
                         batch_size=self.settings['batch_size'],
                         progress_callback=progress_callback
                     )
                     
-                    # Process result
-                    self.filtered_games, self.evaluations, provider_error = result
+                    # Process result with safe handling of different return formats
+                    if result and isinstance(result, tuple):
+                        if len(result) == 3:
+                            self.filtered_games, self.evaluations, provider_error = result
+                        elif len(result) == 2:
+                            self.filtered_games, self.evaluations = result
+                            provider_error = None
+                        else:
+                            self._print_error(f"Unexpected result format from filter engine: {result}")
+                            return
+                    else:
+                        self._print_error("Filter engine returned invalid result")
+                        return
                     
                     # If we still have an error, give up
                     if provider_error:
-                        self._print_error(f"Still having issues: {provider_error.get('provider_error', 'Unknown error')}")
+                        error_msg = 'Unknown error'
+                        if isinstance(provider_error, dict) and 'provider_error' in provider_error:
+                            error_msg = provider_error['provider_error']
+                        self._print_error(f"Still having issues: {error_msg}")
                         return
                     
                     # Remind user they're in testing mode
@@ -804,9 +863,9 @@ class InteractiveMenu:
                 rules_config = {"multi_disc": {"mode": "all_or_none", "prefer": "complete"}}
                 self.filtered_games = self.rule_engine.apply_rules_to_filtered_games(self.filtered_games, rules_config)
             
-            # Show final statistics
-            original_count = self.parsed_data['game_count']
-            filtered_count = len(self.filtered_games)
+            # Show final statistics with safe access to parsed_data
+            original_count = self.parsed_data.get('game_count', 0) if self.parsed_data else 0
+            filtered_count = len(self.filtered_games) if self.filtered_games else 0
             reduction = original_count - filtered_count
             reduction_pct = (reduction / original_count * 100) if original_count > 0 else 0
             
@@ -870,7 +929,9 @@ class InteractiveMenu:
     
     def _export_filtered_dat(self):
         """Export filtered games to a DAT file"""
-        default_filename = f"filtered_{os.path.basename(self.current_dat_file)}"
+        # Handle case when current_dat_file might be None
+        basename = os.path.basename(self.current_dat_file) if self.current_dat_file else "filtered.dat"
+        default_filename = f"filtered_{basename}"
         output_dir = self.settings['output_dir']
         
         if not os.path.exists(output_dir):
@@ -880,9 +941,16 @@ class InteractiveMenu:
         custom_path = self._get_user_input("Output path (press Enter for default)", output_path)
         
         try:
+            # Make sure we have valid data before proceeding
+            if not self.filtered_games:
+                raise ValueError("No filtered games to export")
+                
+            if not self.parsed_data:
+                raise ValueError("No original data available for export")
+                
             result = self.export_manager.export_dat_file(
                 filtered_games=self.filtered_games,
-                original_data=self.parsed_data,
+                original_data=self.parsed_data, 
                 output_path=custom_path
             )
             
@@ -895,20 +963,32 @@ class InteractiveMenu:
     
     def _export_json_report(self):
         """Export a JSON report of the filtering results"""
-        default_filename = f"report_{os.path.splitext(os.path.basename(self.current_dat_file))[0]}.json"
+        # Handle case when current_dat_file might be None
+        basename = "report.json"
+        if self.current_dat_file:
+            filename = os.path.basename(self.current_dat_file)
+            basename = f"report_{os.path.splitext(filename)[0] if '.' in filename else filename}.json"
+            
         output_dir = self.settings['output_dir']
         
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
             
-        output_path = os.path.join(output_dir, default_filename)
+        output_path = os.path.join(output_dir, basename)
         custom_path = self._get_user_input("Output path (press Enter for default)", output_path)
         
         try:
+            # Make sure we have valid data before proceeding
+            if not self.filtered_games:
+                raise ValueError("No filtered games to export")
+                
+            if not self.evaluations:
+                raise ValueError("No game evaluations available for export")
+                
             result = self.export_manager.export_json_report(
                 filtered_games=self.filtered_games,
                 evaluations=self.evaluations,
-                special_cases=self.special_cases,
+                special_cases=self.special_cases or {},  # Provide empty dict as fallback
                 output_path=custom_path
             )
             
@@ -921,19 +1001,27 @@ class InteractiveMenu:
     
     def _export_text_summary(self):
         """Export a text summary of the filtering results"""
-        default_filename = f"summary_{os.path.splitext(os.path.basename(self.current_dat_file))[0]}.txt"
+        # Handle case when current_dat_file might be None
+        basename = "summary.txt"
+        if self.current_dat_file:
+            filename = os.path.basename(self.current_dat_file)
+            basename = f"summary_{os.path.splitext(filename)[0] if '.' in filename else filename}.txt"
+            
         output_dir = self.settings['output_dir']
         
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
             
-        output_path = os.path.join(output_dir, default_filename)
+        output_path = os.path.join(output_dir, basename)
         custom_path = self._get_user_input("Output path (press Enter for default)", output_path)
         
         try:
+            # Safe access to game_count with fallback
+            original_count = self.parsed_data.get('game_count', 0) if self.parsed_data else 0
+            
             result = self.export_manager.export_text_summary(
                 filtered_games=self.filtered_games,
-                original_count=self.parsed_data['game_count'],
+                original_count=original_count,
                 filter_criteria=self.settings['criteria'],
                 output_path=custom_path
             )

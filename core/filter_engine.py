@@ -229,15 +229,46 @@ class FilterEngine:
         
         # Extract console information if available
         consoles = set()
+        
+        # First try to get console name from the first game's header info (if present)
+        if collection and "_header" in collection[0]:
+            header = collection[0]["_header"]
+            if header:
+                for key in ["name", "description"]:
+                    if key in header and header[key]:
+                        # Extract console name from header (usually in format "Brand - Console Name")
+                        header_value = header[key]
+                        if " - " in header_value:
+                            # Extract just the console name part
+                            brand, console = header_value.split(" - ", 1)
+                            # Remove any parenthetical text
+                            if "(" in console:
+                                console = console.split("(", 1)[0].strip()
+                            consoles.add(console.strip())
+                        else:
+                            consoles.add(header_value)
+        
+        # Also check for console info in game entries
         for game in collection:
             for key in ["console", "platform", "system"]:
                 if key in game and isinstance(game[key], dict) and game[key].get("text"):
                     consoles.add(game[key]["text"])
         
+        # Get the primary console if available, otherwise join all detected consoles
+        primary_console = ""
+        if consoles:
+            # Try to find the most specific console name
+            if len(consoles) == 1:
+                primary_console = list(consoles)[0]
+            else:
+                # If multiple consoles, use the most specific one (usually the longest name)
+                primary_console = max(consoles, key=len)
+        
         return {
             "collection_size": len(collection),
             "sample_games": game_names,
             "consoles": list(consoles),
+            "console": primary_console,  # Add single primary console for the AI provider
             "evaluation_criteria": list(self.threshold_scores.keys()),
             "threshold_scores": self.threshold_scores,
             "criteria_weights": self.criteria_weights,
