@@ -1,9 +1,9 @@
 DAT Filter AI - Filtering Summary
 ==============================
-Date: 2025-05-08 15:10:24
+Date: 2025-05-08 15:23:11
 Original game count: 77
-Filtered game count: 59
-Reduction: 18 games (23.4% of collection)
+Filtered game count: 54
+Reduction: 23 games (29.9% of collection)
 
 Filter Criteria:
 ---------------
@@ -16,34 +16,34 @@ Filter Criteria:
 Criteria Analysis:
 -----------------
 Strongest criteria in the collection:
-- Console Significance: 29 games (49.2%)
-- V List: 28 games (47.5%)
-- Historical: 24 games (40.7%)
-- Metacritic: 20 games (33.9%)
-- Mods Hacks: 17 games (28.8%)
+- V List: 30 games (55.6%)
+- Console Significance: 22 games (40.7%)
+- Mods Hacks: 22 games (40.7%)
+- Historical: 21 games (38.9%)
+- Metacritic: 13 games (24.1%)
 
 Weakest criteria in the collection:
-- Mods Hacks: 29 games (49.2%)
-- Metacritic: 25 games (42.4%)
-- V List: 24 games (40.7%)
-- Historical: 21 games (35.6%)
-- Console Significance: 19 games (32.2%)
+- Metacritic: 24 games (44.4%)
+- Mods Hacks: 24 games (44.4%)
+- Console Significance: 23 games (42.6%)
+- Historical: 21 games (38.9%)
+- V List: 16 games (29.6%)
 
-Low Score Exceptions: 6 games (10.2%)
+Low Score Exceptions: 6 games (11.1%)
 These are games kept despite low scores due to other important factors.
 
-Top 5 Games (Highest Quality Scores):
+Highest Scoring Games (5):
 ----------------------------------------
-1. Castle Blast (USA) (Unl) - Score: 8.00/10 - Strong: Metacritic, V List - Weak: Historical, Mods Hacks
-2. BerZerk (USA) - Score: 7.60/10 - Strong: Mods Hacks, Historical - Weak: V List, Metacritic
-3. Q-bert (USA) - Score: 7.60/10 - Strong: Metacritic, Historical - Weak: Console Significance, V List
-4. David Crane's Pitfall II - Lost Caverns (USA) - Score: 7.40/10 - Strong: Console Significance, V List - Weak: Metacritic, Historical
-5. Bounty Bob Strikes Back! (USA) - Score: 7.00/10 - Strong: Historical, V List - Weak: Metacritic, Console Significance
+1. Koffi - Yellow Kopter (USA) (Unl) - Score: 8.70/10 - Strong: Historical, Console Significance - Weak: Metacritic, Mods Hacks
+2. Star Wars - Return of the Jedi - Death Star Battle (USA) - Score: 8.10/10 - Strong: Historical, Console Significance - Weak: V List, Mods Hacks
+3. RealSports Football (USA) - Score: 7.80/10 - Strong: Mods Hacks, Historical - Weak: V List, Console Significance
+4. Carol Shaw's River Raid (USA) - Score: 7.70/10 - Strong: V List, Historical - Weak: Console Significance, Mods Hacks
+5. Star Wars - The Arcade Game (USA) - Score: 7.00/10 - Strong: Metacritic, V List - Weak: Console Significance, Historical
 
-Removed Games Preview (Lowest Scores):
+Removed Games Summary:
 ----------------------------------------
 These games didn't make the cut and were removed from the filtered collection:
-Total games removed: 18
+Total games removed: 23
 
 Note: To see the complete list of removed games, compare the original DAT
       file with the filtered output using a comparison tool.

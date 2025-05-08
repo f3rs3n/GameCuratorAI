@@ -267,7 +267,8 @@ class ExportManager:
                            original_count: int,
                            filter_criteria: List[str],
                            output_path: str,
-                           provider_name: str = None) -> Tuple[bool, str]:
+                           provider_name: str = None,
+                           metadata: Optional[Dict[str, Any]] = None) -> Tuple[bool, str]:
         """
         Export a human-readable text summary of the filtering results
         
@@ -276,6 +277,8 @@ class ExportManager:
             original_count: Number of games in the original collection
             filter_criteria: List of filtering criteria used
             output_path: Path to save the text summary
+            provider_name: Name of the AI provider used
+            metadata: Optional metadata containing original evaluations for near-miss games
             
         Returns:
             Tuple of (success, message)
@@ -302,10 +305,11 @@ class ExportManager:
             # Calculate proportional display size - show 10% of the collection size but min 5, max 30 games
             display_count = max(5, min(30, int(len(filtered_games) * 0.1)))
             
-            # Get top games (highest scores)
+            # Get top games (highest scores) and collect near-miss games
             top_games = []
             near_miss_games = []
             worst_games = []
+            excluded_games_with_scores = []
             
             # Sort games by quality score if available
             games_with_scores = []
@@ -321,6 +325,40 @@ class ExportManager:
             
             # Get top games
             top_games = [game for game, score in games_with_scores[:display_count]]
+            
+            # Try to get info about games that didn't make the cut
+            # These are typically excluded games that were close to qualifying
+            # This involves fetching data from the original game evaluations
+            if metadata is not None and 'original_evaluations' in metadata and metadata['original_evaluations']:
+                # Extract all games that were evaluated but not included
+                original_evals = metadata['original_evaluations']
+                
+                # List of all included game names for fast lookup
+                included_names = {game.get('name', '').strip() for game in filtered_games}
+                
+                # Find near-miss games - games that were evaluated but didn't make the cut
+                for eval_data in original_evals:
+                    if 'name' in eval_data and eval_data['name'].strip() not in included_names:
+                        score = 0
+                        if 'overall_score' in eval_data:
+                            try:
+                                score = float(eval_data['overall_score'])
+                            except (ValueError, TypeError):
+                                continue
+                        
+                        # Create a simpler game object with just the evaluation data
+                        near_miss_game = {
+                            'name': eval_data['name'],
+                            '_evaluation': eval_data
+                        }
+                        excluded_games_with_scores.append((near_miss_game, score))
+                
+                # Sort excluded games by score descending to get "near miss" games first
+                excluded_games_with_scores.sort(key=lambda x: x[1], reverse=True)
+                
+                # Take top N excluded games as "near miss" games
+                near_miss_count = min(display_count, len(excluded_games_with_scores))
+                near_miss_games = [game for game, score in excluded_games_with_scores[:near_miss_count]]
             
             # Get games that were excluded
             excluded_count = original_count - len(filtered_games)
@@ -382,10 +420,10 @@ class ExportManager:
                     summary.append(f"\nLow Score Exceptions: {low_score_keepers} games ({pct:.1f}%)")
                     summary.append("These are games kept despite low scores due to other important factors.")
             
-            # Top Games Section
+            # Top Games Section with improved title (change Top Games to Highest Scoring Games)
             summary.extend([
                 "",
-                f"Top {len(top_games)} Games (Highest Quality Scores):",
+                f"Highest Scoring Games ({len(top_games)}):",
                 "----------------------------------------"
             ])
             
@@ -414,16 +452,50 @@ class ExportManager:
                 
                 summary.append(game_line)
             
-            # Only show worst games if we have excluded games
+            # Add Near Miss Games Section - these are games that just missed the cut
+            if near_miss_games:
+                summary.extend([
+                    "",
+                    f"Near Miss Games ({len(near_miss_games)}):",
+                    "----------------------------------------",
+                    "These games were close to making the cut but fell just short:"
+                ])
+                
+                # Add near miss games with their scores and analysis
+                for i, game in enumerate(near_miss_games):
+                    score = 0
+                    eval_data = game.get('_evaluation', {})
+                    if eval_data and 'overall_score' in eval_data:
+                        score = float(eval_data['overall_score'])
+                    
+                    game_line = f"{i+1}. {game.get('name', 'Unknown')} - Score: {score:.2f}/10"
+                    
+                    # Add strengths/weaknesses if available in the evaluation data
+                    if eval_data and '_criteria_analysis' in eval_data:
+                        analysis = eval_data['_criteria_analysis']
+                        strengths = analysis.get('strongest_criteria', [])
+                        weaknesses = analysis.get('weakest_criteria', [])
+                        
+                        if strengths:
+                            strengths_str = ", ".join([s.replace("_", " ").title() for s in strengths])
+                            game_line += f" - Strong: {strengths_str}"
+                        
+                        if weaknesses:
+                            weaknesses_str = ", ".join([w.replace("_", " ").title() for w in weaknesses])
+                            game_line += f" - Weak: {weaknesses_str}"
+                    
+                    summary.append(game_line)
+            
+            # Only show removed games section if we have excluded games
             if excluded_count > 0:
                 summary.extend([
                     "",
-                    f"Removed Games Preview (Lowest Scores):",
+                    f"Removed Games Summary:",
                     "----------------------------------------",
                     f"These games didn't make the cut and were removed from the filtered collection:"
                 ])
                 
-                # Since we don't have the removed games list directly, we'll include a note
+                # Since we don't have the full removed games list directly, we'll include a note
                 summary.append(f"Total games removed: {excluded_count}")
                 summary.append("")
                 summary.append("Note: To see the complete list of removed games, compare the original DAT")

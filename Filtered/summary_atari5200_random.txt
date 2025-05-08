@@ -1,9 +1,9 @@
 DAT Filter AI - Filtering Summary
 ==============================
-Date: 2025-05-08 15:11:11
+Date: 2025-05-08 15:23:35
 Original game count: 77
-Filtered game count: 57
-Reduction: 20 games (26.0% of collection)
+Filtered game count: 53
+Reduction: 24 games (31.2% of collection)
 
 Filter Criteria:
 ---------------
@@ -16,34 +16,34 @@ Filter Criteria:
 Criteria Analysis:
 -----------------
 Strongest criteria in the collection:
-- V List: 34 games (59.6%)
-- Historical: 22 games (38.6%)
-- Console Significance: 20 games (35.1%)
-- Metacritic: 19 games (33.3%)
-- Mods Hacks: 19 games (33.3%)
+- Mods Hacks: 29 games (54.7%)
+- V List: 23 games (43.4%)
+- Metacritic: 20 games (37.7%)
+- Historical: 17 games (32.1%)
+- Console Significance: 17 games (32.1%)
 
 Weakest criteria in the collection:
-- Mods Hacks: 29 games (50.9%)
-- Metacritic: 26 games (45.6%)
-- Console Significance: 25 games (43.9%)
-- Historical: 18 games (31.6%)
-- V List: 16 games (28.1%)
+- Historical: 28 games (52.8%)
+- V List: 22 games (41.5%)
+- Console Significance: 22 games (41.5%)
+- Metacritic: 18 games (34.0%)
+- Mods Hacks: 16 games (30.2%)
 
-Low Score Exceptions: 13 games (22.8%)
+Low Score Exceptions: 7 games (13.2%)
 These are games kept despite low scores due to other important factors.
 
-Top 5 Games (Highest Quality Scores):
+Highest Scoring Games (5):
 ----------------------------------------
-1. Centipede (USA) - Score: 7.80/10 - Strong: V List, Console Significance - Weak: Historical, Metacritic
-2. Ms. Pac-Man (USA) - Score: 7.60/10 - Strong: Mods Hacks, Metacritic - Weak: Historical, Console Significance
-3. Wizard of Wor (USA) - Score: 7.50/10 - Strong: Historical, Metacritic - Weak: V List, Console Significance
-4. Atari PAM Diagnostics (USA) (v2.3) - Score: 7.30/10 - Strong: Mods Hacks, Historical - Weak: V List, Console Significance
-5. Activision Decathlon, The (USA) - Score: 7.10/10 - Strong: Console Significance, V List - Weak: Metacritic, Historical
+1. Quest for Quintana Roo (USA) - Score: 7.20/10 - Strong: Metacritic, V List - Weak: Historical, Console Significance
+2. David Crane's Pitfall II - Lost Caverns (USA) - Score: 6.90/10 - Strong: Console Significance, V List - Weak: Historical, Mods Hacks
+3. Montezuma's Revenge - Featuring Panama Joe (USA) - Score: 6.90/10 - Strong: Console Significance, Metacritic - Weak: Mods Hacks, V List
+4. Ms. Pac-Man (USA) - Score: 6.90/10 - Strong: V List, Mods Hacks - Weak: Historical, Console Significance
+5. Pac-Man (USA) - Score: 6.90/10 - Strong: Metacritic, Mods Hacks - Weak: Historical, Console Significance
 
-Removed Games Preview (Lowest Scores):
+Removed Games Summary:
 ----------------------------------------
 These games didn't make the cut and were removed from the filtered collection:
-Total games removed: 20
+Total games removed: 24
 
 Note: To see the complete list of removed games, compare the original DAT
       file with the filtered output using a comparison tool.

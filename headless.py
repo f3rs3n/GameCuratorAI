@@ -422,12 +422,19 @@ def main():
                 
             print(f"Exporting text summary to: {summary_path}")
             logger.info(f"Exporting text summary to: {summary_path}")
+            # Prepare metadata with original evaluations for near-miss analysis
+            metadata = {
+                "original_evaluations": evaluations,
+                "include_near_miss": True
+            }
+            
             success, message = export_manager.export_text_summary(
                 filtered_games,
                 parsed_data['game_count'],
                 criteria,
                 summary_path,
-                provider_name=ai_provider.get_provider_name()
+                provider_name=ai_provider.get_provider_name(),
+                metadata=metadata
             )
             if success:
                 print(f"Successfully exported text summary to {summary_path}")

@@ -1222,12 +1222,19 @@ class InteractiveMenu:
             # Safe access to game_count with fallback
             original_count = self.parsed_data.get('game_count', 0) if self.parsed_data else 0
             
+            # Prepare metadata with original evaluations for near-miss analysis
+            metadata = {
+                "original_evaluations": self.evaluations if self.evaluations else [],
+                "include_near_miss": True
+            }
+            
             result = self.export_manager.export_text_summary(
                 filtered_games=self.filtered_games,
                 original_count=original_count,
                 filter_criteria=self.settings['criteria'],
                 output_path=custom_path,
-                provider_name=self.settings['provider']
+                provider_name=self.settings['provider'],
+                metadata=metadata
             )
             
             self._print_success(f"Successfully exported text summary to {custom_path}")
@@ -1696,12 +1703,19 @@ class InteractiveMenu:
                 )
                 
                 self._print_info(f"Exporting text summary to: {summary_path}")
+                # Prepare metadata with original evaluations for near-miss analysis
+                metadata = {
+                    "original_evaluations": evaluations,
+                    "include_near_miss": True
+                }
+                
                 self.export_manager.export_text_summary(
                     filtered_games=filtered_games,
                     original_count=game_count,
                     filter_criteria=self.settings['criteria'],
                     output_path=summary_path,
-                    provider_name=self.settings['provider']
+                    provider_name=self.settings['provider'],
+                    metadata=metadata
                 )
                 
                 # Calculate statistics
