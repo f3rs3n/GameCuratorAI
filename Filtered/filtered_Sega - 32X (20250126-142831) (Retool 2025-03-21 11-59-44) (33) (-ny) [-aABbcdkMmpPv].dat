@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<datafile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://datomatic.no-intro.org/stuff https://datomatic.no-intro.org/stuff/schema_nointro_datfile_v3.xsd">
+<header>
+<name>Sega - 32X (Retool)</name>
+<description>Sega - 32X (33) (-ny) [-aABbcdkMmpPv] (20250126-142831) (Retool)</description>
+<version>20250126-142831</version>
+<date>2025-03-21 11-59-44</date>
+<author>bikerspade, BitLooter, ElBarto, FakeShemp, gigadeath, Hiccup, nnssxx, norkmetnoil577, omonim2007, psykopat, relax, Seventy7, SonGoku, Special T, xuom2</author>
+<homepage>http://www.github.com/unexpectedpanda/retool</homepage>
+<url>https://www.no-intro.org</url>
+<retool>Created by Retool 2.3.9</retool>
+<filtered_date>2025-05-08</filtered_date>
+<filtered_time>06:48:20</filtered_time>
+<filtered_games_count>0</filtered_games_count>
+<original_games_count>33</original_games_count>
+</header>
+</datafile>

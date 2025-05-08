@@ -134,8 +134,8 @@ class GeminiProvider(BaseAIProvider):
             Dict containing evaluation results with scores and explanations
         """
         if not self.is_available():
-            self.logger.error("Gemini provider is not available")
-            return {"error": "Provider not available"}
+            self.logger.error("Gemini provider is not available - API key may be missing")
+            return {"error": "Provider not available - please configure the Gemini API key"}
         
         self._respect_rate_limit()
         
@@ -220,8 +220,8 @@ class GeminiProvider(BaseAIProvider):
             List of dictionaries containing evaluation results
         """
         if not self.is_available():
-            self.logger.error("Gemini provider is not available")
-            return [{"error": "Provider not available"} for _ in games_info]
+            self.logger.error("Gemini provider is not available for batch evaluation - API key may be missing")
+            return [{"error": "Provider not available - please configure the Gemini API key"} for _ in games_info]
         
         self._respect_rate_limit()
         
@@ -407,8 +407,8 @@ class GeminiProvider(BaseAIProvider):
             Dictionary mapping special case types to lists of affected games
         """
         if not self.is_available():
-            self.logger.error("Gemini provider is not available")
-            return {"error": [{"message": "Provider not available"}]}
+            self.logger.error("Gemini provider is not available for special case detection - API key may be missing")
+            return {"error": [{"message": "Provider not available - please configure the Gemini API key"}]}
         
         self._respect_rate_limit()
         
