@@ -124,12 +124,18 @@ def main():
             
             logger.info(f"Processing: {current}/{total} games ({percentage}%)")
         
-        filtered_games, evaluations = filter_engine.filter_collection(
+        filtered_games, evaluations, provider_error = filter_engine.filter_collection(
             parsed_data['games'],
             criteria,
             args.batch_size,
             progress_callback
         )
+        
+        # Check for provider errors
+        if provider_error:
+            print(f"\nError: {provider_error.get('provider_error', 'Unknown provider error')}")
+            logger.error(f"Provider error: {provider_error}")
+            sys.exit(1)
         
         # Finish progress bar
         print("\n")

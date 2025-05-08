@@ -576,8 +576,37 @@ class InteractiveMenu:
                 progress_callback=progress_callback
             )
             
-            # Process result - result is a tuple of (filtered_games, evaluations)
-            self.filtered_games, self.evaluations = result
+            # Process result - result is a tuple of (filtered_games, evaluations, provider_error)
+            self.filtered_games, self.evaluations, provider_error = result
+            
+            # Check for provider errors
+            if provider_error:
+                print("\n")  # Clear the progress bar line
+                error_msg = provider_error.get('provider_error', 'Unknown provider error')
+                self._print_error(f"Provider error: {error_msg}")
+                self._print_warning("Please check your API key configuration.")
+                self._print_info("Switching to Random provider as fallback...")
+                
+                # Switch to random provider as fallback
+                self.settings['provider'] = 'random'
+                self._initialize_provider()
+                
+                # Retry with random provider
+                self._print_info("Retrying with Random provider...")
+                result = self.filter_engine.filter_collection(
+                    self.parsed_data['games'],
+                    criteria=self.settings['criteria'],
+                    batch_size=self.settings['batch_size'],
+                    progress_callback=progress_callback
+                )
+                
+                # Process result
+                self.filtered_games, self.evaluations, provider_error = result
+                
+                # If we still have an error, give up
+                if provider_error:
+                    self._print_error(f"Still having issues: {provider_error.get('provider_error', 'Unknown error')}")
+                    return
             
             # Apply multi-disc rules
             if self.special_cases and 'multi_disc' in self.special_cases:

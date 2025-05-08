@@ -146,7 +146,7 @@ class FilterEngine:
                          collection: List[Dict[str, Any]], 
                          criteria: List[str],
                          batch_size: int = 10,
-                         progress_callback=None) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+                         progress_callback=None) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], Optional[Dict[str, Any]]]:
         """
         Filter a collection of games based on the specified criteria
         
@@ -157,7 +157,8 @@ class FilterEngine:
             progress_callback: Optional callback function for progress updates
             
         Returns:
-            Tuple of (filtered_games, evaluation_results)
+            Tuple of (filtered_games, evaluation_results, provider_error)
+            provider_error is None if no error occurred, otherwise contains error information
         """
         self.logger.info(f"Starting to filter collection of {len(collection)} games")
         
@@ -185,6 +186,12 @@ class FilterEngine:
             for game in batch:
                 evaluation = self.evaluate_game(game, criteria, collection_context)
                 
+                # Check if there was an error with the provider
+                if "error" in evaluation and "Provider not available" in evaluation["error"]:
+                    self.logger.error(f"Provider error: {evaluation['error']} - stopping processing")
+                    # Return early with a provider error flag
+                    return ([], all_evaluations, {"provider_error": evaluation["error"]})
+                
                 # Add evaluation to game and to results list
                 game["_evaluation"] = evaluation
                 all_evaluations.append(evaluation)
@@ -204,7 +211,7 @@ class FilterEngine:
             progress_callback(total_games, total_games)
         
         self.logger.info(f"Filtering complete. {len(filtered_games)} of {len(collection)} games passed filters.")
-        return filtered_games, all_evaluations
+        return filtered_games, all_evaluations, None  # No error
     
     def _extract_collection_context(self, collection: List[Dict[str, Any]]) -> Dict[str, Any]:
         """
