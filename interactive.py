@@ -576,9 +576,8 @@ class InteractiveMenu:
                 progress_callback=progress_callback
             )
             
-            # Process result
-            self.filtered_games = result['filtered_games']
-            self.evaluations = result['evaluations']
+            # Process result - result is a tuple of (filtered_games, evaluations)
+            self.filtered_games, self.evaluations = result
             
             # Apply multi-disc rules
             if self.special_cases and 'multi_disc' in self.special_cases:
@@ -969,8 +968,8 @@ class InteractiveMenu:
                     progress_callback=progress_callback
                 )
                 
-                filtered_games = result['filtered_games']
-                evaluations = result['evaluations']
+                # Process result - result is a tuple of (filtered_games, evaluations)
+                filtered_games, evaluations = result
                 
                 # Apply multi-disc rules
                 if special_cases and 'multi_disc' in special_cases:
