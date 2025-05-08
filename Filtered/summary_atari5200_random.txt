@@ -1,9 +1,9 @@
 DAT Filter AI - Filtering Summary
 ==============================
-Date: 2025-05-08 14:44:48
+Date: 2025-05-08 15:11:11
 Original game count: 77
-Filtered game count: 65
-Reduction: 12 games (15.6% of collection)
+Filtered game count: 57
+Reduction: 20 games (26.0% of collection)
 
 Filter Criteria:
 ---------------
@@ -13,19 +13,37 @@ Filter Criteria:
 - console_significance
 - mods_hacks
 
-Top 6 Games (Highest Quality Scores):
+Criteria Analysis:
+-----------------
+Strongest criteria in the collection:
+- V List: 34 games (59.6%)
+- Historical: 22 games (38.6%)
+- Console Significance: 20 games (35.1%)
+- Metacritic: 19 games (33.3%)
+- Mods Hacks: 19 games (33.3%)
+
+Weakest criteria in the collection:
+- Mods Hacks: 29 games (50.9%)
+- Metacritic: 26 games (45.6%)
+- Console Significance: 25 games (43.9%)
+- Historical: 18 games (31.6%)
+- V List: 16 games (28.1%)
+
+Low Score Exceptions: 13 games (22.8%)
+These are games kept despite low scores due to other important factors.
+
+Top 5 Games (Highest Quality Scores):
 ----------------------------------------
-1. Kangaroo (USA) - Score: 8.50/10
-2. Tempest (USA) (AtariAge) - Score: 8.50/10
-3. RealSports Basketball (USA) - Score: 8.20/10
-4. Zaxxon (USA) - Score: 8.00/10
-5. Mario Bros. (USA) - Score: 7.40/10
-6. Beamrider (USA) - Score: 7.20/10
+1. Centipede (USA) - Score: 7.80/10 - Strong: V List, Console Significance - Weak: Historical, Metacritic
+2. Ms. Pac-Man (USA) - Score: 7.60/10 - Strong: Mods Hacks, Metacritic - Weak: Historical, Console Significance
+3. Wizard of Wor (USA) - Score: 7.50/10 - Strong: Historical, Metacritic - Weak: V List, Console Significance
+4. Atari PAM Diagnostics (USA) (v2.3) - Score: 7.30/10 - Strong: Mods Hacks, Historical - Weak: V List, Console Significance
+5. Activision Decathlon, The (USA) - Score: 7.10/10 - Strong: Console Significance, V List - Weak: Metacritic, Historical
 
 Removed Games Preview (Lowest Scores):
 ----------------------------------------
 These games didn't make the cut and were removed from the filtered collection:
-Total games removed: 12
+Total games removed: 20
 
 Note: To see the complete list of removed games, compare the original DAT
       file with the filtered output using a comparison tool.

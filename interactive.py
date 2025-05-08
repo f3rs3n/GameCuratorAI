@@ -11,6 +11,7 @@ import time
 import random
 import logging
 import argparse
+from datetime import datetime, timedelta
 from typing import Dict, List, Any, Tuple, Optional, Callable
 from colorama import init, Fore, Style, Back
 
@@ -787,30 +788,34 @@ class InteractiveMenu:
                         # Green checkmark for kept, red X for removed
                         status = f"{Fore.GREEN}✓ KEEP{Style.RESET_ALL}" if kept else f"{Fore.RED}✗ REMOVE{Style.RESET_ALL}"
                         
-                        # Show game with score
-                        print(f"  {status} | {name} (Score: {score:.2f})")
+                        # Prepare the display string with game status and score
+                        game_line = f"  {status} | {name} (Score: {score:.2f})"
                         
                         # Get the evaluation object to display strengths and weaknesses
                         game_eval = game.get("evaluation", {})
                         analysis = game_eval.get("_criteria_analysis", {})
                         
-                        # Display criteria insights
+                        # Display criteria insights on the same line
                         if analysis:
                             # Display strengths and weaknesses
                             strongest = analysis.get("strongest_criteria", [])
                             weakest = analysis.get("weakest_criteria", [])
                             
+                            # Add strengths and weaknesses to the display line
                             if strongest:
-                                strongest_str = ", ".join([s.replace("_", " ").title() for s in strongest])
-                                print(f"    {Fore.GREEN}Strong:{Style.RESET_ALL} {strongest_str}")
+                                strongest_str = ", ".join([s.replace("_", " ").title() for s in strongest[:2]])
+                                game_line += f" {Fore.GREEN}Strong:{Style.RESET_ALL} {strongest_str}"
                             
                             if weakest:
-                                weakest_str = ", ".join([w.replace("_", " ").title() for w in weakest])
-                                print(f"    {Fore.YELLOW}Weak:{Style.RESET_ALL} {weakest_str}")
+                                weakest_str = ", ".join([w.replace("_", " ").title() for w in weakest[:2]])
+                                game_line += f" {Fore.YELLOW}Weak:{Style.RESET_ALL} {weakest_str}"
                             
-                            # Special handling for low score keepers
+                            # Add low score exception tag if applicable
                             if kept and analysis.get("is_low_score_keeper", False):
-                                print(f"    {Fore.YELLOW}Note: Kept despite low score because it passed the adjusted threshold{Style.RESET_ALL}")
+                                game_line += f" {Fore.YELLOW}[LOW SCORE EXCEPTION]{Style.RESET_ALL}"
+                        
+                        # Display the complete game line
+                        print(game_line)
                     
                     print("")  # Add spacing
             
@@ -849,16 +854,32 @@ class InteractiveMenu:
                 
             # Display API usage information if available
             if api_usage_data:
-                provider = api_usage_data.get("provider", "UNKNOWN")
+                provider = api_usage_data.get("provider", "UNKNOWN").upper()
                 today_tokens = api_usage_data.get("today_tokens", 0)
                 month_tokens = api_usage_data.get("month_tokens", 0)
                 total_requests = api_usage_data.get("total_requests", 0)
+                
+                # Get more accurate usage data directly from tracker
+                if provider.lower() != "random":
+                    from utils.api_usage_tracker import get_tracker
+                    tracker = get_tracker()
+                    
+                    # Get today's tokens directly from daily usage
+                    today = datetime.now().strftime('%Y-%m-%d')
+                    provider_data = tracker.usage_data.get(provider.lower(), {})
+                    
+                    if "daily_usage" in provider_data and today in provider_data["daily_usage"]:
+                        today_tokens = provider_data["daily_usage"][today].get("tokens", 0)
+                    
+                    # Get total requests directly from provider data
+                    if provider.lower() in tracker.usage_data:
+                        total_requests = tracker.usage_data[provider.lower()].get("total_requests", 0)
                 
                 print(f"\n{Fore.CYAN}API Usage Information:{Style.RESET_ALL}")
                 print(f"Provider: {provider}")
                 print(f"Today's usage: {today_tokens:,} tokens")
                 print(f"30-day usage: {month_tokens:,} tokens")
-                print(f"Total requests: {total_requests}")
+                print(f"Total requests: {total_requests:,}")
                 print()
             
             # Check for provider errors
@@ -928,16 +949,32 @@ class InteractiveMenu:
                             
                         # Display API usage information if available
                         if api_usage_data:
-                            provider = api_usage_data.get("provider", "UNKNOWN")
+                            provider = api_usage_data.get("provider", "UNKNOWN").upper()
                             today_tokens = api_usage_data.get("today_tokens", 0)
                             month_tokens = api_usage_data.get("month_tokens", 0)
                             total_requests = api_usage_data.get("total_requests", 0)
+                            
+                            # Get more accurate usage data directly from tracker
+                            if provider.lower() != "random":
+                                from utils.api_usage_tracker import get_tracker
+                                tracker = get_tracker()
+                                
+                                # Get today's tokens directly from daily usage
+                                today = datetime.now().strftime('%Y-%m-%d')
+                                provider_data = tracker.usage_data.get(provider.lower(), {})
+                                
+                                if "daily_usage" in provider_data and today in provider_data["daily_usage"]:
+                                    today_tokens = provider_data["daily_usage"][today].get("tokens", 0)
+                                
+                                # Get total requests directly from provider data
+                                if provider.lower() in tracker.usage_data:
+                                    total_requests = tracker.usage_data[provider.lower()].get("total_requests", 0)
                             
                             print(f"\n{Fore.CYAN}API Usage Information:{Style.RESET_ALL}")
                             print(f"Provider: {provider}")
                             print(f"Today's usage: {today_tokens:,} tokens")
                             print(f"30-day usage: {month_tokens:,} tokens")
-                            print(f"Total requests: {total_requests}")
+                            print(f"Total requests: {total_requests:,}")
                             print()
                     else:
                         self._print_error("Filter engine returned invalid result")
@@ -1533,8 +1570,34 @@ class InteractiveMenu:
                                 # Green checkmark for kept, red X for removed
                                 status = f"{Fore.GREEN}✓ KEEP{Style.RESET_ALL}" if kept else f"{Fore.RED}✗ REMOVE{Style.RESET_ALL}"
                                 
-                                # Show game with score
-                                print(f"  {status} | {name} (Score: {score:.2f})")
+                                # Prepare the display string with game status and score
+                                game_line = f"  {status} | {name} (Score: {score:.2f})"
+                                
+                                # Get the evaluation object to display strengths and weaknesses
+                                game_eval = game.get("evaluation", {})
+                                analysis = game_eval.get("_criteria_analysis", {})
+                                
+                                # Display criteria insights on the same line
+                                if analysis:
+                                    # Display strengths and weaknesses
+                                    strongest = analysis.get("strongest_criteria", [])
+                                    weakest = analysis.get("weakest_criteria", [])
+                                    
+                                    # Add strengths and weaknesses to the display line
+                                    if strongest:
+                                        strongest_str = ", ".join([s.replace("_", " ").title() for s in strongest[:2]])
+                                        game_line += f" {Fore.GREEN}Strong:{Style.RESET_ALL} {strongest_str}"
+                                    
+                                    if weakest:
+                                        weakest_str = ", ".join([w.replace("_", " ").title() for w in weakest[:2]])
+                                        game_line += f" {Fore.YELLOW}Weak:{Style.RESET_ALL} {weakest_str}"
+                                    
+                                    # Add low score exception tag if applicable
+                                    if kept and analysis.get("is_low_score_keeper", False):
+                                        game_line += f" {Fore.YELLOW}[LOW SCORE EXCEPTION]{Style.RESET_ALL}"
+                                
+                                # Display the complete game line
+                                print(game_line)
                 
                 # Apply filters
                 self._print_info("Applying filters...")
@@ -1576,16 +1639,32 @@ class InteractiveMenu:
                     
                     # Display API usage information if available
                     if api_usage_data:
-                        provider = api_usage_data.get("provider", "UNKNOWN")
+                        provider = api_usage_data.get("provider", "UNKNOWN").upper()
                         today_tokens = api_usage_data.get("today_tokens", 0)
                         month_tokens = api_usage_data.get("month_tokens", 0)
                         total_requests = api_usage_data.get("total_requests", 0)
+                        
+                        # Get more accurate usage data directly from tracker
+                        if provider.lower() != "random":
+                            from utils.api_usage_tracker import get_tracker
+                            tracker = get_tracker()
+                            
+                            # Get today's tokens directly from daily usage
+                            today = datetime.now().strftime('%Y-%m-%d')
+                            provider_data = tracker.usage_data.get(provider.lower(), {})
+                            
+                            if "daily_usage" in provider_data and today in provider_data["daily_usage"]:
+                                today_tokens = provider_data["daily_usage"][today].get("tokens", 0)
+                            
+                            # Get total requests directly from provider data
+                            if provider.lower() in tracker.usage_data:
+                                total_requests = tracker.usage_data[provider.lower()].get("total_requests", 0)
                         
                         print(f"\n{Fore.CYAN}API Usage Information:{Style.RESET_ALL}")
                         print(f"Provider: {provider}")
                         print(f"Today's usage: {today_tokens:,} tokens")
                         print(f"30-day usage: {month_tokens:,} tokens")
-                        print(f"Total requests: {total_requests}")
+                        print(f"Total requests: {total_requests:,}")
                         print()
                 else:
                     # For backward compatibility

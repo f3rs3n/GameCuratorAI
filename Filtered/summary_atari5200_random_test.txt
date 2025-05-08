@@ -1,9 +1,9 @@
 DAT Filter AI - Filtering Summary
 ==============================
-Date: 2025-05-08 14:40:40
+Date: 2025-05-08 15:10:24
 Original game count: 77
-Filtered game count: 77
-Reduction: 0 games (0.0% of collection)
+Filtered game count: 59
+Reduction: 18 games (23.4% of collection)
 
 Filter Criteria:
 ---------------
@@ -13,15 +13,40 @@ Filter Criteria:
 - console_significance
 - mods_hacks
 
-Top 7 Games (Highest Quality Scores):
+Criteria Analysis:
+-----------------
+Strongest criteria in the collection:
+- Console Significance: 29 games (49.2%)
+- V List: 28 games (47.5%)
+- Historical: 24 games (40.7%)
+- Metacritic: 20 games (33.9%)
+- Mods Hacks: 17 games (28.8%)
+
+Weakest criteria in the collection:
+- Mods Hacks: 29 games (49.2%)
+- Metacritic: 25 games (42.4%)
+- V List: 24 games (40.7%)
+- Historical: 21 games (35.6%)
+- Console Significance: 19 games (32.2%)
+
+Low Score Exceptions: 6 games (10.2%)
+These are games kept despite low scores due to other important factors.
+
+Top 5 Games (Highest Quality Scores):
 ----------------------------------------
-1. Activision Decathlon, The (USA) - Score: 8.80/10
-2. Super Cobra (USA) - Score: 8.10/10
-3. Zone Ranger (USA) - Score: 8.10/10
-4. Frogger II - Threeedeep! (USA) - Score: 8.00/10
-5. Q-bert (USA) - Score: 7.90/10
-6. Star Trek - Strategic Operations Simulator (USA) - Score: 7.90/10
-7. Joust (USA) - Score: 7.50/10
+1. Castle Blast (USA) (Unl) - Score: 8.00/10 - Strong: Metacritic, V List - Weak: Historical, Mods Hacks
+2. BerZerk (USA) - Score: 7.60/10 - Strong: Mods Hacks, Historical - Weak: V List, Metacritic
+3. Q-bert (USA) - Score: 7.60/10 - Strong: Metacritic, Historical - Weak: Console Significance, V List
+4. David Crane's Pitfall II - Lost Caverns (USA) - Score: 7.40/10 - Strong: Console Significance, V List - Weak: Metacritic, Historical
+5. Bounty Bob Strikes Back! (USA) - Score: 7.00/10 - Strong: Historical, V List - Weak: Metacritic, Console Significance
+
+Removed Games Preview (Lowest Scores):
+----------------------------------------
+These games didn't make the cut and were removed from the filtered collection:
+Total games removed: 18
+
+Note: To see the complete list of removed games, compare the original DAT
+      file with the filtered output using a comparison tool.
 
 API Usage Information:
 ----------------------

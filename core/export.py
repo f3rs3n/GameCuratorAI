@@ -456,17 +456,18 @@ class ExportManager:
                     month_tokens = 0
                     total_requests = 0
                     
-                    if usage_report and "daily_usage" in usage_report:
-                        for date, data in usage_report["daily_usage"].items():
-                            tokens = data.get("tokens", 0)
-                            requests = data.get("requests", 0)
-                            month_tokens += tokens
-                            total_requests += requests
-                            
-                            # Check if it's today's usage
-                            today = datetime.datetime.now().strftime('%Y-%m-%d')
-                            if date == today:
-                                today_tokens = tokens
+                    # Access provider data directly to get today's usage
+                    today = datetime.datetime.now().strftime('%Y-%m-%d')
+                    provider_data = usage_tracker.usage_data.get(provider_name_lower, {})
+                    
+                    # Get today's tokens from daily usage
+                    if "daily_usage" in provider_data and today in provider_data["daily_usage"]:
+                        today_tokens = provider_data["daily_usage"][today].get("tokens", 0)
+                    
+                    # Get monthly tokens from the report
+                    if provider_name_lower in usage_report:
+                        month_tokens = usage_report[provider_name_lower].get("last_30_days_tokens", 0)
+                        total_requests = usage_report[provider_name_lower].get("total_requests", 0)
                     
                     summary.extend([
                         f"Today's usage: {today_tokens:,} tokens",

@@ -384,7 +384,14 @@ def test_example_summary(provider_name: str = "gemini") -> str:
     
     if usage_report and provider_name in usage_report:
         provider_data = usage_report[provider_name]
-        today_tokens = provider_data.get("current_month_tokens", 0)
+        
+        # Get today's usage specifically
+        today = datetime.now().strftime("%Y-%m-%d")
+        provider_obj = tracker.usage_data.get(provider_name.lower(), {})
+        daily_usage = provider_obj.get("daily_usage", {})
+        today_tokens = daily_usage.get(today, {}).get("tokens", 0)
+        
+        # Get monthly token count
         month_tokens = provider_data.get(f"last_30_days_tokens", 0)
         
     lines.append(f"Today's usage: {today_tokens:,} tokens")
