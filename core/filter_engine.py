@@ -33,11 +33,11 @@ class FilterEngine:
         # Global threshold modifier applied to all criteria
         self.global_threshold = 1.0  # 1.0 is neutral, lower is more lenient, higher is stricter
         self.criteria_weights = {
-            "metacritic": 0.30,
+            "metacritic": 0.20,
             "historical": 0.20,
-            "v_list": 0.30,  # Double weight for V's recommended list
-            "console_significance": 0.12,
-            "mods_hacks": 0.08
+            "v_list": 0.20,
+            "console_significance": 0.20,
+            "mods_hacks": 0.20
         }
     
     def set_threshold(self, criterion: str, value: float):
