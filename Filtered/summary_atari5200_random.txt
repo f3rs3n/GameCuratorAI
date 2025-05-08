@@ -1,6 +1,6 @@
 DAT Filter AI - Filtering Summary
 ==============================
-Date: 2025-05-08 11:09:15
+Date: 2025-05-08 12:18:30
 Original game count: 77
 Filtered game count: 77
 Reduction: 0 games (0.0% of collection)
@@ -15,10 +15,10 @@ Filter Criteria:
 
 Top 7 Games (Highest Quality Scores):
 ----------------------------------------
-1. Robotron 2084 (USA) - Score: 8.60/10
-2. Buck Rogers - Planet of Zoom (USA) - Score: 8.50/10
-3. Blue Print (USA) - Score: 7.90/10
-4. Super Breakout (USA) - Score: 7.20/10
-5. BerZerk (USA) - Score: 7.10/10
-6. Space Shuttle - A Journey Into Space (USA) - Score: 7.10/10
-7. K-Razy Shoot-Out (USA) - Score: 6.70/10
+1. BerZerk (USA) - Score: 7.80/10
+2. Joust (USA) - Score: 7.80/10
+3. Vanguard (USA) - Score: 7.50/10
+4. Missile Command (USA) - Score: 7.30/10
+5. Star Raiders (USA) - Score: 7.30/10
+6. Kaboom! (USA) - Score: 7.10/10
+7. Atari PAM Diagnostics (USA) (v2.3) - Score: 6.70/10

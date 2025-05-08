@@ -1,6 +1,6 @@
 DAT Filter AI - Filtering Summary
 ==============================
-Date: 2025-05-08 11:02:23
+Date: 2025-05-08 12:17:23
 Original game count: 77
 Filtered game count: 77
 Reduction: 0 games (0.0% of collection)
@@ -15,10 +15,10 @@ Filter Criteria:
 
 Top 7 Games (Highest Quality Scores):
 ----------------------------------------
-1. Pac-Man (USA) - Score: 8.70/10
-2. Pengo (USA) - Score: 8.40/10
-3. Gyruss (USA) - Score: 8.30/10
-4. Gremlins (USA) - Score: 8.20/10
-5. Quest for Quintana Roo (USA) - Score: 7.80/10
-6. Super Breakout (USA) - Score: 7.80/10
-7. Super Cobra (USA) - Score: 7.80/10
+1. Star Raiders (USA) - Score: 8.40/10
+2. Zone Ranger (USA) - Score: 8.00/10
+3. Kangaroo (USA) - Score: 7.80/10
+4. Gremlins (USA) - Score: 7.60/10
+5. Space Dungeon (USA) - Score: 7.60/10
+6. Kaboom! (USA) - Score: 7.50/10
+7. Missile Command (USA) - Score: 7.50/10

@@ -1,0 +1,125 @@
+<?xml version="1.0" ?>
+<datafile>
+<header>
+<name>Atari - Jaguar CD Interactive Multimedia System (Retool)</name>
+<description>Atari - Jaguar CD Interactive Multimedia System (21) (-ny) [-aABbcdkMmpPv] (2024-12-11 15-00-45) (Retool)</description>
+<version>2024-12-11 15-00-45</version>
+<date>2025-03-21 11-57-46</date>
+<author>redump.org</author>
+<homepage>http://www.github.com/unexpectedpanda/retool</homepage>
+<url>http://redump.org/</url>
+<retool>Created by Retool 2.3.9</retool>
+<filtered_date>2025-05-08</filtered_date>
+<filtered_time>12:14:23</filtered_time>
+<filtered_games_count>6</filtered_games_count>
+<original_games_count>21</original_games_count>
+</header>
+<game name="Dragon's Lair (USA)">
+  <category>Games</category>
+<description>Dragon's Lair (USA)</description>
+<rom name="Dragon's Lair (USA).cue" size="626" crc="8bf20213" md5="e810eec5a5dafcc19b04b29c28feacdb" sha1="3a78de5d2482c36fa345a309caefb6e9f4e85d7a"/>
+<rom name="Dragon's Lair (USA) (Track 1).bin" size="7632240" crc="be54594c" md5="fc010e837e536b60f2cbec07d7aebdfd" sha1="9bf40cd54f72f93befdf0e0e5c1d409467f8153a"/>
+<rom name="Dragon's Lair (USA) (Track 2).bin" size="1053696" crc="f8b3497d" md5="b4ee6f7bddb9fff4bdb742efd26fd372" sha1="d4759021e99f85ebcc52eb30231386346a3e9cc7"/>
+<rom name="Dragon's Lair (USA) (Track 3).bin" size="327203184" crc="ea651ff0" md5="5a1ef8088d6773de9b7e0d4eda44381d" sha1="76696b120b9febe47c644b82e7736df6273eccd3"/>
+<rom name="Dragon's Lair (USA) (Track 4).bin" size="1404144" crc="a0653d3d" md5="20950479d6c67a0beb9111630407bb24" sha1="75eb95021beef98dce9bb3e830237dff2ebc62f2"/>
+<rom name="Dragon's Lair (USA) (Track 5).bin" size="1401792" crc="569b54ba" md5="8a4dd8e9c7679721f6145db162987d7d" sha1="3013720892e42025ea78f0ce54866d461993d143"/>
+</game>
+<game name="Frog Feast (USA) (Unl)">
+  <category>Games</category>
+<description>Frog Feast (USA) (Unl)</description>
+<rom name="Frog Feast (USA) (Unl).cue" size="497" crc="8e2e8279" md5="68fde5d866a41000c133fd0978cd90aa" sha1="ede9381168b61bea057ad8a6485a809c0da03bd2"/>
+<rom name="Frog Feast (USA) (Unl) (Track 1).bin" size="24425520" crc="64d04668" md5="b05ef491bd4ada9392fedb65a3354345" sha1="8db71d935ffdf59f8655ddddd68a5a842ef2115c"/>
+<rom name="Frog Feast (USA) (Unl) (Track 2).bin" size="2203824" crc="d122dae7" md5="c4d641e16c6bc57242444d77a28db5d7" sha1="b7e8ec7fda0b91a417e6c8bd67dfed5336eba141"/>
+<rom name="Frog Feast (USA) (Unl) (Track 3).bin" size="1895712" crc="733b3c78" md5="7a1d5215fd838e72635da3e24cd246c4" sha1="4ee0d9ff7bbcbab78a5932fd26f3ff5ac7daa8a8"/>
+<rom name="Frog Feast (USA) (Unl) (Track 4).bin" size="1669920" crc="4afabdc6" md5="57712d252b92a4f336a4aa1489c9bcd2" sha1="d955ae4d3fb01c1cad483eee8e4e153ebb3f0a3b"/>
+<rom name="Frog Feast (USA) (Unl) (Track 5).bin" size="1053696" crc="884020fb" md5="68d74d08e192ce74c9be887adc2962d0" sha1="dd50175be6b8b2b5e0513376038caf778eab3c5b"/>
+</game>
+<game name="Iron Soldier 2 (USA) (Songbird)">
+  <category>Games</category>
+<description>Iron Soldier 2 (USA) (Songbird)</description>
+<rom name="Iron Soldier 2 (USA) (Songbird).cue" size="2806" crc="8e080e75" md5="aef8830fcf9a264c36c2bee8e5116d4c" sha1="72d2b4e6745902f8afeea7d0fa40d6355db032ab"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 01).bin" size="67697616" crc="3fa01526" md5="baae48273c1ba71bc74488520444bec8" sha1="8b0e7c30fbfa80c602e06ad96ab84f9b7f7bb4b4"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 02).bin" size="41755056" crc="38720528" md5="ab299804a6d8a0574c9786cf6e9ee67f" sha1="8beae41c2b037cf0e08ca2f6b7433804e4e2513e"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 03).bin" size="33650064" crc="517a5042" md5="8a54684f2bb1e1934d92f7712045f2b0" sha1="3a7a921ce5c06ddbb446ee58da3dd207b473f291"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 04).bin" size="51786336" crc="7ff0b7b6" md5="0e367bd38f98be1c17ceefb63ecd643b" sha1="bf7eb039bd62bf3eed10e85baafd9e0fb411473f"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 05).bin" size="33490128" crc="b4604a28" md5="b79f28eacefd288eb2b82fe806e715fb" sha1="f622680bb921302dd4d54b7c9f9546a11aaefe82"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 06).bin" size="42411264" crc="d45d4e33" md5="3378ee3d101963e557e34b3e6d88e9fe" sha1="ceec816a8dcbc2ee70e032a491502a4f4785c284"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 07).bin" size="43822464" crc="3e370f4c" md5="0adbe81cb3e0d2c2a0133703e20127f4" sha1="95ad2779edb0008fc868aba8307a80c3780d0180"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 08).bin" size="43660176" crc="3109f551" md5="77b7aa97849a60774fc0977e562b0ccb" sha1="bbbf1f1220473a0a111d1c1612ccd6cbc8977323"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 09).bin" size="46656624" crc="5924f4e3" md5="486807e56b463237e274d6b199d556cd" sha1="a40a39d3feb380c8a9e92e7b97f59a1928ede684"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 10).bin" size="48295968" crc="4e4e9f49" md5="d9fad4c897be56e6186daa21f7792636" sha1="2b94b0d08c859202a34fb5c1e1ffa063979cbfbb"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 11).bin" size="47729136" crc="a9b1f4bd" md5="81a2a65e1ede07d3940a28120ca0aa53" sha1="f1317b75962b4f8fbc76944c198d4e76f5a36516"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 12).bin" size="1796928" crc="47b6b34c" md5="3c4334206b62a7a198d21159d120f30a" sha1="791c0812d80e0aafc45956d80819688f0dbc6e57"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 13).bin" size="33356064" crc="4a093ffc" md5="2432e5586b9608d189941d672a146fab" sha1="5308df2397a1f5ac70af5744c382eeb24209b442"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 14).bin" size="52795344" crc="cdf31ef0" md5="34dfc4bdd67a4d7e004efa62b253c1fd" sha1="a2546588b1769f3e20b668909881562cee7d0728"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 15).bin" size="2606016" crc="6dc23a31" md5="e8d80b36652908d43ec291966705f298" sha1="63c28da43b1575f37779f1811b7411fb0604d5ac"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 16).bin" size="36710016" crc="d03cb28f" md5="f39e0c4cbb88e2bdc3856c4a44a49181" sha1="6663f5dc9f6d9b1cdfc81c15fb709063c29f3c75"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 17).bin" size="13086528" crc="3120ae7c" md5="b36b5c7dff68b74a9b15f79cc31e2069" sha1="32c0cab9ba5412092fbe649179fbb768e983a7e3"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 18).bin" size="6225744" crc="66c2fe4b" md5="7d09525373e6da55b6285348f90911a3" sha1="753e67cedba0775b5f16d26c8b0c77c4ccda5a40"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 19).bin" size="26147184" crc="e6ddaee0" md5="87b4472c7d89ba09a58513b443b3c9d1" sha1="0f2f3113e3a4e93ad6a742587673d73bbf63f34e"/>
+<rom name="Iron Soldier 2 (USA) (Songbird) (Track 20).bin" size="1404144" crc="5d114d8a" md5="f656ad90b4c4da17036692613e12470a" sha1="3f815173b2c0192cfb358bedef5256c34246ae18"/>
+</game>
+<game name="Myst (USA)">
+  <category>Games</category>
+<description>Myst (USA)</description>
+<rom name="Myst (USA).cue" size="1186" crc="f70cf87d" md5="42a8b16e604d44664a10178e11f20712" sha1="97c3215e3bcbec0e52c9010d6e250b7d18baaeb3"/>
+<rom name="Myst (USA) (Track 01).bin" size="16739184" crc="259f107b" md5="7b55dfd59fcd44664741589a01047c2b" sha1="dbd5b96ae8a1f07dcc48e935571699c7cb6b0c74"/>
+<rom name="Myst (USA) (Track 02).bin" size="1056048" crc="51483e8f" md5="eaedbe9c298eb2192cb6690648393921" sha1="06dbf45723156e88a1bdd8575f8746e8bfa72fb1"/>
+<rom name="Myst (USA) (Track 03).bin" size="2187360" crc="ab687b0f" md5="ac7049ab12f4f9a15dc228cb98c00550" sha1="e3f88de76e8a37ed9bb8131d4488f5d861bccb2c"/>
+<rom name="Myst (USA) (Track 04).bin" size="264912816" crc="98392e5a" md5="2e3f3d04edaa62a2f91513cf11df90ca" sha1="ab62811220b17e8fb5691985dee603dd1ba5cb94"/>
+<rom name="Myst (USA) (Track 05).bin" size="43681344" crc="bf73f641" md5="40473eb1153b02a4b25ef3ba81d65eb5" sha1="4fcf5263601f1f63f563dc113d9c7ca114728f1f"/>
+<rom name="Myst (USA) (Track 06).bin" size="84695520" crc="c0f79434" md5="5ae9e4d9b7fc6aae34de15a01dfad8d8" sha1="956e81bb6563d53bb60383c0058dd5679e8df4ce"/>
+<rom name="Myst (USA) (Track 07).bin" size="34122816" crc="2b947bd6" md5="f3f41faf519d54a0b9753d97aeb27284" sha1="b3f9fc712714c48e6d47dfa297244538a9c59337"/>
+<rom name="Myst (USA) (Track 08).bin" size="73921008" crc="c0a59d2d" md5="ce3e9038c0daedec4ff9e7bb41457dc5" sha1="9ddfd3868e4d8214be3b88e5a3d9650294ef3664"/>
+<rom name="Myst (USA) (Track 09).bin" size="36634752" crc="a93c924b" md5="cf3720068cf4c9a6196fb43980aae7b6" sha1="21c4527d9c724c5c02c1e33b8ab24b9df26fcc78"/>
+<rom name="Myst (USA) (Track 10).bin" size="1404144" crc="74d912dc" md5="41529cfb5e131e98c240de4b7534ab63" sha1="3170e4147b4ea17b1cebe23d79f8dd195150b78d"/>
+</game>
+<game name="Primal Rage (USA)">
+  <category>Games</category>
+<description>Primal Rage (USA)</description>
+<rom name="Primal Rage (USA).cue" size="4177" crc="f2a199ab" md5="15cb173f6c2e5d3eeb93864abdd4a70b" sha1="67a156064e28ef787e4468fd8e4646e8d23960ac"/>
+<rom name="Primal Rage (USA) (Track 01).bin" size="1107792" crc="c15afeb7" md5="975f88be1adabd3e23c7e064d27bc54c" sha1="05e68b398cf5b4ab1802692d09af06f780ea80ee"/>
+<rom name="Primal Rage (USA) (Track 02).bin" size="2043888" crc="bd64f94a" md5="7f568c82f419ce79acb993d455ee31d2" sha1="31e945b4fd2df8433059fceaa9815a9e2a6d7156"/>
+<rom name="Primal Rage (USA) (Track 03).bin" size="1721664" crc="74d6235b" md5="c8b12e3bf56ae6cdfea832f3c4c9eeec" sha1="5d78bd13bc63129b0b2a1210aa04ce7a001e6cd3"/>
+<rom name="Primal Rage (USA) (Track 04).bin" size="1239504" crc="d5488701" md5="82e556a1f0a5a2f41030a58440f25b8e" sha1="de31195f230bc890c500728a9aaddd190f627227"/>
+<rom name="Primal Rage (USA) (Track 05).bin" size="6098736" crc="faa59d1a" md5="b20e86e367532b59cb9c72d63a046576" sha1="5eb2cf3e8027ca1197baf0d588d8a7db59cdc553"/>
+<rom name="Primal Rage (USA) (Track 06).bin" size="1239504" crc="ea4c7a05" md5="47e82c613acc59ed830bf864bae242ec" sha1="a0be4145ade6fceafa52be5b1ba27017a516bd59"/>
+<rom name="Primal Rage (USA) (Track 07).bin" size="1945104" crc="9b6c7cc5" md5="5925c184634b4c6b779a1ba2730a9054" sha1="869a852d48a3626f46cfbadae024b5aff6325abd"/>
+<rom name="Primal Rage (USA) (Track 08).bin" size="13476960" crc="53accd5f" md5="86bc6cea7c92cc1987818ee6fe5c2632" sha1="7292f18c8e98385097cdd3ef84218a2f0d395483"/>
+<rom name="Primal Rage (USA) (Track 09).bin" size="1239504" crc="181f59f4" md5="27066042c5ff93df9371c69e93d2f68e" sha1="802621eff20fc312f17ce662522f79078018e242"/>
+<rom name="Primal Rage (USA) (Track 10).bin" size="5160288" crc="27867ff7" md5="3cbe83f403bba91500e253167a517214" sha1="abed0cf2068a64c1c9b8fbc3baee8d051555a948"/>
+<rom name="Primal Rage (USA) (Track 11).bin" size="1239504" crc="accaf398" md5="f48b17a7999407a50e7a6235ceacce0f" sha1="7db8257a9ac730d72ab17d67dc857980970a0212"/>
+<rom name="Primal Rage (USA) (Track 12).bin" size="6576192" crc="d9346fb4" md5="d1274cc2e7725332bf9da0fa77f0025d" sha1="b335f7a62c468de55932f284034e944466587515"/>
+<rom name="Primal Rage (USA) (Track 13).bin" size="15010464" crc="6da9b236" md5="09e399ea176b363332969d6362cffa47" sha1="048290646d87f46cf35f49d0644763c57c86db5e"/>
+<rom name="Primal Rage (USA) (Track 14).bin" size="6145776" crc="b1f71853" md5="8c81f0e330f84fab4eae52fc37b577f8" sha1="bacb552dfb7a210ebfe6e286170c0c687a679671"/>
+<rom name="Primal Rage (USA) (Track 15).bin" size="7627536" crc="ba1225e0" md5="2e153e9a26278200770af883eac826f6" sha1="4cc05a99736d9292c4698e8143b31aec472dd082"/>
+<rom name="Primal Rage (USA) (Track 16).bin" size="1545264" crc="04df57be" md5="ea1c3b2ad4859a4d318b4afa963d9da9" sha1="f207856542798321c4dfafbd626114307410301f"/>
+<rom name="Primal Rage (USA) (Track 17).bin" size="6750240" crc="ec60d065" md5="742beb681c9a92236fd101a848231c7d" sha1="26e9acaec13b420491be37ecc87b4886d1686582"/>
+<rom name="Primal Rage (USA) (Track 18).bin" size="13434624" crc="4818614c" md5="95a44e4cff3028249dd9e431f14b46a8" sha1="9e28ed43f27f24792bba8e5dae03b46b2267ca71"/>
+<rom name="Primal Rage (USA) (Track 19).bin" size="1237152" crc="c5894f92" md5="c79a6096bb0323792e6563de1c5e7604" sha1="3d51a346e5482f68a0feb75c2d3a61c5181e5473"/>
+<rom name="Primal Rage (USA) (Track 20).bin" size="15280944" crc="79e5a550" md5="00437926f8062b9da5a04c0f0488ca7a" sha1="83c3d257573acb335b0966d672dcbcb38bef1250"/>
+<rom name="Primal Rage (USA) (Track 21).bin" size="14831712" crc="45144e03" md5="04e9c8c5108177883232524252227f06" sha1="c2adb7ef9a068fbf8929f2fef078e66e4af7e461"/>
+<rom name="Primal Rage (USA) (Track 22).bin" size="15170400" crc="aa830654" md5="7cfa5524635f080a4ac664378369e94f" sha1="2883a9b0ad0179f64184455df0ca3fe32bf1881b"/>
+<rom name="Primal Rage (USA) (Track 23).bin" size="20177808" crc="c8fb785d" md5="a07ee37cf9bcf897d566b88ccfdf1c6e" sha1="699c9dbca0bda75011fce6fec9ffca37afc53332"/>
+<rom name="Primal Rage (USA) (Track 24).bin" size="14269584" crc="bd63c02b" md5="6000d56c4768c184d02e853e74768a38" sha1="b96decc70525dfb9658a94b9cf08c530295d389b"/>
+<rom name="Primal Rage (USA) (Track 25).bin" size="14434224" crc="f02c1742" md5="516c077640a86be8e3e67aa91adca4da" sha1="9b2419675c0f11bd8c718d2a07e1e06a2ec4dfa6"/>
+<rom name="Primal Rage (USA) (Track 26).bin" size="13905024" crc="258865d5" md5="b7538010c0699ea97cf654521ed4f7d6" sha1="618f3ec4b15133f829cfb8758df67586e0aacbad"/>
+<rom name="Primal Rage (USA) (Track 27).bin" size="15038688" crc="2889e2a7" md5="917ccd282113ff986bbaf6ca0f68d42b" sha1="d2b554992777b02de374d59f9501bf28b7b0ae7d"/>
+<rom name="Primal Rage (USA) (Track 28).bin" size="15342096" crc="e08b7eea" md5="9b739c26fb70912b33c4c3a07d429d95" sha1="4a5f84ed59a0b064a6695d9e06a6baa84c2bbb68"/>
+<rom name="Primal Rage (USA) (Track 29).bin" size="14187264" crc="3c294be5" md5="7a26f59f9c3d2f470793659551f07dab" sha1="8146b23b36af18ef0388ca73f53ea1ca6607de2c"/>
+<rom name="Primal Rage (USA) (Track 30).bin" size="1053696" crc="dbe05c5f" md5="e78aa94045f80e6bb018e5a9d8b96390" sha1="21540baa18041738539c3953b5a3c3a4d0a24d44"/>
+<rom name="Primal Rage (USA) (Track 31).bin" size="1404144" crc="1563c6e6" md5="bb97fece01f11e238d3c7d1a8588dc9c" sha1="102f05a3a6fe779f8a1e1a9074225f6156b4cd96"/>
+<rom name="Primal Rage (USA) (Track 32).bin" size="51414720" crc="460100e8" md5="69718eb5eda01e6b7cde5e25f5dd00a4" sha1="4d3e67b954ccfbc1e47b149fbd3f0924af7b8355"/>
+<rom name="Primal Rage (USA) (Track 33).bin" size="1401792" crc="5bd8c9c6" md5="26074ef2c96b52b5e74e610da83e31b3" sha1="3771429bca6f2af728835e40ddea92f60ce77af0"/>
+</game>
+<game name="Space Ace (USA)">
+  <category>Games</category>
+<description>Space Ace (USA)</description>
+<rom name="Space Ace (USA).cue" size="606" crc="43efa04e" md5="76f8deae0c769f981df06e2363c6795b" sha1="a465bd341fc386c4e489ba184e52cafdfe04f897"/>
+<rom name="Space Ace (USA) (Track 1).bin" size="8203776" crc="e61e9c4e" md5="b65a45956142703f5de8eae17079b1ba" sha1="ce641e55105786e39f4a4ce3ce156ac09253e812"/>
+<rom name="Space Ace (USA) (Track 2).bin" size="1053696" crc="276320bc" md5="804b2487ec58987ec53fa862b24a5b7d" sha1="11f550361bbe5680cecb44af9f02bd2c163be8cb"/>
+<rom name="Space Ace (USA) (Track 3).bin" size="495684000" crc="a2a0a4b4" md5="8809145e0445a23c388b814c74b2356b" sha1="6cf6e0f432fea30ca6ff9db6fafb6e2902ed214d"/>
+<rom name="Space Ace (USA) (Track 4).bin" size="1404144" crc="649c0e24" md5="96e879c31a0c6c843f37e504677ef350" sha1="9515080c7a945a798f4f0ed687c352cd40452aa5"/>
+<rom name="Space Ace (USA) (Track 5).bin" size="1401792" crc="4a742ec5" md5="8e9f34c74d2f0c4abd68d6f9aca35009" sha1="a3102a157b403620295c7bc2c9d95cf5bb3c1b6e"/>
+</game>
+</datafile>

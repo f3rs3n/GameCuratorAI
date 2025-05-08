@@ -32,11 +32,11 @@ class FilterEngine:
         # Global threshold modifier applied to all criteria
         self.global_threshold = 1.0  # 1.0 is neutral, lower is more lenient, higher is stricter
         self.criteria_weights = {
-            "metacritic": 0.35,
-            "historical": 0.25,
-            "v_list": 0.15,
-            "console_significance": 0.15,
-            "mods_hacks": 0.10
+            "metacritic": 0.30,
+            "historical": 0.20,
+            "v_list": 0.30,  # Double weight for V's recommended list
+            "console_significance": 0.12,
+            "mods_hacks": 0.08
         }
     
     def set_threshold(self, criterion: str, value: float):
@@ -204,10 +204,24 @@ class FilterEngine:
                     filtered_games.append(game)
                 
                 # Store result for batch display
+                # Extract overall score - check for different key formats from different providers
+                overall_score = 0.0
+                if "overall_score" in evaluation:
+                    overall_score = evaluation["overall_score"]
+                elif "quality_score" in evaluation:
+                    overall_score = evaluation["quality_score"]
+                elif "score" in evaluation:
+                    overall_score = evaluation["score"]
+                # Fallback method: average the scores if available
+                elif "scores" in evaluation and evaluation["scores"]:
+                    score_values = [float(score) for score in evaluation["scores"].values() if str(score).replace('.', '', 1).isdigit()]
+                    if score_values:
+                        overall_score = sum(score_values) / len(score_values)
+                
                 current_batch_results.append({
                     "game_name": game.get("name", "Unknown Game"),
                     "keep": meets_criteria,
-                    "quality_score": evaluation.get("overall_score", 0),
+                    "quality_score": overall_score,
                     "reason": evaluation.get("reason", "")
                 })
                 

@@ -931,12 +931,34 @@ class InteractiveMenu:
                 for game in self.filtered_games:
                     score = 0
                     eval_data = game.get('_evaluation', {})
-                    if eval_data and 'overall_score' in eval_data:
-                        try:
-                            score = float(eval_data['overall_score'])
-                        except (ValueError, TypeError):
-                            # Handle cases where score might not be a valid number
-                            pass
+                    
+                    # Try multiple score field formats for better compatibility
+                    if eval_data:
+                        # Check for different possible score field names
+                        if 'overall_score' in eval_data:
+                            try:
+                                score = float(eval_data['overall_score'])
+                            except (ValueError, TypeError):
+                                pass
+                        elif 'quality_score' in eval_data:
+                            try:
+                                score = float(eval_data['quality_score'])
+                            except (ValueError, TypeError):
+                                pass
+                        elif 'score' in eval_data:
+                            try:
+                                score = float(eval_data['score'])
+                            except (ValueError, TypeError):
+                                pass
+                        # Calculate score from individual criteria scores if no overall score found
+                        elif 'scores' in eval_data and eval_data['scores']:
+                            try:
+                                score_values = [float(s) for s in eval_data['scores'].values()
+                                              if str(s).replace('.', '', 1).isdigit()]
+                                if score_values:
+                                    score = sum(score_values) / len(score_values)
+                            except (ValueError, TypeError, AttributeError):
+                                pass
                     games_with_scores.append((game, score))
                 
                 # Sort by score in descending order
