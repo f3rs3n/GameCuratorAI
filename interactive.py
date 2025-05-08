@@ -584,7 +584,7 @@ class InteractiveMenu:
             if self.special_cases and 'multi_disc' in self.special_cases:
                 print("\nApplying multi-disc rules...")
                 rules_config = {"multi_disc": {"mode": "all_or_none", "prefer": "complete"}}
-                self.filtered_games = self.rule_engine.apply_special_case_rules(self.filtered_games, rules_config)
+                self.filtered_games = self.rule_engine.apply_rules_to_filtered_games(self.filtered_games, rules_config)
             
             # Show final statistics
             original_count = self.parsed_data['game_count']
@@ -976,7 +976,7 @@ class InteractiveMenu:
                 if special_cases and 'multi_disc' in special_cases:
                     self._print_info("Applying multi-disc rules...")
                     rules_config = {"multi_disc": {"mode": "all_or_none", "prefer": "complete"}}
-                    filtered_games = self.rule_engine.apply_special_case_rules(filtered_games, rules_config)
+                    filtered_games = self.rule_engine.apply_rules_to_filtered_games(filtered_games, rules_config)
                 
                 # Export results
                 self._print_info(f"Exporting filtered DAT to: {filtered_path}")

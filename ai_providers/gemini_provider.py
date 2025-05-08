@@ -278,6 +278,7 @@ class GeminiProvider(BaseAIProvider):
                 response_text = response.text
                 
                 # Extract the JSON part from the response
+                # First try to detect standard JSON structure with brace matching
                 start_idx = response_text.find('{')
                 end_idx = response_text.rfind('}') + 1
                 
@@ -289,16 +290,35 @@ class GeminiProvider(BaseAIProvider):
                         # Ensure batch_results is a list or has a 'games' key with a list
                         if isinstance(batch_results, dict) and "games" in batch_results:
                             batch_results = batch_results["games"]
+                        elif not isinstance(batch_results, list):
+                            # If it's not a list or doesn't have a games key, something's wrong
+                            raise ValueError(f"Unexpected result format: {type(batch_results)}")
+                        
+                        # Validate each result to ensure it has the expected structure
+                        for i, result in enumerate(batch_results):
+                            if not isinstance(result, dict):
+                                self.logger.warning(f"Result {i} is not a dictionary: {result}")
+                                continue
+                                
+                            # Ensure each result has required fields
+                            if "game_name" not in result:
+                                result["game_name"] = f"Unknown Game {i}"
+                            
+                            # Ensure scores and explanations are dictionaries
+                            if "scores" not in result or not isinstance(result["scores"], dict):
+                                result["scores"] = {c: 5.0 for c in criteria}
+                            
+                            if "explanations" not in result or not isinstance(result["explanations"], dict):
+                                result["explanations"] = {c: "No explanation provided" for c in criteria}
                         
                         # Validate and ensure we have results for each game
                         if len(batch_results) != len(batch):
                             self.logger.warning(f"Batch returned {len(batch_results)} results for {len(batch)} games")
                             # Fill in missing games with placeholders
-                            batch_names = [game["name"] for game in batch]
-                            result_names = [result.get("game_name", "") for result in batch_results]
+                            result_names = [result.get("game_name", "").strip() for result in batch_results]
                             
                             # Add any missing games
-                            for i, game in enumerate(batch):
+                            for game in batch:
                                 if game["name"] not in result_names:
                                     self.logger.warning(f"Game {game['name']} missing from results, adding placeholder")
                                     placeholder = {
