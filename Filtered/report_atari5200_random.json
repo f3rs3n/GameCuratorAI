@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-05-08T10:33:49.821643",
+  "timestamp": "2025-05-08T10:43:02.136834",
   "filtered_games_count": 77,
   "evaluations_count": 77,
   "special_cases": {
@@ -29,22 +29,22 @@
         "game_id": "unknown",
         "game_name": "Activision Decathlon, The (USA)",
         "scores": {
-          "metacritic": 1.7,
-          "historical": 9.3,
-          "v_list": 4.9,
-          "console_significance": 7.9,
-          "mods_hacks": 4.9
+          "metacritic": 1.2,
+          "historical": 5.8,
+          "v_list": 4.6,
+          "console_significance": 6.9,
+          "mods_hacks": 3.9
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Activision Decathlon, The (USA) receives minimal marks for Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Activision Decathlon, The (USA) is impressive.",
-          "v_list": "For v_list, Activision Decathlon, The (USA) shows questionable qualities.",
-          "console_significance": "Based on random evaluation, Activision Decathlon, The (USA) has solid marks for console_significance.",
-          "mods_hacks": "Activision Decathlon, The (USA) has limited significance in terms of mods_hacks."
+          "metacritic": "This title demonstrates below average standing regarding Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Activision Decathlon, The (USA) performs at a good level.",
+          "v_list": "For v_list, Activision Decathlon, The (USA) shows limited qualities.",
+          "console_significance": "Activision Decathlon, The (USA) has adequate standing in terms of console_significance.",
+          "mods_hacks": "For mods_hacks, Activision Decathlon, The (USA) shows limited qualities."
         },
-        "overall_score": 5.7,
-        "confidence": 0.69,
-        "_evaluation_time": 0.00012874603271484375,
+        "overall_score": 4.5,
+        "confidence": 0.8,
+        "_evaluation_time": 0.00020766258239746094,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -75,22 +75,22 @@
         "game_id": "unknown",
         "game_name": "Astro Chase (USA)",
         "scores": {
-          "metacritic": 4.4,
-          "historical": 4.0,
-          "v_list": 8.3,
-          "console_significance": 5.2,
-          "mods_hacks": 4.0
+          "metacritic": 4.3,
+          "historical": 6.6,
+          "v_list": 1.9,
+          "console_significance": 8.7,
+          "mods_hacks": 2.6
         },
         "explanations": {
-          "metacritic": "Astro Chase (USA) has modest significance in terms of Critical acclaim and review scores.",
-          "historical": "This title demonstrates modest standing regarding Historical significance and innovation.",
-          "v_list": "Astro Chase (USA) scores highly on v_list.",
-          "console_significance": "Based on random evaluation, Astro Chase (USA) has solid marks for console_significance.",
-          "mods_hacks": "This title demonstrates below average standing regarding mods_hacks."
+          "metacritic": "Astro Chase (USA) has minimal significance in terms of Critical acclaim and review scores.",
+          "historical": "Astro Chase (USA) has decent standing in terms of Historical significance and innovation.",
+          "v_list": "For v_list, Astro Chase (USA) shows below average qualities.",
+          "console_significance": "For console_significance, Astro Chase (USA) is impressive.",
+          "mods_hacks": "This title demonstrates questionable standing regarding mods_hacks."
         },
-        "overall_score": 5.2,
-        "confidence": 0.86,
-        "_evaluation_time": 0.0001423358917236328,
+        "overall_score": 4.8,
+        "confidence": 0.84,
+        "_evaluation_time": 0.00015544891357421875,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -121,22 +121,22 @@
         "game_id": "unknown",
         "game_name": "Atari PAM - Pete's Test (USA)",
         "scores": {
-          "metacritic": 4.4,
-          "historical": 1.6,
-          "v_list": 8.4,
-          "console_significance": 9.0,
-          "mods_hacks": 9.2
+          "metacritic": 9.5,
+          "historical": 2.3,
+          "v_list": 5.6,
+          "console_significance": 9.8,
+          "mods_hacks": 5.1
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Atari PAM - Pete's Test (USA) shows below average qualities.",
-          "historical": "For Historical significance and innovation, Atari PAM - Pete's Test (USA) shows below average qualities.",
-          "v_list": "Based on random evaluation, Atari PAM - Pete's Test (USA) receives top marks for v_list.",
+          "metacritic": "Atari PAM - Pete's Test (USA) scores highly on Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Atari PAM - Pete's Test (USA) receives below average marks for Historical significance and innovation.",
+          "v_list": "For v_list, Atari PAM - Pete's Test (USA) performs at a good level.",
           "console_significance": "Based on random evaluation, Atari PAM - Pete's Test (USA) receives top marks for console_significance.",
-          "mods_hacks": "For mods_hacks, Atari PAM - Pete's Test (USA) is remarkable."
+          "mods_hacks": "This title shows good qualities for mods_hacks."
         },
         "overall_score": 6.5,
-        "confidence": 0.69,
-        "_evaluation_time": 0.00011587142944335938,
+        "confidence": 0.77,
+        "_evaluation_time": 0.00022149085998535156,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -167,22 +167,22 @@
         "game_id": "unknown",
         "game_name": "Atari PAM Diagnostics (USA) (v2.3)",
         "scores": {
-          "metacritic": 8.7,
-          "historical": 3.5,
-          "v_list": 6.3,
-          "console_significance": 8.1,
-          "mods_hacks": 8.9
+          "metacritic": 1.7,
+          "historical": 1.8,
+          "v_list": 8.6,
+          "console_significance": 6.8,
+          "mods_hacks": 7.2
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Atari PAM Diagnostics (USA) (v2.3) is excellent.",
-          "historical": "For Historical significance and innovation, Atari PAM Diagnostics (USA) (v2.3) shows below average qualities.",
-          "v_list": "Atari PAM Diagnostics (USA) (v2.3) has decent standing in terms of v_list.",
-          "console_significance": "Atari PAM Diagnostics (USA) (v2.3) scores highly on console_significance.",
-          "mods_hacks": "For mods_hacks, Atari PAM Diagnostics (USA) (v2.3) is exceptional."
+          "metacritic": "Based on random evaluation, Atari PAM Diagnostics (USA) (v2.3) receives questionable marks for Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Atari PAM Diagnostics (USA) (v2.3) receives below average marks for Historical significance and innovation.",
+          "v_list": "For v_list, Atari PAM Diagnostics (USA) (v2.3) is exceptional.",
+          "console_significance": "Atari PAM Diagnostics (USA) (v2.3) has solid standing in terms of console_significance.",
+          "mods_hacks": "For mods_hacks, Atari PAM Diagnostics (USA) (v2.3) performs at a good level."
         },
-        "overall_score": 7.1,
-        "confidence": 0.76,
-        "_evaluation_time": 0.00010013580322265625,
+        "overall_score": 5.2,
+        "confidence": 0.89,
+        "_evaluation_time": 0.00013875961303710938,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -213,22 +213,22 @@
         "game_id": "unknown",
         "game_name": "Atari PAM System Test (USA) (v1.02)",
         "scores": {
-          "metacritic": 10.0,
-          "historical": 7.9,
+          "metacritic": 3.4,
+          "historical": 6.2,
           "v_list": 4.3,
-          "console_significance": 8.4,
-          "mods_hacks": 9.5
+          "console_significance": 1.8,
+          "mods_hacks": 8.9
         },
         "explanations": {
-          "metacritic": "Atari PAM System Test (USA) (v1.02) scores highly on Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Atari PAM System Test (USA) (v1.02) performs at a solid level.",
-          "v_list": "Based on random evaluation, Atari PAM System Test (USA) (v1.02) receives questionable marks for v_list.",
-          "console_significance": "Based on random evaluation, Atari PAM System Test (USA) (v1.02) receives top marks for console_significance.",
-          "mods_hacks": "This title shows outstanding qualities regarding mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, Atari PAM System Test (USA) (v1.02) shows minimal qualities.",
+          "historical": "Atari PAM System Test (USA) (v1.02) has decent standing in terms of Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Atari PAM System Test (USA) (v1.02) receives minimal marks for v_list.",
+          "console_significance": "For console_significance, Atari PAM System Test (USA) (v1.02) shows minimal qualities.",
+          "mods_hacks": "This title shows exceptional qualities regarding mods_hacks."
         },
-        "overall_score": 8.0,
-        "confidence": 0.81,
-        "_evaluation_time": 9.560585021972656e-05,
+        "overall_score": 4.9,
+        "confidence": 0.86,
+        "_evaluation_time": 0.00015115737915039062,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -259,22 +259,22 @@
         "game_id": "unknown",
         "game_name": "Ballblazer (USA)",
         "scores": {
-          "metacritic": 7.0,
-          "historical": 1.8,
-          "v_list": 5.3,
-          "console_significance": 2.2,
-          "mods_hacks": 6.8
+          "metacritic": 1.6,
+          "historical": 2.1,
+          "v_list": 6.5,
+          "console_significance": 7.3,
+          "mods_hacks": 9.6
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Ballblazer (USA) performs at a decent level.",
+          "metacritic": "This title demonstrates below average standing regarding Critical acclaim and review scores.",
           "historical": "Ballblazer (USA) has questionable significance in terms of Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Ballblazer (USA) has reasonable marks for v_list.",
-          "console_significance": "For console_significance, Ballblazer (USA) shows modest qualities.",
-          "mods_hacks": "For mods_hacks, Ballblazer (USA) performs at a decent level."
+          "v_list": "This title shows decent qualities for v_list.",
+          "console_significance": "This title shows good qualities for console_significance.",
+          "mods_hacks": "This title shows impressive qualities regarding mods_hacks."
         },
-        "overall_score": 4.6,
-        "confidence": 0.87,
-        "_evaluation_time": 0.0001068115234375,
+        "overall_score": 5.4,
+        "confidence": 0.89,
+        "_evaluation_time": 0.00013756752014160156,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -305,22 +305,22 @@
         "game_id": "unknown",
         "game_name": "Beamrider (USA)",
         "scores": {
-          "metacritic": 5.0,
-          "historical": 5.1,
-          "v_list": 1.2,
-          "console_significance": 3.6,
-          "mods_hacks": 3.5
+          "metacritic": 6.7,
+          "historical": 6.7,
+          "v_list": 6.6,
+          "console_significance": 4.7,
+          "mods_hacks": 8.9
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Beamrider (USA) has reasonable marks for Critical acclaim and review scores.",
-          "historical": "Beamrider (USA) has solid standing in terms of Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Beamrider (USA) receives limited marks for v_list.",
-          "console_significance": "Based on random evaluation, Beamrider (USA) receives questionable marks for console_significance.",
-          "mods_hacks": "For mods_hacks, Beamrider (USA) shows minimal qualities."
+          "metacritic": "Beamrider (USA) has adequate standing in terms of Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Beamrider (USA) has good marks for Historical significance and innovation.",
+          "v_list": "This title shows adequate qualities for v_list.",
+          "console_significance": "Beamrider (USA) has below average significance in terms of console_significance.",
+          "mods_hacks": "For mods_hacks, Beamrider (USA) is excellent."
         },
-        "overall_score": 3.7,
+        "overall_score": 6.7,
         "confidence": 0.69,
-        "_evaluation_time": 9.608268737792969e-05,
+        "_evaluation_time": 0.00014138221740722656,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -351,22 +351,22 @@
         "game_id": "unknown",
         "game_name": "BerZerk (USA)",
         "scores": {
-          "metacritic": 4.1,
-          "historical": 7.2,
-          "v_list": 8.1,
-          "console_significance": 6.6,
-          "mods_hacks": 8.4
+          "metacritic": 6.9,
+          "historical": 8.0,
+          "v_list": 1.6,
+          "console_significance": 2.5,
+          "mods_hacks": 3.6
         },
         "explanations": {
-          "metacritic": "This title demonstrates questionable standing regarding Critical acclaim and review scores.",
-          "historical": "BerZerk (USA) has solid standing in terms of Historical significance and innovation.",
-          "v_list": "For v_list, BerZerk (USA) is excellent.",
-          "console_significance": "For console_significance, BerZerk (USA) performs at a reasonable level.",
-          "mods_hacks": "For mods_hacks, BerZerk (USA) is impressive."
+          "metacritic": "This title shows decent qualities for Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, BerZerk (USA) receives top marks for Historical significance and innovation.",
+          "v_list": "Based on random evaluation, BerZerk (USA) receives minimal marks for v_list.",
+          "console_significance": "Based on random evaluation, BerZerk (USA) receives limited marks for console_significance.",
+          "mods_hacks": "For mods_hacks, BerZerk (USA) shows modest qualities."
         },
-        "overall_score": 6.9,
-        "confidence": 0.76,
-        "_evaluation_time": 0.00011730194091796875,
+        "overall_score": 4.5,
+        "confidence": 0.78,
+        "_evaluation_time": 0.0001983642578125,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -397,22 +397,22 @@
         "game_id": "unknown",
         "game_name": "Blue Print (USA)",
         "scores": {
-          "metacritic": 1.6,
-          "historical": 9.0,
-          "v_list": 6.9,
-          "console_significance": 5.5,
-          "mods_hacks": 6.6
+          "metacritic": 3.8,
+          "historical": 7.7,
+          "v_list": 1.2,
+          "console_significance": 9.3,
+          "mods_hacks": 2.2
         },
         "explanations": {
-          "metacritic": "Blue Print (USA) has minimal significance in terms of Critical acclaim and review scores.",
-          "historical": "Based on random evaluation, Blue Print (USA) receives top marks for Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Blue Print (USA) has decent marks for v_list.",
-          "console_significance": "This title shows reasonable qualities for console_significance.",
-          "mods_hacks": "This title shows good qualities for mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, Blue Print (USA) shows minimal qualities.",
+          "historical": "For Historical significance and innovation, Blue Print (USA) performs at a decent level.",
+          "v_list": "Based on random evaluation, Blue Print (USA) receives questionable marks for v_list.",
+          "console_significance": "For console_significance, Blue Print (USA) is excellent.",
+          "mods_hacks": "Blue Print (USA) has limited significance in terms of mods_hacks."
         },
-        "overall_score": 5.9,
-        "confidence": 0.68,
-        "_evaluation_time": 9.608268737792969e-05,
+        "overall_score": 4.8,
+        "confidence": 0.78,
+        "_evaluation_time": 0.00014734268188476562,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -443,22 +443,22 @@
         "game_id": "unknown",
         "game_name": "Bounty Bob Strikes Back! (USA)",
         "scores": {
-          "metacritic": 2.1,
-          "historical": 5.3,
-          "v_list": 1.6,
-          "console_significance": 9.4,
-          "mods_hacks": 2.1
+          "metacritic": 7.3,
+          "historical": 4.1,
+          "v_list": 6.7,
+          "console_significance": 8.3,
+          "mods_hacks": 6.2
         },
         "explanations": {
-          "metacritic": "This title demonstrates limited standing regarding Critical acclaim and review scores.",
-          "historical": "Bounty Bob Strikes Back! (USA) has adequate standing in terms of Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Bounty Bob Strikes Back! (USA) receives modest marks for v_list.",
-          "console_significance": "Bounty Bob Strikes Back! (USA) scores highly on console_significance.",
-          "mods_hacks": "Based on random evaluation, Bounty Bob Strikes Back! (USA) receives modest marks for mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, Bounty Bob Strikes Back! (USA) performs at a reasonable level.",
+          "historical": "This title demonstrates questionable standing regarding Historical significance and innovation.",
+          "v_list": "This title shows good qualities for v_list.",
+          "console_significance": "Based on random evaluation, Bounty Bob Strikes Back! (USA) receives top marks for console_significance.",
+          "mods_hacks": "Bounty Bob Strikes Back! (USA) has decent standing in terms of mods_hacks."
         },
-        "overall_score": 4.1,
+        "overall_score": 6.5,
         "confidence": 0.84,
-        "_evaluation_time": 9.918212890625e-05,
+        "_evaluation_time": 0.0001652240753173828,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -489,22 +489,22 @@
         "game_id": "unknown",
         "game_name": "Buck Rogers - Planet of Zoom (USA)",
         "scores": {
-          "metacritic": 1.3,
-          "historical": 7.8,
-          "v_list": 6.6,
-          "console_significance": 3.3,
-          "mods_hacks": 3.6
+          "metacritic": 8.2,
+          "historical": 5.1,
+          "v_list": 7.0,
+          "console_significance": 4.9,
+          "mods_hacks": 5.2
         },
         "explanations": {
-          "metacritic": "This title demonstrates minimal standing regarding Critical acclaim and review scores.",
+          "metacritic": "This title shows remarkable qualities regarding Critical acclaim and review scores.",
           "historical": "Based on random evaluation, Buck Rogers - Planet of Zoom (USA) has adequate marks for Historical significance and innovation.",
-          "v_list": "For v_list, Buck Rogers - Planet of Zoom (USA) performs at a decent level.",
-          "console_significance": "This title demonstrates questionable standing regarding console_significance.",
-          "mods_hacks": "For mods_hacks, Buck Rogers - Planet of Zoom (USA) shows below average qualities."
+          "v_list": "This title shows solid qualities for v_list.",
+          "console_significance": "This title demonstrates modest standing regarding console_significance.",
+          "mods_hacks": "For mods_hacks, Buck Rogers - Planet of Zoom (USA) performs at a solid level."
         },
-        "overall_score": 4.5,
-        "confidence": 0.69,
-        "_evaluation_time": 0.0004744529724121094,
+        "overall_score": 6.1,
+        "confidence": 0.89,
+        "_evaluation_time": 0.00021147727966308594,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -535,22 +535,22 @@
         "game_id": "unknown",
         "game_name": "Carol Shaw's River Raid (USA)",
         "scores": {
-          "metacritic": 6.5,
-          "historical": 9.6,
-          "v_list": 4.6,
-          "console_significance": 9.6,
-          "mods_hacks": 4.7
+          "metacritic": 5.4,
+          "historical": 7.1,
+          "v_list": 9.7,
+          "console_significance": 4.5,
+          "mods_hacks": 2.7
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Carol Shaw's River Raid (USA) has good marks for Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Carol Shaw's River Raid (USA) is impressive.",
-          "v_list": "This title demonstrates questionable standing regarding v_list.",
-          "console_significance": "For console_significance, Carol Shaw's River Raid (USA) is remarkable.",
+          "metacritic": "For Critical acclaim and review scores, Carol Shaw's River Raid (USA) performs at a solid level.",
+          "historical": "This title shows reasonable qualities for Historical significance and innovation.",
+          "v_list": "This title shows impressive qualities regarding v_list.",
+          "console_significance": "Based on random evaluation, Carol Shaw's River Raid (USA) receives questionable marks for console_significance.",
           "mods_hacks": "Carol Shaw's River Raid (USA) has questionable significance in terms of mods_hacks."
         },
-        "overall_score": 7.0,
-        "confidence": 0.84,
-        "_evaluation_time": 0.00013065338134765625,
+        "overall_score": 5.9,
+        "confidence": 0.83,
+        "_evaluation_time": 0.0002639293670654297,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -581,22 +581,22 @@
         "game_id": "unknown",
         "game_name": "Castle Blast (USA) (Unl)",
         "scores": {
-          "metacritic": 7.7,
-          "historical": 6.8,
-          "v_list": 9.0,
-          "console_significance": 2.5,
-          "mods_hacks": 9.4
+          "metacritic": 5.7,
+          "historical": 6.4,
+          "v_list": 7.4,
+          "console_significance": 9.9,
+          "mods_hacks": 1.4
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Castle Blast (USA) (Unl) has decent marks for Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Castle Blast (USA) (Unl) performs at a good level.",
-          "v_list": "Castle Blast (USA) (Unl) scores highly on v_list.",
-          "console_significance": "Based on random evaluation, Castle Blast (USA) (Unl) receives limited marks for console_significance.",
-          "mods_hacks": "For mods_hacks, Castle Blast (USA) (Unl) is remarkable."
+          "metacritic": "Based on random evaluation, Castle Blast (USA) (Unl) has reasonable marks for Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Castle Blast (USA) (Unl) has adequate marks for Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Castle Blast (USA) (Unl) has decent marks for v_list.",
+          "console_significance": "This title shows impressive qualities regarding console_significance.",
+          "mods_hacks": "For mods_hacks, Castle Blast (USA) (Unl) shows limited qualities."
         },
-        "overall_score": 7.1,
-        "confidence": 0.84,
-        "_evaluation_time": 0.00011920928955078125,
+        "overall_score": 6.2,
+        "confidence": 0.93,
+        "_evaluation_time": 0.00020003318786621094,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -627,22 +627,22 @@
         "game_id": "unknown",
         "game_name": "Castle Crisis (USA) (Unl)",
         "scores": {
-          "metacritic": 6.8,
-          "historical": 8.0,
-          "v_list": 5.5,
-          "console_significance": 8.0,
-          "mods_hacks": 7.6
+          "metacritic": 7.0,
+          "historical": 6.4,
+          "v_list": 8.0,
+          "console_significance": 9.5,
+          "mods_hacks": 3.3
         },
         "explanations": {
-          "metacritic": "Castle Crisis (USA) (Unl) has decent standing in terms of Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Castle Crisis (USA) (Unl) is impressive.",
-          "v_list": "Based on random evaluation, Castle Crisis (USA) (Unl) has adequate marks for v_list.",
-          "console_significance": "This title shows impressive qualities regarding console_significance.",
-          "mods_hacks": "Based on random evaluation, Castle Crisis (USA) (Unl) has reasonable marks for mods_hacks."
+          "metacritic": "This title shows solid qualities for Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Castle Crisis (USA) (Unl) performs at a adequate level.",
+          "v_list": "For v_list, Castle Crisis (USA) (Unl) is exceptional.",
+          "console_significance": "This title shows remarkable qualities regarding console_significance.",
+          "mods_hacks": "Castle Crisis (USA) (Unl) has minimal significance in terms of mods_hacks."
         },
-        "overall_score": 7.2,
-        "confidence": 0.65,
-        "_evaluation_time": 9.965896606445312e-05,
+        "overall_score": 6.8,
+        "confidence": 0.88,
+        "_evaluation_time": 0.00013566017150878906,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -673,22 +673,22 @@
         "game_id": "unknown",
         "game_name": "Centipede (USA)",
         "scores": {
-          "metacritic": 3.7,
-          "historical": 8.7,
-          "v_list": 7.3,
-          "console_significance": 5.0,
-          "mods_hacks": 2.3
+          "metacritic": 1.6,
+          "historical": 3.4,
+          "v_list": 7.2,
+          "console_significance": 6.4,
+          "mods_hacks": 5.8
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Centipede (USA) shows minimal qualities.",
-          "historical": "Based on random evaluation, Centipede (USA) receives top marks for Historical significance and innovation.",
+          "metacritic": "This title demonstrates below average standing regarding Critical acclaim and review scores.",
+          "historical": "Centipede (USA) has below average significance in terms of Historical significance and innovation.",
           "v_list": "Centipede (USA) has adequate standing in terms of v_list.",
-          "console_significance": "This title shows reasonable qualities for console_significance.",
-          "mods_hacks": "Based on random evaluation, Centipede (USA) receives below average marks for mods_hacks."
+          "console_significance": "Centipede (USA) has good standing in terms of console_significance.",
+          "mods_hacks": "Centipede (USA) has reasonable standing in terms of mods_hacks."
         },
-        "overall_score": 5.4,
-        "confidence": 0.66,
-        "_evaluation_time": 9.083747863769531e-05,
+        "overall_score": 4.9,
+        "confidence": 0.74,
+        "_evaluation_time": 0.00012826919555664062,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -719,22 +719,22 @@
         "game_id": "unknown",
         "game_name": "Choplifter! (USA)",
         "scores": {
-          "metacritic": 6.0,
-          "historical": 1.6,
-          "v_list": 6.5,
-          "console_significance": 1.2,
-          "mods_hacks": 3.8
+          "metacritic": 2.1,
+          "historical": 6.8,
+          "v_list": 7.3,
+          "console_significance": 1.8,
+          "mods_hacks": 8.9
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Choplifter! (USA) has adequate marks for Critical acclaim and review scores.",
-          "historical": "This title demonstrates minimal standing regarding Historical significance and innovation.",
+          "metacritic": "This title demonstrates minimal standing regarding Critical acclaim and review scores.",
+          "historical": "This title shows solid qualities for Historical significance and innovation.",
           "v_list": "Based on random evaluation, Choplifter! (USA) has adequate marks for v_list.",
-          "console_significance": "Based on random evaluation, Choplifter! (USA) receives modest marks for console_significance.",
-          "mods_hacks": "Choplifter! (USA) has below average significance in terms of mods_hacks."
+          "console_significance": "Choplifter! (USA) has below average significance in terms of console_significance.",
+          "mods_hacks": "For mods_hacks, Choplifter! (USA) is remarkable."
         },
-        "overall_score": 3.8,
-        "confidence": 0.69,
-        "_evaluation_time": 0.00012159347534179688,
+        "overall_score": 5.4,
+        "confidence": 0.91,
+        "_evaluation_time": 0.0002129077911376953,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -765,22 +765,22 @@
         "game_id": "unknown",
         "game_name": "Congo Bongo (USA)",
         "scores": {
-          "metacritic": 8.9,
-          "historical": 2.4,
-          "v_list": 8.6,
-          "console_significance": 7.6,
-          "mods_hacks": 4.2
+          "metacritic": 9.2,
+          "historical": 1.2,
+          "v_list": 7.6,
+          "console_significance": 9.4,
+          "mods_hacks": 3.1
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Congo Bongo (USA) is exceptional.",
-          "historical": "This title demonstrates modest standing regarding Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Congo Bongo (USA) receives top marks for v_list.",
-          "console_significance": "Based on random evaluation, Congo Bongo (USA) has good marks for console_significance.",
+          "metacritic": "Congo Bongo (USA) scores highly on Critical acclaim and review scores.",
+          "historical": "Congo Bongo (USA) has modest significance in terms of Historical significance and innovation.",
+          "v_list": "For v_list, Congo Bongo (USA) performs at a solid level.",
+          "console_significance": "Based on random evaluation, Congo Bongo (USA) receives top marks for console_significance.",
           "mods_hacks": "Based on random evaluation, Congo Bongo (USA) receives modest marks for mods_hacks."
         },
-        "overall_score": 6.3,
-        "confidence": 0.84,
-        "_evaluation_time": 0.00011920928955078125,
+        "overall_score": 6.1,
+        "confidence": 0.72,
+        "_evaluation_time": 0.00014734268188476562,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -811,22 +811,22 @@
         "game_id": "unknown",
         "game_name": "Countermeasure (USA)",
         "scores": {
-          "metacritic": 1.7,
-          "historical": 9.4,
-          "v_list": 8.9,
-          "console_significance": 1.1,
-          "mods_hacks": 5.2
+          "metacritic": 9.6,
+          "historical": 6.1,
+          "v_list": 8.2,
+          "console_significance": 9.4,
+          "mods_hacks": 5.3
         },
         "explanations": {
-          "metacritic": "This title demonstrates questionable standing regarding Critical acclaim and review scores.",
-          "historical": "This title shows impressive qualities regarding Historical significance and innovation.",
-          "v_list": "This title shows exceptional qualities regarding v_list.",
-          "console_significance": "Countermeasure (USA) has limited significance in terms of console_significance.",
-          "mods_hacks": "Based on random evaluation, Countermeasure (USA) has decent marks for mods_hacks."
+          "metacritic": "Countermeasure (USA) scores highly on Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Countermeasure (USA) performs at a solid level.",
+          "v_list": "Countermeasure (USA) scores highly on v_list.",
+          "console_significance": "This title shows impressive qualities regarding console_significance.",
+          "mods_hacks": "Countermeasure (USA) has reasonable standing in terms of mods_hacks."
         },
-        "overall_score": 5.3,
-        "confidence": 0.81,
-        "_evaluation_time": 0.00018858909606933594,
+        "overall_score": 7.7,
+        "confidence": 0.85,
+        "_evaluation_time": 0.00013971328735351562,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -857,22 +857,22 @@
         "game_id": "unknown",
         "game_name": "David Crane's Pitfall II - Lost Caverns (USA)",
         "scores": {
-          "metacritic": 1.5,
-          "historical": 1.9,
-          "v_list": 3.1,
-          "console_significance": 4.6,
-          "mods_hacks": 9.2
+          "metacritic": 3.5,
+          "historical": 4.4,
+          "v_list": 7.8,
+          "console_significance": 5.3,
+          "mods_hacks": 6.4
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, David Crane's Pitfall II - Lost Caverns (USA) shows questionable qualities.",
-          "historical": "Based on random evaluation, David Crane's Pitfall II - Lost Caverns (USA) receives minimal marks for Historical significance and innovation.",
-          "v_list": "David Crane's Pitfall II - Lost Caverns (USA) has questionable significance in terms of v_list.",
-          "console_significance": "Based on random evaluation, David Crane's Pitfall II - Lost Caverns (USA) receives modest marks for console_significance.",
-          "mods_hacks": "David Crane's Pitfall II - Lost Caverns (USA) scores highly on mods_hacks."
+          "metacritic": "David Crane's Pitfall II - Lost Caverns (USA) has limited significance in terms of Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, David Crane's Pitfall II - Lost Caverns (USA) shows questionable qualities.",
+          "v_list": "For v_list, David Crane's Pitfall II - Lost Caverns (USA) performs at a good level.",
+          "console_significance": "David Crane's Pitfall II - Lost Caverns (USA) has solid standing in terms of console_significance.",
+          "mods_hacks": "Based on random evaluation, David Crane's Pitfall II - Lost Caverns (USA) has reasonable marks for mods_hacks."
         },
-        "overall_score": 4.1,
-        "confidence": 0.72,
-        "_evaluation_time": 0.0001373291015625,
+        "overall_score": 5.5,
+        "confidence": 0.85,
+        "_evaluation_time": 0.00025844573974609375,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -903,22 +903,22 @@
         "game_id": "unknown",
         "game_name": "Defender (USA)",
         "scores": {
-          "metacritic": 4.2,
-          "historical": 8.8,
-          "v_list": 5.2,
-          "console_significance": 6.8,
-          "mods_hacks": 7.0
+          "metacritic": 2.4,
+          "historical": 2.8,
+          "v_list": 7.7,
+          "console_significance": 4.8,
+          "mods_hacks": 4.3
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Defender (USA) receives minimal marks for Critical acclaim and review scores.",
-          "historical": "Based on random evaluation, Defender (USA) receives top marks for Historical significance and innovation.",
-          "v_list": "For v_list, Defender (USA) performs at a adequate level.",
-          "console_significance": "For console_significance, Defender (USA) performs at a good level.",
-          "mods_hacks": "Based on random evaluation, Defender (USA) has good marks for mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, Defender (USA) shows minimal qualities.",
+          "historical": "Defender (USA) has limited significance in terms of Historical significance and innovation.",
+          "v_list": "For v_list, Defender (USA) performs at a reasonable level.",
+          "console_significance": "This title demonstrates below average standing regarding console_significance.",
+          "mods_hacks": "Based on random evaluation, Defender (USA) receives questionable marks for mods_hacks."
         },
-        "overall_score": 6.4,
+        "overall_score": 4.4,
         "confidence": 0.93,
-        "_evaluation_time": 0.00016498565673828125,
+        "_evaluation_time": 0.00024890899658203125,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -949,22 +949,22 @@
         "game_id": "unknown",
         "game_name": "Dig Dug (USA)",
         "scores": {
-          "metacritic": 2.2,
-          "historical": 7.6,
-          "v_list": 3.4,
-          "console_significance": 6.8,
-          "mods_hacks": 4.9
+          "metacritic": 9.1,
+          "historical": 3.9,
+          "v_list": 8.0,
+          "console_significance": 5.7,
+          "mods_hacks": 5.0
         },
         "explanations": {
-          "metacritic": "Dig Dug (USA) has minimal significance in terms of Critical acclaim and review scores.",
-          "historical": "Dig Dug (USA) has solid standing in terms of Historical significance and innovation.",
-          "v_list": "This title demonstrates below average standing regarding v_list.",
-          "console_significance": "Dig Dug (USA) has decent standing in terms of console_significance.",
-          "mods_hacks": "Based on random evaluation, Dig Dug (USA) receives below average marks for mods_hacks."
+          "metacritic": "Dig Dug (USA) scores highly on Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Dig Dug (USA) receives limited marks for Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Dig Dug (USA) receives top marks for v_list.",
+          "console_significance": "Dig Dug (USA) has adequate standing in terms of console_significance.",
+          "mods_hacks": "Based on random evaluation, Dig Dug (USA) has reasonable marks for mods_hacks."
         },
-        "overall_score": 5.0,
-        "confidence": 0.8,
-        "_evaluation_time": 0.00014543533325195312,
+        "overall_score": 6.3,
+        "confidence": 0.75,
+        "_evaluation_time": 0.0001659393310546875,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -995,22 +995,22 @@
         "game_id": "unknown",
         "game_name": "Dreadnaught Factor, The (USA)",
         "scores": {
-          "metacritic": 4.9,
-          "historical": 3.8,
-          "v_list": 5.8,
-          "console_significance": 4.4,
-          "mods_hacks": 8.6
+          "metacritic": 5.6,
+          "historical": 3.7,
+          "v_list": 9.5,
+          "console_significance": 2.3,
+          "mods_hacks": 9.3
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Dreadnaught Factor, The (USA) receives below average marks for Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Dreadnaught Factor, The (USA) shows questionable qualities.",
-          "v_list": "This title shows decent qualities for v_list.",
-          "console_significance": "For console_significance, Dreadnaught Factor, The (USA) shows minimal qualities.",
-          "mods_hacks": "Dreadnaught Factor, The (USA) scores highly on mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, Dreadnaught Factor, The (USA) performs at a solid level.",
+          "historical": "Based on random evaluation, Dreadnaught Factor, The (USA) receives modest marks for Historical significance and innovation.",
+          "v_list": "Dreadnaught Factor, The (USA) scores highly on v_list.",
+          "console_significance": "This title demonstrates questionable standing regarding console_significance.",
+          "mods_hacks": "Based on random evaluation, Dreadnaught Factor, The (USA) receives top marks for mods_hacks."
         },
-        "overall_score": 5.5,
-        "confidence": 0.78,
-        "_evaluation_time": 0.00012183189392089844,
+        "overall_score": 6.1,
+        "confidence": 0.88,
+        "_evaluation_time": 0.0004825592041015625,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1041,22 +1041,22 @@
         "game_id": "unknown",
         "game_name": "Frogger (USA)",
         "scores": {
-          "metacritic": 7.7,
-          "historical": 4.9,
+          "metacritic": 1.6,
+          "historical": 1.3,
           "v_list": 5.7,
-          "console_significance": 3.7,
-          "mods_hacks": 2.8
+          "console_significance": 1.4,
+          "mods_hacks": 5.6
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Frogger (USA) performs at a adequate level.",
-          "historical": "Based on random evaluation, Frogger (USA) receives limited marks for Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Frogger (USA) has good marks for v_list.",
-          "console_significance": "Based on random evaluation, Frogger (USA) receives questionable marks for console_significance.",
-          "mods_hacks": "Based on random evaluation, Frogger (USA) receives minimal marks for mods_hacks."
+          "metacritic": "Frogger (USA) has limited significance in terms of Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Frogger (USA) shows minimal qualities.",
+          "v_list": "For v_list, Frogger (USA) performs at a reasonable level.",
+          "console_significance": "Based on random evaluation, Frogger (USA) receives minimal marks for console_significance.",
+          "mods_hacks": "This title shows adequate qualities for mods_hacks."
         },
-        "overall_score": 5.0,
-        "confidence": 0.95,
-        "_evaluation_time": 0.0001392364501953125,
+        "overall_score": 3.1,
+        "confidence": 0.74,
+        "_evaluation_time": 0.00015306472778320312,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1087,22 +1087,22 @@
         "game_id": "unknown",
         "game_name": "Frogger II - Threeedeep! (USA)",
         "scores": {
-          "metacritic": 1.8,
-          "historical": 6.5,
-          "v_list": 3.2,
-          "console_significance": 7.9,
-          "mods_hacks": 7.1
+          "metacritic": 7.0,
+          "historical": 4.9,
+          "v_list": 6.8,
+          "console_significance": 4.6,
+          "mods_hacks": 8.3
         },
         "explanations": {
-          "metacritic": "This title demonstrates minimal standing regarding Critical acclaim and review scores.",
-          "historical": "Frogger II - Threeedeep! (USA) has good standing in terms of Historical significance and innovation.",
-          "v_list": "This title demonstrates minimal standing regarding v_list.",
-          "console_significance": "For console_significance, Frogger II - Threeedeep! (USA) performs at a solid level.",
-          "mods_hacks": "This title shows decent qualities for mods_hacks."
+          "metacritic": "Frogger II - Threeedeep! (USA) has adequate standing in terms of Critical acclaim and review scores.",
+          "historical": "This title demonstrates minimal standing regarding Historical significance and innovation.",
+          "v_list": "This title shows adequate qualities for v_list.",
+          "console_significance": "This title demonstrates minimal standing regarding console_significance.",
+          "mods_hacks": "Based on random evaluation, Frogger II - Threeedeep! (USA) receives top marks for mods_hacks."
         },
-        "overall_score": 5.3,
-        "confidence": 0.83,
-        "_evaluation_time": 0.00011277198791503906,
+        "overall_score": 6.3,
+        "confidence": 0.89,
+        "_evaluation_time": 0.00013875961303710938,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1133,22 +1133,22 @@
         "game_id": "unknown",
         "game_name": "Galaxian (USA)",
         "scores": {
-          "metacritic": 4.0,
-          "historical": 1.2,
-          "v_list": 9.8,
-          "console_significance": 4.9,
-          "mods_hacks": 5.3
+          "metacritic": 5.1,
+          "historical": 1.8,
+          "v_list": 1.5,
+          "console_significance": 5.0,
+          "mods_hacks": 2.5
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Galaxian (USA) shows limited qualities.",
-          "historical": "Galaxian (USA) has modest significance in terms of Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Galaxian (USA) receives top marks for v_list.",
-          "console_significance": "This title demonstrates modest standing regarding console_significance.",
-          "mods_hacks": "For mods_hacks, Galaxian (USA) performs at a adequate level."
+          "metacritic": "Based on random evaluation, Galaxian (USA) has good marks for Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Galaxian (USA) shows modest qualities.",
+          "v_list": "For v_list, Galaxian (USA) shows modest qualities.",
+          "console_significance": "For console_significance, Galaxian (USA) performs at a good level.",
+          "mods_hacks": "For mods_hacks, Galaxian (USA) shows questionable qualities."
         },
-        "overall_score": 5.0,
-        "confidence": 0.68,
-        "_evaluation_time": 0.00010657310485839844,
+        "overall_score": 3.2,
+        "confidence": 0.94,
+        "_evaluation_time": 0.00017070770263671875,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1179,22 +1179,22 @@
         "game_id": "unknown",
         "game_name": "Gorf (USA)",
         "scores": {
-          "metacritic": 5.3,
-          "historical": 5.9,
-          "v_list": 6.9,
-          "console_significance": 2.7,
-          "mods_hacks": 1.7
+          "metacritic": 8.3,
+          "historical": 6.0,
+          "v_list": 7.2,
+          "console_significance": 8.5,
+          "mods_hacks": 5.3
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Gorf (USA) performs at a good level.",
-          "historical": "This title shows adequate qualities for Historical significance and innovation.",
-          "v_list": "This title shows solid qualities for v_list.",
-          "console_significance": "Based on random evaluation, Gorf (USA) receives limited marks for console_significance.",
-          "mods_hacks": "Gorf (USA) has minimal significance in terms of mods_hacks."
+          "metacritic": "Based on random evaluation, Gorf (USA) receives top marks for Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Gorf (USA) has decent marks for Historical significance and innovation.",
+          "v_list": "Gorf (USA) has good standing in terms of v_list.",
+          "console_significance": "Based on random evaluation, Gorf (USA) receives top marks for console_significance.",
+          "mods_hacks": "This title shows adequate qualities for mods_hacks."
         },
-        "overall_score": 4.5,
-        "confidence": 0.82,
-        "_evaluation_time": 0.00010967254638671875,
+        "overall_score": 7.1,
+        "confidence": 0.66,
+        "_evaluation_time": 0.00014257431030273438,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1225,22 +1225,22 @@
         "game_id": "unknown",
         "game_name": "Gremlins (USA)",
         "scores": {
-          "metacritic": 1.4,
-          "historical": 2.2,
-          "v_list": 1.2,
-          "console_significance": 4.3,
-          "mods_hacks": 3.4
+          "metacritic": 5.5,
+          "historical": 2.7,
+          "v_list": 8.5,
+          "console_significance": 9.4,
+          "mods_hacks": 2.5
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Gremlins (USA) receives questionable marks for Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Gremlins (USA) shows modest qualities.",
-          "v_list": "Based on random evaluation, Gremlins (USA) receives below average marks for v_list.",
-          "console_significance": "This title demonstrates below average standing regarding console_significance.",
-          "mods_hacks": "Gremlins (USA) has below average significance in terms of mods_hacks."
+          "metacritic": "Based on random evaluation, Gremlins (USA) has decent marks for Critical acclaim and review scores.",
+          "historical": "Gremlins (USA) has minimal significance in terms of Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Gremlins (USA) receives top marks for v_list.",
+          "console_significance": "Based on random evaluation, Gremlins (USA) receives top marks for console_significance.",
+          "mods_hacks": "Based on random evaluation, Gremlins (USA) receives modest marks for mods_hacks."
         },
-        "overall_score": 2.5,
+        "overall_score": 5.7,
         "confidence": 0.66,
-        "_evaluation_time": 0.00014638900756835938,
+        "_evaluation_time": 0.00016808509826660156,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1271,22 +1271,22 @@
         "game_id": "unknown",
         "game_name": "Gyruss (USA)",
         "scores": {
-          "metacritic": 6.1,
-          "historical": 9.8,
-          "v_list": 7.8,
-          "console_significance": 2.5,
-          "mods_hacks": 1.2
+          "metacritic": 9.8,
+          "historical": 4.3,
+          "v_list": 5.8,
+          "console_significance": 6.3,
+          "mods_hacks": 3.1
         },
         "explanations": {
-          "metacritic": "This title shows solid qualities for Critical acclaim and review scores.",
-          "historical": "This title shows impressive qualities regarding Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Gyruss (USA) has reasonable marks for v_list.",
-          "console_significance": "This title demonstrates limited standing regarding console_significance.",
-          "mods_hacks": "Gyruss (USA) has limited significance in terms of mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, Gyruss (USA) is remarkable.",
+          "historical": "For Historical significance and innovation, Gyruss (USA) shows questionable qualities.",
+          "v_list": "Gyruss (USA) has good standing in terms of v_list.",
+          "console_significance": "Based on random evaluation, Gyruss (USA) has solid marks for console_significance.",
+          "mods_hacks": "Gyruss (USA) has questionable significance in terms of mods_hacks."
         },
-        "overall_score": 5.5,
-        "confidence": 0.87,
-        "_evaluation_time": 0.00011897087097167969,
+        "overall_score": 5.9,
+        "confidence": 0.72,
+        "_evaluation_time": 0.00013947486877441406,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1317,22 +1317,22 @@
         "game_id": "unknown",
         "game_name": "H.E.R.O. (USA)",
         "scores": {
-          "metacritic": 4.5,
-          "historical": 7.2,
-          "v_list": 2.7,
-          "console_significance": 2.0,
-          "mods_hacks": 8.5
+          "metacritic": 4.0,
+          "historical": 7.6,
+          "v_list": 4.7,
+          "console_significance": 4.6,
+          "mods_hacks": 4.4
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, H.E.R.O. (USA) shows limited qualities.",
-          "historical": "H.E.R.O. (USA) has adequate standing in terms of Historical significance and innovation.",
-          "v_list": "H.E.R.O. (USA) has questionable significance in terms of v_list.",
-          "console_significance": "Based on random evaluation, H.E.R.O. (USA) receives below average marks for console_significance.",
-          "mods_hacks": "This title shows impressive qualities regarding mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, H.E.R.O. (USA) shows modest qualities.",
+          "historical": "H.E.R.O. (USA) has good standing in terms of Historical significance and innovation.",
+          "v_list": "Based on random evaluation, H.E.R.O. (USA) receives modest marks for v_list.",
+          "console_significance": "H.E.R.O. (USA) has questionable significance in terms of console_significance.",
+          "mods_hacks": "For mods_hacks, H.E.R.O. (USA) shows minimal qualities."
         },
-        "overall_score": 5.0,
-        "confidence": 0.91,
-        "_evaluation_time": 0.00011181831359863281,
+        "overall_score": 5.1,
+        "confidence": 0.7,
+        "_evaluation_time": 0.00013494491577148438,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1363,22 +1363,22 @@
         "game_id": "unknown",
         "game_name": "James Bond 007 (USA)",
         "scores": {
-          "metacritic": 8.6,
-          "historical": 2.9,
-          "v_list": 7.0,
-          "console_significance": 2.6,
-          "mods_hacks": 2.7
+          "metacritic": 5.4,
+          "historical": 5.1,
+          "v_list": 8.2,
+          "console_significance": 7.5,
+          "mods_hacks": 3.4
         },
         "explanations": {
-          "metacritic": "This title shows remarkable qualities regarding Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, James Bond 007 (USA) shows minimal qualities.",
-          "v_list": "For v_list, James Bond 007 (USA) performs at a good level.",
-          "console_significance": "James Bond 007 (USA) has modest significance in terms of console_significance.",
-          "mods_hacks": "Based on random evaluation, James Bond 007 (USA) receives below average marks for mods_hacks."
+          "metacritic": "This title shows good qualities for Critical acclaim and review scores.",
+          "historical": "This title shows decent qualities for Historical significance and innovation.",
+          "v_list": "James Bond 007 (USA) scores highly on v_list.",
+          "console_significance": "For console_significance, James Bond 007 (USA) performs at a decent level.",
+          "mods_hacks": "This title demonstrates modest standing regarding mods_hacks."
         },
-        "overall_score": 4.8,
-        "confidence": 0.83,
-        "_evaluation_time": 0.00016188621520996094,
+        "overall_score": 5.9,
+        "confidence": 0.89,
+        "_evaluation_time": 0.00012612342834472656,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1409,22 +1409,22 @@
         "game_id": "unknown",
         "game_name": "Joust (USA)",
         "scores": {
-          "metacritic": 9.6,
-          "historical": 6.4,
-          "v_list": 2.1,
-          "console_significance": 2.7,
-          "mods_hacks": 9.2
+          "metacritic": 2.5,
+          "historical": 1.7,
+          "v_list": 5.6,
+          "console_significance": 1.4,
+          "mods_hacks": 1.0
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Joust (USA) is excellent.",
-          "historical": "Joust (USA) has solid standing in terms of Historical significance and innovation.",
-          "v_list": "Joust (USA) has below average significance in terms of v_list.",
-          "console_significance": "Joust (USA) has minimal significance in terms of console_significance.",
-          "mods_hacks": "For mods_hacks, Joust (USA) is impressive."
+          "metacritic": "For Critical acclaim and review scores, Joust (USA) shows limited qualities.",
+          "historical": "Based on random evaluation, Joust (USA) receives below average marks for Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Joust (USA) has good marks for v_list.",
+          "console_significance": "Based on random evaluation, Joust (USA) receives limited marks for console_significance.",
+          "mods_hacks": "For mods_hacks, Joust (USA) shows minimal qualities."
         },
-        "overall_score": 6.0,
-        "confidence": 0.66,
-        "_evaluation_time": 0.00011086463928222656,
+        "overall_score": 2.4,
+        "confidence": 0.82,
+        "_evaluation_time": 0.00022268295288085938,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1455,22 +1455,22 @@
         "game_id": "unknown",
         "game_name": "Jungle Hunt (USA)",
         "scores": {
-          "metacritic": 5.0,
-          "historical": 5.1,
-          "v_list": 1.8,
-          "console_significance": 4.6,
-          "mods_hacks": 5.9
+          "metacritic": 7.3,
+          "historical": 8.9,
+          "v_list": 4.6,
+          "console_significance": 7.6,
+          "mods_hacks": 8.6
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Jungle Hunt (USA) performs at a decent level.",
-          "historical": "For Historical significance and innovation, Jungle Hunt (USA) performs at a reasonable level.",
-          "v_list": "This title demonstrates minimal standing regarding v_list.",
-          "console_significance": "Based on random evaluation, Jungle Hunt (USA) receives below average marks for console_significance.",
-          "mods_hacks": "Based on random evaluation, Jungle Hunt (USA) has good marks for mods_hacks."
+          "metacritic": "Based on random evaluation, Jungle Hunt (USA) has adequate marks for Critical acclaim and review scores.",
+          "historical": "This title shows exceptional qualities regarding Historical significance and innovation.",
+          "v_list": "Jungle Hunt (USA) has limited significance in terms of v_list.",
+          "console_significance": "Based on random evaluation, Jungle Hunt (USA) has adequate marks for console_significance.",
+          "mods_hacks": "For mods_hacks, Jungle Hunt (USA) is remarkable."
         },
-        "overall_score": 4.5,
-        "confidence": 0.84,
-        "_evaluation_time": 0.00012087821960449219,
+        "overall_score": 7.4,
+        "confidence": 0.66,
+        "_evaluation_time": 0.0002770423889160156,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1501,22 +1501,22 @@
         "game_id": "unknown",
         "game_name": "K-Razy Shoot-Out (USA)",
         "scores": {
-          "metacritic": 3.2,
-          "historical": 7.5,
-          "v_list": 1.3,
-          "console_significance": 6.2,
-          "mods_hacks": 3.3
+          "metacritic": 8.7,
+          "historical": 4.8,
+          "v_list": 5.2,
+          "console_significance": 6.9,
+          "mods_hacks": 4.3
         },
         "explanations": {
-          "metacritic": "K-Razy Shoot-Out (USA) has modest significance in terms of Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, K-Razy Shoot-Out (USA) performs at a adequate level.",
-          "v_list": "K-Razy Shoot-Out (USA) has below average significance in terms of v_list.",
-          "console_significance": "This title shows good qualities for console_significance.",
-          "mods_hacks": "K-Razy Shoot-Out (USA) has below average significance in terms of mods_hacks."
+          "metacritic": "K-Razy Shoot-Out (USA) scores highly on Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, K-Razy Shoot-Out (USA) shows questionable qualities.",
+          "v_list": "Based on random evaluation, K-Razy Shoot-Out (USA) has decent marks for v_list.",
+          "console_significance": "For console_significance, K-Razy Shoot-Out (USA) performs at a reasonable level.",
+          "mods_hacks": "This title demonstrates below average standing regarding mods_hacks."
         },
-        "overall_score": 4.3,
-        "confidence": 0.89,
-        "_evaluation_time": 0.00014472007751464844,
+        "overall_score": 6.0,
+        "confidence": 0.95,
+        "_evaluation_time": 0.0002105236053466797,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1547,22 +1547,22 @@
         "game_id": "unknown",
         "game_name": "Kaboom! (USA)",
         "scores": {
-          "metacritic": 4.9,
-          "historical": 7.0,
-          "v_list": 2.7,
-          "console_significance": 5.0,
-          "mods_hacks": 5.5
+          "metacritic": 9.6,
+          "historical": 5.5,
+          "v_list": 7.4,
+          "console_significance": 1.3,
+          "mods_hacks": 9.1
         },
         "explanations": {
-          "metacritic": "Kaboom! (USA) has below average significance in terms of Critical acclaim and review scores.",
-          "historical": "Based on random evaluation, Kaboom! (USA) has reasonable marks for Historical significance and innovation.",
-          "v_list": "For v_list, Kaboom! (USA) shows limited qualities.",
-          "console_significance": "For console_significance, Kaboom! (USA) performs at a good level.",
-          "mods_hacks": "For mods_hacks, Kaboom! (USA) performs at a decent level."
+          "metacritic": "For Critical acclaim and review scores, Kaboom! (USA) is outstanding.",
+          "historical": "This title shows adequate qualities for Historical significance and innovation.",
+          "v_list": "For v_list, Kaboom! (USA) performs at a reasonable level.",
+          "console_significance": "Based on random evaluation, Kaboom! (USA) receives modest marks for console_significance.",
+          "mods_hacks": "Kaboom! (USA) scores highly on mods_hacks."
         },
-        "overall_score": 5.0,
-        "confidence": 0.69,
-        "_evaluation_time": 0.00011038780212402344,
+        "overall_score": 6.6,
+        "confidence": 0.81,
+        "_evaluation_time": 0.0001461505889892578,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1593,22 +1593,22 @@
         "game_id": "unknown",
         "game_name": "Kangaroo (USA)",
         "scores": {
-          "metacritic": 5.7,
-          "historical": 3.6,
-          "v_list": 4.3,
-          "console_significance": 2.9,
-          "mods_hacks": 6.0
+          "metacritic": 2.3,
+          "historical": 3.2,
+          "v_list": 3.8,
+          "console_significance": 4.6,
+          "mods_hacks": 4.7
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Kangaroo (USA) has decent marks for Critical acclaim and review scores.",
-          "historical": "Kangaroo (USA) has modest significance in terms of Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Kangaroo (USA) receives modest marks for v_list.",
-          "console_significance": "For console_significance, Kangaroo (USA) shows questionable qualities.",
-          "mods_hacks": "Based on random evaluation, Kangaroo (USA) has good marks for mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, Kangaroo (USA) shows minimal qualities.",
+          "historical": "Kangaroo (USA) has minimal significance in terms of Historical significance and innovation.",
+          "v_list": "Kangaroo (USA) has limited significance in terms of v_list.",
+          "console_significance": "Based on random evaluation, Kangaroo (USA) receives questionable marks for console_significance.",
+          "mods_hacks": "Based on random evaluation, Kangaroo (USA) receives limited marks for mods_hacks."
         },
-        "overall_score": 4.5,
-        "confidence": 0.83,
-        "_evaluation_time": 0.0001361370086669922,
+        "overall_score": 3.7,
+        "confidence": 0.69,
+        "_evaluation_time": 0.00014352798461914062,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1639,22 +1639,22 @@
         "game_id": "unknown",
         "game_name": "Keystone Kapers (USA)",
         "scores": {
-          "metacritic": 8.1,
-          "historical": 9.7,
-          "v_list": 9.6,
-          "console_significance": 1.2,
-          "mods_hacks": 1.3
+          "metacritic": 8.8,
+          "historical": 5.7,
+          "v_list": 2.5,
+          "console_significance": 7.7,
+          "mods_hacks": 5.3
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Keystone Kapers (USA) is outstanding.",
-          "historical": "Based on random evaluation, Keystone Kapers (USA) receives top marks for Historical significance and innovation.",
-          "v_list": "For v_list, Keystone Kapers (USA) is exceptional.",
-          "console_significance": "Based on random evaluation, Keystone Kapers (USA) receives minimal marks for console_significance.",
-          "mods_hacks": "Based on random evaluation, Keystone Kapers (USA) receives modest marks for mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, Keystone Kapers (USA) is impressive.",
+          "historical": "For Historical significance and innovation, Keystone Kapers (USA) performs at a good level.",
+          "v_list": "For v_list, Keystone Kapers (USA) shows below average qualities.",
+          "console_significance": "For console_significance, Keystone Kapers (USA) performs at a solid level.",
+          "mods_hacks": "Based on random evaluation, Keystone Kapers (USA) has decent marks for mods_hacks."
         },
         "overall_score": 6.0,
-        "confidence": 0.88,
-        "_evaluation_time": 0.00010919570922851562,
+        "confidence": 0.7,
+        "_evaluation_time": 0.0001373291015625,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1685,22 +1685,22 @@
         "game_id": "unknown",
         "game_name": "Koffi - Yellow Kopter (USA) (Unl)",
         "scores": {
-          "metacritic": 9.8,
-          "historical": 3.1,
-          "v_list": 5.4,
-          "console_significance": 8.9,
-          "mods_hacks": 3.8
+          "metacritic": 4.3,
+          "historical": 8.2,
+          "v_list": 8.9,
+          "console_significance": 8.1,
+          "mods_hacks": 4.2
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Koffi - Yellow Kopter (USA) (Unl) receives top marks for Critical acclaim and review scores.",
-          "historical": "This title demonstrates minimal standing regarding Historical significance and innovation.",
-          "v_list": "This title shows decent qualities for v_list.",
-          "console_significance": "Based on random evaluation, Koffi - Yellow Kopter (USA) (Unl) receives top marks for console_significance.",
-          "mods_hacks": "Koffi - Yellow Kopter (USA) (Unl) has limited significance in terms of mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, Koffi - Yellow Kopter (USA) (Unl) shows minimal qualities.",
+          "historical": "Koffi - Yellow Kopter (USA) (Unl) scores highly on Historical significance and innovation.",
+          "v_list": "Koffi - Yellow Kopter (USA) (Unl) scores highly on v_list.",
+          "console_significance": "Koffi - Yellow Kopter (USA) (Unl) scores highly on console_significance.",
+          "mods_hacks": "Based on random evaluation, Koffi - Yellow Kopter (USA) (Unl) receives questionable marks for mods_hacks."
         },
-        "overall_score": 6.2,
-        "confidence": 0.76,
-        "_evaluation_time": 9.822845458984375e-05,
+        "overall_score": 6.7,
+        "confidence": 0.84,
+        "_evaluation_time": 0.0001404285430908203,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1731,22 +1731,22 @@
         "game_id": "unknown",
         "game_name": "Mario Bros. (USA)",
         "scores": {
-          "metacritic": 1.3,
-          "historical": 9.3,
-          "v_list": 9.9,
-          "console_significance": 9.3,
-          "mods_hacks": 8.0
+          "metacritic": 1.4,
+          "historical": 7.4,
+          "v_list": 6.8,
+          "console_significance": 8.8,
+          "mods_hacks": 8.9
         },
         "explanations": {
           "metacritic": "This title demonstrates below average standing regarding Critical acclaim and review scores.",
-          "historical": "Based on random evaluation, Mario Bros. (USA) receives top marks for Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Mario Bros. (USA) receives top marks for v_list.",
-          "console_significance": "For console_significance, Mario Bros. (USA) is outstanding.",
-          "mods_hacks": "Based on random evaluation, Mario Bros. (USA) receives top marks for mods_hacks."
+          "historical": "For Historical significance and innovation, Mario Bros. (USA) performs at a solid level.",
+          "v_list": "For v_list, Mario Bros. (USA) performs at a adequate level.",
+          "console_significance": "This title shows outstanding qualities regarding console_significance.",
+          "mods_hacks": "For mods_hacks, Mario Bros. (USA) is exceptional."
         },
-        "overall_score": 7.6,
-        "confidence": 0.71,
-        "_evaluation_time": 9.822845458984375e-05,
+        "overall_score": 6.7,
+        "confidence": 0.77,
+        "_evaluation_time": 0.00013637542724609375,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1777,22 +1777,22 @@
         "game_id": "unknown",
         "game_name": "MegaMania (USA)",
         "scores": {
-          "metacritic": 3.4,
-          "historical": 5.1,
-          "v_list": 9.4,
-          "console_significance": 1.7,
-          "mods_hacks": 8.3
+          "metacritic": 2.3,
+          "historical": 6.8,
+          "v_list": 6.6,
+          "console_significance": 7.4,
+          "mods_hacks": 6.6
         },
         "explanations": {
-          "metacritic": "MegaMania (USA) has below average significance in terms of Critical acclaim and review scores.",
-          "historical": "MegaMania (USA) has reasonable standing in terms of Historical significance and innovation.",
-          "v_list": "This title shows exceptional qualities regarding v_list.",
-          "console_significance": "For console_significance, MegaMania (USA) shows minimal qualities.",
-          "mods_hacks": "Based on random evaluation, MegaMania (USA) receives top marks for mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, MegaMania (USA) shows minimal qualities.",
+          "historical": "This title shows solid qualities for Historical significance and innovation.",
+          "v_list": "This title shows reasonable qualities for v_list.",
+          "console_significance": "This title shows reasonable qualities for console_significance.",
+          "mods_hacks": "For mods_hacks, MegaMania (USA) performs at a solid level."
         },
-        "overall_score": 5.6,
-        "confidence": 0.66,
-        "_evaluation_time": 9.560585021972656e-05,
+        "overall_score": 5.9,
+        "confidence": 0.79,
+        "_evaluation_time": 0.00013875961303710938,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1823,22 +1823,22 @@
         "game_id": "unknown",
         "game_name": "Meteorites (USA)",
         "scores": {
-          "metacritic": 8.9,
-          "historical": 4.2,
-          "v_list": 5.4,
-          "console_significance": 2.4,
-          "mods_hacks": 8.7
+          "metacritic": 1.6,
+          "historical": 2.3,
+          "v_list": 9.0,
+          "console_significance": 5.0,
+          "mods_hacks": 7.7
         },
         "explanations": {
-          "metacritic": "Meteorites (USA) scores highly on Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Meteorites (USA) shows questionable qualities.",
-          "v_list": "Meteorites (USA) has solid standing in terms of v_list.",
-          "console_significance": "Meteorites (USA) has minimal significance in terms of console_significance.",
-          "mods_hacks": "This title shows excellent qualities regarding mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, Meteorites (USA) shows limited qualities.",
+          "historical": "This title demonstrates below average standing regarding Historical significance and innovation.",
+          "v_list": "This title shows remarkable qualities regarding v_list.",
+          "console_significance": "Meteorites (USA) has decent standing in terms of console_significance.",
+          "mods_hacks": "For mods_hacks, Meteorites (USA) performs at a adequate level."
         },
-        "overall_score": 5.9,
-        "confidence": 0.94,
-        "_evaluation_time": 0.00012564659118652344,
+        "overall_score": 5.1,
+        "confidence": 0.87,
+        "_evaluation_time": 0.00013113021850585938,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1869,22 +1869,22 @@
         "game_id": "unknown",
         "game_name": "Miner 2049er Starring Bounty Bob (USA)",
         "scores": {
-          "metacritic": 6.5,
-          "historical": 8.1,
-          "v_list": 9.0,
-          "console_significance": 3.0,
-          "mods_hacks": 9.1
+          "metacritic": 7.1,
+          "historical": 3.1,
+          "v_list": 2.6,
+          "console_significance": 6.6,
+          "mods_hacks": 5.6
         },
         "explanations": {
           "metacritic": "This title shows adequate qualities for Critical acclaim and review scores.",
-          "historical": "This title shows impressive qualities regarding Historical significance and innovation.",
-          "v_list": "This title shows exceptional qualities regarding v_list.",
-          "console_significance": "Based on random evaluation, Miner 2049er Starring Bounty Bob (USA) receives below average marks for console_significance.",
-          "mods_hacks": "Based on random evaluation, Miner 2049er Starring Bounty Bob (USA) receives top marks for mods_hacks."
+          "historical": "For Historical significance and innovation, Miner 2049er Starring Bounty Bob (USA) shows questionable qualities.",
+          "v_list": "Miner 2049er Starring Bounty Bob (USA) has questionable significance in terms of v_list.",
+          "console_significance": "Based on random evaluation, Miner 2049er Starring Bounty Bob (USA) has solid marks for console_significance.",
+          "mods_hacks": "This title shows solid qualities for mods_hacks."
         },
-        "overall_score": 7.1,
-        "confidence": 0.91,
-        "_evaluation_time": 0.00013709068298339844,
+        "overall_score": 5.0,
+        "confidence": 0.87,
+        "_evaluation_time": 0.00013184547424316406,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1915,22 +1915,22 @@
         "game_id": "unknown",
         "game_name": "Missile Command (USA)",
         "scores": {
-          "metacritic": 4.6,
-          "historical": 4.1,
-          "v_list": 3.6,
-          "console_significance": 9.9,
-          "mods_hacks": 7.9
+          "metacritic": 7.7,
+          "historical": 6.0,
+          "v_list": 5.2,
+          "console_significance": 7.2,
+          "mods_hacks": 1.5
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Missile Command (USA) shows minimal qualities.",
-          "historical": "For Historical significance and innovation, Missile Command (USA) shows limited qualities.",
-          "v_list": "Based on random evaluation, Missile Command (USA) receives limited marks for v_list.",
-          "console_significance": "This title shows exceptional qualities regarding console_significance.",
-          "mods_hacks": "Missile Command (USA) has good standing in terms of mods_hacks."
+          "metacritic": "Missile Command (USA) has decent standing in terms of Critical acclaim and review scores.",
+          "historical": "This title shows decent qualities for Historical significance and innovation.",
+          "v_list": "This title shows decent qualities for v_list.",
+          "console_significance": "For console_significance, Missile Command (USA) performs at a solid level.",
+          "mods_hacks": "Missile Command (USA) has minimal significance in terms of mods_hacks."
         },
-        "overall_score": 6.0,
-        "confidence": 0.94,
-        "_evaluation_time": 0.00011754035949707031,
+        "overall_score": 5.5,
+        "confidence": 0.85,
+        "_evaluation_time": 0.00017333030700683594,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -1961,22 +1961,22 @@
         "game_id": "unknown",
         "game_name": "Montezuma's Revenge - Featuring Panama Joe (USA)",
         "scores": {
-          "metacritic": 5.8,
-          "historical": 8.9,
-          "v_list": 3.0,
-          "console_significance": 1.5,
-          "mods_hacks": 2.9
+          "metacritic": 1.7,
+          "historical": 7.9,
+          "v_list": 6.0,
+          "console_significance": 4.3,
+          "mods_hacks": 9.2
         },
         "explanations": {
-          "metacritic": "This title shows good qualities for Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Montezuma's Revenge - Featuring Panama Joe (USA) is remarkable.",
-          "v_list": "Montezuma's Revenge - Featuring Panama Joe (USA) has modest significance in terms of v_list.",
+          "metacritic": "Based on random evaluation, Montezuma's Revenge - Featuring Panama Joe (USA) receives modest marks for Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Montezuma's Revenge - Featuring Panama Joe (USA) performs at a solid level.",
+          "v_list": "Montezuma's Revenge - Featuring Panama Joe (USA) has decent standing in terms of v_list.",
           "console_significance": "Montezuma's Revenge - Featuring Panama Joe (USA) has questionable significance in terms of console_significance.",
-          "mods_hacks": "For mods_hacks, Montezuma's Revenge - Featuring Panama Joe (USA) shows below average qualities."
+          "mods_hacks": "This title shows remarkable qualities regarding mods_hacks."
         },
-        "overall_score": 4.4,
-        "confidence": 0.71,
-        "_evaluation_time": 9.298324584960938e-05,
+        "overall_score": 5.8,
+        "confidence": 0.88,
+        "_evaluation_time": 0.00016164779663085938,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2007,22 +2007,22 @@
         "game_id": "unknown",
         "game_name": "Moon Patrol (USA)",
         "scores": {
-          "metacritic": 1.5,
-          "historical": 5.3,
-          "v_list": 6.6,
-          "console_significance": 2.9,
-          "mods_hacks": 3.3
+          "metacritic": 7.3,
+          "historical": 8.5,
+          "v_list": 5.7,
+          "console_significance": 3.2,
+          "mods_hacks": 1.1
         },
         "explanations": {
-          "metacritic": "Moon Patrol (USA) has modest significance in terms of Critical acclaim and review scores.",
-          "historical": "This title shows reasonable qualities for Historical significance and innovation.",
-          "v_list": "This title shows reasonable qualities for v_list.",
-          "console_significance": "For console_significance, Moon Patrol (USA) shows modest qualities.",
-          "mods_hacks": "Based on random evaluation, Moon Patrol (USA) receives limited marks for mods_hacks."
+          "metacritic": "Based on random evaluation, Moon Patrol (USA) has adequate marks for Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Moon Patrol (USA) receives top marks for Historical significance and innovation.",
+          "v_list": "For v_list, Moon Patrol (USA) performs at a solid level.",
+          "console_significance": "Moon Patrol (USA) has minimal significance in terms of console_significance.",
+          "mods_hacks": "This title demonstrates questionable standing regarding mods_hacks."
         },
-        "overall_score": 3.9,
-        "confidence": 0.71,
-        "_evaluation_time": 0.00012636184692382812,
+        "overall_score": 5.2,
+        "confidence": 0.74,
+        "_evaluation_time": 0.0001480579376220703,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2053,22 +2053,22 @@
         "game_id": "unknown",
         "game_name": "Mountain King (USA)",
         "scores": {
-          "metacritic": 9.7,
-          "historical": 4.5,
-          "v_list": 1.9,
-          "console_significance": 4.1,
-          "mods_hacks": 3.1
+          "metacritic": 5.6,
+          "historical": 1.9,
+          "v_list": 3.5,
+          "console_significance": 1.5,
+          "mods_hacks": 7.4
         },
         "explanations": {
-          "metacritic": "This title shows exceptional qualities regarding Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Mountain King (USA) shows questionable qualities.",
+          "metacritic": "For Critical acclaim and review scores, Mountain King (USA) performs at a decent level.",
+          "historical": "Mountain King (USA) has modest significance in terms of Historical significance and innovation.",
           "v_list": "This title demonstrates questionable standing regarding v_list.",
-          "console_significance": "This title demonstrates limited standing regarding console_significance.",
-          "mods_hacks": "For mods_hacks, Mountain King (USA) shows modest qualities."
+          "console_significance": "For console_significance, Mountain King (USA) shows questionable qualities.",
+          "mods_hacks": "Mountain King (USA) has good standing in terms of mods_hacks."
         },
-        "overall_score": 4.7,
-        "confidence": 0.69,
-        "_evaluation_time": 9.512901306152344e-05,
+        "overall_score": 4.0,
+        "confidence": 0.77,
+        "_evaluation_time": 0.00015735626220703125,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2099,22 +2099,22 @@
         "game_id": "unknown",
         "game_name": "Mr. Do!'s Castle (USA)",
         "scores": {
-          "metacritic": 8.0,
-          "historical": 7.3,
-          "v_list": 7.2,
-          "console_significance": 7.5,
-          "mods_hacks": 5.3
+          "metacritic": 6.7,
+          "historical": 7.6,
+          "v_list": 7.6,
+          "console_significance": 3.8,
+          "mods_hacks": 4.7
         },
         "explanations": {
-          "metacritic": "This title shows remarkable qualities regarding Critical acclaim and review scores.",
-          "historical": "Based on random evaluation, Mr. Do!'s Castle (USA) has adequate marks for Historical significance and innovation.",
-          "v_list": "Mr. Do!'s Castle (USA) has reasonable standing in terms of v_list.",
-          "console_significance": "This title shows good qualities for console_significance.",
-          "mods_hacks": "This title shows adequate qualities for mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, Mr. Do!'s Castle (USA) performs at a good level.",
+          "historical": "Mr. Do!'s Castle (USA) has adequate standing in terms of Historical significance and innovation.",
+          "v_list": "Mr. Do!'s Castle (USA) has solid standing in terms of v_list.",
+          "console_significance": "Based on random evaluation, Mr. Do!'s Castle (USA) receives minimal marks for console_significance.",
+          "mods_hacks": "Based on random evaluation, Mr. Do!'s Castle (USA) receives limited marks for mods_hacks."
         },
-        "overall_score": 7.1,
-        "confidence": 0.81,
-        "_evaluation_time": 0.00010848045349121094,
+        "overall_score": 6.1,
+        "confidence": 0.82,
+        "_evaluation_time": 0.00014090538024902344,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2145,22 +2145,22 @@
         "game_id": "unknown",
         "game_name": "Ms. Pac-Man (USA)",
         "scores": {
-          "metacritic": 7.3,
-          "historical": 9.4,
-          "v_list": 2.7,
-          "console_significance": 4.2,
-          "mods_hacks": 9.4
+          "metacritic": 7.5,
+          "historical": 3.0,
+          "v_list": 6.3,
+          "console_significance": 7.6,
+          "mods_hacks": 5.0
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Ms. Pac-Man (USA) performs at a decent level.",
-          "historical": "For Historical significance and innovation, Ms. Pac-Man (USA) is impressive.",
-          "v_list": "Ms. Pac-Man (USA) has modest significance in terms of v_list.",
-          "console_significance": "Ms. Pac-Man (USA) has limited significance in terms of console_significance.",
-          "mods_hacks": "Based on random evaluation, Ms. Pac-Man (USA) receives top marks for mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, Ms. Pac-Man (USA) performs at a adequate level.",
+          "historical": "Ms. Pac-Man (USA) has questionable significance in terms of Historical significance and innovation.",
+          "v_list": "This title shows adequate qualities for v_list.",
+          "console_significance": "Ms. Pac-Man (USA) has good standing in terms of console_significance.",
+          "mods_hacks": "For mods_hacks, Ms. Pac-Man (USA) performs at a solid level."
         },
-        "overall_score": 6.6,
-        "confidence": 0.73,
-        "_evaluation_time": 0.0001010894775390625,
+        "overall_score": 5.9,
+        "confidence": 0.83,
+        "_evaluation_time": 0.00013136863708496094,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2191,22 +2191,22 @@
         "game_id": "unknown",
         "game_name": "Pac-Man (USA)",
         "scores": {
-          "metacritic": 2.0,
-          "historical": 7.2,
-          "v_list": 3.7,
-          "console_significance": 5.3,
-          "mods_hacks": 8.6
+          "metacritic": 7.9,
+          "historical": 2.4,
+          "v_list": 2.7,
+          "console_significance": 7.1,
+          "mods_hacks": 2.5
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Pac-Man (USA) shows minimal qualities.",
-          "historical": "Based on random evaluation, Pac-Man (USA) has decent marks for Historical significance and innovation.",
-          "v_list": "Pac-Man (USA) has minimal significance in terms of v_list.",
-          "console_significance": "This title shows solid qualities for console_significance.",
-          "mods_hacks": "Pac-Man (USA) scores highly on mods_hacks."
+          "metacritic": "This title shows adequate qualities for Critical acclaim and review scores.",
+          "historical": "This title demonstrates questionable standing regarding Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Pac-Man (USA) receives below average marks for v_list.",
+          "console_significance": "Pac-Man (USA) has adequate standing in terms of console_significance.",
+          "mods_hacks": "Pac-Man (USA) has questionable significance in terms of mods_hacks."
         },
-        "overall_score": 5.4,
-        "confidence": 0.86,
-        "_evaluation_time": 0.00015974044799804688,
+        "overall_score": 4.5,
+        "confidence": 0.94,
+        "_evaluation_time": 0.00014901161193847656,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2237,22 +2237,22 @@
         "game_id": "unknown",
         "game_name": "Pengo (USA)",
         "scores": {
-          "metacritic": 3.2,
-          "historical": 9.5,
-          "v_list": 1.4,
-          "console_significance": 4.4,
-          "mods_hacks": 9.7
+          "metacritic": 2.8,
+          "historical": 7.0,
+          "v_list": 5.9,
+          "console_significance": 8.3,
+          "mods_hacks": 3.4
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Pengo (USA) receives questionable marks for Critical acclaim and review scores.",
-          "historical": "Based on random evaluation, Pengo (USA) receives top marks for Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Pengo (USA) receives questionable marks for v_list.",
-          "console_significance": "For console_significance, Pengo (USA) shows limited qualities.",
-          "mods_hacks": "Pengo (USA) scores highly on mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, Pengo (USA) shows below average qualities.",
+          "historical": "Based on random evaluation, Pengo (USA) has adequate marks for Historical significance and innovation.",
+          "v_list": "This title shows reasonable qualities for v_list.",
+          "console_significance": "For console_significance, Pengo (USA) is outstanding.",
+          "mods_hacks": "Based on random evaluation, Pengo (USA) receives questionable marks for mods_hacks."
         },
-        "overall_score": 5.6,
-        "confidence": 0.74,
-        "_evaluation_time": 0.0001494884490966797,
+        "overall_score": 5.5,
+        "confidence": 0.95,
+        "_evaluation_time": 0.00012540817260742188,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2283,22 +2283,22 @@
         "game_id": "unknown",
         "game_name": "Pitfall! (USA)",
         "scores": {
-          "metacritic": 6.8,
-          "historical": 5.7,
-          "v_list": 3.5,
-          "console_significance": 6.3,
-          "mods_hacks": 3.0
+          "metacritic": 4.4,
+          "historical": 4.4,
+          "v_list": 5.3,
+          "console_significance": 1.3,
+          "mods_hacks": 5.1
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Pitfall! (USA) has reasonable marks for Critical acclaim and review scores.",
-          "historical": "This title shows solid qualities for Historical significance and innovation.",
-          "v_list": "For v_list, Pitfall! (USA) shows modest qualities.",
-          "console_significance": "Pitfall! (USA) has good standing in terms of console_significance.",
-          "mods_hacks": "For mods_hacks, Pitfall! (USA) shows modest qualities."
+          "metacritic": "For Critical acclaim and review scores, Pitfall! (USA) shows questionable qualities.",
+          "historical": "Based on random evaluation, Pitfall! (USA) receives questionable marks for Historical significance and innovation.",
+          "v_list": "For v_list, Pitfall! (USA) performs at a good level.",
+          "console_significance": "Based on random evaluation, Pitfall! (USA) receives questionable marks for console_significance.",
+          "mods_hacks": "Pitfall! (USA) has good standing in terms of mods_hacks."
         },
-        "overall_score": 5.1,
-        "confidence": 0.85,
-        "_evaluation_time": 0.00011706352233886719,
+        "overall_score": 4.1,
+        "confidence": 0.79,
+        "_evaluation_time": 0.00012731552124023438,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2329,22 +2329,22 @@
         "game_id": "unknown",
         "game_name": "Pole Position (USA)",
         "scores": {
-          "metacritic": 6.7,
-          "historical": 5.5,
-          "v_list": 1.1,
-          "console_significance": 5.6,
-          "mods_hacks": 7.1
+          "metacritic": 1.6,
+          "historical": 4.5,
+          "v_list": 1.9,
+          "console_significance": 7.2,
+          "mods_hacks": 8.9
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Pole Position (USA) performs at a good level.",
-          "historical": "Based on random evaluation, Pole Position (USA) has decent marks for Historical significance and innovation.",
+          "metacritic": "Pole Position (USA) has questionable significance in terms of Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Pole Position (USA) receives modest marks for Historical significance and innovation.",
           "v_list": "Pole Position (USA) has below average significance in terms of v_list.",
-          "console_significance": "Pole Position (USA) has solid standing in terms of console_significance.",
-          "mods_hacks": "Based on random evaluation, Pole Position (USA) has solid marks for mods_hacks."
+          "console_significance": "This title shows decent qualities for console_significance.",
+          "mods_hacks": "For mods_hacks, Pole Position (USA) is outstanding."
         },
-        "overall_score": 5.2,
-        "confidence": 0.8,
-        "_evaluation_time": 0.00013017654418945312,
+        "overall_score": 4.8,
+        "confidence": 0.85,
+        "_evaluation_time": 0.0001614093780517578,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2375,22 +2375,22 @@
         "game_id": "unknown",
         "game_name": "Popeye (USA)",
         "scores": {
-          "metacritic": 8.0,
-          "historical": 4.0,
-          "v_list": 1.8,
-          "console_significance": 8.8,
-          "mods_hacks": 7.7
+          "metacritic": 4.9,
+          "historical": 2.8,
+          "v_list": 3.7,
+          "console_significance": 7.4,
+          "mods_hacks": 9.7
         },
         "explanations": {
-          "metacritic": "This title shows exceptional qualities regarding Critical acclaim and review scores.",
-          "historical": "This title demonstrates modest standing regarding Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Popeye (USA) receives limited marks for v_list.",
-          "console_significance": "Popeye (USA) scores highly on console_significance.",
-          "mods_hacks": "For mods_hacks, Popeye (USA) performs at a decent level."
+          "metacritic": "Popeye (USA) has limited significance in terms of Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Popeye (USA) shows modest qualities.",
+          "v_list": "This title demonstrates questionable standing regarding v_list.",
+          "console_significance": "Popeye (USA) has reasonable standing in terms of console_significance.",
+          "mods_hacks": "This title shows remarkable qualities regarding mods_hacks."
         },
-        "overall_score": 6.1,
-        "confidence": 0.81,
-        "_evaluation_time": 0.00012135505676269531,
+        "overall_score": 5.7,
+        "confidence": 0.71,
+        "_evaluation_time": 0.0003368854522705078,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2421,22 +2421,22 @@
         "game_id": "unknown",
         "game_name": "Q-bert (USA)",
         "scores": {
-          "metacritic": 4.0,
-          "historical": 2.3,
-          "v_list": 3.1,
-          "console_significance": 5.3,
-          "mods_hacks": 6.0
+          "metacritic": 1.4,
+          "historical": 1.5,
+          "v_list": 6.9,
+          "console_significance": 9.6,
+          "mods_hacks": 6.2
         },
         "explanations": {
-          "metacritic": "Q-bert (USA) has limited significance in terms of Critical acclaim and review scores.",
-          "historical": "Based on random evaluation, Q-bert (USA) receives limited marks for Historical significance and innovation.",
-          "v_list": "This title demonstrates limited standing regarding v_list.",
-          "console_significance": "This title shows good qualities for console_significance.",
-          "mods_hacks": "For mods_hacks, Q-bert (USA) performs at a good level."
+          "metacritic": "This title demonstrates questionable standing regarding Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Q-bert (USA) shows below average qualities.",
+          "v_list": "For v_list, Q-bert (USA) performs at a good level.",
+          "console_significance": "This title shows remarkable qualities regarding console_significance.",
+          "mods_hacks": "Q-bert (USA) has solid standing in terms of mods_hacks."
         },
-        "overall_score": 4.1,
-        "confidence": 0.89,
-        "_evaluation_time": 0.00010013580322265625,
+        "overall_score": 5.1,
+        "confidence": 0.66,
+        "_evaluation_time": 0.0001494884490966797,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2467,22 +2467,22 @@
         "game_id": "unknown",
         "game_name": "QIX (USA)",
         "scores": {
-          "metacritic": 6.2,
-          "historical": 4.1,
-          "v_list": 3.5,
-          "console_significance": 9.8,
-          "mods_hacks": 10.0
+          "metacritic": 8.1,
+          "historical": 6.2,
+          "v_list": 6.4,
+          "console_significance": 1.1,
+          "mods_hacks": 3.7
         },
         "explanations": {
-          "metacritic": "This title shows solid qualities for Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, QIX (USA) shows minimal qualities.",
-          "v_list": "This title demonstrates modest standing regarding v_list.",
-          "console_significance": "QIX (USA) scores highly on console_significance.",
-          "mods_hacks": "QIX (USA) scores highly on mods_hacks."
+          "metacritic": "Based on random evaluation, QIX (USA) receives top marks for Critical acclaim and review scores.",
+          "historical": "This title shows adequate qualities for Historical significance and innovation.",
+          "v_list": "Based on random evaluation, QIX (USA) has solid marks for v_list.",
+          "console_significance": "This title demonstrates modest standing regarding console_significance.",
+          "mods_hacks": "QIX (USA) has modest significance in terms of mods_hacks."
         },
-        "overall_score": 6.7,
-        "confidence": 0.93,
-        "_evaluation_time": 0.00012969970703125,
+        "overall_score": 5.1,
+        "confidence": 0.76,
+        "_evaluation_time": 9.059906005859375e-05,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2513,22 +2513,22 @@
         "game_id": "unknown",
         "game_name": "Quest for Quintana Roo (USA)",
         "scores": {
-          "metacritic": 7.6,
-          "historical": 6.5,
-          "v_list": 5.0,
-          "console_significance": 4.5,
-          "mods_hacks": 7.8
+          "metacritic": 2.0,
+          "historical": 3.4,
+          "v_list": 4.3,
+          "console_significance": 3.1,
+          "mods_hacks": 7.6
         },
         "explanations": {
-          "metacritic": "Quest for Quintana Roo (USA) has good standing in terms of Critical acclaim and review scores.",
-          "historical": "Quest for Quintana Roo (USA) has decent standing in terms of Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Quest for Quintana Roo (USA) has solid marks for v_list.",
-          "console_significance": "Based on random evaluation, Quest for Quintana Roo (USA) receives minimal marks for console_significance.",
-          "mods_hacks": "Based on random evaluation, Quest for Quintana Roo (USA) has adequate marks for mods_hacks."
+          "metacritic": "Quest for Quintana Roo (USA) has limited significance in terms of Critical acclaim and review scores.",
+          "historical": "Quest for Quintana Roo (USA) has modest significance in terms of Historical significance and innovation.",
+          "v_list": "This title demonstrates limited standing regarding v_list.",
+          "console_significance": "For console_significance, Quest for Quintana Roo (USA) shows modest qualities.",
+          "mods_hacks": "For mods_hacks, Quest for Quintana Roo (USA) performs at a solid level."
         },
-        "overall_score": 6.3,
-        "confidence": 0.86,
-        "_evaluation_time": 0.00013756752014160156,
+        "overall_score": 4.1,
+        "confidence": 0.82,
+        "_evaluation_time": 8.20159912109375e-05,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2559,22 +2559,22 @@
         "game_id": "unknown",
         "game_name": "RealSports Baseball (USA)",
         "scores": {
-          "metacritic": 2.4,
-          "historical": 2.0,
-          "v_list": 1.5,
-          "console_significance": 9.6,
-          "mods_hacks": 1.6
+          "metacritic": 7.3,
+          "historical": 7.2,
+          "v_list": 3.9,
+          "console_significance": 4.2,
+          "mods_hacks": 3.3
         },
         "explanations": {
-          "metacritic": "RealSports Baseball (USA) has limited significance in terms of Critical acclaim and review scores.",
-          "historical": "RealSports Baseball (USA) has below average significance in terms of Historical significance and innovation.",
-          "v_list": "This title demonstrates modest standing regarding v_list.",
-          "console_significance": "For console_significance, RealSports Baseball (USA) is excellent.",
-          "mods_hacks": "Based on random evaluation, RealSports Baseball (USA) receives questionable marks for mods_hacks."
+          "metacritic": "RealSports Baseball (USA) has adequate standing in terms of Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, RealSports Baseball (USA) has solid marks for Historical significance and innovation.",
+          "v_list": "Based on random evaluation, RealSports Baseball (USA) receives minimal marks for v_list.",
+          "console_significance": "This title demonstrates questionable standing regarding console_significance.",
+          "mods_hacks": "This title demonstrates questionable standing regarding mods_hacks."
         },
-        "overall_score": 3.4,
-        "confidence": 0.89,
-        "_evaluation_time": 0.00010633468627929688,
+        "overall_score": 5.2,
+        "confidence": 0.94,
+        "_evaluation_time": 0.00020313262939453125,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2605,22 +2605,22 @@
         "game_id": "unknown",
         "game_name": "RealSports Basketball (USA)",
         "scores": {
-          "metacritic": 1.6,
-          "historical": 5.8,
-          "v_list": 9.5,
-          "console_significance": 6.2,
-          "mods_hacks": 8.5
+          "metacritic": 6.1,
+          "historical": 8.2,
+          "v_list": 9.1,
+          "console_significance": 3.3,
+          "mods_hacks": 3.2
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, RealSports Basketball (USA) shows questionable qualities.",
-          "historical": "Based on random evaluation, RealSports Basketball (USA) has reasonable marks for Historical significance and innovation.",
-          "v_list": "Based on random evaluation, RealSports Basketball (USA) receives top marks for v_list.",
-          "console_significance": "This title shows decent qualities for console_significance.",
-          "mods_hacks": "This title shows impressive qualities regarding mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, RealSports Basketball (USA) performs at a reasonable level.",
+          "historical": "This title shows exceptional qualities regarding Historical significance and innovation.",
+          "v_list": "RealSports Basketball (USA) scores highly on v_list.",
+          "console_significance": "For console_significance, RealSports Basketball (USA) shows minimal qualities.",
+          "mods_hacks": "This title demonstrates limited standing regarding mods_hacks."
         },
-        "overall_score": 6.3,
-        "confidence": 0.74,
-        "_evaluation_time": 0.00011396408081054688,
+        "overall_score": 6.0,
+        "confidence": 0.76,
+        "_evaluation_time": 0.0002455711364746094,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2651,22 +2651,22 @@
         "game_id": "unknown",
         "game_name": "RealSports Football (USA)",
         "scores": {
-          "metacritic": 8.2,
-          "historical": 9.3,
-          "v_list": 5.0,
-          "console_significance": 4.1,
-          "mods_hacks": 1.0
+          "metacritic": 3.6,
+          "historical": 9.0,
+          "v_list": 6.8,
+          "console_significance": 6.3,
+          "mods_hacks": 4.9
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, RealSports Football (USA) is impressive.",
-          "historical": "This title shows impressive qualities regarding Historical significance and innovation.",
-          "v_list": "This title shows reasonable qualities for v_list.",
-          "console_significance": "For console_significance, RealSports Football (USA) shows minimal qualities.",
-          "mods_hacks": "Based on random evaluation, RealSports Football (USA) receives minimal marks for mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, RealSports Football (USA) shows modest qualities.",
+          "historical": "This title shows exceptional qualities regarding Historical significance and innovation.",
+          "v_list": "This title shows decent qualities for v_list.",
+          "console_significance": "RealSports Football (USA) has good standing in terms of console_significance.",
+          "mods_hacks": "RealSports Football (USA) has questionable significance in terms of mods_hacks."
         },
-        "overall_score": 5.5,
-        "confidence": 0.85,
-        "_evaluation_time": 0.00010657310485839844,
+        "overall_score": 6.1,
+        "confidence": 0.88,
+        "_evaluation_time": 0.00013709068298339844,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2697,22 +2697,22 @@
         "game_id": "unknown",
         "game_name": "RealSports Soccer (USA)",
         "scores": {
-          "metacritic": 2.0,
-          "historical": 7.6,
-          "v_list": 4.2,
-          "console_significance": 2.6,
-          "mods_hacks": 1.2
+          "metacritic": 9.0,
+          "historical": 2.6,
+          "v_list": 7.2,
+          "console_significance": 6.9,
+          "mods_hacks": 1.4
         },
         "explanations": {
-          "metacritic": "RealSports Soccer (USA) has minimal significance in terms of Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, RealSports Soccer (USA) performs at a good level.",
-          "v_list": "RealSports Soccer (USA) has below average significance in terms of v_list.",
-          "console_significance": "This title demonstrates below average standing regarding console_significance.",
-          "mods_hacks": "Based on random evaluation, RealSports Soccer (USA) receives limited marks for mods_hacks."
+          "metacritic": "Based on random evaluation, RealSports Soccer (USA) receives top marks for Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, RealSports Soccer (USA) receives below average marks for Historical significance and innovation.",
+          "v_list": "This title shows reasonable qualities for v_list.",
+          "console_significance": "This title shows adequate qualities for console_significance.",
+          "mods_hacks": "RealSports Soccer (USA) has below average significance in terms of mods_hacks."
         },
-        "overall_score": 3.5,
-        "confidence": 0.82,
-        "_evaluation_time": 0.00012159347534179688,
+        "overall_score": 5.4,
+        "confidence": 0.65,
+        "_evaluation_time": 0.00028824806213378906,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2743,22 +2743,22 @@
         "game_id": "unknown",
         "game_name": "RealSports Tennis (USA)",
         "scores": {
-          "metacritic": 5.2,
-          "historical": 9.5,
-          "v_list": 6.0,
-          "console_significance": 8.9,
-          "mods_hacks": 8.8
+          "metacritic": 3.6,
+          "historical": 2.5,
+          "v_list": 5.3,
+          "console_significance": 1.2,
+          "mods_hacks": 6.5
         },
         "explanations": {
-          "metacritic": "This title shows adequate qualities for Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, RealSports Tennis (USA) is remarkable.",
-          "v_list": "RealSports Tennis (USA) has solid standing in terms of v_list.",
-          "console_significance": "RealSports Tennis (USA) scores highly on console_significance.",
-          "mods_hacks": "This title shows remarkable qualities regarding mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, RealSports Tennis (USA) shows questionable qualities.",
+          "historical": "For Historical significance and innovation, RealSports Tennis (USA) shows questionable qualities.",
+          "v_list": "This title shows good qualities for v_list.",
+          "console_significance": "For console_significance, RealSports Tennis (USA) shows minimal qualities.",
+          "mods_hacks": "This title shows good qualities for mods_hacks."
         },
-        "overall_score": 7.7,
-        "confidence": 0.81,
-        "_evaluation_time": 0.0001010894775390625,
+        "overall_score": 3.8,
+        "confidence": 0.67,
+        "_evaluation_time": 0.0001437664031982422,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2789,22 +2789,22 @@
         "game_id": "unknown",
         "game_name": "Rescue on Fractalus! (USA)",
         "scores": {
-          "metacritic": 1.7,
-          "historical": 7.9,
-          "v_list": 6.9,
-          "console_significance": 6.5,
-          "mods_hacks": 6.0
+          "metacritic": 7.3,
+          "historical": 6.1,
+          "v_list": 8.3,
+          "console_significance": 3.1,
+          "mods_hacks": 3.1
         },
         "explanations": {
-          "metacritic": "Rescue on Fractalus! (USA) has limited significance in terms of Critical acclaim and review scores.",
-          "historical": "Based on random evaluation, Rescue on Fractalus! (USA) has good marks for Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Rescue on Fractalus! (USA) has solid marks for v_list.",
-          "console_significance": "Rescue on Fractalus! (USA) has adequate standing in terms of console_significance.",
-          "mods_hacks": "Based on random evaluation, Rescue on Fractalus! (USA) has reasonable marks for mods_hacks."
+          "metacritic": "This title shows good qualities for Critical acclaim and review scores.",
+          "historical": "Rescue on Fractalus! (USA) has reasonable standing in terms of Historical significance and innovation.",
+          "v_list": "This title shows excellent qualities regarding v_list.",
+          "console_significance": "Rescue on Fractalus! (USA) has below average significance in terms of console_significance.",
+          "mods_hacks": "Based on random evaluation, Rescue on Fractalus! (USA) receives modest marks for mods_hacks."
         },
-        "overall_score": 5.8,
-        "confidence": 0.75,
-        "_evaluation_time": 0.00011444091796875,
+        "overall_score": 5.6,
+        "confidence": 0.83,
+        "_evaluation_time": 0.00023365020751953125,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2835,22 +2835,22 @@
         "game_id": "unknown",
         "game_name": "Robotron 2084 (USA)",
         "scores": {
-          "metacritic": 7.6,
-          "historical": 4.1,
-          "v_list": 7.4,
-          "console_significance": 8.3,
-          "mods_hacks": 6.6
+          "metacritic": 1.4,
+          "historical": 2.7,
+          "v_list": 3.1,
+          "console_significance": 6.6,
+          "mods_hacks": 2.6
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Robotron 2084 (USA) has solid marks for Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Robotron 2084 (USA) shows questionable qualities.",
-          "v_list": "This title shows decent qualities for v_list.",
-          "console_significance": "Based on random evaluation, Robotron 2084 (USA) receives top marks for console_significance.",
-          "mods_hacks": "For mods_hacks, Robotron 2084 (USA) performs at a decent level."
+          "metacritic": "Based on random evaluation, Robotron 2084 (USA) receives questionable marks for Critical acclaim and review scores.",
+          "historical": "This title demonstrates modest standing regarding Historical significance and innovation.",
+          "v_list": "This title demonstrates questionable standing regarding v_list.",
+          "console_significance": "Based on random evaluation, Robotron 2084 (USA) has solid marks for console_significance.",
+          "mods_hacks": "Based on random evaluation, Robotron 2084 (USA) receives minimal marks for mods_hacks."
         },
-        "overall_score": 6.8,
-        "confidence": 0.9,
-        "_evaluation_time": 9.083747863769531e-05,
+        "overall_score": 3.3,
+        "confidence": 0.7,
+        "_evaluation_time": 0.0001583099365234375,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2881,22 +2881,22 @@
         "game_id": "unknown",
         "game_name": "Space Dungeon (USA)",
         "scores": {
-          "metacritic": 8.0,
-          "historical": 9.4,
-          "v_list": 8.3,
-          "console_significance": 7.3,
-          "mods_hacks": 2.3
+          "metacritic": 6.2,
+          "historical": 1.3,
+          "v_list": 6.3,
+          "console_significance": 1.3,
+          "mods_hacks": 8.0
         },
         "explanations": {
-          "metacritic": "Space Dungeon (USA) scores highly on Critical acclaim and review scores.",
-          "historical": "Based on random evaluation, Space Dungeon (USA) receives top marks for Historical significance and innovation.",
-          "v_list": "This title shows excellent qualities regarding v_list.",
-          "console_significance": "Space Dungeon (USA) has good standing in terms of console_significance.",
-          "mods_hacks": "Based on random evaluation, Space Dungeon (USA) receives minimal marks for mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, Space Dungeon (USA) performs at a good level.",
+          "historical": "Based on random evaluation, Space Dungeon (USA) receives below average marks for Historical significance and innovation.",
+          "v_list": "For v_list, Space Dungeon (USA) performs at a adequate level.",
+          "console_significance": "This title demonstrates modest standing regarding console_significance.",
+          "mods_hacks": "For mods_hacks, Space Dungeon (USA) is remarkable."
         },
-        "overall_score": 7.1,
-        "confidence": 0.91,
-        "_evaluation_time": 0.00010728836059570312,
+        "overall_score": 4.6,
+        "confidence": 0.83,
+        "_evaluation_time": 0.0001780986785888672,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2927,22 +2927,22 @@
         "game_id": "unknown",
         "game_name": "Space Invaders (USA)",
         "scores": {
-          "metacritic": 8.3,
-          "historical": 5.8,
-          "v_list": 6.2,
-          "console_significance": 1.2,
-          "mods_hacks": 6.3
+          "metacritic": 3.5,
+          "historical": 2.8,
+          "v_list": 4.0,
+          "console_significance": 7.2,
+          "mods_hacks": 2.2
         },
         "explanations": {
-          "metacritic": "This title shows excellent qualities regarding Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Space Invaders (USA) performs at a good level.",
-          "v_list": "Space Invaders (USA) has adequate standing in terms of v_list.",
-          "console_significance": "For console_significance, Space Invaders (USA) shows modest qualities.",
-          "mods_hacks": "Space Invaders (USA) has decent standing in terms of mods_hacks."
+          "metacritic": "Space Invaders (USA) has below average significance in terms of Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Space Invaders (USA) receives minimal marks for Historical significance and innovation.",
+          "v_list": "This title demonstrates questionable standing regarding v_list.",
+          "console_significance": "Space Invaders (USA) has good standing in terms of console_significance.",
+          "mods_hacks": "For mods_hacks, Space Invaders (USA) shows minimal qualities."
         },
-        "overall_score": 5.6,
-        "confidence": 0.78,
-        "_evaluation_time": 0.00010347366333007812,
+        "overall_score": 3.9,
+        "confidence": 0.87,
+        "_evaluation_time": 0.00034809112548828125,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -2973,22 +2973,22 @@
         "game_id": "unknown",
         "game_name": "Space Shuttle - A Journey Into Space (USA)",
         "scores": {
-          "metacritic": 7.1,
-          "historical": 2.1,
-          "v_list": 5.6,
-          "console_significance": 7.8,
-          "mods_hacks": 4.0
+          "metacritic": 3.1,
+          "historical": 6.5,
+          "v_list": 2.2,
+          "console_significance": 2.8,
+          "mods_hacks": 1.7
         },
         "explanations": {
-          "metacritic": "Space Shuttle - A Journey Into Space (USA) has solid standing in terms of Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Space Shuttle - A Journey Into Space (USA) shows questionable qualities.",
-          "v_list": "This title shows decent qualities for v_list.",
-          "console_significance": "Space Shuttle - A Journey Into Space (USA) has good standing in terms of console_significance.",
-          "mods_hacks": "Space Shuttle - A Journey Into Space (USA) has minimal significance in terms of mods_hacks."
+          "metacritic": "Space Shuttle - A Journey Into Space (USA) has minimal significance in terms of Critical acclaim and review scores.",
+          "historical": "Space Shuttle - A Journey Into Space (USA) has adequate standing in terms of Historical significance and innovation.",
+          "v_list": "Space Shuttle - A Journey Into Space (USA) has below average significance in terms of v_list.",
+          "console_significance": "Space Shuttle - A Journey Into Space (USA) has questionable significance in terms of console_significance.",
+          "mods_hacks": "For mods_hacks, Space Shuttle - A Journey Into Space (USA) shows limited qualities."
         },
-        "overall_score": 5.3,
-        "confidence": 0.83,
-        "_evaluation_time": 9.250640869140625e-05,
+        "overall_score": 3.3,
+        "confidence": 0.79,
+        "_evaluation_time": 0.00014090538024902344,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -3019,22 +3019,22 @@
         "game_id": "unknown",
         "game_name": "Star Raiders (USA)",
         "scores": {
-          "metacritic": 7.5,
-          "historical": 4.3,
-          "v_list": 3.1,
-          "console_significance": 6.7,
-          "mods_hacks": 1.1
+          "metacritic": 8.5,
+          "historical": 2.7,
+          "v_list": 9.5,
+          "console_significance": 2.6,
+          "mods_hacks": 6.6
         },
         "explanations": {
-          "metacritic": "Star Raiders (USA) has good standing in terms of Critical acclaim and review scores.",
-          "historical": "This title demonstrates limited standing regarding Historical significance and innovation.",
-          "v_list": "For v_list, Star Raiders (USA) shows below average qualities.",
-          "console_significance": "Star Raiders (USA) has good standing in terms of console_significance.",
-          "mods_hacks": "For mods_hacks, Star Raiders (USA) shows questionable qualities."
+          "metacritic": "For Critical acclaim and review scores, Star Raiders (USA) is outstanding.",
+          "historical": "Based on random evaluation, Star Raiders (USA) receives questionable marks for Historical significance and innovation.",
+          "v_list": "For v_list, Star Raiders (USA) is outstanding.",
+          "console_significance": "Star Raiders (USA) has questionable significance in terms of console_significance.",
+          "mods_hacks": "Based on random evaluation, Star Raiders (USA) has reasonable marks for mods_hacks."
         },
-        "overall_score": 4.5,
-        "confidence": 0.7,
-        "_evaluation_time": 9.751319885253906e-05,
+        "overall_score": 6.0,
+        "confidence": 0.95,
+        "_evaluation_time": 0.0001800060272216797,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -3065,22 +3065,22 @@
         "game_id": "unknown",
         "game_name": "Star Trek - Strategic Operations Simulator (USA)",
         "scores": {
-          "metacritic": 3.0,
-          "historical": 6.6,
-          "v_list": 6.2,
-          "console_significance": 2.6,
-          "mods_hacks": 2.7
+          "metacritic": 4.4,
+          "historical": 3.7,
+          "v_list": 6.7,
+          "console_significance": 7.6,
+          "mods_hacks": 4.3
         },
         "explanations": {
-          "metacritic": "This title demonstrates below average standing regarding Critical acclaim and review scores.",
-          "historical": "Based on random evaluation, Star Trek - Strategic Operations Simulator (USA) has adequate marks for Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Star Trek - Strategic Operations Simulator (USA) has good marks for v_list.",
-          "console_significance": "Star Trek - Strategic Operations Simulator (USA) has limited significance in terms of console_significance.",
-          "mods_hacks": "Star Trek - Strategic Operations Simulator (USA) has limited significance in terms of mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, Star Trek - Strategic Operations Simulator (USA) shows minimal qualities.",
+          "historical": "Based on random evaluation, Star Trek - Strategic Operations Simulator (USA) receives questionable marks for Historical significance and innovation.",
+          "v_list": "For v_list, Star Trek - Strategic Operations Simulator (USA) performs at a decent level.",
+          "console_significance": "This title shows good qualities for console_significance.",
+          "mods_hacks": "This title demonstrates limited standing regarding mods_hacks."
         },
-        "overall_score": 4.2,
-        "confidence": 0.74,
-        "_evaluation_time": 0.00011467933654785156,
+        "overall_score": 5.3,
+        "confidence": 0.94,
+        "_evaluation_time": 0.00020837783813476562,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -3111,22 +3111,22 @@
         "game_id": "unknown",
         "game_name": "Star Wars - Return of the Jedi - Death Star Battle (USA)",
         "scores": {
-          "metacritic": 6.2,
-          "historical": 2.1,
-          "v_list": 9.5,
-          "console_significance": 8.3,
-          "mods_hacks": 1.9
+          "metacritic": 5.5,
+          "historical": 6.0,
+          "v_list": 7.6,
+          "console_significance": 9.9,
+          "mods_hacks": 7.9
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Star Wars - Return of the Jedi - Death Star Battle (USA) has adequate marks for Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Star Wars - Return of the Jedi - Death Star Battle (USA) shows limited qualities.",
-          "v_list": "Based on random evaluation, Star Wars - Return of the Jedi - Death Star Battle (USA) receives top marks for v_list.",
-          "console_significance": "Star Wars - Return of the Jedi - Death Star Battle (USA) scores highly on console_significance.",
-          "mods_hacks": "Based on random evaluation, Star Wars - Return of the Jedi - Death Star Battle (USA) receives below average marks for mods_hacks."
+          "metacritic": "This title shows good qualities for Critical acclaim and review scores.",
+          "historical": "Star Wars - Return of the Jedi - Death Star Battle (USA) has adequate standing in terms of Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Star Wars - Return of the Jedi - Death Star Battle (USA) has decent marks for v_list.",
+          "console_significance": "Based on random evaluation, Star Wars - Return of the Jedi - Death Star Battle (USA) receives top marks for console_significance.",
+          "mods_hacks": "Star Wars - Return of the Jedi - Death Star Battle (USA) has decent standing in terms of mods_hacks."
         },
-        "overall_score": 5.6,
-        "confidence": 0.82,
-        "_evaluation_time": 0.00013685226440429688,
+        "overall_score": 7.4,
+        "confidence": 0.71,
+        "_evaluation_time": 0.00041484832763671875,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -3157,22 +3157,22 @@
         "game_id": "unknown",
         "game_name": "Star Wars - The Arcade Game (USA)",
         "scores": {
-          "metacritic": 5.9,
-          "historical": 3.4,
-          "v_list": 8.7,
-          "console_significance": 7.6,
-          "mods_hacks": 2.5
+          "metacritic": 5.1,
+          "historical": 7.5,
+          "v_list": 4.5,
+          "console_significance": 3.8,
+          "mods_hacks": 9.9
         },
         "explanations": {
-          "metacritic": "This title shows good qualities for Critical acclaim and review scores.",
-          "historical": "Star Wars - The Arcade Game (USA) has modest significance in terms of Historical significance and innovation.",
-          "v_list": "This title shows impressive qualities regarding v_list.",
-          "console_significance": "Based on random evaluation, Star Wars - The Arcade Game (USA) has decent marks for console_significance.",
-          "mods_hacks": "For mods_hacks, Star Wars - The Arcade Game (USA) shows modest qualities."
+          "metacritic": "For Critical acclaim and review scores, Star Wars - The Arcade Game (USA) performs at a decent level.",
+          "historical": "Based on random evaluation, Star Wars - The Arcade Game (USA) has good marks for Historical significance and innovation.",
+          "v_list": "This title demonstrates modest standing regarding v_list.",
+          "console_significance": "For console_significance, Star Wars - The Arcade Game (USA) shows questionable qualities.",
+          "mods_hacks": "For mods_hacks, Star Wars - The Arcade Game (USA) is outstanding."
         },
-        "overall_score": 5.6,
-        "confidence": 0.94,
-        "_evaluation_time": 0.00011515617370605469,
+        "overall_score": 6.2,
+        "confidence": 0.85,
+        "_evaluation_time": 0.00016546249389648438,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -3203,22 +3203,22 @@
         "game_id": "unknown",
         "game_name": "Super Breakout (USA)",
         "scores": {
-          "metacritic": 6.5,
-          "historical": 6.9,
-          "v_list": 8.7,
-          "console_significance": 3.0,
-          "mods_hacks": 1.3
+          "metacritic": 8.1,
+          "historical": 7.6,
+          "v_list": 2.2,
+          "console_significance": 9.4,
+          "mods_hacks": 4.9
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Super Breakout (USA) has solid marks for Critical acclaim and review scores.",
-          "historical": "Based on random evaluation, Super Breakout (USA) has adequate marks for Historical significance and innovation.",
-          "v_list": "For v_list, Super Breakout (USA) is remarkable.",
-          "console_significance": "Super Breakout (USA) has modest significance in terms of console_significance.",
-          "mods_hacks": "Based on random evaluation, Super Breakout (USA) receives questionable marks for mods_hacks."
+          "metacritic": "Based on random evaluation, Super Breakout (USA) receives top marks for Critical acclaim and review scores.",
+          "historical": "Super Breakout (USA) has solid standing in terms of Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Super Breakout (USA) receives below average marks for v_list.",
+          "console_significance": "Based on random evaluation, Super Breakout (USA) receives top marks for console_significance.",
+          "mods_hacks": "Based on random evaluation, Super Breakout (USA) receives limited marks for mods_hacks."
         },
-        "overall_score": 5.3,
-        "confidence": 0.95,
-        "_evaluation_time": 0.00010728836059570312,
+        "overall_score": 6.4,
+        "confidence": 0.83,
+        "_evaluation_time": 0.00020241737365722656,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -3249,22 +3249,22 @@
         "game_id": "unknown",
         "game_name": "Super Cobra (USA)",
         "scores": {
-          "metacritic": 1.1,
-          "historical": 4.1,
-          "v_list": 1.7,
-          "console_significance": 5.2,
-          "mods_hacks": 9.1
+          "metacritic": 5.0,
+          "historical": 7.3,
+          "v_list": 9.2,
+          "console_significance": 8.8,
+          "mods_hacks": 3.9
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Super Cobra (USA) receives limited marks for Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Super Cobra (USA) shows questionable qualities.",
-          "v_list": "This title demonstrates limited standing regarding v_list.",
-          "console_significance": "Based on random evaluation, Super Cobra (USA) has adequate marks for console_significance.",
-          "mods_hacks": "Super Cobra (USA) scores highly on mods_hacks."
+          "metacritic": "For Critical acclaim and review scores, Super Cobra (USA) performs at a adequate level.",
+          "historical": "Based on random evaluation, Super Cobra (USA) has adequate marks for Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Super Cobra (USA) receives top marks for v_list.",
+          "console_significance": "Super Cobra (USA) scores highly on console_significance.",
+          "mods_hacks": "This title demonstrates modest standing regarding mods_hacks."
         },
-        "overall_score": 4.2,
-        "confidence": 0.8,
-        "_evaluation_time": 0.00010013580322265625,
+        "overall_score": 6.8,
+        "confidence": 0.76,
+        "_evaluation_time": 0.0002372264862060547,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -3295,22 +3295,22 @@
         "game_id": "unknown",
         "game_name": "Tempest (USA) (AtariAge)",
         "scores": {
-          "metacritic": 5.7,
-          "historical": 4.7,
-          "v_list": 3.2,
-          "console_significance": 8.6,
-          "mods_hacks": 1.4
+          "metacritic": 6.3,
+          "historical": 8.6,
+          "v_list": 1.8,
+          "console_significance": 4.0,
+          "mods_hacks": 8.8
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Tempest (USA) (AtariAge) has reasonable marks for Critical acclaim and review scores.",
-          "historical": "For Historical significance and innovation, Tempest (USA) (AtariAge) shows limited qualities.",
-          "v_list": "Based on random evaluation, Tempest (USA) (AtariAge) receives minimal marks for v_list.",
-          "console_significance": "This title shows exceptional qualities regarding console_significance.",
-          "mods_hacks": "This title demonstrates modest standing regarding mods_hacks."
+          "metacritic": "Tempest (USA) (AtariAge) has decent standing in terms of Critical acclaim and review scores.",
+          "historical": "For Historical significance and innovation, Tempest (USA) (AtariAge) is remarkable.",
+          "v_list": "Tempest (USA) (AtariAge) has limited significance in terms of v_list.",
+          "console_significance": "Based on random evaluation, Tempest (USA) (AtariAge) receives limited marks for console_significance.",
+          "mods_hacks": "Based on random evaluation, Tempest (USA) (AtariAge) receives top marks for mods_hacks."
         },
-        "overall_score": 4.7,
-        "confidence": 0.75,
-        "_evaluation_time": 9.679794311523438e-05,
+        "overall_score": 5.9,
+        "confidence": 0.78,
+        "_evaluation_time": 0.00029850006103515625,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -3341,22 +3341,22 @@
         "game_id": "unknown",
         "game_name": "Vanguard (USA)",
         "scores": {
-          "metacritic": 2.1,
-          "historical": 7.5,
-          "v_list": 8.2,
-          "console_significance": 5.5,
-          "mods_hacks": 5.1
+          "metacritic": 5.7,
+          "historical": 4.1,
+          "v_list": 5.1,
+          "console_significance": 2.7,
+          "mods_hacks": 9.5
         },
         "explanations": {
-          "metacritic": "Based on random evaluation, Vanguard (USA) receives questionable marks for Critical acclaim and review scores.",
-          "historical": "This title shows reasonable qualities for Historical significance and innovation.",
-          "v_list": "Based on random evaluation, Vanguard (USA) receives top marks for v_list.",
-          "console_significance": "For console_significance, Vanguard (USA) performs at a solid level.",
-          "mods_hacks": "For mods_hacks, Vanguard (USA) performs at a reasonable level."
+          "metacritic": "Based on random evaluation, Vanguard (USA) has good marks for Critical acclaim and review scores.",
+          "historical": "This title demonstrates below average standing regarding Historical significance and innovation.",
+          "v_list": "Vanguard (USA) has solid standing in terms of v_list.",
+          "console_significance": "This title demonstrates below average standing regarding console_significance.",
+          "mods_hacks": "Based on random evaluation, Vanguard (USA) receives top marks for mods_hacks."
         },
-        "overall_score": 5.7,
-        "confidence": 0.86,
-        "_evaluation_time": 9.608268737792969e-05,
+        "overall_score": 5.4,
+        "confidence": 0.91,
+        "_evaluation_time": 0.0002028942108154297,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -3387,22 +3387,22 @@
         "game_id": "unknown",
         "game_name": "Wizard of Wor (USA)",
         "scores": {
-          "metacritic": 4.9,
-          "historical": 7.6,
-          "v_list": 7.8,
-          "console_significance": 6.2,
-          "mods_hacks": 3.3
+          "metacritic": 8.4,
+          "historical": 8.9,
+          "v_list": 3.7,
+          "console_significance": 10.0,
+          "mods_hacks": 5.4
         },
         "explanations": {
-          "metacritic": "This title demonstrates below average standing regarding Critical acclaim and review scores.",
-          "historical": "Based on random evaluation, Wizard of Wor (USA) has adequate marks for Historical significance and innovation.",
-          "v_list": "Wizard of Wor (USA) has reasonable standing in terms of v_list.",
-          "console_significance": "For console_significance, Wizard of Wor (USA) performs at a decent level.",
-          "mods_hacks": "For mods_hacks, Wizard of Wor (USA) shows questionable qualities."
+          "metacritic": "Wizard of Wor (USA) scores highly on Critical acclaim and review scores.",
+          "historical": "Based on random evaluation, Wizard of Wor (USA) receives top marks for Historical significance and innovation.",
+          "v_list": "For v_list, Wizard of Wor (USA) shows below average qualities.",
+          "console_significance": "For console_significance, Wizard of Wor (USA) is outstanding.",
+          "mods_hacks": "For mods_hacks, Wizard of Wor (USA) performs at a reasonable level."
         },
-        "overall_score": 6.0,
-        "confidence": 0.78,
-        "_evaluation_time": 9.584426879882812e-05,
+        "overall_score": 7.3,
+        "confidence": 0.84,
+        "_evaluation_time": 0.00014352798461914062,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -3433,22 +3433,22 @@
         "game_id": "unknown",
         "game_name": "Zaxxon (USA)",
         "scores": {
-          "metacritic": 4.5,
-          "historical": 6.2,
-          "v_list": 9.0,
-          "console_significance": 7.5,
-          "mods_hacks": 9.9
+          "metacritic": 6.8,
+          "historical": 6.1,
+          "v_list": 1.6,
+          "console_significance": 9.5,
+          "mods_hacks": 1.9
         },
         "explanations": {
-          "metacritic": "Zaxxon (USA) has limited significance in terms of Critical acclaim and review scores.",
-          "historical": "Zaxxon (USA) has good standing in terms of Historical significance and innovation.",
-          "v_list": "Zaxxon (USA) scores highly on v_list.",
-          "console_significance": "This title shows reasonable qualities for console_significance.",
-          "mods_hacks": "For mods_hacks, Zaxxon (USA) is excellent."
+          "metacritic": "Based on random evaluation, Zaxxon (USA) has good marks for Critical acclaim and review scores.",
+          "historical": "This title shows good qualities for Historical significance and innovation.",
+          "v_list": "Based on random evaluation, Zaxxon (USA) receives questionable marks for v_list.",
+          "console_significance": "Based on random evaluation, Zaxxon (USA) receives top marks for console_significance.",
+          "mods_hacks": "Based on random evaluation, Zaxxon (USA) receives below average marks for mods_hacks."
         },
-        "overall_score": 7.4,
-        "confidence": 0.91,
-        "_evaluation_time": 0.00013589859008789062,
+        "overall_score": 5.2,
+        "confidence": 0.95,
+        "_evaluation_time": 0.000148773193359375,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -3479,22 +3479,22 @@
         "game_id": "unknown",
         "game_name": "Zenji (USA)",
         "scores": {
-          "metacritic": 6.4,
-          "historical": 8.9,
-          "v_list": 7.7,
-          "console_significance": 7.3,
-          "mods_hacks": 9.8
+          "metacritic": 6.2,
+          "historical": 7.3,
+          "v_list": 9.8,
+          "console_significance": 4.0,
+          "mods_hacks": 2.8
         },
         "explanations": {
-          "metacritic": "For Critical acclaim and review scores, Zenji (USA) performs at a decent level.",
-          "historical": "Based on random evaluation, Zenji (USA) receives top marks for Historical significance and innovation.",
-          "v_list": "Zenji (USA) has solid standing in terms of v_list.",
-          "console_significance": "This title shows reasonable qualities for console_significance.",
-          "mods_hacks": "This title shows outstanding qualities regarding mods_hacks."
+          "metacritic": "Zenji (USA) has decent standing in terms of Critical acclaim and review scores.",
+          "historical": "This title shows solid qualities for Historical significance and innovation.",
+          "v_list": "For v_list, Zenji (USA) is outstanding.",
+          "console_significance": "Zenji (USA) has modest significance in terms of console_significance.",
+          "mods_hacks": "Zenji (USA) has minimal significance in terms of mods_hacks."
         },
-        "overall_score": 8.0,
-        "confidence": 0.69,
-        "_evaluation_time": 0.00010371208190917969,
+        "overall_score": 6.0,
+        "confidence": 0.78,
+        "_evaluation_time": 0.0002541542053222656,
         "_criteria_used": [
           "metacritic",
           "historical",
@@ -3525,22 +3525,22 @@
         "game_id": "unknown",
         "game_name": "Zone Ranger (USA)",
         "scores": {
-          "metacritic": 9.5,
-          "historical": 2.9,
-          "v_list": 4.1,
-          "console_significance": 3.7,
-          "mods_hacks": 7.9
+          "metacritic": 2.2,
+          "historical": 6.4,
+          "v_list": 2.4,
+          "console_significance": 4.2,
+          "mods_hacks": 7.6
         },
         "explanations": {
-          "metacritic": "Zone Ranger (USA) scores highly on Critical acclaim and review scores.",
-          "historical": "Zone Ranger (USA) has below average significance in terms of Historical significance and innovation.",
-          "v_list": "This title demonstrates below average standing regarding v_list.",
-          "console_significance": "This title demonstrates questionable standing regarding console_significance.",
-          "mods_hacks": "For mods_hacks, Zone Ranger (USA) performs at a solid level."
+          "metacritic": "For Critical acclaim and review scores, Zone Ranger (USA) shows questionable qualities.",
+          "historical": "Zone Ranger (USA) has good standing in terms of Historical significance and innovation.",
+          "v_list": "For v_list, Zone Ranger (USA) shows questionable qualities.",
+          "console_significance": "This title demonstrates minimal standing regarding console_significance.",
+          "mods_hacks": "Based on random evaluation, Zone Ranger (USA) has solid marks for mods_hacks."
         },
-        "overall_score": 5.6,
-        "confidence": 0.74,
-        "_evaluation_time": 9.775161743164062e-05,
+        "overall_score": 4.6,
+        "confidence": 0.95,
+        "_evaluation_time": 0.00018334388732910156,
         "_criteria_used": [
           "metacritic",
           "historical",

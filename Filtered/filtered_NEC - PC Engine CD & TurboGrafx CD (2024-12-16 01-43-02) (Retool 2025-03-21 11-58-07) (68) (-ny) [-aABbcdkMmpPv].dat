@@ -1,0 +1,832 @@
+<?xml version="1.0" ?>
+<datafile>
+<header>
+<name>NEC - PC Engine CD &amp; TurboGrafx CD (Retool)</name>
+<description>NEC - PC Engine CD &amp; TurboGrafx CD (68) (-ny) [-aABbcdkMmpPv] (2024-12-16 01-43-02) (Retool)</description>
+<version>2024-12-16 01-43-02</version>
+<date>2025-03-21 11-58-07</date>
+<author>redump.org</author>
+<homepage>http://www.github.com/unexpectedpanda/retool</homepage>
+<url>http://redump.org/</url>
+<retool>Created by Retool 2.3.9</retool>
+<filtered_date>2025-05-08</filtered_date>
+<filtered_time>10:40:07</filtered_time>
+<filtered_games_count>27</filtered_games_count>
+<original_games_count>68</original_games_count>
+</header>
+<game name="Beyond Shadowgate (USA)">
+  <category>Games</category>
+<description>Beyond Shadowgate (USA)</description>
+<rom name="Beyond Shadowgate (USA).cue" size="4253" crc="eed69b57" md5="6e982cf5753e27bf2b937be8bf3d35a9" sha1="f4b2f4cf19074916f3c52933fc9d18cd13c79223"/>
+<rom name="Beyond Shadowgate (USA) (Track 01).bin" size="2573088" crc="8b250736" md5="c66fd0d378c0c3b0f8a342f4a2150330" sha1="f0513a548aeb57804d390169296daa9a4834a924"/>
+<rom name="Beyond Shadowgate (USA) (Track 02).bin" size="80857056" crc="e50fd945" md5="339e62f107dcea811356fb5b567d4cca" sha1="adba598b83038e38de4e598bb3fd78619e1e4e6b"/>
+<rom name="Beyond Shadowgate (USA) (Track 03).bin" size="14382480" crc="62c64394" md5="cdcb4c35b8bbfd4b57681bbd23226e94" sha1="273549470c2d56414bca1cac292aee7a9cdf8442"/>
+<rom name="Beyond Shadowgate (USA) (Track 04).bin" size="11503632" crc="a5cec55d" md5="7809af7f24fa8abd4a0b946c6d6fa23e" sha1="67729a22a3f6663a16e32506fcaa4dddfa829124"/>
+<rom name="Beyond Shadowgate (USA) (Track 05).bin" size="6291600" crc="4a2b4b40" md5="fc2a02e4e146a63badb97d356a39baee" sha1="110575cb3ba91227e0a5789150c728cf6bd6869a"/>
+<rom name="Beyond Shadowgate (USA) (Track 06).bin" size="14147280" crc="a086923b" md5="221c0eb93ff02b599a8d1413a4a1b1e4" sha1="54d7facc3ad665fd57ad1b4b7f048705abcf06b0"/>
+<rom name="Beyond Shadowgate (USA) (Track 07).bin" size="12489120" crc="31a1bce5" md5="a7d4bd69e3313cecb3f1b64eb0be6e98" sha1="881e2708f74e89d16236b43a99c88ac79da35b70"/>
+<rom name="Beyond Shadowgate (USA) (Track 08).bin" size="13079472" crc="ec11cf48" md5="cc4791de39c1dd6639dc3a2eccecd2d0" sha1="67d0e1df76577103c498028121af378b99744135"/>
+<rom name="Beyond Shadowgate (USA) (Track 09).bin" size="12517344" crc="934a0658" md5="fe2dbb7818b24f56db45e203efa7dd73" sha1="24c1a1a14f67d8a5d8a33fc2d906b50f3f8eba2b"/>
+<rom name="Beyond Shadowgate (USA) (Track 10).bin" size="12677280" crc="9a814a0f" md5="1d0a21bb1cd459a6330a2af5a7358312" sha1="0605716cf77926278f7d7a5d2eeb3578611d2206"/>
+<rom name="Beyond Shadowgate (USA) (Track 11).bin" size="12712560" crc="8825a3b5" md5="e0f81e9a8c05330ce077c49dd4064186" sha1="98068d7219ba4f60a195d3dea284e8f952b5195c"/>
+<rom name="Beyond Shadowgate (USA) (Track 12).bin" size="12197472" crc="b1095ffd" md5="74989b8a4c3b4136b8fbd8d64dad9f0f" sha1="6227ad2743177501657fcafa8e5b40ce4c512a87"/>
+<rom name="Beyond Shadowgate (USA) (Track 13).bin" size="12145728" crc="972faed5" md5="1e0334c220ac20951f7b0a3bb0a23254" sha1="799f85f0122a8855fa40eb288f497fb819fa12e6"/>
+<rom name="Beyond Shadowgate (USA) (Track 14).bin" size="12740784" crc="ce9fbdc3" md5="47073893638f99b23553749cdcec79e5" sha1="6f61dffdc81c72f0ce3730ee421442c4cc7d4cea"/>
+<rom name="Beyond Shadowgate (USA) (Track 15).bin" size="12225696" crc="c666bab5" md5="39850bc0d877430678c7d63620e56c2f" sha1="de8cb77a0d19db13577e0db2a26f70e673767a29"/>
+<rom name="Beyond Shadowgate (USA) (Track 16).bin" size="12799584" crc="b487b040" md5="b59f44bcfecbafca6a1219620b61789e" sha1="ecda9d2a22084786de5142a1f2768eb0b50b29fc"/>
+<rom name="Beyond Shadowgate (USA) (Track 17).bin" size="12830160" crc="96ebbe23" md5="0b0d7bd7611afa437e668bb2b94f9fe0" sha1="a5f6c6e73554bd0280655d9f578258e400f11266"/>
+<rom name="Beyond Shadowgate (USA) (Track 18).bin" size="2718912" crc="8eeb1cb6" md5="a3a68913d8005a5116f991962aecb356" sha1="bb1ea61afff170fbef1760d4c941e18900ece70b"/>
+<rom name="Beyond Shadowgate (USA) (Track 19).bin" size="13317024" crc="fff54cd0" md5="39308dcd6d65f4381ae1a7e8905b5d64" sha1="afb5cba0f6735d8d06dda9eb2a348edf81000eed"/>
+<rom name="Beyond Shadowgate (USA) (Track 20).bin" size="1848672" crc="18337fb5" md5="5c402687c40f580f0f753761d91261f9" sha1="2a4d76aba14286ecfc76566b963a507f33cc6a2f"/>
+<rom name="Beyond Shadowgate (USA) (Track 21).bin" size="12209232" crc="a4393f73" md5="df9105a7c0670a40963d342bdbf951b9" sha1="5f16deea86c9b4e0cb9ea4e9d68d8c61873c2c0c"/>
+<rom name="Beyond Shadowgate (USA) (Track 22).bin" size="1034880" crc="bd91ebc9" md5="6c0c4001d2b084bfa6a2d770b638a931" sha1="5a61a7f93986016e2edc7c19d1e4a022ec083bc2"/>
+<rom name="Beyond Shadowgate (USA) (Track 23).bin" size="11193168" crc="837061cf" md5="bddf5da8de91a27eac91e9d542adb770" sha1="d41cb7887f43bd15f661691a7b5514db4cc45dbb"/>
+<rom name="Beyond Shadowgate (USA) (Track 24).bin" size="13451088" crc="248ef386" md5="c673340fbe8e224f339df28fb2991261" sha1="0a418e37da3e1f8132598bae4fd8cb5b7f978940"/>
+<rom name="Beyond Shadowgate (USA) (Track 25).bin" size="12912480" crc="be36af9f" md5="075abfc0d16baa3096f6c48b72db1536" sha1="ca94739cf1558a2d823c27bcc0c417482e388ade"/>
+<rom name="Beyond Shadowgate (USA) (Track 26).bin" size="12211584" crc="a6810bf4" md5="5d454e7d6fa2f458f1a9c7a519046aba" sha1="e046ea7511fb99e2a141f651b1382ebcbafa8844"/>
+<rom name="Beyond Shadowgate (USA) (Track 27).bin" size="2871792" crc="8a1d68f9" md5="4f8efa73410baa764e8c8edf834ba946" sha1="3c80b19fb2c66589c96433958f3f955bfc984502"/>
+<rom name="Beyond Shadowgate (USA) (Track 28).bin" size="12446784" crc="31b9f694" md5="25322802521a92fe0e5ff714a12ff683" sha1="cf9ee9e8b1ba983222a138a2eede38a491f912e7"/>
+<rom name="Beyond Shadowgate (USA) (Track 29).bin" size="12538512" crc="238728dd" md5="c4b2a269a9830b1d0507ed86568b58bb" sha1="adbbf5792e8849f7dd42ec56ef912e5e2f2ec3be"/>
+<rom name="Beyond Shadowgate (USA) (Track 30).bin" size="17487120" crc="699654d4" md5="3927adfdaf248064ff4feee2b2541d1a" sha1="545dd1f7c2e9fa011396946fb7c3a026f9c548bf"/>
+<rom name="Beyond Shadowgate (USA) (Track 31).bin" size="14307216" crc="58c6e1d2" md5="27b76bd05b6322c99feb5c3498f64358" sha1="8e61b643ed055963a1e9cc490756a99354e65c79"/>
+<rom name="Beyond Shadowgate (USA) (Track 32).bin" size="12362112" crc="0bd7c903" md5="fb8f1fe16670216e36af6d064ebd1c3c" sha1="3cf7123e241c420fea58c4bc12d21cae75bdbe85"/>
+<rom name="Beyond Shadowgate (USA) (Track 33).bin" size="12665520" crc="5a7405d0" md5="4a30dad1411c255f20240fcd4f40fb16" sha1="3e7e467d9cb8ab47bcbb86181aad1f9fecc03640"/>
+<rom name="Beyond Shadowgate (USA) (Track 34).bin" size="12759600" crc="db7ddf9c" md5="33905d51f5c92e778339e15447e6b90c" sha1="9a21b436bfd4507f67e91fdf9b95a03fe63d5bac"/>
+<rom name="Beyond Shadowgate (USA) (Track 35).bin" size="2093280" crc="3e644804" md5="27115cd66da9f8511451023d13bfff5c" sha1="3219b597f9ebf9334124a6523ce97a25e050f721"/>
+<rom name="Beyond Shadowgate (USA) (Track 36).bin" size="18752496" crc="ad574fbc" md5="ea09c3b9e3ca8c8275688f7c8e577701" sha1="e45f71ab4797aa8ae2f5c735f6107f4e821f3743"/>
+</game>
+<game name="Bonk III - Bonk's Big Adventure (USA)">
+  <category>Games</category>
+<description>Bonk III - Bonk's Big Adventure (USA)</description>
+<rom name="Bonk III - Bonk's Big Adventure (USA).cue" size="1955" crc="fcacde48" md5="0f827ee98c1be5271700cb372ac33d59" sha1="3df710d9c812cef71fcaa46ba141264b9f7e6b93"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 01).bin" size="7914480" crc="16841024" md5="c7ec65c2c430ec5e01ea1e781b5fb933" sha1="2e5a9235aaa4c04baefb8a5104fa2c2977869191"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 02).bin" size="16162944" crc="1279b4b5" md5="326e2f138613370ac3c69e6da26f5c32" sha1="f729b36152d9ed294cc984611865c471f6d028b8"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 03).bin" size="21671328" crc="4df1a2fe" md5="ba70f4176455fb9949ef30266e1b40b5" sha1="392964c96ff6105fc4091bc85f299bdc35c03fad"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 04).bin" size="44241120" crc="aab12092" md5="a88b73d8b709cecc3ee542fc498faf39" sha1="eb5755b845c8590336782b8203b371f2b13aaa9e"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 05).bin" size="45033744" crc="31a4df38" md5="658357f1783ec12f9e096503306189a9" sha1="bffa9ca007734eb1d3577c453ad52a89b2cfe1a2"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 06).bin" size="44219952" crc="b9f063a5" md5="e23a6424883c48a19fa305698d7c53f8" sha1="f439f1c76251fafc13b456f14a7064a9815c8828"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 07).bin" size="63551040" crc="eb6fea2d" md5="c3e5b17c081ae49f397039510a34d77f" sha1="e7126a4cea0750cf4dce4d70b5d69eb656a1588a"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 08).bin" size="44020032" crc="351813e9" md5="f98c710c2d8408d6cceaba32e1856d22" sha1="4bdf50f02474d1c6c9265e1e814ec14d474d3c4e"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 09).bin" size="44478672" crc="086b7f78" md5="a5e3d8e2161f3d5d5a577031b0006046" sha1="a3f22ce691273092a286e38568f2c2eb7ed37f23"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 10).bin" size="65891280" crc="ba5083ff" md5="bd8d888b71218ac67de9b7171bbdda82" sha1="975ac95e0c43e646fbe180aa5758253b4395e2df"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 11).bin" size="44318736" crc="281a8ce9" md5="5889b5adfdd2fd8f6964898bcec2c8c0" sha1="07ee1eb57eb57774f3f74fc55145f7415e83f952"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 12).bin" size="44321088" crc="aa5110c3" md5="2e36c557778f4b300d29508613cce94a" sha1="628ed93ad52a7290a6efe041601e43f689313e5b"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 13).bin" size="44274048" crc="b30888e3" md5="edc5061f3760adc166d27cdad3fcbc72" sha1="680ebcd6fc870f0031a20faca1d5fc58c9ff868a"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 14).bin" size="44619792" crc="66eb9f17" md5="45f22ab46919b9b68091e1943ffa54a3" sha1="12b9db8f7496e2d0bb8bc175c9835cb686cf42b3"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 15).bin" size="34348608" crc="ed229afd" md5="6ede2f6ecf6e8c69732e58d9dac3cc26" sha1="012e5a3928d6d5dad4de09e341df59abacb925ff"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 16).bin" size="7077168" crc="e84baae9" md5="ce7570578f3d4dd611996b681471a8b2" sha1="cea5135e07ffde45628028ebece5261ce01da965"/>
+<rom name="Bonk III - Bonk's Big Adventure (USA) (Track 17).bin" size="15737232" crc="a6aba39c" md5="6fe27cf98d33986b682e88fba31ad393" sha1="d67a2f5a9e963f7556ec45b615c169413107c5ea"/>
+</game>
+<game name="Dragon Slayer - The Legend of Heroes (USA)">
+  <category>Games</category>
+<description>Dragon Slayer - The Legend of Heroes (USA)</description>
+<rom name="Dragon Slayer - The Legend of Heroes (USA).cue" size="2610" crc="221e5ee2" md5="cae6cf0267bb3a070e6ab976334819fc" sha1="f7b2df26d8c68bde3b3c5f18af80659dafe14cdf"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 01).bin" size="7914480" crc="16841024" md5="c7ec65c2c430ec5e01ea1e781b5fb933" sha1="2e5a9235aaa4c04baefb8a5104fa2c2977869191"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 02).bin" size="24218544" crc="b0020b64" md5="cb5af40867c7071fd9ee7638191c6299" sha1="56657baa6f14f36a950065dd367be62c3ce97a71"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 03).bin" size="44932608" crc="87dff05e" md5="39126eba52284d0c49d2ecb9a6fea450" sha1="efd81b148d071e1da72d928e6a3d2b0ecdbb0abb"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 04).bin" size="40261536" crc="17fa3750" md5="348e17ca19222bfe2c8a3d508403437e" sha1="6e5cc738da5b21638816c0e350cf2310e91986ef"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 05).bin" size="40915392" crc="0ef86424" md5="232d6ded27467f23d0b83d1f26a01b87" sha1="c70f748249c1df8c97e792e54ef3d190016d553a"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 06).bin" size="31752000" crc="9f82ffbb" md5="e532425dad3b3c05ff576f51f7a0525c" sha1="4c8bc6fcf5bb9c8eb38e583c2ea92fef6954f838"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 07).bin" size="31719072" crc="f1cf4aef" md5="cc7704ddae38e69bc87b90747571e7f0" sha1="fe61ff1fe543d0c9fd5fc97d6e9663d0a2c2ccc5"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 08).bin" size="31095792" crc="fdd43951" md5="e214cf7d1609bca220094b434ac2fd75" sha1="256cc236e73074fb234aa0e671c000defb3e6e13"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 09).bin" size="7938000" crc="f2cad66f" md5="81d655b09095bec708ec6a4ab8d4b590" sha1="914ed508d15ebb91f098db07922c6511c72d83b8"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 10).bin" size="32278848" crc="776445ab" md5="2da939e6066d80d9c98e1385eb88f1ae" sha1="f1c669afadc425d99b16c468efda841ce421c00c"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 11).bin" size="28541520" crc="bd1dfb72" md5="95fc53df469fa00447c351c81b5755e9" sha1="309a54ef3a46a6dfa9cf08e6f1836c4855e4bfde"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 12).bin" size="30942912" crc="879a2010" md5="0cb4b460b1852b09f8357341da2259bf" sha1="e598b910b1505d4c3b9812e4106b52d37f029387"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 13).bin" size="1886304" crc="38705cbd" md5="b0062bbe6094d332dda00f319e8ff224" sha1="efd17a55a88f1a130a24eeefbcb9dc59765a0437"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 14).bin" size="30994656" crc="b899cbba" md5="a838e3d2b2e49d983e30ef7061bf9b30" sha1="d8cfd9d79cd4b12d94e67d7a414c219e54b15529"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 15).bin" size="43829520" crc="e28941f0" md5="a6827bd32cd54ad74676286f0b90ea58" sha1="429a6f3e50833432fe355a22aab0ce1aaa9ba7fe"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 16).bin" size="11804688" crc="af8327a5" md5="814c23f197ee166945a23e5c3b0cbe6d" sha1="4883992c7e5b99bfd244687f3623e8d256715169"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 17).bin" size="52856496" crc="1660f153" md5="9b308029e8b9b4c3713eca7b3e61e955" sha1="67a5e87763f64063b18761eda3495ee82eb88787"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 18).bin" size="29315328" crc="4ba63215" md5="030a6e20e15fd0e8d14c0e95704d38d9" sha1="b2fad80a3c94d57d467511430522e8f7a951ade3"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 19).bin" size="14335440" crc="60d0b08a" md5="907630f1256f8730a7b0dddc9d74ab00" sha1="c971077bb1bce8060ba7361d55aed12049397be2"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 20).bin" size="74494896" crc="505ddf9b" md5="f0a68295136d1552626c7dd6b2d878cb" sha1="37648262414cf1f14822ecb34d2a985637548c4b"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 21).bin" size="43989456" crc="a0584372" md5="eafad6ca742bd59b3c177f8f19c4d3e6" sha1="6c2ac5a3e099600bd97d8efe36bfcc4a7df01323"/>
+<rom name="Dragon Slayer - The Legend of Heroes (USA) (Track 22).bin" size="4600512" crc="aae652cf" md5="ad4aaed9e9f4fa1b94fb61c5eb24618d" sha1="4579ef4c455f43f65c0a3490c8f0d5a7b388178d"/>
+</game>
+<game name="Dungeon Explorer II (USA)">
+  <category>Games</category>
+<description>Dungeon Explorer II (USA)</description>
+<rom name="Dungeon Explorer II (USA).cue" size="3400" crc="2f84b574" md5="435cd7261f905702e9ce9e9fa188b4bc" sha1="68f3c5530762151ef6cd62b7301a9eb8be461fbf"/>
+<rom name="Dungeon Explorer II (USA) (Track 01).bin" size="7914480" crc="16841024" md5="c7ec65c2c430ec5e01ea1e781b5fb933" sha1="2e5a9235aaa4c04baefb8a5104fa2c2977869191"/>
+<rom name="Dungeon Explorer II (USA) (Track 02).bin" size="40708416" crc="fc6e5787" md5="69d0d7bc44946dcb8c591999c6208aac" sha1="6cf167e319ee7337311ee5135b1edb3a15d4e97d"/>
+<rom name="Dungeon Explorer II (USA) (Track 03).bin" size="12792528" crc="167055d6" md5="8eb7a8a93078edcbdb05941809e27278" sha1="ab876fcb2170c603ba2d513ec09ec642a0a05d69"/>
+<rom name="Dungeon Explorer II (USA) (Track 04).bin" size="3473904" crc="c2e73952" md5="c2a870b82cf197fdf39583e180b72efe" sha1="8db8f57a000aacc2508444f66d0fb894c01d261b"/>
+<rom name="Dungeon Explorer II (USA) (Track 05).bin" size="16558080" crc="9f1d6881" md5="0455dc3fb7b6bb29b1dd3130fe07d952" sha1="a36426db25c894aea81d96e37270726281a852e9"/>
+<rom name="Dungeon Explorer II (USA) (Track 06).bin" size="6959568" crc="0ab64401" md5="7f0ac9fc659b66725ec6d31bd83f715f" sha1="805664764f5c753f6d94ce2f656bbb317506dc42"/>
+<rom name="Dungeon Explorer II (USA) (Track 07).bin" size="32935056" crc="a8b56536" md5="4d5f78e9492c03430ddb0b7626f10eb5" sha1="ea928f0bfb72a326262272bc48f4c3920dabe51f"/>
+<rom name="Dungeon Explorer II (USA) (Track 08).bin" size="20909280" crc="7948bf85" md5="8ea5bdfa691d0c3bfda820221559a3e3" sha1="64445d3f7457fe801e5553176c3983b3fc8df0a7"/>
+<rom name="Dungeon Explorer II (USA) (Track 09).bin" size="23235408" crc="e466601e" md5="e164b12243e262e19fcadf55daa45bb8" sha1="ad7db9bea4bcba172a55da525bba620f191ed84c"/>
+<rom name="Dungeon Explorer II (USA) (Track 10).bin" size="23028432" crc="2311a36e" md5="9426033595b52fc7c4fb03c6a709f8dc" sha1="b5d195e2c5f850e04f5b73c00fb28c6fa65df440"/>
+<rom name="Dungeon Explorer II (USA) (Track 11).bin" size="21386736" crc="54e5767e" md5="8b88a49d7be7369e9e579075703dcee9" sha1="5ca0a9b42b26b2fde8978d0c43f63dababcad138"/>
+<rom name="Dungeon Explorer II (USA) (Track 12).bin" size="22057056" crc="7959cb07" md5="8c2cde1c67edcf19c0ec4dd98fc99d85" sha1="e9a39ed53260772d9fbc0a19f2374423377df250"/>
+<rom name="Dungeon Explorer II (USA) (Track 13).bin" size="20184864" crc="b1193ef7" md5="9a44890e991d9d0b315b30df38cf44f9" sha1="e29d927af5b333342b6f7921642f732fc8b59d8c"/>
+<rom name="Dungeon Explorer II (USA) (Track 14).bin" size="22169952" crc="01a1e2ef" md5="40fd4b715ab07c5be0ab1e27fb5788f9" sha1="355982121c9acaca57e30ded6bdba52055021763"/>
+<rom name="Dungeon Explorer II (USA) (Track 15).bin" size="19693296" crc="85e91062" md5="10dc29f3fc626877f462520cf55dc870" sha1="ee8ababf96d23c44da82a4952eb8db8418f09b60"/>
+<rom name="Dungeon Explorer II (USA) (Track 16).bin" size="22202880" crc="46bb4975" md5="1b793a103b56138c97d1edfd2f7c0db6" sha1="04e9513fc06b8e5e130d927dad1e704e382d15d3"/>
+<rom name="Dungeon Explorer II (USA) (Track 17).bin" size="22010016" crc="373a2889" md5="b66bba03cc1c8420fbf081c88cb22e5d" sha1="85dffbd8d172edb4dc6ff37aea44f8e6e562d682"/>
+<rom name="Dungeon Explorer II (USA) (Track 18).bin" size="23515296" crc="1625b280" md5="f144dc16c1857acbeb234aabbf461e10" sha1="b13f0b58a3a66cce56b6e1fd752168684cdd1251"/>
+<rom name="Dungeon Explorer II (USA) (Track 19).bin" size="21868896" crc="31b2f461" md5="876e0a600b539c30d7223b9535047e7d" sha1="d9dbb518a12b06424e0ec0a5b7a89d4fdfa09707"/>
+<rom name="Dungeon Explorer II (USA) (Track 20).bin" size="22099392" crc="fafa8c5c" md5="09680bf0033181648b57178b767b57df" sha1="3e5f1feb22dbccfbf3294a211248808bdd5cfeca"/>
+<rom name="Dungeon Explorer II (USA) (Track 21).bin" size="21819504" crc="f72d6ade" md5="1787711edba999d1e791a43956bf671d" sha1="6117c168fa904c8dd23f37dda643bbbbb23c9f92"/>
+<rom name="Dungeon Explorer II (USA) (Track 22).bin" size="32542272" crc="66f8af04" md5="ab4762be29ae6e4d71cd96315fd27f79" sha1="5ea3c4f4162dda28c669dcc83c9c5531f752a73c"/>
+<rom name="Dungeon Explorer II (USA) (Track 23).bin" size="21793632" crc="f22108c8" md5="fc75204b9ab26abbafdd770367bf696b" sha1="8646ce8d39c0ce05b3b8e2ba4468eff4279215b5"/>
+<rom name="Dungeon Explorer II (USA) (Track 24).bin" size="21567840" crc="628bd16d" md5="661c5d85979cf0e3f5da2812814801a1" sha1="8fa977a68da3ab75a32cc30507977280c9662178"/>
+<rom name="Dungeon Explorer II (USA) (Track 25).bin" size="31676736" crc="69266210" md5="cb822f78650caa5fc25d233bd153de80" sha1="70bab7c7532e353b64a62c248ce8c7fd9bc0c1c1"/>
+<rom name="Dungeon Explorer II (USA) (Track 26).bin" size="23226000" crc="c34141d9" md5="5f0e7346c666b4b74dce9c24d1960e73" sha1="9aa6e2a75bf229b636b351528e5abca064c75cf9"/>
+<rom name="Dungeon Explorer II (USA) (Track 27).bin" size="21718368" crc="12a5acbe" md5="73b8538aa55ae629e2402056146ddbf0" sha1="a82bd1ba121030110af16d4d157660b978bab77b"/>
+<rom name="Dungeon Explorer II (USA) (Track 28).bin" size="23280096" crc="abe573aa" md5="6451d57444b1c59cf1cbdf7baddd7ffc" sha1="4c2735bc93fb5ef093b3eaddf8c51367aa68053f"/>
+<rom name="Dungeon Explorer II (USA) (Track 29).bin" size="21036288" crc="772b3d40" md5="1b9b20a36784e0f52c3c9c089e6a06e1" sha1="6027196977eab0d0d7f5eadddd7639ec131d6793"/>
+<rom name="Dungeon Explorer II (USA) (Track 30).bin" size="22294608" crc="338c5691" md5="c3ad62194d3f7629b57427747794ace9" sha1="88d9431550c3de44d982206c14a01dd8aafd20db"/>
+<rom name="Dungeon Explorer II (USA) (Track 31).bin" size="22666224" crc="a44b4ff6" md5="8c1ec938cc49def99b8901fae7e8c113" sha1="043b0bb6f4a97e5488507824ca7e328887b002a4"/>
+<rom name="Dungeon Explorer II (USA) (Track 32).bin" size="22188768" crc="bfe0f53a" md5="fcf26e0f90c50ed5ce29e27a8089631b" sha1="3d71117ce4a163f4b95d392e46803f738b4d0248"/>
+<rom name="Dungeon Explorer II (USA) (Track 33).bin" size="11386032" crc="46910932" md5="162031b7f15ee3c14f11e406caa8b692" sha1="112bdaee9c2d57648a34ec8ab80a4c5957cb467f"/>
+<rom name="Dungeon Explorer II (USA) (Track 34).bin" size="40357968" crc="1876eaaa" md5="e2a0362859670a08475b8bfb31699837" sha1="13ce7a0c7d575f7214721a67310b8c993a05facb"/>
+</game>
+<game name="Dungeon Master - Theron's Quest (USA) (RE)">
+  <category>Games</category>
+<description>Dungeon Master - Theron's Quest (USA) (RE)</description>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE).cue" size="2268" crc="14d4f3a5" md5="ac6dfad54bb26f008daa12e7c277abdc" sha1="439cf6a581d4fc67aa6a3ff1cef01efa831fa7eb"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 01).bin" size="7077168" crc="e84baae9" md5="ce7570578f3d4dd611996b681471a8b2" sha1="cea5135e07ffde45628028ebece5261ce01da965"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 02).bin" size="8104992" crc="f0d5f37e" md5="f23601102138f87c33025877767ebf76" sha1="66afcd22fa26995e65e3bce2f9b1bc1eb405f6ee"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 03).bin" size="30484272" crc="1e2d951c" md5="2628e5d2cf63714dbce678334152de53" sha1="514049cbaa3f07f6e57bb39fd25665c96093c1b2"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 04).bin" size="15894816" crc="5fdc1af4" md5="60353009a1a30b43b956182a79c3385f" sha1="732693b88fea128a413bae23311e5592762199f4"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 05).bin" size="12912480" crc="d032b721" md5="c1c4bf386d31f2796e71d7105ef79401" sha1="0adbd9d349b3132a28c793c36fadf9e777fc8bba"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 06).bin" size="6291600" crc="9ce5d0f5" md5="425166a23030f1383b0e844aabd4d079" sha1="c3a652d85728803e407e5528239d5e78cc35ddcc"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 07).bin" size="32262384" crc="2a3c4798" md5="89fc2e16dbb5a641e4328fa4bc46149e" sha1="eba1247ed815303078ee106d436b9d2af6830fdd"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 08).bin" size="30197328" crc="763877ea" md5="60b6b1ffde9e7d8f917588a2af3ee45c" sha1="3c1d63f5c43ff61948fcc89fdd3fcea77ecbf660"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 09).bin" size="16304064" crc="4bc808c3" md5="2e99a2f0665e2bfca3fa1ab5b1e398e8" sha1="df816c6d32a94f06eaeec3d00d086db110d1415c"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 10).bin" size="20220144" crc="c0fe4150" md5="943edfed43d6896d0ecbc842b0679db9" sha1="14d6bb26af5495e7aa2584db1a78ec056e730de3"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 11).bin" size="26429424" crc="07b602f2" md5="cab482776ffa43b0d51038ae100fcc0a" sha1="d50d92f72b1e15e240564cefbf898e8489b4648f"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 12).bin" size="32441136" crc="951d22b1" md5="3ef494e21ad5d11ef16a511c31e3bd5a" sha1="279388f80732192aba23734904a6392718fc72e7"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 13).bin" size="18072768" crc="5eab293d" md5="6e9a05c80a62e57b31262dfadaa2aa02" sha1="ab1827433b61c8ba7818da14fa64d901ca6c10b9"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 14).bin" size="5882352" crc="3e3dfa28" md5="ad5498ca1f608c0f8269342bd08894d7" sha1="8de1dced4c5d2c86741d4674b85090594c7a620e"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 15).bin" size="32883312" crc="d5ebb23f" md5="bd9811d60f31a253f33339e63a75ff55" sha1="40c4a6b964e9cd81fff9bd022dbdcbcf9e609bf5"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 16).bin" size="24625440" crc="cc87293a" md5="23c5ebab1e6078a376b04534b6a285f2" sha1="e7a15ae42f80d0d192fbe5748123e5ae98d33a42"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 17).bin" size="76465872" crc="a9a9a93c" md5="f517df4ac68758a4f4ae36f8f89caf82" sha1="cedf107ca21c1e6d60d7e9695d2db09620892a69"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 18).bin" size="13665120" crc="353d376e" md5="377040ae53bcbe180f1f4a96402e73f1" sha1="f20d939b09db38e604ab6e1bf0adb87e07082ecf"/>
+<rom name="Dungeon Master - Theron's Quest (USA) (RE) (Track 19).bin" size="7754544" crc="43df0e38" md5="e5540ff6c59a290d7557694349025b49" sha1="34cf580ee7ec99cbc7240c6aeace8af6320c7334"/>
+</game>
+<game name="Fantastic Night Dreams - Cotton (USA)">
+  <category>Games</category>
+<description>Fantastic Night Dreams - Cotton (USA)</description>
+<rom name="Fantastic Night Dreams - Cotton (USA).cue" size="3045" crc="31d6f660" md5="38514d361500c7819cf473eedf9ba89c" sha1="0aba9e5aae72cd635373c6a02ddcd7bb681fb857"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 01).bin" size="7914480" crc="16841024" md5="c7ec65c2c430ec5e01ea1e781b5fb933" sha1="2e5a9235aaa4c04baefb8a5104fa2c2977869191"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 02).bin" size="5642448" crc="4572910c" md5="ad1a8daa0aff0cd9130f719d99767b47" sha1="8e7de2506de6dd7fc6ed322e0c47d4c4c5663d15"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 03).bin" size="5955264" crc="9afce46d" md5="5294c2c9755492fa6d2f5c0d1e52c837" sha1="a4e105e2f631349438f24ad8acc78b2eeb1598a1"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 04).bin" size="12218640" crc="856379ec" md5="3bf9a611196e76f73514c145226eb88f" sha1="3640a22994f23769fe6720672b38e415bf29879f"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 05).bin" size="32481120" crc="d036cc08" md5="4612261f837247ba78287fcf21327ad5" sha1="a732919d77214f92957e62295a6a3bb3cf1500c3"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 06).bin" size="32358816" crc="70e717f4" md5="0302f4ccda48841c7ee204ea9a7cf724" sha1="05eebea02ea881d9959eed051be00aa3b3da22b4"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 07).bin" size="8591856" crc="774121ca" md5="f5bd1654e31010ce45851f343cc26efc" sha1="034ca144d86850071b4dc535fad6d9c7aae1a6c7"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 08).bin" size="33511296" crc="5ba4a0c2" md5="2551b3a0242c3b48e985761069648bc4" sha1="558154bcb1357174f214588d4159365ac5acfa36"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 09).bin" size="32702208" crc="735dd37f" md5="a3933503ddfe5e789faf96892e27c266" sha1="5eae103a2954075bfa4c119a35b6bde2b0f9bf2c"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 10).bin" size="3593856" crc="9479c4dd" md5="2acb7fb7729bb283dd99920128414c48" sha1="854c52b105cdd8ffe9cd3d71663ff08af8f3a830"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 11).bin" size="33403104" crc="354f6ed5" md5="6cfc24dabc34c15f049c4a482fc610f4" sha1="857ca49f05662b0d37e3c6c765dd836397349782"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 12).bin" size="32892720" crc="6ef6a7d8" md5="94d12eb1330efa3f1483d0d1ba034dd8" sha1="e0e65af095300fa5e1e261fe8c636290cab7d94c"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 13).bin" size="2022720" crc="db7ca31b" md5="98ee28ab803f515d7e4ecce7e7d3880c" sha1="05eab648c006ef6ab9946530145b152e2b1074d8"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 14).bin" size="33015024" crc="28047649" md5="12d06a14240b3ca92dc6afe0e8099367" sha1="edc8f2b0df7b985813a46d14cbce6bd578928299"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 15).bin" size="32935056" crc="afb60af6" md5="2637f1ab70ee399b18f52b7efe6f9677" sha1="2b6ede0b6fa9fae2b08b9ded075d1ea1f2f55e27"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 16).bin" size="4297104" crc="c2740b6a" md5="cb731ade2a5e151f4e44c7c944d09019" sha1="1069bd6562ebf7222bcc248989d432bfd367676c"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 17).bin" size="32641056" crc="a8fc9be4" md5="16826af5bd4e542b940d4fa67f171217" sha1="9fd90646766d6da4345b84ec9da539773787038e"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 18).bin" size="32455248" crc="7b113822" md5="c0e91b86c45995f0fb4d2baf6fa526db" sha1="d62ebe3404b0edcee862d7ce09f30c374d6580e7"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 19).bin" size="4036032" crc="70978bce" md5="eef8cd5432233ca0b9fb1b2db8710960" sha1="91b7aba2b3b8bd7ae92cf7d9a2e53cbd82c0e839"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 20).bin" size="32398800" crc="016c0e3d" md5="61d7dda9d8a67ddb80636f206f50b2e1" sha1="cf95e4d0dcfb2c3796973f6b4169f36debfd03d1"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 21).bin" size="32657520" crc="55c41cea" md5="3d1502ef3407f315e598e5cda35fe7b4" sha1="49bfaede81493ec730c467d08ba2de9f2eff1963"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 22).bin" size="5905872" crc="9f400fd0" md5="0ad41624daef81c026ceb8279d53f509" sha1="ed0b6e80036d309d6103506730c5209a74fe1511"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 23).bin" size="4880400" crc="107415db" md5="fd8e9cc02cf2901936fed2a5df525a2b" sha1="f99f64eb7327fb75a32737725e4fda36f2f635f1"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 24).bin" size="32808048" crc="7b6d91d7" md5="0a1011e88ccf7c5e7f6f3d280ca43d9b" sha1="50e67738b6e6343a01765157481e00d9a4a11fa6"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 25).bin" size="22391040" crc="97db7331" md5="1522829918d304e86f5a3b15a1b1eb41" sha1="b8977e60a13fe4ae20c2cf7ca086df5a84e454be"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 26).bin" size="31907232" crc="6c81fc03" md5="70f7b0407bf0915e0a5236d3d9e5f163" sha1="0c9c113d6285c1186812841442cc043191157579"/>
+<rom name="Fantastic Night Dreams - Cotton (USA) (Track 27).bin" size="5292000" crc="1650fe22" md5="5021b5f5cbbeca5c97a916c8119be702" sha1="8282bd470ff564b1ab738bb4c2af38b234e469d1"/>
+</game>
+<game name="Forgotten Worlds (USA) (En,Ja)">
+  <category>Games</category>
+<description>Forgotten Worlds (USA) (En,Ja)</description>
+<rom name="Forgotten Worlds (USA) (En,Ja).cue" size="2652" crc="7b70bc9c" md5="b5ff90b86a96c79e9e2ee801638778f0" sha1="afc4877b4557c035527eccb0aabbf79cecb70ec2"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 01).bin" size="7077168" crc="e84baae9" md5="ce7570578f3d4dd611996b681471a8b2" sha1="cea5135e07ffde45628028ebece5261ce01da965"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 02).bin" size="8822352" crc="745c3995" md5="ca9f3798f5436d8304f35c566d01e306" sha1="5f74892cdbc5ccf423eaaa31eb10824454b296a1"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 03).bin" size="34764912" crc="1c382d08" md5="7e0e41398e9a3fdbac69e4801b1854a2" sha1="63cc805a70ddfc44fe93a1312edfe6b1ca6b8e6a"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 04).bin" size="32121264" crc="7fc54258" md5="812f82ce40db425e11a07c3867c574cc" sha1="2ab7ff62e49e5cabcd44f9f08cbac8d47105d972"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 05).bin" size="33457200" crc="7ce481ef" md5="91fd5e8b8569548f506d6735dbff16e6" sha1="2eceada5c6bcba96fc1ba9903d4f0d1804020dc6"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 06).bin" size="4003104" crc="db84b9bd" md5="65080ac5031c72b29a26f583b47876ca" sha1="ea51b84cf322b4c35644eb1bf20024ac34a4e01d"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 07).bin" size="31867248" crc="4fa86c5c" md5="0cbf842ce319a57ed952d9d74224b56c" sha1="cff3fc45c24879692380ea9757b313771ccef07f"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 08).bin" size="1542912" crc="58cd78e0" md5="609d1e295268f72fdf5ec8f958de7440" sha1="ca4827dfb961ca45b588129de86a02a0c0de9b62"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 09).bin" size="27017424" crc="4b7cec37" md5="8b882c895f07b327f3ec0ab771b90e8d" sha1="b9c89a56a3c40aa2f80c947f6dd05a81681c790d"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 10).bin" size="30938208" crc="d2c79f82" md5="7d2c8ff046432c7fd66551c17b9cfc77" sha1="803586d50d59f53f418a51e6b46382953ab081a6"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 11).bin" size="37046352" crc="5aa7b26d" md5="bef97d2d4786434905a3e71dec0b7248" sha1="4439fbfb2119bf638f6c5a64840949759b18d29c"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 12).bin" size="39393648" crc="9b51e508" md5="3a550745d9c71a46603c130ee1884153" sha1="3e45621a4e86195eb2067e0347d0b4e22a434d91"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 13).bin" size="35672784" crc="a978377b" md5="16d91580cac788526c36efc978fd7b62" sha1="66b2b7ba3765220e20b05349bd97cffb3a40f51f"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 14).bin" size="35712768" crc="62f682cf" md5="42ee9a658f2f31bac89904dd47f01990" sha1="afafa3a609afe4f1f26dd908c3aabb84a7235340"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 15).bin" size="34861344" crc="cf9cf84a" md5="1d981bf877924c51e028707b381ec12e" sha1="586fef8e70f9d2f116f5377f2cd4d35c500abaad"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 16).bin" size="27476064" crc="e9795238" md5="21d4c6b11048528b937be9e2dade0fc9" sha1="3e7101a698e27208a71172aff638f32e2a9ad620"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 17).bin" size="40325040" crc="260a024f" md5="edbdcf7bda813d065a48a8cafff4cbf6" sha1="5487edf81b2592497e758c3aeef9d390c331f211"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 18).bin" size="2046240" crc="8ac753f5" md5="b8140b5bd4dee74cd3d499a7db1873df" sha1="199283688f5a82dfb618d074547fdda1347bea7a"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 19).bin" size="1474704" crc="aa70e048" md5="b4e3ca41cb598377cac13290bd4824b2" sha1="c4d7f6193235518f2003b72b22b347d212fd8741"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 20).bin" size="15085728" crc="2f8ed3ec" md5="f9289076341232c98f0b141a6160a4a4" sha1="b8f975f8c949ce25a1fd4137a7bb26da866d8e63"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 21).bin" size="23345952" crc="12b3ab01" md5="93a55675bd7631626e6c718b0938fcaa" sha1="adf266c3447cd893fbae34d742c0988704ea8a25"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 22).bin" size="23743440" crc="838c1221" md5="55712f54d4cbb988f4626f8975daa549" sha1="e2a2799c29c62a727f0c74a080b8774d81b8166d"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 23).bin" size="11738832" crc="65eaf015" md5="512e980e6e9a9a29fdab1726f45b78fc" sha1="760a8dcb757cf39ebc15eb54d2f38875da81fb7d"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 24).bin" size="23190720" crc="28d89848" md5="931576ba5204c2e176cc245a08ce207e" sha1="186370e9b33a34a691367c33847729101dcf3e6a"/>
+<rom name="Forgotten Worlds (USA) (En,Ja) (Track 25).bin" size="8471904" crc="21ee029d" md5="bcd11f27d082b69956ed7caad0cd629c" sha1="dd802d5a7e8054564ffa5ceda5100bb18e0deb3d"/>
+</game>
+<game name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA)">
+  <category>Games</category>
+<description>Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA)</description>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA).cue" size="3194" crc="abfa3787" md5="24fa384762e11a0aff42b51c3793abdb" sha1="5f77aee679985add26fe098df97d730e77e2ac7f"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 01).bin" size="7916832" crc="ecf8b16b" md5="e25cf5e45442703396a239611ea901be" sha1="9a8ba8d225d9575ab09b8a612cb86164c4902cac"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 02).bin" size="3970176" crc="45ea5145" md5="121be2396d88457aa2cee38a82a2874d" sha1="6d9b8e160ceea0a64a9cb78767a2656aee69284f"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 03).bin" size="8269632" crc="e49facb9" md5="7b90d729c0caeb87c8fc213450a9c391" sha1="e8800b0d82d5d6e212ab8d1f6210935ed498f547"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 04).bin" size="7354704" crc="b6387e9c" md5="bd6e41b6baac37af9125413c55809420" sha1="39588227232623217ee5dc19c58861fc845f37da"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 05).bin" size="1079568" crc="7edf0c9b" md5="1a96f10ca2c3ecc4cdbd50da22cef433" sha1="1fab9fbba2e55c7496763ca8dec6ac071330373a"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 06).bin" size="4953312" crc="619ebc96" md5="489309d4c6c6b0ac0d7b0d098a2bd196" sha1="0bb436b3869db316f5e12def2079f332c237fb36"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 07).bin" size="31036992" crc="fb22111d" md5="62a4d254c305cfd479acd43e72858aa8" sha1="b50becdf222cce2d205763649b988beb46790d11"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 08).bin" size="5567184" crc="b1276398" md5="cb4176e5dcc96ce8997250029bd179b5" sha1="f940efc9a9833da779347ef5b381ee92cd450fdf"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 09).bin" size="2542512" crc="04d644c1" md5="0d31170eb1c883dbb26c81a9edea084e" sha1="1023b7c70f8ac8649d773ef186222db805fc97c1"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 10).bin" size="5522496" crc="63aa2bb5" md5="5b0429b0fc23d59e8b394ab5d914fbde" sha1="10aada08c917080f64b70dc0f8f9988921f0e09f"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 11).bin" size="21233856" crc="b8d25ced" md5="ad8611b36e45347f5f2a79b4e7130adb" sha1="af13498ad543fccc2c17d8ac07d898163ffc56e8"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 12).bin" size="21073920" crc="010cc560" md5="6fcc831bb829a44d4052195de4859a3e" sha1="293b705ccffa18f6f56523402ad7c9eeee78c4ba"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 13).bin" size="21064512" crc="ab74d4de" md5="0cbae9fd9e8e5df1c9d102b8727ab0b3" sha1="d86202729748294e2f5a5db44a05127a2110207b"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 14).bin" size="47755008" crc="35bcf370" md5="716f68943277841818f29488078153b2" sha1="8f531d885cd8255c6348a64abcad19ed2f0892ee"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 15).bin" size="47773824" crc="9c57a2c4" md5="802d0e42339a18d1434d6885a0b29099" sha1="b18faccdf97870a669ad58a0d2ed350e6558a959"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 16).bin" size="47637408" crc="c201fa3c" md5="6dcaab007ef8746232fbe8272e137bcd" sha1="6537eb20803065d24d7d6df5b0a778fc3992fee8"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 17).bin" size="47656224" crc="22169ec8" md5="2d6c12cf5ca40b66407a547e21d95cac" sha1="cdb45a04fa14688b49e3de79255916a4cc17b1c2"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 18).bin" size="47663280" crc="5ea939e1" md5="31b043196477c5f355efdd805e07b880" sha1="2729f093572546c2e95c586c0f9b03a0682cfce7"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 19).bin" size="47609184" crc="a9431707" md5="d9befe8e8ec3376fc601dc2dc51df043" sha1="9fc96527ccf90339ba0e697830295c2179e0bfc0"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 20).bin" size="47820864" crc="3e44585d" md5="4b91ed3a6898d4467a0c005b244309e6" sha1="d2b11398bcc4afe83f6f2454fe4a240a136462e1"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 21).bin" size="45111360" crc="1399e361" md5="6f5ef504be577f2dd09dd384e31f6f4a" sha1="83ca7dab7097f4342654db06222d96d25cf0a4ed"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 22).bin" size="10527552" crc="b81377a7" md5="2554cd8a8fdbfd258ec36250a7cf93c0" sha1="6289ffce85eea8add87481bf774c9c1f2ec78939"/>
+<rom name="Gate of Thunder + Bonk's Adventure + Bonk's Revenge (USA) (Track 23).bin" size="1724016" crc="4727f875" md5="186f8908264a2393713969eee830c450" sha1="129b255edbee28acf256eb29d76e71862c337629"/>
+</game>
+<game name="Jim Power in Mutant Planet (Japan)">
+  <category>Games</category>
+<description>Jim Power in Mutant Planet (Japan)</description>
+<rom name="Jim Power in Mutant Planet (Japan).cue" size="1346" crc="ce479883" md5="f72b04fa8e9854b3d3d2208a95d589c6" sha1="d7b7fd521af7fd2587685a69d95702768afc6621"/>
+<rom name="Jim Power in Mutant Planet (Japan) (Track 01).bin" size="7916832" crc="22144d0f" md5="ad1067d0bcc2ffeea540d3b985c51188" sha1="3b472f5e80bbf8259e09f8e4f547567bddb02490"/>
+<rom name="Jim Power in Mutant Planet (Japan) (Track 02).bin" size="4976832" crc="6b597ee5" md5="61696f99c8110b31c1e0089a6ea1fa43" sha1="03a1ffc6a48aa26650157701c9b36cef9bacd245"/>
+<rom name="Jim Power in Mutant Planet (Japan) (Track 03).bin" size="48244224" crc="8cd52de3" md5="8188cc4bfa8ba313cbc5e60abe915a76" sha1="e7825188054864efd3bc3da22f59d5a42676a9c1"/>
+<rom name="Jim Power in Mutant Planet (Japan) (Track 04).bin" size="57264144" crc="31e40f95" md5="69bc49bf4745f2b5e41ac94e300c19e6" sha1="bb3f25da85fc1d4f0b97d1db026feaeedc96c983"/>
+<rom name="Jim Power in Mutant Planet (Japan) (Track 05).bin" size="60573408" crc="9a3a980b" md5="96f1d50b3003cf3cb70dad1a12035fbd" sha1="1195ea5096cc42928b211b4d9954f42744916515"/>
+<rom name="Jim Power in Mutant Planet (Japan) (Track 06).bin" size="70632912" crc="ed3d646c" md5="a6789f3a83c6f6b8363bcc859963c5bc" sha1="e83333d31e073234202581ab133854ca7151c99b"/>
+<rom name="Jim Power in Mutant Planet (Japan) (Track 07).bin" size="62325648" crc="8e0d4456" md5="715faf0a8fd038a0267649167eeebb46" sha1="b30ebfc9a3c6ef498ed35b96aa781a0076aa8038"/>
+<rom name="Jim Power in Mutant Planet (Japan) (Track 08).bin" size="59246880" crc="caca2313" md5="f9ca0bc495e478e7f4608e525445a493" sha1="031dd7ba1ea5d4c2de7471e6d109f21b3673d436"/>
+<rom name="Jim Power in Mutant Planet (Japan) (Track 09).bin" size="58247280" crc="4d650069" md5="144d583c86de1a093472146813a882c1" sha1="6c3d8c8b746a25d5981609a4d2fbfe83da8609a7"/>
+<rom name="Jim Power in Mutant Planet (Japan) (Track 10).bin" size="43107456" crc="56a68708" md5="cf2692da83702765671517f54b57f21b" sha1="61a2e8a5517b8a8a021de6e1d307bb47b0756ec6"/>
+<rom name="Jim Power in Mutant Planet (Japan) (Track 11).bin" size="42058464" crc="a296e56d" md5="fbe1e84c7b829279bdc8581748c0d809" sha1="6b109f859e05133644d831f533217bbf7cb04b6a"/>
+<rom name="Jim Power in Mutant Planet (Japan) (Track 12).bin" size="46684848" crc="d6de0ac4" md5="cd1bdb2c5790339a74d5433b8c6c673b" sha1="5a651e49dc7f98d0665babcd7bd348075bc9c5ba"/>
+</game>
+<game name="Lemmings (Japan)">
+  <category>Games</category>
+<description>Lemmings (Japan)</description>
+<rom name="Lemmings (Japan).cue" size="2302" crc="154033d8" md5="626a6cbfd5c15a8170d485d01403d0b5" sha1="4935c9494554f11fdf9110cb7c48a3f800cacde6"/>
+<rom name="Lemmings (Japan) (Track 01).bin" size="7916832" crc="be128779" md5="94b35e830f55eb6ec03222eb081b6763" sha1="373442f6e448f60db2e0093b31e9c62da9bab999"/>
+<rom name="Lemmings (Japan) (Track 02).bin" size="13547520" crc="f4e4a4f1" md5="1725251ac38dafa9ca073d819b82814e" sha1="67836e556f1961a03c8e6b2d0cd6b42aef4e687e"/>
+<rom name="Lemmings (Japan) (Track 03).bin" size="16736832" crc="82c33c34" md5="d43c7178dc06e375dbf82c4138ee78db" sha1="4d3c4a56443775981b7899d59204b44573beecb2"/>
+<rom name="Lemmings (Japan) (Track 04).bin" size="14883456" crc="4a45cdab" md5="56c6b1730c7b22c1745f00158537c6d2" sha1="50a5e4945d736e205ab98d2fd9283f4146c4284b"/>
+<rom name="Lemmings (Japan) (Track 05).bin" size="16355808" crc="13c75fd0" md5="4c7f531f2c2fc0ac0a404ac8b4537d6d" sha1="7322ad8393977f3b7975c48b28746f7c0d7fc462"/>
+<rom name="Lemmings (Japan) (Track 06).bin" size="16087680" crc="5e94007e" md5="21e824031ccbba388c9a16cda1d4a6ca" sha1="3b130997c236e3639fc53194815303144c83984c"/>
+<rom name="Lemmings (Japan) (Track 07).bin" size="17922240" crc="de054375" md5="2fb7acc0c3c827a05f39845d04712036" sha1="badded565d17e64c503f6f4ecfd3d3123a1ea424"/>
+<rom name="Lemmings (Japan) (Track 08).bin" size="19110000" crc="8ae6bf4d" md5="6a4185c18fab0e0ad10b067b19bc1a49" sha1="c6eef02252a72c8a2b6c27e1e9229d8369628973"/>
+<rom name="Lemmings (Japan) (Track 09).bin" size="17195472" crc="4e07bbc9" md5="509cbdc6a01174a48a8b24becf3ed352" sha1="4b6d66f1f034fc5603d986e94b4da97ae4094988"/>
+<rom name="Lemmings (Japan) (Track 10).bin" size="14335440" crc="080a8022" md5="850b40bc1c15b6aa0d06ada59381a6bc" sha1="a6611baf08b065bdae65e4277e89ab78ff1b7c88"/>
+<rom name="Lemmings (Japan) (Track 11).bin" size="16527504" crc="de64ad30" md5="afdbfb40e0044a6acb228ca6670cbc66" sha1="8da8ed5e729843dfad8d0550f62969e10638a613"/>
+<rom name="Lemmings (Japan) (Track 12).bin" size="20803440" crc="8cfa620e" md5="d4b33eb3def1db575858e216d39c9fb2" sha1="9ad84732d4d6c0f2cc1664de90345598d715d3c2"/>
+<rom name="Lemmings (Japan) (Track 13).bin" size="21530208" crc="3770fcc3" md5="c76530a8304edd9717844b5ef4d24a20" sha1="94375f9ccad63facc175ffddec7c56ecc94c574e"/>
+<rom name="Lemmings (Japan) (Track 14).bin" size="20158992" crc="f7e8caff" md5="f6f1984c12379eb3f6d45e12432ddcfd" sha1="5924d6838f3ea98498f87d18bca2f53834d55b4f"/>
+<rom name="Lemmings (Japan) (Track 15).bin" size="18964176" crc="dd101cf9" md5="5eab1ec8034397ec70ceb87753067ee4" sha1="3a3ada3a9a36a91c0d9d7c2a916f1e2a61087e80"/>
+<rom name="Lemmings (Japan) (Track 16).bin" size="14533008" crc="88b1e992" md5="a836f9d3e242bdb0b0169a68f4cab91f" sha1="01d045045d1f582493fed2f233b100ec01402c94"/>
+<rom name="Lemmings (Japan) (Track 17).bin" size="17263680" crc="70907b9f" md5="a88f178589651c601fe8cdd8634573fe" sha1="535e46e00fc65da133bd3eff06d2886fada48dbf"/>
+<rom name="Lemmings (Japan) (Track 18).bin" size="25453344" crc="f3f39470" md5="134681ba111f9c5624726c85dc623da8" sha1="5eff06adfc345833594110d9e647ca909a407401"/>
+<rom name="Lemmings (Japan) (Track 19).bin" size="22908480" crc="733063c8" md5="becdc7023ee3f7784a01dd10ad86ffd1" sha1="e1b8b065c7e733c5985c017535ecbe3a8373333c"/>
+<rom name="Lemmings (Japan) (Track 20).bin" size="22725024" crc="86bc95c2" md5="3887796077117e12dcfed225cd962070" sha1="09813b11def684b65cc248ee303febfb9a153dbb"/>
+<rom name="Lemmings (Japan) (Track 21).bin" size="19984944" crc="d90cc3a7" md5="4737a79b70cda229bc16b2d57cbfcc64" sha1="2a44e9de29444529c481d0d70317b109f63579ee"/>
+<rom name="Lemmings (Japan) (Track 22).bin" size="28414512" crc="0adb18e1" md5="8b08dd826d34fe538c17be820242d5b3" sha1="d3f3564e66acb6b31cd3c2f7cf09b79114fe57ff"/>
+<rom name="Lemmings (Japan) (Track 23).bin" size="30914688" crc="f74788f4" md5="bab28fec11234f5b076860323b425fc8" sha1="9237fcecff5c5abf7a86664a9bbc20a29cff29cd"/>
+<rom name="Lemmings (Japan) (Track 24).bin" size="6689088" crc="b1f4f1fc" md5="368dc7b9de58ba2376e10223c6f5eec3" sha1="4772d28c0a7857befaf31330071852329c410457"/>
+<rom name="Lemmings (Japan) (Track 25).bin" size="13197072" crc="59556570" md5="ec22b12f051265fb5c2810effb53c844" sha1="c739872606c319e3d80bc0b71beb744e29c8eaab"/>
+</game>
+<game name="Loom (USA)">
+  <category>Games</category>
+<description>Loom (USA)</description>
+<rom name="Loom (USA).cue" size="1988" crc="d292a763" md5="b16f3ffda2ac71fc89059bf88c68d5e6" sha1="1d43ae44bd96923b7fdd8956016f2cf559301b86"/>
+<rom name="Loom (USA) (Track 01).bin" size="7077168" crc="e84baae9" md5="ce7570578f3d4dd611996b681471a8b2" sha1="cea5135e07ffde45628028ebece5261ce01da965"/>
+<rom name="Loom (USA) (Track 02).bin" size="8027376" crc="99b694c8" md5="f5174c5aa8dceccbdc16322e0d2ac6cc" sha1="7bc61768be222219d7d65d768e536896ccb1b446"/>
+<rom name="Loom (USA) (Track 03).bin" size="1060752" crc="6ca7e443" md5="97da85585f359c86eeedfeaf0ca94c88" sha1="a1dee477c6dd76babf66566474d95da320d733e6"/>
+<rom name="Loom (USA) (Track 04).bin" size="707952" crc="6c8b2474" md5="4a5c7b8e8631bcf40d49514b609d37d2" sha1="919e4cc28ed66498afa70cbb7ca53f435f0f48ee"/>
+<rom name="Loom (USA) (Track 05).bin" size="1030176" crc="3717285b" md5="ec38abd672bb4fef9526ea5dda3ffe31" sha1="058b314cf23ec4bd4b63422f541b044d59ead9de"/>
+<rom name="Loom (USA) (Track 06).bin" size="1505280" crc="0e472328" md5="4ce4680a3deb2205ad46ae24f24fabf2" sha1="fcb9138029940c2e7dc1c02e9c963d02bbf49f4c"/>
+<rom name="Loom (USA) (Track 07).bin" size="707952" crc="d395863d" md5="d01b026045528667f6642d93070fbb91" sha1="1dab5227b369fbfe20b31e7300c85607a838351b"/>
+<rom name="Loom (USA) (Track 08).bin" size="707952" crc="d3a97c34" md5="3e75db59cdab549d5489128ea2f3a735" sha1="29d4fe7939b96beded8c94879bf5006e28cfd2cd"/>
+<rom name="Loom (USA) (Track 09).bin" size="966672" crc="8df75905" md5="f250de41482d02c89348421d0e58fe3f" sha1="12f7c581fe3b9f794bb759dd5797b6da947cfc52"/>
+<rom name="Loom (USA) (Track 10).bin" size="1843968" crc="5dfcdba7" md5="4ade2ee205fe4bdb32665f60f888e443" sha1="e3422e6dd8eb42b2d018ef0bc58624fad5c51f21"/>
+<rom name="Loom (USA) (Track 11).bin" size="2361408" crc="dd7050b4" md5="4e770450fe68e56b3b5ecff5bd098e4f" sha1="ade95f25ac709f88d030fd2b4d61efbdded6388b"/>
+<rom name="Loom (USA) (Track 12).bin" size="1888656" crc="a4dc9c54" md5="eb935ba97fb31c95d2f7b509b6b06ef6" sha1="02fd1f44abb6df0819b34c45a34c590538438cf7"/>
+<rom name="Loom (USA) (Track 13).bin" size="707952" crc="51e738b9" md5="c341702f73602d03a2e49a0e3a214a05" sha1="4f099d94c5150c709594713ac237baf119f53d7b"/>
+<rom name="Loom (USA) (Track 14).bin" size="987840" crc="7948e9a5" md5="0b7b361772e7815a231db6ffa547fd23" sha1="d0803918cd4ad6d6a7687a7f03dc278d79b80e68"/>
+<rom name="Loom (USA) (Track 15).bin" size="27240864" crc="697afd67" md5="31161124a03b79f5cd20aba3335f85ae" sha1="ebbf61914eabe3b5efecaebfbf6307856340643c"/>
+<rom name="Loom (USA) (Track 16).bin" size="21810096" crc="34a65de9" md5="95c6e0279b462903fb2a16a9935a5e8d" sha1="332b25f45d2766dc88eb07d50ec8c2ca1af99037"/>
+<rom name="Loom (USA) (Track 17).bin" size="32111856" crc="964c8c26" md5="9e6c1661a7c684764d774bafb76d1c4a" sha1="e0c68f26873ec8b59f217c561e8da89e6c9b5a42"/>
+<rom name="Loom (USA) (Track 18).bin" size="14977536" crc="dfa900eb" md5="59058edecd434229f7c06d5fb2dc881c" sha1="5fd432dda4755fd63b2995de61e34895e92d492c"/>
+<rom name="Loom (USA) (Track 19).bin" size="29484672" crc="28c7007f" md5="bafef1b657eaf7f0f0c9a58bab041511" sha1="b6f2199a6393b67b0d4ae35a5fb8571750de863f"/>
+<rom name="Loom (USA) (Track 20).bin" size="16158240" crc="f618fc33" md5="35482982ea2fbb999869c6aabda6b2a7" sha1="97e72280b631e4b4732dfea8a8770031a7fdc7ab"/>
+<rom name="Loom (USA) (Track 21).bin" size="56302176" crc="697377a8" md5="2aba8c18803563c9c0b12f3bf020220f" sha1="54f320f0932ec173e67a08794116d09599292ed2"/>
+<rom name="Loom (USA) (Track 22).bin" size="47493936" crc="7cccb84e" md5="47607413677a3e77a11596dd2735aaaf" sha1="45d3795710a443363dad4ffc01b7935141d6a5cb"/>
+<rom name="Loom (USA) (Track 23).bin" size="7676928" crc="8057a7ec" md5="5c0d8c103ab8ebcf3c40a005d6d42a06" sha1="18a3a9848aa75d277d90f7d3320e1bec3eb6351c"/>
+</game>
+<game name="Prince of Persia (USA)">
+  <category>Games</category>
+<description>Prince of Persia (USA)</description>
+<rom name="Prince of Persia (USA).cue" size="1888" crc="34c6967d" md5="9d6668b3f3060c33ccfe050bc18cb482" sha1="b92091355ed5ebd00b83cd777004c649e245f0ba"/>
+<rom name="Prince of Persia (USA) (Track 01).bin" size="7077168" crc="e84baae9" md5="ce7570578f3d4dd611996b681471a8b2" sha1="cea5135e07ffde45628028ebece5261ce01da965"/>
+<rom name="Prince of Persia (USA) (Track 02).bin" size="6919584" crc="69f569df" md5="95d25c0fd9850ed0673e6e207b987ba3" sha1="8c8e590c6d04ae87bb309de268e113537299069a"/>
+<rom name="Prince of Persia (USA) (Track 03).bin" size="59362128" crc="9c1ae311" md5="9599df03bdf7aaf1b6da6622107f60cd" sha1="2f471ec1fea8563f4da3cb12ea36cce3be44a777"/>
+<rom name="Prince of Persia (USA) (Track 04).bin" size="22797936" crc="984316b5" md5="41b92bbb0581657d925e6fb6eec2fe53" sha1="a2c38de7d136e658bf21440018a061b101922282"/>
+<rom name="Prince of Persia (USA) (Track 05).bin" size="62850144" crc="01ff3d39" md5="17539f1f31d2937a9759224cc404e6d9" sha1="ec3b236f04506e487ac049de894e154428d2d75d"/>
+<rom name="Prince of Persia (USA) (Track 06).bin" size="11190816" crc="ecc5e1c6" md5="97c10e16bf38a208ef2a3077807cb492" sha1="bf14f0a8a416ceacdccb8b446bbed693a25179e3"/>
+<rom name="Prince of Persia (USA) (Track 07).bin" size="29802192" crc="0015ae56" md5="2ef1a9172be8a68c0eb7ead01548ceb1" sha1="a82190a71129c2c977c2c6a1d3518da07548dc8f"/>
+<rom name="Prince of Persia (USA) (Track 08).bin" size="15429120" crc="cfd8552e" md5="75bad8fabc0bec791d43379c41a4bc0f" sha1="fd74e41e0c06557387a45ffcf76f7052e46092a4"/>
+<rom name="Prince of Persia (USA) (Track 09).bin" size="11381328" crc="8ce3a689" md5="4098b2a6921c506a317f73b26cb996f7" sha1="aaf41c90ee1e1e0feed02fa7457e4ff492201388"/>
+<rom name="Prince of Persia (USA) (Track 10).bin" size="26309472" crc="e2672d43" md5="3fe9f550500ef82e427c4727cea698b8" sha1="be551333a09631ffad01b30f9f0f48102c180ea7"/>
+<rom name="Prince of Persia (USA) (Track 11).bin" size="3640896" crc="6877b39e" md5="5d70b638730f304404c78cac92873b58" sha1="7b24b394066c8b77b84453f049684262c06e89a3"/>
+<rom name="Prince of Persia (USA) (Track 12).bin" size="10400544" crc="3a191575" md5="7ec1077c211dbabbbaefaacc20ef0ce1" sha1="887cf16567abd5bf7816f582bed818bab1bc5bbb"/>
+<rom name="Prince of Persia (USA) (Track 13).bin" size="2758896" crc="8e9abd13" md5="8ee4dba6726cae3a4c5d1fdcab3f3b3e" sha1="28872418dd9121cd499c34e7a1715ab20b1a9605"/>
+<rom name="Prince of Persia (USA) (Track 14).bin" size="24336144" crc="71389286" md5="8f033aa7dd9234d4cd823072052ced1e" sha1="ea94aa223ea235dbec44ada4aa760b27f9b16c20"/>
+<rom name="Prince of Persia (USA) (Track 15).bin" size="12004608" crc="72ecc978" md5="4f5b9a5d715ec575cd82d7a4a59037bf" sha1="a30bfc180b054dc0bdd0ed897eff9e30854e3295"/>
+<rom name="Prince of Persia (USA) (Track 16).bin" size="30063264" crc="bb7837c7" md5="8ce5fd198309a98327a7ea171636c901" sha1="e7636e789068cdbbeb0cf08fea5851e985c47e87"/>
+<rom name="Prince of Persia (USA) (Track 17).bin" size="69285216" crc="16bc043b" md5="c5425ec268fc0a1cddce0bc7ad042d9b" sha1="a0c5951e7c907373d5c255ba95d5c23a2da0cc49"/>
+<rom name="Prince of Persia (USA) (Track 18).bin" size="40452048" crc="679c7100" md5="be6302519091b7ad9e7162bbdc870cae" sha1="41eba2800dd594571dd7c298b70464666d7eef88"/>
+<rom name="Prince of Persia (USA) (Track 19).bin" size="6569136" crc="86c29a26" md5="81cd36651a664c95e9d70a4c05bdbe3b" sha1="b1400c4fec8c3eb0ef764395e144f3a4beb684a8"/>
+</game>
+<game name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT)">
+  <category>Games</category>
+<description>Ryuuko no Ken (Japan) (En,Ja,Es) (FACT)</description>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT).cue" size="4293" crc="9ef18d70" md5="367a499bb93e61c36f2fdff4bea2fe5c" sha1="c4a1f8720fbdd1563333264d2add450ac8b0a554"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 01).bin" size="7914480" crc="28f6d4c7" md5="5a321d24000bf740d3fc2257a7a26625" sha1="2174a2a24da92a7c83aed9e9603ac75a026f509d"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 02).bin" size="135583392" crc="f50d6126" md5="e00a753dcd64ba5ff72957db4cf01caa" sha1="4e78b06d56280f9a63073086ff834845153d75e4"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 03).bin" size="6703200" crc="1241d90d" md5="2524669941bcf356f4732bfc0a83aeb2" sha1="5b3ca6eeabd42cbb2cac37416443298284fceeab"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 04).bin" size="705600" crc="7c17761a" md5="d261a5b001605221fbf878f34eb6cfcc" sha1="8bdb3591ee4ef9f43b3d851177358b1fde25f525"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 05).bin" size="16329936" crc="65c07b28" md5="14573647f9bb3a65705d4a48ec9768e6" sha1="f0afa6840655cfdebdad7ec75496be9103f5f46d"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 06).bin" size="2133264" crc="48058cdf" md5="74e01810d615b167ff1fb31c936657c0" sha1="d9e2ac48d72ca437f0e906bfd132d11b06dc4338"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 07).bin" size="32490528" crc="e9808ea5" md5="3b19e1743de5915005eb90651374bdb1" sha1="e64c5359fd542c1e5878fc73c0116bcc88fd288b"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 08).bin" size="1996848" crc="04463632" md5="3c51b6ff9e1c7ded9b186ce94a8725b9" sha1="f9c2d6c2c1280c5e013ca56a34240e2e23a47a6c"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 09).bin" size="5498976" crc="2b658aea" md5="b3a775dc384b30d83c0d80831ed5f2f1" sha1="71973fed69c22b7fefd27b9498288d8aa20254c7"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 10).bin" size="31516800" crc="897a1a74" md5="9fcbdf44b8fea4e69f862aa532a249e0" sha1="226e342f3abc669eae2e181e1b589c2966476666"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 11).bin" size="1408848" crc="2063d0ae" md5="ea02a61eff7b8c359106abed4dc86579" sha1="ba241a7d2053da256d6c224399b534174e9aed94"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 12).bin" size="33334896" crc="a8793320" md5="31f53c379f5c6a5213ceebbff207e836" sha1="578cc736e2bad67174225f2659939cc60a4a8914"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 13).bin" size="886704" crc="0b657f7c" md5="3a9c64b3d837460a4ac93a2391ef1e67" sha1="22409c32354157ed4e13cdbc3cb2faed9e0f5b50"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 14).bin" size="31443888" crc="8708a0fa" md5="b3445f27eb5d3d0195dc1c79d1fd03ba" sha1="4765020fa9fe142752290af1eeac6df3dc13ca7c"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 15).bin" size="1853376" crc="bde60a54" md5="b6811ef1df48ee8dd5a265ebfea8b342" sha1="074ea8c017f30d7a6b9bb42dbfd64cb06a8b1a43"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 16).bin" size="3753792" crc="5e0a34ac" md5="542eb08d697bdba7ffefdf44d587fa39" sha1="abe899c949930f41e7a07ebf0259a12334acbce6"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 17).bin" size="16527504" crc="13c2b43a" md5="f8f017dc193c721a27292445fe540da7" sha1="524a28c54d1fbaa9b0552e4fc3961216c6d6b4df"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 18).bin" size="715008" crc="b900f1ca" md5="148672e52d96e108e722b9db221e603b" sha1="f1787455bbd44616d20a917bc02a59d2464f40ab"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 19).bin" size="705600" crc="fbe0b416" md5="2e2335feead86e161b7f8f43fd6c801c" sha1="c08c56f62931eb28f84401940738e730c961b83b"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 20).bin" size="705600" crc="3945ab17" md5="981d271a3aae239421a92f462ac2de51" sha1="34409883e5913dd15f95736c21387e27d4630a60"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 21).bin" size="1606416" crc="79864a7f" md5="7965cc4a174ca34a69470ebf6a8d5f9c" sha1="e565e66356393d33b6a3fba31e22090a3e629554"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 22).bin" size="31603824" crc="7bb257e4" md5="0eafb49ee445340fc5bb60c88175b555" sha1="0cba0af1d869fe1fd388a482e1a86e51d734cc80"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 23).bin" size="1803984" crc="c8fdab83" md5="e669132bf269e96c5fa4f61c57592d4a" sha1="922baecac6f0082ec9812285fcf62bae91efa1ad"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 24).bin" size="32062464" crc="bdac42a1" md5="d37372c7060f4b2c361b61b7a2790304" sha1="067d27fc55226eabfdea97440317350bd9c95fd5"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 25).bin" size="1634640" crc="17148751" md5="8427ebd58fe224854a7f2afa5eef9acf" sha1="c225f7436a022d5407502b78d0c052d858dd723e"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 26).bin" size="31585008" crc="52098418" md5="24f177a3cda51da741ced27b7038812b" sha1="43ef18521020ac181ec9390d3daf2a17b1effb98"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 27).bin" size="1274784" crc="06b21f6a" md5="0ff9da74d3c9a1f6d4fbdf59dafbe8bb" sha1="99b2ba0f05f97168a604358eec141d600974e95a"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 28).bin" size="6007008" crc="01185ad0" md5="fdc72348e7c140dd56e4440fc9be4e4a" sha1="b80d02a32c4da7d879498e9a02ef386c942d4e29"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 29).bin" size="32057760" crc="339970fb" md5="9cf26a43e80b7183c551609fb0bf408d" sha1="4bf89e82d4ff2d40a08857fcb8987d5c06150c2a"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 30).bin" size="2050944" crc="cd5befb3" md5="3da9c8b4830c618e1b25bc350c2b6e3b" sha1="c18d0c0c7c8fa75b01ae5d7101f4d57fb6ecf7ff"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 31).bin" size="9716112" crc="a175b77a" md5="1dce48579ef54f20339d9774e1cfe66d" sha1="d2519b4a62ae580d064a60b86b83ac56efe0fbd4"/>
+<rom name="Ryuuko no Ken (Japan) (En,Ja,Es) (FACT) (Track 32).bin" size="2415504" crc="cee0bdde" md5="a909099af0f2b2d517d20ef550590329" sha1="e8f5bb8c0690449f410bbc25d2cb0bd4ca56da72"/>
+</game>
+<game name="Shadow of the Beast (USA)">
+  <category>Games</category>
+<description>Shadow of the Beast (USA)</description>
+<rom name="Shadow of the Beast (USA).cue" size="1072" crc="ffc33cff" md5="00ca39c9d066a57ef58446c751d9e873" sha1="ef1b2d76c97b5ea0d86c0a456f5ccf51a924f11d"/>
+<rom name="Shadow of the Beast (USA) (Track 01).bin" size="7914480" crc="16841024" md5="c7ec65c2c430ec5e01ea1e781b5fb933" sha1="2e5a9235aaa4c04baefb8a5104fa2c2977869191"/>
+<rom name="Shadow of the Beast (USA) (Track 02).bin" size="11188464" crc="41d74c5d" md5="1521cbc5fee0448c89a0d681cf9013ca" sha1="6faf1f59b0cb279cae8ee559b4742c2356d0819d"/>
+<rom name="Shadow of the Beast (USA) (Track 03).bin" size="55878816" crc="80f90949" md5="47860c060cd21beb0da78a434b9c1973" sha1="9ab1f710b84db1cc3ca6ab47727fb9ef505db607"/>
+<rom name="Shadow of the Beast (USA) (Track 04).bin" size="44139984" crc="07f12516" md5="e1d5748e589508c9aad12e282726b68b" sha1="a625ca4449307477eddc902119ed57664beb8b2f"/>
+<rom name="Shadow of the Beast (USA) (Track 05).bin" size="71811264" crc="f4dbb233" md5="cc77fd08e199f837879f670a66cda249" sha1="4dae8bc6ab832076d9e020a72c0264f33c394a31"/>
+<rom name="Shadow of the Beast (USA) (Track 06).bin" size="73008432" crc="e5561988" md5="38b4e0bc1446f7f8b954c20ae4b83516" sha1="62f04d7dc123e696a45b07d9dc18268162cc5be0"/>
+<rom name="Shadow of the Beast (USA) (Track 07).bin" size="71484336" crc="894858bf" md5="125134f252260f5411f4d8a05d9594d3" sha1="985fd00f77805e11047e6c43ebc14220bff6c449"/>
+<rom name="Shadow of the Beast (USA) (Track 08).bin" size="73154256" crc="a45fcabc" md5="ea971b4915148663875e3ed87b3e9a4b" sha1="c27ef963a248046e0ab9f45b43392ad3feac72aa"/>
+<rom name="Shadow of the Beast (USA) (Track 09).bin" size="65898336" crc="01f685ee" md5="5305fb2c2f5ad914bde8f9d470738133" sha1="9cf2079ff82589fcf649416a80bc08d9b38baf93"/>
+<rom name="Shadow of the Beast (USA) (Track 10).bin" size="10833312" crc="d9c373ad" md5="5343624a2558cdd3ebdbbba54175953f" sha1="3bd6d3b68f54b0696ae10b8df6ce0663c60a5b9d"/>
+</game>
+<game name="Sherlock Holmes - Consulting Detective (USA)">
+  <category>Games</category>
+<description>Sherlock Holmes - Consulting Detective (USA)</description>
+<rom name="Sherlock Holmes - Consulting Detective (USA).cue" size="133" crc="369e9b1b" md5="713ce8e5e0d0c45e02a4c4d4b6e04983" sha1="45a98a955d2da4899fbd53ff252055aaecd9d912"/>
+<rom name="Sherlock Holmes - Consulting Detective (USA).bin" size="686254800" crc="b617632f" md5="17384201fd019eaeec75f0a7a541a344" sha1="43b7c020f03e54b1e9debcd9b1ac43fa2c45f6be"/>
+</game>
+<game name="Sherlock Holmes - Consulting Detective - Vol. II (USA)">
+  <category>Games</category>
+<description>Sherlock Holmes - Consulting Detective - Vol. II (USA)</description>
+<rom name="Sherlock Holmes - Consulting Detective - Vol. II (USA).cue" size="301" crc="b6dbc0b9" md5="579e3e75f3fdcb0af754d5e49aa037e6" sha1="9c444a5fc7fbd1114fd85648226105dbe29d6fea"/>
+<rom name="Sherlock Holmes - Consulting Detective - Vol. II (USA) (Track 1).bin" size="2575440" crc="19b0219d" md5="e2b57641c022f99065888c4b2855471d" sha1="b8acd880bc35cc663b77a4c8fe62a4a7aa146b3f"/>
+<rom name="Sherlock Holmes - Consulting Detective - Vol. II (USA) (Track 2).bin" size="701269968" crc="6bd2c196" md5="cef3212279a8df0edf87833546aa04dd" sha1="17a0234590d08f3b5fbea92aa86891a045838cf5"/>
+</game>
+<game name="SimEarth - The Living Planet (USA)">
+  <category>Games</category>
+<description>SimEarth - The Living Planet (USA)</description>
+<rom name="SimEarth - The Living Planet (USA).cue" size="3812" crc="46c922e2" md5="192c0bcd7a0aa7d11983c0dfde4890ca" sha1="463aca8d0b48a9c4ecc43c8196add4775b87deeb"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 01).bin" size="8128512" crc="255d5c66" md5="dacacdc641a8dcd0c0feba33fdbdf32f" sha1="2ca9d460e53eddfe50493cc7b4f66ec089f05356"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 02).bin" size="10595760" crc="fe85b0d8" md5="90587a1aaa745eb42490000b37821d2a" sha1="4f0d8e852f137ece9b6013b6cee34fb820feebb7"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 03).bin" size="6350400" crc="584c1560" md5="09e82befa05723c6fa57db69f01cc9aa" sha1="22960d8a7bca41fd2e919ec0f66185cb1c1fd20e"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 04).bin" size="17465952" crc="6d31ffbb" md5="2c30c0152f6f30583e3a1651741ad6b6" sha1="57c07adfd55d3a859b01437cccebb98c9841b68a"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 05).bin" size="23200128" crc="0e0f3295" md5="db5927ece156e57afb305ebf1c11565d" sha1="21d61787d212d2b9a5a086044a1311163810c187"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 06).bin" size="9257472" crc="195222ae" md5="b5928f56b1184e6dda4415eee0611b7b" sha1="10e3b8822a8b52add720f79e174444aacf109641"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 07).bin" size="5670672" crc="ef38b2f5" md5="444acf577e566f4b68bab09976b8f69a" sha1="8193f0a3cfa7ce52736f208ee9a3542d36367fe5"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 08).bin" size="14255472" crc="5aef3883" md5="7299d1b897a2cc8edc712295ed1893f4" sha1="45f997eca204f9234792220c98f88d8bc0e3248e"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 09).bin" size="19514544" crc="e8cc4b24" md5="30d501adba28bc19f78b6f7aff16e54a" sha1="e91516d5f617c28ac798accdc18f1616232692d4"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 10).bin" size="20497680" crc="94c2c6b3" md5="6aa9143ee096225e1446b63a0dc5ebc3" sha1="609c3cb8336a0877325729f413b9afc8ca0d0b9e"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 11).bin" size="10913280" crc="ee12a97a" md5="b3f5bfc2b93b637cb502f5f0e2e83af6" sha1="15d49abf9504f0e1264e3a6336783de28211bdc3"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 12).bin" size="8455440" crc="1a63f572" md5="0646e12ef887be69f0704d62d5d2183a" sha1="e18bd3230b4994bb33b8cc35220abd02d4828548"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 13).bin" size="15090432" crc="bc79a64b" md5="cf959e706eb3fa5706a1195ee150ec12" sha1="49cfa1e42be19b9b0a927a86314aed00e415090f"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 14).bin" size="7636944" crc="56ed8a77" md5="922dae1ac5579f8f8289714f0315e6f8" sha1="471c30f8e8120898cd76e63eff5ad4be9031a563"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 15).bin" size="18366768" crc="96c4292e" md5="d72fbe7cac84d677f108ba8f217cb74b" sha1="115cc555a0e18c072dffdad907a0bc6a10d1e1db"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 16).bin" size="13615728" crc="95cde08c" md5="462d6955be46a8c3d19cda16755875fc" sha1="a0ab242fc4d51f54820e4b138d08307a42c3dc73"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 17).bin" size="15008112" crc="408a0881" md5="cee44c33d1c913ae2be80b7052ab0600" sha1="9e2e1a92170318ecf6b377b76c935e61dc54d87a"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 18).bin" size="13698048" crc="79fecf47" md5="caf0978140813237b534796c22b09e8c" sha1="57b58ec1ec5b6084452e07f17157d2a08f87c623"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 19).bin" size="4948608" crc="febae7d3" md5="b356d96567f536473ab7aa8426546a1a" sha1="01da4933c4c1fecbeee3e8b1f5c3566bf6b0710b"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 20).bin" size="11912880" crc="4a59f0d4" md5="959795045d25e066b965abc63751ad1a" sha1="c448dd84423bb167537ce93271a0f212bdbdd6b6"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 21).bin" size="18366768" crc="55ebb46d" md5="c5a2319473d9feb6bc4fb2b34f9e99c0" sha1="b10ef9970df39169400aa5460fee1be3dea00d9e"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 22).bin" size="14173152" crc="22affd9e" md5="30f6800870f0effcde9ec7cf52946f6e" sha1="77430e7eaa813a274810638f477187ccd92806af"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 23).bin" size="12961872" crc="28d02d6a" md5="2e02f5da586252a5d848ea07a06bd029" sha1="c70f40ad6f9703441fd6d7123aef7dcfd6c705cf"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 24).bin" size="18432624" crc="a11b3f8b" md5="1076eaec260321fb145d0a2fbde51c85" sha1="20665323e0d591e5f7ce9773f37b56ad77af5a2f"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 25).bin" size="15255072" crc="db13f30e" md5="c9d082de5c6091f0dd4569ade02d2b13" sha1="fc0d95ab362e704e7cfecbed79480dab30f34424"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 26).bin" size="23545872" crc="3307ea3a" md5="64bbb0fc47e15948e8504e30f0e57917" sha1="8147adba711e97a7dc6e045fa208ba61c64fa5f8"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 27).bin" size="5244960" crc="fd7903de" md5="e3f51df1e6eda762427fff065c2ffc51" sha1="479bd3545ca1e50e28eddc76c9fee40bb55831b3"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 28).bin" size="4522896" crc="391dbad6" md5="58b4b19f9090b4c6ab36592687f64fb3" sha1="8358f4743d376f4cb9d7256d43d23b78e405b350"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 29).bin" size="4341792" crc="c7b34b87" md5="9269d191b77474a7cdd637a1902a4c4c" sha1="1ba030914fb696676ee568a86f7e25392c01c60b"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 30).bin" size="4113648" crc="211249ce" md5="c9dda8a49671fb1880b706fc0c207d3d" sha1="a394b42ffbe7ec1ec3f3812af57ea143f8cfa6ec"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 31).bin" size="3506832" crc="c6b7e9a0" md5="2e28d6fe85ff8928140838c043487258" sha1="ffda7898dbd75c0f7ce4a2b6e3559592d81abfd0"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 32).bin" size="4605216" crc="790143ed" md5="b609f528eb9cef4f1651601e3c8e868c" sha1="e2e837ed7ec6aab933bf50507ac1a983f6ffc97f"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 33).bin" size="3786720" crc="cbb35fd3" md5="7a58701411369cc7f3d19227334f339c" sha1="84b4339c039275e7b2365ba4610bfb7e3a1c5328"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 34).bin" size="3457440" crc="cceddb0e" md5="cac95434297fe3e9d940827f98ae58ab" sha1="37a2fd0a30166027e4a516a8d12789748cd6ec11"/>
+<rom name="SimEarth - The Living Planet (USA) (Track 35).bin" size="10245312" crc="ee74e306" md5="8b552b90eb03da78cd440591719cf4f5" sha1="b43d5ebc25ed337eeff904217ca1e65ba91abf16"/>
+</game>
+<game name="Super Air Zonk - Rockabilly-Paradise (USA)">
+  <category>Games</category>
+<description>Super Air Zonk - Rockabilly-Paradise (USA)</description>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA).cue" size="2838" crc="c90c3a00" md5="45108828e82bf81c95921211880f7fb5" sha1="782a5970500202d68fc317194b30f4bf2ef86043"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 01).bin" size="7914480" crc="16841024" md5="c7ec65c2c430ec5e01ea1e781b5fb933" sha1="2e5a9235aaa4c04baefb8a5104fa2c2977869191"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 02).bin" size="6456240" crc="7e1e04c8" md5="61c81810ce20394946d751155695b0a0" sha1="fc6fae87d62a12d1cafbb39912f4107f987104bb"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 03).bin" size="2650704" crc="5648e612" md5="d9016de694af3b669197670628a015d6" sha1="2f3a3f03f9b911ebbd49bb94bcbabec20f01d5bc"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 04).bin" size="17696448" crc="60ec4b16" md5="6723f115406d4178d5ed9e28035c939f" sha1="065c1b1a8fb35d70e3c5376b4d3209e993213289"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 05).bin" size="11703552" crc="4a2eefb4" md5="62a1fd746a7ba29a42c7b5963190ea55" sha1="b9f72cd973cf830a19684cc401d99de71c964c48"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 06).bin" size="43860096" crc="258b2e3c" md5="6ea060a5224ffb1a39208033dd0f47a5" sha1="6b0c07338d17a9981221be610193a197c0043a2d"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 07).bin" size="43142736" crc="e5fdce35" md5="32bbba5f466b5fba62e5ae92d7ea16a7" sha1="e9addc68a88cef40c6597cea497ac54883565f05"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 08).bin" size="43895376" crc="ad5699ad" md5="31da9c36150af503a6febce148aaeab7" sha1="311da1b3c4c43b25ad441750ab90843119aa1d9d"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 09).bin" size="45384192" crc="a4cafef2" md5="5686da073ea16fc6aee646dbee9763dd" sha1="81cb73269d71280399bd1ae9a3535d6367df5f98"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 10).bin" size="44139984" crc="d59afaed" md5="882cc176cb626c48c941d9064337cc8f" sha1="a60ab4b81b97a23c2668c22284f538a4823a54d7"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 11).bin" size="44492784" crc="d47682f2" md5="7259df683a4ed460616ea1fbaf24109d" sha1="7c28e6eb04479eaa80498615635bbfa936057d3c"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 12).bin" size="44645664" crc="eb36b46f" md5="7601aadfeff5bc6940bc8268c06e414c" sha1="891b21625548902744672a889953fd756e9153f8"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 13).bin" size="1695792" crc="796f1b39" md5="47a0b8aa7c619817a89d7dfa4cc22865" sha1="0f53ddb39a8b8e0d06dfb8d53a23c1d9cb9aefef"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 14).bin" size="34228656" crc="8af65640" md5="34049f3af086d6105943e869613c6812" sha1="ebb68d3ed9fb851ca81b6a5afa8eb7603446724b"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 15).bin" size="33323136" crc="624bcabf" md5="9e0cf163f73853d7759107162cd359a0" sha1="58c1836879f00e88314cabb1416500d4312fdb64"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 16).bin" size="33476016" crc="b02f640b" md5="458303edb8eab9ada66d8b2e6be06d16" sha1="adc2118aefcf3f42a9c61a58874ee145983246c0"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 17).bin" size="7589904" crc="0152d85b" md5="5fade37ab4b1911a8982df740f8bb074" sha1="d320a0c52988ddc977f199433a0a7a7e39b99d20"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 18).bin" size="26074272" crc="d3f49389" md5="d5f351c1fb0409806d22074a1d98a43d" sha1="a2c9f8dcf3052944efd9de24035af0c5ca1f17a0"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 19).bin" size="1305360" crc="952fd35d" md5="ef783d03b580304ac72d07e290c09920" sha1="19f0fa5a672b048bebef4b899f9593f19ad00394"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 20).bin" size="18105696" crc="cfe9d7d1" md5="2da432837141427906b3fc60a9ab8d65" sha1="a2f3608edb20b5771d08640ccc9b44dc01a66cc0"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 21).bin" size="7733376" crc="e1564f8a" md5="7daf9cf0349b2f8d7d0106aaf4ca8221" sha1="9d7e29a47f7b3ec87f3a486044fba8afa35cbafd"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 22).bin" size="25973136" crc="b4f71434" md5="b452043b6a331b4ddaaf4057b7b0569f" sha1="c4cc64192b24d96642d9daad8c670e9095934ff4"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 23).bin" size="9567936" crc="bac2b4be" md5="04edc9fa2634ea73f8c40291a088c995" sha1="991fa5cb48d7416df1c47768615eab717fe28071"/>
+<rom name="Super Air Zonk - Rockabilly-Paradise (USA) (Track 24).bin" size="6101088" crc="5226f338" md5="e6d576b3fd16ec47ed0d85abcf3dba10" sha1="7dc6529e39231346198226f557ed01b47be5f609"/>
+</game>
+<game name="Super Darius (Japan)">
+  <category>Games</category>
+<description>Super Darius (Japan)</description>
+<rom name="Super Darius (Japan).cue" size="1799" crc="cbabcc20" md5="3f8d1cad94095beff87acf900703abad" sha1="f55d6eb98edcf94ccadb77de8860d32b578a0e71"/>
+<rom name="Super Darius (Japan) (Track 01).bin" size="7914480" crc="b979500c" md5="a25a2c129b7100092cc40e9b6e176a63" sha1="9ac3f1a11d434d186466917f1c7955bf7670c910"/>
+<rom name="Super Darius (Japan) (Track 02).bin" size="17171952" crc="25ad4704" md5="b2f7320fd5f848b5b889b63f7cf24371" sha1="569396fbed7861db55b11124b083c355e22ac6f6"/>
+<rom name="Super Darius (Japan) (Track 03).bin" size="42216048" crc="1a3cae7c" md5="02928fc6c9cb5129e1a8c7f7724537fc" sha1="310ee1f85bc6742b714c719478272725eae67da1"/>
+<rom name="Super Darius (Japan) (Track 04).bin" size="41733888" crc="db8785da" md5="b5630754507e238796b810a059444525" sha1="25f64394998ef4cfa991c6d9bd68e3227488238a"/>
+<rom name="Super Darius (Japan) (Track 05).bin" size="50911392" crc="80af1b25" md5="94503519c8a87d4d65d85c421d862576" sha1="c18f4ba8e5aa4d0343dc61ae7f05b6ebb5d6ee1d"/>
+<rom name="Super Darius (Japan) (Track 06).bin" size="35705712" crc="494827ba" md5="589b258ddcc9dbf28bf1e4a97b7345b8" sha1="a0896e2eb5b00a3c90d5c7253b6f94d1da91da56"/>
+<rom name="Super Darius (Japan) (Track 07).bin" size="41040048" crc="fa27557d" md5="0d6f1cd0516b41167564f532d96008da" sha1="ce042f72e8827be4412add97c11a4797acfc701d"/>
+<rom name="Super Darius (Japan) (Track 08).bin" size="22268736" crc="381d1be3" md5="e6785fa426921c20064865d8b7ad19bd" sha1="43a64e6711e84f9d87b46e05428863036dcdf0c7"/>
+<rom name="Super Darius (Japan) (Track 09).bin" size="22264032" crc="3f188dd1" md5="19ba8ec54665491bcce6964f59798aee" sha1="223f3e10ebac028e88bb852bea0af82fd395c6fa"/>
+<rom name="Super Darius (Japan) (Track 10).bin" size="9429168" crc="2896d2ff" md5="6b83f88c97b36cb47ad0449d6252ceaf" sha1="09635bedabc979d31115cf48a5c0c432f29daed7"/>
+<rom name="Super Darius (Japan) (Track 11).bin" size="26716368" crc="7b39f832" md5="b14aa9ffff01eaf54c174e2a92925325" sha1="6c937f36dd969d586377e951889f5fe7bd8b3adf"/>
+<rom name="Super Darius (Japan) (Track 12).bin" size="26293008" crc="9c9b7542" md5="e58c46e914276762c03dc27ac4272b12" sha1="68d2699591a29cc535e37508a4c003cb2707047e"/>
+<rom name="Super Darius (Japan) (Track 13).bin" size="25620336" crc="abd7934a" md5="d5a1a277592684c3d801d5d18d320675" sha1="13ffecbb923ec3f9a59ef8e2b0127a5223c9e2f4"/>
+<rom name="Super Darius (Japan) (Track 14).bin" size="9429168" crc="2896d2ff" md5="6b83f88c97b36cb47ad0449d6252ceaf" sha1="09635bedabc979d31115cf48a5c0c432f29daed7"/>
+<rom name="Super Darius (Japan) (Track 15).bin" size="23195424" crc="7dbed008" md5="8f779c9f06cd01ab21e978cee0d10a73" sha1="cae3314be55a3467200a4ee0176a9b69e48672af"/>
+<rom name="Super Darius (Japan) (Track 16).bin" size="26716368" crc="c0c70875" md5="3d0e365f0fe3a47bcffc6569638b326d" sha1="4a3b70caeb8594451fe6978226128236f57cfe0b"/>
+<rom name="Super Darius (Japan) (Track 17).bin" size="10207680" crc="68ad1219" md5="2f178f7ff9f6e6796bff1849ca916fcd" sha1="8627dc5200d4726807904b35dffa4baf80222086"/>
+<rom name="Super Darius (Japan) (Track 18).bin" size="707952" crc="45c9c853" md5="3f97615c89775397aef47f68708dcd02" sha1="6a1bc47b4a45f9db1d0bec03450fca765e313b85"/>
+<rom name="Super Darius (Japan) (Track 19).bin" size="18256224" crc="4fc4f0c0" md5="717d40916b2f49eb30fe309ace30280c" sha1="40e77df1027b2b7ebab5b9d849d869905d7cf8bb"/>
+</game>
+<game name="Super Darius II (Japan)">
+  <category>Games</category>
+<description>Super Darius II (Japan)</description>
+<rom name="Super Darius II (Japan).cue" size="1907" crc="4a257d21" md5="7c6edb9bbab6cb5ab5cf91a953378903" sha1="2cb11d2ec7ffdc1f28f6db7ebfa9bfc9b9472cf1"/>
+<rom name="Super Darius II (Japan) (Track 01).bin" size="7914480" crc="b979500c" md5="a25a2c129b7100092cc40e9b6e176a63" sha1="9ac3f1a11d434d186466917f1c7955bf7670c910"/>
+<rom name="Super Darius II (Japan) (Track 02).bin" size="13180608" crc="01896d4c" md5="cf8c010dfc60ff923562e1e9df8628de" sha1="7ec282dc2e78e9c174e0414de904c5583380784b"/>
+<rom name="Super Darius II (Japan) (Track 03).bin" size="42796992" crc="17c3d555" md5="9bd460efaf0b98e4b6d1da3d9f3240cf" sha1="fe57c8dfd68e2bea1379f0a0538ae846eaae8729"/>
+<rom name="Super Darius II (Japan) (Track 04).bin" size="41021232" crc="bc15563d" md5="314a7433442ba030db6b9b041ec176d8" sha1="41f00092d338d4ed75f9d0cc710fc2771da975f6"/>
+<rom name="Super Darius II (Japan) (Track 05).bin" size="42277200" crc="09667c05" md5="02cf67ddbd25be1da39d9fac286bcc6b" sha1="44d06aa67519792198873de8a68d9d9590a48e96"/>
+<rom name="Super Darius II (Japan) (Track 06).bin" size="44732688" crc="1ef3fce4" md5="c497b845e4075928215a4d8ff4cd80b5" sha1="1a7799bbd5df4fa48b9e05beeb19ac0c895fa233"/>
+<rom name="Super Darius II (Japan) (Track 07).bin" size="52066224" crc="a269bc17" md5="720054d45978c1aa6887ab1df3c0154d" sha1="9a86fb9bfe264954a3c17cd4c77dfabca55ae0c6"/>
+<rom name="Super Darius II (Japan) (Track 08).bin" size="42931056" crc="1236eb68" md5="e086bf6d5c6b37bf5cb5fa9378b2a930" sha1="d696ee4fd2d94b1338dfc1fd11605a607bcba9cf"/>
+<rom name="Super Darius II (Japan) (Track 09).bin" size="42735840" crc="41bb2c70" md5="c8aeb3314d2eba3efbb7ab0e05694fa6" sha1="e2545f427a6d90d0a97084310eab32e3800d6fa8"/>
+<rom name="Super Darius II (Japan) (Track 10).bin" size="43965936" crc="299276fa" md5="c0e304f7f453aa01c2830472406e99b0" sha1="bff0134d06768e554c3dc890c167b35affc9cb01"/>
+<rom name="Super Darius II (Japan) (Track 11).bin" size="34520304" crc="be0a8997" md5="16a8a16c8c9a4b4c2f2721d901b32de7" sha1="0f6d2f5ed03d50be86641924fb23ac4ae2727c07"/>
+<rom name="Super Darius II (Japan) (Track 12).bin" size="31523856" crc="14ae2edd" md5="5ad6047a7e0c987240e5a9b023145616" sha1="181e5564cc45869e001933819e8e810e3ec282f7"/>
+<rom name="Super Darius II (Japan) (Track 13).bin" size="35068320" crc="7f655d37" md5="bd1e9c423bc5cb197a1284abde39c9f3" sha1="4ac1232922ca0148cb5455423f62c4dee0ad62f4"/>
+<rom name="Super Darius II (Japan) (Track 14).bin" size="11216688" crc="ff67136c" md5="1038f0d6b1abb3b63bf475f1ea1e1fde" sha1="bdefdc9f7861f88c548f93cae641cf3620480274"/>
+<rom name="Super Darius II (Japan) (Track 15).bin" size="11804688" crc="de30fa93" md5="a1f23d9f3d3322bb9c9e08875d3bc391" sha1="56b7e453aa10b008427d115f85074c38cd4f8a46"/>
+<rom name="Super Darius II (Japan) (Track 16).bin" size="12512640" crc="7b3a4a30" md5="753816b34ca8087b90e59fe454fd7959" sha1="73f3df79096078942a5badcfc1e96ffb1f49590a"/>
+<rom name="Super Darius II (Japan) (Track 17).bin" size="27033888" crc="e9f5d21f" md5="dabeac187fb787a613d325cffcb0549c" sha1="d3791e05f873809d372635e6490569fdd8f0bc99"/>
+<rom name="Super Darius II (Japan) (Track 18).bin" size="2034480" crc="b4e4f3c3" md5="4d10b8e250c8a06c51f131a17ca1c583" sha1="d77c89396ccfc1f4e4cccc59b21e81c7f52de0cd"/>
+<rom name="Super Darius II (Japan) (Track 19).bin" size="12834864" crc="e2c56433" md5="d7b2467542017c37f48c8bdd42d667d0" sha1="80f63411c09a26b452504f4e63aeaecbee6b20be"/>
+</game>
+<game name="Super Raiden (Japan)">
+  <category>Games</category>
+<description>Super Raiden (Japan)</description>
+<rom name="Super Raiden (Japan).cue" size="1482" crc="f24d12ba" md5="b68085a8722a0a7ab47e6ae27413d65f" sha1="5df14991eb1370e84880dadfd042b484dd34a4ce"/>
+<rom name="Super Raiden (Japan) (Track 01).bin" size="7914480" crc="b979500c" md5="a25a2c129b7100092cc40e9b6e176a63" sha1="9ac3f1a11d434d186466917f1c7955bf7670c910"/>
+<rom name="Super Raiden (Japan) (Track 02).bin" size="26758704" crc="2e395404" md5="f5ae1fa0987a648a383bfd2b7d32b11a" sha1="3d61ff3bea1c05e4874553d6d16537ba6d990431"/>
+<rom name="Super Raiden (Japan) (Track 03).bin" size="37432080" crc="fce6fa0c" md5="21a6e68ba7462cf5de8cc570b1def088" sha1="176f0935cafb073cc69e98246229c494dd04af66"/>
+<rom name="Super Raiden (Japan) (Track 04).bin" size="37283904" crc="47549571" md5="82ce7ed818f77fa2637c90f4668d913c" sha1="4cd8052ba46b458898af9313377dc0c4474d2874"/>
+<rom name="Super Raiden (Japan) (Track 05).bin" size="37711968" crc="bd770e65" md5="ea3c06a4c383ff40e65a0aff62818cdf" sha1="0b2b5cddf54ae9ca0ffaac2c4990c669f08240e7"/>
+<rom name="Super Raiden (Japan) (Track 06).bin" size="37053408" crc="15d6141d" md5="07f3011e5900e9594deff6b3d040804c" sha1="db72924a6a730763d85da5b291090ff6c7dc0735"/>
+<rom name="Super Raiden (Japan) (Track 07).bin" size="38436384" crc="9fe4b1a0" md5="47c0c68789c9d6e61290f153e5e6dcea" sha1="f7f0e68ece6b1d56fbcc7fd33e8a868b943449de"/>
+<rom name="Super Raiden (Japan) (Track 08).bin" size="37394448" crc="3dab89e1" md5="3ed80f30a069f394e3d167ea55d9c6fb" sha1="df3436e9639d6ce63a11c9063e228547838eb2e3"/>
+<rom name="Super Raiden (Japan) (Track 09).bin" size="4685184" crc="13629f0f" md5="e959b2b480d7a92a6bb67866cba73a14" sha1="2f30a41e2312ddb413ac42ecef0ece1c07366125"/>
+<rom name="Super Raiden (Japan) (Track 10).bin" size="31577952" crc="7e87b9d0" md5="6e4cc5a99b8f823dbf51d2c595d8c90c" sha1="3796c812407719d9c43616c1817cf0e3c6dca60d"/>
+<rom name="Super Raiden (Japan) (Track 11).bin" size="33038544" crc="a6046249" md5="906c4bd19648612c0552e085ff89a7ba" sha1="50e62aaca9e77e2acbc1528a2ffbbfe65ffa4ec6"/>
+<rom name="Super Raiden (Japan) (Track 12).bin" size="32102448" crc="fe3bc534" md5="8a2e7d2269a6e8e5223818471bcd284f" sha1="d0abd9c7d8b7bcfbc884bd9faf1c8e83b78989ed"/>
+<rom name="Super Raiden (Japan) (Track 13).bin" size="13006560" crc="fc1f2aa3" md5="04c4c8871c1775b0e2a1c0ff376d2b80" sha1="8810910064550d3cc2a80c5c1903ddb12d547754"/>
+<rom name="Super Raiden (Japan) (Track 14).bin" size="24152688" crc="774ac6bb" md5="34a61ec91481ae35a69a62d4d3787856" sha1="51135511d3b1046214f012e485f79ac57e57737f"/>
+<rom name="Super Raiden (Japan) (Track 15).bin" size="26412960" crc="81786065" md5="4d4be8bc8875eec54fadaf45c9a69276" sha1="b8debfe0b8fe927edd6788268ad8acdf69345a15"/>
+</game>
+<game name="Tecmo World Cup Super Soccer (Japan)">
+  <category>Games</category>
+<description>Tecmo World Cup Super Soccer (Japan)</description>
+<rom name="Tecmo World Cup Super Soccer (Japan).cue" size="2319" crc="6866de49" md5="2c49dd46144f35d2bc576f5e8ddbc230" sha1="bf1bba5d286ea01fc923145dee2914786e2b3eed"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 01).bin" size="8090880" crc="1a1403c4" md5="3404747292591fc373c82b726103a28b" sha1="95604758f6784ef1e53f064d0c588bbf1bf0f69e"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 02).bin" size="9483264" crc="96d44bb4" md5="54f186d2892d5b264348d685215a51e5" sha1="c0959ba1892909858677629227a8f65ea0590191"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 03).bin" size="23618784" crc="fdbef063" md5="8c4a845bdea27663eb4999ee18e55ce6" sha1="8b43446a0c6e9eced50cca47e55e0161d9a3b9d0"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 04).bin" size="25232256" crc="c3b2039b" md5="feac6a0a0b3d7bff5423e2e321415c00" sha1="a7c6cecbdd08c14841182594d2a03f2066a45936"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 05).bin" size="26050752" crc="5fc4bbda" md5="80cbfab8a51be87bfb033ba7863d1af8" sha1="6f654663f930c64b03a6efa7bba9e77dc95f923b"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 06).bin" size="23724624" crc="9c33f3d4" md5="0865572c3b33f7ca45812264f9173b33" sha1="faafa56365883dc64c5332f3f4885a6ebff2c8a3"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 07).bin" size="26674032" crc="d4ae210b" md5="54a6735b41b86cfd3d5a180a2d0ff262" sha1="37ac99b619059e2e43655928fee3379a1df5ef04"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 08).bin" size="24658368" crc="66f294f4" md5="9819fa6cc80883a66ce3a64f2601694c" sha1="8b14a0062760efa03674178e2a551f660117c86f"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 09).bin" size="24529008" crc="3628e88f" md5="43bddb26a54686c7131db1370b500309" sha1="4a956d1368f8ee316c3aa480122a88a3b280a8a1"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 10).bin" size="27412560" crc="a01b89c2" md5="cfce150fda3510fa5c7647120ae34512" sha1="c113d128efb86343efcc2b549f20eeef860de35e"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 11).bin" size="20972784" crc="577092f1" md5="a5e981092206a337651a4aaf0f854d3a" sha1="79dc9c11d1024f8b3b5c52592e394012542cb639"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 12).bin" size="22922592" crc="ff031aa1" md5="ec17dc245c37a3bea7107719d51cea35" sha1="b805b4658f5c9c9e8e42944ce89b51c615e5e4e1"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 13).bin" size="28115808" crc="962ae481" md5="a07a146538abadb17e0df2ff90eec05d" sha1="a89b6ac9df8f65ba2eac9321878c4c029e35d8eb"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 14).bin" size="27182064" crc="6758bfb0" md5="68c5c8160d19d9f8f139795409eb7345" sha1="08e1a9c8a7c5e16e156236d36468681d8ee1af8c"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 15).bin" size="1688736" crc="937526c7" md5="4ea7d5dd226465fd11d8d78473459314" sha1="55a2e8eeaa073d0ffcbd79d7d8fa526004ba1a28"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 16).bin" size="1933344" crc="6f3322c5" md5="ed5c1528fe9943722c6d22f656273abd" sha1="e301fdbe40e97517e5a1c0a5a7c10249aad79c62"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 17).bin" size="17482416" crc="5866f437" md5="1396584afa123bc7dfee3781c673be1c" sha1="06c6b627627f3e06130ab64c3c6d8e075572b72e"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 18).bin" size="5915280" crc="f5633ea5" md5="d333e74c296a8eb815303216cb3156d7" sha1="9184130f9ad6ca92d7512a688602b4046e38fc86"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 19).bin" size="18514944" crc="e65c3365" md5="7447d510b6de5f7a75171c2a7528c424" sha1="406dc088efe4f2f7ab28fb872e8e5488e6660437"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 20).bin" size="9683184" crc="37ee40e7" md5="9abe759e634177e8ebb32ecb5f3fe04f" sha1="4bd294734c55454129d8993e70a3eb51522175a6"/>
+<rom name="Tecmo World Cup Super Soccer (Japan) (Track 21).bin" size="22268736" crc="d734a2d5" md5="275f7c7e8b2f8f620d6704df5ed73eaa" sha1="f47e0e3bf0e8c1d1c37b1688e1e41c7698703f8f"/>
+</game>
+<game name="Valis II (USA)">
+  <category>Games</category>
+<description>Valis II (USA)</description>
+<rom name="Valis II (USA).cue" size="4804" crc="603bd404" md5="652f35d905a8bf00c52eb59e6ecfb1d6" sha1="bff61b418beed0a2932c4104455bb8c32c6bd6a8"/>
+<rom name="Valis II (USA) (Track 01).bin" size="7914480" crc="17623548" md5="77232c745e40cc155ad72c1b79780986" sha1="e1baaf01eee215def8bd6f6aa080e3a41ffc74f4"/>
+<rom name="Valis II (USA) (Track 02).bin" size="6185760" crc="228168ad" md5="5f6846f935a8b9a463adebf0967c501e" sha1="4baae7579a51a54d959212e81a1432c7e6ff83e0"/>
+<rom name="Valis II (USA) (Track 03).bin" size="5136768" crc="323f4552" md5="ee448be1689172d037f7d3be9f3c8a94" sha1="bc0582b015a7985e77f4abbc7bcf119705a71f7f"/>
+<rom name="Valis II (USA) (Track 04).bin" size="4946256" crc="ff2ad896" md5="61262bfa4a72c6becdfb31d60f5411b5" sha1="b25739c90328e017042a87046792056852bb2593"/>
+<rom name="Valis II (USA) (Track 05).bin" size="2638944" crc="be40be43" md5="b3a0ecd562979f8dca5a0758691a0a27" sha1="b05142561454d63738d1c120188bdb73f09ff3cf"/>
+<rom name="Valis II (USA) (Track 06).bin" size="983136" crc="10f77c39" md5="a3c5e37be6476ef0973d81df77a72cf5" sha1="0df4e8bdfa67a151a2d7d40def07434f4dbd982e"/>
+<rom name="Valis II (USA) (Track 07).bin" size="3683232" crc="5379ead2" md5="258de1b73de288c37a6d0d00e8c221a1" sha1="1a6ae43d6a321b0abd91d62fbf68dbb014abd6b0"/>
+<rom name="Valis II (USA) (Track 08).bin" size="39661776" crc="ff40b697" md5="c4ad41533ea004be9035dba31c40716d" sha1="fe991142df02f5d79c984820a4c941af39902b97"/>
+<rom name="Valis II (USA) (Track 09).bin" size="3450384" crc="b284c0ad" md5="ec80c1474244f7dabc963ff7a102e9ea" sha1="ee6a4902c1d01156e1cef08e4fb67ddfddc16510"/>
+<rom name="Valis II (USA) (Track 10).bin" size="4548768" crc="58659c2d" md5="0b1fd5cbb2d6ce6c46a6466906bf3086" sha1="758cc7a65b3d13b0061ccfcd9f1a1eda0e27e2db"/>
+<rom name="Valis II (USA) (Track 11).bin" size="1112496" crc="28ad719e" md5="beea545709a33e562a263e8cf2a980b3" sha1="b93c6b27609ad5365bdffa47799e1c2933ced2c0"/>
+<rom name="Valis II (USA) (Track 12).bin" size="1646400" crc="70fa38fb" md5="bd2473d488b4939fe29a058c4ae22ccd" sha1="1f40f030a011a5b964f108aae0dafcbde5ff2491"/>
+<rom name="Valis II (USA) (Track 13).bin" size="4748688" crc="94d4cbf9" md5="543a703424eab3af128444beb4f3ac64" sha1="4ec01431c02388219d2d6e2ebeec35058e88ca33"/>
+<rom name="Valis II (USA) (Track 14).bin" size="2293200" crc="70ed6bcb" md5="3412e0970af418c888611d258dddeb89" sha1="e5e72f5594b4068228977be5eab8147fc7049e3f"/>
+<rom name="Valis II (USA) (Track 15).bin" size="2606016" crc="f06e3f2c" md5="8d6777dbdf4e2a19b9f7da05e2a18996" sha1="53c8622a9b74698a946fc94ddf2a5f15021e693b"/>
+<rom name="Valis II (USA) (Track 16).bin" size="4701648" crc="7d015133" md5="23c6987e53093936ee510b73ab0a053c" sha1="63b9e4f9aaec41b5a87856accd107885882be896"/>
+<rom name="Valis II (USA) (Track 17).bin" size="3226944" crc="97404190" md5="e9bd16a403032ccec77c0d00b55838c4" sha1="a54ca24e403361c590e4259efee08de9448510af"/>
+<rom name="Valis II (USA) (Track 18).bin" size="931392" crc="d82a05f2" md5="62578b6adc4e0a3b3f9e7c1152210302" sha1="546d7c1c732ed0b91ddfd295ca9f2725f390b966"/>
+<rom name="Valis II (USA) (Track 19).bin" size="707952" crc="1ce15dc9" md5="d3db42bc23557901744f699e0fcbd071" sha1="e9d532035c2d249e3281fa46484982369584e38d"/>
+<rom name="Valis II (USA) (Track 20).bin" size="6896064" crc="abb79ed7" md5="39225086a0c307589f76077413ab86ac" sha1="1a7d80998d40740df0dc8a4af665da9093584bfb"/>
+<rom name="Valis II (USA) (Track 21).bin" size="2970576" crc="6cf5703c" md5="fe93a5e864c1309a2871dd4db2c60ac9" sha1="1045cb5571a40cd8d244bd7eaf677064a30040f7"/>
+<rom name="Valis II (USA) (Track 22).bin" size="3958416" crc="9c285bbf" md5="2fdad096db015164939dd3fcc48b8b90" sha1="6452ad4a73b60cb5fbf7233042a497e5c05cae17"/>
+<rom name="Valis II (USA) (Track 23).bin" size="1874544" crc="839a259f" md5="d196065464786e8120940ab95e2edb23" sha1="01ee403c2a4b1c52e620f024ee832688fc4372e3"/>
+<rom name="Valis II (USA) (Track 24).bin" size="2497824" crc="3ef4cac4" md5="4950d80e6f3564b963be5ce08abb3fda" sha1="05bbfb76b09a9380cecb8fb03f33ea19869b1f39"/>
+<rom name="Valis II (USA) (Track 25).bin" size="10134768" crc="edad73f6" md5="79da316c27fa20073b334433f5fecc1d" sha1="0ae12ef7a3ed700a964004f8f84e614ce757e3c3"/>
+<rom name="Valis II (USA) (Track 26).bin" size="2589552" crc="f87d1d5a" md5="0e3c1e7c8f733bdb5d5f6331bd581d52" sha1="187419b7c0bab382109af99cbe8d309057d3ae60"/>
+<rom name="Valis II (USA) (Track 27).bin" size="11317824" crc="871d3143" md5="e9a73b735943754d5f754db84adfab0c" sha1="b4f656e0ef3bc5a305e0e97f15bc09c80b2b5ebc"/>
+<rom name="Valis II (USA) (Track 28).bin" size="5254368" crc="e609d840" md5="1edf43f1b7ab9d737ecc9bcc8dc9b19d" sha1="0498e5ca72dd60528d9ef66d3cc7e0af65fcff14"/>
+<rom name="Valis II (USA) (Track 29).bin" size="12418560" crc="cd51ebad" md5="9847fa4f6de16180713910ac09f14965" sha1="c0c8e15b559193f9e40f39a5f02835f221d16af7"/>
+<rom name="Valis II (USA) (Track 30).bin" size="5487216" crc="e2637f3c" md5="45d3564952a17c10ad26bab941777e23" sha1="1972d01eb785ed961da8895330549227695f6c3a"/>
+<rom name="Valis II (USA) (Track 31).bin" size="707952" crc="6e2d0e36" md5="49629cbb8f7c2fcdcc3ba5515d7a3a2e" sha1="51f22f63248336cf19e071fe8763d78c2f835cfe"/>
+<rom name="Valis II (USA) (Track 32).bin" size="6378624" crc="cc15d278" md5="0e38f7f8146ff14ccd48015c0a291fec" sha1="adef3ded81693d50bb8e5ea927a9cf9fe79bfd74"/>
+<rom name="Valis II (USA) (Track 33).bin" size="36507744" crc="6246cd3f" md5="4c72d061e5f3641cb61abd8f86b4670f" sha1="fc025d4ba1c5617be68b5fe1a6a836c76e13b48e"/>
+<rom name="Valis II (USA) (Track 34).bin" size="72227568" crc="461dd895" md5="d5131501a8bb2ed733e724262ab42b90" sha1="9f5475b698e39ccaecd0135cede0727fc08b3588"/>
+<rom name="Valis II (USA) (Track 35).bin" size="12858384" crc="51ab26e0" md5="5e260bb388ecbf373d23a589e6ecdcdd" sha1="2417b74a7fe1392704cbeb82d5da415f4d891c3e"/>
+<rom name="Valis II (USA) (Track 36).bin" size="14643552" crc="afe6946d" md5="a7a5f7a7f7ba163a6505f14f3426d608" sha1="cd99a9bae6f0f4550ba3fcad408207ab5e18a8dd"/>
+<rom name="Valis II (USA) (Track 37).bin" size="13260576" crc="2f5b0db8" md5="52e59d19cf384fa162a99fc4f8f5af51" sha1="dac3247f323e1956d1de97496e480ac324ea7710"/>
+<rom name="Valis II (USA) (Track 38).bin" size="26474112" crc="00b84ee8" md5="9a99d772e71c7c52ff3430d7546449b0" sha1="57ba517b3f495fb2b016822a04a5b9a009c3a835"/>
+<rom name="Valis II (USA) (Track 39).bin" size="17748192" crc="5da5b889" md5="051cdf9e5805301a901eaf172cb40b75" sha1="9bc9527f9e24e0fda2a638553e0921a76de90e76"/>
+<rom name="Valis II (USA) (Track 40).bin" size="18046896" crc="ebe10403" md5="913d7edb3ca53a0451e2cfc7891fd9ce" sha1="6bfba888ab4e380154b54212cc97a8d72eebeab1"/>
+<rom name="Valis II (USA) (Track 41).bin" size="17030832" crc="35c5261b" md5="6abffd3eb05f92b6eada311860eaa892" sha1="93b5af2f5a10c4334830973d81c7f4d0c9a9002e"/>
+<rom name="Valis II (USA) (Track 42).bin" size="2629536" crc="f0e9b6f1" md5="c39844586a59eca55500cac99a62efb1" sha1="c41015b18887a1ff03adb0141f949d03246ea7a4"/>
+<rom name="Valis II (USA) (Track 43).bin" size="2754192" crc="d7d48767" md5="44a823abca7377b3ec1de0e911382c5e" sha1="c982845d296456bdbfe2ebf0a58af70c1a5438d7"/>
+<rom name="Valis II (USA) (Track 44).bin" size="2815344" crc="84461a9b" md5="746c682737f399f501acda3d24f59168" sha1="bec5cc98fa66c4a48a39acc1f2c2fa7a02306b58"/>
+<rom name="Valis II (USA) (Track 45).bin" size="2330832" crc="9ec9bc82" md5="b53aa55e95fa10eadf181d68479aa8e6" sha1="270cc325555e85ad0746b101fa52c281db4dbc22"/>
+<rom name="Valis II (USA) (Track 46).bin" size="2671872" crc="b3f78d6f" md5="bbfd7ad617436cfcde178f6ebd565ba0" sha1="14cef5ce23a0b4497e5c7371216bef3f05a0323a"/>
+<rom name="Valis II (USA) (Track 47).bin" size="2852976" crc="f10987db" md5="9b42215b73bcd6325f6662f8e0595acc" sha1="404192d5e44ec13af574e719c46ba26935fe3138"/>
+<rom name="Valis II (USA) (Track 48).bin" size="20137824" crc="7a98f164" md5="a51f1d357b6f9eb25059b9651d017edc" sha1="13ce6bf4953ec52152e598a0757524853601f977"/>
+<rom name="Valis II (USA) (Track 49).bin" size="39059664" crc="02c2911c" md5="afdf9d2bc848d51b1645df89a6613942" sha1="5886ef9efb0b43ee38c01ac212b1edc633babef9"/>
+<rom name="Valis II (USA) (Track 50).bin" size="1364160" crc="f158c43e" md5="e5ce345f3c62028eb8b683daae4bb49f" sha1="85a5124508b767df547cf2c97848eda0192d11ef"/>
+<rom name="Valis II (USA) (Track 51).bin" size="1427664" crc="9572b7ee" md5="1b5ac0791e1ed7d8ff7f52c648f080c9" sha1="6f7f1f4f96f799dcf6a7092d1b92bd2c6f4f3f84"/>
+<rom name="Valis II (USA) (Track 52).bin" size="1427664" crc="efbcb24a" md5="2da55ddeaf722fcd5016e54a7b0ff8ef" sha1="e63d1fefe7d0297287c5620b9f4857d2062c5e36"/>
+<rom name="Valis II (USA) (Track 53).bin" size="1573488" crc="fcf657d4" md5="1a5edce1a60a9a989346325a0a71e277" sha1="4b85e6abb10ed2546cc0ee117b2c7889b1e1e37e"/>
+<rom name="Valis II (USA) (Track 54).bin" size="1573488" crc="ce181d38" md5="bfb42a43295b4d3c0c0e71fa65d0f252" sha1="8b9b191b0a54be52771ba35cb3d72098825312bb"/>
+<rom name="Valis II (USA) (Track 55).bin" size="1495872" crc="483812a6" md5="4e93801e0be3d983f9f07720e89b64c7" sha1="85102f25a2757216e962d020d36951b73de86ce7"/>
+</game>
+<game name="Valis III (USA)">
+  <category>Games</category>
+<description>Valis III (USA)</description>
+<rom name="Valis III (USA).cue" size="6399" crc="930bb40e" md5="63ad5c1d2b9bdf365a7763ba5b15e6bb" sha1="14b8a547b128e1f240e9ecaf037ad5eb0861a6de"/>
+<rom name="Valis III (USA) (Track 01).bin" size="7916832" crc="22144d0f" md5="ad1067d0bcc2ffeea540d3b985c51188" sha1="3b472f5e80bbf8259e09f8e4f547567bddb02490"/>
+<rom name="Valis III (USA) (Track 02).bin" size="4078368" crc="1fea3963" md5="2aa65497cb619031070e59b79caec968" sha1="ce47a755d8919847b97d1f4d71dec19a839fc1bf"/>
+<rom name="Valis III (USA) (Track 03).bin" size="19048848" crc="ed84894b" md5="db3c0cbc8372f08d7b8eda69d296c62c" sha1="3e159a7bfcfa8d1354171546d6baa729fe1eec58"/>
+<rom name="Valis III (USA) (Track 04).bin" size="3440976" crc="0196771f" md5="d31b9c3b0cc1fd317a53eec57cf2a03e" sha1="11d2bed54b978095f2e199046490ddb75f9e2d2b"/>
+<rom name="Valis III (USA) (Track 05).bin" size="22793232" crc="eaedb49c" md5="11792f7b7a36a04bc181223573a0700b" sha1="1b401564342561381591032380941b47f5cbb4ab"/>
+<rom name="Valis III (USA) (Track 06).bin" size="1761648" crc="25841b12" md5="7ba50dc30da16dbea19a3b04bfc9ab09" sha1="bb354c5c0e539e57c4de9bc41686b135fc440a9d"/>
+<rom name="Valis III (USA) (Track 07).bin" size="5172048" crc="6c4c5f9a" md5="d7b59b17b06bd620c9bca3a474cb620b" sha1="890b28840b9353555c2ee8056ac406da371af1a0"/>
+<rom name="Valis III (USA) (Track 08).bin" size="1759296" crc="fb637076" md5="70a3e32cd3176f7d2d6cf19921e66710" sha1="fd3b353d5eb1dad9335c87d7fe5bd62dcf5ab6fe"/>
+<rom name="Valis III (USA) (Track 09).bin" size="3050544" crc="cdd4beec" md5="bfdfd29581e5a3f5b0020ad7547210e8" sha1="b0c225ef67ea152d4249ec63875b339c4019e8ac"/>
+<rom name="Valis III (USA) (Track 10).bin" size="1749888" crc="043e1fa8" md5="939dce7711db6f679af618dfad475830" sha1="42fac5bb0a898376376e7b861e317f81a323f384"/>
+<rom name="Valis III (USA) (Track 11).bin" size="5762400" crc="8ccc5685" md5="eae6ad4a6ffd47d6f480493cff1c4f1c" sha1="ad8560c58a0ad753ee3f88a89fe5537d46d4d002"/>
+<rom name="Valis III (USA) (Track 12).bin" size="1754592" crc="acb68cc2" md5="cfc74e6affaea120a980bb4f9bf49d88" sha1="1de04db75b184307f6ad5894eb3479ad6adf7230"/>
+<rom name="Valis III (USA) (Track 13).bin" size="9302160" crc="c2ac53d6" md5="81fb70dbd89f88f14fc066f4a89e82db" sha1="4d035b2cb9f650f1bdbe59d9a518854aad0e15ba"/>
+<rom name="Valis III (USA) (Track 14).bin" size="1735776" crc="cffaa186" md5="746513c0633b5e83c07ab3d2f2b14839" sha1="1838f956fa46feed5564519f304393bf3fd16942"/>
+<rom name="Valis III (USA) (Track 15).bin" size="9744336" crc="27aebf77" md5="608d014ab606af5c27719e526ead0e16" sha1="ba88aa52257e2412a1af8f813db5d2fd270160c5"/>
+<rom name="Valis III (USA) (Track 16).bin" size="1745184" crc="8f618378" md5="44f9094d7272063dc14fa308267958c7" sha1="e674b29fa1ba36989db34213bc4b101eb71712de"/>
+<rom name="Valis III (USA) (Track 17).bin" size="9645552" crc="cdd3e555" md5="6331bec55ebc4b2aae244f00a7347c22" sha1="03d062cab03d43301d4841e5c37de3585640a424"/>
+<rom name="Valis III (USA) (Track 18).bin" size="1728720" crc="532b0655" md5="dee39e7f8868c1b48a5a15354d0d1455" sha1="d912aa58da64bd9954dfc4fca8de16277ab65b0f"/>
+<rom name="Valis III (USA) (Track 19).bin" size="10875648" crc="7e143970" md5="29e5eb0a0221479b60d9619f87030a4f" sha1="e1d0fda8a12b46043e8e4a7af21e99e0375a3770"/>
+<rom name="Valis III (USA) (Track 20).bin" size="1728720" crc="6a14e7bf" md5="c0972dd991b242306e1bdf345e8aeb13" sha1="9e827572404a0039f8becb954be4ae5d85980bf4"/>
+<rom name="Valis III (USA) (Track 21).bin" size="10941504" crc="cacb20e1" md5="f60ef5c2103eca65010e4f1d56416ac7" sha1="ada79a834a50efe1e88d26119d5ccf9f8a9b3206"/>
+<rom name="Valis III (USA) (Track 22).bin" size="1752240" crc="9a9ddc08" md5="6cd0fa37f08f1ca647f3e95248a134d6" sha1="583093ea5a270b33ebf57cd4a94cc701a21ea44c"/>
+<rom name="Valis III (USA) (Track 23).bin" size="7467600" crc="e9d111cb" md5="b8363727064bb5adca8ffb45e4a289e2" sha1="6d82204e19148afb250530fed9dcd10a9bd19a13"/>
+<rom name="Valis III (USA) (Track 24).bin" size="1754592" crc="f3889595" md5="366361f217d305d3f7be14cb92931803" sha1="fa85e4721fd2af232eb1c41e43f1d3afd8704238"/>
+<rom name="Valis III (USA) (Track 25).bin" size="6435072" crc="698d67ad" md5="48ab1fd37f9b828a530ba5c8b85af1d2" sha1="4da5a4e47b18aa6cc947eb8f56dea91af1dd42cd"/>
+<rom name="Valis III (USA) (Track 26).bin" size="1773408" crc="8ee18f9f" md5="e10c93729f09c60ab902f66416711ae3" sha1="2389cf6838242c8fcc01473a5caa0221d4429072"/>
+<rom name="Valis III (USA) (Track 27).bin" size="8810592" crc="51e3c4ea" md5="690dc599393de7c661f2d8d0262de29b" sha1="c400cb5eff452ba8bee98c9297b2680907640280"/>
+<rom name="Valis III (USA) (Track 28).bin" size="1742832" crc="e0625bb7" md5="30a20672ec7ffb853a57610838deadda" sha1="097eeeddd37a926dec5df323aa92b13e6411581c"/>
+<rom name="Valis III (USA) (Track 29).bin" size="11235504" crc="2f64b64e" md5="3877c1d56f6735f5b434c12bfb7dc793" sha1="8c37b435a7c2f5c061f2d45644bc520bf014cbe0"/>
+<rom name="Valis III (USA) (Track 30).bin" size="1745184" crc="82775646" md5="850620961704bde65eefba21cf7f5f17" sha1="d34f62f2cd5baa593b82fa77aed79b828d9f1114"/>
+<rom name="Valis III (USA) (Track 31).bin" size="14069664" crc="7fb8cae9" md5="1b7115a33b86ea41b5383014d1ba9608" sha1="248fdd4fa3e084ae59f8a89bfc2cf3f48a9ae147"/>
+<rom name="Valis III (USA) (Track 32).bin" size="1773408" crc="2e1e32b9" md5="286510d82383a035f86ac9b3c86d3b82" sha1="bb30d61d196c7cfe99bf946bb248004f2e5dd8e2"/>
+<rom name="Valis III (USA) (Track 33).bin" size="6058752" crc="6623eaa1" md5="4348449910a0b60c16dc21bbf51fe9e8" sha1="706fe324c0f797e299f01ffa58dff3a891837dbf"/>
+<rom name="Valis III (USA) (Track 34).bin" size="1766352" crc="47960e25" md5="c672c63fa3cb3f3932667cad4b417a28" sha1="f9073f66ed7fe4c1e398a8214c6e506dbadb846e"/>
+<rom name="Valis III (USA) (Track 35).bin" size="7025424" crc="0c583e13" md5="76a990206326f373208373e61d9c2a41" sha1="545860a837b600b338e4353bd9bb6240ade619e8"/>
+<rom name="Valis III (USA) (Track 36).bin" size="1721664" crc="745144f5" md5="d6e6fd4342e038bd5580aad458688a60" sha1="d5068b4077b32989486e07ab658a5279a606fca9"/>
+<rom name="Valis III (USA) (Track 37).bin" size="51751056" crc="387fe6b3" md5="4a597841cbbc04e59c13d6b5ad9560ba" sha1="dd7f2b8626b70388b0b7c13deeb23b3893f173a9"/>
+<rom name="Valis III (USA) (Track 38).bin" size="25041744" crc="b4b00481" md5="6b0163dd35e58d5136a64aa9984689db" sha1="feb856a6fcdb9ff56d9ca6c2138d30afd84544da"/>
+<rom name="Valis III (USA) (Track 39).bin" size="1933344" crc="0c90e602" md5="956e507893fba7237202c59a960e4a18" sha1="d5249f4d37496e3935baac273d6ff9aed5099210"/>
+<rom name="Valis III (USA) (Track 40).bin" size="21320880" crc="ea825215" md5="04c82ded9ff625a33b432e2258fb4a8d" sha1="e59105387a07bcc5edd074dbd20faadd704027dd"/>
+<rom name="Valis III (USA) (Track 41).bin" size="2213232" crc="0d00ed9c" md5="f457409024b5603496a1c97bddbec5cc" sha1="c3fd781771440f64cdcec7425122015f039d99f6"/>
+<rom name="Valis III (USA) (Track 42).bin" size="2279088" crc="9317a80d" md5="3303d8eb7f73e36578009866cc40a547" sha1="0708c52b3c5a30e918427bc4ef928fa7f82925d0"/>
+<rom name="Valis III (USA) (Track 43).bin" size="11487168" crc="74572742" md5="5afd9a5e3042c2111358cd56ed96bea0" sha1="8096558fa6584c041e1a2bc60b8404b60331eb6e"/>
+<rom name="Valis III (USA) (Track 44).bin" size="21922992" crc="40f3157a" md5="4f81a114cbbea05e664e8a52c0a351f3" sha1="aac211a3d201fbf4fb19cfc6d2c0ffbe746f471f"/>
+<rom name="Valis III (USA) (Track 45).bin" size="2032128" crc="0dfafe6f" md5="31c00263de34244c315d76b5ee34517f" sha1="a4827c8fded131a502ee6f645da9225efa02b91a"/>
+<rom name="Valis III (USA) (Track 46).bin" size="2262624" crc="f5de56c0" md5="1c773469d9fc05efa24b0d9b34815341" sha1="2f2496485022be588e2f86bdf599ad68f1c0bb7c"/>
+<rom name="Valis III (USA) (Track 47).bin" size="24430224" crc="2f378791" md5="c4f69ac3bc3b8d8c4df56cd922c3327f" sha1="0ac1d620cd4fc0c5b2ef6e1595f916d3320fe9e0"/>
+<rom name="Valis III (USA) (Track 48).bin" size="2229696" crc="70c73f6b" md5="c49f630f3cc8c8aebd115d6a7b9a87b0" sha1="64cd1cff8010573cdedd472d2432dad592fa93c0"/>
+<rom name="Valis III (USA) (Track 49).bin" size="2246160" crc="cfc483cc" md5="fcde2850f01125306f329a205eef3254" sha1="7895adefe3c4fbe28e2a5b1ba741d2bc750a36b4"/>
+<rom name="Valis III (USA) (Track 50).bin" size="30065616" crc="d7357c5c" md5="40fa3f7353c8ea3fc78292cf97b6f10a" sha1="b8b3b99fc1803436fd7f04e94c43e9f2379d9a2b"/>
+<rom name="Valis III (USA) (Track 51).bin" size="1902768" crc="ab1c26c6" md5="194f88ea13fe99d8bc6dffe58ee860a9" sha1="de22cab58509a4a523916fe5eb9a5581c302cf3b"/>
+<rom name="Valis III (USA) (Track 52).bin" size="23529408" crc="3977954f" md5="14e54302110492a1dc32cd1cf45299b3" sha1="28f7ff0ba7839795b9d90098f82ebe08801f8129"/>
+<rom name="Valis III (USA) (Track 53).bin" size="3852576" crc="a5b06a70" md5="236e6662e31341b0aeb332215d9f7268" sha1="dd7438ef03bea34c42ae81774cf84bdce8435bb7"/>
+<rom name="Valis III (USA) (Track 54).bin" size="11536560" crc="dcd2c0ee" md5="b0197964d13a38d2ef2cb7ee89a41767" sha1="3b1f9d6d23fb7950f288061ee7841b32c7e62168"/>
+<rom name="Valis III (USA) (Track 55).bin" size="22282848" crc="6f452bd2" md5="3059a972b757c78c8aca0db26c827367" sha1="1f9e13cec30717be4ba441182f5139bf17330e65"/>
+<rom name="Valis III (USA) (Track 56).bin" size="2490768" crc="0f796ffd" md5="c7a4cb7f38436fd2a2aa6d913749744e" sha1="c30f9b91d33b0d4f7e2d4bb871757a6e9d93aa18"/>
+<rom name="Valis III (USA) (Track 57).bin" size="2328480" crc="b7fe52fb" md5="fe8a06739097e56fa803369234fcecfb" sha1="a34fb9889647db53b01ecd9ffe8a64544fcb6a6d"/>
+<rom name="Valis III (USA) (Track 58).bin" size="2507232" crc="628beaeb" md5="617588bda91b9f50ab9faad0a0bdfba7" sha1="b66fed872739a2715a0b5e7f9d7e12f8e59c6b73"/>
+<rom name="Valis III (USA) (Track 59).bin" size="22282848" crc="d4f5d795" md5="62517e5238070906c9cd347380aaa8db" sha1="dbd96ba1f612fd3b3e124dd6709c3a555cb514e7"/>
+<rom name="Valis III (USA) (Track 60).bin" size="2394336" crc="9425e491" md5="a137d85bbd5f10f961ab1ac4beb43205" sha1="85c651df91229f1f2d1c0dec43f6632db6354657"/>
+<rom name="Valis III (USA) (Track 61).bin" size="3440976" crc="4a5e0582" md5="c5d951ae01ef4674247ed646aa08b56b" sha1="a007d7ffdea65e37a663ef97f00df9b264170ef8"/>
+<rom name="Valis III (USA) (Track 62).bin" size="2182656" crc="345a1b80" md5="f9163d4aa06f0c5457b094f4dd0841b6" sha1="4551f328e1d9bd2e5b9112bd166d748c6e546ebe"/>
+<rom name="Valis III (USA) (Track 63).bin" size="3727920" crc="1ff46dfe" md5="6b24b1c069000ac31d271421f5b8d175" sha1="042711ab4f1d1c63206ccb0b2b3c572e8cfedca5"/>
+</game>
+<game name="Where in the World Is Carmen Sandiego (Japan) (En,Ja)">
+  <category>Games</category>
+<description>Where in the World Is Carmen Sandiego (Japan) (En,Ja)</description>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja).cue" size="4324" crc="cf1d4d35" md5="c08a1c6a6cebf8fd8a2663f96e80e2a9" sha1="01037be632b262eff56a64fa65ac2f9b57f2e83d"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 01).bin" size="7914480" crc="99fe5823" md5="b3b81e6593a5cb98e069d5fd90cb30e8" sha1="1e49574e2ede6a3dd77fe32d37e7f64d2db86049"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 02).bin" size="9349200" crc="e7ca0aae" md5="b95bb14781bbea9b13a342626dc1b8da" sha1="dcd94dde22a0b6cab1306ea3a59541cf149f498f"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 03).bin" size="6874896" crc="f4922b5c" md5="17af28d135da2fadc534cc7171e2f1ab" sha1="bf14347cf6820681bd056fbaf338e1b0d81fa40c"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 04).bin" size="10012464" crc="72f92beb" md5="248ad34e866af10b8e320815143f1981" sha1="e9d49700ba88cfdf2da60dfec6d2774ed18376dc"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 05).bin" size="12141024" crc="e8c97de2" md5="d18a726cc56c18ec43312fef2db63ff4" sha1="3eab0019698259a9582acb9315bbf74aff174619"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 06).bin" size="17630592" crc="fd8e3cdb" md5="04e3e8ab51eead1375eac937b2721ca1" sha1="b92905ddc2d6a12e5283d4680835865a7b1bda36"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 07).bin" size="11388384" crc="c68e2ba6" md5="711832401b9f95069eec35b7e08b6281" sha1="e371d6d89455d245c143fb6bfd7f0c3ab8d79869"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 08).bin" size="10814496" crc="9e0277aa" md5="78024c82c458d421ec11c6a7c6d64ea9" sha1="e93eb5c347e4fe30c99168ac933d071508deeb53"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 09).bin" size="11682384" crc="412f70c5" md5="9c5cee54bd2cb0d6e4a03c1611d09bf0" sha1="918dc30f27139805287f41a964ce838b4bc9a5f3"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 10).bin" size="14271936" crc="969c7ffc" md5="ade5d8ae8d648f2c1866bc95ab16a574" sha1="151611586b83f06195550b552c6d45e393fd84b4"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 11).bin" size="9683184" crc="03d32a54" md5="affabf0ce4799bc5f31f2f9e26e29df4" sha1="56530f9143d1a5161b24a63118903020e99c7865"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 12).bin" size="8700048" crc="8bdac58c" md5="d64d2e621a26c7a7fa8a3da04dfdd456" sha1="7c4cc829f08ff3d38731079ffec72310f8996dc4"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 13).bin" size="9191616" crc="9f068938" md5="b97b9f58a8580535405f0964977b450b" sha1="dee64a5f156b3bc4ca01130df5a2a761628eda15"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 14).bin" size="8488368" crc="98d59775" md5="225b1bbd43a90080f4712296047b3215" sha1="dedc7808361594912a7c07250acf2ffc48d1718e"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 15).bin" size="10240608" crc="3ea736d6" md5="a693b655b6827f4b66f77408965bf5f3" sha1="ef18886eb2c3e578baad2fc6e92a23a09e2b452c"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 16).bin" size="6816096" crc="af3cc9a6" md5="9f0773810b250d7715f496059238a38b" sha1="3bb2f737108f6a207d8e6dcb63d6b942d49ad4e4"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 17).bin" size="12830160" crc="f81ea054" md5="a7394079c54fdad4831c958bb993e272" sha1="c0261e7c5c35b840b50c3c9e217c8f548fb3f711"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 18).bin" size="11814096" crc="06a51b8e" md5="9e17db25c005139f0b57aa83d6565fac" sha1="3897806931342031bbc7650cf914898be4a5385c"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 19).bin" size="10191216" crc="41592b09" md5="75505431e684c375fc98fc5d7bd51c19" sha1="d64c09520dfe3b6a1f90eccf6f864d8171c9510c"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 20).bin" size="9029328" crc="e3910fed" md5="e7dcd674470437d15f1a011aeec12217" sha1="7aa1e26c67ba9ccd1f35619272d6836700eac844"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 21).bin" size="10355856" crc="2763d555" md5="b98dbfe48e39c288e7596430204cdcf5" sha1="444b20ce11e391e83a2be85ae4e46c32cbba255e"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 22).bin" size="8732976" crc="d8b20ee9" md5="376aefae0f491eacb062cce9b0ac41e0" sha1="3c969e1977bf72cfe7bbec4016101e60df27fb05"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 23).bin" size="13255872" crc="57a96027" md5="b3cedcc313d9264e03e3629eb1f3fe4e" sha1="899ad1f1dd664bad852a10ff628c38b6841a7c9f"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 24).bin" size="7914480" crc="1bcf467f" md5="5b1df1a21f62998db9d0be620a150a3d" sha1="84905c4be2deb39555b24dcd313fdcb402a4bd18"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 25).bin" size="7980336" crc="c937d6f4" md5="202ba5a0ebd7bf4b267585dfb9ab9c26" sha1="270c8847f79657d3dd0bfc704973b2e82578714e"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 26).bin" size="12533808" crc="2d466749" md5="15dc6eec7cc2a4bb8fb2453cffe363e7" sha1="a6228a6906176e7fade6b6c9dedfa2858c9fce9d"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 27).bin" size="9880752" crc="66f31dce" md5="31b7f71f1805275d56386039b8566981" sha1="0aa5c10b1e75c1ddb60cf6fdc8f0723e9cf35733"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 28).bin" size="8356656" crc="29819ac0" md5="22cb3498917c55e83d9a0a9bbb4a18c5" sha1="1463b1c1e1cf6e2ffa40ae1cb5e10607eb573e5a"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 29).bin" size="13371120" crc="469082c1" md5="0afdab5e62e0dac0bf402c07c26f92af" sha1="5e539c86882b5cbd7270090f4fb44cd7abd8ea22"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 30).bin" size="13272336" crc="6f95203f" md5="d8e5439c7eb5b9b8483cb93e78cc292a" sha1="fd650a5f57fbeb801bde572e9cd6f444240a7492"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 31).bin" size="17430672" crc="5163991d" md5="3d84a67de792bb10e19e593a5c8368a9" sha1="d13bf10ec9f2ac462e27e8f2b02b993721aeaf63"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 32).bin" size="11108496" crc="e0000d59" md5="0ee621295ccfd33a1945785535503e6c" sha1="483709f717590549c7ca732c0a74679551d42a6d"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 33).bin" size="41058864" crc="8e9d36c0" md5="fbd9d20bbd1857121d3b004ead05627e" sha1="40ced9470240f3ccdcc41566fbe4fb0cef2e68e6"/>
+<rom name="Where in the World Is Carmen Sandiego (Japan) (En,Ja) (Track 34).bin" size="35477568" crc="9b1d6d21" md5="3823a41d16d2a66c8cea11c1c9c23d9d" sha1="aadc046861504a51a7f86a80e646c1fd1261ddcc"/>
+</game>
+<game name="Ys Book I &amp; II (USA)">
+  <category>Games</category>
+<description>Ys Book I &amp; II (USA)</description>
+<rom name="Ys Book I &amp; II (USA).cue" size="4030" crc="b48cd34a" md5="fb84af710dce14c3befdf7a5e020f7f2" sha1="ee92126ae3d8c3013c4d91b24320e2120fb217f3"/>
+<rom name="Ys Book I &amp; II (USA) (Track 01).bin" size="7914480" crc="17623548" md5="77232c745e40cc155ad72c1b79780986" sha1="e1baaf01eee215def8bd6f6aa080e3a41ffc74f4"/>
+<rom name="Ys Book I &amp; II (USA) (Track 02).bin" size="20307168" crc="8e029ac2" md5="e8db8109220893ad3aa9506cf7f13c23" sha1="d0498146b90725fee8fc2b00b2aa1ce47973549e"/>
+<rom name="Ys Book I &amp; II (USA) (Track 03).bin" size="22148784" crc="caa50bd4" md5="d7fc212caadd93212128f0aaa0180e6b" sha1="04825a30e44691b7238a6a8d304816311d1d7112"/>
+<rom name="Ys Book I &amp; II (USA) (Track 04).bin" size="21781872" crc="271a0ab2" md5="1b16489b50e4e48940dcb3f11374ac1d" sha1="b65fdfc20106c258640473227ec3994be3c9d5f4"/>
+<rom name="Ys Book I &amp; II (USA) (Track 05).bin" size="22278144" crc="d56fef33" md5="ef86a17a96fbe433f61059b6c72417d4" sha1="378f399bd47028f8e0ff6cf45ec650bc926d1a36"/>
+<rom name="Ys Book I &amp; II (USA) (Track 06).bin" size="22057056" crc="e591cddf" md5="b2d604c9b5389cba584955236afb0d0b" sha1="2f134e4c7620430d166b19bd56042bb7b164e021"/>
+<rom name="Ys Book I &amp; II (USA) (Track 07).bin" size="19728576" crc="dfba60db" md5="7954b8df056d3ab84727017d3ebe66e9" sha1="c87e3be6d3c26675a67bd0db68cc1d558ac0b08b"/>
+<rom name="Ys Book I &amp; II (USA) (Track 08).bin" size="22501584" crc="b5be0a75" md5="cf153e4a0d9783f482a972f1b3eaf365" sha1="9863d03a950c5a8158582dc97498fa2aebbbafc9"/>
+<rom name="Ys Book I &amp; II (USA) (Track 09).bin" size="25020576" crc="492a13cf" md5="33793db10ab121a1f59f3e8da7011f90" sha1="e49f860887e8a2c410eacfb7cc04f5d95b19c761"/>
+<rom name="Ys Book I &amp; II (USA) (Track 10).bin" size="24498432" crc="d11e92d5" md5="fa615ed3d2a0696d88d6e0f0ae592598" sha1="af3c35eaef2c4ba801e2c14296766de5e67e1078"/>
+<rom name="Ys Book I &amp; II (USA) (Track 11).bin" size="23216592" crc="848ec05f" md5="e7b9b66fe98727bcb8f66d5eb8f7dfa2" sha1="166158d8622ba79691e823ee5b9238235e2af179"/>
+<rom name="Ys Book I &amp; II (USA) (Track 12).bin" size="20951616" crc="d14da754" md5="3d12991cd7144428dc3255d2d611a511" sha1="f940419bca7ab8996856b67d5d3d3e68812a9a4a"/>
+<rom name="Ys Book I &amp; II (USA) (Track 13).bin" size="21083328" crc="8b27ceba" md5="b45855644d239bf7d35dd1b9c894afd0" sha1="3cc5bc8881ff6c56eec2dcd791261b7bb51eb8e9"/>
+<rom name="Ys Book I &amp; II (USA) (Track 14).bin" size="31867248" crc="c13b2b4a" md5="36e1d9d8afe0b55227240a9ac5c78238" sha1="55370c65216e05bcda68b04ce869d85e2af3c4e5"/>
+<rom name="Ys Book I &amp; II (USA) (Track 15).bin" size="31340400" crc="b3c362b9" md5="dca8d9ef83c1be9cbc7e7e08c7fd6c6f" sha1="4e3afbd89c33d34463f91f5f1adc1cedabc01fac"/>
+<rom name="Ys Book I &amp; II (USA) (Track 16).bin" size="25432176" crc="3bbb5041" md5="3359fe763cde40afc2cc04d708f36107" sha1="a6f0189253237f3d0e14686e1b5a032fd493cb61"/>
+<rom name="Ys Book I &amp; II (USA) (Track 17).bin" size="17710560" crc="be7cd2a9" md5="5a9f0ee85810a6f389589f14e6ee3c82" sha1="2403a1af106035e204454a61a3574349b86149df"/>
+<rom name="Ys Book I &amp; II (USA) (Track 18).bin" size="25166400" crc="41d17cff" md5="17f2f45ae4f0772ec4c82ccb00d0b0bd" sha1="7b47b979ef10172933f5c81b4c86a1797b9f2bef"/>
+<rom name="Ys Book I &amp; II (USA) (Track 19).bin" size="17435376" crc="4acdee90" md5="9f68ba4afb9e7382df6dca0927a3267e" sha1="28f2acab6bf919f7e6d267c0d21de93457f10f2b"/>
+<rom name="Ys Book I &amp; II (USA) (Track 20).bin" size="52905888" crc="794c6325" md5="b4cdd297eeb4bf1024eada52a8e3ffcb" sha1="752aa62feedc79c8d4692ccce78f8b2a4ba76e45"/>
+<rom name="Ys Book I &amp; II (USA) (Track 21).bin" size="29101296" crc="62d5945d" md5="6e7fb8164106b7cf644db4de9bb8d3ba" sha1="a9b8cce8855a8d068a3feb5a4ad70f6ebd66a6d4"/>
+<rom name="Ys Book I &amp; II (USA) (Track 22).bin" size="20187216" crc="bf176f7a" md5="4ce02637626a592f0594d6c667a69440" sha1="faa329b2c348a21c1bcc4e8a91f7c591ab154352"/>
+<rom name="Ys Book I &amp; II (USA) (Track 23).bin" size="20676432" crc="0aa01eee" md5="3939d7553a385bd594ee3b5b02e0ea7b" sha1="09c121d00d1c292ed1f20c6fac63fd82b9f1e956"/>
+<rom name="Ys Book I &amp; II (USA) (Track 24).bin" size="11136720" crc="fdfda849" md5="04cfbcd893248b0349abad452420581f" sha1="f4d5e2e367f3a40bff6bcc724f3a2a2e9433c34b"/>
+<rom name="Ys Book I &amp; II (USA) (Track 25).bin" size="23529408" crc="9b6801a8" md5="8a68ade4f3c85e4b90e8261947f57aaf" sha1="906b56d20cd05939e390cae281c978d855221472"/>
+<rom name="Ys Book I &amp; II (USA) (Track 26).bin" size="29240064" crc="8518782d" md5="3013b4527fcb7773d13b5072a983fd09" sha1="09064bf1ebf30ee83d0de23d2b854608acb7d8a3"/>
+<rom name="Ys Book I &amp; II (USA) (Track 27).bin" size="34019328" crc="9190d971" md5="4a2579c3dc4ec1d978e6161832e79fb1" sha1="ca81f0623cdbc2d8a946c7c6d5a153be96d12bfa"/>
+<rom name="Ys Book I &amp; II (USA) (Track 28).bin" size="10362912" crc="e5f45a4c" md5="a9080dff4dbc67a8c7e94b9006eb5b14" sha1="f64055aa2eb1fc91cb41b913345253e03c3a112e"/>
+<rom name="Ys Book I &amp; II (USA) (Track 29).bin" size="3295152" crc="6bff9f87" md5="87e902343388fa4e0e52b0d50f20cc63" sha1="9448e6c3ed5fa70de96a4994dde3f9a9392e45a7"/>
+<rom name="Ys Book I &amp; II (USA) (Track 30).bin" size="10591056" crc="e89d4251" md5="4623a8b8b58d41c634fac68d43e4a371" sha1="14ddd80f46ec5fe5e63ae56a145ff1962515df66"/>
+<rom name="Ys Book I &amp; II (USA) (Track 31).bin" size="7077168" crc="b610f3ff" md5="eb0ef3986148ab8e8f504b46ea51f340" sha1="7ce6af520042464b20f48f3ca52ba2632a24170e"/>
+<rom name="Ys Book I &amp; II (USA) (Track 32).bin" size="3934896" crc="ec1d08a5" md5="70bcd648d34297dd6f8eb1e630526a01" sha1="64dee71fe153522c588d5596b2a89fb0e91c08c1"/>
+<rom name="Ys Book I &amp; II (USA) (Track 33).bin" size="3391584" crc="3d1dc160" md5="1bb9c72d1c9f0000c9912cb1e4d75b2e" sha1="2e72bab71ad13bc70e9e5fc91666486f2e27f0c4"/>
+<rom name="Ys Book I &amp; II (USA) (Track 34).bin" size="5908224" crc="f2d52bec" md5="4526c389a94a03f7afebb29a07505f8e" sha1="7ab0929090b5e17b9729b06001106e2105759f5d"/>
+<rom name="Ys Book I &amp; II (USA) (Track 35).bin" size="1919232" crc="d339b0f6" md5="fa1952fbe0d210960e6b5a3bd4aa2819" sha1="ab697306c04be92dc15f5db1415c87dea95b1e5c"/>
+<rom name="Ys Book I &amp; II (USA) (Track 36).bin" size="11534208" crc="f265c4df" md5="98c553c1a0141e6ffa8156903945383c" sha1="7a1332dde33da2f52189beea6d1f961d96ce6f37"/>
+<rom name="Ys Book I &amp; II (USA) (Track 37).bin" size="12566736" crc="4a818752" md5="cb7d310830915ba628ae7886df5c0032" sha1="259becc1de7d845788e85f647e1406b670a5db4b"/>
+<rom name="Ys Book I &amp; II (USA) (Track 38).bin" size="11593008" crc="3c97f070" md5="9e64ef341190c34c046ed337ceb4b7ac" sha1="44ae1ba226cf7b0fd3cd7b77392cf783e6b560df"/>
+<rom name="Ys Book I &amp; II (USA) (Track 39).bin" size="2678928" crc="3ca46d90" md5="b828ccdcc52bd5b5f578c3bbd2ba434d" sha1="6367aec7a0e0cf9f926f8f1cd0237a6b4e98b38f"/>
+<rom name="Ys Book I &amp; II (USA) (Track 40).bin" size="8403696" crc="78bf9127" md5="2a6e6752fb8e80f85edc36870564843e" sha1="d0e0aec58719dd0393ef8f7545714d448df6d269"/>
+<rom name="Ys Book I &amp; II (USA) (Track 41).bin" size="13319376" crc="9a79f72a" md5="b0eede10791152a5cea1a0edd78d2fcc" sha1="8316a82513dcd15d44fc2e974144e1c9c0430975"/>
+<rom name="Ys Book I &amp; II (USA) (Track 42).bin" size="6936048" crc="9b5d97c7" md5="65bd31136303c806067c0983169ba939" sha1="86f36efef5ba58ea9df15955b7a2628e74d94015"/>
+<rom name="Ys Book I &amp; II (USA) (Track 43).bin" size="11334288" crc="9d41bf61" md5="cc9f0fe2c81a371d0898a395c1a8d0d2" sha1="9bf182d1f25c4f80fd86cafbf120dfd19eec6358"/>
+</game>
+<game name="Ys III - Wanderers from Ys (USA)">
+  <category>Games</category>
+<description>Ys III - Wanderers from Ys (USA)</description>
+<rom name="Ys III - Wanderers from Ys (USA).cue" size="2674" crc="d9dbba77" md5="2d221bf9c1ac24aa1c8a4606ff3e7c04" sha1="e0dca97387666d24346c9d13b05321d7d8e597d0"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 01).bin" size="7916832" crc="808d9f0d" md5="d86aa8050da37330834a332f92555366" sha1="e7378abbc613e76c9470d33f1f2affdf0b3b5b99"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 02).bin" size="58701216" crc="2438e447" md5="10ddbd55a98baf64df1c64064ef17242" sha1="fda4ecab121db0ab443956dcdf236a0f38868f73"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 03).bin" size="4835712" crc="5332c91c" md5="4e0571af21888f64b233b0600d2d5442" sha1="7879bb8f60d2e385e0e715324d2e8c6883dfa277"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 04).bin" size="20582352" crc="1918beea" md5="d22b6ad544095ea5672181b0b6995cfd" sha1="37b60ac940d9f43e2c8ad03898b584fa4914571c"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 05).bin" size="19222896" crc="1857f2a7" md5="4df001a78af4fb65c05bdc4827d8ece8" sha1="e8829f2dc3a122de3a119a4133ac906ad50d5544"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 06).bin" size="20394192" crc="cf563210" md5="2c3a4f5b398020b4d0cf2f5e7ce2fd8c" sha1="9c12e65fae82069b428512897b2c4b44788638ad"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 07).bin" size="22073520" crc="e3c7e08e" md5="8ab6068bb6b91ceae467a755258f6429" sha1="caa83bfeb45a9a0f58122259b5cf5d0d575d264e"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 08).bin" size="31897824" crc="d223b4bf" md5="bb4f6c6e61f785959fa983f15f3cb1d6" sha1="6455bd916640739928fe5c5734402ff6adb61b8e"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 09).bin" size="53526816" crc="0e587598" md5="481f8a1576eb96fb98cf6fc3db38d531" sha1="185aef464a58e556d6af60c619730b7a8063e55a"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 10).bin" size="31911936" crc="973145be" md5="3f8c2341033146a8f5eab7da89f35e22" sha1="b3b60474b249e5d5a50fa56cd1f85207c291a6f8"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 11).bin" size="30651264" crc="bc09afdf" md5="c9786a85210637340f105fa77a074994" sha1="3adb73f7ae7d43d8a752f1916c2b03cfda57748a"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 12).bin" size="30909984" crc="76109b1d" md5="37596ce31a32aebd8c239f21c5ced25c" sha1="d99119665547bbd2d553fe2cb1b39fc2f6949087"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 13).bin" size="51586416" crc="06d4db23" md5="a7534e5fdd8fb16d4bdbd1482c932141" sha1="c5fb6df79da3722f840d3989036d2c07bfd200cd"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 14).bin" size="2754192" crc="d90f9bd8" md5="439d8ffaafcd739cd63fd91bfb37680c" sha1="ee2630d16c9267c457130c1eeee30e8dd1b4b734"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 15).bin" size="29764560" crc="0bfdc623" md5="e759bb87032ae2f5bbc749199153d5c2" sha1="6b6ddf53396c520a2b6e9e069c0c383f18a4f19d"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 16).bin" size="32443488" crc="373b6b1c" md5="3b0ebe92af1230d9e3f3662a22624750" sha1="6a129d77e0c0d0fa95cb58d29c4af88f5834d30b"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 17).bin" size="29896272" crc="bc54618b" md5="ab31d824ff1b1024024b2924265d76c8" sha1="477616de3c1574d0bbd6488bf5e21431634b7b52"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 18).bin" size="31610880" crc="503bc1d7" md5="3f76c56bb75653700ee49389e40c4812" sha1="8298b6a45dd32082ea56248f7aa4ab65eb627a53"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 19).bin" size="14902272" crc="81c310ef" md5="ebbd034861b7a44133a11bbfb37f605a" sha1="e94bdf286859b8bd203f9316fda48456820e15dd"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 20).bin" size="53077584" crc="2b56b52d" md5="cd06ebff62cfbfdb117c93e9c54bd4fe" sha1="d12dcce4732f24468a4ec1c4b5c786b0c374bda8"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 21).bin" size="26728128" crc="8f316a33" md5="d8776c300f81cc8128498bf3f9c335a1" sha1="d7b6f0f2f9c4194050e1246211c54ca612431f6c"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 22).bin" size="48295968" crc="9f4587d6" md5="120df127cbcecb8791454598a705f90a" sha1="458cadd5c7d5cf6c778ae585680d054bddad420f"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 23).bin" size="19777968" crc="243b3044" md5="3ff8edc157e37213ef6074053837d171" sha1="a0457bb9264a781643e554a97e424e5055047df1"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 24).bin" size="39774672" crc="6bb7cce7" md5="a34a0cd1cda4c8a20d08a72c854ff769" sha1="23525910e42b19e10b189ae66d2c4251511522b6"/>
+<rom name="Ys III - Wanderers from Ys (USA) (Track 25).bin" size="2693040" crc="6d9cc4d5" md5="9ff4bb445a53c521381a3c12fdcd9ee1" sha1="9933733adc4c463bf9ac5c7b22ba343efc34d0c8"/>
+</game>
+</datafile>

@@ -1,6 +1,6 @@
 DAT Filter AI - Filtering Summary
 ==============================
-Date: 2025-05-08 10:33:49
+Date: 2025-05-08 10:43:02
 Original game count: 77
 Filtered game count: 77
 Reduction: 0 games (0.0% of collection)
@@ -15,10 +15,10 @@ Filter Criteria:
 
 Top 7 Games (Highest Quality Scores):
 ----------------------------------------
-1. Atari PAM System Test (USA) (v1.02) - Score: 8.00/10
-2. Zenji (USA) - Score: 8.00/10
-3. RealSports Tennis (USA) - Score: 7.70/10
-4. Mario Bros. (USA) - Score: 7.60/10
-5. Zaxxon (USA) - Score: 7.40/10
-6. Castle Crisis (USA) (Unl) - Score: 7.20/10
-7. Atari PAM Diagnostics (USA) (v2.3) - Score: 7.10/10
+1. Countermeasure (USA) - Score: 7.70/10
+2. Jungle Hunt (USA) - Score: 7.40/10
+3. Star Wars - Return of the Jedi - Death Star Battle (USA) - Score: 7.40/10
+4. Wizard of Wor (USA) - Score: 7.30/10
+5. Gorf (USA) - Score: 7.10/10
+6. Castle Crisis (USA) (Unl) - Score: 6.80/10
+7. Super Cobra (USA) - Score: 6.80/10
