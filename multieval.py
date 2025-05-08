@@ -31,13 +31,46 @@ def get_available_providers() -> Set[str]:
     """
     available = {"random"}  # Random provider is always available
     
-    # Check for OpenAI API key
-    if os.environ.get("OPENAI_API_KEY"):
-        available.add("openai")
-    
-    # Check for Gemini API key
-    if os.environ.get("GEMINI_API_KEY"):
-        available.add("gemini")
+    # Import our API key checking utilities
+    try:
+        from utils.check_api_keys import check_api_key
+        import test_api_keys
+        
+        # Check for OpenAI API key
+        openai_exists, _ = check_api_key("openai")
+        if openai_exists:
+            # Perform actual validation
+            print("Testing OpenAI API key...")
+            success, message = test_api_keys.test_api_key("openai")
+            if success:
+                available.add("openai")
+                print(f"✓ OpenAI API key validation successful: {message}")
+            else:
+                print(f"✗ OpenAI API key validation failed: {message}")
+        
+        # Check for Gemini API key
+        gemini_exists, _ = check_api_key("gemini")
+        if gemini_exists:
+            # Perform actual validation
+            print("Testing Gemini API key...")
+            success, message = test_api_keys.test_api_key("gemini")
+            if success:
+                available.add("gemini")
+                print(f"✓ Gemini API key validation successful: {message}")
+            else:
+                print(f"✗ Gemini API key validation failed: {message}")
+    except Exception as e:
+        # Fallback to the old method if there's an issue with the new utilities
+        logger.warning(f"Error using API key validation utilities: {e}")
+        logger.info("Falling back to basic environment variable check")
+        
+        # Check for OpenAI API key
+        if os.environ.get("OPENAI_API_KEY"):
+            available.add("openai")
+        
+        # Check for Gemini API key
+        if os.environ.get("GEMINI_API_KEY"):
+            available.add("gemini")
     
     logger.info(f"Detected available providers: {', '.join(sorted(available))}")
     return available

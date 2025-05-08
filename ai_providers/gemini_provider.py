@@ -44,7 +44,7 @@ class GeminiProvider(BaseAIProvider):
 
     def initialize(self) -> bool:
         """
-        Initialize the Gemini provider with API key
+        Initialize the Gemini provider with API key and verify it works
         
         Returns:
             bool: True if initialization was successful, False otherwise
@@ -56,16 +56,39 @@ class GeminiProvider(BaseAIProvider):
             return False
         
         try:
+            # Configure the API
             genai.configure(api_key=self.api_key)
             self.model_obj = genai.GenerativeModel(
                 model_name=self.model,
                 generation_config=self.generation_config
             )
-            self.initialized = True
-            self.logger.info("Gemini provider initialized successfully")
-            return True
+            
+            # Test the API key with a minimal request to verify it works
+            test_prompt = "Respond with the word 'success' if you can read this."
+            self.logger.info("Testing API key with a simple request...")
+            try:
+                response = self.model_obj.generate_content(test_prompt)
+                if not response or not hasattr(response, 'text'):
+                    self.logger.error("API test failed: No valid response received")
+                    return False
+                    
+                self.logger.info(f"API test response: {response.text[:50]}...")
+                
+                # If we got here, the API key is valid
+                self.initialized = True
+                self.logger.info("Gemini provider initialized successfully with verified API key")
+                return True
+                
+            except Exception as test_error:
+                self.logger.error(f"API key validation failed: {test_error}")
+                # Clear out the provider since it doesn't work
+                self.model_obj = None
+                self.initialized = False
+                return False
+                
         except Exception as e:
             self.logger.error(f"Failed to initialize Gemini provider: {e}")
+            self.initialized = False
             return False
 
     def is_available(self) -> bool:

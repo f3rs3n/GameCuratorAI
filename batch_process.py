@@ -23,7 +23,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-def process_dat_file(input_file, output_dir="Filtered", provider="random", batch_size=10):
+def process_dat_file(input_file, output_dir="Filtered", provider="random", batch_size=10, allow_random_fallback=False):
     """
     Process a single DAT file using the headless application
     
@@ -32,6 +32,7 @@ def process_dat_file(input_file, output_dir="Filtered", provider="random", batch
         output_dir: Directory for output files
         provider: AI provider to use ('random', 'openai', or 'gemini')
         batch_size: Number of games to process in one batch (for API efficiency)
+        allow_random_fallback: Allow fallback to Random provider if API key is missing/invalid
     
     Returns:
         Tuple of (success, time_taken)
@@ -56,6 +57,10 @@ def process_dat_file(input_file, output_dir="Filtered", provider="random", batch
         "--batch-size", str(batch_size)
     ]
     
+    # Add the allow-random-fallback flag if requested
+    if allow_random_fallback:
+        cmd.append("--allow-random-fallback")
+    
     # Add debugging flag for easier troubleshooting
     # cmd.append("--debug")
     
@@ -77,7 +82,25 @@ def process_dat_file(input_file, output_dir="Filtered", provider="random", batch
         end_time = time.time()
         time_taken = end_time - start_time
         
-        # Check result
+        # Check for provider errors first
+        if "Provider error:" in result.stdout:
+            error_line = next((line for line in result.stdout.split('\n') if "Provider error:" in line), "Unknown provider error")
+            logger.error(f"Provider error when processing {file_name} with {provider} provider:")
+            logger.error(f"Error details: {error_line}")
+            
+            # Save error output
+            error_file = os.path.join(output_dir, f"{base_name}_{provider}_error.txt")
+            with open(error_file, "w") as f:
+                f.write(f"PROVIDER ERROR:\n{error_line}\n\nSTDOUT:\n{result.stdout}\n\nSTDERR:\n{result.stderr}")
+            
+            # If the user is using gemini or openai, remind about API keys
+            if provider in ["gemini", "openai"]:
+                logger.warning(f"Make sure you have configured a valid {provider.upper()} API key")
+                logger.info(f"You can try processing with the 'random' provider which doesn't require an API key")
+            
+            return False, time_taken
+            
+        # Check general result
         if result.returncode == 0:
             logger.info(f"Successfully processed {file_name} in {time_taken:.2f} seconds")
             
@@ -129,6 +152,8 @@ def main():
     parser.add_argument("--rate-limit", "-r", type=float, 
                         help="Delay between files in seconds for API rate limiting", default=0)
     parser.add_argument("--sort", help="Sort order for processing files (name, size, none)", default="size")
+    parser.add_argument("--allow-random-fallback", action="store_true",
+                        help="Allow fallback to Random provider if API key is missing/invalid")
     args = parser.parse_args()
     
     # Check input directory exists
@@ -227,7 +252,13 @@ def main():
             logger.info(f"Processing file {current_file}/{total_files} ({progress_pct}%): {file_name}")
             
             # Process the file
-            success, time_taken = process_dat_file(input_file, output_dir, provider, args.batch_size)
+            success, time_taken = process_dat_file(
+                input_file, 
+                output_dir, 
+                provider, 
+                args.batch_size,
+                args.allow_random_fallback
+            )
             
             if success:
                 success_count += 1

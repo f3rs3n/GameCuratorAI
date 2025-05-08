@@ -20,6 +20,8 @@ from core.rule_engine import RuleEngine
 from core.export import ExportManager
 from ai_providers import get_provider
 from utils.logging_config import setup_logging
+from utils.check_api_keys import check_api_key, request_api_key, set_api_key, check_and_request_api_key
+import test_api_keys
 
 # Initialize colorama for cross-platform color support
 init()
@@ -79,14 +81,59 @@ class InteractiveMenu:
     def _initialize_provider(self):
         """Initialize the AI provider based on current settings"""
         try:
-            provider = get_provider(self.settings['provider'])
-            if provider:
-                self.filter_engine = FilterEngine(provider)
-                self.filter_engine.set_global_threshold(self.settings['global_threshold'])
-                return True
-            return False
+            provider_name = self.settings['provider'].lower()
+            
+            # Pre-check for API keys before trying to initialize
+            if provider_name == 'openai' and not os.environ.get("OPENAI_API_KEY"):
+                self._print_error("OpenAI API key is not configured")
+                self._print_info("To use the OpenAI provider, you need a valid API key.")
+                self._print_info("Go to Settings → Configure API Keys to set your API key")
+                self._print_info("You can get an OpenAI API key at https://platform.openai.com/")
+                return False
+                
+            if provider_name == 'gemini' and not os.environ.get("GEMINI_API_KEY"):
+                self._print_error("Gemini API key is not configured")
+                self._print_info("To use the Gemini provider, you need a valid API key.")
+                self._print_info("Go to Settings → Configure API Keys to set your API key")
+                self._print_info("You can get a Gemini API key at https://ai.google.dev/")
+                return False
+                
+            # Get the provider
+            provider = get_provider(provider_name)
+            
+            if not provider:
+                self._print_error(f"Failed to create {provider_name.upper()} provider")
+                return False
+                
+            # Explicitly initialize the provider with API key validation
+            if provider_name in ['openai', 'gemini']:
+                self._print_info(f"Initializing {provider_name.upper()} provider (this may take a moment)...")
+                initialization_success = provider.initialize()
+                
+                if initialization_success:
+                    self._print_success(f"{provider_name.upper()} API key verified successfully")
+                else:
+                    # For better diagnostics, check if key exists but is invalid
+                    key_name = "OPENAI_API_KEY" if provider_name == 'openai' else "GEMINI_API_KEY"
+                    if os.environ.get(key_name):
+                        self._print_error(f"The {provider_name.upper()} API key appears to be invalid")
+                        self._print_warning("Possible reasons for failure:")
+                        self._print_info("- The API key may have expired")
+                        self._print_info("- The API key may not have proper permissions")
+                        self._print_info("- There might be a network/connection issue")
+                        self._print_info(f"Please check your {provider_name.upper()} API key configuration")
+                    else:
+                        self._print_error(f"No {provider_name.upper()} API key found in environment")
+                    return False
+            
+            # Set up the filter engine
+            self.filter_engine = FilterEngine(provider)
+            self.filter_engine.set_global_threshold(self.settings['global_threshold'])
+            return True
+                
         except Exception as e:
             logger.error(f"Failed to initialize provider: {e}")
+            self._print_error(f"Failed to initialize provider: {str(e)}")
             return False
     
     def _clear_screen(self):
@@ -433,9 +480,9 @@ class InteractiveMenu:
         self._clear_screen()
         self._print_subheader("Change AI Provider")
         
-        # Check if API keys are set in environment variables
-        openai_key_set = bool(os.environ.get("OPENAI_API_KEY", ""))
-        gemini_key_set = bool(os.environ.get("GEMINI_API_KEY", ""))
+        # Check if API keys are set using our utilities
+        openai_key_set, _ = check_api_key("openai")
+        gemini_key_set, _ = check_api_key("gemini")
         
         providers = [
             ("random", "Random (Test mode, no API key needed)"),
@@ -466,43 +513,157 @@ class InteractiveMenu:
             try:
                 idx = int(choice) - 1
                 if 0 <= idx < len(providers):
+                    # Store current provider for possible reversion
+                    original_provider = self.settings['provider']
+                    # Set the new provider
                     self.settings['provider'] = providers[idx][0]
                     
-                    # Try to initialize the provider
-                    success = self._initialize_provider()
-                    
-                    if success:
-                        self._print_success(f"Provider changed to {self.settings['provider']}")
-                    else:
-                        self._print_error(f"Failed to initialize {self.settings['provider']} provider")
+                    # Random provider always works
+                    if self.settings['provider'] == 'random':
+                        success = self._initialize_provider()
+                        if success:
+                            self._print_success(f"Provider changed to {self.settings['provider'].upper()}")
+                        else:
+                            self._print_error("Failed to initialize Random provider")
+                        self._wait_for_key()
+                        return
                         
-                        if self.settings['provider'] in ('openai', 'gemini'):
-                            # Check if key is already set
-                            key_name = "OPENAI_API_KEY" if self.settings['provider'] == 'openai' else "GEMINI_API_KEY"
-                            if not os.environ.get(key_name, ""):
-                                # Explain why we need the API key
-                                self._print_info(f"To use the {self.settings['provider'].title()} provider, you need an API key.")
-                                if self.settings['provider'] == 'openai':
-                                    self._print_info("You can get an OpenAI API key at https://platform.openai.com/")
-                                elif self.settings['provider'] == 'gemini':
-                                    self._print_info("You can get a Gemini API key at https://ai.google.dev/")
+                    # For OpenAI or Gemini, check and request API key if needed
+                    if self.settings['provider'] in ('openai', 'gemini'):
+                        # Check for key
+                        key_exists, key_name = check_api_key(self.settings['provider'])
+                        
+                        if not key_exists:
+                            # No API key found - need to request one
+                            self._print_info(f"No API key found for {self.settings['provider'].upper()}")
+                            self._print_info(f"This provider requires a valid API key to function.")
+                            
+                            # Provide info on where to get the key
+                            if self.settings['provider'] == 'openai':
+                                self._print_info("You can get an OpenAI API key at https://platform.openai.com/")
+                                self._print_info("Note: OpenAI requires a paid account with API access.")
+                            else:  # gemini
+                                self._print_info("You can get a Gemini API key at https://ai.google.dev/")
+                                self._print_info("Note: Gemini offers a free tier with generous quota limits.")
+                            
+                            # Ask for options
+                            print("\nOptions:")
+                            self._print_option("1", f"Enter a {self.settings['provider'].upper()} API key")
+                            self._print_option("2", "Use Random provider for TESTING ONLY")
+                            self._print_option("3", f"Cancel (keep {original_provider.upper()} provider)")
+                            
+                            next_step = self._get_user_input("Select an option")
+                            
+                            if next_step == "1":
+                                # Get API key from user
+                                api_key = request_api_key(self.settings['provider'])
                                 
-                                # Prompt for API key
-                                api_key = self._get_user_input(f"Enter your {self.settings['provider'].title()} API key")
-                                if api_key:
-                                    os.environ[key_name] = api_key
-                                    self._print_success(f"{self.settings['provider'].title()} API key set successfully")
+                                if api_key and set_api_key(self.settings['provider'], api_key):
+                                    self._print_success(f"{self.settings['provider'].upper()} API key set")
+                                    self._print_info(f"Testing {self.settings['provider'].upper()} API key (this may take a moment)...")
+                                    
+                                    # Test the key using our new testing utility
+                                    success, message = test_api_keys.test_api_key(self.settings['provider'])
+                                    
+                                    if success:
+                                        self._print_success(f"API key validation successful: {message}")
+                                        self._initialize_provider()
+                                        self._print_success(f"Provider changed to {self.settings['provider'].upper()}")
+                                    else:
+                                        self._print_error(f"API key validation failed: {message}")
+                                        self._print_warning("Please check your API key and try again.")
+                                        
+                                        # Offer to try again or revert
+                                        print("\nOptions:")
+                                        self._print_option("1", "Try a different API key")
+                                        self._print_option("2", "Use Random provider for TESTING ONLY")
+                                        self._print_option("3", f"Revert to {original_provider.upper()} provider")
+                                        
+                                        retry_choice = self._get_user_input("Select an option")
+                                        
+                                        if retry_choice == "1":
+                                            # Try again with the same provider
+                                            success, _ = test_api_keys.test_and_request_api_key(self.settings['provider'])
+                                            if success:
+                                                self._initialize_provider()
+                                                self._print_success(f"Provider changed to {self.settings['provider'].upper()}")
+                                            else:
+                                                self._print_error("API key setup failed")
+                                                self.settings['provider'] = original_provider
+                                                self._initialize_provider()
+                                        elif retry_choice == "2":
+                                            self._print_warning("Using Random provider for TESTING PURPOSES ONLY")
+                                            self._print_warning("WARNING: Random provider is not suitable for actual curation")
+                                            self.settings['provider'] = 'random'
+                                            self._initialize_provider()
+                                        else:
+                                            self._print_info(f"Reverting to {original_provider.upper()} provider")
+                                            self.settings['provider'] = original_provider
+                                            self._initialize_provider()
                                 else:
-                                    self._print_warning(f"No API key provided. Using Random provider instead.")
-                                    self.settings['provider'] = 'random'
+                                    # API key entry canceled
+                                    self._print_info("API key entry cancelled")
+                                    self._print_info(f"Reverting to {original_provider.upper()} provider")
+                                    self.settings['provider'] = original_provider
+                                    self._initialize_provider()
+                            elif next_step == "2":
+                                self._print_warning("Using Random provider for TESTING PURPOSES ONLY")
+                                self._print_warning("WARNING: Random provider is not suitable for actual curation")
+                                self.settings['provider'] = 'random'
+                                self._initialize_provider()
+                            else:
+                                self._print_info(f"Keeping {original_provider.upper()} provider")
+                                self.settings['provider'] = original_provider
+                                self._initialize_provider()
+                        else:
+                            # Key exists, try to initialize
+                            success = self._initialize_provider()
+                            
+                            if success:
+                                self._print_success(f"Provider changed to {self.settings['provider'].upper()}")
+                            else:
+                                # Key exists but initialization failed - likely invalid
+                                self._print_error(f"The {self.settings['provider'].upper()} API key appears to be invalid")
+                                self._print_warning("The key may be invalid, expired, or have incorrect permissions")
                                 
-                                # Try to initialize again
-                                success = self._initialize_provider()
+                                # Test the key again with explicit feedback
+                                self._print_info(f"Testing {self.settings['provider'].upper()} API key...")
+                                success, message = test_api_keys.test_api_key(self.settings['provider'])
                                 
                                 if success:
-                                    self._print_success(f"Provider changed to {self.settings['provider']}")
+                                    self._print_success(f"API key validation successful: {message}")
+                                    self._print_error("However, provider initialization still failed")
+                                    self._print_warning("This may be due to a temporary API issue")
                                 else:
-                                    self._print_error(f"Failed to initialize {self.settings['provider']} provider")
+                                    self._print_error(f"API key validation failed: {message}")
+                                
+                                # Give options
+                                print("\nOptions:")
+                                self._print_option("1", "Configure a new API key")
+                                self._print_option("2", "Use Random provider for TESTING ONLY")
+                                self._print_option("3", f"Revert to {original_provider.upper()} provider")
+                                
+                                fix_choice = self._get_user_input("Select an option")
+                                
+                                if fix_choice == "1":
+                                    # Use our advanced API key testing and request
+                                    success, _ = test_api_keys.test_and_request_api_key(self.settings['provider'])
+                                    if success:
+                                        self._initialize_provider()
+                                        self._print_success(f"Provider changed to {self.settings['provider'].upper()}")
+                                    else:
+                                        self._print_error("API key setup failed")
+                                        self.settings['provider'] = original_provider
+                                        self._initialize_provider()
+                                elif fix_choice == "2":
+                                    self._print_warning("Using Random provider for TESTING PURPOSES ONLY")
+                                    self._print_warning("WARNING: Random provider is not suitable for actual curation")
+                                    self.settings['provider'] = 'random'
+                                    self._initialize_provider()
+                                else:
+                                    self._print_info(f"Reverting to {original_provider.upper()} provider")
+                                    self.settings['provider'] = original_provider
+                                    self._initialize_provider()
                     
                     self._wait_for_key()
                     return
@@ -584,28 +745,57 @@ class InteractiveMenu:
                 print("\n")  # Clear the progress bar line
                 error_msg = provider_error.get('provider_error', 'Unknown provider error')
                 self._print_error(f"Provider error: {error_msg}")
-                self._print_warning("Please check your API key configuration.")
-                self._print_info("Switching to Random provider as fallback...")
                 
-                # Switch to random provider as fallback
-                self.settings['provider'] = 'random'
-                self._initialize_provider()
+                # Provide helpful information about how to fix the issue
+                if self.settings['provider'].lower() == 'openai':
+                    self._print_warning("The OpenAI provider requires a valid API key to function.")
+                    self._print_info("You can get an OpenAI API key at https://platform.openai.com/")
+                    self._print_info("Go to Settings → Configure API Keys to set your API key.")
+                elif self.settings['provider'].lower() == 'gemini':
+                    self._print_warning("The Gemini provider requires a valid API key to function.")
+                    self._print_info("You can get a Gemini API key at https://ai.google.dev/")
+                    self._print_info("Go to Settings → Configure API Keys to set your API key.")
                 
-                # Retry with random provider
-                self._print_info("Retrying with Random provider...")
-                result = self.filter_engine.filter_collection(
-                    self.parsed_data['games'],
-                    criteria=self.settings['criteria'],
-                    batch_size=self.settings['batch_size'],
-                    progress_callback=progress_callback
-                )
+                self._print_warning("The Random provider is only for testing and doesn't provide useful filtering.")
+                self._print_warning("It will pass all games regardless of quality.")
                 
-                # Process result
-                self.filtered_games, self.evaluations, provider_error = result
+                # Ask if user wants to switch to Random provider for testing only
+                print()
+                response = self._get_user_input("Do you want to switch to Random provider for TESTING ONLY? (y/n): ")
                 
-                # If we still have an error, give up
-                if provider_error:
-                    self._print_error(f"Still having issues: {provider_error.get('provider_error', 'Unknown error')}")
+                if response.lower() == 'y':
+                    # Switch to random provider but only temporarily
+                    old_provider = self.settings['provider']
+                    self.settings['provider'] = 'random'
+                    self._initialize_provider()
+                    
+                    # Retry with random provider
+                    self._print_info("Retrying with Random provider for TESTING ONLY...")
+                    result = self.filter_engine.filter_collection(
+                        self.parsed_data['games'],
+                        criteria=self.settings['criteria'],
+                        batch_size=self.settings['batch_size'],
+                        progress_callback=progress_callback
+                    )
+                    
+                    # Process result
+                    self.filtered_games, self.evaluations, provider_error = result
+                    
+                    # If we still have an error, give up
+                    if provider_error:
+                        self._print_error(f"Still having issues: {provider_error.get('provider_error', 'Unknown error')}")
+                        return
+                    
+                    # Remind user they're in testing mode
+                    self._print_warning("NOTE: You are using the Random provider which doesn't provide")
+                    self._print_warning("      useful filtering. All games will likely pass.")
+                    
+                    # Reset the provider setting (but not the actual provider instance) after this run
+                    self.settings['provider'] = old_provider
+                else:
+                    # User declined to use Random provider
+                    self._print_info("Operation cancelled. Please configure your API key before trying again.")
+                    self._wait_for_key()
                     return
             
             # Apply multi-disc rules
@@ -765,6 +955,7 @@ class InteractiveMenu:
         self._print_option("3", f"Output Directory: {self.settings['output_dir']}")
         self._print_option("4", f"Show Progress: {'Yes' if self.settings['show_progress'] else 'No'}")
         self._print_option("5", f"Color Output: {'Yes' if self.settings['color'] else 'No'}")
+        self._print_option("6", "Configure API Keys")
         self._print_option("0", "Back to Main Menu")
         
         choice = self._get_user_input("Enter your choice")
@@ -792,6 +983,9 @@ class InteractiveMenu:
             self.settings['color'] = not self.settings['color']
             self._print_success(f"Color output: {'Yes' if self.settings['color'] else 'No'}")
             self._wait_for_key()
+            self.settings_menu()
+        elif choice == "6":
+            self._configure_api_keys()
             self.settings_menu()
         elif choice == "0":
             return
@@ -842,6 +1036,7 @@ class InteractiveMenu:
         self._print_subheader("Available Providers")
         self._print_option("1", f"OpenAI API Key {self.colors['success'] + '[Set]' + Style.RESET_ALL if openai_key_set else self.colors['error'] + '[Not Set]' + Style.RESET_ALL}")
         self._print_option("2", f"Google Gemini API Key {self.colors['success'] + '[Set]' + Style.RESET_ALL if gemini_key_set else self.colors['error'] + '[Not Set]' + Style.RESET_ALL}")
+        self._print_option("3", "Test API Keys")
         self._print_option("0", "Back")
         
         choice = self._get_user_input("Enter your choice")
@@ -858,11 +1053,24 @@ class InteractiveMenu:
             else:
                 self._print_info("You need an OpenAI API key to use the OpenAI provider.")
                 self._print_info("You can get an API key at https://platform.openai.com/")
+                self._print_info("Requires a paid account with API access and sufficient credit balance.")
             
             key = self._get_user_input("Enter OpenAI API Key (leave blank to keep current)")
             if key:
                 os.environ["OPENAI_API_KEY"] = key
-                self._print_success("OpenAI API key updated")
+                self._print_success("OpenAI API key set")
+                
+                # Optionally validate the key immediately
+                validate = self._get_user_input("Would you like to validate this key now? (y/n)", "y").lower() == "y"
+                if validate:
+                    self._print_info("Testing OpenAI API key (this may take a moment)...")
+                    provider = get_provider("openai")
+                    if provider and provider.initialize():
+                        self._print_success("OpenAI API key is valid!")
+                    else:
+                        self._print_error("Failed to validate OpenAI API key")
+                        self._print_warning("The key may be invalid or there might be connection issues.")
+                        self._print_info("You can try again later by selecting 'Test API Keys'")
             
             self._wait_for_key()
             self._configure_api_keys()
@@ -878,11 +1086,62 @@ class InteractiveMenu:
             else:
                 self._print_info("You need a Google Gemini API key to use the Gemini provider.")
                 self._print_info("You can get an API key at https://ai.google.dev/")
+                self._print_info("Gemini offers a free tier with generous quota limits.")
             
             key = self._get_user_input("Enter Google Gemini API Key (leave blank to keep current)")
             if key:
                 os.environ["GEMINI_API_KEY"] = key
-                self._print_success("Google Gemini API key updated")
+                self._print_success("Google Gemini API key set")
+                
+                # Optionally validate the key immediately
+                validate = self._get_user_input("Would you like to validate this key now? (y/n)", "y").lower() == "y"
+                if validate:
+                    self._print_info("Testing Gemini API key (this may take a moment)...")
+                    provider = get_provider("gemini")
+                    if provider and provider.initialize():
+                        self._print_success("Gemini API key is valid!")
+                    else:
+                        self._print_error("Failed to validate Gemini API key")
+                        self._print_warning("The key may be invalid or there might be connection issues.")
+                        self._print_info("You can try again later by selecting 'Test API Keys'")
+            
+            self._wait_for_key()
+            self._configure_api_keys()
+        elif choice == "3":
+            # Test both API keys using our enhanced API key testing module
+            self._print_subheader("Testing API Keys")
+            
+            # Test OpenAI key
+            openai_key_exists, _ = check_api_key("openai")
+            if openai_key_exists:
+                self._print_info("Testing OpenAI API key (this may take a moment)...")
+                success, message = test_api_keys.test_api_key("openai")
+                if success:
+                    self._print_success(f"OpenAI API key is valid and working: {message}")
+                else:
+                    self._print_error(f"OpenAI API key validation failed: {message}")
+                    self._print_warning("The key may be invalid, expired, or have insufficient permissions")
+                    self._print_info("You can get an OpenAI API key at https://platform.openai.com/")
+            else:
+                self._print_warning("OpenAI API key is not set")
+                self._print_info("You can set it by selecting option 1 from the API Keys menu")
+            
+            print()  # Add spacing between tests
+            
+            # Test Gemini key
+            gemini_key_exists, _ = check_api_key("gemini")
+            if gemini_key_exists:
+                self._print_info("Testing Gemini API key (this may take a moment)...")
+                success, message = test_api_keys.test_api_key("gemini")
+                if success:
+                    self._print_success(f"Gemini API key is valid and working: {message}")
+                else:
+                    self._print_error(f"Gemini API key validation failed: {message}")
+                    self._print_warning("The key may be invalid, expired, or have incorrect permissions")
+                    self._print_info("You can get a Gemini API key at https://ai.google.dev/")
+            else:
+                self._print_warning("Gemini API key is not set")
+                self._print_info("You can set it by selecting option 2 from the API Keys menu")
             
             self._wait_for_key()
             self._configure_api_keys()

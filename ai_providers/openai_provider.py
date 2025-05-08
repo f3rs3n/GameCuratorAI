@@ -34,7 +34,7 @@ class OpenAIProvider(BaseAIProvider):
 
     def initialize(self) -> bool:
         """
-        Initialize the OpenAI provider with API key
+        Initialize the OpenAI provider with API key and verify it works
         
         Returns:
             bool: True if initialization was successful, False otherwise
@@ -46,12 +46,44 @@ class OpenAIProvider(BaseAIProvider):
             return False
         
         try:
+            # Create the client
             self.client = OpenAI(api_key=self.api_key)
-            self.initialized = True
-            self.logger.info("OpenAI provider initialized successfully")
-            return True
+            
+            # Test the API key with a minimal request to verify it works
+            test_prompt = "Respond with the word 'success' if you can read this."
+            self.logger.info("Testing OpenAI API key with a simple request...")
+            
+            try:
+                # Make a minimal API call to verify the key works
+                response = self.client.chat.completions.create(
+                    model=self.model,
+                    messages=[{"role": "user", "content": test_prompt}],
+                    max_tokens=10  # Keep it very small to minimize token usage
+                )
+                
+                if not response or not hasattr(response, 'choices') or len(response.choices) == 0:
+                    self.logger.error("API test failed: No valid response received")
+                    return False
+                
+                # Log a snippet of the response
+                response_text = response.choices[0].message.content
+                self.logger.info(f"API test response: {response_text[:50]}...")
+                
+                # If we got here, the API key is valid
+                self.initialized = True
+                self.logger.info("OpenAI provider initialized successfully with verified API key")
+                return True
+                
+            except Exception as test_error:
+                self.logger.error(f"API key validation failed: {test_error}")
+                # Clear out the client since it doesn't work
+                self.client = None
+                self.initialized = False
+                return False
+                
         except Exception as e:
             self.logger.error(f"Failed to initialize OpenAI provider: {e}")
+            self.initialized = False
             return False
 
     def is_available(self) -> bool:
