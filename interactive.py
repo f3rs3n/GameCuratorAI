@@ -1,40 +1,47 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 DAT Filter AI - Interactive CLI Interface
-A text-based menu interface for the DAT Filter AI tool that works
-in environments without PyQt5 support.
+A text-based menu interface for the DAT Filter AI tool.
 """
 
 import os
 import sys
+import json
 import time
 import logging
 import argparse
-import subprocess
-from typing import List, Dict, Any, Optional, Tuple
-import colorama
-from colorama import Fore, Back, Style
+from typing import Dict, List, Any, Tuple, Optional, Callable
+from colorama import init, Fore, Style, Back
 
-# Initialize colorama
-colorama.init(autoreset=True)
-
-# Import core components
+# Import core modules
 from core.dat_parser import DatParser
 from core.filter_engine import FilterEngine
 from core.rule_engine import RuleEngine
 from core.export import ExportManager
-from ai_providers import get_provider, BaseAIProvider
+from ai_providers import get_provider
 from utils.logging_config import setup_logging
 
-# Setup logging
-setup_logging()
-logger = logging.getLogger("interactive")
+# Initialize colorama for cross-platform color support
+init()
+
+# Set up logging
+logger = logging.getLogger('datfilterai')
 
 class InteractiveMenu:
-    """Interactive text-based menu for DAT Filter AI"""
+    """Text-based menu for DAT Filter AI"""
     
     def __init__(self):
         """Initialize the interactive menu"""
+        # Setup logging
+        setup_logging()
+        
+        # Initialize components
+        self.dat_parser = DatParser()
+        self.rule_engine = RuleEngine()
+        self.export_manager = ExportManager()
+        self.filter_engine = None  # Will be initialized based on selected provider
+        
+        # State variables
         self.running = True
         self.current_dat_file = None
         self.parsed_data = None
@@ -42,350 +49,206 @@ class InteractiveMenu:
         self.evaluations = []
         self.special_cases = {}
         
-        # Initialize core components
-        self.dat_parser = DatParser()
-        self.ai_provider = None
-        self.filter_engine = None
-        self.rule_engine = RuleEngine()
-        self.export_manager = ExportManager()
-        
-        # Application settings
+        # Default settings
         self.settings = {
             'provider': 'random',
-            'batch_size': 10,
             'criteria': ['metacritic', 'historical', 'v_list', 'console_significance', 'mods_hacks'],
+            'batch_size': 10,
+            'global_threshold': 1.0,
             'input_dir': 'ToFilter',
             'output_dir': 'Filtered',
-            'theme': 'retro',
-            'multi_disc_mode': 'all_or_none',  # Always all_or_none, no longer configurable
-            'global_threshold': 1.0,  # 1.0 = neutral, < 1.0 = more lenient, > 1.0 = more strict
+            'show_progress': True,
+            'color': True
         }
         
-        # Available themes
-        self.themes = {
-            'default': {
-                'header': Fore.CYAN + Style.BRIGHT,
-                'option': Fore.GREEN,
-                'highlight': Fore.YELLOW + Style.BRIGHT,
-                'error': Fore.RED + Style.BRIGHT,
-                'success': Fore.GREEN + Style.BRIGHT,
-                'info': Fore.BLUE,
-                'data': Fore.MAGENTA,
-                'progress_bar': Fore.CYAN,
-                'progress_fill': '█',
-                'progress_empty': '░',
-            },
-            'retro': {
-                'header': Fore.CYAN + Style.BRIGHT,
-                'option': Fore.YELLOW,
-                'highlight': Fore.MAGENTA + Style.BRIGHT,
-                'error': Fore.RED + Style.BRIGHT,
-                'success': Fore.GREEN + Style.BRIGHT,
-                'info': Fore.BLUE,
-                'data': Fore.WHITE + Style.BRIGHT,
-                'progress_bar': Fore.YELLOW,
-                'progress_fill': '■',
-                'progress_empty': '□',
-            },
+        # Color scheme
+        self.colors = {
+            'header': Fore.CYAN + Style.BRIGHT,
+            'info': Fore.WHITE,
+            'success': Fore.GREEN,
+            'error': Fore.RED,
+            'warning': Fore.YELLOW,
+            'option': Fore.CYAN,
+            'data': Fore.WHITE + Style.BRIGHT,
+            'highlight': Fore.MAGENTA + Style.BRIGHT
         }
         
-        self.current_theme = self.themes[self.settings['theme']]
-        
-        # Initialize the AI provider
+        # Initialize AI provider
         self._initialize_provider()
     
     def _initialize_provider(self):
         """Initialize the AI provider based on current settings"""
-        provider_name = self.settings['provider']
-        
         try:
-            self.ai_provider = get_provider(provider_name)
-            self.ai_provider.initialize()
-            self.filter_engine = FilterEngine(self.ai_provider)
-            
-            # Set the global threshold from settings
-            self.filter_engine.set_global_threshold(self.settings['global_threshold'])
-            
-            logger.info(f"Initialized {provider_name} provider")
-            return True
+            provider = get_provider(self.settings['provider'])
+            if provider:
+                self.filter_engine = FilterEngine(provider)
+                self.filter_engine.set_global_threshold(self.settings['global_threshold'])
+                return True
+            return False
         except Exception as e:
-            logger.error(f"Failed to initialize {provider_name} provider: {e}")
-            if provider_name != 'random':
-                # Fallback to random provider
-                try:
-                    self.ai_provider = get_provider('random')
-                    self.ai_provider.initialize()
-                    self.filter_engine = FilterEngine(self.ai_provider)
-                    
-                    # Set the global threshold from settings
-                    self.filter_engine.set_global_threshold(self.settings['global_threshold'])
-                    
-                    logger.info("Initialized random provider as fallback")
-                    self.settings['provider'] = 'random'
-                    return False
-                except:
-                    logger.error("Failed to initialize even the random provider")
-                    return False
+            logger.error(f"Failed to initialize provider: {e}")
             return False
     
     def _clear_screen(self):
         """Clear the terminal screen"""
-        # Use platform-specific clear command
         os.system('cls' if os.name == 'nt' else 'clear')
     
     def _print_header(self, text: str):
-        """Print a formatted header"""
-        width = 70
-        print(self.current_theme['header'] + "=" * width)
-        print(self.current_theme['header'] + text.center(width))
-        print(self.current_theme['header'] + "=" * width)
+        """Print a simple header"""
+        print("\n" + "=" * 50)
+        print(self.colors['header'] + text.center(50) + Style.RESET_ALL)
+        print("=" * 50 + "\n")
     
     def _print_subheader(self, text: str):
-        """Print a formatted subheader"""
-        width = 70
-        print(self.current_theme['header'] + "-" * width)
-        print(self.current_theme['header'] + text.center(width))
-        print(self.current_theme['header'] + "-" * width)
+        """Print a simple subheader"""
+        print("\n" + self.colors['highlight'] + text + Style.RESET_ALL)
+        print("-" * 50)
     
     def _print_option(self, key: str, description: str, highlighted: bool = False):
         """Print a menu option"""
-        theme = self.current_theme['highlight'] if highlighted else self.current_theme['option']
-        print(f"{theme}[{key}] {description}")
+        if highlighted:
+            print(f"  [{key}] " + self.colors['highlight'] + description + Style.RESET_ALL)
+        else:
+            print(f"  [{key}] {description}")
     
     def _print_info(self, text: str):
         """Print info text"""
-        print(self.current_theme['info'] + text)
+        print(self.colors['info'] + text + Style.RESET_ALL)
     
     def _print_error(self, text: str):
         """Print error text"""
-        print(self.current_theme['error'] + text)
+        print(self.colors['error'] + f"ERROR: {text}" + Style.RESET_ALL)
     
     def _print_success(self, text: str):
         """Print success text"""
-        print(self.current_theme['success'] + text)
+        print(self.colors['success'] + text + Style.RESET_ALL)
+    
+    def _print_warning(self, text: str):
+        """Print warning text"""
+        print(self.colors['warning'] + f"WARNING: {text}" + Style.RESET_ALL)
     
     def _print_data(self, label: str, value: str):
         """Print a data item"""
-        print(f"{self.current_theme['highlight']}{label}: {self.current_theme['data']}{value}")
+        print(f"{label}: {self.colors['data']}{value}{Style.RESET_ALL}")
     
     def _print_progress_bar(self, current: int, total: int, width: int = 50, suffix: str = ""):
-        """Print a progress bar"""
-        progress = current / total
-        filled_length = int(width * progress)
-        bar = (self.current_theme['progress_fill'] * filled_length) + (self.current_theme['progress_empty'] * (width - filled_length))
-        percentage = int(100 * progress)
-        
-        # Add a small animation
-        animation_chars = ['⬅️', '➡️', '⬆️', '⬇️', '🎮', '🕹️', '💥', '🔥']
-        animation_idx = int(time.time() * 4) % len(animation_chars)
-        
-        if filled_length < width:
-            # Insert animation character at the progress point
-            bar = bar[:filled_length] + animation_chars[animation_idx] + bar[filled_length+1:]
-        
-        print(f"\r{self.current_theme['progress_bar']}[{bar}] {percentage}% {suffix}", end="\r")
-        
+        """Print a simple progress bar"""
+        filled_length = int(width * current // total)
+        bar = '█' * filled_length + '░' * (width - filled_length)
+        percent = f"{100 * current / total:.1f}"
+        print(f"\r[{self.colors['success']}{bar}{Style.RESET_ALL}] {percent}% {suffix}", end='\r')
         if current == total:
             print()
     
     def _get_user_input(self, prompt: str, default: str = "") -> str:
         """Get input from the user with a prompt"""
-        if default:
-            prompt = f"{prompt} [{default}]: "
-        else:
-            prompt = f"{prompt}: "
-        
         try:
-            return input(self.current_theme['highlight'] + prompt) or default
-        except KeyboardInterrupt:
-            print("\nOperation cancelled by user")
+            return input(self.colors['highlight'] + prompt + (f" [{default}]" if default else "") + ": " + Style.RESET_ALL) or default
+        except EOFError:
+            # Handle case when running in an environment that can't accept input
+            print("\nInput not available. Using default value.")
             return default
     
     def _wait_for_key(self):
         """Wait for a key press"""
-        input(self.current_theme['info'] + "Press Enter to continue...")
+        try:
+            print("\nPress any key to continue...")
+            if os.name == 'nt':  # Windows
+                import msvcrt
+                msvcrt.getch()
+            else:  # Unix/Linux/Mac
+                import termios
+                import tty
+                fd = sys.stdin.fileno()
+                old_settings = termios.tcgetattr(fd)
+                try:
+                    tty.setraw(sys.stdin.fileno())
+                    sys.stdin.read(1)
+                finally:
+                    termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+        except Exception:
+            # If can't get interactive input, just continue
+            pass
     
     def main_menu(self):
-        """Display the main menu with retro gaming style"""
-        while self.running:
-            self._clear_screen()
+        """Display a simplified main menu"""
+        self._clear_screen()
+        
+        # Simple header
+        self._print_header("DAT FILTER AI - GAME COLLECTION CURATOR")
+        
+        # Show DAT info
+        if self.current_dat_file:
+            basename = os.path.basename(self.current_dat_file)
+            if len(basename) > 40:
+                basename = basename[:37] + "..."
             
-            # Create a retro console inspired interface
-            width = 65  # Use a smaller width for better compatibility
-            padding = 2
-            content_width = width - (padding * 2)
-            
-            # Top border with game console style
-            print("\n" + "=" * width)
-            print("+" + "-" * (width - 2) + "+")  # Using simpler border characters
-            print("|" + " " * (width - 2) + "|")
-            
-            # Title - ASCII Art style (simplified for consistency)
-            title = [
-                "  _____    _  _____   ______ ___ _   _____ _____ ___  ",
-                " |  __ \\  / \\|_   _| |  ____|_ _| | |_   _| ____|_ _| ",
-                " | |  | |/ _ \\ | |   | |__   | || |   | | |  _|  | |  ",
-                " | |  | / ___ \\| |   |  __|  | || |___| | | |___ | |  ",
-                " | |__| / /  \\ \\ |_  | |    _| || |____| | |_____|_|  ",
-                " |_____/_/    \\_\\__| |_|   |____|_____|_| |_____|___| "
-            ]
-            
-            # Title width calculation
-            title_width = len(title[0])
-            display_width = min(title_width, width - 6)
-            
-            # Print title with exact spacing calculations
-            for line in title:
-                if title_width > display_width:
-                    adjusted_line = line[:display_width]
-                else:
-                    adjusted_line = line.ljust(display_width)
-                
-                # Calculate exact left and right spacing for perfect centering
-                spaces_left = (width - 2 - len(adjusted_line)) // 2
-                spaces_right = width - 2 - spaces_left - len(adjusted_line)
-                print("|" + " " * spaces_left + self.current_theme['header'] + adjusted_line + Style.RESET_ALL + " " * spaces_right + "|")
-            
-            # Subtitle with perfect centering
-            subtitle = "RETRO GAME COLLECTION CURATOR"
-            spaces_left = (width - 2 - len(subtitle)) // 2
-            spaces_right = width - 2 - spaces_left - len(subtitle)
-            print("|" + " " * spaces_left + self.current_theme['highlight'] + subtitle + Style.RESET_ALL + " " * spaces_right + "|")
-            print("|" + " " * (width - 2) + "|")
-            
-            # DAT info display with simplified approach
-            if self.current_dat_file:
-                basename = os.path.basename(self.current_dat_file)
-                if len(basename) > 30:
-                    basename = basename[:27] + "..."
-                
-                # Simple format with information on separate lines
-                dat_info = f" LOADED: {basename} "
-                game_count = f" GAMES: {self.parsed_data['game_count']} "
-                filtered_info = f" FILTERED: {len(self.filtered_games)} GAMES KEPT " if self.filtered_games else " NO FILTERING APPLIED YET "
+            self._print_data("Current DAT", basename)
+            self._print_data("Game Count", str(self.parsed_data['game_count']))
+            if self.filtered_games:
+                self._print_data("Filtered", f"{len(self.filtered_games)} games kept")
             else:
-                dat_info = " NO DAT FILE LOADED "
-                game_count = ""
-                filtered_info = " --- "
-            
-            # Simple box for DAT info - with consistent width
-            monitor_width = 40
-            spaces_left = (width - 2 - monitor_width - 2) // 2
-            spaces_right = width - 2 - spaces_left - monitor_width - 2
-            
-            print("|" + " " * spaces_left + "+" + "-" * monitor_width + "+" + " " * spaces_right + "|")
-            
-            # Center each line individually for better alignment
-            print("|" + " " * spaces_left + "|" + 
-                  self.current_theme['data'] + dat_info.center(monitor_width) + 
-                  Style.RESET_ALL + "|" + " " * spaces_right + "|")
-            
-            # Only show game count if a DAT is loaded
-            if self.current_dat_file:
-                print("|" + " " * spaces_left + "|" + 
-                      self.current_theme['highlight'] + game_count.center(monitor_width) + 
-                      Style.RESET_ALL + "|" + " " * spaces_right + "|")
-                
-            print("|" + " " * spaces_left + "|" + 
-                  self.current_theme['info'] + filtered_info.center(monitor_width) + 
-                  Style.RESET_ALL + "|" + " " * spaces_right + "|")
-            
-            print("|" + " " * spaces_left + "+" + "-" * monitor_width + "+" + " " * spaces_right + "|")
-            
-            print("|" + " " * (width - 2) + "|")
-            
-            # Engine status display - precise center alignment
-            engine_status = f" ENGINE: {self.settings['provider'].upper()} | THRESHOLD: {self.settings['global_threshold']:.2f} "
-            spaces_left = (width - 2 - len(engine_status)) // 2
-            spaces_right = width - 2 - spaces_left - len(engine_status)
-            print("|" + " " * spaces_left + self.current_theme['success'] + engine_status + Style.RESET_ALL + " " * spaces_right + "|")
-            
-            print("|" + " " * (width - 2) + "|")
-            
-            # Menu separator with perfectly centered header
-            header_text = "SYSTEM COMMANDS"
-            divider_char = "="
-            inner_width = width - 6
-            divider = divider_char * inner_width
-            header_spaces = (inner_width - len(header_text)) // 2
-            
-            header_line = (divider_char * header_spaces) + header_text + (divider_char * (inner_width - header_spaces - len(header_text)))
-            print("|  " + divider + "  |")
-            print("|  " + self.current_theme['highlight'] + header_line + Style.RESET_ALL + "  |")
-            print("|  " + divider + "  |")
-            
-            # Menu options with fixed perfect positioning for unavailable text
-            menu_options = [
-                ("1", "🎮 LOAD DAT FILE", not self.current_dat_file),
-                ("2", "🕹️ APPLY FILTERS", not self.current_dat_file),
-                ("3", "💾 EXPORT RESULTS", not self.filtered_games),
-                ("4", "⚙️ SETTINGS", False),
-                ("5", "📊 BATCH PROCESSING", False),
-                ("6", "📈 COMPARE PROVIDERS", False),
-                ("0", "🚪 EXIT", False)
-            ]
-            
-            # Fixed positioning for perfect alignment
-            unavailable_text = "[UNAVAILABLE]"
-            
-            # Simplified, more reliable menu approach
-            menu_width = width - 6  # -6 accounts for "| " and " |" on each side
-            
-            for key, desc, disabled in menu_options:
-                prefix = f" [{key}] "
-                
-                if disabled:
-                    # For unavailable options
-                    line = prefix + desc
-                    padding = menu_width - len(line) - len(unavailable_text) - 1
-                    
-                    print("|  " + 
-                          self.current_theme['option'] + prefix + desc + 
-                          " " * padding +
-                          self.current_theme['error'] + unavailable_text + 
-                          Style.RESET_ALL + "  |")
-                else:
-                    # For available options
-                    line = prefix + desc
-                    padding = menu_width - len(line)
-                    
-                    print("|  " + 
-                          self.current_theme['option'] + prefix + desc + 
-                          Style.RESET_ALL + " " * padding + "  |")
-            
-            # Bottom border
-            print("|" + " " * (width - 2) + "|")
-            print("|" + "_" * (width - 2) + "|")
-            print("+" + "-" * (width - 2) + "+")
-            print("=" * width + "\n")
-            
-            choice = self._get_user_input("Enter your choice")
-            
-            if choice == "1":
-                self.load_dat_menu()
-            elif choice == "2":
-                if self.current_dat_file:
-                    self.apply_filters_menu()
-                else:
-                    self._print_error("Please load a DAT file first")
-                    self._wait_for_key()
-            elif choice == "3":
-                if self.filtered_games:
-                    self.export_menu()
-                else:
-                    self._print_error("Please apply filters first")
-                    self._wait_for_key()
-            elif choice == "4":
-                self.settings_menu()
-            elif choice == "5":
-                self.batch_processing_menu()
-            elif choice == "6":
-                self.compare_providers_menu()
-            elif choice == "0":
-                self.running = False
+                self._print_info("Status: No filtering applied yet")
+        else:
+            self._print_info("No DAT file loaded")
+        
+        # Show engine info
+        print()
+        self._print_data("Engine", self.settings['provider'].upper())
+        self._print_data("Threshold", f"{self.settings['global_threshold']:.2f}")
+        
+        # Menu options
+        self._print_subheader("SYSTEM COMMANDS")
+        
+        menu_options = [
+            ("1", "Load DAT File", False),
+            ("2", "Apply Filters", not self.current_dat_file),
+            ("3", "Export Results", not self.filtered_games),
+            ("4", "Settings", False),
+            ("5", "Batch Processing", False),
+            ("6", "Compare Providers", False),
+            ("7", f"Change AI Provider ({self.settings['provider'].upper()})", False),
+            ("0", "Exit", False)
+        ]
+        
+        for key, desc, disabled in menu_options:
+            if disabled:
+                status = self.colors['error'] + "[Need DAT File]" if desc == "Apply Filters" else self.colors['error'] + "[Need Filtered Games]"
+                print(f"  [{key}] {desc} {status}" + Style.RESET_ALL)
             else:
-                self._print_error("Invalid choice")
+                print(f"  [{key}] {desc}")
+        
+        print("-" * 50)
+        
+        choice = self._get_user_input("Enter your choice")
+        
+        if choice == "1":
+            self.load_dat_menu()
+        elif choice == "2":
+            if self.current_dat_file:
+                self.apply_filters_menu()
+            else:
+                self._print_error("Please load a DAT file first")
                 self._wait_for_key()
+        elif choice == "3":
+            if self.filtered_games:
+                self.export_menu()
+            else:
+                self._print_error("Please apply filters first")
+                self._wait_for_key()
+        elif choice == "4":
+            self.settings_menu()
+        elif choice == "5":
+            self.batch_processing_menu()
+        elif choice == "6":
+            self.compare_providers_menu()
+        elif choice == "7":
+            self._change_provider()
+        elif choice == "0":
+            self.running = False
+        else:
+            self._print_error("Invalid choice")
+            self._wait_for_key()
     
     def load_dat_menu(self):
         """Display the DAT file loading menu"""
@@ -412,9 +275,9 @@ class InteractiveMenu:
         for idx, file in enumerate(dat_files, 1):
             file_path = os.path.join(input_dir, file)
             file_size = os.path.getsize(file_path) / 1024  # Size in KB
-            self._print_option(str(idx), f"{file} ({file_size:.1f} KB)")
+            print(f"  [{idx}] {file} ({file_size:.1f} KB)")
         
-        self._print_option("0", "Back to Main Menu")
+        print(f"  [0] Back to Main Menu")
         
         choice = self._get_user_input("Enter your choice (number)")
         
@@ -466,7 +329,7 @@ class InteractiveMenu:
         # Show current criteria
         self._print_subheader("Current Filter Criteria")
         for idx, criterion in enumerate(self.settings['criteria'], 1):
-            self._print_option(str(idx), criterion)
+            print(f"  {idx}. {criterion}")
         
         print()
         self._print_info(f"Current AI Provider: {self.settings['provider']}")
@@ -533,11 +396,11 @@ class InteractiveMenu:
         # Show current selected criteria
         for idx, (criterion_id, criterion_name) in enumerate(all_criteria, 1):
             selected = criterion_id in self.settings['criteria']
-            self._print_option(str(idx), f"{criterion_name} {'✓' if selected else '✗'}")
+            print(f"  [{idx}] {criterion_name} {'✓' if selected else '✗'}")
         
         print()
-        self._print_option("S", "Save and return")
-        self._print_option("0", "Cancel")
+        print("  [S] Save and return")
+        print("  [0] Cancel")
         
         choice = self._get_user_input("Enter a number to toggle, or S to save").upper()
         
@@ -570,23 +433,34 @@ class InteractiveMenu:
         self._clear_screen()
         self._print_subheader("Change AI Provider")
         
+        # Check if API keys are set in environment variables
+        openai_key_set = bool(os.environ.get("OPENAI_API_KEY", ""))
+        gemini_key_set = bool(os.environ.get("GEMINI_API_KEY", ""))
+        
         providers = [
             ("random", "Random (Test mode, no API key needed)"),
-            ("openai", "OpenAI (Most accurate, requires API key)"),
-            ("gemini", "Google Gemini (Fast, efficient, requires API key)")
+            ("openai", f"OpenAI (Most accurate) {self.colors['success'] + '[API Key Set]' + Style.RESET_ALL if openai_key_set else self.colors['error'] + '[API Key Required]' + Style.RESET_ALL}"),
+            ("gemini", f"Google Gemini (Fast, efficient) {self.colors['success'] + '[API Key Set]' + Style.RESET_ALL if gemini_key_set else self.colors['error'] + '[API Key Required]' + Style.RESET_ALL}")
         ]
         
         for idx, (provider_id, provider_desc) in enumerate(providers, 1):
             selected = provider_id == self.settings['provider']
-            self._print_option(str(idx), f"{provider_desc} {'✓' if selected else ''}")
+            print(f"  [{idx}] {provider_desc} {'✓' if selected else ''}")
         
         print()
-        self._print_option("0", "Cancel")
+        self._print_option("C", "Configure API Keys")
+        print("  [0] Cancel")
         
-        choice = self._get_user_input("Enter your choice")
+        choice = self._get_user_input("Enter your choice").upper()
         
         if choice == "0":
-            self.apply_filters_menu()
+            # Return to previous menu
+            return
+        elif choice == "C":
+            # Configure API keys
+            self._configure_api_keys()
+            # Return to provider menu
+            self._change_provider()
             return
         else:
             try:
@@ -603,13 +477,24 @@ class InteractiveMenu:
                         self._print_error(f"Failed to initialize {self.settings['provider']} provider")
                         
                         if self.settings['provider'] in ('openai', 'gemini'):
-                            # Prompt for API key
-                            api_key = self._get_user_input(f"Enter your {self.settings['provider'].title()} API key")
-                            if api_key:
+                            # Check if key is already set
+                            key_name = "OPENAI_API_KEY" if self.settings['provider'] == 'openai' else "GEMINI_API_KEY"
+                            if not os.environ.get(key_name, ""):
+                                # Explain why we need the API key
+                                self._print_info(f"To use the {self.settings['provider'].title()} provider, you need an API key.")
                                 if self.settings['provider'] == 'openai':
-                                    os.environ["OPENAI_API_KEY"] = api_key
+                                    self._print_info("You can get an OpenAI API key at https://platform.openai.com/")
                                 elif self.settings['provider'] == 'gemini':
-                                    os.environ["GEMINI_API_KEY"] = api_key
+                                    self._print_info("You can get a Gemini API key at https://ai.google.dev/")
+                                
+                                # Prompt for API key
+                                api_key = self._get_user_input(f"Enter your {self.settings['provider'].title()} API key")
+                                if api_key:
+                                    os.environ[key_name] = api_key
+                                    self._print_success(f"{self.settings['provider'].title()} API key set successfully")
+                                else:
+                                    self._print_warning(f"No API key provided. Using Random provider instead.")
+                                    self.settings['provider'] = 'random'
                                 
                                 # Try to initialize again
                                 success = self._initialize_provider()
@@ -617,26 +502,16 @@ class InteractiveMenu:
                                 if success:
                                     self._print_success(f"Provider changed to {self.settings['provider']}")
                                 else:
-                                    self._print_error(f"Failed to initialize {self.settings['provider']} provider with the provided API key")
-                    
-                    # Update batch size based on provider
-                    if self.settings['provider'] == 'openai':
-                        self.settings['batch_size'] = 5
-                    elif self.settings['provider'] == 'gemini':
-                        self.settings['batch_size'] = 10
-                    else:
-                        self.settings['batch_size'] = 20
+                                    self._print_error(f"Failed to initialize {self.settings['provider']} provider")
                     
                     self._wait_for_key()
-                    self.apply_filters_menu()
+                    return
                 else:
                     self._print_error("Invalid choice")
                     self._wait_for_key()
-                    self._change_provider()
             except ValueError:
                 self._print_error("Please enter a valid number")
                 self._wait_for_key()
-                self._change_provider()
     
     def _apply_filters(self):
         """Apply filters to the loaded DAT file"""
@@ -645,369 +520,129 @@ class InteractiveMenu:
             self._wait_for_key()
             return
         
-        if not self.settings['criteria']:
-            self._print_error("No filter criteria selected")
+        if not self.filter_engine:
+            self._print_error("Filter engine not initialized")
             self._wait_for_key()
             return
         
-        if not self.ai_provider or not self.ai_provider.is_available():
-            self._print_error("AI provider not available")
-            
-            # Try to initialize it
-            self._initialize_provider()
-            
-            if not self.ai_provider or not self.ai_provider.is_available():
-                self._wait_for_key()
-                return
+        # Ensure the filter engine has the current threshold
+        self._update_filter_engine_threshold()
         
-        # Show progress UI
         self._clear_screen()
         self._print_header("Applying Filters")
-        self._print_info(f"Using {self.settings['provider']} provider with batch size {self.settings['batch_size']}")
-        self._print_info(f"Criteria: {', '.join(self.settings['criteria'])}")
+        
+        # Show filtering details
+        self._print_info(f"DAT File: {os.path.basename(self.current_dat_file)}")
+        self._print_info(f"Game Count: {self.parsed_data['game_count']}")
+        self._print_info(f"Provider: {self.settings['provider'].upper()}")
+        self._print_info(f"Batch Size: {self.settings['batch_size']}")
+        criteria_str = ", ".join(self.settings['criteria'])
+        self._print_info(f"Criteria: {criteria_str}")
         print()
         
-        # Create rule config
-        rule_config = {
-            "multi_disc": {
-                "mode": self.settings['multi_disc_mode'],
-                "prefer": "complete"
-            },
-            "regional_variants": {
-                "mode": "prefer_region",
-                "preferred_regions": ["USA", "Europe", "World", "Japan"]
-            },
-            "mods_hacks": {
-                "mode": "include_notable"
-            }
-        }
-        
+        # Start the filtering process
         try:
-            # Display info about showing intermediate results
-            self._print_info("Showing intermediate results with color coding:")
-            self._print_success("GREEN: Game is kept")
-            self._print_error("RED: Game is removed")
-            print()
+            start_time = time.time()
             
-            # Track displayed games for UI management
-            displayed_games = 0
-            last_display_refresh = 0
-            
-            # Define progress callback with intermediate results
+            # Define progress callback
             def progress_callback(current, total, batch_results=None):
-                nonlocal displayed_games, last_display_refresh
-                
-                # Always update progress bar
-                percentage = int(100 * current / total) if total > 0 else 0
-                
-                # Show intermediate results if available
-                if batch_results and isinstance(batch_results, dict):
-                    recent_games = batch_results.get('recent_games', [])
-                    recent_evals = batch_results.get('recent_evaluations', [])
+                if self.settings['show_progress']:
+                    # Calculate speed and ETA
+                    elapsed = time.time() - start_time
+                    games_per_sec = current / elapsed if elapsed > 0 else 0
+                    remaining = (total - current) / games_per_sec if games_per_sec > 0 else 0
                     
-                    # Only show batch results if we have some
-                    if recent_games and recent_evals:
-                        # Always refresh the display for each batch to ensure visibility
-                        self._clear_screen()
-                        
-                        # Draw a more retro-inspired header
-                        print("\n" + "=" * 70)
-                        print("█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█")
-                        print("█  ⬤ DAT FILTER AI - EVALUATION IN PROGRESS ⬤                   █")
-                        print("█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█")
-                        print("=" * 70)
-                        
-                        print(f"\n[SYSTEM] Using {self.settings['provider']} provider with batch size {self.settings['batch_size']}")
-                        print(f"[SYSTEM] Criteria: {', '.join(self.settings['criteria'])}")
-                        print(f"[SYSTEM] Global threshold: {self.settings['global_threshold']:.2f}")
-                        
-                        # Draw a more prominent progress bar
-                        progress_width = 50
-                        complete = int(progress_width * current / total) if total > 0 else 0
-                        remaining = progress_width - complete
-                        
-                        print("\n" + "=" * 70)
-                        print(f"PROGRESS: [{('■' * complete) + ('□' * remaining)}] {percentage}%")
-                        print(f"GAMES PROCESSED: {current}/{total}")
-                        print("=" * 70 + "\n")
-                        
-                        # Show batch processing header
-                        print("╔" + "═" * 68 + "╗")
-                        print("║ CURRENT BATCH RESULTS                                            ║")
-                        print("╠" + "═" * 68 + "╣")
-                        
-                        # Show each game's evaluation with appropriate color and more detailed formatting
-                        for game, eval_data in zip(recent_games, recent_evals):
-                            kept = eval_data.get('kept', False)
-                            score = eval_data.get('score', 0)
-                            game_name = game.get('description', game.get('name', 'Unknown Game'))
-                            
-                            # Truncate long game names
-                            if len(game_name) > 50:
-                                game_name = game_name[:47] + "..."
-                            
-                            # Format score with game rating symbols
-                            score_display = ""
-                            if score >= 0.8:
-                                score_display = "★★★★★"
-                            elif score >= 0.6:
-                                score_display = "★★★★☆"
-                            elif score >= 0.4:
-                                score_display = "★★★☆☆"
-                            elif score >= 0.2:
-                                score_display = "★★☆☆☆"
-                            else:
-                                score_display = "★☆☆☆☆"
-                                
-                            if kept:
-                                self._print_success(f"║ ✓ KEPT: {game_name:<50} {score:.2f} {score_display} ║")
-                            else:
-                                self._print_error(f"║ ✗ REMOVED: {game_name:<46} {score:.2f} {score_display} ║")
-                            
-                            displayed_games += 1
-                        
-                        print("╚" + "═" * 68 + "╝")
-                        print("\nPress Ctrl+C to cancel filtering (current progress will be lost)")
-                        
-                        # Small delay to make the display more visible
-                        time.sleep(0.1)
+                    # Format ETA
+                    if remaining > 60:
+                        eta = f"ETA: {int(remaining // 60)}m {int(remaining % 60)}s"
+                    else:
+                        eta = f"ETA: {int(remaining)}s"
+                    
+                    # Show progress
+                    self._print_progress_bar(current, total, 40, f"{current}/{total} games - {games_per_sec:.1f} games/sec - {eta}")
+                
+                # Display intermediate results if available
+                if batch_results and current % 5 == 0:
+                    print("\nIntermediate results:")
+                    kept = len([g for g in batch_results if g.get('keep', False)])
+                    removed = len(batch_results) - kept
+                    self._print_info(f"Last batch: {kept} kept, {removed} removed")
             
-            # Apply filters
+            # Apply the filters
             result = self.filter_engine.filter_collection(
                 self.parsed_data['games'],
-                self.settings['criteria'],
-                self.settings['batch_size'],
-                progress_callback
+                criteria=self.settings['criteria'],
+                batch_size=self.settings['batch_size'],
+                progress_callback=progress_callback
             )
             
-            # Handle different return formats (compatibility for older and newer versions)
-            if isinstance(result, tuple) and len(result) == 2:
-                self.filtered_games, self.evaluations = result
-            elif isinstance(result, dict):
-                self.filtered_games = result.get('kept_games', [])
-                self.evaluations = result.get('evaluations', [])
+            # Process result
+            self.filtered_games = result['filtered_games']
+            self.evaluations = result['evaluations']
             
-            # Apply special case rules
-            self.filtered_games = self.rule_engine.apply_rules_to_filtered_games(
-                self.filtered_games,
-                rule_config
-            )
+            # Apply multi-disc rules
+            if self.special_cases and 'multi_disc' in self.special_cases:
+                print("\nApplying multi-disc rules...")
+                rules_config = {"multi_disc": {"mode": "all_or_none", "prefer": "complete"}}
+                self.filtered_games = self.rule_engine.apply_special_case_rules(self.filtered_games, rules_config)
             
-            print()
-            self._print_success(f"Filtering complete: {len(self.filtered_games)} of {self.parsed_data['game_count']} games kept")
-            
-            # Show special cases
-            if self.special_cases:
-                print()
-                self._print_subheader("Special Cases Detected")
-                
-                for case_type, cases in self.special_cases.items():
-                    if cases:
-                        if case_type == 'multi_disc':
-                            self._print_info(f"Found {len(cases)} multi-disc game sets")
-                        elif case_type == 'regional_variants':
-                            self._print_info(f"Found {len(cases)} games with regional variants")
-                        elif case_type == 'mods_hacks':
-                            self._print_info(f"Found {len(cases)} game mods and hacks")
-            
-            # Show results summary
-            print()
-            self._print_subheader("Filter Results")
+            # Show final statistics
             original_count = self.parsed_data['game_count']
             filtered_count = len(self.filtered_games)
             reduction = original_count - filtered_count
-            reduction_pct = (reduction / original_count) * 100 if original_count > 0 else 0
+            reduction_pct = (reduction / original_count * 100) if original_count > 0 else 0
             
-            self._print_data("Original game count", str(original_count))
-            self._print_data("Filtered game count", str(filtered_count))
-            self._print_data("Reduction", f"{reduction} games ({reduction_pct:.1f}%)")
+            print("\n" + "=" * 50)
+            self._print_success(f"Filtering complete: {filtered_count} of {original_count} games kept")
+            self._print_info(f"Reduction: {reduction} games ({reduction_pct:.1f}%)")
             
-            # Calculate number of games to show (10% of collection)
-            display_count = max(3, min(20, int(original_count * 0.1)))
-            
-            # Show top games
-            print()
-            self._print_subheader(f"Top {display_count} Games (Highest Quality)")
-            for i, game in enumerate(self.filtered_games[:display_count], 1):
-                game_name = game.get('description', game.get('name', f"Game {i}"))
+            # Auto-save filtered DAT
+            output_path = os.path.join(self.settings['output_dir'], f"filtered_{os.path.basename(self.current_dat_file)}")
+            if not os.path.exists(self.settings['output_dir']):
+                os.makedirs(self.settings['output_dir'])
                 
-                # Try to get the score for this game by matching in the evaluations
-                game_id = game.get('name', '')
-                score = 0
-                score_display = ""
-                
-                # Get the index of this game in the original games list
-                try:
-                    game_index = self.parsed_data['games'].index(game)
-                    if 0 <= game_index < len(self.evaluations):
-                        score = self.evaluations[game_index].get('score', 0)
-                except (ValueError, IndexError):
-                    pass  # Game not found in original list or evaluation missing
-                
-                # Format score with game rating symbols
-                if score >= 0.8:
-                    score_display = "★★★★★"
-                elif score >= 0.6:
-                    score_display = "★★★★☆"
-                elif score >= 0.4:
-                    score_display = "★★★☆☆"
-                elif score >= 0.2:
-                    score_display = "★★☆☆☆"
-                else:
-                    score_display = "★☆☆☆☆"
-                
-                self._print_success(f"{i}. {game_name} - {score_display} {score:.2f}")
-            
-            if len(self.filtered_games) > display_count:
-                self._print_info(f"... and {len(self.filtered_games) - display_count} more games")
-                
-            # Find all removed games with scores
-            all_games = self.parsed_data['games']
-            removed_games = [g for g in all_games if g not in self.filtered_games]
-            
-            # Map games to their evaluations
-            game_evals = {}
-            for game, eval_data in zip(all_games, self.evaluations):
-                game_id = game.get('name', '')
-                if game_id:
-                    game_evals[game_id] = eval_data
-            
-            # Sort removed games by score (highest first for near misses)
-            removed_with_scores = []
-            for game in removed_games:
-                game_id = game.get('name', '')
-                if game_id in game_evals:
-                    removed_with_scores.append((game, game_evals[game_id]))
-            
-            sorted_by_score = sorted(
-                removed_with_scores,
-                key=lambda x: x[1].get('score', 0),
-                reverse=True
+            self.export_manager.export_dat_file(
+                filtered_games=self.filtered_games,
+                original_data=self.parsed_data,
+                output_path=output_path
             )
             
-            # Show games that nearly made the cut
-            print()
-            self._print_subheader(f"Near Misses (Almost Included)")
-            
-            # Show top near-misses with their scores
-            for i, (game, eval_data) in enumerate(sorted_by_score[:display_count], 1):
-                game_name = game.get('description', game.get('name', f"Game {i}"))
-                score = eval_data.get('score', 0)
-                
-                # Format score with game rating symbols
-                if score >= 0.8:
-                    score_display = "★★★★★"
-                elif score >= 0.6:
-                    score_display = "★★★★☆"
-                elif score >= 0.4:
-                    score_display = "★★★☆☆"
-                elif score >= 0.2:
-                    score_display = "★★☆☆☆"
-                else:
-                    score_display = "★☆☆☆☆"
-                
-                self._print_error(f"{i}. {game_name} - {score_display} {score:.2f}")
-                if 'explanation' in eval_data:
-                    self._print_info(f"   Reason: {eval_data['explanation']}")
-            
-            # Show worst scoring games
-            print()
-            self._print_subheader(f"Lowest Scored Games (Worst Quality)")
-            
-            # Sort by lowest score
-            sorted_worst = sorted(
-                removed_with_scores,
-                key=lambda x: x[1].get('score', 0)
-            )
-            
-            for i, (game, eval_data) in enumerate(sorted_worst[:display_count], 1):
-                game_name = game.get('description', game.get('name', f"Game {i}"))
-                score = eval_data.get('score', 0)
-                
-                # Format score with game rating symbols
-                if score >= 0.8:
-                    score_display = "★★★★★"
-                elif score >= 0.6:
-                    score_display = "★★★★☆"
-                elif score >= 0.4:
-                    score_display = "★★★☆☆"
-                elif score >= 0.2:
-                    score_display = "★★☆☆☆"
-                else:
-                    score_display = "★☆☆☆☆"
-                
-                self._print_error(f"{i}. {game_name} - {score_display} {score:.2f}")
-                if 'explanation' in eval_data:
-                    self._print_info(f"   Reason: {eval_data['explanation']}")
-            
-            # Auto-save the filtered DAT file
-            if self.filtered_games:
-                output_dir = self.settings['output_dir']
-                os.makedirs(output_dir, exist_ok=True)
-                
-                # Generate output filename
-                basename = os.path.basename(self.current_dat_file)
-                filename, ext = os.path.splitext(basename)
-                provider_name = self.settings['provider']
-                output_file = f"filtered_{filename}_{provider_name}{ext}"
-                output_path = os.path.join(output_dir, output_file)
-                
-                # Get metadata for the export
-                metadata = {
-                    "filtered_by": "DAT Filter AI",
-                    "filter_criteria": ", ".join(self.settings['criteria']),
-                    "original_count": str(self.parsed_data['game_count']),
-                    "filtered_count": str(len(self.filtered_games)),
-                    "threshold": str(self.settings['global_threshold'])
-                }
-                
-                try:
-                    success, message = self.export_manager.export_dat_file(
-                        self.filtered_games,
-                        self.parsed_data,
-                        output_path,
-                        metadata
-                    )
-                    
-                    if success:
-                        self._print_success(f"\nFiltered DAT automatically saved to: {output_path}")
-                        self._print_info("Use the Export menu to create reports (JSON/TXT)")
-                    else:
-                        self._print_error(f"Failed to auto-save filtered DAT: {message}")
-                except Exception as e:
-                    logger.error(f"Error auto-saving filtered DAT: {e}")
-                    self._print_error(f"Failed to auto-save filtered DAT: {str(e)}")
+            self._print_success(f"Automatically saved filtered DAT to: {output_path}")
             
             self._wait_for_key()
-            
         except Exception as e:
             logger.error(f"Error applying filters: {e}")
             self._print_error(f"Failed to apply filters: {str(e)}")
             self._wait_for_key()
     
+    def _update_filter_engine_threshold(self):
+        """Update the filter engine with the current global threshold"""
+        if self.filter_engine:
+            self.filter_engine.set_global_threshold(self.settings['global_threshold'])
+    
     def export_menu(self):
         """Display the export menu"""
-        self._clear_screen()
-        self._print_header("Export Results")
-        
         if not self.filtered_games:
-            self._print_error("No filtered games to export")
+            self._print_error("No filtered results to export")
             self._wait_for_key()
             return
         
-        self._print_option("1", "Export JSON Report")
-        self._print_option("2", "Export Text Summary")
-        self._print_option("3", "Export Filtered DAT (Custom Filename)")
+        self._clear_screen()
+        self._print_header("Export Results")
+        
+        self._print_option("1", "Export filtered DAT file")
+        self._print_option("2", "Export JSON report")
+        self._print_option("3", "Export text summary")
         self._print_option("0", "Back to Main Menu")
         
         choice = self._get_user_input("Enter your choice")
         
         if choice == "1":
-            self._export_json_report()
-        elif choice == "2":
-            self._export_text_summary()
-        elif choice == "3":
             self._export_filtered_dat()
+        elif choice == "2":
+            self._export_json_report()
+        elif choice == "3":
+            self._export_text_summary()
         elif choice == "0":
             return
         else:
@@ -1017,39 +652,24 @@ class InteractiveMenu:
     
     def _export_filtered_dat(self):
         """Export filtered games to a DAT file"""
+        default_filename = f"filtered_{os.path.basename(self.current_dat_file)}"
         output_dir = self.settings['output_dir']
-        os.makedirs(output_dir, exist_ok=True)
         
-        base_name = os.path.splitext(os.path.basename(self.current_dat_file))[0]
-        provider_name = self.settings['provider']
-        default_file = f"{base_name}_{provider_name}_filtered.dat"
-        default_path = os.path.join(output_dir, default_file)
-        
-        file_path = self._get_user_input(f"Output file path", default_path)
-        
-        # Get metadata for the export
-        metadata = {
-            "filtered_by": "DAT Filter AI",
-            "filter_criteria": ", ".join(self.settings['criteria']),
-            "original_count": str(self.parsed_data['game_count']),
-            "filtered_count": str(len(self.filtered_games))
-        }
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+            
+        output_path = os.path.join(output_dir, default_filename)
+        custom_path = self._get_user_input("Output path (press Enter for default)", output_path)
         
         try:
-            success, message = self.export_manager.export_dat_file(
-                self.filtered_games,
-                self.parsed_data,
-                file_path,
-                metadata
+            result = self.export_manager.export_dat_file(
+                filtered_games=self.filtered_games,
+                original_data=self.parsed_data,
+                output_path=custom_path
             )
             
-            if success:
-                self._print_success(message)
-            else:
-                self._print_error(message)
-            
+            self._print_success(f"Successfully exported filtered DAT with {len(self.filtered_games)} games to {custom_path}")
             self._wait_for_key()
-            
         except Exception as e:
             logger.error(f"Error exporting DAT file: {e}")
             self._print_error(f"Failed to export DAT file: {str(e)}")
@@ -1057,36 +677,25 @@ class InteractiveMenu:
     
     def _export_json_report(self):
         """Export a JSON report of the filtering results"""
+        default_filename = f"report_{os.path.splitext(os.path.basename(self.current_dat_file))[0]}.json"
         output_dir = self.settings['output_dir']
-        os.makedirs(output_dir, exist_ok=True)
         
-        base_name = os.path.splitext(os.path.basename(self.current_dat_file))[0]
-        provider_name = self.settings['provider']
-        default_file = f"report_{base_name}_{provider_name}.json"
-        default_path = os.path.join(output_dir, default_file)
-        
-        file_path = self._get_user_input(f"Output file path", default_path)
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+            
+        output_path = os.path.join(output_dir, default_filename)
+        custom_path = self._get_user_input("Output path (press Enter for default)", output_path)
         
         try:
-            # Include full game data and all evaluations for complete reporting
-            all_games = self.parsed_data['games']
-            
-            # Include all games and their evaluations in the report
-            success, message = self.export_manager.export_json_report(
-                self.filtered_games,
-                self.evaluations,
-                self.special_cases,
-                file_path,
-                all_games=all_games  # Pass all games for complete reporting
+            result = self.export_manager.export_json_report(
+                filtered_games=self.filtered_games,
+                evaluations=self.evaluations,
+                special_cases=self.special_cases,
+                output_path=custom_path
             )
             
-            if success:
-                self._print_success(message)
-            else:
-                self._print_error(message)
-            
+            self._print_success(f"Successfully exported JSON report to {custom_path}")
             self._wait_for_key()
-            
         except Exception as e:
             logger.error(f"Error exporting JSON report: {e}")
             self._print_error(f"Failed to export JSON report: {str(e)}")
@@ -1094,60 +703,25 @@ class InteractiveMenu:
     
     def _export_text_summary(self):
         """Export a text summary of the filtering results"""
+        default_filename = f"summary_{os.path.splitext(os.path.basename(self.current_dat_file))[0]}.txt"
         output_dir = self.settings['output_dir']
-        os.makedirs(output_dir, exist_ok=True)
         
-        base_name = os.path.splitext(os.path.basename(self.current_dat_file))[0]
-        provider_name = self.settings['provider']
-        default_file = f"summary_{base_name}_{provider_name}.txt"
-        default_path = os.path.join(output_dir, default_file)
-        
-        file_path = self._get_user_input(f"Output file path", default_path)
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+            
+        output_path = os.path.join(output_dir, default_filename)
+        custom_path = self._get_user_input("Output path (press Enter for default)", output_path)
         
         try:
-            # Include information about removed games for complete reporting
-            all_games = self.parsed_data['games']
-            removed_games = [g for g in all_games if g not in self.filtered_games]
-            
-            # Map games to their evaluations
-            game_evals = {}
-            for game, eval_data in zip(all_games, self.evaluations):
-                game_id = game.get('name', '')
-                if game_id:
-                    game_evals[game_id] = eval_data
-            
-            # Sort removed games by score (highest first)
-            removed_with_scores = []
-            for game in removed_games:
-                game_id = game.get('name', '')
-                if game_id in game_evals:
-                    removed_with_scores.append((game, game_evals[game_id]))
-            
-            sorted_removed = sorted(
-                removed_with_scores,
-                key=lambda x: x[1].get('score', 0),
-                reverse=True
+            result = self.export_manager.export_text_summary(
+                filtered_games=self.filtered_games,
+                original_count=self.parsed_data['game_count'],
+                filter_criteria=self.settings['criteria'],
+                output_path=custom_path
             )
             
-            # Get top removed games that nearly made the cut
-            near_misses = sorted_removed[:20] if sorted_removed else []
-            
-            success, message = self.export_manager.export_text_summary(
-                self.filtered_games,
-                self.parsed_data['game_count'],
-                self.settings['criteria'],
-                file_path,
-                near_misses=near_misses,
-                global_threshold=self.settings['global_threshold']
-            )
-            
-            if success:
-                self._print_success(message)
-            else:
-                self._print_error(message)
-            
+            self._print_success(f"Successfully exported text summary to {custom_path}")
             self._wait_for_key()
-            
         except Exception as e:
             logger.error(f"Error exporting text summary: {e}")
             self._print_error(f"Failed to export text summary: {str(e)}")
@@ -1158,87 +732,39 @@ class InteractiveMenu:
         self._clear_screen()
         self._print_header("Settings")
         
-        # Display current settings
-        self._print_subheader("Current Settings")
-        self._print_data("AI Provider", self.settings['provider'])
-        self._print_data("Batch Size", str(self.settings['batch_size']))
-        self._print_data("Input Directory", self.settings['input_dir'])
-        self._print_data("Output Directory", self.settings['output_dir'])
-        self._print_data("Theme", self.settings['theme'])
-        
-        # Display threshold with description
-        threshold = self.settings['global_threshold']
-        threshold_desc = "Neutral"
-        if threshold < 1.0:
-            threshold_desc = "More Lenient"
-        elif threshold > 1.0:
-            threshold_desc = "More Strict"
-        self._print_data("Global Threshold", f"{threshold:.2f} ({threshold_desc})")
-        
-        print()
-        self._print_option("1", "Change Provider")
-        self._print_option("2", "Change Batch Size")
-        self._print_option("3", "Change Input Directory")
-        self._print_option("4", "Change Output Directory")
-        self._print_option("5", "Change Theme")
-        self._print_option("6", "Configure API Keys")
-        self._print_option("7", "Adjust Global Threshold")
+        self._print_option("1", f"Global Threshold: {self.settings['global_threshold']:.2f}")
+        self._print_option("2", f"Input Directory: {self.settings['input_dir']}")
+        self._print_option("3", f"Output Directory: {self.settings['output_dir']}")
+        self._print_option("4", f"Show Progress: {'Yes' if self.settings['show_progress'] else 'No'}")
+        self._print_option("5", f"Color Output: {'Yes' if self.settings['color'] else 'No'}")
         self._print_option("0", "Back to Main Menu")
         
         choice = self._get_user_input("Enter your choice")
         
         if choice == "1":
-            self._change_provider()
+            self._change_global_threshold()
         elif choice == "2":
-            try:
-                batch_size = int(self._get_user_input("Enter batch size (1-50)", str(self.settings['batch_size'])))
-                if 1 <= batch_size <= 50:
-                    self.settings['batch_size'] = batch_size
-                    self._print_success(f"Batch size set to {batch_size}")
-                else:
-                    self._print_error("Batch size must be between 1 and 50")
-                self._wait_for_key()
-                self.settings_menu()
-            except ValueError:
-                self._print_error("Please enter a valid number")
-                self._wait_for_key()
-                self.settings_menu()
+            new_dir = self._get_user_input("Enter input directory", self.settings['input_dir'])
+            self.settings['input_dir'] = new_dir
+            self._print_success(f"Input directory set to {new_dir}")
+            self._wait_for_key()
+            self.settings_menu()
         elif choice == "3":
-            dir_path = self._get_user_input("Enter input directory path", self.settings['input_dir'])
-            if os.path.exists(dir_path):
-                self.settings['input_dir'] = dir_path
-                self._print_success(f"Input directory set to {dir_path}")
-            else:
-                create = self._get_user_input(f"Directory {dir_path} does not exist. Create it? (y/n)").lower()
-                if create == 'y':
-                    os.makedirs(dir_path, exist_ok=True)
-                    self.settings['input_dir'] = dir_path
-                    self._print_success(f"Created and set input directory to {dir_path}")
-                else:
-                    self._print_error("Directory not changed")
+            new_dir = self._get_user_input("Enter output directory", self.settings['output_dir'])
+            self.settings['output_dir'] = new_dir
+            self._print_success(f"Output directory set to {new_dir}")
             self._wait_for_key()
             self.settings_menu()
         elif choice == "4":
-            dir_path = self._get_user_input("Enter output directory path", self.settings['output_dir'])
-            if os.path.exists(dir_path):
-                self.settings['output_dir'] = dir_path
-                self._print_success(f"Output directory set to {dir_path}")
-            else:
-                create = self._get_user_input(f"Directory {dir_path} does not exist. Create it? (y/n)").lower()
-                if create == 'y':
-                    os.makedirs(dir_path, exist_ok=True)
-                    self.settings['output_dir'] = dir_path
-                    self._print_success(f"Created and set output directory to {dir_path}")
-                else:
-                    self._print_error("Directory not changed")
+            self.settings['show_progress'] = not self.settings['show_progress']
+            self._print_success(f"Show progress: {'Yes' if self.settings['show_progress'] else 'No'}")
             self._wait_for_key()
             self.settings_menu()
         elif choice == "5":
-            self._change_theme()
-        elif choice == "6":
-            self._configure_api_keys()
-        elif choice == "7":
-            self._change_global_threshold()
+            self.settings['color'] = not self.settings['color']
+            self._print_success(f"Color output: {'Yes' if self.settings['color'] else 'No'}")
+            self._wait_for_key()
+            self.settings_menu()
         elif choice == "0":
             return
         else:
@@ -1246,213 +772,94 @@ class InteractiveMenu:
             self._wait_for_key()
             self.settings_menu()
     
-    def _change_theme(self):
-        """Change the application theme"""
-        self._clear_screen()
-        self._print_subheader("Change Theme")
-        
-        for idx, (theme_id, theme_data) in enumerate(self.themes.items(), 1):
-            selected = theme_id == self.settings['theme']
-            self._print_option(str(idx), f"{theme_id.title()} {'✓' if selected else ''}")
-        
-        print()
-        self._print_option("0", "Cancel")
-        
-        choice = self._get_user_input("Enter your choice")
-        
-        if choice == "0":
-            self.settings_menu()
-            return
-        else:
-            try:
-                idx = int(choice) - 1
-                if 0 <= idx < len(self.themes):
-                    theme_id = list(self.themes.keys())[idx]
-                    self.settings['theme'] = theme_id
-                    self.current_theme = self.themes[theme_id]
-                    self._print_success(f"Theme changed to {theme_id}")
-                    self._wait_for_key()
-                    self.settings_menu()
-                else:
-                    self._print_error("Invalid choice")
-                    self._wait_for_key()
-                    self._change_theme()
-            except ValueError:
-                self._print_error("Please enter a valid number")
-                self._wait_for_key()
-                self._change_theme()
-    
-    def _change_multi_disc_mode(self):
-        """Change the multi-disc handling mode"""
-        self._clear_screen()
-        self._print_subheader("Change Multi-disc Mode")
-        
-        modes = [
-            ("all_or_none", "Include complete sets only (all or none)"),
-            ("first_disc_only", "Keep first disc only")
-        ]
-        
-        for idx, (mode_id, mode_desc) in enumerate(modes, 1):
-            selected = mode_id == self.settings['multi_disc_mode']
-            self._print_option(str(idx), f"{mode_desc} {'✓' if selected else ''}")
-        
-        print()
-        self._print_option("0", "Cancel")
-        
-        choice = self._get_user_input("Enter your choice")
-        
-        if choice == "0":
-            self.settings_menu()
-            return
-        else:
-            try:
-                idx = int(choice) - 1
-                if 0 <= idx < len(modes):
-                    self.settings['multi_disc_mode'] = modes[idx][0]
-                    self._print_success(f"Multi-disc mode changed to {modes[idx][1]}")
-                    self._wait_for_key()
-                    self.settings_menu()
-                else:
-                    self._print_error("Invalid choice")
-                    self._wait_for_key()
-                    self._change_multi_disc_mode()
-            except ValueError:
-                self._print_error("Please enter a valid number")
-                self._wait_for_key()
-                self._change_multi_disc_mode()
-    
     def _change_global_threshold(self):
         """Change the global threshold modifier for filtering"""
-        self._clear_screen()
-        self._print_subheader("Adjust Global Threshold")
-        
-        self._print_info("The global threshold controls how strict or lenient the filtering is:")
-        self._print_info("- Values below 1.0 make filtering more lenient (keep more games)")
-        self._print_info("- Values above 1.0 make filtering more strict (keep fewer games)")
-        self._print_info("- 1.0 is neutral (no adjustment)")
-        self._print_info("Valid range: 0.5 (very lenient) to 1.5 (very strict)")
-        print()
-        
         current = self.settings['global_threshold']
-        threshold_desc = "Neutral"
-        if current < 1.0:
-            threshold_desc = "More Lenient"
-        elif current > 1.0:
-            threshold_desc = "More Strict"
+        try:
+            new_threshold = float(self._get_user_input(
+                f"Enter threshold value (current: {current:.2f})", 
+                str(current)
+            ))
             
-        self._print_data("Current Threshold", f"{current:.2f} ({threshold_desc})")
-        print()
-        
-        # Offer preset options
-        self._print_option("1", "Very Lenient (0.5)")
-        self._print_option("2", "Lenient (0.75)")
-        self._print_option("3", "Neutral (1.0)")
-        self._print_option("4", "Strict (1.25)")
-        self._print_option("5", "Very Strict (1.5)")
-        self._print_option("C", "Custom Value")
-        self._print_option("0", "Cancel")
-        
-        choice = self._get_user_input("Enter your choice").upper()
-        
-        if choice == "0":
-            self.settings_menu()
-            return
-        elif choice == "1":
-            self.settings['global_threshold'] = 0.5
-            self._update_filter_engine_threshold()
-            self._print_success("Global threshold set to 0.5 (Very Lenient)")
-        elif choice == "2":
-            self.settings['global_threshold'] = 0.75
-            self._update_filter_engine_threshold()
-            self._print_success("Global threshold set to 0.75 (Lenient)")
-        elif choice == "3":
-            self.settings['global_threshold'] = 1.0
-            self._update_filter_engine_threshold()
-            self._print_success("Global threshold set to 1.0 (Neutral)")
-        elif choice == "4":
-            self.settings['global_threshold'] = 1.25
-            self._update_filter_engine_threshold()
-            self._print_success("Global threshold set to 1.25 (Strict)")
-        elif choice == "5":
-            self.settings['global_threshold'] = 1.5
-            self._update_filter_engine_threshold()
-            self._print_success("Global threshold set to 1.5 (Very Strict)")
-        elif choice == "C":
-            try:
-                value = float(self._get_user_input("Enter custom threshold value (0.5-1.5)", str(current)))
-                if 0.5 <= value <= 1.5:
-                    self.settings['global_threshold'] = value
-                    self._update_filter_engine_threshold()
-                    self._print_success(f"Global threshold set to {value:.2f}")
-                else:
-                    self._print_error("Value must be between 0.5 and 1.5")
-            except ValueError:
-                self._print_error("Please enter a valid number")
-                self._wait_for_key()
-                self._change_global_threshold()
-                return
-        else:
-            self._print_error("Invalid choice")
+            if 0.1 <= new_threshold <= 2.0:
+                self.settings['global_threshold'] = new_threshold
+                self._update_filter_engine_threshold()
+                
+                threshold_desc = "neutral"
+                if new_threshold < 1.0:
+                    threshold_desc = "more lenient (keeps more games)"
+                elif new_threshold > 1.0:
+                    threshold_desc = "more strict (keeps fewer games)"
+                    
+                self._print_success(f"Threshold set to {new_threshold:.2f} - {threshold_desc}")
+            else:
+                self._print_error("Threshold must be between 0.1 and 2.0")
+                
             self._wait_for_key()
-            self._change_global_threshold()
-            return
-        
-        self._wait_for_key()
-        self.settings_menu()
-    
-    def _update_filter_engine_threshold(self):
-        """Update the filter engine with the current global threshold"""
-        if self.filter_engine:
-            self.filter_engine.set_global_threshold(self.settings['global_threshold'])
-            logger.debug(f"Updated filter engine global threshold to {self.settings['global_threshold']}")
+            self.settings_menu()
+        except ValueError:
+            self._print_error("Please enter a valid number")
+            self._wait_for_key()
+            self.settings_menu()
     
     def _configure_api_keys(self):
         """Configure API keys for providers"""
         self._clear_screen()
         self._print_header("Configure API Keys")
         
-        self._print_option("1", "Configure OpenAI API Key")
-        self._print_option("2", "Configure Gemini API Key")
-        self._print_option("0", "Back to Settings Menu")
+        # Check if API keys are set in environment variables
+        openai_key_set = bool(os.environ.get("OPENAI_API_KEY", ""))
+        gemini_key_set = bool(os.environ.get("GEMINI_API_KEY", ""))
+        
+        self._print_subheader("Available Providers")
+        self._print_option("1", f"OpenAI API Key {self.colors['success'] + '[Set]' + Style.RESET_ALL if openai_key_set else self.colors['error'] + '[Not Set]' + Style.RESET_ALL}")
+        self._print_option("2", f"Google Gemini API Key {self.colors['success'] + '[Set]' + Style.RESET_ALL if gemini_key_set else self.colors['error'] + '[Not Set]' + Style.RESET_ALL}")
+        self._print_option("0", "Back")
         
         choice = self._get_user_input("Enter your choice")
         
         if choice == "1":
-            current_key = os.environ.get("OPENAI_API_KEY", "")
-            masked_key = "********" if current_key else ""
-            api_key = self._get_user_input(f"Enter your OpenAI API key (leave empty to keep current key)", masked_key)
+            openai_key_set = bool(os.environ.get("OPENAI_API_KEY", ""))
+            if openai_key_set:
+                self._print_info("OpenAI API key is already set.")
+                replace = self._get_user_input("Do you want to replace it? (y/n)", "n").lower() == "y"
+                if not replace:
+                    self._wait_for_key()
+                    self._configure_api_keys()
+                    return
+            else:
+                self._print_info("You need an OpenAI API key to use the OpenAI provider.")
+                self._print_info("You can get an API key at https://platform.openai.com/")
             
-            if api_key and api_key != "********":
-                os.environ["OPENAI_API_KEY"] = api_key
-                self._print_success("OpenAI API key configured")
-                
-                # Reinitialize provider if currently using OpenAI
-                if self.settings['provider'] == 'openai':
-                    self._initialize_provider()
+            key = self._get_user_input("Enter OpenAI API Key (leave blank to keep current)")
+            if key:
+                os.environ["OPENAI_API_KEY"] = key
+                self._print_success("OpenAI API key updated")
             
             self._wait_for_key()
             self._configure_api_keys()
-            
         elif choice == "2":
-            current_key = os.environ.get("GEMINI_API_KEY", "")
-            masked_key = "********" if current_key else ""
-            api_key = self._get_user_input(f"Enter your Gemini API key (leave empty to keep current key)", masked_key)
+            gemini_key_set = bool(os.environ.get("GEMINI_API_KEY", ""))
+            if gemini_key_set:
+                self._print_info("Google Gemini API key is already set.")
+                replace = self._get_user_input("Do you want to replace it? (y/n)", "n").lower() == "y"
+                if not replace:
+                    self._wait_for_key()
+                    self._configure_api_keys()
+                    return
+            else:
+                self._print_info("You need a Google Gemini API key to use the Gemini provider.")
+                self._print_info("You can get an API key at https://ai.google.dev/")
             
-            if api_key and api_key != "********":
-                os.environ["GEMINI_API_KEY"] = api_key
-                self._print_success("Gemini API key configured")
-                
-                # Reinitialize provider if currently using Gemini
-                if self.settings['provider'] == 'gemini':
-                    self._initialize_provider()
+            key = self._get_user_input("Enter Google Gemini API Key (leave blank to keep current)")
+            if key:
+                os.environ["GEMINI_API_KEY"] = key
+                self._print_success("Google Gemini API key updated")
             
             self._wait_for_key()
             self._configure_api_keys()
-            
         elif choice == "0":
-            self.settings_menu()
             return
-            
         else:
             self._print_error("Invalid choice")
             self._wait_for_key()
@@ -1463,29 +870,12 @@ class InteractiveMenu:
         self._clear_screen()
         self._print_header("Batch Processing")
         
-        self._print_info("This will process multiple DAT files in a batch")
+        self._print_info("Batch processing allows you to process multiple DAT files at once")
+        print("All DAT files in the input directory will be processed with the current settings")
         print()
         
-        # Display current batch settings
-        self._print_subheader("Current Settings")
-        self._print_data("AI Provider", self.settings['provider'])
-        self._print_data("Batch Size", str(self.settings['batch_size']))
-        self._print_data("Input Directory", self.settings['input_dir'])
-        self._print_data("Output Directory", self.settings['output_dir'])
-        
-        # Display threshold with description
-        threshold = self.settings['global_threshold']
-        threshold_desc = "Neutral"
-        if threshold < 1.0:
-            threshold_desc = "More Lenient"
-        elif threshold > 1.0:
-            threshold_desc = "More Strict"
-        self._print_data("Global Threshold", f"{threshold:.2f} ({threshold_desc})")
-        
-        print()
-        self._print_option("1", "Run Batch Processing with Current Settings")
-        self._print_option("2", "Change Batch Settings")
-        self._print_option("3", "Run Quick Test (Small Files Only)")
+        self._print_option("1", "Run Batch Processing")
+        self._print_option("2", "Run Quick Test (3 DAT files)")
         self._print_option("0", "Back to Main Menu")
         
         choice = self._get_user_input("Enter your choice")
@@ -1493,8 +883,6 @@ class InteractiveMenu:
         if choice == "1":
             self._run_batch_processing()
         elif choice == "2":
-            self.settings_menu()  # Reuse the settings menu
-        elif choice == "3":
             self._run_batch_processing(test_mode=True)
         elif choice == "0":
             return
@@ -1505,74 +893,188 @@ class InteractiveMenu:
     
     def _run_batch_processing(self, test_mode=False):
         """Run batch processing on multiple DAT files"""
-        self._clear_screen()
-        self._print_header("Running Batch Processing")
+        input_dir = self.settings['input_dir']
+        output_dir = self.settings['output_dir']
         
-        # Build command for batch processing
-        cmd = ["./batch_process.sh"]
+        if not os.path.exists(input_dir):
+            self._print_error(f"Input directory not found: {input_dir}")
+            self._wait_for_key()
+            return
         
-        # Add provider
-        if self.settings['provider'] == 'random':
-            cmd.append("--random")
-        elif self.settings['provider'] == 'openai':
-            cmd.append("--openai")
-        elif self.settings['provider'] == 'gemini':
-            cmd.append("--gemini")
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
         
-        # Add batch size
-        cmd.extend(["--batch-size", str(self.settings['batch_size'])])
+        # Find all DAT files
+        dat_files = [f for f in os.listdir(input_dir) if f.endswith('.dat')]
         
-        # Add input/output dirs
-        cmd.extend(["--input", self.settings['input_dir']])
-        cmd.extend(["--output", self.settings['output_dir']])
+        if not dat_files:
+            self._print_error(f"No DAT files found in {input_dir}")
+            self._wait_for_key()
+            return
         
-        # Add test mode if specified
+        # If test mode, limit to 3 files
         if test_mode:
-            cmd.append("--test")
+            dat_files = dat_files[:3]
         
-        self._print_info(f"Running command: {' '.join(cmd)}")
+        self._clear_screen()
+        self._print_header("Batch Processing")
+        
+        self._print_info(f"Found {len(dat_files)} DAT files to process")
+        self._print_info(f"Provider: {self.settings['provider']}")
+        self._print_info(f"Batch Size: {self.settings['batch_size']}")
+        self._print_info(f"Threshold: {self.settings['global_threshold']}")
         print()
         
-        try:
-            # Execute the batch processing script
-            process = subprocess.Popen(
-                cmd,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                universal_newlines=True,
-                bufsize=1
-            )
+        # Start batch processing
+        batch_start_time = time.time()
+        results = []
+        
+        for idx, dat_file in enumerate(dat_files, 1):
+            input_path = os.path.join(input_dir, dat_file)
+            basename = os.path.splitext(dat_file)[0]
             
-            # Display output in real-time
-            for line in iter(process.stdout.readline, ''):
-                print(line, end='')
+            self._print_subheader(f"Processing {dat_file} ({idx}/{len(dat_files)})")
             
-            process.stdout.close()
-            return_code = process.wait()
+            # Define output paths
+            filtered_path = os.path.join(output_dir, f"{basename}_filtered.dat")
+            report_path = os.path.join(output_dir, f"{basename}_report.json")
+            summary_path = os.path.join(output_dir, f"{basename}_summary.txt")
             
-            if return_code == 0:
-                self._print_success("Batch processing completed successfully")
+            start_time = time.time()
+            
+            try:
+                # Parse DAT file
+                self._print_info("Parsing DAT file...")
+                parsed_data = self.dat_parser.parse_file(input_path)
+                game_count = parsed_data['game_count']
+                self._print_info(f"Found {game_count} games")
+                
+                # Process special cases
+                self._print_info("Identifying special cases...")
+                special_cases = self.rule_engine.process_collection(parsed_data['games'])['special_cases']
+                
+                # Define progress callback
+                def progress_callback(current, total):
+                    if self.settings['show_progress']:
+                        elapsed = time.time() - start_time
+                        games_per_sec = current / elapsed if elapsed > 0 else 0
+                        self._print_progress_bar(current, total, 40, f"{current}/{total} games ({games_per_sec:.1f} games/sec)")
+                
+                # Apply filters
+                self._print_info("Applying filters...")
+                result = self.filter_engine.filter_collection(
+                    parsed_data['games'],
+                    criteria=self.settings['criteria'],
+                    batch_size=self.settings['batch_size'],
+                    progress_callback=progress_callback
+                )
+                
+                filtered_games = result['filtered_games']
+                evaluations = result['evaluations']
+                
+                # Apply multi-disc rules
+                if special_cases and 'multi_disc' in special_cases:
+                    self._print_info("Applying multi-disc rules...")
+                    rules_config = {"multi_disc": {"mode": "all_or_none", "prefer": "complete"}}
+                    filtered_games = self.rule_engine.apply_special_case_rules(filtered_games, rules_config)
+                
+                # Export results
+                self._print_info(f"Exporting filtered DAT to: {filtered_path}")
+                self.export_manager.export_dat_file(filtered_games, parsed_data, filtered_path)
+                
+                self._print_info(f"Exporting JSON report to: {report_path}")
+                self.export_manager.export_json_report(
+                    filtered_games=filtered_games,
+                    evaluations=evaluations,
+                    special_cases=special_cases,
+                    output_path=report_path
+                )
+                
+                self._print_info(f"Exporting text summary to: {summary_path}")
+                self.export_manager.export_text_summary(
+                    filtered_games=filtered_games,
+                    original_count=game_count,
+                    filter_criteria=self.settings['criteria'],
+                    output_path=summary_path
+                )
+                
+                # Calculate statistics
+                kept_count = len(filtered_games)
+                reduction = game_count - kept_count
+                reduction_pct = (reduction / game_count * 100) if game_count > 0 else 0
+                time_taken = time.time() - start_time
+                
+                self._print_success(f"Filtering complete: {kept_count} of {game_count} games kept ({reduction_pct:.1f}% reduction)")
+                self._print_info(f"Time taken: {time_taken:.2f} seconds")
+                print()
+                
+                # Store results
+                results.append({
+                    'file': dat_file,
+                    'original_count': game_count,
+                    'filtered_count': kept_count,
+                    'reduction_pct': reduction_pct,
+                    'time_taken': time_taken
+                })
+                
+            except Exception as e:
+                logger.error(f"Error processing {dat_file}: {e}")
+                self._print_error(f"Failed to process {dat_file}: {str(e)}")
+                results.append({
+                    'file': dat_file,
+                    'error': str(e)
+                })
+                print()
+        
+        # Show summary
+        total_time = time.time() - batch_start_time
+        self._print_header("Batch Processing Summary")
+        
+        self._print_info(f"Processed {len(dat_files)} DAT files in {total_time:.2f} seconds")
+        print()
+        
+        for idx, result in enumerate(results, 1):
+            if 'error' in result:
+                self._print_error(f"{idx}. {result['file']}: Failed - {result['error']}")
             else:
-                self._print_error(f"Batch processing failed with return code {return_code}")
+                self._print_success(
+                    f"{idx}. {result['file']}: {result['filtered_count']} of {result['original_count']} kept "
+                    f"({result['reduction_pct']:.1f}% reduction) - {result['time_taken']:.2f}s"
+                )
+        
+        # Export batch summary
+        summary_path = os.path.join(output_dir, "batch_summary.txt")
+        with open(summary_path, 'w') as f:
+            f.write(f"DAT Filter AI - Batch Processing Summary\n")
+            f.write(f"=====================================\n\n")
+            f.write(f"Processed {len(dat_files)} DAT files in {total_time:.2f} seconds\n")
+            f.write(f"Provider: {self.settings['provider']}\n")
+            f.write(f"Threshold: {self.settings['global_threshold']}\n\n")
             
-            self._wait_for_key()
-            
-        except Exception as e:
-            logger.error(f"Error running batch processing: {e}")
-            self._print_error(f"Failed to run batch processing: {str(e)}")
-            self._wait_for_key()
+            for idx, result in enumerate(results, 1):
+                if 'error' in result:
+                    f.write(f"{idx}. {result['file']}: Failed - {result['error']}\n")
+                else:
+                    f.write(
+                        f"{idx}. {result['file']}: {result['filtered_count']} of {result['original_count']} kept "
+                        f"({result['reduction_pct']:.1f}% reduction) - {result['time_taken']:.2f}s\n"
+                    )
+        
+        self._print_success(f"Batch summary exported to: {summary_path}")
+        self._wait_for_key()
     
     def compare_providers_menu(self):
         """Display the provider comparison menu"""
         self._clear_screen()
         self._print_header("Compare Providers")
         
-        self._print_info("This will compare results from different AI providers")
+        self._print_info("This feature allows you to compare the filtering results from different AI providers")
+        print("A test DAT file will be processed by each provider and the results will be compared")
         print()
         
-        self._print_option("1", "Compare All Providers on a Test File")
-        self._print_option("2", "Run Multi-Evaluation Script")
-        self._print_option("3", "View Provider Comparison Report")
+        self._print_option("1", "Run Provider Comparison")
+        self._print_option("2", "Run Multi-Provider Evaluation")
+        self._print_option("3", "View Comparison Report")
         self._print_option("0", "Back to Main Menu")
         
         choice = self._get_user_input("Enter your choice")
@@ -1593,224 +1095,159 @@ class InteractiveMenu:
     def _run_provider_comparison(self):
         """Run a comparison between providers on a test file"""
         self._clear_screen()
-        self._print_header("Running Provider Comparison")
+        self._print_header("Provider Comparison")
         
-        # Find a small test file
-        test_files = []
         input_dir = self.settings['input_dir']
         
-        if os.path.exists(input_dir):
-            for file in os.listdir(input_dir):
-                if file.endswith(".dat") and ("test" in file.lower() or "sample" in file.lower()):
-                    test_files.append(file)
-        
+        # Choose a test file
+        test_files = [f for f in os.listdir(input_dir) if f.endswith('.dat') and 'test' in f.lower()]
         if not test_files:
-            self._print_error(f"No test files found in {input_dir}")
+            test_files = [f for f in os.listdir(input_dir) if f.endswith('.dat')]
+            
+        if not test_files:
+            self._print_error(f"No DAT files found in {input_dir}")
             self._wait_for_key()
             return
         
-        # Select a test file
-        self._print_subheader("Available Test Files")
-        
+        self._print_subheader("Select a test file")
         for idx, file in enumerate(test_files, 1):
             file_path = os.path.join(input_dir, file)
             file_size = os.path.getsize(file_path) / 1024  # Size in KB
             self._print_option(str(idx), f"{file} ({file_size:.1f} KB)")
         
         print()
-        self._print_option("0", "Cancel")
-        
-        choice = self._get_user_input("Enter your choice")
+        choice = self._get_user_input("Enter file number (or 0 to cancel)")
         
         if choice == "0":
             return
-        
+            
         try:
             idx = int(choice) - 1
             if 0 <= idx < len(test_files):
-                test_file = os.path.join(input_dir, test_files[idx])
+                test_file = test_files[idx]
+                input_path = os.path.join(input_dir, test_file)
                 
-                # Build command for multi-eval
-                cmd = ["./multieval.sh", test_file]
+                # Execute Python script
+                script_path = os.path.join(os.getcwd(), "compare_providers.py")
+                if not os.path.exists(script_path):
+                    self._print_error(f"Script not found: {script_path}")
+                    self._wait_for_key()
+                    return
                 
-                self._print_info(f"Running comparison on {test_files[idx]} with all available providers")
+                cmd = f"python {script_path} -i {input_path}"
+                
+                self._print_info(f"Running comparison with {test_file}...")
+                self._print_info(f"Command: {cmd}")
                 print()
                 
-                try:
-                    # Execute the multi-eval script
-                    process = subprocess.Popen(
-                        cmd,
-                        stdout=subprocess.PIPE,
-                        stderr=subprocess.PIPE,
-                        universal_newlines=True,
-                        bufsize=1
-                    )
-                    
-                    # Display output in real-time
-                    for line in iter(process.stdout.readline, ''):
-                        print(line, end='')
-                    
-                    process.stdout.close()
-                    return_code = process.wait()
-                    
-                    if return_code == 0:
-                        self._print_success("Provider comparison completed successfully")
-                    else:
-                        self._print_error(f"Provider comparison failed with return code {return_code}")
-                    
-                    self._wait_for_key()
-                    
-                except Exception as e:
-                    logger.error(f"Error running provider comparison: {e}")
-                    self._print_error(f"Failed to run provider comparison: {str(e)}")
-                    self._wait_for_key()
+                os.system(cmd)
+                
+                self._print_success("Comparison complete")
+                self._wait_for_key()
             else:
                 self._print_error("Invalid choice")
                 self._wait_for_key()
         except ValueError:
-            self._print_error("Please enter a number")
+            self._print_error("Please enter a valid number")
             self._wait_for_key()
     
     def _run_multi_eval(self):
         """Run the multi-evaluation script"""
         self._clear_screen()
-        self._print_header("Running Multi-Evaluation")
+        self._print_header("Multi-Provider Evaluation")
         
-        # Find available DAT files
-        dat_files = []
         input_dir = self.settings['input_dir']
         
-        if os.path.exists(input_dir):
-            for file in os.listdir(input_dir):
-                if file.endswith(".dat"):
-                    dat_files.append(file)
-        
-        if not dat_files:
+        # Choose a test file
+        test_files = [f for f in os.listdir(input_dir) if f.endswith('.dat') and 'test' in f.lower()]
+        if not test_files:
+            test_files = [f for f in os.listdir(input_dir) if f.endswith('.dat')]
+            
+        if not test_files:
             self._print_error(f"No DAT files found in {input_dir}")
             self._wait_for_key()
             return
         
-        # Select a DAT file
-        self._print_subheader("Available DAT Files")
-        
-        for idx, file in enumerate(dat_files, 1):
+        self._print_subheader("Select a test file")
+        for idx, file in enumerate(test_files, 1):
             file_path = os.path.join(input_dir, file)
             file_size = os.path.getsize(file_path) / 1024  # Size in KB
             self._print_option(str(idx), f"{file} ({file_size:.1f} KB)")
         
         print()
-        self._print_option("0", "Cancel")
-        
-        choice = self._get_user_input("Enter your choice")
+        choice = self._get_user_input("Enter file number (or 0 to cancel)")
         
         if choice == "0":
             return
-        
+            
         try:
             idx = int(choice) - 1
-            if 0 <= idx < len(dat_files):
-                dat_file = os.path.join(input_dir, dat_files[idx])
+            if 0 <= idx < len(test_files):
+                test_file = test_files[idx]
+                input_path = os.path.join(input_dir, test_file)
                 
-                # Build command for multi-eval
-                cmd = ["python", "multieval.py", "--input", dat_file]
+                # Execute Python script
+                script_path = os.path.join(os.getcwd(), "multieval.py")
+                if not os.path.exists(script_path):
+                    self._print_error(f"Script not found: {script_path}")
+                    self._wait_for_key()
+                    return
                 
-                self._print_info(f"Running multi-evaluation on {dat_files[idx]}")
+                cmd = f"python {script_path} -i {input_path}"
+                
+                self._print_info(f"Running multi-evaluation with {test_file}...")
+                self._print_info(f"Command: {cmd}")
                 print()
                 
-                try:
-                    # Execute the multi-eval script
-                    process = subprocess.Popen(
-                        cmd,
-                        stdout=subprocess.PIPE,
-                        stderr=subprocess.PIPE,
-                        universal_newlines=True,
-                        bufsize=1
-                    )
-                    
-                    # Display output in real-time
-                    for line in iter(process.stdout.readline, ''):
-                        print(line, end='')
-                    
-                    process.stdout.close()
-                    return_code = process.wait()
-                    
-                    if return_code == 0:
-                        self._print_success("Multi-evaluation completed successfully")
-                    else:
-                        self._print_error(f"Multi-evaluation failed with return code {return_code}")
-                    
-                    self._wait_for_key()
-                    
-                except Exception as e:
-                    logger.error(f"Error running multi-evaluation: {e}")
-                    self._print_error(f"Failed to run multi-evaluation: {str(e)}")
-                    self._wait_for_key()
+                os.system(cmd)
+                
+                self._print_success("Multi-evaluation complete")
+                self._wait_for_key()
             else:
                 self._print_error("Invalid choice")
                 self._wait_for_key()
         except ValueError:
-            self._print_error("Please enter a number")
+            self._print_error("Please enter a valid number")
             self._wait_for_key()
     
     def _view_comparison_report(self):
         """View the provider comparison report"""
+        report_file = "comparison.txt"
+        
+        if not os.path.exists(report_file):
+            # Try to find in archive directory
+            archive_file = os.path.join("archive", report_file)
+            if os.path.exists(archive_file):
+                report_file = archive_file
+            else:
+                self._print_error(f"Comparison report not found: {report_file}")
+                self._wait_for_key()
+                return
+        
         self._clear_screen()
         self._print_header("Provider Comparison Report")
         
-        # Check if comparison.txt exists
-        if os.path.exists("comparison.txt"):
-            try:
-                with open("comparison.txt", "r") as f:
-                    report = f.read()
-                
-                # Display the report
-                print(report)
-                
-                self._wait_for_key()
-                
-            except Exception as e:
-                logger.error(f"Error reading comparison report: {e}")
-                self._print_error(f"Failed to read comparison report: {str(e)}")
-                self._wait_for_key()
-        elif os.path.exists("archive/comparison.txt"):
-            try:
-                with open("archive/comparison.txt", "r") as f:
-                    report = f.read()
-                
-                # Display the report
-                print(report)
-                
-                self._wait_for_key()
-                
-            except Exception as e:
-                logger.error(f"Error reading comparison report: {e}")
-                self._print_error(f"Failed to read comparison report: {str(e)}")
-                self._wait_for_key()
-        else:
-            self._print_error("No comparison report found. Please run a provider comparison first.")
-            self._wait_for_key()
+        # Display report
+        with open(report_file, 'r') as f:
+            content = f.read()
+            print(content)
+        
+        self._wait_for_key()
 
 def main():
     """Main entry point for the interactive menu"""
-    # Parse command line arguments
-    parser = argparse.ArgumentParser(description="DAT Filter AI - Interactive CLI")
-    parser.add_argument("--theme", help="UI theme (default, retro)", default="default")
-    args = parser.parse_args()
-    
-    # Initialize the menu
     menu = InteractiveMenu()
     
-    # Set theme if specified
-    if args.theme in menu.themes:
-        menu.settings['theme'] = args.theme
-        menu.current_theme = menu.themes[args.theme]
-    
-    # Start the main menu
-    try:
-        menu.main_menu()
-    except KeyboardInterrupt:
-        print("\nExiting DAT Filter AI - Interactive CLI")
-        sys.exit(0)
+    while menu.running:
+        try:
+            menu.main_menu()
+        except KeyboardInterrupt:
+            print("\nExiting...")
+            break
+        except Exception as e:
+            logger.error(f"Unhandled exception: {e}")
+            print(f"\nAn error occurred: {e}")
+            input("Press Enter to continue...")
 
 if __name__ == "__main__":
     main()
