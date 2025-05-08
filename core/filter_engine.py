@@ -155,6 +155,7 @@ class FilterEngine:
             criteria: List of criteria to use for filtering
             batch_size: Number of games to process in each batch
             progress_callback: Optional callback function for progress updates
+                              Can receive a third parameter with the current batch results
             
         Returns:
             Tuple of (filtered_games, evaluation_results, provider_error)
@@ -175,6 +176,7 @@ class FilterEngine:
         # Process in batches
         for i in range(0, total_games, batch_size):
             batch = collection[i:i+batch_size]
+            current_batch_results = []
             
             # Update progress
             if progress_callback:
@@ -197,14 +199,27 @@ class FilterEngine:
                 all_evaluations.append(evaluation)
                 
                 # Check if game meets criteria
-                if self._meets_criteria(evaluation, criteria):
+                meets_criteria = self._meets_criteria(evaluation, criteria)
+                if meets_criteria:
                     filtered_games.append(game)
+                
+                # Store result for batch display
+                current_batch_results.append({
+                    "game_name": game.get("name", "Unknown Game"),
+                    "keep": meets_criteria,
+                    "quality_score": evaluation.get("quality_score", 0),
+                    "reason": evaluation.get("reason", "")
+                })
                 
                 processed += 1
                 
                 # Update progress more frequently
                 if progress_callback and processed % max(1, batch_size // 2) == 0:
-                    progress_callback(processed, total_games)
+                    progress_callback(processed, total_games, current_batch_results)
+            
+            # Show batch results at the end of batch
+            if progress_callback and current_batch_results:
+                progress_callback(processed, total_games, current_batch_results)
         
         # Final progress update
         if progress_callback:

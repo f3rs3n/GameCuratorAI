@@ -60,6 +60,34 @@ class TextVisualizer:
             return os.get_terminal_size().columns
         except (AttributeError, OSError):
             return 80
+            
+    def get_color(self, color_name: str) -> str:
+        """
+        Get ANSI color code for a named color
+        
+        Args:
+            color_name: Name of the color (reset, success, error, warning, highlight, info, data)
+            
+        Returns:
+            ANSI color code string
+        """
+        color_map = {
+            'reset': Style.RESET_ALL,
+            'success': Fore.GREEN,
+            'error': Fore.RED,
+            'warning': Fore.YELLOW,
+            'highlight': Fore.CYAN + Style.BRIGHT,
+            'info': Fore.BLUE,
+            'data': Fore.WHITE + Style.BRIGHT,
+            'magenta': Fore.MAGENTA,
+            'cyan': Fore.CYAN,
+            'white': Fore.WHITE,
+        }
+        
+        if not self.use_color:
+            return ""
+            
+        return color_map.get(color_name.lower(), Style.RESET_ALL)
     
     def _format_text(self, text: str, color: str = "", style: str = "", max_width: int = 0) -> str:
         """

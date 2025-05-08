@@ -8,6 +8,7 @@ import os
 import sys
 import json
 import time
+import random
 import logging
 import argparse
 from typing import Dict, List, Any, Tuple, Optional, Callable
@@ -179,10 +180,35 @@ class InteractiveMenu:
         print(f"{label}: {self.colors['data']}{value}{Style.RESET_ALL}")
     
     def _print_progress_bar(self, current: int, total: int, width: int = 50, suffix: str = ""):
-        """Print a simple progress bar"""
+        """Print a game-themed progress bar"""
         filled_length = int(width * current // total)
-        bar = '█' * filled_length + '░' * (width - filled_length)
         percent = f"{100 * current / total:.1f}"
+        
+        # Game-themed progress characters
+        game_icons = ['🎮', '🕹️', '👾', '🎯', '🏆']
+        
+        # Use different colors based on progress
+        if current / total < 0.3:  # First third
+            color = Fore.BLUE
+        elif current / total < 0.7:  # Middle third
+            color = Fore.YELLOW
+        else:  # Last third
+            color = Fore.GREEN
+        
+        if filled_length < width:
+            # Add game icon at current progress position
+            icon = random.choice(game_icons) if current > 0 else '▶️'
+            bar = '█' * filled_length
+            
+            if self.settings.get('color', True):
+                colored_icon = color + icon + Style.RESET_ALL
+            else:
+                colored_icon = icon
+                
+            bar += colored_icon + '░' * (width - filled_length - 1)
+        else:
+            bar = '█' * width
+            
         print(f"\r[{self.colors['success']}{bar}{Style.RESET_ALL}] {percent}% {suffix}", end='\r')
         if current == total:
             print()
@@ -738,15 +764,33 @@ class InteractiveMenu:
                     else:
                         eta = f"ETA: {int(remaining)}s"
                     
-                    # Show progress
+                    # Clear previous line and show progress
+                    print("\r" + " " * 80, end="\r")  # Clear line
                     self._print_progress_bar(current, total, 40, f"{current}/{total} games - {games_per_sec:.1f} games/sec - {eta}")
                 
-                # Display intermediate results if available
-                if batch_results and current % 5 == 0:
-                    print("\nIntermediate results:")
-                    kept = len([g for g in batch_results if g.get('keep', False)])
+                # Display detailed batch results if available
+                if batch_results:
+                    # Count stats
+                    kept = len([g for g in batch_results if g.get('kept', False)])
                     removed = len(batch_results) - kept
-                    self._print_info(f"Last batch: {kept} kept, {removed} removed")
+                    
+                    # Show summary and game details with color coding
+                    print("\n\nRecent games processed:")
+                    print(f"  Last batch: {Fore.GREEN}{kept} kept{Style.RESET_ALL}, {Fore.RED}{removed} removed{Style.RESET_ALL}\n")
+                    
+                    # Display each game with status and score
+                    for game in batch_results:
+                        name = game.get('name', 'Unknown')
+                        kept = game.get('kept', False)
+                        score = game.get('overall_score', 0.0)
+                        
+                        # Green checkmark for kept, red X for removed
+                        status = f"{Fore.GREEN}✓ KEEP{Style.RESET_ALL}" if kept else f"{Fore.RED}✗ REMOVE{Style.RESET_ALL}"
+                        
+                        # Show game with score
+                        print(f"  {status} | {name} (Score: {score:.2f})")
+                    
+                    print("")  # Add spacing
             
             # Apply the filters safely with fallback
             if not self.parsed_data or 'games' not in self.parsed_data:
@@ -1370,12 +1414,40 @@ class InteractiveMenu:
                 self._print_info("Identifying special cases...")
                 special_cases = self.rule_engine.process_collection(parsed_data['games'])['special_cases']
                 
-                # Define progress callback
-                def progress_callback(current, total):
+                # Define progress callback with enhanced display
+                def progress_callback(current, total, batch_results=None):
                     if self.settings['show_progress']:
                         elapsed = time.time() - start_time
                         games_per_sec = current / elapsed if elapsed > 0 else 0
-                        self._print_progress_bar(current, total, 40, f"{current}/{total} games ({games_per_sec:.1f} games/sec)")
+                        
+                        # Calculate ETA
+                        if games_per_sec > 0:
+                            remaining_games = total - current
+                            eta_seconds = remaining_games / games_per_sec
+                            if eta_seconds < 60:
+                                eta_str = f"{eta_seconds:.0f}s"
+                            else:
+                                eta_str = f"{eta_seconds/60:.0f}m {eta_seconds%60:.0f}s"
+                        else:
+                            eta_str = "calculating..."
+                        
+                        # Print progress bar
+                        self._print_progress_bar(current, total, 40, f"{current}/{total} games - {games_per_sec:.1f} games/sec - ETA: {eta_str}")
+                        
+                        # Display batch results if available
+                        if batch_results:
+                            print("\nRecent games processed:")
+                            for game in batch_results:
+                                # Display keep/remove status with color coding
+                                name = game.get('name', 'Unknown')
+                                kept = game.get('kept', False)
+                                score = game.get('overall_score', 0.0)
+                                
+                                # Green checkmark for kept, red X for removed
+                                status = f"{Fore.GREEN}✓ KEEP{Style.RESET_ALL}" if kept else f"{Fore.RED}✗ REMOVE{Style.RESET_ALL}"
+                                
+                                # Show game with score
+                                print(f"  {status} | {name} (Score: {score:.2f})")
                 
                 # Apply filters
                 self._print_info("Applying filters...")

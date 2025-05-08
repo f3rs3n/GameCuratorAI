@@ -145,9 +145,11 @@ def main():
         
         # Progress bar setup
         start_time = time.time()
+        last_batch_results = []
         
-        def progress_callback(current, total):
+        def progress_callback(current, total, batch_results=None):
             """Progress reporting with game-themed visual feedback"""
+            nonlocal last_batch_results
             percentage = int(100 * current / total) if total > 0 else 0
             
             elapsed = time.time() - start_time
@@ -160,12 +162,37 @@ def main():
             else:
                 eta_str = "ETA: calculating..."
             
+            # Save batch results if provided
+            if batch_results:
+                last_batch_results = batch_results
+
             # Use the game-themed progress display
             progress_display = visualizer.display_game_themed_progress(
                 current, total, games_per_sec, eta_str
             )
             
-            sys.stdout.write(f"\r{progress_display}")
+            # Clear line and display progress
+            sys.stdout.write("\r" + " " * 100 + "\r")  # Clear line
+            sys.stdout.write(f"{progress_display}")
+
+            # Show batch results if available
+            if last_batch_results and current < total:
+                # Show recent game evaluations with color coding
+                sys.stdout.write("\n\nRecent games processed:")
+                for idx, result in enumerate(last_batch_results[-5:]):  # Show up to 5 recent games
+                    game_name = result.get("game_name", "Unknown Game")
+                    keep = result.get("keep", False)
+                    quality = result.get("quality_score", 0)
+                    
+                    status = "✓ KEEP" if keep else "✗ REMOVE"
+                    color = visualizer.get_color('success') if keep else visualizer.get_color('error')
+                    
+                    # Display with color
+                    sys.stdout.write(f"\n  {color}{status}{visualizer.get_color('reset')} | ")
+                    sys.stdout.write(f"{game_name} (Score: {quality:.2f})")
+                
+                sys.stdout.write("\n")  # Add spacing
+            
             sys.stdout.flush()
             
             logger.info(f"Processing: {current}/{total} games ({percentage}%)")
