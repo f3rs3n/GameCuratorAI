@@ -11,6 +11,7 @@ from typing import Dict, Any, List, Optional
 
 import google.generativeai as genai
 from ai_providers.base import BaseAIProvider
+from utils.api_usage_tracker import get_tracker
 
 class GeminiProvider(BaseAIProvider):
     """Gemini implementation of the AI provider interface"""
@@ -71,6 +72,11 @@ class GeminiProvider(BaseAIProvider):
                 if not response or not hasattr(response, 'text'):
                     self.logger.error("API test failed: No valid response received")
                     return False
+                
+                # Track API usage for the test call - estimate token count based on prompt/response length
+                estimated_tokens = len(test_prompt) // 4 + len(response.text) // 4
+                usage_tracker = get_tracker()
+                usage_tracker.record_request("gemini", estimated_tokens)
                     
                 self.logger.info(f"API test response: {response.text[:50]}...")
                 
@@ -192,6 +198,11 @@ class GeminiProvider(BaseAIProvider):
             # Parse the response
             response_text = response.text
             
+            # Track API usage - estimate token counts based on prompt and response length
+            estimated_tokens = len(prompt) // 4 + len(response_text) // 4
+            usage_tracker = get_tracker()
+            usage_tracker.record_request("gemini", estimated_tokens)
+            
             # Extract the JSON part from the response
             start_idx = response_text.find('{')
             end_idx = response_text.rfind('}') + 1
@@ -299,6 +310,11 @@ class GeminiProvider(BaseAIProvider):
                 
                 # Parse the response
                 response_text = response.text
+                
+                # Track API usage - estimate token counts based on prompt and response length
+                estimated_tokens = len(prompt) // 4 + len(response_text) // 4
+                usage_tracker = get_tracker()
+                usage_tracker.record_request("gemini", estimated_tokens)
                 
                 # Extract the JSON part from the response
                 # First try to detect standard JSON structure with brace matching
@@ -457,6 +473,11 @@ class GeminiProvider(BaseAIProvider):
             
             response = self.model_obj.generate_content(prompt)
             response_text = response.text
+            
+            # Track API usage - estimate token counts based on prompt and response length
+            estimated_tokens = len(prompt) // 4 + len(response_text) // 4
+            usage_tracker = get_tracker()
+            usage_tracker.record_request("gemini", estimated_tokens)
             
             # Extract the JSON part from the response
             start_idx = response_text.find('{')

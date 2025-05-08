@@ -807,19 +807,37 @@ class InteractiveMenu:
                 progress_callback=progress_callback
             )
             
-            # Process result - handle both 3-item and 2-item tuples for backward compatibility
+            # Process result - handle both 3-item and 4-item tuples for backward compatibility
             if result and isinstance(result, tuple):
-                if len(result) == 3:
+                if len(result) == 4:
+                    self.filtered_games, self.evaluations, provider_error, api_usage_data = result
+                elif len(result) == 3:
                     self.filtered_games, self.evaluations, provider_error = result
+                    api_usage_data = None
                 elif len(result) == 2:
                     # Safe unpacking with explicit indexing to avoid type errors
                     self.filtered_games = result[0]  # First element is filtered_games
                     self.evaluations = result[1]     # Second element is evaluations
                     provider_error = None
+                    api_usage_data = None
                 else:
                     raise ValueError(f"Unexpected result format from filter_engine: {result}")
             else:
                 raise ValueError("Filter engine returned invalid result")
+                
+            # Display API usage information if available
+            if api_usage_data:
+                provider = api_usage_data.get("provider", "UNKNOWN")
+                today_tokens = api_usage_data.get("today_tokens", 0)
+                month_tokens = api_usage_data.get("month_tokens", 0)
+                total_requests = api_usage_data.get("total_requests", 0)
+                
+                print(f"\n{Fore.CYAN}API Usage Information:{Style.RESET_ALL}")
+                print(f"Provider: {provider}")
+                print(f"Today's usage: {today_tokens:,} tokens")
+                print(f"30-day usage: {month_tokens:,} tokens")
+                print(f"Total requests: {total_requests}")
+                print()
             
             # Check for provider errors
             if provider_error:
@@ -871,7 +889,11 @@ class InteractiveMenu:
                     
                     # Process result with safe handling of different return formats
                     if result and isinstance(result, tuple):
-                        if len(result) == 3:
+                        api_usage_data = None
+                        
+                        if len(result) == 4:
+                            self.filtered_games, self.evaluations, provider_error, api_usage_data = result
+                        elif len(result) == 3:
                             self.filtered_games, self.evaluations, provider_error = result
                         elif len(result) == 2:
                             # Safe unpacking with explicit indexing to avoid type errors
@@ -881,6 +903,20 @@ class InteractiveMenu:
                         else:
                             self._print_error(f"Unexpected result format from filter engine: {result}")
                             return
+                            
+                        # Display API usage information if available
+                        if api_usage_data:
+                            provider = api_usage_data.get("provider", "UNKNOWN")
+                            today_tokens = api_usage_data.get("today_tokens", 0)
+                            month_tokens = api_usage_data.get("month_tokens", 0)
+                            total_requests = api_usage_data.get("total_requests", 0)
+                            
+                            print(f"\n{Fore.CYAN}API Usage Information:{Style.RESET_ALL}")
+                            print(f"Provider: {provider}")
+                            print(f"Today's usage: {today_tokens:,} tokens")
+                            print(f"30-day usage: {month_tokens:,} tokens")
+                            print(f"Total requests: {total_requests}")
+                            print()
                     else:
                         self._print_error("Filter engine returned invalid result")
                         return
@@ -1131,7 +1167,8 @@ class InteractiveMenu:
                 filtered_games=self.filtered_games,
                 original_count=original_count,
                 filter_criteria=self.settings['criteria'],
-                output_path=custom_path
+                output_path=custom_path,
+                provider_name=self.settings['provider']
             )
             
             self._print_success(f"Successfully exported text summary to {custom_path}")
@@ -1511,8 +1548,26 @@ class InteractiveMenu:
                     progress_callback=progress_callback
                 )
                 
-                # Process result - result is a tuple of (filtered_games, evaluations, provider_error)
-                filtered_games, evaluations, provider_error = result
+                # Process result - result is a tuple of (filtered_games, evaluations, provider_error, api_usage_data)
+                if len(result) == 4:
+                    filtered_games, evaluations, provider_error, api_usage_data = result
+                    
+                    # Display API usage information if available
+                    if api_usage_data:
+                        provider = api_usage_data.get("provider", "UNKNOWN")
+                        today_tokens = api_usage_data.get("today_tokens", 0)
+                        month_tokens = api_usage_data.get("month_tokens", 0)
+                        total_requests = api_usage_data.get("total_requests", 0)
+                        
+                        print(f"\n{Fore.CYAN}API Usage Information:{Style.RESET_ALL}")
+                        print(f"Provider: {provider}")
+                        print(f"Today's usage: {today_tokens:,} tokens")
+                        print(f"30-day usage: {month_tokens:,} tokens")
+                        print(f"Total requests: {total_requests}")
+                        print()
+                else:
+                    # For backward compatibility
+                    filtered_games, evaluations, provider_error = result
                 
                 # Check if there was a provider error
                 if provider_error:
@@ -1544,7 +1599,8 @@ class InteractiveMenu:
                     filtered_games=filtered_games,
                     original_count=game_count,
                     filter_criteria=self.settings['criteria'],
-                    output_path=summary_path
+                    output_path=summary_path,
+                    provider_name=self.settings['provider']
                 )
                 
                 # Calculate statistics

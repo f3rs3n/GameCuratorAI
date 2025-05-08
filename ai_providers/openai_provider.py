@@ -13,6 +13,7 @@ from typing import Dict, Any, List, Optional
 # do not change this unless explicitly requested by the user
 from openai import OpenAI
 from ai_providers.base import BaseAIProvider
+from utils.api_usage_tracker import get_tracker
 
 class OpenAIProvider(BaseAIProvider):
     """OpenAI implementation of the AI provider interface"""
@@ -60,6 +61,15 @@ class OpenAIProvider(BaseAIProvider):
                     messages=[{"role": "user", "content": test_prompt}],
                     max_tokens=10  # Keep it very small to minimize token usage
                 )
+                
+                # Track API usage
+                token_usage = 0
+                if hasattr(response, 'usage') and hasattr(response.usage, 'total_tokens'):
+                    token_usage = response.usage.total_tokens
+                
+                # Record the request in usage tracker
+                usage_tracker = get_tracker()
+                usage_tracker.record_request("openai", token_usage)
                 
                 if not response or not hasattr(response, 'choices') or len(response.choices) == 0:
                     self.logger.error("API test failed: No valid response received")
@@ -158,6 +168,15 @@ class OpenAIProvider(BaseAIProvider):
                 response_format={"type": "json_object"},
                 temperature=0.2  # Lower temperature for more consistent results
             )
+            
+            # Track API usage
+            token_usage = 0
+            if hasattr(response, 'usage') and hasattr(response.usage, 'total_tokens'):
+                token_usage = response.usage.total_tokens
+            
+            # Record the request in usage tracker
+            usage_tracker = get_tracker()
+            usage_tracker.record_request("openai", token_usage)
             
             # Parse the response with safety checks
             if not response or not hasattr(response, 'choices') or len(response.choices) == 0:
@@ -262,6 +281,15 @@ class OpenAIProvider(BaseAIProvider):
                 response_format={"type": "json_object"},
                 temperature=0.2
             )
+            
+            # Track API usage
+            token_usage = 0
+            if hasattr(response, 'usage') and hasattr(response.usage, 'total_tokens'):
+                token_usage = response.usage.total_tokens
+            
+            # Record the request in usage tracker
+            usage_tracker = get_tracker()
+            usage_tracker.record_request("openai", token_usage)
             
             # Safe parsing of the response with validation
             if not response or not hasattr(response, 'choices') or len(response.choices) == 0:

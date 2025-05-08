@@ -9,6 +9,7 @@ import datetime
 from typing import Dict, List, Any, Optional, Tuple
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
+from utils.api_usage_tracker import get_tracker
 
 class ExportManager:
     """Manager for exporting filtered game collections and results."""
@@ -265,7 +266,8 @@ class ExportManager:
                            filtered_games: List[Dict[str, Any]], 
                            original_count: int,
                            filter_criteria: List[str],
-                           output_path: str) -> Tuple[bool, str]:
+                           output_path: str,
+                           provider_name: str = None) -> Tuple[bool, str]:
         """
         Export a human-readable text summary of the filtering results
         
@@ -352,6 +354,53 @@ class ExportManager:
                 summary.append("")
                 summary.append("Note: To see the complete list of removed games, compare the original DAT")
                 summary.append("      file with the filtered output using a comparison tool.")
+            
+            # Add API usage information for all providers
+            try:
+                # Include API usage section for all providers (even random)
+                summary.extend([
+                    "",
+                    "API Usage Information:",
+                    "----------------------",
+                    f"Provider: {provider_name.upper() if provider_name else 'UNKNOWN'}"
+                ])
+                
+                # Add specific provider information
+                if provider_name and provider_name.lower() == "random":
+                    summary.extend([
+                        "Random provider does not use external API tokens.",
+                        "It's recommended only for testing purposes only.",
+                        "Total requests: 0 (No API calls needed)"
+                    ])
+                elif provider_name:
+                    provider_name_lower = provider_name.lower()
+                    usage_tracker = get_tracker()
+                    usage_report = usage_tracker.get_usage_report(provider_name_lower, days=30)
+                    
+                    # Calculate tokens for today and last 30 days
+                    today_tokens = 0
+                    month_tokens = 0
+                    total_requests = 0
+                    
+                    if usage_report and "daily_usage" in usage_report:
+                        for date, data in usage_report["daily_usage"].items():
+                            tokens = data.get("tokens", 0)
+                            requests = data.get("requests", 0)
+                            month_tokens += tokens
+                            total_requests += requests
+                            
+                            # Check if it's today's usage
+                            today = datetime.datetime.now().strftime('%Y-%m-%d')
+                            if date == today:
+                                today_tokens = tokens
+                    
+                    summary.extend([
+                        f"Today's usage: {today_tokens:,} tokens",
+                        f"30-day usage: {month_tokens:,} tokens",
+                        f"Total requests: {total_requests:,}"
+                    ])
+            except Exception as e:
+                self.logger.warning(f"Failed to add API usage information: {e}")
             
             # Write to file
             with open(output_path, 'w', encoding='utf-8') as f:

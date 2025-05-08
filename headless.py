@@ -206,12 +206,19 @@ def main():
             
             logger.info(f"Processing: {current}/{total} games ({percentage}%)")
         
-        filtered_games, evaluations, provider_error = filter_engine.filter_collection(
+        result = filter_engine.filter_collection(
             parsed_data['games'],
             criteria,
             args.batch_size,
             progress_callback
         )
+        
+        # Handle both 3-item and 4-item return values for compatibility
+        if len(result) == 4:
+            filtered_games, evaluations, provider_error, api_usage_data = result
+        else:
+            filtered_games, evaluations, provider_error = result
+            api_usage_data = None
         
         # Check for provider errors
         if provider_error:
@@ -284,6 +291,20 @@ def main():
         # Print summary
         print(f"Filtering complete: {len(filtered_games)} of {parsed_data['game_count']} games kept")
         logger.info(f"Filtering complete: {len(filtered_games)} of {parsed_data['game_count']} games kept")
+        
+        # Display API usage information if available
+        if api_usage_data:
+            provider = api_usage_data.get("provider", "UNKNOWN")
+            today_tokens = api_usage_data.get("today_tokens", 0)
+            month_tokens = api_usage_data.get("month_tokens", 0)
+            total_requests = api_usage_data.get("total_requests", 0)
+            
+            if provider.lower() == "random test provider":
+                print(f"API Usage for {provider}: No API tokens used (Random provider)")
+                logger.info(f"API Usage for {provider}: No API tokens used (Random provider)")
+            else:
+                print(f"API Usage for {provider}: {today_tokens:,} tokens used today")
+                logger.info(f"API Usage for {provider}: {today_tokens:,} tokens used today")
         
         # Show filtering results
         visualizer.display_filtering_results(
@@ -377,7 +398,8 @@ def main():
                 filtered_games,
                 parsed_data['game_count'],
                 criteria,
-                summary_path
+                summary_path,
+                provider_name=ai_provider.get_provider_name()
             )
             if success:
                 print(f"Successfully exported text summary to {summary_path}")

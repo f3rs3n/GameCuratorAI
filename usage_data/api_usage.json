@@ -1,0 +1,36 @@
+{
+  "openai": {
+    "total_requests": 2,
+    "total_tokens": 600,
+    "daily_usage": {
+      "2025-05-08": {
+        "requests": 2,
+        "tokens": 600
+      }
+    },
+    "monthly_usage": {
+      "2025-05": {
+        "requests": 2,
+        "tokens": 600
+      }
+    },
+    "last_updated": "2025-05-08T12:31:04.418900"
+  },
+  "gemini": {
+    "total_requests": 50,
+    "total_tokens": 37006,
+    "daily_usage": {
+      "2025-05-08": {
+        "requests": 50,
+        "tokens": 37006
+      }
+    },
+    "monthly_usage": {
+      "2025-05": {
+        "requests": 50,
+        "tokens": 37006
+      }
+    },
+    "last_updated": "2025-05-08T13:15:20.887983"
+  }
+}

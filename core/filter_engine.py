@@ -8,6 +8,7 @@ import json
 from typing import Dict, List, Any, Optional, Tuple
 
 from ai_providers.base import BaseAIProvider
+from utils.api_usage_tracker import get_tracker
 
 class FilterEngine:
     """Engine for filtering games based on AI evaluations and rule criteria."""
@@ -146,7 +147,7 @@ class FilterEngine:
                          collection: List[Dict[str, Any]], 
                          criteria: List[str],
                          batch_size: int = 10,
-                         progress_callback=None) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], Optional[Dict[str, Any]]]:
+                         progress_callback=None) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], Optional[Dict[str, Any]], Optional[Dict[str, Any]]]:
         """
         Filter a collection of games based on the specified criteria
         
@@ -158,8 +159,9 @@ class FilterEngine:
                               Can receive a third parameter with the current batch results
             
         Returns:
-            Tuple of (filtered_games, evaluation_results, provider_error)
+            Tuple of (filtered_games, evaluation_results, provider_error, api_usage_data)
             provider_error is None if no error occurred, otherwise contains error information
+            api_usage_data contains information about the API usage (tokens used, etc.)
         """
         self.logger.info(f"Starting to filter collection of {len(collection)} games")
         
@@ -192,7 +194,14 @@ class FilterEngine:
                 if "error" in evaluation and "Provider not available" in evaluation["error"]:
                     self.logger.error(f"Provider error: {evaluation['error']} - stopping processing")
                     # Return early with a provider error flag
-                    return ([], all_evaluations, {"provider_error": evaluation["error"]})
+                    api_usage_data = {
+                        "provider": self.ai_provider.get_provider_name().upper(),
+                        "today_tokens": 0,
+                        "month_tokens": 0,
+                        "total_requests": 0,
+                        "error": evaluation["error"]
+                    }
+                    return ([], all_evaluations, {"provider_error": evaluation["error"]}, api_usage_data)
                 
                 # Add evaluation to game and to results list
                 game["_evaluation"] = evaluation
@@ -240,7 +249,59 @@ class FilterEngine:
             progress_callback(total_games, total_games)
         
         self.logger.info(f"Filtering complete. {len(filtered_games)} of {len(collection)} games passed filters.")
-        return filtered_games, all_evaluations, None  # No error
+        
+        # Get and log API usage information
+        api_usage_data = None
+        provider_name = self.ai_provider.get_provider_name().lower()
+        
+        if provider_name.lower() == "random":
+            provider_name = "RANDOM TEST PROVIDER"  # More descriptive name for logs
+            self.logger.info(f"API Usage for {provider_name}: 0 tokens used today")
+            api_usage_data = {
+                "provider": provider_name,
+                "today_tokens": 0,
+                "month_tokens": 0,
+                "total_requests": 0
+            }
+        else:
+            try:
+                usage_tracker = get_tracker()
+                
+                # Get both 1-day and 30-day reports
+                usage_report = usage_tracker.get_usage_report(provider_name)
+                
+                # Calculate tokens used today
+                today_tokens = 0
+                month_tokens = 0
+                total_requests = 0
+                
+                if usage_report and provider_name in usage_report:
+                    provider_data = usage_report[provider_name]
+                    today_tokens = provider_data.get("current_day_tokens", 0)
+                    month_tokens = provider_data.get("last_30_days_tokens", 0)
+                    total_requests = provider_data.get("total_requests", 0)
+                
+                # Create API usage data dictionary
+                api_usage_data = {
+                    "provider": provider_name.upper(),
+                    "today_tokens": today_tokens,
+                    "month_tokens": month_tokens,
+                    "total_requests": total_requests
+                }
+                
+                # Log basic usage info
+                self.logger.info(f"API Usage for {provider_name.upper()}: {today_tokens} tokens used today")
+            except Exception as e:
+                self.logger.warning(f"Failed to report API usage: {e}")
+                api_usage_data = {
+                    "provider": provider_name.upper(),
+                    "today_tokens": 0,
+                    "month_tokens": 0,
+                    "total_requests": 0,
+                    "error": str(e)
+                }
+                
+        return filtered_games, all_evaluations, None, api_usage_data
     
     def _extract_collection_context(self, collection: List[Dict[str, Any]]) -> Dict[str, Any]:
         """
