@@ -780,9 +780,9 @@ class InteractiveMenu:
                     
                     # Display each game with status and score
                     for game in batch_results:
-                        name = game.get('name', 'Unknown')
-                        kept = game.get('kept', False)
-                        score = game.get('overall_score', 0.0)
+                        name = game.get('game_name', 'Unknown')
+                        kept = game.get('keep', False)
+                        score = game.get('quality_score', 0.0)
                         
                         # Green checkmark for kept, red X for removed
                         status = f"{Fore.GREEN}✓ KEEP{Style.RESET_ALL}" if kept else f"{Fore.RED}✗ REMOVE{Style.RESET_ALL}"
@@ -1439,9 +1439,9 @@ class InteractiveMenu:
                             print("\nRecent games processed:")
                             for game in batch_results:
                                 # Display keep/remove status with color coding
-                                name = game.get('name', 'Unknown')
-                                kept = game.get('kept', False)
-                                score = game.get('overall_score', 0.0)
+                                name = game.get('game_name', 'Unknown')
+                                kept = game.get('keep', False)
+                                score = game.get('quality_score', 0.0)
                                 
                                 # Green checkmark for kept, red X for removed
                                 status = f"{Fore.GREEN}✓ KEEP{Style.RESET_ALL}" if kept else f"{Fore.RED}✗ REMOVE{Style.RESET_ALL}"

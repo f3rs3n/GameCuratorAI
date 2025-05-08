@@ -1,6 +1,6 @@
 DAT Filter AI - Filtering Summary
 ==============================
-Date: 2025-05-08 10:51:17
+Date: 2025-05-08 10:59:03
 Original game count: 77
 Filtered game count: 77
 Reduction: 0 games (0.0% of collection)
@@ -15,10 +15,10 @@ Filter Criteria:
 
 Top 7 Games (Highest Quality Scores):
 ----------------------------------------
-1. Space Invaders (USA) - Score: 7.80/10
-2. Tempest (USA) (AtariAge) - Score: 7.80/10
-3. Castle Crisis (USA) (Unl) - Score: 7.70/10
-4. Kaboom! (USA) - Score: 7.50/10
-5. Space Dungeon (USA) - Score: 7.50/10
-6. BerZerk (USA) - Score: 7.30/10
-7. Meteorites (USA) - Score: 7.30/10
+1. Zenji (USA) - Score: 8.40/10
+2. Rescue on Fractalus! (USA) - Score: 7.70/10
+3. Zaxxon (USA) - Score: 7.60/10
+4. Activision Decathlon, The (USA) - Score: 7.50/10
+5. Miner 2049er Starring Bounty Bob (USA) - Score: 7.30/10
+6. Tempest (USA) (AtariAge) - Score: 7.30/10
+7. Frogger (USA) - Score: 7.20/10
