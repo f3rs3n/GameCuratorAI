@@ -288,7 +288,7 @@ class ExportManager:
                 f"Date: {now}",
                 f"Original game count: {original_count}",
                 f"Filtered game count: {len(filtered_games)}",
-                f"Reduction: {original_count - len(filtered_games)} games ({100 * (original_count - len(filtered_games)) / original_count:.1f}%)",
+                f"Reduction: {original_count - len(filtered_games)} games ({100 * (original_count - len(filtered_games)) / original_count:.1f}% of collection)",
                 "",
                 "Filter Criteria:",
                 "---------------"
@@ -297,18 +297,61 @@ class ExportManager:
             for criterion in filter_criteria:
                 summary.append(f"- {criterion}")
             
+            # Calculate proportional display size - show 10% of the collection size but min 5, max 30 games
+            display_count = max(5, min(30, int(len(filtered_games) * 0.1)))
+            
+            # Get top games (highest scores)
+            top_games = []
+            near_miss_games = []
+            worst_games = []
+            
+            # Sort games by quality score if available
+            games_with_scores = []
+            for game in filtered_games:
+                score = 0
+                eval_data = game.get('_evaluation', {})
+                if eval_data and 'overall_score' in eval_data:
+                    score = float(eval_data['overall_score'])
+                games_with_scores.append((game, score))
+            
+            # Sort by score descending
+            games_with_scores.sort(key=lambda x: x[1], reverse=True)
+            
+            # Get top games
+            top_games = [game for game, score in games_with_scores[:display_count]]
+            
+            # Get games that were excluded
+            excluded_count = original_count - len(filtered_games)
+            
             summary.extend([
                 "",
-                "Filtered Games (first 50):",
-                "-------------------------"
+                f"Top {len(top_games)} Games (Highest Quality Scores):",
+                "----------------------------------------"
             ])
             
-            # Add first 50 game names for reference
-            for i, game in enumerate(filtered_games[:50]):
-                summary.append(f"{i+1}. {game.get('name', 'Unknown')}")
+            # Add top games
+            for i, game in enumerate(top_games):
+                score = 0
+                eval_data = game.get('_evaluation', {})
+                if eval_data and 'overall_score' in eval_data:
+                    score = float(eval_data['overall_score'])
+                
+                summary.append(f"{i+1}. {game.get('name', 'Unknown')} - Score: {score:.2f}/10")
             
-            if len(filtered_games) > 50:
-                summary.append(f"... and {len(filtered_games) - 50} more")
+            # Only show worst games if we have excluded games
+            if excluded_count > 0:
+                summary.extend([
+                    "",
+                    f"Removed Games Preview (Lowest Scores):",
+                    "----------------------------------------",
+                    f"These games didn't make the cut and were removed from the filtered collection:"
+                ])
+                
+                # Since we don't have the removed games list directly, we'll include a note
+                summary.append(f"Total games removed: {excluded_count}")
+                summary.append("")
+                summary.append("Note: To see the complete list of removed games, compare the original DAT")
+                summary.append("      file with the filtered output using a comparison tool.")
             
             # Write to file
             with open(output_path, 'w', encoding='utf-8') as f:

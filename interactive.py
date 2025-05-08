@@ -768,7 +768,9 @@ class InteractiveMenu:
                 if len(result) == 3:
                     self.filtered_games, self.evaluations, provider_error = result
                 elif len(result) == 2:
-                    self.filtered_games, self.evaluations = result
+                    # Safe unpacking with explicit indexing to avoid type errors
+                    self.filtered_games = result[0]  # First element is filtered_games
+                    self.evaluations = result[1]     # Second element is evaluations
                     provider_error = None
                 else:
                     raise ValueError(f"Unexpected result format from filter_engine: {result}")
@@ -828,7 +830,9 @@ class InteractiveMenu:
                         if len(result) == 3:
                             self.filtered_games, self.evaluations, provider_error = result
                         elif len(result) == 2:
-                            self.filtered_games, self.evaluations = result
+                            # Safe unpacking with explicit indexing to avoid type errors
+                            self.filtered_games = result[0]  # First element is filtered_games
+                            self.evaluations = result[1]     # Second element is evaluations
                             provider_error = None
                         else:
                             self._print_error(f"Unexpected result format from filter engine: {result}")
@@ -871,7 +875,45 @@ class InteractiveMenu:
             
             print("\n" + "=" * 50)
             self._print_success(f"Filtering complete: {filtered_count} of {original_count} games kept")
-            self._print_info(f"Reduction: {reduction} games ({reduction_pct:.1f}%)")
+            self._print_info(f"Reduction: {reduction} games ({reduction_pct:.1f}% of collection)")
+            
+            # Display top games by score (proportionally sized to collection)
+            if filtered_count > 0:
+                # Show top 10% of collection (min 5, max 15)
+                display_count = max(5, min(15, int(filtered_count * 0.1)))
+                
+                # Sort games by quality score
+                games_with_scores = []
+                for game in self.filtered_games:
+                    score = 0
+                    eval_data = game.get('_evaluation', {})
+                    if eval_data and 'overall_score' in eval_data:
+                        try:
+                            score = float(eval_data['overall_score'])
+                        except (ValueError, TypeError):
+                            # Handle cases where score might not be a valid number
+                            pass
+                    games_with_scores.append((game, score))
+                
+                # Sort by score in descending order
+                games_with_scores.sort(key=lambda x: x[1], reverse=True)
+                
+                # Get top games
+                top_games = games_with_scores[:display_count]
+                
+                if top_games:
+                    print("\n" + "-" * 50)
+                    self._print_subheader(f"Top {len(top_games)} Games by Quality Score:")
+                    
+                    for i, (game, score) in enumerate(top_games):
+                        self._print_info(f"{i+1}. {game.get('name', 'Unknown')} - Score: {score:.2f}/10")
+                
+                # Show warning if using Random provider
+                if self.settings['provider'].lower() == 'random':
+                    print()
+                    self._print_warning("NOTE: You're using the Random provider which assigns random scores")
+                    self._print_warning("      and doesn't provide meaningful filtering.")
+                    self._print_warning("      Switch to OpenAI or Gemini for better results.")
             
             # Auto-save filtered DAT
             output_path = os.path.join(self.settings['output_dir'], f"filtered_{os.path.basename(self.current_dat_file)}")
@@ -1337,6 +1379,31 @@ class InteractiveMenu:
                 
                 # Apply filters
                 self._print_info("Applying filters...")
+                
+                # Check if filter_engine is properly initialized
+                if not self.filter_engine:
+                    error_msg = "Filter engine not initialized"
+                    self._print_error(error_msg)
+                    
+                    # Try to recover by initializing provider
+                    self._print_info("Attempting to initialize provider...")
+                    if not self._initialize_provider():
+                        self._print_error("Failed to initialize provider. Check API keys.")
+                        results.append({
+                            'file': dat_file,
+                            'error': "Filter engine not initialized and recovery failed"
+                        })
+                        continue
+                    
+                    if not self.filter_engine:
+                        self._print_error("Still unable to initialize filter engine. Skipping file.")
+                        results.append({
+                            'file': dat_file,
+                            'error': "Filter engine initialization failed"
+                        })
+                        continue
+                
+                # Now we can safely use the filter engine
                 result = self.filter_engine.filter_collection(
                     parsed_data['games'],
                     criteria=self.settings['criteria'],
@@ -1344,8 +1411,15 @@ class InteractiveMenu:
                     progress_callback=progress_callback
                 )
                 
-                # Process result - result is a tuple of (filtered_games, evaluations)
-                filtered_games, evaluations = result
+                # Process result - result is a tuple of (filtered_games, evaluations, provider_error)
+                filtered_games, evaluations, provider_error = result
+                
+                # Check if there was a provider error
+                if provider_error:
+                    error_msg = provider_error.get("provider_error", "Unknown provider error")
+                    self._print_error(f"Provider error occurred: {error_msg}")
+                    self._print_info("Please check your API keys and provider settings.")
+                    return False
                 
                 # Apply multi-disc rules
                 if special_cases and 'multi_disc' in special_cases:
@@ -1414,7 +1488,7 @@ class InteractiveMenu:
             else:
                 self._print_success(
                     f"{idx}. {result['file']}: {result['filtered_count']} of {result['original_count']} kept "
-                    f"({result['reduction_pct']:.1f}% reduction) - {result['time_taken']:.2f}s"
+                    f"({result['reduction_pct']:.1f}% of collection) - {result['time_taken']:.2f}s"
                 )
         
         # Export batch summary
@@ -1432,7 +1506,7 @@ class InteractiveMenu:
                 else:
                     f.write(
                         f"{idx}. {result['file']}: {result['filtered_count']} of {result['original_count']} kept "
-                        f"({result['reduction_pct']:.1f}% reduction) - {result['time_taken']:.2f}s\n"
+                        f"({result['reduction_pct']:.1f}% of collection) - {result['time_taken']:.2f}s\n"
                     )
         
         self._print_success(f"Batch summary exported to: {summary_path}")

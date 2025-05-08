@@ -65,9 +65,13 @@ class OpenAIProvider(BaseAIProvider):
                     self.logger.error("API test failed: No valid response received")
                     return False
                 
-                # Log a snippet of the response
-                response_text = response.choices[0].message.content
-                self.logger.info(f"API test response: {response_text[:50]}...")
+                # Log a snippet of the response - safely with checks
+                response_text = ""
+                if response and hasattr(response, 'choices') and len(response.choices) > 0:
+                    if hasattr(response.choices[0], 'message') and hasattr(response.choices[0].message, 'content'):
+                        response_text = response.choices[0].message.content
+                
+                self.logger.info(f"API test response: {response_text[:50] if response_text else 'No content'}...")
                 
                 # If we got here, the API key is valid
                 self.initialized = True
@@ -132,6 +136,11 @@ class OpenAIProvider(BaseAIProvider):
         prompt = self._construct_evaluation_prompt(game_info, criteria, full_collection_context)
         
         try:
+            # Check if client is properly initialized
+            if not self.client:
+                self.logger.error("OpenAI client is not initialized")
+                return {"error": "Provider client not initialized"}
+            
             response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[
@@ -150,10 +159,23 @@ class OpenAIProvider(BaseAIProvider):
                 temperature=0.2  # Lower temperature for more consistent results
             )
             
-            # Parse the response
-            result = json.loads(response.choices[0].message.content)
+            # Parse the response with safety checks
+            if not response or not hasattr(response, 'choices') or len(response.choices) == 0:
+                self.logger.error("No valid response from OpenAI API")
+                return {"error": "No valid response received"}
+                
+            content = response.choices[0].message.content
+            if not content:
+                self.logger.error("Empty content in response")
+                return {"error": "Empty response content"}
+                
+            # Parse the JSON response safely
+            result = json.loads(content)
             return result
             
+        except json.JSONDecodeError as je:
+            self.logger.error(f"JSON parsing error: {je}")
+            return {"error": f"Failed to parse response as JSON: {str(je)}"}
         except Exception as e:
             self.logger.error(f"Error evaluating game with OpenAI: {e}")
             return {"error": str(e)}
@@ -195,7 +217,8 @@ class OpenAIProvider(BaseAIProvider):
         """
         if not self.is_available():
             self.logger.error("OpenAI provider is not available")
-            return {"error": ["Provider not available"]}
+            # Create a properly typed error response matching Dict[str, List[Dict[str, Any]]]
+            return {"error": [{"reason": "Provider not available"}]}
         
         self._respect_rate_limit()
         
@@ -203,6 +226,11 @@ class OpenAIProvider(BaseAIProvider):
         game_names = [game.get("name", "") for game in games_info]
         
         try:
+            # Check if client is properly initialized
+            if not self.client:
+                self.logger.error("OpenAI client is not initialized")
+                return {"error": [{"reason": "Provider client not initialized"}]}
+                
             prompt = (
                 "Analyze the following list of video game titles and identify special cases like: "
                 "1. Multi-disc games (games with Disc 1, CD 2, etc. in the title) "
@@ -235,12 +263,31 @@ class OpenAIProvider(BaseAIProvider):
                 temperature=0.2
             )
             
-            # Parse the response
-            result = json.loads(response.choices[0].message.content)
+            # Safe parsing of the response with validation
+            if not response or not hasattr(response, 'choices') or len(response.choices) == 0:
+                self.logger.error("No valid response from OpenAI API for special cases")
+                return {"error": [{"reason": "No valid response received"}]}
+                
+            content = response.choices[0].message.content
+            if not content:
+                self.logger.error("Empty content in special cases response")
+                return {"error": [{"reason": "Empty response content"}]}
+                
+            # Parse the JSON response safely
+            result = json.loads(content)
             
             # Map back to the original game_info dictionaries
             mapped_results = {}
+            
+            if not isinstance(result, dict):
+                self.logger.error(f"Expected dict result but got {type(result)}")
+                return {"error": [{"reason": "Invalid response format received"}]}
+                
             for category, titles in result.items():
+                if not isinstance(titles, list):
+                    self.logger.warning(f"Expected list for {category} but got {type(titles)}")
+                    continue
+                    
                 mapped_results[category] = []
                 for title in titles:
                     for game in games_info:
@@ -250,9 +297,12 @@ class OpenAIProvider(BaseAIProvider):
             
             return mapped_results
             
+        except json.JSONDecodeError as je:
+            self.logger.error(f"JSON parsing error in special cases: {je}")
+            return {"error": [{"reason": f"Failed to parse response as JSON: {str(je)}"}]}
         except Exception as e:
             self.logger.error(f"Error identifying special cases with OpenAI: {e}")
-            return {"error": [str(e)]}
+            return {"error": [{"reason": str(e)}]}
 
     def get_provider_name(self) -> str:
         """
