@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+<datafile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://datomatic.no-intro.org/stuff https://datomatic.no-intro.org/stuff/schema_nointro_datfile_v3.xsd">
+<header>
+<name>Atari - Atari 5200 (Retool)</name>
+<description>Atari - Atari 5200 (77) (-ny) [-aABbcdkMmpPv] (20250316-080333) (Retool)</description>
+<version>20250316-080333</version>
+<date>2025-03-21 11-57-31</date>
+<author>C. V. Reynolds, Flashfire42, Gefflon, Hiccup, nnssxx, Psychofox11, rarenight, relax, sCZther, SonGoku, xuom2</author>
+<homepage>http://www.github.com/unexpectedpanda/retool</homepage>
+<url>https://www.no-intro.org</url>
+<retool>Created by Retool 2.3.9</retool>
+<filter_criteria>['metacritic', 'historical', 'v_list', 'console_significance', 'mods_hacks']</filter_criteria>
+<filtered_date>2025-05-09</filtered_date>
+<filtered_time>10:33:54</filtered_time>
+<filtered_games_count>24</filtered_games_count>
+<original_games_count>77</original_games_count>
+</header>
+<game name="Ballblazer (USA)">
+  <category>Games</category>
+<description>Ballblazer (USA)</description>
+<rom name="Ballblazer (USA).a52" size="32768" crc="def2a207" md5="f5cd178cbea0ae7d8cf65b30cfd04225" sha1="1dfd9cb5eb608590c84e14376291f8c02fb1ab93"/>
+</game>
+<game name="BerZerk (USA)">
+  <category>Games</category>
+<description>BerZerk (USA)</description>
+<rom name="BerZerk (USA).a52" size="16384" crc="be3cd348" md5="f8973db8dc272c2e5eb7b8dbb5c0cc3b" sha1="e56ccc6bf427a832ce00540b02d065a2688260dc"/>
+</game>
+<game name="Bounty Bob Strikes Back! (USA)">
+  <category>Games</category>
+<description>Bounty Bob Strikes Back! (USA)</description>
+<rom name="Bounty Bob Strikes Back! (USA).a52" size="40960" crc="7873c6dd" md5="5d5a75ac53230915701bc918249f1055" sha1="cfdd2f8dabb03d8784f336bb0c804270dc3a8a6c"/>
+</game>
+<game name="Carol Shaw's River Raid (USA)">
+  <category>Games</category>
+<description>Carol Shaw's River Raid (USA)</description>
+<rom name="Carol Shaw's River Raid (USA).a52" size="8192" crc="09fc7648" md5="01b978c3faf5d516f300f98c00377532" sha1="ce9bd3b0847c5e187c3e8f667c8f5ea771c49965"/>
+</game>
+<game name="Choplifter! (USA)">
+  <category>Games</category>
+<description>Choplifter! (USA)</description>
+<rom name="Choplifter! (USA).a52" size="16384" crc="9ad53bbc" md5="3ff7707e25359c9bcb2326a5d8539852" sha1="9f1ee191319ef0261cc7074a81c0e6d6b7464cd2"/>
+</game>
+<game name="David Crane's Pitfall II - Lost Caverns (USA)">
+  <category>Games</category>
+<description>David Crane's Pitfall II - Lost Caverns (USA)</description>
+<rom name="David Crane's Pitfall II - Lost Caverns (USA).a52" size="16384" crc="4b910461" md5="7c27d225a13e178610babf331a0759c0" sha1="b051f0fb2e816787ab6eed0cb008b9f8cc9963dc"/>
+</game>
+<game name="Defender (USA)">
+  <category>Games</category>
+<description>Defender (USA)</description>
+<rom name="Defender (USA).a52" size="16384" crc="bd52623b" md5="27d5f32b0d46d3d80773a2b505f95046" sha1="44f6dbf5013a70e646d5c5232981d517069fc449"/>
+</game>
+<game name="Gorf (USA)">
+  <category>Games</category>
+<description>Gorf (USA)</description>
+<rom name="Gorf (USA).a52" size="8192" crc="e955db74" md5="85fe2492e2945015000272a9fefc06e3" sha1="80926bb270ea66cb5cacc379de1fc16d8a3d814b"/>
+</game>
+<game name="Gyruss (USA)">
+  <category>Games</category>
+<description>Gyruss (USA)</description>
+<rom name="Gyruss (USA).a52" size="16384" crc="cfd4a7f9" md5="dacc0a82e8ee0c086971f9d9bac14127" sha1="d0d8650eb07d1679004d491360c2c041e37c61cd"/>
+</game>
+<game name="H.E.R.O. (USA)">
+  <category>Games</category>
+<description>H.E.R.O. (USA)</description>
+<rom name="H.E.R.O. (USA).a52" size="16384" crc="18a73af3" md5="f8f0e0a6dc2ffee41b2a2dd736cba4cd" sha1="d286ecb6793a0dda9c9c68f6355dbe3ade6922f9"/>
+</game>
+<game name="Joust (USA)">
+  <category>Games</category>
+<description>Joust (USA)</description>
+<rom name="Joust (USA).a52" size="16384" crc="bfd30c01" md5="25cfdef5bf9b126166d5394ae74a32e7" sha1="0f74125edac90ffd1274a128df2970c239348fb5"/>
+</game>
+<game name="Kaboom! (USA)">
+  <category>Games</category>
+<description>Kaboom! (USA)</description>
+<rom name="Kaboom! (USA).a52" size="4096" crc="420f5d0b" md5="92fd2f43bc0adf2f704666b5244fadf1" sha1="a80f876a89a8ceacc71da5d9c02b546970b17730"/>
+</game>
+<game name="Miner 2049er Starring Bounty Bob (USA)">
+  <category>Games</category>
+<description>Miner 2049er Starring Bounty Bob (USA)</description>
+<rom name="Miner 2049er Starring Bounty Bob (USA).a52" size="16384" crc="7df1adfb" md5="d859bff796625e980db1840f15dec4b5" sha1="0564b1867a0b570d66dfcbc11adc3e51a2c6f28c"/>
+</game>
+<game name="Montezuma's Revenge - Featuring Panama Joe (USA)">
+  <category>Games</category>
+<description>Montezuma's Revenge - Featuring Panama Joe (USA)</description>
+<rom name="Montezuma's Revenge - Featuring Panama Joe (USA).a52" size="16384" crc="2a640143" md5="694897cc0d98fcf2f59eef788881f67d" sha1="7e2a05625598c7e6615f969aa695e64315cd9846"/>
+</game>
+<game name="Moon Patrol (USA)">
+  <category>Games</category>
+<description>Moon Patrol (USA)</description>
+<rom name="Moon Patrol (USA).a52" size="16384" crc="d0b2f285" md5="296e5a3a9efd4f89531e9cf0259c903d" sha1="02dd5b9278c06ae8cbb6dacc094e238fbacf08d2"/>
+</game>
+<game name="Pengo (USA)">
+  <category>Games</category>
+<description>Pengo (USA)</description>
+<rom name="Pengo (USA).a52" size="32768" crc="e4f8ba8c" md5="a301a449fc20ad345b04932d3ca3ef54" sha1="19ff7622dbbc2915e3e98d8d966340e7e893ff34"/>
+</game>
+<game name="Pitfall! (USA)">
+  <category>Games</category>
+<description>Pitfall! (USA)</description>
+<rom name="Pitfall! (USA).a52" size="8192" crc="b2887833" md5="ecbd6dd2ab105dd43f98476966bbf26c" sha1="d1c7dc3de097a4bfab82235acec69a97e6e05f18"/>
+</game>
+<game name="Pole Position (USA)">
+  <category>Games</category>
+<description>Pole Position (USA)</description>
+<rom name="Pole Position (USA).a52" size="16384" crc="abc2d1e4" md5="fd0cbea6ad18194be0538844e3d7fdc9" sha1="d504764c5894ee99c0b5e2024cbe833ebba3ab17"/>
+</game>
+<game name="Star Raiders (USA)">
+  <category>Games</category>
+<description>Star Raiders (USA)</description>
+<rom name="Star Raiders (USA).a52" size="16384" crc="7d819a9f" md5="e2d3a3e52bb4e3f7e489acd9974d68e2" sha1="57dfc22c9805555f957ed51a2dc7bf35ad00c9d9"/>
+</game>
+<game name="Star Wars - The Arcade Game (USA)">
+  <category>Games</category>
+<description>Star Wars - The Arcade Game (USA)</description>
+<rom name="Star Wars - The Arcade Game (USA).a52" size="16384" crc="75f566df" md5="00beaa8405c7fb90d86be5bb1b01ea66" sha1="ab676ffe054b23bdd43cee2498afefaabbf9355b"/>
+</game>
+<game name="Tempest (USA) (AtariAge)">
+  <category>Games</category>
+<description>Tempest (USA) (AtariAge)</description>
+<rom name="Tempest (USA) (AtariAge).a52" size="32768" crc="a6400e17" md5="a31a6e41640ce83944736ce668456631" sha1="0cb2bd6ed89ce6710ac092533a24f1248688c88c" sha256="3bb51238b752723f9f4049f6661c9c217b0631110e9186e11fb8fa72c6a2f2b8"/>
+</game>
+<game name="Vanguard (USA)">
+  <category>Games</category>
+<description>Vanguard (USA)</description>
+<rom name="Vanguard (USA).a52" size="32768" crc="caaea0a4" md5="556a66d6737f0f793821e702547bc051" sha1="6c633de50e6cc0c0c40061cd24e6f78f552a438f"/>
+</game>
+<game name="Wizard of Wor (USA)">
+  <category>Games</category>
+<description>Wizard of Wor (USA)</description>
+<rom name="Wizard of Wor (USA).a52" size="16384" crc="d6f7ddfd" md5="560b68b7f83077444a57ebe9f932905a" sha1="49debdf3c133fde9905d6d9137da5d8dff8d6283"/>
+</game>
+<game name="Zaxxon (USA)">
+  <category>Games</category>
+<description>Zaxxon (USA)</description>
+<rom name="Zaxxon (USA).a52" size="32768" crc="741746d1" md5="9fee054e7d4ba2392f4ba0cb73fc99a5" sha1="4a4c4a25c8ed1b0ae79ca22684d7d311a564a7b5"/>
+</game>
+</datafile>

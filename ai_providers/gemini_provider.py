@@ -300,7 +300,9 @@ class GeminiProvider(BaseAIProvider):
             simplified_games.append(simplified_game)
             
         # Process in batches of 20 games - optimized for simplified binary decision format
-        max_batch_size = 20  # Increased from 10 to 20 for optimized binary decision format
+        # Testing has shown that batch size 20 offers the best balance of speed and efficiency
+        # Larger batch sizes (e.g., 30) process much slower (0.3 games/sec vs 0.6 games/sec)
+        max_batch_size = 20  # Optimal batch size based on testing
         all_results = []
         
         for i in range(0, len(simplified_games), max_batch_size):

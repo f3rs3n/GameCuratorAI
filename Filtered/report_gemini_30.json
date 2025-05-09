@@ -1,0 +1,1514 @@
+{
+  "timestamp": "2025-05-09T10:33:54.389266",
+  "filtered_games_count": 24,
+  "evaluations_count": 77,
+  "special_cases": {
+    "multi_disc": {
+      "count": 0,
+      "groups": []
+    },
+    "regional_variants": {
+      "count": 0,
+      "groups": []
+    },
+    "console_naming": {
+      "count": 0,
+      "by_console": {},
+      "groups": []
+    },
+    "mods_hacks": {
+      "count": 0,
+      "games": []
+    }
+  },
+  "filtered_games": [
+    {
+      "name": "Ballblazer (USA)",
+      "id": "Ballblazer (USA)",
+      "evaluation": {
+        "game_name": "Ballblazer (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "Score unknown",
+          "historical_significance": "Genre-defining",
+          "v_recommendation": "Unlikely",
+          "console_significance": "Atari 5200",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 4.13026237487793,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "v_recommendation": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "BerZerk (USA)",
+      "id": "BerZerk (USA)",
+      "evaluation": {
+        "game_name": "BerZerk (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "recommended_list": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "Low score",
+          "historical_significance": "Early arcade",
+          "recommended_list": "Not listed",
+          "console_significance": "Atari 5200",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "recommended_list": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 4.106760501861572,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "recommended_list",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "recommended_list": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Bounty Bob Strikes Back! (USA)",
+      "id": "Bounty Bob Strikes Back! (USA)",
+      "evaluation": {
+        "game_name": "Bounty Bob Strikes Back! (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 0.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "Low score",
+          "historical_significance": "Not impactful",
+          "v_recommendation": "Unlikely",
+          "console_significance": "Atari 5200",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": false,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 4.199557065963745,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "console_significance",
+            "metacritic_score"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 0.0,
+            "v_recommendation": 0.0,
+            "console_significance": 100.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Carol Shaw's River Raid (USA)",
+      "id": "Carol Shaw's River Raid (USA)",
+      "evaluation": {
+        "game_name": "Carol Shaw's River Raid (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "Score unknown",
+          "historical_significance": "Pioneering female",
+          "v_recommendation": "Unlikely",
+          "console_significance": "Atari 5200",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 3.9993526935577393,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "v_recommendation": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Choplifter! (USA)",
+      "id": "Choplifter! (USA)",
+      "evaluation": {
+        "game_name": "Choplifter! (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "Low score",
+          "historical_significance": "Early classic",
+          "v_recommendation": "Not listed",
+          "console_significance": "Atari 5200",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 3.952036142349243,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "v_recommendation": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "David Crane's Pitfall II - Lost Caverns (USA)",
+      "id": "David Crane's Pitfall II - Lost Caverns (USA)",
+      "evaluation": {
+        "game_name": "David Crane's Pitfall II - Lost Caverns (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "No score",
+          "historical_significance": "Early platformer",
+          "v_recommendation": "Unlikely",
+          "console_significance": "Atari 5200",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 4.107569694519043,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "v_recommendation": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Defender (USA)",
+      "id": "Defender (USA)",
+      "evaluation": {
+        "game_name": "Defender (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "recommended_list": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "No score",
+          "historical_significance": "Genre-defining",
+          "recommended_list": "Unknown list",
+          "console_significance": "Atari 5200",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "recommended_list": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 3.900576114654541,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "recommended_list",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "recommended_list": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Gorf (USA)",
+      "id": "Gorf (USA)",
+      "evaluation": {
+        "game_name": "Gorf (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "recommended_list": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "Low score",
+          "historical_significance": "Early arcade",
+          "recommended_list": "Not listed",
+          "console_significance": "Atari 5200",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "recommended_list": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 4.099406957626343,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "recommended_list",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "recommended_list": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Gyruss (USA)",
+      "id": "Gyruss (USA)",
+      "evaluation": {
+        "game_name": "Gyruss (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "recommended_list": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "Score unknown",
+          "historical_significance": "Early 3D",
+          "recommended_list": "Not listed",
+          "console_significance": "Atari 5200",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "recommended_list": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 4.099216938018799,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "recommended_list",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "recommended_list": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "H.E.R.O. (USA)",
+      "id": "H.E.R.O. (USA)",
+      "evaluation": {
+        "game_name": "H.E.R.O. (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 0.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_significance": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "No data",
+          "historical_significance": "Minor title",
+          "v_recommendation": "Unlikely",
+          "console_significance": "Atari 5200",
+          "mod_significance": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": false,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_significance": false
+        },
+        "_evaluation_time": 4.072364330291748,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "console_significance",
+            "metacritic_score"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_significance"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 0.0,
+            "v_recommendation": 0.0,
+            "console_significance": 100.0,
+            "mod_significance": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Joust (USA)",
+      "id": "Joust (USA)",
+      "evaluation": {
+        "game_name": "Joust (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_significance": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "No score",
+          "historical_significance": "Groundbreaking",
+          "v_recommendation": "Unknown",
+          "console_significance": "Atari 5200",
+          "mod_significance": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_significance": false
+        },
+        "_evaluation_time": 4.028392791748047,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_significance"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "v_recommendation": 0.0,
+            "console_significance": 50.0,
+            "mod_significance": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Kaboom! (USA)",
+      "id": "Kaboom! (USA)",
+      "evaluation": {
+        "game_name": "Kaboom! (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "Low score",
+          "historical_significance": "Atari 5200",
+          "v_recommendation": "Unlikely",
+          "console_significance": "Launch title",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 4.109760761260986,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "v_recommendation": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Miner 2049er Starring Bounty Bob (USA)",
+      "id": "Miner 2049er Starring Bounty Bob (USA)",
+      "evaluation": {
+        "game_name": "Miner 2049er Starring Bounty Bob (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "Low score",
+          "historical_significance": "Early 3D",
+          "v_recommendation": "Unlikely",
+          "console_significance": "Atari 5200",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 4.229854583740234,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "v_recommendation": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Montezuma's Revenge - Featuring Panama Joe (USA)",
+      "id": "Montezuma's Revenge - Featuring Panama Joe (USA)",
+      "evaluation": {
+        "game_name": "Montezuma's Revenge - Featuring Panama Joe (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_significance": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "Low score",
+          "historical_significance": "Early platformer",
+          "v_recommendation": "Unlikely",
+          "console_significance": "Atari 5200",
+          "mod_significance": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_significance": false
+        },
+        "_evaluation_time": 4.144377708435059,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_significance"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "v_recommendation": 0.0,
+            "console_significance": 50.0,
+            "mod_significance": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Moon Patrol (USA)",
+      "id": "Moon Patrol (USA)",
+      "evaluation": {
+        "game_name": "Moon Patrol (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "Score too low",
+          "historical_significance": "Early arcade hit",
+          "v_recommendation": "Not on list",
+          "console_significance": "Atari 5200 launch title",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 3.960219621658325,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "v_recommendation": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Pengo (USA)",
+      "id": "Pengo (USA)",
+      "evaluation": {
+        "game_name": "Pengo (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "Score too low",
+          "historical_significance": "Early arcade port",
+          "v_recommendation": "Not on list",
+          "console_significance": "Atari 5200 launch title",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 4.245643615722656,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "v_recommendation": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Pitfall! (USA)",
+      "id": "Pitfall! (USA)",
+      "evaluation": {
+        "game_name": "Pitfall! (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "No score",
+          "historical_significance": "Platformer pioneer",
+          "v_recommendation": "Unlikely",
+          "console_significance": "Atari 5200 launch",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 3.945786476135254,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "v_recommendation": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Pole Position (USA)",
+      "id": "Pole Position (USA)",
+      "evaluation": {
+        "game_name": "Pole Position (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "recommended_list": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "Low score",
+          "historical_significance": "Early arcade",
+          "recommended_list": "Not listed",
+          "console_significance": "Atari 5200",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "recommended_list": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 4.056768417358398,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "recommended_list",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "recommended_list": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Star Raiders (USA)",
+      "id": "Star Raiders (USA)",
+      "evaluation": {
+        "game_name": "Star Raiders (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "No score",
+          "historical_significance": "Pioneering game",
+          "v_recommendation": "Unlikely",
+          "console_significance": "Atari 5200",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 4.071856498718262,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "v_recommendation": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Star Wars - The Arcade Game (USA)",
+      "id": "Star Wars - The Arcade Game (USA)",
+      "evaluation": {
+        "game_name": "Star Wars - The Arcade Game (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "Low score",
+          "historical_significance": "Early Star Wars",
+          "v_recommendation": "Not listed",
+          "console_significance": "Atari 5200",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 4.091558933258057,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "v_recommendation": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Tempest (USA) (AtariAge)",
+      "id": "Tempest (USA) (AtariAge)",
+      "evaluation": {
+        "game_name": "Tempest (USA) (AtariAge)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_significance": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "No score",
+          "historical_significance": "Genre-defining",
+          "v_recommendation": "Unlikely",
+          "console_significance": "Atari 5200",
+          "mod_significance": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_significance": false
+        },
+        "_evaluation_time": 4.167618036270142,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_significance"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "v_recommendation": 0.0,
+            "console_significance": 50.0,
+            "mod_significance": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Vanguard (USA)",
+      "id": "Vanguard (USA)",
+      "evaluation": {
+        "game_name": "Vanguard (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "recommended_list": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "Score unknown",
+          "historical_significance": "Atari 5200",
+          "recommended_list": "Unknown list",
+          "console_significance": "Key Atari 5200 title",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "recommended_list": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 3.925318956375122,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "recommended_list",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "recommended_list": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Wizard of Wor (USA)",
+      "id": "Wizard of Wor (USA)",
+      "evaluation": {
+        "game_name": "Wizard of Wor (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "Low score",
+          "historical_significance": "Early arcade",
+          "v_recommendation": "Not listed",
+          "console_significance": "Atari 5200",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 3.939298152923584,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "v_recommendation": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Zaxxon (USA)",
+      "id": "Zaxxon (USA)",
+      "evaluation": {
+        "game_name": "Zaxxon (USA)",
+        "scores": {
+          "metacritic_score": 0.0,
+          "historical_significance": 10.0,
+          "v_recommendation": 0.0,
+          "console_significance": 10.0,
+          "mod_hack_translation": 0.0
+        },
+        "explanations": {
+          "metacritic_score": "No score",
+          "historical_significance": "Groundbreaking",
+          "v_recommendation": "Unlikely",
+          "console_significance": "Atari 5200",
+          "mod_hack_translation": "Not applicable"
+        },
+        "binary_decisions": {
+          "metacritic_score": false,
+          "historical_significance": true,
+          "v_recommendation": false,
+          "console_significance": true,
+          "mod_hack_translation": false
+        },
+        "_evaluation_time": 4.009919166564941,
+        "_criteria_used": [
+          "metacritic",
+          "historical",
+          "v_list",
+          "console_significance",
+          "mods_hacks"
+        ],
+        "_thresholds_used": {
+          "metacritic": 7.5,
+          "historical": 6.0,
+          "v_list": 5.0,
+          "console_significance": 6.0,
+          "mods_hacks": 7.0
+        },
+        "_weights_used": {},
+        "_criteria_analysis": {
+          "strongest_criteria": [
+            "historical_significance",
+            "console_significance"
+          ],
+          "weakest_criteria": [
+            "v_recommendation",
+            "mod_hack_translation"
+          ],
+          "is_low_score_keeper": false,
+          "criteria_contribution": {
+            "metacritic_score": 0.0,
+            "historical_significance": 50.0,
+            "v_recommendation": 0.0,
+            "console_significance": 50.0,
+            "mod_hack_translation": 0.0
+          }
+        }
+      }
+    }
+  ]
+}

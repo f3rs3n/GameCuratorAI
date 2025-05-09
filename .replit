@@ -46,7 +46,7 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python headless.py --input \"ToFilter/Atari - Atari 5200 (20250316-080333) (Retool 2025-03-21 11-57-31) (77) (-ny) [-aABbcdkMmpPv].dat\" --output \"test_gemini_30.dat\" --provider gemini --report \"report_gemini_30.json\" --summary \"summary_gemini_30.txt\" --batch-size 30"
+args = "python headless.py --input \"ToFilter/Atari - Atari 2600 (20250311-005439) (Retool 2025-03-21 11-57-27) (562) (-ny) [-aABbcdkMmpPv].dat\" --output \"test_gemini_atari2600.dat\" --provider gemini --report \"report_gemini_atari2600.json\" --summary \"summary_gemini_atari2600.txt\" --batch-size 20"
 
 [deployment]
 run = ["sh", "-c", "python main.py"]
