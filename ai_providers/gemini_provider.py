@@ -287,9 +287,9 @@ class GeminiProvider(BaseAIProvider):
         # Convert games to minimal format (only keep essential information)
         simplified_games = []
         for game in games_info:
+            # Just use the game name by default - most essential piece of information
             simplified_game = {
                 "name": game.get("name", "Unknown Game"),
-                "id": game.get("id", "unknown"),
             }
             # Only add other fields if they exist and are potentially useful
             if "year" in game and isinstance(game["year"], dict) and "text" in game["year"]:
@@ -401,7 +401,6 @@ class GeminiProvider(BaseAIProvider):
                                 if game["name"] not in result_names:
                                     self.logger.warning(f"Game {game['name']} missing from results, adding placeholder")
                                     placeholder = {
-                                        "game_id": game.get("id", "unknown"),
                                         "game_name": game["name"],
                                         "scores": {c: 5.0 for c in criteria},
                                         "explanations": {c: f"No evaluation provided for {c}" for c in criteria},
@@ -418,7 +417,6 @@ class GeminiProvider(BaseAIProvider):
                         # Generate individual fallbacks for each game in the batch
                         for game in batch:
                             fallback = {
-                                "game_id": game.get("id", "unknown"),
                                 "game_name": game["name"],
                                 "scores": {c: 5.0 for c in criteria},
                                 "explanations": {c: f"Failed to parse batch results for {c}" for c in criteria},
@@ -430,7 +428,6 @@ class GeminiProvider(BaseAIProvider):
                     self.logger.error("No JSON found in Gemini batch response")
                     for game in batch:
                         fallback = {
-                            "game_id": game.get("id", "unknown"),
                             "game_name": game["name"],
                             "scores": {c: 5.0 for c in criteria},
                             "explanations": {c: f"No batch results found for {c}" for c in criteria},
@@ -444,7 +441,6 @@ class GeminiProvider(BaseAIProvider):
                 # Add fallback results for this batch
                 for game in batch:
                     fallback = {
-                        "game_id": game.get("id", "unknown"),
                         "game_name": game["name"],
                         "scores": {c: 5.0 for c in criteria},
                         "explanations": {c: f"Batch processing error for {c}" for c in criteria},
@@ -465,7 +461,6 @@ class GeminiProvider(BaseAIProvider):
                 if missing_index < len(games_info):
                     game = games_info[missing_index]
                     fallback = {
-                        "game_id": game.get("id", "unknown"),
                         "game_name": game.get("name", "Unknown Game"),
                         "scores": {c: 5.0 for c in criteria},
                         "explanations": {c: "Missing result" for c in criteria},
@@ -597,8 +592,7 @@ class GeminiProvider(BaseAIProvider):
         
         # Use a more minimal game description to reduce token usage
         simplified_game = {
-            "name": game_name,
-            "id": game_info.get("id", "unknown"),
+            "name": game_name
         }
         
         # Only add other fields if they exist and are potentially useful

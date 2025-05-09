@@ -56,7 +56,6 @@ def main():
     for game in parsed_data['games'][:5]:  # First 5 games
         simplified_game = {
             "name": game.get("name", "Unknown Game"),
-            "id": game.get("id", "unknown"),
         }
         
         # Only add other fields if they exist and are potentially useful
