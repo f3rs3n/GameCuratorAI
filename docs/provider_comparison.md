@@ -20,7 +20,6 @@ DAT Filter AI currently supports these providers:
 
 - **Random**: A test provider that generates random scores (useful for testing without API keys)
 - **Gemini**: Google's Gemini 2.0 AI with strong knowledge of gaming history and cultural impact
-- **OpenAI**: OpenAI's GPT-4o with broad knowledge and strong reasoning capabilities
 
 ## Quick Start
 
@@ -98,7 +97,7 @@ Save the results in a specific directory:
 If you have already generated reports separately, you can compare them:
 
 ```bash
-./compare.sh -r report_random.json report_gemini.json report_openai.json
+./compare.sh -r report_random.json report_gemini.json
 ```
 
 ## API Keys
@@ -106,12 +105,11 @@ If you have already generated reports separately, you can compare them:
 To use the AI providers, you'll need API keys:
 
 - **Gemini**: Set the `GEMINI_API_KEY` environment variable
-- **OpenAI**: Set the `OPENAI_API_KEY` environment variable
 
 The random provider works without any API keys.
 
 ## Performance Considerations
 
 - The random provider is the fastest (instant)
-- Gemini and OpenAI will take longer due to API calls (seconds to minutes per file)
+- Gemini will take longer due to API calls (seconds to minutes per file)
 - Processing large DAT files with multiple providers can take significant time

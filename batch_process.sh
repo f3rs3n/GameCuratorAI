@@ -17,14 +17,11 @@ show_help() {
     echo "  -o, --output DIR     Output directory (default: test_output)"
     echo ""
     echo "Provider Options:"
-    echo "  -r, --random         Use random provider (default)"
-    echo "  -p, --openai         Use OpenAI provider"
-    echo "  -g, --gemini         Use Gemini provider"
-    echo "  -m, --multiple       Use both OpenAI and random providers"
-    echo "  -a, --all            Use all providers (random, OpenAI, and Gemini)"
+    echo "  -r, --random         Use random provider (for testing only)"
+    echo "  -g, --gemini         Use Gemini provider (default)"
     echo ""
     echo "API Optimization Options:"
-    echo "  -b, --batch-size N   Number of games to process in each batch (default: 5)"
+    echo "  -b, --batch-size N   Number of games to process in each batch (default: 20)"
     echo "  -d, --delay N        Delay between files in seconds for rate limiting (default: 0)"
     echo "  -c, --continue       Continue processing from previous run"
     echo "  -z, --sort TYPE      Sort order for files (name, size, none) (default: size)"
@@ -44,8 +41,8 @@ show_help() {
 }
 
 ARGS=""
-PROVIDER="random"
-BATCH_SIZE=5
+PROVIDER="gemini"
+BATCH_SIZE=20
 RATE_LIMIT=0
 INPUT_DIR="test_input"
 OUTPUT_DIR="test_output"
@@ -97,20 +94,8 @@ while [[ $# -gt 0 ]]; do
             PROVIDER="random"
             shift
             ;;
-        -p|--openai)
-            PROVIDER="openai"
-            shift
-            ;;
-        -m|--multiple)
-            PROVIDER="both"
-            shift
-            ;;
         -g|--gemini)
             PROVIDER="gemini"
-            shift
-            ;;
-        -a|--all)
-            PROVIDER="all"
             shift
             ;;
         *)

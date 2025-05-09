@@ -20,6 +20,10 @@ args = "DAT Filter AI Headless"
 task = "workflow.run"
 args = "DAT Filter AI Interactive"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "DAT Filter AI Gemini Test"
+
 [[workflows.workflow]]
 name = "DAT Filter AI Headless"
 author = "agent"
@@ -35,6 +39,14 @@ author = "agent"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "python interactive.py"
+
+[[workflows.workflow]]
+name = "DAT Filter AI Gemini Test"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python headless.py --input \"ToFilter/Atari - Atari 5200 (20250316-080333) (Retool 2025-03-21 11-57-31) (77) (-ny) [-aABbcdkMmpPv].dat\" --output \"test_gemini_20.dat\" --provider gemini --report \"report_gemini_20.json\" --summary \"summary_gemini_20.txt\" --batch-size 20"
 
 [deployment]
 run = ["sh", "-c", "python main.py"]

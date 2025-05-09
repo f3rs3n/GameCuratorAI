@@ -16,7 +16,7 @@ show_help() {
     echo "Examples:"
     echo "  ./multieval.sh -i sample.dat                   # Process with default providers"
     echo "  ./multieval.sh -s                              # Process sample.dat with default providers"
-    echo "  ./multieval.sh -i sample.dat -p random openai  # Process with specific providers"
+    echo "  ./multieval.sh -i sample.dat -p random gemini  # Process with specific providers"
     echo "  ./multieval.sh -i sample.dat -a                # Process with all available providers"
     echo "  ./multieval.sh -i sample.dat -d test_output    # Specify output directory"
 }
@@ -84,9 +84,6 @@ fi
 
 # Detect available providers
 AVAILABLE_PROVIDERS="random"
-if [ -n "$OPENAI_API_KEY" ]; then
-    AVAILABLE_PROVIDERS="$AVAILABLE_PROVIDERS openai"
-fi
 if [ -n "$GEMINI_API_KEY" ]; then
     AVAILABLE_PROVIDERS="$AVAILABLE_PROVIDERS gemini"
 fi
