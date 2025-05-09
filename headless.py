@@ -229,8 +229,8 @@ def main():
                 # Display batch summary
                 sys.stdout.write(f"\n  Last batch: {kept_count} kept, {removed_count} removed")
                 
-                # Display the most recent games (up to 5)
-                for idx, result in enumerate(last_batch_results[-5:]):
+                # Display all games in the batch
+                for idx, result in enumerate(last_batch_results):
                     game_name = result.get("game_name", "Unknown Game")
                     keep = result.get("keep", False)
                     
