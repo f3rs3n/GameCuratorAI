@@ -33,7 +33,7 @@ def main():
     parser.add_argument("--provider", "-p", help=f"AI provider to use {list(AVAILABLE_PROVIDERS.keys())}", default="gemini")
     parser.add_argument("--criteria", "-c", help="Comma-separated list of criteria to evaluate", 
                        default="metacritic,historical,v_list,console_significance,mods_hacks")
-    parser.add_argument("--batch-size", "-b", help="Batch size for processing", type=int, default=10)
+    parser.add_argument("--batch-size", "-b", help="Batch size for processing", type=int, default=20)
     parser.add_argument("--report", "-r", help="Generate JSON report file path")
     parser.add_argument("--summary", "-s", help="Generate text summary file path")
     parser.add_argument("--no-color", help="Disable colored output", action="store_true")

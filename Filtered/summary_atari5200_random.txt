@@ -1,9 +1,9 @@
 DAT Filter AI - Filtering Summary
 ==============================
-Date: 2025-05-09 09:17:36
+Date: 2025-05-09 09:44:36
 Original game count: 77
-Filtered game count: 60
-Reduction: 17 games (22.1% of collection)
+Filtered game count: 59
+Reduction: 18 games (23.4% of collection)
 
 Filter Criteria:
 ---------------
@@ -16,26 +16,26 @@ Filter Criteria:
 Criteria Analysis:
 -----------------
 Strongest criteria in the collection:
-- Metacritic: 29 games (48.3%)
-- Console Significance: 26 games (43.3%)
-- Mods Hacks: 24 games (40.0%)
-- Historical: 23 games (38.3%)
-- V List: 18 games (30.0%)
+- Historical: 29 games (49.2%)
+- Metacritic: 25 games (42.4%)
+- Mods Hacks: 25 games (42.4%)
+- V List: 24 games (40.7%)
+- Console Significance: 15 games (25.4%)
 
 Weakest criteria in the collection:
-- Console Significance: 28 games (46.7%)
-- Historical: 26 games (43.3%)
-- Mods Hacks: 24 games (40.0%)
-- Metacritic: 21 games (35.0%)
-- V List: 21 games (35.0%)
+- Console Significance: 30 games (50.8%)
+- V List: 25 games (42.4%)
+- Mods Hacks: 23 games (39.0%)
+- Metacritic: 22 games (37.3%)
+- Historical: 18 games (30.5%)
 
-Low Score Exceptions: 10 games (16.7%)
+Low Score Exceptions: 11 games (18.6%)
 These are games kept despite low scores due to other important factors.
 
 Removed Games Summary:
 ----------------------------------------
 These games didn't make the cut and were removed from the filtered collection:
-Total games removed: 17
+Total games removed: 18
 
 Note: To see the complete list of removed games, compare the original DAT
       file with the filtered output using a comparison tool.

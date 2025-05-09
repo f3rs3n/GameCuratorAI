@@ -23,14 +23,14 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-def process_dat_file(input_file, output_dir="Filtered", provider="random", batch_size=10, allow_random_fallback=False):
+def process_dat_file(input_file, output_dir="Filtered", provider="random", batch_size=20, allow_random_fallback=False):
     """
     Process a single DAT file using the headless application
     
     Args:
         input_file: Path to input DAT file
         output_dir: Directory for output files
-        provider: AI provider to use ('random', 'openai', or 'gemini')
+        provider: AI provider to use ('random' or 'gemini')
         batch_size: Number of games to process in one batch (for API efficiency)
         allow_random_fallback: Allow fallback to Random provider if API key is missing/invalid
     
@@ -93,8 +93,8 @@ def process_dat_file(input_file, output_dir="Filtered", provider="random", batch
             with open(error_file, "w") as f:
                 f.write(f"PROVIDER ERROR:\n{error_line}\n\nSTDOUT:\n{result.stdout}\n\nSTDERR:\n{result.stderr}")
             
-            # If the user is using gemini or openai, remind about API keys
-            if provider in ["gemini", "openai"]:
+            # If the user is using gemini, remind about API keys
+            if provider == "gemini":
                 logger.warning(f"Make sure you have configured a valid {provider.upper()} API key")
                 logger.info(f"You can try processing with the 'random' provider which doesn't require an API key")
             
@@ -144,9 +144,9 @@ def main():
     parser.add_argument("--output-dir", "-o", help="Directory for output files", default="Filtered")
     parser.add_argument("--limit", type=int, help="Limit number of files to process")
     parser.add_argument("--test", action="store_true", help="Process only small test files")
-    parser.add_argument("--provider", "-p", help="AI provider to use (random, openai, gemini, or all)", default="random")
+    parser.add_argument("--provider", "-p", help="AI provider to use (random or gemini)", default="random")
     parser.add_argument("--sample", "-s", help="Process only the sample.dat file", action="store_true")
-    parser.add_argument("--batch-size", "-b", type=int, help="Batch size for processing games", default=5)
+    parser.add_argument("--batch-size", "-b", type=int, help="Batch size for processing games", default=20)
     parser.add_argument("--continue", "-c", dest="continue_processing", action="store_true", 
                         help="Continue processing from previous run (skip already processed files)")
     parser.add_argument("--rate-limit", "-r", type=float, 
@@ -207,9 +207,9 @@ def main():
     # Determine which providers to use
     providers = []
     if args.provider.lower() == "all":
-        providers = ["random", "openai", "gemini"]
+        providers = ["random", "gemini"]
     elif args.provider.lower() == "both":
-        providers = ["random", "openai"]
+        providers = ["random", "gemini"]
     else:
         providers = [args.provider.lower()]
     

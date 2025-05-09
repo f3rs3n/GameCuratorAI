@@ -56,7 +56,7 @@ class InteractiveMenu:
         self.settings = {
             'provider': 'random',
             'criteria': ['metacritic', 'historical', 'v_list', 'console_significance', 'mods_hacks'],
-            'batch_size': 10,
+            'batch_size': 20,  # increased from 10 to 20 for optimized binary decision format
             # global_threshold removed - now using "any criteria match" approach
             'input_dir': 'ToFilter',
             'output_dir': 'Filtered',
@@ -306,8 +306,7 @@ class InteractiveMenu:
             ("3", "Export Results", not self.filtered_games),
             ("4", "Settings", False),
             ("5", "Batch Processing", False),
-            ("6", "Compare Providers", False),
-            ("7", f"Change AI Provider ({self.settings['provider'].upper()})", False),
+            ("6", f"Change AI Provider ({self.settings['provider'].upper()})", False),
             ("0", "Exit", False)
         ]
         
@@ -341,8 +340,6 @@ class InteractiveMenu:
         elif choice == "5":
             self.batch_processing_menu()
         elif choice == "6":
-            self.compare_providers_menu()
-        elif choice == "7":
             self._change_provider()
         elif choice == "0":
             self.running = False
@@ -552,16 +549,6 @@ class InteractiveMenu:
         status_text = self.colors['success'] + "[Available]" + Style.RESET_ALL
         providers_list.append(("random", f"Random (Testing mode only) {status_text}"))
         
-        # Add OpenAI with status
-        openai_info = all_providers.get("openai", {})
-        if openai_info.get("available", False):
-            status_text = self.colors['success'] + "[API Key Valid]" + Style.RESET_ALL
-        elif openai_info.get("has_valid_key", False):
-            status_text = self.colors['warning'] + "[Package Missing]" + Style.RESET_ALL
-        else:
-            status_text = self.colors['error'] + "[API Key Required]" + Style.RESET_ALL
-        providers_list.append(("openai", f"OpenAI (Most accurate) {status_text}"))
-        
         # Add Gemini with status
         gemini_info = all_providers.get("gemini", {})
         if gemini_info.get("available", False):
@@ -614,8 +601,8 @@ class InteractiveMenu:
                         self._wait_for_key()
                         return
                         
-                    # For OpenAI or Gemini, check availability and API key validity
-                    if self.settings['provider'] in ('openai', 'gemini'):
+                    # For Gemini, check availability and API key validity
+                    if self.settings['provider'] == 'gemini':
                         if not available:
                             # Provider not available - show reason and options
                             self._print_error(f"{self.settings['provider'].upper()} provider is not available")
@@ -626,12 +613,9 @@ class InteractiveMenu:
                                 self._print_info(f"This provider requires a valid API key to function.")
                             
                             # Provide info on where to get the key
-                            if self.settings['provider'] == 'openai':
-                                self._print_info("You can get an OpenAI API key at https://platform.openai.com/")
-                                self._print_info("Note: OpenAI requires a paid account with API access.")
-                            else:  # gemini
-                                self._print_info("You can get a Gemini API key at https://ai.google.dev/")
-                                self._print_info("Note: Gemini offers a free tier with generous quota limits.")
+                            # Only Gemini is supported now
+                            self._print_info("You can get a Gemini API key at https://ai.google.dev/")
+                            self._print_info("Note: Gemini offers a free tier with generous quota limits.")
                             
                             # Ask for options
                             print("\nOptions:")
@@ -946,11 +930,7 @@ class InteractiveMenu:
                 self._print_error(f"Provider error: {error_msg}")
                 
                 # Provide helpful information about how to fix the issue
-                if self.settings['provider'].lower() == 'openai':
-                    self._print_warning("The OpenAI provider requires a valid API key to function.")
-                    self._print_info("You can get an OpenAI API key at https://platform.openai.com/")
-                    self._print_info("Go to Settings → Configure API Keys to set your API key.")
-                elif self.settings['provider'].lower() == 'gemini':
+                if self.settings['provider'].lower() == 'gemini':
                     self._print_warning("The Gemini provider requires a valid API key to function.")
                     self._print_info("You can get a Gemini API key at https://ai.google.dev/")
                     self._print_info("Go to Settings → Configure API Keys to set your API key.")
@@ -1125,7 +1105,7 @@ class InteractiveMenu:
                     print()
                     self._print_warning("NOTE: You're using the Random provider which assigns random scores")
                     self._print_warning("      and doesn't provide meaningful filtering.")
-                    self._print_warning("      Switch to OpenAI or Gemini for better results.")
+                    self._print_warning("      Switch to Gemini for better results.")
             
             # Auto-save filtered DAT
             output_path = os.path.join(self.settings['output_dir'], f"filtered_{os.path.basename(self.current_dat_file)}")
@@ -1428,21 +1408,12 @@ class InteractiveMenu:
         # Get information about available providers
         all_providers = get_available_providers()
         
-        # Get OpenAI and Gemini status
-        openai_info = all_providers.get("openai", {})
+        # Get Gemini status
         gemini_info = all_providers.get("gemini", {})
         
-        openai_status = "Not Set"
         gemini_status = "Not Set"
         
-        # Determine status text and color for each provider
-        if openai_info.get("available", False):
-            openai_status = self.colors['success'] + "[Valid]" + Style.RESET_ALL
-        elif openai_info.get("has_valid_key", False):
-            openai_status = self.colors['warning'] + "[Set but Untested]" + Style.RESET_ALL
-        else:
-            openai_status = self.colors['error'] + "[Not Set]" + Style.RESET_ALL
-        
+        # Determine status text and color for Gemini provider
         if gemini_info.get("available", False):
             gemini_status = self.colors['success'] + "[Valid]" + Style.RESET_ALL
         elif gemini_info.get("has_valid_key", False):
@@ -1451,47 +1422,13 @@ class InteractiveMenu:
             gemini_status = self.colors['error'] + "[Not Set]" + Style.RESET_ALL
         
         self._print_subheader("Available Providers")
-        self._print_option("1", f"OpenAI API Key {openai_status}")
-        self._print_option("2", f"Google Gemini API Key {gemini_status}")
-        self._print_option("3", "Test API Keys")
+        self._print_option("1", f"Google Gemini API Key {gemini_status}")
+        self._print_option("2", "Test API Keys")
         self._print_option("0", "Back")
         
         choice = self._get_user_input("Enter your choice")
         
         if choice == "1":
-            openai_key_set = bool(os.environ.get("OPENAI_API_KEY", ""))
-            if openai_key_set:
-                self._print_info("OpenAI API key is already set.")
-                replace = self._get_user_input("Do you want to replace it? (y/n)", "n").lower() == "y"
-                if not replace:
-                    self._wait_for_key()
-                    self._configure_api_keys()
-                    return
-            else:
-                self._print_info("You need an OpenAI API key to use the OpenAI provider.")
-                self._print_info("You can get an API key at https://platform.openai.com/")
-                self._print_info("Requires a paid account with API access and sufficient credit balance.")
-            
-            key = self._get_user_input("Enter OpenAI API Key (leave blank to keep current)")
-            if key:
-                os.environ["OPENAI_API_KEY"] = key
-                self._print_success("OpenAI API key set")
-                
-                # Optionally validate the key immediately
-                validate = self._get_user_input("Would you like to validate this key now? (y/n)", "y").lower() == "y"
-                if validate:
-                    self._print_info("Testing OpenAI API key (this may take a moment)...")
-                    provider = get_provider("openai")
-                    if provider and provider.initialize():
-                        self._print_success("OpenAI API key is valid!")
-                    else:
-                        self._print_error("Failed to validate OpenAI API key")
-                        self._print_warning("The key may be invalid or there might be connection issues.")
-                        self._print_info("You can try again later by selecting 'Test API Keys'")
-            
-            self._wait_for_key()
-            self._configure_api_keys()
-        elif choice == "2":
             gemini_key_set = bool(os.environ.get("GEMINI_API_KEY", ""))
             if gemini_key_set:
                 self._print_info("Google Gemini API key is already set.")
@@ -1524,37 +1461,9 @@ class InteractiveMenu:
             
             self._wait_for_key()
             self._configure_api_keys()
-        elif choice == "3":
-            # Test all API keys with our enhanced validation system
+        elif choice == "2":
+            # Test API keys with our enhanced validation system
             self._print_subheader("Testing API Keys")
-            
-            # Get information about all available providers
-            all_providers = get_available_providers()
-            
-            # Test OpenAI provider
-            self._print_info("Testing OpenAI API key:")
-            available, reason, has_valid_key = check_provider_availability("openai")
-            
-            if has_valid_key:
-                self._print_info("OpenAI API key is present, testing connectivity...")
-                # Perform an actual API test
-                self._print_info("Testing OpenAI API key (this may take a moment)...")
-                success, message = check_api_key("openai")
-                if success:
-                    self._print_success(f"OpenAI API key is valid and working: {message}")
-                else:
-                    self._print_error(f"OpenAI API key validation failed: {message}")
-                    self._print_warning("The key may be invalid, expired, or have insufficient permissions")
-                    self._print_info("You can get an OpenAI API key at https://platform.openai.com/")
-                    self._print_info("Note: OpenAI requires a paid account with API access.")
-            else:
-                if "API key is not set" in reason:
-                    self._print_warning("OpenAI API key is not set")
-                    self._print_info("You can set it by selecting option 1 from the API Keys menu")
-                else:
-                    self._print_error(f"OpenAI provider issue: {reason}")
-            
-            print()  # Add spacing between tests
             
             # Test Gemini provider
             self._print_info("Testing Gemini API key:")

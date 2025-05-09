@@ -160,7 +160,7 @@ class GeminiProvider(BaseAIProvider):
             full_collection_context: Optional additional context from the full collection
             
         Returns:
-            Dict containing evaluation results with scores and explanations
+            Dict containing evaluation results with binary decisions and minimal notes
         """
         if not self.is_available():
             self.logger.error("Gemini provider is not available - API key may be missing")
@@ -211,23 +211,48 @@ class GeminiProvider(BaseAIProvider):
                 json_str = response_text[start_idx:end_idx]
                 try:
                     result = json.loads(json_str)
-                    return result
+                    
+                    # Convert the new format to be compatible with the existing processing pipeline
+                    # We'll map binary decisions to scores (10 for keep, 0 for discard)
+                    if "criteria_decisions" in result:
+                        processed_result = {
+                            "game_name": result.get("game_name", game_info.get("name", "Unknown Game")),
+                            "scores": {},
+                            "explanations": {},
+                            "binary_decisions": result.get("criteria_decisions", {})
+                        }
+                        
+                        # Convert binary decisions to traditional scores
+                        for criterion, keep_decision in result.get("criteria_decisions", {}).items():
+                            processed_result["scores"][criterion] = 10.0 if keep_decision else 0.0
+                            
+                        # Add any minimal notes as explanations
+                        for criterion, note in result.get("minimal_notes", {}).items():
+                            processed_result["explanations"][criterion] = note
+                            
+                        return processed_result
+                    else:
+                        # Handle case where the model didn't follow our format
+                        self.logger.warning("Gemini response doesn't have expected criteria_decisions field")
+                        return result
+                        
                 except json.JSONDecodeError:
                     self.logger.error("Failed to parse JSON from Gemini response")
                     
-                    # Fallback: create a structured response from the text
+                    # Fallback: create a structured response with binary decisions
                     fallback_response = {
-                        "game_id": "unknown",
                         "game_name": game_info.get("name", "Unknown Game"),
                         "scores": {},
                         "explanations": {},
-                        "error": "Failed to parse JSON, using text response"
+                        "binary_decisions": {},
+                        "error": "Failed to parse JSON, using fallback response"
                     }
                     
-                    # Add basic scores
+                    # Add basic decisions - default to false (discard)
                     for criterion in criteria:
-                        fallback_response["scores"][criterion] = 5.0  # Neutral score
-                        fallback_response["explanations"][criterion] = f"Unable to evaluate {criterion} properly"
+                        fallback_response["binary_decisions"][criterion] = False
+                        fallback_response["scores"][criterion] = 0.0  # Default score for discard
+                        fallback_response["explanations"][criterion] = f"Unable to evaluate {criterion}"
                     
                     return fallback_response
             else:
@@ -274,8 +299,8 @@ class GeminiProvider(BaseAIProvider):
             
             simplified_games.append(simplified_game)
             
-        # Process in small batches of up to 5 games to balance efficiency and reliability
-        max_batch_size = 5
+        # Process in batches of 20 games - optimized for simplified binary decision format
+        max_batch_size = 20  # Increased from 10 to 20 for optimized binary decision format
         all_results = []
         
         for i in range(0, len(simplified_games), max_batch_size):
@@ -343,7 +368,20 @@ class GeminiProvider(BaseAIProvider):
                             if "game_name" not in result:
                                 result["game_name"] = f"Unknown Game {i}"
                             
-                            # Ensure scores and explanations are dictionaries
+                            # Convert new binary format to be compatible with the existing pipeline
+                            if "criteria_decisions" in result:
+                                # Create scores dictionary from binary decisions (10 for keep, 0 for discard)
+                                if "scores" not in result:
+                                    result["scores"] = {}
+                                    
+                                for criterion, keep_decision in result["criteria_decisions"].items():
+                                    result["scores"][criterion] = 10.0 if keep_decision else 0.0
+                                
+                                # Use minimal notes as explanations if available
+                                if "minimal_notes" in result and "explanations" not in result:
+                                    result["explanations"] = result["minimal_notes"]
+                            
+                            # Fallback for ensuring scores and explanations are dictionaries
                             if "scores" not in result or not isinstance(result["scores"], dict):
                                 result["scores"] = {c: 5.0 for c in criteria}
                             
@@ -365,6 +403,7 @@ class GeminiProvider(BaseAIProvider):
                                         "game_name": game["name"],
                                         "scores": {c: 5.0 for c in criteria},
                                         "explanations": {c: f"No evaluation provided for {c}" for c in criteria},
+                                        "binary_decisions": {c: False for c in criteria},
                                         "error": "Game missing from batch results"
                                     }
                                     batch_results.append(placeholder)
@@ -381,6 +420,7 @@ class GeminiProvider(BaseAIProvider):
                                 "game_name": game["name"],
                                 "scores": {c: 5.0 for c in criteria},
                                 "explanations": {c: f"Failed to parse batch results for {c}" for c in criteria},
+                                "binary_decisions": {c: False for c in criteria},
                                 "error": "Failed to parse JSON from batch response"
                             }
                             all_results.append(fallback)
@@ -392,6 +432,7 @@ class GeminiProvider(BaseAIProvider):
                             "game_name": game["name"],
                             "scores": {c: 5.0 for c in criteria},
                             "explanations": {c: f"No batch results found for {c}" for c in criteria},
+                            "binary_decisions": {c: False for c in criteria},
                             "error": "No JSON found in batch response"
                         }
                         all_results.append(fallback)
@@ -540,7 +581,7 @@ class GeminiProvider(BaseAIProvider):
                                    criteria: List[str],
                                    full_collection_context: Optional[Dict[str, Any]] = None) -> str:
         """
-        Construct a prompt for evaluating a single game
+        Construct a prompt for evaluating a single game with binary decisions
         
         Args:
             game_info: Dictionary containing game information
@@ -567,12 +608,12 @@ class GeminiProvider(BaseAIProvider):
         game_description = json.dumps(simplified_game, indent=2)
         
         criteria_descriptions = {
-            "metacritic": "Evaluate the game based on its Metacritic score and critical acclaim. Games scoring 7.5/10 or higher should be kept.",
-            "historical": "Evaluate the game's historical significance and impact on the gaming industry",
-            "v_list": "Determine if this game is likely on V's recommended games list",
-            "console_significance": "Evaluate this game's significance for its specific console",
-            "mods_hacks": "Identify if this is a notable mod, hack, or unofficial translation worth preserving. Apply stricter evaluation for this category (needs to be more significant)",
-            "hidden_gems": "Evaluate if this game is considered a 'hidden gem' based on Reddit discussions and specialized gaming forums. These are games with enthusiastic community followings that might not have mainstream recognition."
+            "metacritic": "Evaluate if the game would have a Metacritic score of 7.5/10 or higher. Keep if it meets this threshold.",
+            "historical": "Evaluate if the game has significant historical importance or impact on the gaming industry. Keep if historically significant.",
+            "v_list": "Determine if this game is likely on V's recommended games list. Keep if likely on the list.",
+            "console_significance": "Evaluate if this game is significant for its specific console. Keep if it's an important title for the platform.",
+            "mods_hacks": "Identify if this is a notable mod, hack, or unofficial translation. Keep only if very significant.",
+            "hidden_gems": "Evaluate if this game is considered a 'hidden gem' with a devoted community following. Keep if it's a hidden gem."
         }
         
         criteria_prompts = [criteria_descriptions.get(c, f"Evaluate based on {c}") for c in criteria]
@@ -587,42 +628,39 @@ class GeminiProvider(BaseAIProvider):
             }
             context_text = "\nAdditional context from the collection:\n" + json.dumps(simplified_context, indent=2)
         
-        prompt = f"""You are an expert video game historian and curator. Your task is to evaluate a video game based on specific criteria and determine if it should be included in a curated collection. Provide detailed reasoning for your evaluation.
+        prompt = f"""You are an expert video game historian and curator evaluating games for a collection. 
+Your task is to provide binary KEEP or DISCARD decisions for each criterion.
 
-Evaluate the following video game:
-
+Game to evaluate:
 Game Name: {game_name}
 
 Game Information:
 {game_description}
 
-Evaluate this game based on these criteria:
+For each criterion, determine if the game should be KEPT based on:
 {criteria_text}
 {context_text}
 
-For each criterion, assign a score from 0 to 10 and provide a brief explanation.
-Then give an overall recommendation of whether to include this game in a curated collection.
+For EACH criterion, provide a binary "keep" decision (true or false).
+Games that match ANY criterion with "keep: true" will be included in the collection.
 
 Return your evaluation as a JSON object with this structure:
 {{
   "game_name": "{game_name}",
-  "scores": {{
-    "criterion1": score1,
-    "criterion2": score2,
+  "criteria_decisions": {{
+    "criterion1": true/false,
+    "criterion2": true/false,
     ...
   }},
-  "explanations": {{
-    "criterion1": "brief explanation",
-    "criterion2": "brief explanation",
+  "minimal_notes": {{
+    "criterion1": "1-2 word justification",
+    "criterion2": "1-2 word justification",
     ...
-  }},
-  "overall_recommendation": {{
-    "include": true/false,
-    "reason": "brief explanation"
   }}
 }}
 
-Keep explanations concise and specific. Make sure your response is valid JSON.
+Keep any notes extremely brief - just 1-2 words per criterion.
+Your response MUST be valid JSON and MUST include all the criteria asked for.
 """
         return prompt
         
@@ -631,7 +669,7 @@ Keep explanations concise and specific. Make sure your response is valid JSON.
                                        criteria: List[str],
                                        full_collection_context: Optional[Dict[str, Any]] = None) -> str:
         """
-        Construct a prompt for evaluating multiple games in a batch
+        Construct a prompt for evaluating multiple games in a batch with binary decisions
         
         Args:
             games_info: List of dictionaries containing game information
@@ -644,12 +682,12 @@ Keep explanations concise and specific. Make sure your response is valid JSON.
         games_json = json.dumps(games_info, indent=2)
         
         criteria_descriptions = {
-            "metacritic": "Evaluate the game based on its Metacritic score and critical acclaim. Games scoring 7.5/10 or higher should be kept.",
-            "historical": "Evaluate the game's historical significance and impact on the gaming industry",
-            "v_list": "Determine if this game is likely on V's recommended games list",
-            "console_significance": "Evaluate this game's significance for its specific console",
-            "mods_hacks": "Identify if this is a notable mod, hack, or unofficial translation worth preserving. Apply stricter evaluation for this category (needs to be more significant)",
-            "hidden_gems": "Evaluate if this game is considered a 'hidden gem' based on Reddit discussions and specialized gaming forums. These are games with enthusiastic community followings that might not have mainstream recognition."
+            "metacritic": "Evaluate if the game would have a Metacritic score of 7.5/10 or higher. Keep if it meets this threshold.",
+            "historical": "Evaluate if the game has significant historical importance or impact on the gaming industry. Keep if historically significant.",
+            "v_list": "Determine if this game is likely on V's recommended games list. Keep if likely on the list.",
+            "console_significance": "Evaluate if this game is significant for its specific console. Keep if it's an important title for the platform.",
+            "mods_hacks": "Identify if this is a notable mod, hack, or unofficial translation. Keep only if very significant.",
+            "hidden_gems": "Evaluate if this game is considered a 'hidden gem' with a devoted community following. Keep if it's a hidden gem."
         }
         
         criteria_prompts = [criteria_descriptions.get(c, f"Evaluate based on {c}") for c in criteria]
@@ -664,33 +702,37 @@ Keep explanations concise and specific. Make sure your response is valid JSON.
             }
             context_text = "\nAdditional context from the collection:\n" + json.dumps(simplified_context, indent=2)
         
-        prompt = f"""You are an expert video game historian and curator. Your task is to evaluate multiple video games based on specific criteria and determine if each should be included in a curated collection.
+        prompt = f"""You are an expert video game historian and curator evaluating games for a collection.
+Your task is to provide binary KEEP or DISCARD decisions for each criterion for multiple games.
 
 Games to evaluate:
 {games_json}
 
-Evaluate each game based on these criteria:
+For each criterion, determine if the game should be KEPT based on:
 {criteria_text}
 {context_text}
 
-For each criterion, assign a score from 0 to 10 and provide a brief explanation.
+For EACH game and EACH criterion, provide a binary "keep" decision (true or false).
+Games that match ANY criterion with "keep: true" will be included in the collection.
 
 Return your evaluations as a JSON array where each object follows this structure:
 {{
   "game_name": "Name of Game",
-  "scores": {{
-    "criterion1": score1,
-    "criterion2": score2,
+  "criteria_decisions": {{
+    "criterion1": true/false,
+    "criterion2": true/false,
     ...
   }},
-  "explanations": {{
-    "criterion1": "brief explanation",
-    "criterion2": "brief explanation",
+  "minimal_notes": {{
+    "criterion1": "1-2 word justification",
+    "criterion2": "1-2 word justification",
     ...
   }}
 }}
 
-Keep explanations concise and specific. Your response must be valid JSON.
+Keep any notes extremely brief - just 1-2 words per criterion.
+Your response MUST be valid JSON and MUST include all the criteria asked for.
+
 Wrap your entire response in a single JSON object containing a "games" array:
 {{
   "games": [

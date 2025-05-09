@@ -14,40 +14,7 @@ from typing import Tuple, Dict, Any, Optional, Union
 # Setup basic logging
 logger = logging.getLogger('datfilterai')
 
-def test_openai_key(api_key: str) -> bool:
-    """
-    Test if an OpenAI API key is valid by making a simple API call.
-    
-    Args:
-        api_key: The OpenAI API key to test
-        
-    Returns:
-        True if the key is valid, False otherwise
-    """
-    try:
-        # We'll use a simple models list request which is a lightweight call
-        headers = {
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json"
-        }
-        
-        response = requests.get(
-            "https://api.openai.com/v1/models",
-            headers=headers,
-            timeout=10  # Set a reasonable timeout
-        )
-        
-        # Check if the request was successful
-        if response.status_code == 200:
-            return True
-        else:
-            error_message = response.json().get("error", {}).get("message", "Unknown error")
-            logger.warning(f"OpenAI API key validation failed: {error_message}")
-            return False
-            
-    except Exception as e:
-        logger.error(f"Error testing OpenAI API key: {str(e)}")
-        return False
+# OpenAI provider has been removed as per user request
 
 def test_gemini_key(api_key: str) -> bool:
     """
@@ -85,7 +52,7 @@ def check_api_key(provider: str) -> Tuple[bool, str]:
     Check if an API key for the given provider exists and is valid.
     
     Args:
-        provider: The AI provider name (openai, gemini)
+        provider: The AI provider name (gemini)
         
     Returns:
         Tuple of (key_valid, message)
@@ -95,9 +62,7 @@ def check_api_key(provider: str) -> Tuple[bool, str]:
     provider = provider.lower()
     
     # Define API key environment variable names
-    if provider == "openai":
-        key_name = "OPENAI_API_KEY"
-    elif provider == "gemini":
+    if provider == "gemini":
         key_name = "GEMINI_API_KEY"
     else:
         # Random provider doesn't need an API key
@@ -114,25 +79,14 @@ def check_api_key(provider: str) -> Tuple[bool, str]:
         return (False, f"No {key_name} found in environment variables")
     
     # Perform a simple validation check on the key format
-    # OpenAI keys usually start with "sk-" and are 51 characters long
     # Gemini keys are typically 39 characters
-    
-    if provider == "openai":
-        if not api_key.startswith("sk-") or len(api_key) < 40:
-            return (False, f"Invalid OpenAI API key format. Keys typically start with 'sk-' and are 51 characters long.")
-    elif provider == "gemini":
+    if provider == "gemini":
         if len(api_key) < 30:
             return (False, f"Invalid Gemini API key format. Keys are typically 39 characters long.")
     
     # Do a basic test API call to validate the key works
     try:
-        if provider == "openai":
-            valid = test_openai_key(api_key)
-            if valid:
-                return (True, "OpenAI API key is valid")
-            else:
-                return (False, "OpenAI API key validation failed. The key may be invalid, expired, or have insufficient permissions.")
-        elif provider == "gemini":
+        if provider == "gemini":
             valid = test_gemini_key(api_key)
             if valid:
                 return (True, "Gemini API key is valid")
@@ -149,18 +103,14 @@ def request_api_key(provider: str) -> str:
     Request an API key for the given provider from the user.
     
     Args:
-        provider: The AI provider name (openai, gemini)
+        provider: The AI provider name (gemini)
         
     Returns:
         The entered API key, or empty string if cancelled
     """
     provider = provider.lower()
     
-    if provider == "openai":
-        print("\nYou need an OpenAI API key to use the OpenAI provider.")
-        print("This requires a paid account with access to the OpenAI API.")
-        print("You can get one at: https://platform.openai.com/")
-    elif provider == "gemini":
+    if provider == "gemini":
         print("\nYou need a Google Gemini API key to use the Gemini provider.")
         print("You can get one at: https://ai.google.dev/")
         print("Gemini offers a free tier with reasonable usage limits.")
@@ -191,7 +141,7 @@ def set_api_key(provider: str, api_key: str) -> bool:
     Set the API key for the given provider in the environment.
     
     Args:
-        provider: The AI provider name (openai, gemini)
+        provider: The AI provider name (gemini)
         api_key: The API key to set
         
     Returns:
@@ -202,10 +152,7 @@ def set_api_key(provider: str, api_key: str) -> bool:
     if not api_key:
         return False
     
-    if provider == "openai":
-        os.environ["OPENAI_API_KEY"] = api_key
-        return True
-    elif provider == "gemini":
+    if provider == "gemini":
         os.environ["GEMINI_API_KEY"] = api_key
         return True
     else:
@@ -224,12 +171,6 @@ def get_available_providers() -> Dict[str, Dict[str, Any]]:
         Dictionary mapping provider names to information about their availability
     """
     providers = {
-        "openai": {
-            "name": "OpenAI",
-            "description": "Uses GPT models for high-quality evaluation",
-            "url": "https://platform.openai.com/",
-            "requires_key": True
-        },
         "gemini": {
             "name": "Google Gemini",
             "description": "Uses Google's Gemini models for good evaluation with free tier",
@@ -258,7 +199,7 @@ def check_provider_availability(provider: str) -> Tuple[bool, str, bool]:
     Check if a provider is available (required packages installed) and has valid API keys.
     
     Args:
-        provider: The AI provider name (openai, gemini, random)
+        provider: The AI provider name (gemini, random)
         
     Returns:
         Tuple of (available, reason, has_valid_key)
@@ -273,13 +214,7 @@ def check_provider_availability(provider: str) -> Tuple[bool, str, bool]:
         return (True, "Random provider is available (for testing only)", True)
     
     # Check if the required packages are installed
-    if provider == "openai":
-        try:
-            import openai
-            package_available = True
-        except ImportError:
-            return (False, "OpenAI package is not installed. Please install it with 'pip install openai'", False)
-    elif provider == "gemini":
+    if provider == "gemini":
         try:
             import google.generativeai
             package_available = True
@@ -301,7 +236,7 @@ def check_and_request_api_key(provider: str, allow_random_fallback: bool = False
     Check if an API key exists for the provider, and request one if it doesn't.
     
     Args:
-        provider: The AI provider name (openai, gemini)
+        provider: The AI provider name (gemini)
         allow_random_fallback: Whether to allow fallback to the random provider
         
     Returns:
