@@ -171,7 +171,10 @@ def main():
             # Calculate ETA
             if games_per_sec > 0 and current < total:
                 eta = (total - current) / games_per_sec
-                eta_str = f"ETA: {int(eta//60)}m {int(eta%60)}s"
+                if eta > 3600:
+                    eta_str = f"ETA: {int(eta//3600)}h {int((eta%3600)//60)}m"
+                else:
+                    eta_str = f"ETA: {int(eta//60)}m {int(eta%60)}s"
             else:
                 eta_str = "ETA: calculating..."
             
@@ -179,14 +182,24 @@ def main():
             if batch_results:
                 last_batch_results = batch_results
 
-            # Use the game-themed progress display
-            progress_display = visualizer.display_game_themed_progress(
-                current, total, games_per_sec, eta_str
-            )
-            
             # Clear line and display progress
             sys.stdout.write("\r" + " " * 100 + "\r")  # Clear line
-            sys.stdout.write(f"{progress_display}")
+            
+            # Create a custom progress bar
+            bar_width = 40
+            completed = int(bar_width * current / total) if total > 0 else 0
+            remaining = bar_width - completed
+            
+            # Use a themed icon based on progress
+            icons = ["⬙", "⬅️", "➔", "🚶", "🏃", "🎮", "👾", "❎", "🕹️", "➡️"]
+            icon_idx = min(len(icons)-1, int(percentage / 10))
+            progress_icon = icons[icon_idx]
+            
+            # Format the progress bar
+            progress_bar = f"[{visualizer.get_color('success')}{'█' * completed}{visualizer.get_color('reset')}{progress_icon}{visualizer.get_color('warning')}{'░' * remaining}{visualizer.get_color('reset')}]"
+            
+            # Display progress line
+            sys.stdout.write(f"{progress_bar} {percentage}% ({current}/{total} games) - {games_per_sec:.1f} games/sec - {eta_str}")
 
             # Show batch results if available
             if last_batch_results and current < total:
@@ -194,17 +207,32 @@ def main():
                 kept_count = len([g for g in last_batch_results if g.get('keep', False)])
                 removed_count = len(last_batch_results) - kept_count
                 
+                # The criteria mapping for display
+                criteria_display_names = {
+                    "metacritic": "Metacritic Rating",
+                    "historical": "Historical Significance",
+                    "v_list": "V Recommendation",
+                    "console_significance": "Console Significance",
+                    "mods_hacks": "Mod Significance",
+                    "hidden_gems": "Hidden Gem",
+                    "criterion1": "Metacritic Rating", 
+                    "criterion2": "Historical Significance",
+                    "criterion3": "V Recommendation",
+                    "criterion4": "Console Significance",
+                    "criterion5": "Mod Significance",
+                    "criterion6": "Hidden Gem"
+                }
+                
                 # Show recent game evaluations with color coding
                 sys.stdout.write("\n\nRecent games processed:")
                 
                 # Display batch summary
-                sys.stdout.write(f"\n  Last batch: {visualizer.get_color('success')}{kept_count} kept{visualizer.get_color('reset')}, ")
-                sys.stdout.write(f"{visualizer.get_color('error')}{removed_count} removed{visualizer.get_color('reset')}\n")
+                sys.stdout.write(f"\n  Last batch: {kept_count} kept, {removed_count} removed")
                 
-                for idx, result in enumerate(last_batch_results[-5:]):  # Show up to 5 recent games
+                # Display the most recent games (up to 5)
+                for idx, result in enumerate(last_batch_results[-5:]):
                     game_name = result.get("game_name", "Unknown Game")
                     keep = result.get("keep", False)
-                    quality = result.get("quality_score", 0)
                     
                     status = "✓ KEEP" if keep else "✗ REMOVE"
                     color = visualizer.get_color('success') if keep else visualizer.get_color('error')
@@ -220,9 +248,6 @@ def main():
                     if "_evaluation" in result:
                         analysis = result.get("_evaluation", {}).get("_criteria_analysis", {})
                     
-                    # If not found, and we're just displaying batch results, we don't have access
-                    # to the _evaluation data yet since it's still being processed
-                    
                     # Display criteria insights
                     if analysis:
                         # Display strengths and weaknesses
@@ -230,18 +255,30 @@ def main():
                         weakest = analysis.get("weakest_criteria", [])
                         
                         if strongest:
-                            strongest_str = ", ".join([s.replace("_", " ").title() for s in strongest])
-                            sys.stdout.write(f" {visualizer.get_color('success')}Strong:{visualizer.get_color('reset')} {strongest_str}")
+                            # Map criterion names to display names
+                            strongest_names = []
+                            for s in strongest:
+                                if s in criteria_display_names:
+                                    strongest_names.append(criteria_display_names[s])
+                                else:
+                                    strongest_names.append(s.replace("_", " ").title())
+                            strongest_str = ", ".join(strongest_names)
+                            sys.stdout.write(f"\n    {visualizer.get_color('success')}Strong:{visualizer.get_color('reset')} {strongest_str}")
                         
                         if weakest:
-                            weakest_str = ", ".join([w.replace("_", " ").title() for w in weakest])
-                            sys.stdout.write(f" {visualizer.get_color('warning')}Weak:{visualizer.get_color('reset')} {weakest_str}")
+                            # Map criterion names to display names
+                            weakest_names = []
+                            for w in weakest:
+                                if w in criteria_display_names:
+                                    weakest_names.append(criteria_display_names[w])
+                                else:
+                                    weakest_names.append(w.replace("_", " ").title())
+                            weakest_str = ", ".join(weakest_names)
+                            sys.stdout.write(f"\n    {visualizer.get_color('warning')}Weak:{visualizer.get_color('reset')} {weakest_str}")
                         
                         # Special handling for low score keepers
                         if keep and analysis.get("is_low_score_keeper", False):
-                            sys.stdout.write(f" {visualizer.get_color('warning')}[LOW SCORE EXCEPTION]{visualizer.get_color('reset')}")
-                
-                sys.stdout.write("\n")  # Add spacing
+                            sys.stdout.write(f"\n    {visualizer.get_color('warning')}[LOW SCORE EXCEPTION]{visualizer.get_color('reset')}")
             
             sys.stdout.flush()
             

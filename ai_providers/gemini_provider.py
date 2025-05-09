@@ -704,6 +704,19 @@ Your response MUST be valid JSON and MUST include all the criteria asked for.
             }
             context_text = "\nAdditional context from the collection:\n" + json.dumps(simplified_context, indent=2)
         
+        # Get proper criterion names for the prompt
+        criterion_names = {
+            "metacritic": "metacritic",
+            "historical": "historical",
+            "v_list": "v_list",
+            "console_significance": "console_significance",
+            "mods_hacks": "mods_hacks",
+            "hidden_gems": "hidden_gems"
+        }
+        
+        # Create a comma-separated string of criterion names for the example
+        criterion_names_list = ", ".join([f'"{name}"' for name in [c for c in criteria]])
+        
         prompt = f"""You are an expert video game historian and curator evaluating games for a collection.
 Your task is to provide binary KEEP or DISCARD decisions for each criterion for multiple games.
 
@@ -721,16 +734,25 @@ Return your evaluations as a JSON array where each object follows this structure
 {{
   "game_name": "Name of Game",
   "criteria_decisions": {{
-    "criterion1": true/false,
-    "criterion2": true/false,
+    "metacritic": true/false,
+    "historical": true/false,
+    "v_list": true/false,
+    "console_significance": true/false,
+    "mods_hacks": true/false,
     ...
   }},
   "minimal_notes": {{
-    "criterion1": "1-2 word justification",
-    "criterion2": "1-2 word justification",
+    "metacritic": "1-2 word justification",
+    "historical": "1-2 word justification",
+    "v_list": "1-2 word justification",
+    "console_significance": "1-2 word justification",
+    "mods_hacks": "1-2 word justification",
     ...
   }}
 }}
+
+Important: Use EXACTLY these criterion keys in your response: {criterion_names_list}
+Do not use generic names like criterion1, criterion2, etc.
 
 Keep any notes extremely brief - just 1-2 words per criterion.
 Your response MUST be valid JSON and MUST include all the criteria asked for.
