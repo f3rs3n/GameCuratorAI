@@ -488,7 +488,8 @@ class FilterEngine:
                 metacritic_check = False
                 if "metacritic" in criteria_scores:
                     metacritic_score = criteria_scores["metacritic"]["score"]
-                    metacritic_threshold = 7.5  # New fixed threshold for metacritic
+                    # Use the configurable threshold from threshold_scores (set in init or by user)
+                    metacritic_threshold = self.threshold_scores.get("metacritic", 7.5)
                     metacritic_check = metacritic_score >= metacritic_threshold
                     
                     # Update the criteria score entry for metacritic
@@ -538,7 +539,8 @@ class FilterEngine:
                     
                     # Special case for "metacritic" criterion with new rules
                     if criterion == "metacritic":
-                        threshold = 7.5  # New fixed threshold for metacritic
+                        # Use the configurable threshold from threshold_scores
+                        threshold = self.threshold_scores.get("metacritic", 7.5)
                     
                     # Apply global threshold modifier
                     adjusted_threshold = threshold * self.global_threshold

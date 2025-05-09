@@ -276,7 +276,14 @@ class InteractiveMenu:
         # Show engine info
         print()
         self._print_data("Engine", self.settings['provider'].upper())
-        self._print_data("Threshold", f"{self.settings['global_threshold']:.2f}")
+        
+        # Get Metacritic threshold from settings or default to 7.5
+        metacritic_threshold = 7.5
+        if 'criteria_thresholds' in self.settings and 'metacritic' in self.settings['criteria_thresholds']:
+            metacritic_threshold = self.settings['criteria_thresholds']['metacritic']
+        
+        self._print_data("Global Threshold", f"{self.settings['global_threshold']:.2f}")
+        self._print_data("Metacritic Threshold", f"{metacritic_threshold:.2f}")
         
         # Menu options
         self._print_subheader("SYSTEM COMMANDS")
@@ -422,14 +429,21 @@ class InteractiveMenu:
         self._print_info(f"Current AI Provider: {self.settings['provider']}")
         self._print_info(f"Batch Size: {self.settings['batch_size']} games per API call")
         
-        # Display threshold with description
-        threshold = self.settings['global_threshold']
+        # Display thresholds with descriptions
+        global_threshold = self.settings['global_threshold']
         threshold_desc = "Neutral"
-        if threshold < 1.0:
+        if global_threshold < 1.0:
             threshold_desc = "More Lenient"
-        elif threshold > 1.0:
+        elif global_threshold > 1.0:
             threshold_desc = "More Strict"
-        self._print_info(f"Global Threshold: {threshold:.2f} ({threshold_desc})")
+        self._print_info(f"Global Threshold: {global_threshold:.2f} ({threshold_desc})")
+        
+        # Display Metacritic threshold
+        metacritic_threshold = 7.5
+        if 'criteria_thresholds' in self.settings and 'metacritic' in self.settings['criteria_thresholds']:
+            metacritic_threshold = self.settings['criteria_thresholds']['metacritic']
+        
+        self._print_info(f"Metacritic Threshold: {metacritic_threshold:.2f} (games with higher scores are kept)")
         
         print()
         self._print_option("A", "Apply filters with current settings")

@@ -11,29 +11,29 @@
 <retool>Created by Retool 2.3.9</retool>
 <filter_criteria>['metacritic', 'historical', 'v_list', 'console_significance', 'mods_hacks']</filter_criteria>
 <filtered_date>2025-05-09</filtered_date>
-<filtered_time>07:58:46</filtered_time>
-<filtered_games_count>53</filtered_games_count>
+<filtered_time>08:08:24</filtered_time>
+<filtered_games_count>58</filtered_games_count>
 <original_games_count>77</original_games_count>
 </header>
+<game name="Activision Decathlon, The (USA)">
+  <category>Games</category>
+<description>Activision Decathlon, The (USA)</description>
+<rom name="Activision Decathlon, The (USA).a52" size="16384" crc="f43e7cd0" md5="45f8841269313736489180c8ec3e9588" sha1="db203973df13b071da46d52fdb078a76f4db428d" sha256="9ffda583a583582991ac504d92741a4fe41da094ab63373425937be94eef086d"/>
+</game>
 <game name="Astro Chase (USA)">
   <category>Games</category>
 <description>Astro Chase (USA)</description>
 <rom name="Astro Chase (USA).a52" size="16384" crc="4019ecec" md5="bae7c1e5eb04e19ef8d0d0b5ce134332" sha1="67e405c37e55dec4071018e8166ab4faf9f21df5" sha256="f3c1a48b736a06cf5c181e2d3c6c093512a592c4adf91c3e7e8f3e2bbdc2a126"/>
 </game>
-<game name="Atari PAM Diagnostics (USA) (v2.3)">
+<game name="Atari PAM - Pete's Test (USA)">
   <category>Games</category>
-<description>Atari PAM Diagnostics (USA) (v2.3)</description>
-<rom name="Atari PAM Diagnostics (USA) (v2.3).a52" size="16384" crc="ce07d9ad" md5="32a6d0de4f1728dee163eb2d4b3f49f1" sha1="e086e9868aa913e87f94676fd600f003892e73a1"/>
+<description>Atari PAM - Pete's Test (USA)</description>
+<rom name="Atari PAM - Pete's Test (USA).a52" size="8192" crc="28278cd6" md5="ccd35e9ea3b3c5824214d88a6d8d8f7e" sha1="d3ff99e080985c9c8e25389dfa74835e8c9be508" sha256="d9843af118f6046d4dd13ac9f5a86b172dfe9d374dece972bbca4b5c484fa059"/>
 </game>
 <game name="Atari PAM System Test (USA) (v1.02)">
   <category>Games</category>
 <description>Atari PAM System Test (USA) (v1.02)</description>
 <rom name="Atari PAM System Test (USA) (v1.02).a52" size="8192" crc="7ea86e87" md5="21ab49f7c7e245c1e12e606641788a45" sha1="af81c400f1af0ee13a24da5e8b642442a0fc9479"/>
-</game>
-<game name="Beamrider (USA)">
-  <category>Games</category>
-<description>Beamrider (USA)</description>
-<rom name="Beamrider (USA).a52" size="16384" crc="9bae58dc" md5="1913310b1e44ad7f3b90aeb16790a850" sha1="b75d555d059ad61992f9f5a234129ecbf9504c35"/>
 </game>
 <game name="BerZerk (USA)">
   <category>Games</category>
@@ -59,6 +59,11 @@
   <category>Games</category>
 <description>Carol Shaw's River Raid (USA)</description>
 <rom name="Carol Shaw's River Raid (USA).a52" size="8192" crc="09fc7648" md5="01b978c3faf5d516f300f98c00377532" sha1="ce9bd3b0847c5e187c3e8f667c8f5ea771c49965"/>
+</game>
+<game name="Castle Blast (USA) (Unl)">
+  <category>Games</category>
+<description>Castle Blast (USA) (Unl)</description>
+<rom name="Castle Blast (USA) (Unl).a52" size="32768" crc="7c988054" md5="4965b4c8acca64c4fac39a7c0763f611" sha1="c1a56a1fc51e09b1d8e93af40ddd7596847e6164"/>
 </game>
 <game name="Choplifter! (USA)">
   <category>Games</category>
@@ -130,6 +135,11 @@
 <description>Jungle Hunt (USA)</description>
 <rom name="Jungle Hunt (USA).a52" size="16384" crc="2c676662" md5="834067fdce5d09b86741e41e7e491d6c" sha1="fa02ee04cfad90c6ccf9d9b984e3b7b3327fec12"/>
 </game>
+<game name="K-Razy Shoot-Out (USA)">
+  <category>Games</category>
+<description>K-Razy Shoot-Out (USA)</description>
+<rom name="K-Razy Shoot-Out (USA).a52" size="8192" crc="ee702214" md5="b99f405de8e7700619bcd18524ba0e0e" sha1="c7eb2b4a46a197adfedf33c2ccc17d8424d681c4"/>
+</game>
 <game name="Kaboom! (USA)">
   <category>Games</category>
 <description>Kaboom! (USA)</description>
@@ -140,25 +150,50 @@
 <description>Kangaroo (USA)</description>
 <rom name="Kangaroo (USA).a52" size="16384" crc="ecfa624f" md5="796d2c22f8205fb0ce8f1ee67c8eb2ca" sha1="c3dbeed7adc0e282bf76332ab5a3209550e26d02"/>
 </game>
-<game name="Keystone Kapers (USA)">
-  <category>Games</category>
-<description>Keystone Kapers (USA)</description>
-<rom name="Keystone Kapers (USA).a52" size="8192" crc="8fe3bb2c" md5="f25a084754ea4d37c2fb1dc8ca6dc51b" sha1="9f31c85a13e919135438590601e33bef11a8df8a"/>
-</game>
 <game name="Koffi - Yellow Kopter (USA) (Unl)">
   <category>Games</category>
 <description>Koffi - Yellow Kopter (USA) (Unl)</description>
 <rom name="Koffi - Yellow Kopter (USA) (Unl).a52" size="32768" crc="917be656" md5="3b03e3cda8e8aa3beed4c9617010b010" sha1="9547c56e2951e1b3a713b0b99d3edb43c9d3cdd8"/>
+</game>
+<game name="MegaMania (USA)">
+  <category>Games</category>
+<description>MegaMania (USA)</description>
+<rom name="MegaMania (USA).a52" size="8192" crc="240a1e1a" md5="ff785ce12ad6f4ca67f662598025c367" sha1="f5512460c6b6d3a1baa0b23adf6a3a37fe308eb3"/>
+</game>
+<game name="Meteorites (USA)">
+  <category>Games</category>
+<description>Meteorites (USA)</description>
+<rom name="Meteorites (USA).a52" size="16384" crc="ab8e035b" md5="1cd67468d123219201702eadaffd0275" sha1="32d86a381feff43149b66336dcc4ba2523273228"/>
 </game>
 <game name="Miner 2049er Starring Bounty Bob (USA)">
   <category>Games</category>
 <description>Miner 2049er Starring Bounty Bob (USA)</description>
 <rom name="Miner 2049er Starring Bounty Bob (USA).a52" size="16384" crc="7df1adfb" md5="d859bff796625e980db1840f15dec4b5" sha1="0564b1867a0b570d66dfcbc11adc3e51a2c6f28c"/>
 </game>
+<game name="Missile Command (USA)">
+  <category>Games</category>
+<description>Missile Command (USA)</description>
+<rom name="Missile Command (USA).a52" size="8192" crc="44d3ff6f" md5="972b6c0dbf5501cacfdc6665e86a796c" sha1="5c8ec22e131810ccac08066ca96e9944ccfa4ecb"/>
+</game>
 <game name="Montezuma's Revenge - Featuring Panama Joe (USA)">
   <category>Games</category>
 <description>Montezuma's Revenge - Featuring Panama Joe (USA)</description>
 <rom name="Montezuma's Revenge - Featuring Panama Joe (USA).a52" size="16384" crc="2a640143" md5="694897cc0d98fcf2f59eef788881f67d" sha1="7e2a05625598c7e6615f969aa695e64315cd9846"/>
+</game>
+<game name="Moon Patrol (USA)">
+  <category>Games</category>
+<description>Moon Patrol (USA)</description>
+<rom name="Moon Patrol (USA).a52" size="16384" crc="d0b2f285" md5="296e5a3a9efd4f89531e9cf0259c903d" sha1="02dd5b9278c06ae8cbb6dacc094e238fbacf08d2"/>
+</game>
+<game name="Mountain King (USA)">
+  <category>Games</category>
+<description>Mountain King (USA)</description>
+<rom name="Mountain King (USA).a52" size="8192" crc="0f24243c" md5="618e3eb7ae2810768e1aefed1bfdcec4" sha1="2e7ae57260624d1f5710d445a0936f0c280a6655"/>
+</game>
+<game name="Ms. Pac-Man (USA)">
+  <category>Games</category>
+<description>Ms. Pac-Man (USA)</description>
+<rom name="Ms. Pac-Man (USA).a52" size="16384" crc="752f5efd" md5="ef9a920ffdf592546499738ee911fc1e" sha1="f93d72444d76075273e508555423936530875148"/>
 </game>
 <game name="Pac-Man (USA)">
   <category>Games</category>
@@ -170,11 +205,6 @@
 <description>Pengo (USA)</description>
 <rom name="Pengo (USA).a52" size="32768" crc="e4f8ba8c" md5="a301a449fc20ad345b04932d3ca3ef54" sha1="19ff7622dbbc2915e3e98d8d966340e7e893ff34"/>
 </game>
-<game name="Pitfall! (USA)">
-  <category>Games</category>
-<description>Pitfall! (USA)</description>
-<rom name="Pitfall! (USA).a52" size="8192" crc="b2887833" md5="ecbd6dd2ab105dd43f98476966bbf26c" sha1="d1c7dc3de097a4bfab82235acec69a97e6e05f18"/>
-</game>
 <game name="Pole Position (USA)">
   <category>Games</category>
 <description>Pole Position (USA)</description>
@@ -184,11 +214,6 @@
   <category>Games</category>
 <description>Popeye (USA)</description>
 <rom name="Popeye (USA).a52" size="16384" crc="a18a9a40" md5="dd4ae6add63452aafe7d4fa752cd78ca" sha1="e615aaa0c1d56ac83b91f6087970fa708d6433bf"/>
-</game>
-<game name="Q-bert (USA)">
-  <category>Games</category>
-<description>Q-bert (USA)</description>
-<rom name="Q-bert (USA).a52" size="8192" crc="3fe4a401" md5="ce44d14341fcc5e7e4fb7a04f77ffec9" sha1="e6966bde5cd4167020c9d21bab613af1648b4d75"/>
 </game>
 <game name="QIX (USA)">
   <category>Games</category>
@@ -200,30 +225,30 @@
 <description>Quest for Quintana Roo (USA)</description>
 <rom name="Quest for Quintana Roo (USA).a52" size="16384" crc="b5f3402b" md5="099706cedd068aced7313ffa371d7ec3" sha1="17a41c5f9a32f8a71939cfaa0e96807b951aedad"/>
 </game>
-<game name="RealSports Baseball (USA)">
-  <category>Games</category>
-<description>RealSports Baseball (USA)</description>
-<rom name="RealSports Baseball (USA).a52" size="32768" crc="44166592" md5="2bb928d7516e451c6b0159ac413407de" sha1="a94d06739fa19453fa586a836eaacae11fe93989"/>
-</game>
 <game name="RealSports Basketball (USA)">
   <category>Games</category>
 <description>RealSports Basketball (USA)</description>
 <rom name="RealSports Basketball (USA).a52" size="32768" crc="dd217276" md5="e056001d304db597bdd21b2968fcc3e6" sha1="9b21ac7fec8d556585c6970231318ef1f501b2b5"/>
+</game>
+<game name="RealSports Football (USA)">
+  <category>Games</category>
+<description>RealSports Football (USA)</description>
+<rom name="RealSports Football (USA).a52" size="16384" crc="4336c2cc" md5="022c47b525b058796841134bb5c75a18" sha1="a0dbd654ed3ba2583ca175a1356924d9529884df"/>
 </game>
 <game name="RealSports Soccer (USA)">
   <category>Games</category>
 <description>RealSports Soccer (USA)</description>
 <rom name="RealSports Soccer (USA).a52" size="16384" crc="ecbd1853" md5="3074fad290298d56c67f82e8588c5a8b" sha1="c911cc914f3923d5aeb1a897e6dc4a551a9a53da"/>
 </game>
+<game name="RealSports Tennis (USA)">
+  <category>Games</category>
+<description>RealSports Tennis (USA)</description>
+<rom name="RealSports Tennis (USA).a52" size="16384" crc="10f33c90" md5="7e683e571cbe7c77f76a1648f906b932" sha1="2e6c7472e37926cdfd3d855a4bd37a18fa83d8cf"/>
+</game>
 <game name="Rescue on Fractalus! (USA)">
   <category>Games</category>
 <description>Rescue on Fractalus! (USA)</description>
 <rom name="Rescue on Fractalus! (USA).a52" size="32768" crc="762c591b" md5="0dc44c5bf0829649b7fec37cb0a8186b" sha1="9253d7286cf87999474b37df242ba23b4358ef4a"/>
-</game>
-<game name="Robotron 2084 (USA)">
-  <category>Games</category>
-<description>Robotron 2084 (USA)</description>
-<rom name="Robotron 2084 (USA).a52" size="16384" crc="4252abd9" md5="5dba5b478b7da9fd2c617e41fb5ccd31" sha1="9175e6daca58102ac8b9729d7b0336cf09977d12"/>
 </game>
 <game name="Space Dungeon (USA)">
   <category>Games</category>
@@ -240,15 +265,15 @@
 <description>Star Trek - Strategic Operations Simulator (USA)</description>
 <rom name="Star Trek - Strategic Operations Simulator (USA).a52" size="16384" crc="69f23548" md5="c959b65be720a03b5479650a3af5a511" sha1="19801454ab86f2a5cf691fcd577a71ad2b8dc7d5"/>
 </game>
+<game name="Star Wars - Return of the Jedi - Death Star Battle (USA)">
+  <category>Games</category>
+<description>Star Wars - Return of the Jedi - Death Star Battle (USA)</description>
+<rom name="Star Wars - Return of the Jedi - Death Star Battle (USA).a52" size="8192" crc="0675f0a5" md5="a2831487ab0b0b647aa590fb2b834dd9" sha1="bf77048abc36ba2cba5eeeac812802d6a0eba891"/>
+</game>
 <game name="Star Wars - The Arcade Game (USA)">
   <category>Games</category>
 <description>Star Wars - The Arcade Game (USA)</description>
 <rom name="Star Wars - The Arcade Game (USA).a52" size="16384" crc="75f566df" md5="00beaa8405c7fb90d86be5bb1b01ea66" sha1="ab676ffe054b23bdd43cee2498afefaabbf9355b"/>
-</game>
-<game name="Super Breakout (USA)">
-  <category>Games</category>
-<description>Super Breakout (USA)</description>
-<rom name="Super Breakout (USA).a52" size="4096" crc="a0642110" md5="865570ff9052c1704f673e6222192336" sha1="f5f9c7f97bf09e5647e808d892b656f3ee1e19e0" sha256="81d99c73080e57e4066138c44ca34ae9cf5f0fef1ca43f6b3136a36c7435e031"/>
 </game>
 <game name="Super Cobra (USA)">
   <category>Games</category>
@@ -275,9 +300,9 @@
 <description>Zaxxon (USA)</description>
 <rom name="Zaxxon (USA).a52" size="32768" crc="741746d1" md5="9fee054e7d4ba2392f4ba0cb73fc99a5" sha1="4a4c4a25c8ed1b0ae79ca22684d7d311a564a7b5"/>
 </game>
-<game name="Zenji (USA)">
+<game name="Zone Ranger (USA)">
   <category>Games</category>
-<description>Zenji (USA)</description>
-<rom name="Zenji (USA).a52" size="8192" crc="da228530" md5="77beee345b4647563e20fd896231bd47" sha1="55da563b4394508c23d866fb1e543262fb45536d"/>
+<description>Zone Ranger (USA)</description>
+<rom name="Zone Ranger (USA).a52" size="16384" crc="2959d827" md5="dc45af8b0996cb6a94188b0be3be2e17" sha1="18315bec1e62102290feeb77fb290e1266cf5bfc"/>
 </game>
 </datafile>
