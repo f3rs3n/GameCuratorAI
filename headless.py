@@ -211,7 +211,7 @@ def main():
                     
                     # Display with color
                     sys.stdout.write(f"\n  {color}{status}{visualizer.get_color('reset')} | ")
-                    sys.stdout.write(f"{game_name} (Score: {quality:.2f})")
+                    sys.stdout.write(f"{game_name}")
                     
                     # Access the game's stored evaluation if available
                     analysis = {}

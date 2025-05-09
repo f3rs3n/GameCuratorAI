@@ -233,8 +233,9 @@ class FilterEngine:
                 
                 processed += 1
                 
-                # Update progress more frequently
-                if progress_callback and processed % max(1, batch_size // 2) == 0:
+                # Only update progress at the end of each batch
+                # Not updating progress in the middle of a batch to keep it in sync with AI responses
+                if progress_callback and processed % batch_size == 0:
                     progress_callback(processed, total_games, current_batch_results)
             
             # Show batch results at the end of batch
