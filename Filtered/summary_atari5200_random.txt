@@ -1,6 +1,6 @@
 DAT Filter AI - Filtering Summary
 ==============================
-Date: 2025-05-08 15:23:35
+Date: 2025-05-09 07:08:45
 Original game count: 77
 Filtered game count: 53
 Reduction: 24 games (31.2% of collection)
@@ -16,29 +16,29 @@ Filter Criteria:
 Criteria Analysis:
 -----------------
 Strongest criteria in the collection:
-- Mods Hacks: 29 games (54.7%)
-- V List: 23 games (43.4%)
-- Metacritic: 20 games (37.7%)
-- Historical: 17 games (32.1%)
-- Console Significance: 17 games (32.1%)
+- Historical: 26 games (49.1%)
+- V List: 22 games (41.5%)
+- Mods Hacks: 21 games (39.6%)
+- Metacritic: 19 games (35.8%)
+- Console Significance: 18 games (34.0%)
 
 Weakest criteria in the collection:
-- Historical: 28 games (52.8%)
-- V List: 22 games (41.5%)
-- Console Significance: 22 games (41.5%)
-- Metacritic: 18 games (34.0%)
-- Mods Hacks: 16 games (30.2%)
+- Metacritic: 24 games (45.3%)
+- Console Significance: 24 games (45.3%)
+- Mods Hacks: 22 games (41.5%)
+- Historical: 18 games (34.0%)
+- V List: 18 games (34.0%)
 
-Low Score Exceptions: 7 games (13.2%)
+Low Score Exceptions: 8 games (15.1%)
 These are games kept despite low scores due to other important factors.
 
 Highest Scoring Games (5):
 ----------------------------------------
-1. Quest for Quintana Roo (USA) - Score: 7.20/10 - Strong: Metacritic, V List - Weak: Historical, Console Significance
-2. David Crane's Pitfall II - Lost Caverns (USA) - Score: 6.90/10 - Strong: Console Significance, V List - Weak: Historical, Mods Hacks
-3. Montezuma's Revenge - Featuring Panama Joe (USA) - Score: 6.90/10 - Strong: Console Significance, Metacritic - Weak: Mods Hacks, V List
-4. Ms. Pac-Man (USA) - Score: 6.90/10 - Strong: V List, Mods Hacks - Weak: Historical, Console Significance
-5. Pac-Man (USA) - Score: 6.90/10 - Strong: Metacritic, Mods Hacks - Weak: Historical, Console Significance
+1. RealSports Baseball (USA) - Score: 8.10/10 - Strong: Metacritic, Historical - Weak: Mods Hacks, Console Significance
+2. James Bond 007 (USA) - Score: 7.90/10 - Strong: Mods Hacks, Console Significance - Weak: V List, Metacritic
+3. RealSports Football (USA) - Score: 7.80/10 - Strong: Mods Hacks, V List - Weak: Console Significance, Historical
+4. Castle Crisis (USA) (Unl) - Score: 7.70/10 - Strong: Metacritic, Historical - Weak: Mods Hacks, Console Significance
+5. Activision Decathlon, The (USA) - Score: 7.50/10 - Strong: Historical, V List - Weak: Metacritic, Mods Hacks
 
 Removed Games Summary:
 ----------------------------------------
