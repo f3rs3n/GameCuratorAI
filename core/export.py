@@ -305,26 +305,9 @@ class ExportManager:
             # Calculate proportional display size - show 10% of the collection size but min 5, max 30 games
             display_count = max(5, min(30, int(len(filtered_games) * 0.1)))
             
-            # Get top games (highest scores) and collect near-miss games
-            top_games = []
+            # Collect near-miss games (those that didn't make the cut but were close)
             near_miss_games = []
-            worst_games = []
             excluded_games_with_scores = []
-            
-            # Sort games by quality score if available
-            games_with_scores = []
-            for game in filtered_games:
-                score = 0
-                eval_data = game.get('_evaluation', {})
-                if eval_data and 'overall_score' in eval_data:
-                    score = float(eval_data['overall_score'])
-                games_with_scores.append((game, score))
-            
-            # Sort by score descending
-            games_with_scores.sort(key=lambda x: x[1], reverse=True)
-            
-            # Get top games
-            top_games = [game for game, score in games_with_scores[:display_count]]
             
             # Try to get info about games that didn't make the cut
             # These are typically excluded games that were close to qualifying

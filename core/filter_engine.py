@@ -58,14 +58,7 @@ class FilterEngine:
         }
         # Global threshold modifier applied to all criteria
         self.global_threshold = 1.0  # 1.0 is neutral, lower is more lenient, higher is stricter
-        self.criteria_weights = {
-            "metacritic": 0.17,
-            "historical": 0.17,
-            "v_list": 0.17,
-            "console_significance": 0.17,
-            "mods_hacks": 0.16,
-            "hidden_gems": 0.16
-        }
+        # No weights needed for the new "match ANY criteria" approach
     
     def set_threshold(self, criterion: str, value: float):
         """
