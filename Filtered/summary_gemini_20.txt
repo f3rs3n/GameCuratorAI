@@ -1,0 +1,36 @@
+DAT Filter AI - Filtering Summary
+==============================
+Date: 2025-05-09 10:21:48
+Original game count: 77
+Filtered game count: 23
+Reduction: 54 games (70.1% of collection)
+
+Filter Criteria:
+---------------
+- metacritic
+- historical
+- v_list
+- console_significance
+- mods_hacks
+
+Criteria Analysis:
+-----------------
+Strongest criteria in the collection:
+- Console Significance: 23 games (100.0%)
+
+Weakest criteria in the collection:
+
+Removed Games Summary:
+----------------------------------------
+These games didn't make the cut and were removed from the filtered collection:
+Total games removed: 54
+
+Note: To see the complete list of removed games, compare the original DAT
+      file with the filtered output using a comparison tool.
+
+API Usage Information:
+----------------------
+Provider: GEMINI
+Today's usage: 168,576 tokens
+30-day usage: 376,323 tokens
+Total requests: 520
