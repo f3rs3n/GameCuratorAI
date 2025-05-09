@@ -196,7 +196,7 @@ def main():
     """Main entry point"""
     parser = argparse.ArgumentParser(description="Compare DAT Filter AI provider results")
     parser.add_argument("--reports", nargs="+", required=True, 
-                        help="Paths to JSON report files (e.g., report_random.json report_openai.json)")
+                        help="Paths to JSON report files (e.g., report_random.json report_gemini.json)")
     parser.add_argument("--output", default="provider_comparison.txt", 
                         help="Output file for text comparison (default: provider_comparison.txt)")
     parser.add_argument("--json-output", default="provider_comparison.json",

@@ -36,17 +36,8 @@ def get_available_providers() -> Set[str]:
         from utils.check_api_keys import check_api_key
         import test_api_keys
         
-        # Check for OpenAI API key
-        openai_exists, _ = check_api_key("openai")
-        if openai_exists:
-            # Perform actual validation
-            print("Testing OpenAI API key...")
-            success, message = test_api_keys.test_api_key("openai")
-            if success:
-                available.add("openai")
-                print(f"✓ OpenAI API key validation successful: {message}")
-            else:
-                print(f"✗ OpenAI API key validation failed: {message}")
+        # OpenAI provider has been removed
+        # Only Gemini provider is supported now
         
         # Check for Gemini API key
         gemini_exists, _ = check_api_key("gemini")
@@ -63,10 +54,6 @@ def get_available_providers() -> Set[str]:
         # Fallback to the old method if there's an issue with the new utilities
         logger.warning(f"Error using API key validation utilities: {e}")
         logger.info("Falling back to basic environment variable check")
-        
-        # Check for OpenAI API key
-        if os.environ.get("OPENAI_API_KEY"):
-            available.add("openai")
         
         # Check for Gemini API key
         if os.environ.get("GEMINI_API_KEY"):

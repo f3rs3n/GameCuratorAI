@@ -52,9 +52,15 @@ class InteractiveMenu:
         self.evaluations = []
         self.special_cases = {}
         
+        # Check if Gemini provider is available
+        gemini_available, _, has_gemini_key = check_provider_availability('gemini')
+        
+        # Default to Gemini if it's available, otherwise use random
+        default_provider = 'gemini' if gemini_available else 'random'
+        
         # Default settings
         self.settings = {
-            'provider': 'random',
+            'provider': default_provider,  # Use Gemini if available, otherwise random
             'criteria': ['metacritic', 'historical', 'v_list', 'console_significance', 'mods_hacks'],
             'batch_size': 20,  # increased from 10 to 20 for optimized binary decision format
             # global_threshold removed - now using "any criteria match" approach
@@ -92,22 +98,14 @@ class InteractiveMenu:
                 self._print_error(f"{provider_name.upper()} provider is not available")
                 self._print_info(f"Reason: {reason}")
                 
-                # If it's an API key issue for OpenAI or Gemini, provide more specific guidance
-                if provider_name in ['openai', 'gemini'] and not has_valid_key:
+                # If it's an API key issue for Gemini, provide more specific guidance
+                if provider_name == 'gemini' and not has_valid_key:
                     provider_info = {
-                        'openai': {
-                            'name': 'OpenAI',
-                            'key_name': 'OPENAI_API_KEY',
-                            'url': 'https://platform.openai.com/',
-                            'note': 'This requires a paid account with access to the OpenAI API.'
-                        },
-                        'gemini': {
-                            'name': 'Google Gemini',
-                            'key_name': 'GEMINI_API_KEY',
-                            'url': 'https://ai.google.dev/',
-                            'note': 'Gemini offers a free tier with reasonable usage limits.'
-                        }
-                    }[provider_name]
+                        'name': 'Google Gemini',
+                        'key_name': 'GEMINI_API_KEY',
+                        'url': 'https://ai.google.dev/',
+                        'note': 'Gemini offers a free tier with generous usage limits.'
+                    }
                     
                     self._print_info(f"\nTo use the {provider_info['name']} provider, you need a valid API key.")
                     self._print_info(f"Go to Settings → Configure API Keys to set your API key")
@@ -136,7 +134,7 @@ class InteractiveMenu:
                 return False
             
             # Successfully initialized
-            if provider_name in ['openai', 'gemini']:
+            if provider_name == 'gemini':
                 self._print_success(f"{provider_name.upper()} API key verified successfully")
             
             # Set up the filter engine
@@ -1838,176 +1836,7 @@ class InteractiveMenu:
         self._print_success(f"Batch summary exported to: {summary_path}")
         self._wait_for_key()
     
-    def compare_providers_menu(self):
-        """Display the provider comparison menu"""
-        self._clear_screen()
-        self._print_header("Compare Providers")
-        
-        self._print_info("This feature allows you to compare the filtering results from different AI providers")
-        print("A test DAT file will be processed by each provider and the results will be compared")
-        print()
-        
-        self._print_option("1", "Run Provider Comparison")
-        self._print_option("2", "Run Multi-Provider Evaluation")
-        self._print_option("3", "View Comparison Report")
-        self._print_option("0", "Back to Main Menu")
-        
-        choice = self._get_user_input("Enter your choice")
-        
-        if choice == "1":
-            self._run_provider_comparison()
-        elif choice == "2":
-            self._run_multi_eval()
-        elif choice == "3":
-            self._view_comparison_report()
-        elif choice == "0":
-            return
-        else:
-            self._print_error("Invalid choice")
-            self._wait_for_key()
-            self.compare_providers_menu()
-    
-    def _run_provider_comparison(self):
-        """Run a comparison between providers on a test file"""
-        self._clear_screen()
-        self._print_header("Provider Comparison")
-        
-        input_dir = self.settings['input_dir']
-        
-        # Choose a test file
-        test_files = [f for f in os.listdir(input_dir) if f.endswith('.dat') and 'test' in f.lower()]
-        if not test_files:
-            test_files = [f for f in os.listdir(input_dir) if f.endswith('.dat')]
-            
-        if not test_files:
-            self._print_error(f"No DAT files found in {input_dir}")
-            self._wait_for_key()
-            return
-        
-        self._print_subheader("Select a test file")
-        for idx, file in enumerate(test_files, 1):
-            file_path = os.path.join(input_dir, file)
-            file_size = os.path.getsize(file_path) / 1024  # Size in KB
-            self._print_option(str(idx), f"{file} ({file_size:.1f} KB)")
-        
-        print()
-        choice = self._get_user_input("Enter file number (or 0 to cancel)")
-        
-        if choice == "0":
-            return
-            
-        try:
-            idx = int(choice) - 1
-            if 0 <= idx < len(test_files):
-                test_file = test_files[idx]
-                input_path = os.path.join(input_dir, test_file)
-                
-                # Execute Python script
-                script_path = os.path.join(os.getcwd(), "compare_providers.py")
-                if not os.path.exists(script_path):
-                    self._print_error(f"Script not found: {script_path}")
-                    self._wait_for_key()
-                    return
-                
-                cmd = f"python {script_path} -i {input_path}"
-                
-                self._print_info(f"Running comparison with {test_file}...")
-                self._print_info(f"Command: {cmd}")
-                print()
-                
-                os.system(cmd)
-                
-                self._print_success("Comparison complete")
-                self._wait_for_key()
-            else:
-                self._print_error("Invalid choice")
-                self._wait_for_key()
-        except ValueError:
-            self._print_error("Please enter a valid number")
-            self._wait_for_key()
-    
-    def _run_multi_eval(self):
-        """Run the multi-evaluation script"""
-        self._clear_screen()
-        self._print_header("Multi-Provider Evaluation")
-        
-        input_dir = self.settings['input_dir']
-        
-        # Choose a test file
-        test_files = [f for f in os.listdir(input_dir) if f.endswith('.dat') and 'test' in f.lower()]
-        if not test_files:
-            test_files = [f for f in os.listdir(input_dir) if f.endswith('.dat')]
-            
-        if not test_files:
-            self._print_error(f"No DAT files found in {input_dir}")
-            self._wait_for_key()
-            return
-        
-        self._print_subheader("Select a test file")
-        for idx, file in enumerate(test_files, 1):
-            file_path = os.path.join(input_dir, file)
-            file_size = os.path.getsize(file_path) / 1024  # Size in KB
-            self._print_option(str(idx), f"{file} ({file_size:.1f} KB)")
-        
-        print()
-        choice = self._get_user_input("Enter file number (or 0 to cancel)")
-        
-        if choice == "0":
-            return
-            
-        try:
-            idx = int(choice) - 1
-            if 0 <= idx < len(test_files):
-                test_file = test_files[idx]
-                input_path = os.path.join(input_dir, test_file)
-                
-                # Execute Python script
-                script_path = os.path.join(os.getcwd(), "multieval.py")
-                if not os.path.exists(script_path):
-                    self._print_error(f"Script not found: {script_path}")
-                    self._wait_for_key()
-                    return
-                
-                cmd = f"python {script_path} -i {input_path}"
-                
-                self._print_info(f"Running multi-evaluation with {test_file}...")
-                self._print_info(f"Command: {cmd}")
-                print()
-                
-                os.system(cmd)
-                
-                self._print_success("Multi-evaluation complete")
-                self._wait_for_key()
-            else:
-                self._print_error("Invalid choice")
-                self._wait_for_key()
-        except ValueError:
-            self._print_error("Please enter a valid number")
-            self._wait_for_key()
-    
-    def _view_comparison_report(self):
-        """View the provider comparison report"""
-        report_file = "comparison.txt"
-        
-        if not os.path.exists(report_file):
-            # Try to find in archive directory
-            archive_file = os.path.join("archive", report_file)
-            if os.path.exists(archive_file):
-                report_file = archive_file
-            else:
-                self._print_error(f"Comparison report not found: {report_file}")
-                self._wait_for_key()
-                return
-        
-        self._clear_screen()
-        self._print_header("Provider Comparison Report")
-        
-        # Display report
-        with open(report_file, 'r') as f:
-            content = f.read()
-            print(content)
-        
-        self._wait_for_key()
+    # Provider comparison functionality has been removed as requested
 
 def main():
     """Main entry point for the interactive menu"""

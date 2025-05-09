@@ -54,7 +54,6 @@ def main():
     
     # AI Provider modules
     optional_modules = [
-        ("openai", "openai"),
         ("google.generativeai", "google-generativeai"),
     ]
     
@@ -100,7 +99,6 @@ def main():
             print(f"  - {module_name}")
         
         print("\nOptional modules are required for AI-powered filtering:")
-        print("  - openai: Required for OpenAI GPT filtering")
         print("  - google.generativeai: Required for Google Gemini filtering")
         print("Note: Without these modules, you can still use the random filter for testing")
         

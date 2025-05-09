@@ -88,19 +88,12 @@ def main():
                     sys.exit(1)
             else:
                 # No fallback allowed, show helpful message and exit
-                if args.provider.lower() in ["openai", "gemini"]:
+                if args.provider.lower() == "gemini":
                     provider_info = {
-                        "openai": {
-                            "name": "OpenAI",
-                            "url": "https://platform.openai.com/",
-                            "note": "This requires a paid account with access to the OpenAI API."
-                        },
-                        "gemini": {
-                            "name": "Google Gemini",
-                            "url": "https://ai.google.dev/",
-                            "note": "Gemini offers a free tier with reasonable usage limits."
-                        }
-                    }[args.provider.lower()]
+                        "name": "Google Gemini",
+                        "url": "https://ai.google.dev/",
+                        "note": "Gemini offers a free tier with generous usage limits."
+                    }
                     
                     print(f"\nYou need a valid {provider_info['name']} API key to use this provider.")
                     print(f"{provider_info['note']}")
@@ -275,18 +268,7 @@ def main():
             logger.error(f"Provider error: {provider_error}")
             
             # Provide more helpful information about API keys
-            if args.provider.lower() == 'openai':
-                print("\nThe OpenAI provider requires a valid API key to function.")
-                print("You can get an OpenAI API key at https://platform.openai.com/")
-                print("Set the API key as the OPENAI_API_KEY environment variable.")
-                
-                # Add information about options
-                print("\nOptions:")
-                print("1. Set OPENAI_API_KEY environment variable and try again")
-                print("2. Use --allow-random-fallback flag for testing only")
-                print("3. Use --provider random for testing only")
-                
-            elif args.provider.lower() == 'gemini':
+            if args.provider.lower() == 'gemini':
                 print("\nThe Gemini provider requires a valid API key to function.")
                 print("You can get a Gemini API key at https://ai.google.dev/")
                 print("Set the API key as the GEMINI_API_KEY environment variable.")
@@ -305,7 +287,7 @@ def main():
                 if not args.allow_random_fallback:
                     print("\nTo use Random provider for testing, you can:")
                     print("1. Rerun with the --allow-random-fallback flag")
-                    print("   Example: python headless.py --input your_file.dat --provider openai --allow-random-fallback")
+                    print("   Example: python headless.py --input your_file.dat --provider gemini --allow-random-fallback")
                     print("2. Or specify Random provider directly")
                     print("   Example: python headless.py --input your_file.dat --provider random")
                 

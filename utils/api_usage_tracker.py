@@ -33,13 +33,6 @@ class APIUsageTracker:
         self.storage_dir = storage_dir
         self.usage_file = os.path.join(storage_dir, "api_usage.json")
         self.usage_data = {
-            "openai": {
-                "total_requests": 0,
-                "total_tokens": 0,
-                "daily_usage": {},
-                "monthly_usage": {},
-                "last_updated": ""
-            },
             "gemini": {
                 "total_requests": 0,
                 "total_tokens": 0,
@@ -99,7 +92,7 @@ class APIUsageTracker:
         Record an API request.
         
         Args:
-            provider: API provider name (e.g., "openai", "gemini")
+            provider: API provider name (e.g., "gemini")
             tokens: Number of tokens used in the request (default: 0)
             timestamp: Optional timestamp (default: current time)
             
