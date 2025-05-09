@@ -804,11 +804,27 @@ class InteractiveMenu:
                     kept = len([g for g in batch_results if g.get('keep', False)])
                     removed = len(batch_results) - kept
                     
+                    # The criteria mapping for display
+                    criteria_display_names = {
+                        "metacritic": "Metacritic Rating",
+                        "historical": "Historical Significance",
+                        "v_list": "V Recommendation",
+                        "console_significance": "Console Significance",
+                        "mods_hacks": "Mod Significance",
+                        "hidden_gems": "Hidden Gem",
+                        "criterion1": "Metacritic Rating",
+                        "criterion2": "Historical Significance",
+                        "criterion3": "V Recommendation",
+                        "criterion4": "Console Significance",
+                        "criterion5": "Mod Significance",
+                        "criterion6": "Hidden Gem"
+                    }
+                    
                     # Show summary and game details with color coding
                     print("\n\nRecent games processed:")
                     print(f"  Last batch: {Fore.GREEN}{kept} kept{Style.RESET_ALL}, {Fore.RED}{removed} removed{Style.RESET_ALL}\n")
                     
-                    # Display each game with status and score
+                    # Display all games in the batch
                     for game in batch_results:
                         name = game.get('game_name', 'Unknown')
                         kept = game.get('keep', False)
@@ -817,36 +833,48 @@ class InteractiveMenu:
                         # Green checkmark for kept, red X for removed
                         status = f"{Fore.GREEN}✓ KEEP{Style.RESET_ALL}" if kept else f"{Fore.RED}✗ REMOVE{Style.RESET_ALL}"
                         
-                        # Prepare the display string with game status and score
-                        game_line = f"  {status} | {name} (Score: {score:.2f})"
+                        # Display the game name and status on its own line
+                        print(f"  {status} | {name}")
                         
                         # Get the evaluation object to display strengths and weaknesses
                         game_eval = game.get("evaluation", {})
                         analysis = game_eval.get("_criteria_analysis", {})
                         
-                        # Display criteria insights on the same line
+                        # Display criteria insights on separate lines
                         if analysis:
                             # Display strengths and weaknesses
                             strongest = analysis.get("strongest_criteria", [])
                             weakest = analysis.get("weakest_criteria", [])
                             
-                            # Add strengths and weaknesses to the display line
+                            # Add strengths on their own line with proper criterion names
                             if strongest:
-                                strongest_str = ", ".join([s.replace("_", " ").title() for s in strongest[:2]])
-                                game_line += f" {Fore.GREEN}Strong:{Style.RESET_ALL} {strongest_str}"
+                                strongest_names = []
+                                for s in strongest:
+                                    if s in criteria_display_names:
+                                        strongest_names.append(criteria_display_names[s])
+                                    else:
+                                        strongest_names.append(s.replace("_", " ").title())
+                                strongest_str = ", ".join(strongest_names)
+                                print(f"    {Fore.GREEN}Strong:{Style.RESET_ALL} {strongest_str}")
                             
+                            # Add weaknesses on their own line with proper criterion names
                             if weakest:
-                                weakest_str = ", ".join([w.replace("_", " ").title() for w in weakest[:2]])
-                                game_line += f" {Fore.YELLOW}Weak:{Style.RESET_ALL} {weakest_str}"
+                                weakest_names = []
+                                for w in weakest:
+                                    if w in criteria_display_names:
+                                        weakest_names.append(criteria_display_names[w])
+                                    else:
+                                        weakest_names.append(w.replace("_", " ").title())
+                                weakest_str = ", ".join(weakest_names)
+                                print(f"    {Fore.YELLOW}Weak:{Style.RESET_ALL} {weakest_str}")
                             
                             # Add low score exception tag if applicable
                             if kept and analysis.get("is_low_score_keeper", False):
-                                game_line += f" {Fore.YELLOW}[LOW SCORE EXCEPTION]{Style.RESET_ALL}"
+                                print(f"    {Fore.YELLOW}[LOW SCORE EXCEPTION]{Style.RESET_ALL}")
                         
-                        # Display the complete game line
-                        print(game_line)
+                        print("")  # Add spacing between games
                     
-                    print("")  # Add spacing
+                    print("")  # Add spacing at the end
             
             # Apply the filters safely with fallback
             if not self.parsed_data or 'games' not in self.parsed_data:
@@ -1609,9 +1637,26 @@ class InteractiveMenu:
                             kept_count = len([g for g in batch_results if g.get('keep', False)])
                             removed_count = len(batch_results) - kept_count
                             
+                            # The criteria mapping for display
+                            criteria_display_names = {
+                                "metacritic": "Metacritic Rating",
+                                "historical": "Historical Significance",
+                                "v_list": "V Recommendation",
+                                "console_significance": "Console Significance",
+                                "mods_hacks": "Mod Significance",
+                                "hidden_gems": "Hidden Gem",
+                                "criterion1": "Metacritic Rating",
+                                "criterion2": "Historical Significance",
+                                "criterion3": "V Recommendation",
+                                "criterion4": "Console Significance",
+                                "criterion5": "Mod Significance",
+                                "criterion6": "Hidden Gem"
+                            }
+                            
                             print("\nRecent games processed:")
                             print(f"  Last batch: {Fore.GREEN}{kept_count} kept{Style.RESET_ALL}, {Fore.RED}{removed_count} removed{Style.RESET_ALL}\n")
                             
+                            # Display all games in the batch
                             for game in batch_results:
                                 # Display keep/remove status with color coding
                                 name = game.get('game_name', 'Unknown')
@@ -1621,34 +1666,46 @@ class InteractiveMenu:
                                 # Green checkmark for kept, red X for removed
                                 status = f"{Fore.GREEN}✓ KEEP{Style.RESET_ALL}" if kept else f"{Fore.RED}✗ REMOVE{Style.RESET_ALL}"
                                 
-                                # Prepare the display string with game status and score
-                                game_line = f"  {status} | {name} (Score: {score:.2f})"
+                                # Display the game name and status on its own line
+                                print(f"  {status} | {name}")
                                 
                                 # Get the evaluation object to display strengths and weaknesses
                                 game_eval = game.get("evaluation", {})
                                 analysis = game_eval.get("_criteria_analysis", {})
                                 
-                                # Display criteria insights on the same line
+                                # Display criteria insights on separate lines
                                 if analysis:
                                     # Display strengths and weaknesses
                                     strongest = analysis.get("strongest_criteria", [])
                                     weakest = analysis.get("weakest_criteria", [])
                                     
-                                    # Add strengths and weaknesses to the display line
+                                    # Add strengths on their own line with proper criterion names
                                     if strongest:
-                                        strongest_str = ", ".join([s.replace("_", " ").title() for s in strongest[:2]])
-                                        game_line += f" {Fore.GREEN}Strong:{Style.RESET_ALL} {strongest_str}"
+                                        strongest_names = []
+                                        for s in strongest:
+                                            if s in criteria_display_names:
+                                                strongest_names.append(criteria_display_names[s])
+                                            else:
+                                                strongest_names.append(s.replace("_", " ").title())
+                                        strongest_str = ", ".join(strongest_names)
+                                        print(f"    {Fore.GREEN}Strong:{Style.RESET_ALL} {strongest_str}")
                                     
+                                    # Add weaknesses on their own line with proper criterion names
                                     if weakest:
-                                        weakest_str = ", ".join([w.replace("_", " ").title() for w in weakest[:2]])
-                                        game_line += f" {Fore.YELLOW}Weak:{Style.RESET_ALL} {weakest_str}"
+                                        weakest_names = []
+                                        for w in weakest:
+                                            if w in criteria_display_names:
+                                                weakest_names.append(criteria_display_names[w])
+                                            else:
+                                                weakest_names.append(w.replace("_", " ").title())
+                                        weakest_str = ", ".join(weakest_names)
+                                        print(f"    {Fore.YELLOW}Weak:{Style.RESET_ALL} {weakest_str}")
                                     
                                     # Add low score exception tag if applicable
                                     if kept and analysis.get("is_low_score_keeper", False):
-                                        game_line += f" {Fore.YELLOW}[LOW SCORE EXCEPTION]{Style.RESET_ALL}"
+                                        print(f"    {Fore.YELLOW}[LOW SCORE EXCEPTION]{Style.RESET_ALL}")
                                 
-                                # Display the complete game line
-                                print(game_line)
+                                print("")  # Add spacing between games
                 
                 # Apply filters
                 self._print_info("Applying filters...")
