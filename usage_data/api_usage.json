@@ -17,24 +17,24 @@
     "last_updated": "2025-05-08T15:10:06.885147"
   },
   "gemini": {
-    "total_requests": 395,
-    "total_tokens": 318071,
+    "total_requests": 396,
+    "total_tokens": 318086,
     "daily_usage": {
       "2025-05-08": {
         "requests": 259,
         "tokens": 207747
       },
       "2025-05-09": {
-        "requests": 136,
-        "tokens": 110324
+        "requests": 137,
+        "tokens": 110339
       }
     },
     "monthly_usage": {
       "2025-05": {
-        "requests": 395,
-        "tokens": 318071
+        "requests": 396,
+        "tokens": 318086
       }
     },
-    "last_updated": "2025-05-09T08:03:28.837948"
+    "last_updated": "2025-05-09T09:18:32.756293"
   }
 }

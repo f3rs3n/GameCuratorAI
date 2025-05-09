@@ -88,42 +88,8 @@ class FilterEngine:
         self.global_threshold = max(0.5, min(1.5, value))
         self.logger.debug(f"Set global threshold modifier to {self.global_threshold}")
         
-    def set_weight(self, criterion: str, value: float):
-        """
-        Set the weight for a criterion
-        
-        Args:
-            criterion: The criterion to set the weight for
-            value: The weight value (0.0 to 1.0)
-        """
-        if criterion in self.criteria_weights:
-            # Normalize weight to ensure sum of weights equals 1.0
-            total_weight = sum(w for c, w in self.criteria_weights.items() if c != criterion)
-            max_allowed = 1.0 - total_weight
-            new_weight = max(0.0, min(max_allowed, value))
-            
-            self.criteria_weights[criterion] = new_weight
-            self.logger.debug(f"Set weight for {criterion} to {new_weight}")
-            
-            # Renormalize other weights if needed
-            self._normalize_weights()
-        else:
-            self.logger.warning(f"Unknown criterion: {criterion}")
-    
-    def _normalize_weights(self):
-        """
-        Normalize weights to ensure they sum to 1.0
-        """
-        total = sum(self.criteria_weights.values())
-        if total == 0:
-            # Equal weights if all are zero
-            for c in self.criteria_weights:
-                self.criteria_weights[c] = 1.0 / len(self.criteria_weights)
-        elif total != 1.0:
-            # Scale proportionally
-            factor = 1.0 / total
-            for c in self.criteria_weights:
-                self.criteria_weights[c] *= factor
+    # The set_weight and _normalize_weights methods have been removed
+    # as they're no longer needed with the new "match ANY criterion" approach
     
     def evaluate_game(self, 
                      game_info: Dict[str, Any], 
@@ -159,7 +125,10 @@ class FilterEngine:
         result["_evaluation_time"] = time.time() - start_time
         result["_criteria_used"] = valid_criteria
         result["_thresholds_used"] = {c: self.threshold_scores[c] for c in valid_criteria}
-        result["_weights_used"] = {c: self.criteria_weights[c] for c in valid_criteria}
+        # Using empty weights dict for backward compatibility
+        # No weights used in the new "match ANY criterion" approach where a game passes
+        # if ANY single criterion meets its threshold
+        result["_weights_used"] = {}
         
         return result
     
@@ -389,7 +358,10 @@ class FilterEngine:
             "console": primary_console,  # Add single primary console for the AI provider
             "evaluation_criteria": list(self.threshold_scores.keys()),
             "threshold_scores": self.threshold_scores,
-            "criteria_weights": self.criteria_weights,
+            # Using empty weights dict for backward compatibility
+            # No weights needed in the new "match ANY criterion" approach where
+            # a game passes if ANY criterion meets its threshold
+            "criteria_weights": {},
             "global_threshold": self.global_threshold
         }
     
@@ -435,7 +407,8 @@ class FilterEngine:
             for criterion in criteria:
                 if criterion in evals and "score" in evals[criterion]:
                     score = float(evals[criterion]["score"])
-                    weight = self.criteria_weights.get(criterion, 0.1)
+                    # Equal weights (not used for filtering, just for displaying contribution)
+                    weight = 1.0 / len(criteria) if criteria else 0.1
                     threshold = self.threshold_scores.get(criterion, 5.0)
                     
                     # Apply global threshold modifier to individual thresholds
@@ -465,7 +438,8 @@ class FilterEngine:
             normalized_score = weighted_score / total_weight if total_weight > 0 else 0
             
             # Calculate base threshold (before applying global modifier) for reporting
-            base_threshold = sum(self.threshold_scores.get(c, 5.0) * self.criteria_weights.get(c, 0.1) 
+            # Use equal weights since we no longer use the weight system
+            base_threshold = sum(self.threshold_scores.get(c, 5.0) * (1.0 / len(criteria) if criteria else 0.1)
                                for c in criteria) / total_weight if total_weight > 0 else 0
             
             # Apply global threshold modifier for reporting

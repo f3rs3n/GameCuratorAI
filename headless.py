@@ -22,6 +22,7 @@ from core.filter_engine import FilterEngine
 from core.rule_engine import RuleEngine
 from core.export import ExportManager
 from ai_providers import get_provider, AVAILABLE_PROVIDERS
+from utils.check_api_keys import check_provider_availability, check_and_request_api_key, get_available_providers
 
 def main():
     """Main entry point for the DAT Filter AI application."""
@@ -58,61 +59,80 @@ def main():
     # Initialize components
     dat_parser = DatParser()
     
-    # Initialize AI provider
+    # Check provider availability and initialize it
     try:
+        # Check if the selected provider is available and has a valid API key
+        available, reason, has_valid_key = check_provider_availability(args.provider)
+        
+        if not available:
+            # Provider is not available, show reason
+            logger.error(f"Provider '{args.provider}' is not available: {reason}")
+            print(f"\nERROR: {args.provider.upper()} provider is not available")
+            print(f"Reason: {reason}")
+            
+            # Check if we should fallback to Random provider
+            if args.allow_random_fallback:
+                logger.warning(f"Falling back to Random provider as requested by --allow-random-fallback")
+                print("\nFalling back to Random provider (for testing only)")
+                print("NOTE: Random provider is not suitable for actual curation")
+                print("      as it uses random values for game evaluations.")
+                
+                # Use Random provider instead
+                args.provider = "random"
+                available, reason, has_valid_key = check_provider_availability("random")
+                
+                if not available:
+                    # This should never happen as Random is always available
+                    logger.error(f"Critical error: Random provider is not available: {reason}")
+                    print(f"Critical error: Random provider is not available: {reason}")
+                    sys.exit(1)
+            else:
+                # No fallback allowed, show helpful message and exit
+                if args.provider.lower() in ["openai", "gemini"]:
+                    provider_info = {
+                        "openai": {
+                            "name": "OpenAI",
+                            "url": "https://platform.openai.com/",
+                            "note": "This requires a paid account with access to the OpenAI API."
+                        },
+                        "gemini": {
+                            "name": "Google Gemini",
+                            "url": "https://ai.google.dev/",
+                            "note": "Gemini offers a free tier with reasonable usage limits."
+                        }
+                    }[args.provider.lower()]
+                    
+                    print(f"\nYou need a valid {provider_info['name']} API key to use this provider.")
+                    print(f"{provider_info['note']}")
+                    print(f"You can get one at: {provider_info['url']}")
+                    print("\nTo use Random provider for testing, rerun with --allow-random-fallback")
+                    print(f"Example: python headless.py --input your_file.dat --provider {args.provider} --allow-random-fallback")
+                
+                sys.exit(1)
+        
+        # Initialize the provider
+        logger.info(f"Using {args.provider.upper()} provider")
         ai_provider = get_provider(args.provider)
         
-        # Verify that the requested provider can be initialized
+        # Verify that the provider can be initialized
         ai_provider_initialized = ai_provider.initialize()
         
         if not ai_provider_initialized:
-            # Check if it's an API key issue
-            if args.provider.lower() in ['openai', 'gemini']:
-                key_name = "OPENAI_API_KEY" if args.provider.lower() == 'openai' else "GEMINI_API_KEY"
-                
-                if not os.environ.get(key_name):
-                    # Show helpful message about missing API key
-                    print(f"ERROR: {args.provider.upper()} API key not found.")
-                    if args.provider.lower() == 'openai':
-                        print("You need an OpenAI API key to use this provider.")
-                        print("You can get an API key at https://platform.openai.com/")
-                    elif args.provider.lower() == 'gemini':
-                        print("You need a Google Gemini API key to use this provider.")
-                        print("You can get an API key at https://ai.google.dev/")
-                    
-                    # Exit or fallback based on the allow_random_fallback flag
-                    if args.allow_random_fallback:
-                        logger.warning(f"API key for '{args.provider}' not found, falling back to random provider as requested")
-                        print("Falling back to random provider (for testing only)")
-                        print("NOTE: Random provider is not suitable for actual curation")
-                        print("      as it will pass all games regardless of quality.")
-                        ai_provider = get_provider("random")
-                        ai_provider.initialize()
-                    else:
-                        print("\nTo use Random provider for testing, rerun with the --allow-random-fallback flag")
-                        print("Example: python headless.py --input your_file.dat --provider openai --allow-random-fallback")
-                        sys.exit(1)
-                else:
-                    # API key exists but failed to initialize - likely invalid
-                    print(f"ERROR: Failed to initialize {args.provider.upper()} provider with the provided API key")
-                    print("The API key may be invalid, expired, or have incorrect permissions")
-                    
-                    # Exit or fallback based on the allow_random_fallback flag
-                    if args.allow_random_fallback:
-                        logger.warning(f"'{args.provider}' provider failed to initialize, falling back to random provider as requested")
-                        print("Falling back to random provider (for testing only)")
-                        print("NOTE: Random provider is not suitable for actual curation")
-                        ai_provider = get_provider("random")
-                        ai_provider.initialize()
-                    else:
-                        print("\nTo use Random provider for testing, rerun with the --allow-random-fallback flag")
-                        print("Example: python headless.py --input your_file.dat --provider openai --allow-random-fallback")
-                        sys.exit(1)
+            # This shouldn't happen if provider availability check passed,
+            # but just in case there's a timing issue or key was revoked
+            logger.error(f"Provider '{args.provider}' failed to initialize")
+            print(f"ERROR: Provider '{args.provider}' failed to initialize")
+            print("This may be due to a temporary issue with the API service.")
+            
+            if args.provider.lower() != "random" and args.allow_random_fallback:
+                logger.warning(f"Falling back to Random provider due to initialization failure")
+                print("\nFalling back to Random provider (for testing only)")
+                args.provider = "random"
+                ai_provider = get_provider("random")
+                ai_provider.initialize()
             else:
-                # For other providers - generic error
-                logger.error(f"Provider '{args.provider}' failed to initialize")
-                print(f"ERROR: Provider '{args.provider}' failed to initialize")
                 sys.exit(1)
+                
     except Exception as e:
         logger.error(f"Failed to initialize AI provider: {e}")
         print(f"ERROR: Failed to initialize {args.provider} provider: {e}")

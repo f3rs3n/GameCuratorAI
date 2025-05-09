@@ -75,7 +75,7 @@ def get_available_providers() -> Set[str]:
     logger.info(f"Detected available providers: {', '.join(sorted(available))}")
     return available
 
-def run_provider_evaluation(input_file: str, provider: str, output_dir: str = ".") -> Dict[str, str]:
+def run_provider_evaluation(input_file: str, provider: str, output_dir: str = ".", allow_random_fallback: bool = False) -> Dict[str, str]:
     """
     Run evaluation with a specific provider
     
@@ -83,6 +83,7 @@ def run_provider_evaluation(input_file: str, provider: str, output_dir: str = ".
         input_file: Path to input DAT file
         provider: Provider name to use
         output_dir: Directory for output files
+        allow_random_fallback: Whether to allow fallback to Random provider
         
     Returns:
         Dict with paths to output files
@@ -104,6 +105,11 @@ def run_provider_evaluation(input_file: str, provider: str, output_dir: str = ".
         "--report", report_json,
         "--summary", summary_txt
     ]
+    
+    # Add random fallback option if requested
+    if allow_random_fallback:
+        cmd.append("--allow-random-fallback")
+        logger.warning(f"Using --allow-random-fallback option for {provider} (for testing only, not for actual curation)")
     
     logger.info(f"Running evaluation with provider: {provider}")
     logger.info(f"Command: {' '.join(cmd)}")
@@ -164,6 +170,8 @@ def main():
     parser.add_argument("--json-comparison", default="provider_comparison.json",
                         help="Output filename for comparison JSON")
     parser.add_argument("--all", action="store_true", help="Use all available providers")
+    parser.add_argument("--allow-random-fallback", action="store_true",
+                        help="Allow fallback to Random provider if API key is missing/invalid (for testing only)")
     args = parser.parse_args()
     
     # Check if input file exists
@@ -200,7 +208,7 @@ def main():
     report_files = []
     
     for provider in providers:
-        result = run_provider_evaluation(args.input, provider, args.output_dir)
+        result = run_provider_evaluation(args.input, provider, args.output_dir, args.allow_random_fallback)
         if result and "report_json" in result:
             report_files.append(result["report_json"])
     

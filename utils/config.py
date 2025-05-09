@@ -17,13 +17,7 @@ DEFAULT_CONFIG = {
         "console_significance": 7.0,
         "mods_hacks": 6.0
     },
-    "default_criteria_weights": {
-        "metacritic": 0.35,
-        "historical": 0.25,
-        "v_list": 0.15,
-        "console_significance": 0.15,
-        "mods_hacks": 0.10
-    },
+    # Removed weights since they're not used in the new "match ANY criterion" approach
     "default_rule_config": {
         "multi_disc": {
             "mode": "all_or_none",

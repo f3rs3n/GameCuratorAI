@@ -22,8 +22,7 @@ from core.rule_engine import RuleEngine
 from core.export import ExportManager
 from ai_providers import get_provider
 from utils.logging_config import setup_logging
-from utils.check_api_keys import check_api_key, request_api_key, set_api_key, check_and_request_api_key
-import test_api_keys
+from utils.check_api_keys import check_api_key, request_api_key, set_api_key, check_and_request_api_key, check_provider_availability, get_available_providers
 
 # Initialize colorama for cross-platform color support
 init()
@@ -58,7 +57,7 @@ class InteractiveMenu:
             'provider': 'random',
             'criteria': ['metacritic', 'historical', 'v_list', 'console_significance', 'mods_hacks'],
             'batch_size': 10,
-            'global_threshold': 1.0,
+            # global_threshold removed - now using "any criteria match" approach
             'input_dir': 'ToFilter',
             'output_dir': 'Filtered',
             'show_progress': True,
@@ -85,52 +84,64 @@ class InteractiveMenu:
         try:
             provider_name = self.settings['provider'].lower()
             
-            # Pre-check for API keys before trying to initialize
-            if provider_name == 'openai' and not os.environ.get("OPENAI_API_KEY"):
-                self._print_error("OpenAI API key is not configured")
-                self._print_info("To use the OpenAI provider, you need a valid API key.")
-                self._print_info("Go to Settings → Configure API Keys to set your API key")
-                self._print_info("You can get an OpenAI API key at https://platform.openai.com/")
-                return False
+            # Check if the provider is available with a valid API key
+            available, reason, has_valid_key = check_provider_availability(provider_name)
+            
+            if not available:
+                # Provider is not available, show detailed error
+                self._print_error(f"{provider_name.upper()} provider is not available")
+                self._print_info(f"Reason: {reason}")
                 
-            if provider_name == 'gemini' and not os.environ.get("GEMINI_API_KEY"):
-                self._print_error("Gemini API key is not configured")
-                self._print_info("To use the Gemini provider, you need a valid API key.")
-                self._print_info("Go to Settings → Configure API Keys to set your API key")
-                self._print_info("You can get a Gemini API key at https://ai.google.dev/")
+                # If it's an API key issue for OpenAI or Gemini, provide more specific guidance
+                if provider_name in ['openai', 'gemini'] and not has_valid_key:
+                    provider_info = {
+                        'openai': {
+                            'name': 'OpenAI',
+                            'key_name': 'OPENAI_API_KEY',
+                            'url': 'https://platform.openai.com/',
+                            'note': 'This requires a paid account with access to the OpenAI API.'
+                        },
+                        'gemini': {
+                            'name': 'Google Gemini',
+                            'key_name': 'GEMINI_API_KEY',
+                            'url': 'https://ai.google.dev/',
+                            'note': 'Gemini offers a free tier with reasonable usage limits.'
+                        }
+                    }[provider_name]
+                    
+                    self._print_info(f"\nTo use the {provider_info['name']} provider, you need a valid API key.")
+                    self._print_info(f"Go to Settings → Configure API Keys to set your API key")
+                    self._print_info(f"You can get a {provider_info['name']} API key at {provider_info['url']}")
+                    self._print_info(f"{provider_info['note']}")
                 return False
-                
+            
             # Get the provider
             provider = get_provider(provider_name)
             
             if not provider:
                 self._print_error(f"Failed to create {provider_name.upper()} provider")
                 return False
-                
-            # Explicitly initialize the provider with API key validation
+            
+            # Initialize the provider
+            self._print_info(f"Initializing {provider_name.upper()} provider...")
+            initialization_success = provider.initialize()
+            
+            if not initialization_success:
+                # This shouldn't happen if the check_provider_availability test passed,
+                # but it might occur if the key was revoked or a network issue happened
+                # in the time between the availability check and initialization
+                self._print_error(f"Failed to initialize {provider_name.upper()} provider")
+                self._print_warning("This may be due to a temporary issue with the API service")
+                self._print_info("Please try again later or check your network connection")
+                return False
+            
+            # Successfully initialized
             if provider_name in ['openai', 'gemini']:
-                self._print_info(f"Initializing {provider_name.upper()} provider (this may take a moment)...")
-                initialization_success = provider.initialize()
-                
-                if initialization_success:
-                    self._print_success(f"{provider_name.upper()} API key verified successfully")
-                else:
-                    # For better diagnostics, check if key exists but is invalid
-                    key_name = "OPENAI_API_KEY" if provider_name == 'openai' else "GEMINI_API_KEY"
-                    if os.environ.get(key_name):
-                        self._print_error(f"The {provider_name.upper()} API key appears to be invalid")
-                        self._print_warning("Possible reasons for failure:")
-                        self._print_info("- The API key may have expired")
-                        self._print_info("- The API key may not have proper permissions")
-                        self._print_info("- There might be a network/connection issue")
-                        self._print_info(f"Please check your {provider_name.upper()} API key configuration")
-                    else:
-                        self._print_error(f"No {provider_name.upper()} API key found in environment")
-                    return False
+                self._print_success(f"{provider_name.upper()} API key verified successfully")
             
             # Set up the filter engine
             self.filter_engine = FilterEngine(provider)
-            self.filter_engine.set_global_threshold(self.settings['global_threshold'])
+            # No global threshold anymore - using individual criteria matches
             return True
                 
         except Exception as e:
@@ -282,7 +293,8 @@ class InteractiveMenu:
         if 'criteria_thresholds' in self.settings and 'metacritic' in self.settings['criteria_thresholds']:
             metacritic_threshold = self.settings['criteria_thresholds']['metacritic']
         
-        self._print_data("Global Threshold", f"{self.settings['global_threshold']:.2f}")
+        # Display filter mode and metacritic threshold (no global threshold anymore)
+        self._print_data("Filter Mode", "Keep if ANY criteria matches")
         self._print_data("Metacritic Threshold", f"{metacritic_threshold:.2f}")
         
         # Menu options
@@ -429,21 +441,16 @@ class InteractiveMenu:
         self._print_info(f"Current AI Provider: {self.settings['provider']}")
         self._print_info(f"Batch Size: {self.settings['batch_size']} games per API call")
         
-        # Display thresholds with descriptions
-        global_threshold = self.settings['global_threshold']
-        threshold_desc = "Neutral"
-        if global_threshold < 1.0:
-            threshold_desc = "More Lenient"
-        elif global_threshold > 1.0:
-            threshold_desc = "More Strict"
-        self._print_info(f"Global Threshold: {global_threshold:.2f} ({threshold_desc})")
+        # Display filtering mode explanation
+        self._print_info("Filter Mode: Keep if ANY criteria matches")
+        self._print_info("Games are kept if they match at least one of the selected criteria.")
         
         # Display Metacritic threshold
         metacritic_threshold = 7.5
         if 'criteria_thresholds' in self.settings and 'metacritic' in self.settings['criteria_thresholds']:
             metacritic_threshold = self.settings['criteria_thresholds']['metacritic']
         
-        self._print_info(f"Metacritic Threshold: {metacritic_threshold:.2f} (games with higher scores are kept)")
+        self._print_info(f"Metacritic Threshold: {metacritic_threshold:.2f} (games with scores above this are kept)")
         
         print()
         self._print_option("A", "Apply filters with current settings")
@@ -534,19 +541,41 @@ class InteractiveMenu:
         self._clear_screen()
         self._print_subheader("Change AI Provider")
         
-        # Check if API keys are set using our utilities
-        openai_key_set, _ = check_api_key("openai")
-        gemini_key_set, _ = check_api_key("gemini")
+        # Get information about all available providers
+        all_providers = get_available_providers()
         
-        providers = [
-            ("random", "Random (Test mode, no API key needed)"),
-            ("openai", f"OpenAI (Most accurate) {self.colors['success'] + '[API Key Set]' + Style.RESET_ALL if openai_key_set else self.colors['error'] + '[API Key Required]' + Style.RESET_ALL}"),
-            ("gemini", f"Google Gemini (Fast, efficient) {self.colors['success'] + '[API Key Set]' + Style.RESET_ALL if gemini_key_set else self.colors['error'] + '[API Key Required]' + Style.RESET_ALL}")
-        ]
+        # Build the provider list with availability information
+        providers_list = []
         
-        for idx, (provider_id, provider_desc) in enumerate(providers, 1):
+        # Random provider always comes first
+        random_info = all_providers.get("random", {})
+        status_text = self.colors['success'] + "[Available]" + Style.RESET_ALL
+        providers_list.append(("random", f"Random (Testing mode only) {status_text}"))
+        
+        # Add OpenAI with status
+        openai_info = all_providers.get("openai", {})
+        if openai_info.get("available", False):
+            status_text = self.colors['success'] + "[API Key Valid]" + Style.RESET_ALL
+        elif openai_info.get("has_valid_key", False):
+            status_text = self.colors['warning'] + "[Package Missing]" + Style.RESET_ALL
+        else:
+            status_text = self.colors['error'] + "[API Key Required]" + Style.RESET_ALL
+        providers_list.append(("openai", f"OpenAI (Most accurate) {status_text}"))
+        
+        # Add Gemini with status
+        gemini_info = all_providers.get("gemini", {})
+        if gemini_info.get("available", False):
+            status_text = self.colors['success'] + "[API Key Valid]" + Style.RESET_ALL
+        elif gemini_info.get("has_valid_key", False):
+            status_text = self.colors['warning'] + "[Package Missing]" + Style.RESET_ALL
+        else:
+            status_text = self.colors['error'] + "[API Key Required]" + Style.RESET_ALL
+        providers_list.append(("gemini", f"Google Gemini (Fast, efficient) {status_text}"))
+        
+        # Display provider options
+        for idx, (provider_id, provider_desc) in enumerate(providers_list, 1):
             selected = provider_id == self.settings['provider']
-            print(f"  [{idx}] {provider_desc} {'✓' if selected else ''}")
+            print(f"  [{idx}] {provider_desc} {self.colors['success'] + '✓' + Style.RESET_ALL if selected else ''}")
         
         print()
         self._print_option("C", "Configure API Keys")
@@ -566,11 +595,14 @@ class InteractiveMenu:
         else:
             try:
                 idx = int(choice) - 1
-                if 0 <= idx < len(providers):
+                if 0 <= idx < len(providers_list):
                     # Store current provider for possible reversion
                     original_provider = self.settings['provider']
                     # Set the new provider
-                    self.settings['provider'] = providers[idx][0]
+                    self.settings['provider'] = providers_list[idx][0]
+                    
+                    # Check if the provider is available with valid API key
+                    available, reason, has_valid_key = check_provider_availability(self.settings['provider'])
                     
                     # Random provider always works
                     if self.settings['provider'] == 'random':
@@ -582,15 +614,16 @@ class InteractiveMenu:
                         self._wait_for_key()
                         return
                         
-                    # For OpenAI or Gemini, check and request API key if needed
+                    # For OpenAI or Gemini, check availability and API key validity
                     if self.settings['provider'] in ('openai', 'gemini'):
-                        # Check for key
-                        key_exists, key_name = check_api_key(self.settings['provider'])
-                        
-                        if not key_exists:
+                        if not available:
+                            # Provider not available - show reason and options
+                            self._print_error(f"{self.settings['provider'].upper()} provider is not available")
+                            self._print_info(f"Reason: {reason}")
+                            
                             # No API key found - need to request one
-                            self._print_info(f"No API key found for {self.settings['provider'].upper()}")
-                            self._print_info(f"This provider requires a valid API key to function.")
+                            if not has_valid_key:
+                                self._print_info(f"This provider requires a valid API key to function.")
                             
                             # Provide info on where to get the key
                             if self.settings['provider'] == 'openai':
@@ -616,8 +649,8 @@ class InteractiveMenu:
                                     self._print_success(f"{self.settings['provider'].upper()} API key set")
                                     self._print_info(f"Testing {self.settings['provider'].upper()} API key (this may take a moment)...")
                                     
-                                    # Test the key using our new testing utility
-                                    success, message = test_api_keys.test_api_key(self.settings['provider'])
+                                    # Test the key using our key checking utility
+                                    success, message = check_api_key(self.settings['provider'])
                                     
                                     if success:
                                         self._print_success(f"API key validation successful: {message}")
@@ -637,7 +670,7 @@ class InteractiveMenu:
                                         
                                         if retry_choice == "1":
                                             # Try again with the same provider
-                                            success, _ = test_api_keys.test_and_request_api_key(self.settings['provider'])
+                                            success, _ = check_and_request_api_key(self.settings['provider'])
                                             if success:
                                                 self._initialize_provider()
                                                 self._print_success(f"Provider changed to {self.settings['provider'].upper()}")
@@ -682,7 +715,7 @@ class InteractiveMenu:
                                 
                                 # Test the key again with explicit feedback
                                 self._print_info(f"Testing {self.settings['provider'].upper()} API key...")
-                                success, message = test_api_keys.test_api_key(self.settings['provider'])
+                                success, message = check_api_key(self.settings['provider'])
                                 
                                 if success:
                                     self._print_success(f"API key validation successful: {message}")
@@ -701,7 +734,7 @@ class InteractiveMenu:
                                 
                                 if fix_choice == "1":
                                     # Use our advanced API key testing and request
-                                    success, _ = test_api_keys.test_and_request_api_key(self.settings['provider'])
+                                    success, _ = check_and_request_api_key(self.settings['provider'])
                                     if success:
                                         self._initialize_provider()
                                         self._print_success(f"Provider changed to {self.settings['provider'].upper()}")
@@ -850,19 +883,27 @@ class InteractiveMenu:
             
             # Process result - handle both 3-item and 4-item tuples for backward compatibility
             if result and isinstance(result, tuple):
-                if len(result) == 4:
-                    self.filtered_games, self.evaluations, provider_error, api_usage_data = result
-                elif len(result) == 3:
-                    self.filtered_games, self.evaluations, provider_error = result
-                    api_usage_data = None
-                elif len(result) == 2:
-                    # Safe unpacking with explicit indexing to avoid type errors
-                    self.filtered_games = result[0]  # First element is filtered_games
-                    self.evaluations = result[1]     # Second element is evaluations
-                    provider_error = None
-                    api_usage_data = None
-                else:
-                    raise ValueError(f"Unexpected result format from filter_engine: {result}")
+                try:
+                    if len(result) == 4:
+                        self.filtered_games, self.evaluations, provider_error, api_usage_data = result
+                    elif len(result) == 3:
+                        self.filtered_games, self.evaluations, provider_error = result
+                        api_usage_data = None
+                    elif len(result) == 2:
+                        # Safe unpacking with explicit indexing to avoid type errors
+                        self.filtered_games = result[0]  # First element is filtered_games
+                        self.evaluations = result[1]     # Second element is evaluations
+                        provider_error = None
+                        api_usage_data = None
+                    else:
+                        raise ValueError(f"Unexpected result format from filter_engine: {result}")
+                except Exception as e:
+                    self._print_error(f"Error processing result: {str(e)}")
+                    # Fallback to safe extraction
+                    self.filtered_games = result[0] if len(result) > 0 else []
+                    self.evaluations = result[1] if len(result) > 1 else []
+                    provider_error = result[2] if len(result) > 2 else None
+                    api_usage_data = result[3] if len(result) > 3 else None
             else:
                 raise ValueError("Filter engine returned invalid result")
                 
@@ -948,18 +989,26 @@ class InteractiveMenu:
                     if result and isinstance(result, tuple):
                         api_usage_data = None
                         
-                        if len(result) == 4:
-                            self.filtered_games, self.evaluations, provider_error, api_usage_data = result
-                        elif len(result) == 3:
-                            self.filtered_games, self.evaluations, provider_error = result
-                        elif len(result) == 2:
-                            # Safe unpacking with explicit indexing to avoid type errors
-                            self.filtered_games = result[0]  # First element is filtered_games
-                            self.evaluations = result[1]     # Second element is evaluations
-                            provider_error = None
-                        else:
-                            self._print_error(f"Unexpected result format from filter engine: {result}")
-                            return
+                        try:
+                            if len(result) == 4:
+                                self.filtered_games, self.evaluations, provider_error, api_usage_data = result
+                            elif len(result) == 3:
+                                self.filtered_games, self.evaluations, provider_error = result
+                            elif len(result) == 2:
+                                # Safe unpacking with explicit indexing to avoid type errors
+                                self.filtered_games = result[0]  # First element is filtered_games
+                                self.evaluations = result[1]     # Second element is evaluations
+                                provider_error = None
+                            else:
+                                self._print_error(f"Unexpected result format from filter engine: {result}")
+                                return
+                        except Exception as e:
+                            self._print_error(f"Error processing result: {str(e)}")
+                            # Fallback to safe extraction
+                            self.filtered_games = result[0] if len(result) > 0 else []
+                            self.evaluations = result[1] if len(result) > 1 else []
+                            provider_error = result[2] if len(result) > 2 else None
+                            api_usage_data = result[3] if len(result) > 3 else None
                             
                         # Display API usage information if available
                         if api_usage_data:
@@ -1030,58 +1079,46 @@ class InteractiveMenu:
             self._print_success(f"Filtering complete: {filtered_count} of {original_count} games kept")
             self._print_info(f"Reduction: {reduction} games ({reduction_pct:.1f}% of collection)")
             
-            # Display top games by score (proportionally sized to collection)
+            # Display criteria analysis instead of top games
             if filtered_count > 0:
-                # Show top 10% of collection (min 5, max 15)
-                display_count = max(5, min(15, int(filtered_count * 0.1)))
+                print("\n" + "-" * 50)
+                self._print_subheader("Criteria Analysis:")
                 
-                # Sort games by quality score
-                games_with_scores = []
+                # Count games by criteria
+                criteria_counts = {}
+                for criterion in self.settings['criteria']:
+                    criteria_counts[criterion] = 0
+                
+                # Count low score keepers
+                low_score_keepers = 0
+                
+                # Analyze criteria in filtered games
                 for game in self.filtered_games:
-                    score = 0
-                    eval_data = game.get('_evaluation', {})
-                    
-                    # Try multiple score field formats for better compatibility
-                    if eval_data:
-                        # Check for different possible score field names
-                        if 'overall_score' in eval_data:
-                            try:
-                                score = float(eval_data['overall_score'])
-                            except (ValueError, TypeError):
-                                pass
-                        elif 'quality_score' in eval_data:
-                            try:
-                                score = float(eval_data['quality_score'])
-                            except (ValueError, TypeError):
-                                pass
-                        elif 'score' in eval_data:
-                            try:
-                                score = float(eval_data['score'])
-                            except (ValueError, TypeError):
-                                pass
-                        # Calculate score from individual criteria scores if no overall score found
-                        elif 'scores' in eval_data and eval_data['scores']:
-                            try:
-                                score_values = [float(s) for s in eval_data['scores'].values()
-                                              if str(s).replace('.', '', 1).isdigit()]
-                                if score_values:
-                                    score = sum(score_values) / len(score_values)
-                            except (ValueError, TypeError, AttributeError):
-                                pass
-                    games_with_scores.append((game, score))
+                    if "_evaluation" in game and "_criteria_analysis" in game["_evaluation"]:
+                        analysis = game["_evaluation"]["_criteria_analysis"]
+                        
+                        # Count by strongest criteria
+                        for criterion in analysis.get("strongest_criteria", []):
+                            if criterion in criteria_counts:
+                                criteria_counts[criterion] += 1
+                        
+                        # Count low score keepers
+                        if analysis.get("is_low_score_keeper", False):
+                            low_score_keepers += 1
                 
-                # Sort by score in descending order
-                games_with_scores.sort(key=lambda x: x[1], reverse=True)
+                # Display criteria counts
+                for criterion in sorted(criteria_counts.keys(), key=lambda x: criteria_counts[x], reverse=True):
+                    if criteria_counts[criterion] > 0:
+                        pct = (criteria_counts[criterion] / filtered_count) * 100
+                        criterion_name = criterion.replace('_', ' ').title()
+                        self._print_info(f"- {criterion_name}: {criteria_counts[criterion]} games ({pct:.1f}%)")
                 
-                # Get top games
-                top_games = games_with_scores[:display_count]
-                
-                if top_games:
-                    print("\n" + "-" * 50)
-                    self._print_subheader(f"Top {len(top_games)} Games by Quality Score:")
-                    
-                    for i, (game, score) in enumerate(top_games):
-                        self._print_info(f"{i+1}. {game.get('name', 'Unknown')} - Score: {score:.2f}/10")
+                # Show low score keepers if any
+                if low_score_keepers > 0:
+                    pct = (low_score_keepers / filtered_count) * 100
+                    print()
+                    self._print_info(f"Low Score Exceptions: {low_score_keepers} games ({pct:.1f}%)")
+                    self._print_info("These games were kept despite low scores due to other important criteria.")
                 
                 # Show warning if using Random provider
                 if self.settings['provider'].lower() == 'random':
@@ -1112,10 +1149,7 @@ class InteractiveMenu:
     def _update_filter_engine_threshold(self):
         """Update the filter engine with the current thresholds from settings"""
         if self.filter_engine:
-            # Update global threshold
-            self.filter_engine.set_global_threshold(self.settings['global_threshold'])
-            
-            # Apply criteria thresholds if set
+            # Apply individual criteria thresholds if set
             if 'criteria_thresholds' in self.settings:
                 thresholds = self.settings['criteria_thresholds']
                 # Apply Metacritic threshold if set
@@ -1276,44 +1310,48 @@ class InteractiveMenu:
         if hasattr(self, 'filter_engine') and self.filter_engine:
             metacritic_threshold = f"{self.filter_engine.threshold_scores.get('metacritic', 7.5):.2f}"
         
-        self._print_option("1", f"Global Threshold: {self.settings['global_threshold']:.2f}")
-        self._print_option("2", f"Metacritic Threshold: {metacritic_threshold} (games with higher scores are kept)")
-        self._print_option("3", f"Input Directory: {self.settings['input_dir']}")
-        self._print_option("4", f"Output Directory: {self.settings['output_dir']}")
-        self._print_option("5", f"Show Progress: {'Yes' if self.settings['show_progress'] else 'No'}")
-        self._print_option("6", f"Color Output: {'Yes' if self.settings['color'] else 'No'}")
-        self._print_option("7", "Configure API Keys")
+        self._print_subheader("FILTER SETTINGS")
+        self._print_info("Filter Mode: Keep if ANY criteria matches")
+        self._print_info("Games are kept if they match at least one of the selected criteria.")
+        self._print_option("1", f"Metacritic Threshold: {metacritic_threshold} (games with higher scores are kept)")
+        
+        self._print_subheader("DIRECTORY SETTINGS")
+        self._print_option("2", f"Input Directory: {self.settings['input_dir']}")
+        self._print_option("3", f"Output Directory: {self.settings['output_dir']}")
+        
+        self._print_subheader("INTERFACE SETTINGS")
+        self._print_option("4", f"Show Progress: {'Yes' if self.settings['show_progress'] else 'No'}")
+        self._print_option("5", f"Color Output: {'Yes' if self.settings['color'] else 'No'}")
+        self._print_option("6", "Configure API Keys")
         self._print_option("0", "Back to Main Menu")
         
         choice = self._get_user_input("Enter your choice")
         
         if choice == "1":
-            self._change_global_threshold()
-        elif choice == "2":
             self._change_metacritic_threshold()
-        elif choice == "3":
+        elif choice == "2":
             new_dir = self._get_user_input("Enter input directory", self.settings['input_dir'])
             self.settings['input_dir'] = new_dir
             self._print_success(f"Input directory set to {new_dir}")
             self._wait_for_key()
             self.settings_menu()
-        elif choice == "4":
+        elif choice == "3":
             new_dir = self._get_user_input("Enter output directory", self.settings['output_dir'])
             self.settings['output_dir'] = new_dir
             self._print_success(f"Output directory set to {new_dir}")
             self._wait_for_key()
             self.settings_menu()
-        elif choice == "5":
+        elif choice == "4":
             self.settings['show_progress'] = not self.settings['show_progress']
             self._print_success(f"Show progress: {'Yes' if self.settings['show_progress'] else 'No'}")
             self._wait_for_key()
             self.settings_menu()
-        elif choice == "6":
+        elif choice == "5":
             self.settings['color'] = not self.settings['color']
             self._print_success(f"Color output: {'Yes' if self.settings['color'] else 'No'}")
             self._wait_for_key()
             self.settings_menu()
-        elif choice == "7":
+        elif choice == "6":
             self._configure_api_keys()
             self.settings_menu()
         elif choice == "0":
@@ -1323,35 +1361,7 @@ class InteractiveMenu:
             self._wait_for_key()
             self.settings_menu()
     
-    def _change_global_threshold(self):
-        """Change the global threshold modifier for filtering"""
-        current = self.settings['global_threshold']
-        try:
-            new_threshold = float(self._get_user_input(
-                f"Enter threshold value (current: {current:.2f})", 
-                str(current)
-            ))
-            
-            if 0.1 <= new_threshold <= 2.0:
-                self.settings['global_threshold'] = new_threshold
-                self._update_filter_engine_threshold()
-                
-                threshold_desc = "neutral"
-                if new_threshold < 1.0:
-                    threshold_desc = "more lenient (keeps more games)"
-                elif new_threshold > 1.0:
-                    threshold_desc = "more strict (keeps fewer games)"
-                    
-                self._print_success(f"Threshold set to {new_threshold:.2f} - {threshold_desc}")
-            else:
-                self._print_error("Threshold must be between 0.1 and 2.0")
-                
-            self._wait_for_key()
-            self.settings_menu()
-        except ValueError:
-            self._print_error("Please enter a valid number")
-            self._wait_for_key()
-            self.settings_menu()
+    # Global threshold method removed (deprecated)
             
     def _change_metacritic_threshold(self):
         """Change the Metacritic score threshold for filtering"""
@@ -1415,13 +1425,34 @@ class InteractiveMenu:
         self._clear_screen()
         self._print_header("Configure API Keys")
         
-        # Check if API keys are set in environment variables
-        openai_key_set = bool(os.environ.get("OPENAI_API_KEY", ""))
-        gemini_key_set = bool(os.environ.get("GEMINI_API_KEY", ""))
+        # Get information about available providers
+        all_providers = get_available_providers()
+        
+        # Get OpenAI and Gemini status
+        openai_info = all_providers.get("openai", {})
+        gemini_info = all_providers.get("gemini", {})
+        
+        openai_status = "Not Set"
+        gemini_status = "Not Set"
+        
+        # Determine status text and color for each provider
+        if openai_info.get("available", False):
+            openai_status = self.colors['success'] + "[Valid]" + Style.RESET_ALL
+        elif openai_info.get("has_valid_key", False):
+            openai_status = self.colors['warning'] + "[Set but Untested]" + Style.RESET_ALL
+        else:
+            openai_status = self.colors['error'] + "[Not Set]" + Style.RESET_ALL
+        
+        if gemini_info.get("available", False):
+            gemini_status = self.colors['success'] + "[Valid]" + Style.RESET_ALL
+        elif gemini_info.get("has_valid_key", False):
+            gemini_status = self.colors['warning'] + "[Set but Untested]" + Style.RESET_ALL
+        else:
+            gemini_status = self.colors['error'] + "[Not Set]" + Style.RESET_ALL
         
         self._print_subheader("Available Providers")
-        self._print_option("1", f"OpenAI API Key {self.colors['success'] + '[Set]' + Style.RESET_ALL if openai_key_set else self.colors['error'] + '[Not Set]' + Style.RESET_ALL}")
-        self._print_option("2", f"Google Gemini API Key {self.colors['success'] + '[Set]' + Style.RESET_ALL if gemini_key_set else self.colors['error'] + '[Not Set]' + Style.RESET_ALL}")
+        self._print_option("1", f"OpenAI API Key {openai_status}")
+        self._print_option("2", f"Google Gemini API Key {gemini_status}")
         self._print_option("3", "Test API Keys")
         self._print_option("0", "Back")
         
@@ -1494,40 +1525,59 @@ class InteractiveMenu:
             self._wait_for_key()
             self._configure_api_keys()
         elif choice == "3":
-            # Test both API keys using our enhanced API key testing module
+            # Test all API keys with our enhanced validation system
             self._print_subheader("Testing API Keys")
             
-            # Test OpenAI key
-            openai_key_exists, _ = check_api_key("openai")
-            if openai_key_exists:
+            # Get information about all available providers
+            all_providers = get_available_providers()
+            
+            # Test OpenAI provider
+            self._print_info("Testing OpenAI API key:")
+            available, reason, has_valid_key = check_provider_availability("openai")
+            
+            if has_valid_key:
+                self._print_info("OpenAI API key is present, testing connectivity...")
+                # Perform an actual API test
                 self._print_info("Testing OpenAI API key (this may take a moment)...")
-                success, message = test_api_keys.test_api_key("openai")
+                success, message = check_api_key("openai")
                 if success:
                     self._print_success(f"OpenAI API key is valid and working: {message}")
                 else:
                     self._print_error(f"OpenAI API key validation failed: {message}")
                     self._print_warning("The key may be invalid, expired, or have insufficient permissions")
                     self._print_info("You can get an OpenAI API key at https://platform.openai.com/")
+                    self._print_info("Note: OpenAI requires a paid account with API access.")
             else:
-                self._print_warning("OpenAI API key is not set")
-                self._print_info("You can set it by selecting option 1 from the API Keys menu")
+                if "API key is not set" in reason:
+                    self._print_warning("OpenAI API key is not set")
+                    self._print_info("You can set it by selecting option 1 from the API Keys menu")
+                else:
+                    self._print_error(f"OpenAI provider issue: {reason}")
             
             print()  # Add spacing between tests
             
-            # Test Gemini key
-            gemini_key_exists, _ = check_api_key("gemini")
-            if gemini_key_exists:
+            # Test Gemini provider
+            self._print_info("Testing Gemini API key:")
+            available, reason, has_valid_key = check_provider_availability("gemini")
+            
+            if has_valid_key:
+                self._print_info("Gemini API key is present, testing connectivity...")
+                # Perform an actual API test
                 self._print_info("Testing Gemini API key (this may take a moment)...")
-                success, message = test_api_keys.test_api_key("gemini")
+                success, message = check_api_key("gemini")
                 if success:
                     self._print_success(f"Gemini API key is valid and working: {message}")
                 else:
                     self._print_error(f"Gemini API key validation failed: {message}")
                     self._print_warning("The key may be invalid, expired, or have incorrect permissions")
                     self._print_info("You can get a Gemini API key at https://ai.google.dev/")
+                    self._print_info("Note: Gemini offers a free tier with generous quota limits.")
             else:
-                self._print_warning("Gemini API key is not set")
-                self._print_info("You can set it by selecting option 2 from the API Keys menu")
+                if "API key is not set" in reason:
+                    self._print_warning("Gemini API key is not set")
+                    self._print_info("You can set it by selecting option 2 from the API Keys menu")
+                else:
+                    self._print_error(f"Gemini provider issue: {reason}")
             
             self._wait_for_key()
             self._configure_api_keys()
@@ -1761,8 +1811,17 @@ class InteractiveMenu:
                         print(f"Total requests: {total_requests:,}")
                         print()
                 else:
-                    # For backward compatibility
-                    filtered_games, evaluations, provider_error = result
+                    # For backward compatibility, handle different result lengths
+                    if len(result) >= 3:
+                        filtered_games, evaluations, provider_error = result
+                    elif len(result) == 2:
+                        filtered_games, evaluations = result
+                        provider_error = None
+                    else:
+                        self._print_error(f"Unexpected result format: {result}")
+                        filtered_games = []
+                        evaluations = []
+                        provider_error = {"provider_error": "Invalid result format from filter engine"}
                 
                 # Check if there was a provider error
                 if provider_error:
