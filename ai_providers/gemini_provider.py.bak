@@ -567,12 +567,11 @@ class GeminiProvider(BaseAIProvider):
         game_description = json.dumps(simplified_game, indent=2)
         
         criteria_descriptions = {
-            "metacritic": "Evaluate the game based on its Metacritic score and critical acclaim. Games scoring 7.5/10 or higher should be kept.",
+            "metacritic": "Evaluate the game based on its Metacritic score and critical acclaim",
             "historical": "Evaluate the game's historical significance and impact on the gaming industry",
             "v_list": "Determine if this game is likely on V's recommended games list",
             "console_significance": "Evaluate this game's significance for its specific console",
-            "mods_hacks": "Identify if this is a notable mod, hack, or unofficial translation worth preserving. Apply stricter evaluation for this category (needs to be more significant)",
-            "hidden_gems": "Evaluate if this game is considered a 'hidden gem' based on Reddit discussions and specialized gaming forums. These are games with enthusiastic community followings that might not have mainstream recognition."
+            "mods_hacks": "Identify if this is a notable mod or hack worth preserving"
         }
         
         criteria_prompts = [criteria_descriptions.get(c, f"Evaluate based on {c}") for c in criteria]
@@ -644,12 +643,11 @@ Keep explanations concise and specific. Make sure your response is valid JSON.
         games_json = json.dumps(games_info, indent=2)
         
         criteria_descriptions = {
-            "metacritic": "Evaluate the game based on its Metacritic score and critical acclaim. Games scoring 7.5/10 or higher should be kept.",
+            "metacritic": "Evaluate the game based on its Metacritic score and critical acclaim",
             "historical": "Evaluate the game's historical significance and impact on the gaming industry",
             "v_list": "Determine if this game is likely on V's recommended games list",
             "console_significance": "Evaluate this game's significance for its specific console",
-            "mods_hacks": "Identify if this is a notable mod, hack, or unofficial translation worth preserving. Apply stricter evaluation for this category (needs to be more significant)",
-            "hidden_gems": "Evaluate if this game is considered a 'hidden gem' based on Reddit discussions and specialized gaming forums. These are games with enthusiastic community followings that might not have mainstream recognition."
+            "mods_hacks": "Identify if this is a notable mod or hack worth preserving"
         }
         
         criteria_prompts = [criteria_descriptions.get(c, f"Evaluate based on {c}") for c in criteria]

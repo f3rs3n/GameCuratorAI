@@ -420,37 +420,9 @@ class ExportManager:
                     summary.append(f"\nLow Score Exceptions: {low_score_keepers} games ({pct:.1f}%)")
                     summary.append("These are games kept despite low scores due to other important factors.")
             
-            # Top Games Section with improved title (change Top Games to Highest Scoring Games)
-            summary.extend([
-                "",
-                f"Highest Scoring Games ({len(top_games)}):",
-                "----------------------------------------"
-            ])
-            
-            # Add top games with their strengths and weaknesses
-            for i, game in enumerate(top_games):
-                score = 0
-                eval_data = game.get('_evaluation', {})
-                if eval_data and 'overall_score' in eval_data:
-                    score = float(eval_data['overall_score'])
-                
-                game_line = f"{i+1}. {game.get('name', 'Unknown')} - Score: {score:.2f}/10"
-                
-                # Add strengths/weaknesses if available
-                if "_criteria_analysis" in eval_data:
-                    analysis = eval_data["_criteria_analysis"]
-                    strengths = analysis.get("strongest_criteria", [])
-                    weaknesses = analysis.get("weakest_criteria", [])
-                    
-                    if strengths:
-                        strengths_str = ", ".join([s.replace("_", " ").title() for s in strengths])
-                        game_line += f" - Strong: {strengths_str}"
-                    
-                    if weaknesses:
-                        weaknesses_str = ", ".join([w.replace("_", " ").title() for w in weaknesses])
-                        game_line += f" - Weak: {weaknesses_str}"
-                
-                summary.append(game_line)
+            # This section previously contained the "Highest Scoring Games" listing
+            # It has been removed as it's no longer relevant with the new filtering approach
+            # that keeps games that match ANY criterion, rather than based on overall scores
             
             # Add Near Miss Games Section - these are games that just missed the cut
             if near_miss_games:

@@ -380,11 +380,12 @@ class OpenAIProvider(BaseAIProvider):
         game_description = json.dumps(game_info, indent=2)
         
         criteria_descriptions = {
-            "metacritic": "Evaluate the game based on its Metacritic score and critical acclaim",
+            "metacritic": "Evaluate the game based on its Metacritic score and critical acclaim. Games scoring 7.5/10 or higher should be kept.",
             "historical": "Evaluate the game's historical significance and impact on the gaming industry",
             "v_list": "Determine if this game is likely on V's recommended games list",
             "console_significance": "Evaluate this game's significance for its specific console",
-            "mods_hacks": "Identify if this is a notable mod or hack worth preserving"
+            "mods_hacks": "Identify if this is a notable mod, hack, or unofficial translation worth preserving",
+            "hidden_gems": "Evaluate if this game is considered a 'hidden gem' based on Reddit discussions and specialized gaming forums"
         }
         
         criteria_prompts = [criteria_descriptions.get(c, f"Evaluate based on {c}") for c in criteria]

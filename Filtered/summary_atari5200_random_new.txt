@@ -1,9 +1,9 @@
 DAT Filter AI - Filtering Summary
 ==============================
-Date: 2025-05-08 14:47:54
+Date: 2025-05-09 07:34:11
 Original game count: 77
-Filtered game count: 53
-Reduction: 24 games (31.2% of collection)
+Filtered game count: 54
+Reduction: 23 games (29.9% of collection)
 
 Filter Criteria:
 ---------------
@@ -16,34 +16,34 @@ Filter Criteria:
 Criteria Analysis:
 -----------------
 Strongest criteria in the collection:
-- Historical: 25 games (47.2%)
-- Mods Hacks: 25 games (47.2%)
-- Console Significance: 20 games (37.7%)
-- V List: 19 games (35.8%)
-- Metacritic: 17 games (32.1%)
+- Historical: 28 games (51.9%)
+- Console Significance: 27 games (50.0%)
+- Metacritic: 20 games (37.0%)
+- V List: 17 games (31.5%)
+- Mods Hacks: 16 games (29.6%)
 
 Weakest criteria in the collection:
-- Metacritic: 26 games (49.1%)
-- Historical: 24 games (45.3%)
-- Mods Hacks: 21 games (39.6%)
-- V List: 19 games (35.8%)
-- Console Significance: 16 games (30.2%)
+- V List: 26 games (48.1%)
+- Mods Hacks: 26 games (48.1%)
+- Console Significance: 20 games (37.0%)
+- Metacritic: 19 games (35.2%)
+- Historical: 17 games (31.5%)
 
-Low Score Exceptions: 8 games (15.1%)
+Low Score Exceptions: 5 games (9.3%)
 These are games kept despite low scores due to other important factors.
 
-Top 5 Games (Highest Quality Scores):
+Highest Scoring Games (5):
 ----------------------------------------
-1. Gyruss (USA) - Score: 8.30/10 - Strong: Console Significance, V List - Weak: Mods Hacks, Historical
-2. Castle Crisis (USA) (Unl) - Score: 7.90/10 - Strong: Historical, Mods Hacks - Weak: V List, Console Significance
-3. Quest for Quintana Roo (USA) - Score: 7.90/10 - Strong: Mods Hacks, Console Significance - Weak: Historical, Metacritic
-4. Zone Ranger (USA) - Score: 7.50/10 - Strong: V List, Console Significance - Weak: Historical, Mods Hacks
-5. Ms. Pac-Man (USA) - Score: 7.30/10 - Strong: Historical, Console Significance - Weak: Metacritic, Mods Hacks
+1. Keystone Kapers (USA) - Score: 8.00/10 - Strong: Metacritic, Mods Hacks - Weak: Console Significance, V List
+2. Pitfall! (USA) - Score: 8.00/10 - Strong: Console Significance, Mods Hacks - Weak: Metacritic, V List
+3. David Crane's Pitfall II - Lost Caverns (USA) - Score: 7.50/10 - Strong: Console Significance, Historical - Weak: V List, Metacritic
+4. Popeye (USA) - Score: 7.50/10 - Strong: Console Significance, Metacritic - Weak: V List, Historical
+5. Astro Chase (USA) - Score: 7.20/10 - Strong: Historical, Console Significance - Weak: V List, Metacritic
 
-Removed Games Preview (Lowest Scores):
+Removed Games Summary:
 ----------------------------------------
 These games didn't make the cut and were removed from the filtered collection:
-Total games removed: 24
+Total games removed: 23
 
 Note: To see the complete list of removed games, compare the original DAT
       file with the filtered output using a comparison tool.

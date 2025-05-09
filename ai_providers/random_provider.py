@@ -17,11 +17,12 @@ class RandomProvider(BaseAIProvider):
         """Initialize the Random provider"""
         self.initialized = False
         self.criteria_descriptions = {
-            "metacritic": "Critical acclaim and review scores",
+            "metacritic": "Critical acclaim and review scores (7.5/10 or higher)",
             "historical": "Historical significance and innovation",
-            "v_recommended": "Inclusion in V's recommended games list",
-            "console_defining": "Significance to the console's identity",
-            "mod_hack": "Notable mods, hacks, or fan creations"
+            "v_list": "Inclusion in V's recommended games list",
+            "console_significance": "Significance to the console's identity",
+            "mods_hacks": "Notable mods, hacks, or unofficial translations",
+            "hidden_gems": "Community-recognized hidden gems from forums and Reddit"
         }
 
     def initialize(self) -> bool:

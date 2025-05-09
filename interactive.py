@@ -1096,9 +1096,17 @@ class InteractiveMenu:
             self._wait_for_key()
     
     def _update_filter_engine_threshold(self):
-        """Update the filter engine with the current global threshold"""
+        """Update the filter engine with the current thresholds from settings"""
         if self.filter_engine:
+            # Update global threshold
             self.filter_engine.set_global_threshold(self.settings['global_threshold'])
+            
+            # Apply criteria thresholds if set
+            if 'criteria_thresholds' in self.settings:
+                thresholds = self.settings['criteria_thresholds']
+                # Apply Metacritic threshold if set
+                if 'metacritic' in thresholds:
+                    self.filter_engine.set_threshold('metacritic', thresholds['metacritic'])
     
     def export_menu(self):
         """Display the export menu"""
@@ -1249,12 +1257,18 @@ class InteractiveMenu:
         self._clear_screen()
         self._print_header("Settings")
         
+        # Get current Metacritic threshold from the filter engine if available
+        metacritic_threshold = "7.50"
+        if hasattr(self, 'filter_engine') and self.filter_engine:
+            metacritic_threshold = f"{self.filter_engine.threshold_scores.get('metacritic', 7.5):.2f}"
+        
         self._print_option("1", f"Global Threshold: {self.settings['global_threshold']:.2f}")
-        self._print_option("2", f"Input Directory: {self.settings['input_dir']}")
-        self._print_option("3", f"Output Directory: {self.settings['output_dir']}")
-        self._print_option("4", f"Show Progress: {'Yes' if self.settings['show_progress'] else 'No'}")
-        self._print_option("5", f"Color Output: {'Yes' if self.settings['color'] else 'No'}")
-        self._print_option("6", "Configure API Keys")
+        self._print_option("2", f"Metacritic Threshold: {metacritic_threshold} (games with higher scores are kept)")
+        self._print_option("3", f"Input Directory: {self.settings['input_dir']}")
+        self._print_option("4", f"Output Directory: {self.settings['output_dir']}")
+        self._print_option("5", f"Show Progress: {'Yes' if self.settings['show_progress'] else 'No'}")
+        self._print_option("6", f"Color Output: {'Yes' if self.settings['color'] else 'No'}")
+        self._print_option("7", "Configure API Keys")
         self._print_option("0", "Back to Main Menu")
         
         choice = self._get_user_input("Enter your choice")
@@ -1262,28 +1276,30 @@ class InteractiveMenu:
         if choice == "1":
             self._change_global_threshold()
         elif choice == "2":
+            self._change_metacritic_threshold()
+        elif choice == "3":
             new_dir = self._get_user_input("Enter input directory", self.settings['input_dir'])
             self.settings['input_dir'] = new_dir
             self._print_success(f"Input directory set to {new_dir}")
             self._wait_for_key()
             self.settings_menu()
-        elif choice == "3":
+        elif choice == "4":
             new_dir = self._get_user_input("Enter output directory", self.settings['output_dir'])
             self.settings['output_dir'] = new_dir
             self._print_success(f"Output directory set to {new_dir}")
             self._wait_for_key()
             self.settings_menu()
-        elif choice == "4":
+        elif choice == "5":
             self.settings['show_progress'] = not self.settings['show_progress']
             self._print_success(f"Show progress: {'Yes' if self.settings['show_progress'] else 'No'}")
             self._wait_for_key()
             self.settings_menu()
-        elif choice == "5":
+        elif choice == "6":
             self.settings['color'] = not self.settings['color']
             self._print_success(f"Color output: {'Yes' if self.settings['color'] else 'No'}")
             self._wait_for_key()
             self.settings_menu()
-        elif choice == "6":
+        elif choice == "7":
             self._configure_api_keys()
             self.settings_menu()
         elif choice == "0":
@@ -1315,6 +1331,63 @@ class InteractiveMenu:
                 self._print_success(f"Threshold set to {new_threshold:.2f} - {threshold_desc}")
             else:
                 self._print_error("Threshold must be between 0.1 and 2.0")
+                
+            self._wait_for_key()
+            self.settings_menu()
+        except ValueError:
+            self._print_error("Please enter a valid number")
+            self._wait_for_key()
+            self.settings_menu()
+            
+    def _change_metacritic_threshold(self):
+        """Change the Metacritic score threshold for filtering"""
+        # Get current threshold from the filter engine if available
+        current = 7.5
+        if hasattr(self, 'filter_engine') and self.filter_engine:
+            current = self.filter_engine.threshold_scores.get('metacritic', 7.5)
+            
+        try:
+            self._print_info("This sets the minimum Metacritic score for games to be kept (scale: 0-10)")
+            self._print_info("Games with a Metacritic score above this threshold will be kept")
+            self._print_info("Default is 7.5 (good games)")
+            
+            new_threshold = float(self._get_user_input(
+                f"Enter Metacritic threshold (current: {current:.2f})", 
+                str(current)
+            ))
+            
+            if 0.0 <= new_threshold <= 10.0:
+                # Update the filter engine if available
+                if hasattr(self, 'filter_engine') and self.filter_engine:
+                    self.filter_engine.set_threshold('metacritic', new_threshold)
+                    
+                    # Save threshold in settings for persistence
+                    if 'criteria_thresholds' not in self.settings:
+                        self.settings['criteria_thresholds'] = {}
+                    self.settings['criteria_thresholds']['metacritic'] = new_threshold
+                    
+                    self._print_success(f"Metacritic threshold set to {new_threshold:.2f}")
+                    
+                    # Give user feedback on what this means
+                    if new_threshold <= 5.0:
+                        self._print_info("This will keep most games (very lenient)")
+                    elif new_threshold <= 6.5:
+                        self._print_info("This will keep average and better games")
+                    elif new_threshold <= 7.5:
+                        self._print_info("This will keep good and great games (recommended)")
+                    elif new_threshold <= 8.5:
+                        self._print_info("This will only keep great games (strict)")
+                    else:
+                        self._print_info("This will only keep exceptional games (very strict)")
+                else:
+                    # Filter engine not initialized yet, just save for later
+                    if 'criteria_thresholds' not in self.settings:
+                        self.settings['criteria_thresholds'] = {}
+                    self.settings['criteria_thresholds']['metacritic'] = new_threshold
+                    self._print_success(f"Metacritic threshold set to {new_threshold:.2f}")
+                    self._print_info("This will take effect when filters are applied.")
+            else:
+                self._print_error("Threshold must be between 0 and 10")
                 
             self._wait_for_key()
             self.settings_menu()

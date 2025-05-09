@@ -1,5 +1,17 @@
 """
 Filter Engine module for evaluating and filtering games based on AI analysis.
+
+This module implements the core game filtering logic, using a "match any criteria"
+approach where games are kept if they satisfy ANY of the filter criteria:
+- Metacritic score over 7.5 (configurable)
+- Game has historical significance
+- Game has console-specific significance
+- Game is included in V's recommended list
+- Notable mods, hacks, or unofficial translations (with stricter evaluation)
+- Community-recognized hidden gems (from Reddit and specialized forums)
+
+The engine also checks for regional variants and ensures proper handling of
+multi-disc games and other special cases.
 """
 
 import logging
@@ -11,7 +23,20 @@ from ai_providers.base import BaseAIProvider
 from utils.api_usage_tracker import get_tracker
 
 class FilterEngine:
-    """Engine for filtering games based on AI evaluations and rule criteria."""
+    """
+    Engine for filtering games based on AI evaluations and rule criteria.
+    
+    Uses a "match any criteria" approach where games satisfying ANY of the
+    specified criteria are kept in the collection (rather than requiring a
+    minimum overall score). The criteria include:
+    
+    - Metacritic: Games with scores above 7.5/10 (configurable)
+    - Historical: Games with historical significance
+    - V's List: Games included in V's recommended list
+    - Console Significance: Games important for their specific console
+    - Mods/Hacks/Translations: Notable modifications, hacks, or unofficial translations
+    - Hidden Gems: Community-recognized gems from Reddit and specialized forums
+    """
     
     def __init__(self, ai_provider: BaseAIProvider):
         """
@@ -24,20 +49,22 @@ class FilterEngine:
         self.ai_provider = ai_provider
         # Base threshold scores for each criterion
         self.threshold_scores = {
-            "metacritic": 7.0,
-            "historical": 6.0,
-            "v_list": 5.0,
-            "console_significance": 7.0,
-            "mods_hacks": 6.0
+            "metacritic": 7.5,  # Higher threshold for metacritic (reviews/scores)
+            "historical": 6.0,  # Threshold for historical significance
+            "v_list": 5.0,      # Threshold for presence in V's list
+            "console_significance": 6.0,  # Threshold for console-specific significance
+            "mods_hacks": 7.0,   # Higher threshold for mods/hacks/translations (be more selective)
+            "hidden_gems": 6.5   # Threshold for community-recognized hidden gems
         }
         # Global threshold modifier applied to all criteria
         self.global_threshold = 1.0  # 1.0 is neutral, lower is more lenient, higher is stricter
         self.criteria_weights = {
-            "metacritic": 0.20,
-            "historical": 0.20,
-            "v_list": 0.20,
-            "console_significance": 0.20,
-            "mods_hacks": 0.20
+            "metacritic": 0.17,
+            "historical": 0.17,
+            "v_list": 0.17,
+            "console_significance": 0.17,
+            "mods_hacks": 0.16,
+            "hidden_gems": 0.16
         }
     
     def set_threshold(self, criterion: str, value: float):
@@ -375,14 +402,15 @@ class FilterEngine:
     
     def _meets_criteria(self, evaluation: Dict[str, Any], criteria: List[str]) -> bool:
         """
-        Check if a game's evaluation meets the threshold criteria
+        Check if a game's evaluation meets the threshold criteria.
+        Using new logic: keep game if ANY criterion meets the threshold.
         
         Args:
             evaluation: Game evaluation results
             criteria: List of criteria to check
             
         Returns:
-            True if the game meets the criteria, False otherwise
+            True if the game meets ANY criteria, False otherwise
         """
         # If there was an error in evaluation, fail
         if "error" in evaluation:
@@ -392,70 +420,135 @@ class FilterEngine:
         if "overall_recommendation" in evaluation and "include" in evaluation["overall_recommendation"]:
             return evaluation["overall_recommendation"]["include"]
         
-        # Check individual criteria
+        # Default method to extract scores (old method for backward compatibility)
+        scores = {}
+        if "scores" in evaluation:
+            scores = evaluation["scores"]
+        
+        # Check individual criteria using the new "any criteria" logic
         if "evaluations" in evaluation:
             evals = evaluation["evaluations"]
             
-            # Calculate weighted score
+            # Calculate weighted score (for backward compatibility and reporting)
             weighted_score = 0.0
             total_weight = 0.0
             
             # Track criteria scores for analysis
             criteria_scores = {}
             
+            # Track which criteria passed their thresholds
+            passing_criteria = []
+            
             for criterion in criteria:
                 if criterion in evals and "score" in evals[criterion]:
                     score = float(evals[criterion]["score"])
                     weight = self.criteria_weights.get(criterion, 0.1)
+                    threshold = self.threshold_scores.get(criterion, 5.0)
+                    
+                    # Apply global threshold modifier to individual thresholds
+                    adjusted_threshold = threshold * self.global_threshold
                     
                     criteria_scores[criterion] = {
                         "score": score,
                         "weight": weight,
                         "weighted_score": score * weight,
-                        "threshold": self.threshold_scores.get(criterion, 5.0)
+                        "threshold": threshold,
+                        "adjusted_threshold": adjusted_threshold,
+                        "passes_threshold": score >= adjusted_threshold
                     }
                     
+                    # Check if this criterion passes its threshold
+                    if score >= adjusted_threshold:
+                        passing_criteria.append(criterion)
+                    
+                    # Still calculate weighted scores for reporting
                     weighted_score += score * weight
                     total_weight += weight
-            
-            # If we have weights, check against thresholds
-            if total_weight > 0:
-                normalized_score = weighted_score / total_weight
-                
-                # Calculate base threshold (before applying global modifier)
-                base_threshold = sum(self.threshold_scores.get(c, 5.0) * self.criteria_weights.get(c, 0.1) 
-                                   for c in criteria) / total_weight
-                
-                # Apply global threshold modifier
-                adjusted_threshold = base_threshold * self.global_threshold
-                
-                # Sort criteria by score (high to low) to identify strengths and weaknesses
-                if criteria_scores:
-                    # Find strengths and weaknesses
-                    strengths = sorted(criteria_scores.items(), key=lambda x: x[1]["score"], reverse=True)
-                    weaknesses = sorted(criteria_scores.items(), key=lambda x: x[1]["score"])
                     
-                    # Store the analysis in the evaluation
-                    evaluation["_criteria_analysis"] = {
-                        "normalized_score": normalized_score,
-                        "base_threshold": base_threshold,
-                        "adjusted_threshold": adjusted_threshold,
-                        "global_modifier": self.global_threshold,
-                        "criteria_scores": criteria_scores,
-                        "strongest_criteria": [s[0] for s in strengths[:2]] if len(strengths) > 1 else [strengths[0][0]] if strengths else [],
-                        "weakest_criteria": [w[0] for w in weaknesses[:2]] if len(weaknesses) > 1 else [weaknesses[0][0]] if weaknesses else [],
-                        "is_low_score_keeper": normalized_score < 3.0 and normalized_score >= adjusted_threshold,
-                        "low_score_reason": "Kept despite low score because it passed the adjusted threshold" if normalized_score < 3.0 and normalized_score >= adjusted_threshold else None
-                    }
+                    # Also populate the scores dict for backward compatibility
+                    scores[criterion] = score
+            
+            # Calculate normalized score for reporting
+            normalized_score = weighted_score / total_weight if total_weight > 0 else 0
+            
+            # Calculate base threshold (before applying global modifier) for reporting
+            base_threshold = sum(self.threshold_scores.get(c, 5.0) * self.criteria_weights.get(c, 0.1) 
+                               for c in criteria) / total_weight if total_weight > 0 else 0
+            
+            # Apply global threshold modifier for reporting
+            adjusted_threshold = base_threshold * self.global_threshold
+            
+            # Sort criteria by score (high to low) to identify strengths and weaknesses
+            if criteria_scores:
+                # Find strengths and weaknesses
+                strengths = sorted(criteria_scores.items(), key=lambda x: x[1]["score"], reverse=True)
+                weaknesses = sorted(criteria_scores.items(), key=lambda x: x[1]["score"])
+                
+                # Special case for "metacritic" criterion with new rules
+                metacritic_check = False
+                if "metacritic" in criteria_scores:
+                    metacritic_score = criteria_scores["metacritic"]["score"]
+                    metacritic_threshold = 7.5  # New fixed threshold for metacritic
+                    metacritic_check = metacritic_score >= metacritic_threshold
+                    
+                    # Update the criteria score entry for metacritic
+                    criteria_scores["metacritic"]["threshold"] = metacritic_threshold
+                    criteria_scores["metacritic"]["adjusted_threshold"] = metacritic_threshold
+                    criteria_scores["metacritic"]["passes_threshold"] = metacritic_check
+                    
+                    # Update passing_criteria list if metacritic passes
+                    if metacritic_check and "metacritic" not in passing_criteria:
+                        passing_criteria.append("metacritic")
+                    elif not metacritic_check and "metacritic" in passing_criteria:
+                        passing_criteria.remove("metacritic")
+                
+                # Special handling for mods/hacks (apply stricter rules)
+                is_mod_or_hack = "mods_hacks" in criteria_scores and criteria_scores["mods_hacks"]["score"] > 8.0
+                
+                # Store the analysis in the evaluation
+                evaluation["_criteria_analysis"] = {
+                    "normalized_score": normalized_score,
+                    "base_threshold": base_threshold,
+                    "adjusted_threshold": adjusted_threshold,
+                    "global_modifier": self.global_threshold,
+                    "criteria_scores": criteria_scores,
+                    "strongest_criteria": [s[0] for s in strengths[:2]] if len(strengths) > 1 else [strengths[0][0]] if strengths else [],
+                    "weakest_criteria": [w[0] for w in weaknesses[:2]] if len(weaknesses) > 1 else [weaknesses[0][0]] if weaknesses else [],
+                    "is_low_score_keeper": normalized_score < 3.0 and len(passing_criteria) > 0,
+                    "low_score_reason": f"Kept despite low overall score because it excelled in: {', '.join(passing_criteria)}" if normalized_score < 3.0 and len(passing_criteria) > 0 else None,
+                    "passing_criteria": passing_criteria,
+                    "is_mod_or_hack": is_mod_or_hack
+                }
                 
                 self.logger.debug(f"Game evaluation: score={normalized_score:.2f}, " +
                                 f"threshold={base_threshold:.2f}, " +
                                 f"adjusted={adjusted_threshold:.2f}, " +
-                                f"modifier={self.global_threshold:.2f}")
+                                f"passing_criteria={passing_criteria}")
                 
-                return normalized_score >= adjusted_threshold
+                # NEW APPROACH: Keep if ANY criterion passes its threshold
+                return len(passing_criteria) > 0
         
-        # Default to conservative inclusion
+        # If we have scores but no detailed evaluations, check each criterion
+        if scores:
+            passing_criteria = []
+            for criterion in criteria:
+                if criterion in scores:
+                    score = float(scores[criterion])
+                    threshold = self.threshold_scores.get(criterion, 5.0)
+                    
+                    # Special case for "metacritic" criterion with new rules
+                    if criterion == "metacritic":
+                        threshold = 7.5  # New fixed threshold for metacritic
+                    
+                    # Apply global threshold modifier
+                    adjusted_threshold = threshold * self.global_threshold
+                    
+                    if score >= adjusted_threshold:
+                        passing_criteria.append(criterion)
+            
+            return len(passing_criteria) > 0
+        
+        # Default to conservative inclusion if no evaluations available
         return True
     
     def _analyze_criteria(self, evaluation: Dict[str, Any], criteria: List[str]) -> Dict[str, Any]:
